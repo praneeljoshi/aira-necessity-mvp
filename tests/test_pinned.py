@@ -10,8 +10,10 @@ import threading
 
 import pytest
 
-from app import ask, llm, pipeline, review, store, tree
-from app.models import CriteriaSet, Expression
+from app import pipeline
+from app.core import llm, store
+from app.review import ask, review, tree
+from app.core.models import CriteriaSet, Expression
 from tests.conftest import SAMPLES, sid
 from tests.fake import Stub
 
@@ -60,7 +62,7 @@ def two(tmp_store, fl_text, fl_spans, delgado_spans, monkeypatch):
     monkeypatch.setattr(llm, "call", t)
     for cid in ("c1", "c2"):
         assert pipeline.run("", cid, gid, rspans=delgado_spans, pause_at_pathways=True) is None
-    from app.status import load_status
+    from app.core.status import load_status
     t.run = {cid: load_status(cid)["run_id"] for cid in ("c1", "c2")}
     t.g = fl_spans
     return t
@@ -139,7 +141,7 @@ def test_a_run_that_finds_the_checklist_in_flight_waits_and_reuses_it(two, monke
 
 
 def test_save_criteria_and_save_hcache_first_writer_wins(tmp_store):
-    from app.models import Guideline, Narrowed, Payer
+    from app.core.models import Guideline, Narrowed, Payer
     n1 = Narrowed(key="k", guideline=Guideline(id="g1", sha256="s", payer=Payer(name="One")))
     n2 = Narrowed(key="k", guideline=Guideline(id="g1", sha256="s", payer=Payer(name="Two")))
     a = CriteriaSet(key="k", criteria=[], expressions=[Expression(pathway="gsv", expr="x")])

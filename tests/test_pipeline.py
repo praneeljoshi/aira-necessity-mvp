@@ -6,10 +6,15 @@ import re
 
 import pytest
 
-from app import criteria, judge, llm, narrow, pipeline, store
-from app.models import CriteriaSet, Criterion, Order, Procedure, Span, Threshold, Verdict
-from app.select import select
-from app.spans import expand
+from app import pipeline
+from app.checklist import keys
+from app.checklist import criteria
+from app.core import llm, store
+from app.evidence import judge
+from app.understand import narrow
+from app.core.models import CriteriaSet, Criterion, Order, Procedure, Span, Threshold, Verdict
+from app.understand.select import select
+from app.ingest.spans import expand
 from tests.conftest import SAMPLES, rng, sid
 from tests.fake import Stub, cosmetic_range, criteria_answer, narrow_answer
 
@@ -83,8 +88,8 @@ def test_contradiction_routes_review_and_asks(setup):
 
 
 def _delgado():
-    from app.pdf import pdf_to_text
-    from app.spans import split_chart
+    from app.ingest.pdf import pdf_to_text
+    from app.ingest.spans import split_chart
     return split_chart(pdf_to_text(SAMPLES / "synthetic" / "maria_delgado_chart.pdf"))
 
 
@@ -113,7 +118,7 @@ def test_unverified_date_and_measurement_flag(setup):
 def test_judge_dates_shown_only_when_cited_and_written(setup):
     """A date for a cited span written in its note is shown; a date for a span not cited is dropped; a date written
     nowhere near its span stays unverified, is not shown, and (not a duration) sends nothing to review."""
-    from app.spans import table
+    from app.ingest.spans import table
     size, ceap, dvt = rng_("Unchanged varicosities medial left thigh", "ulcer."), sid_(0, "CEAP clinical class C4a"), sid_(0, "Denies history of DVT")
     r, _ = setup(verdicts={"size": {"status": "MET", "for": [size, ceap], "measurements": [{"value": "6", "unit": "mm", "span": size}],
                                     "dates": [{"span": size, "date": "July 22, 2025"}, {"span": dvt, "date": "March 18, 2025"},
@@ -242,7 +247,7 @@ def test_audit_only_tightens(setup):
     assert "criteria_audit" in stub.calls
     _, cs = store.load_criteria(next(p.stem for p in store.CRITERIA.glob("*.json")))
     e = cs.expressions[0].expr
-    from app.evaluate import leaf_ids
+    from app.decide.evaluate import leaf_ids
     assert {"dvt", "ceap", "size", "compression"} <= set(leaf_ids(e))      # dropped ids put back
     assert cs.loopholes == ["a DVT patient passes"] and any("put back" in x for x in cs.problems)
 
@@ -275,8 +280,8 @@ def test_age_is_not_a_duration():
 
 
 def test_cache_key_drops_side():
-    a = pipeline.cache_key("x" * 64, Procedure(cpt=["36475"], target="Left great saphenous vein"))
-    b = pipeline.cache_key("x" * 64, Procedure(cpt=["36475"], target="right great saphenous vein"))
+    a = keys.cache_key("x" * 64, Procedure(cpt=["36475"], target="Left great saphenous vein"))
+    b = keys.cache_key("x" * 64, Procedure(cpt=["36475"], target="right great saphenous vein"))
     assert a == b
 
 
@@ -298,7 +303,7 @@ def test_date_in_signature_below_and_other_format_verifies():
     sp = [Span(id="r1", text="30-Day Holter Monitor Report"), Span(id="r2", text="Longest pause 3.1 sec."),
           Span(id="r3", text="Electronically signed: Dr. Tran — 11/11/2025")]
     cs = CriteriaSet(key="k", criteria=[Criterion(id="c", refs=[], question="q")])
-    from app.models import DateRef
+    from app.core.models import DateRef
     vs = {"c": Verdict(criterion="c", status="MET", confidence=0.9, **{"for": ["r2"]},
                        dates=[DateRef(span="r2", date="November 11, 2025")])}
     reasons = judge.verify(vs, sp, cs, ["c"], [])
@@ -306,7 +311,7 @@ def test_date_in_signature_below_and_other_format_verifies():
 
 
 def test_date_lookback_reaches_a_heading_many_lines_up():
-    from app.models import DateRef
+    from app.core.models import DateRef
     sp = [Span(id="r0001", text="Visit Date: October 8, 2025 | Attending: Dr. Tran")]
     sp += [Span(id=f"r{n:04d}", text=f"line {n}") for n in range(2, 62)]
     sp += [Span(id="r0062", text="  Bradycardia noted, HR 44 bpm."), Span(id="r0063", text="  Asymptomatic.")]
@@ -324,7 +329,7 @@ def test_criterion_quotes_are_shown(setup):
 
 
 def test_locate_forgives_only_whitespace_and_broken_hyphens():
-    from app.spans import locate
+    from app.ingest.spans import locate
     assert locate("activities of daily living", "interfere with activities  of daily living, AND") == "activities  of daily living"
     assert locate("interfere with", "inter- fere with") == "interfere with"
     assert locate("at least 3 months", "at least three months") is None
@@ -346,7 +351,7 @@ def test_code_modifiers_are_dropped():
 
 
 def test_pathway_label_skips_a_bare_section_heading(fl_spans):
-    from app.select import pathway_name
+    from app.understand.select import pathway_name
     d = narrow_answer(fl_spans, {})
     pos = sid(fl_spans, "POSITION STATEMENT")
     d["pathways"][0]["spans"][0]["first"] = pos                    # a range that starts at the section heading
@@ -364,7 +369,7 @@ def test_judge_cannot_cite_a_summary_or_the_order(setup, delgado_spans):
 
 
 def test_sections_label_and_cache(tmp_store, delgado_spans, monkeypatch):
-    from app import sections
+    from app.ingest import sections
     from tests.fake import sections_answer
     out = sections.SOut.model_validate(sections_answer(delgado_spans))
     assert sections.check(out, delgado_spans) == []

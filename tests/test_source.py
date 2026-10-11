@@ -3,9 +3,9 @@ that part and the page ("Cited: …, p. N"), else the cited line's first words i
 `other` (a warm dot, no commentary) marks a part outside the confirmed indication. Pure: the FL guideline's spans and the stub's step C ranges."""
 from __future__ import annotations
 
-from app import review
+from app.review import review
 from tests.test_strikes import world, reqs  # noqa: F401  (the review-flow fixture)
-from app.models import Guideline, Narrowed, Payer, Range
+from app.core.models import Guideline, Narrowed, Payer, Range
 from tests.conftest import sid
 from tests.fake import narrow_answer
 
@@ -63,7 +63,7 @@ def test_the_case_carries_each_requirements_source(world):
 
 
 def test_no_heading_cites_the_lines_first_words(fl_spans, monkeypatch):
-    from app import ask
+    from app.review import ask
     n = narrowed(fl_spans)
     line = sid(fl_spans, "Reimburse according to operative report")
     monkeypatch.setattr(ask, "heading_above", lambda *a: None)

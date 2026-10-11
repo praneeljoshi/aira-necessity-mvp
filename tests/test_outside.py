@@ -6,7 +6,7 @@ from __future__ import annotations
 
 import pytest
 
-from app import review, signoff
+from app.review import review, signoff
 from tests.test_strikes import reqs, world  # noqa: F401  (the review-flow fixture)
 
 

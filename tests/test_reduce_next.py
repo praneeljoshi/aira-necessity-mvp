@@ -4,16 +4,17 @@ scripted fake model, tmp_path only."""
 from __future__ import annotations
 
 import difflib
+import hashlib
 import json
 from pathlib import Path
 
 import pytest
 
-from app import admin, criteria, pipeline, reduce_next
-from app.models import Procedure
-from tests.test_reduce_code import REFLUX, _sel
-from tests.test_reduce_loop import HEAD, C, H, offline, pid, script  # noqa: F401
-from tests.test_reduce_loop import test_original_loose_prompts_unchanged  # noqa: F401  (runs here too: loose's hashes)
+from app import pipeline
+from app.checklist import keys
+from app.checklist import admin, criteria, reduce_next
+from app.core.models import Procedure
+from tests.stepH_fake import HEAD, REFLUX, C, H, _sel, offline, pid, script  # noqa: F401
 
 PROMPTS = Path(__file__).resolve().parents[1] / "prompts"
 SWEEP = ['"stop billing"', "rental or purchase", "supplier", "Evidence summaries, rationale and background text",
@@ -111,12 +112,12 @@ def test_admin_why_values_validate(fl_spans):
 def test_cache_key_and_prompt_version_differ_from_loose(monkeypatch):
     p = Procedure(cpt=["36475"], plan="commercial")
     monkeypatch.setenv("STEP_H", "loose")
-    loose, vl = pipeline.legacy_cache_key("a" * 64, p), pipeline.prompt_version()
+    loose, vl = keys.legacy_cache_key("a" * 64, p), keys.prompt_version()
     monkeypatch.setenv("STEP_H", "loose-next")
-    assert pipeline.legacy_cache_key("a" * 64, p) == loose + "-hloose-next"
-    assert pipeline.prompt_version() != vl
-    assert pipeline.H_PROMPTS["loose-next"] == ["criteria_guideline_next", "criteria_audit_next", "reduce/plan"]
-    assert all((PROMPTS / f"{x}.md").exists() for x in pipeline.H_PROMPTS["loose-next"])
+    assert keys.legacy_cache_key("a" * 64, p) == loose + "-hloose-next"
+    assert keys.prompt_version() != vl
+    assert keys.H_PROMPTS["loose-next"] == ["criteria_guideline_next", "criteria_audit_next", "reduce/plan"]
+    assert all((PROMPTS / f"{x}.md").exists() for x in keys.H_PROMPTS["loose-next"])
 
 
 def test_pipeline_dispatch(fl_spans, monkeypatch):
@@ -137,20 +138,9 @@ def test_pipeline_dispatch(fl_spans, monkeypatch):
         pipeline.build_h(fl_spans, n, sel, "k", "r", Procedure(cpt=["36475"]))
 
 
-def test_runner_dispatch(fl_spans, monkeypatch, tmp_path):
-    import scripts.reduce_code as R
-    from app import store
-    monkeypatch.setenv("STEP_H", "loose-next")
-    monkeypatch.setattr(R, "BASE", tmp_path)
-    monkeypatch.setattr(R, "guideline", lambda slug: ("g", fl_spans, "s" * 64))
-    monkeypatch.setattr(store, "load_criteria", lambda key: (None, None))
-    got = {}
-
-    def fake(*a, **k):
-        got.update(k)
-        raise RuntimeError("dispatched")
-    monkeypatch.setattr(reduce_next, "build", fake)
-    out = R.one({"guideline": "g", "pathway": "P", "cpt": ["36475"], "age": 58})
-    assert "dispatched" in out["error"] and got["extra"]["age"] == 58 and "-hloose-next-" in out["key"]
-    assert R.base("gpt-6-sol").parts[-2:] == ("reduce_loose", "gpt-6-sol")
-    json.dumps(out)
+def test_original_loose_prompts_unchanged():
+    # owner-approved 2026-10-10: admin flag (the loose prompts' hashes; the loop comparison is in experiments/tests)
+    sha = {"criteria_guideline.md": "25aeb5c67c521df207a8238700d4da4d17e31b66e009a8c3f2423837ee513ecd",
+           "criteria_audit.md": "b6d0c075684446077687b2b1fbaf3081f13689b51b6518765a2e1fbf011cc5c6"}
+    for name, want in sha.items():
+        assert hashlib.sha256((PROMPTS / name).read_bytes()).hexdigest() == want, name

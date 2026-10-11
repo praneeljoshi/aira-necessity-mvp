@@ -18,9 +18,9 @@ selection.json written and status.json `paused`; `resume(chart_id, picks, by)` b
 person confirmed, records pathways.json, runs H (cached by the confirmed pathways and the order's facts:
 `h_cache_key`), I, J, K-L under the same run_id and saves the result. A-C are never re-run by resume.
 
-K-L apply a person's strikes on the case (app/strikes.py: requirements removed for this case only) before deciding;
+K-L apply a person's strikes on the case (app/review/strikes.py: requirements removed for this case only) before deciding;
 a case with no strikes.json is decided exactly as before. Lines a person added to the case's checklist
-(app/additions.py) join the logic the same way, as one more AND term; no additions.json, no change.
+(app/review/additions.py) join the logic the same way, as one more AND term; no additions.json, no change.
 jreasons.json is saved with the result so K-L can run again after a strike (strikes.redecide) without the model.
 """
 from __future__ import annotations
@@ -32,24 +32,27 @@ import re
 import time
 from typing import Callable, Optional
 
-from pydantic import BaseModel, Field
 
-from . import additions, admin, criteria, hints, judge, llm, log, narrow, refs, sections, store, strikes
-from .evaluate import leaf_ids
-from .models import CriteriaSet, Narrowed, Order, Pick, Procedure, Result, Selection, Span, Verdict
-from .result import decide
-from .select import pathway_name, select
-from .status import Recorder, load_status
-from .spans import render_chart, resolves, split_chart, split_guideline, table, unmapped_glyphs
+from app.checklist import admin, criteria, hints, keys
+from app.checklist.keys import (C_PROMPTS, H_PROMPTS, HINT_MODES, cache_key, case_order_key, h_cache_key,  # noqa: F401
+                                h_hint, legacy_cache_key, order_facts, prompt_version, slug, step_h, target_key)
+from app.core import llm, log, store
+from app.core.models import CriteriaSet, Narrowed, Order, Pick, Procedure, Result, Selection, Span, Verdict
+from app.core.status import Recorder, load_status
+from app.decide.evaluate import leaf_ids
+from app.decide.result import decide
+from app.evidence import judge, refs
+from app.ingest import sections
+from app.ingest.spans import render_chart, resolves, split_chart, split_guideline, table, unmapped_glyphs
+from app.review import additions, strikes
+from app.understand import narrow
+from app.understand.order import BOut, _Proc, apply_override, base_code, detect_order  # noqa: F401
+from app.understand.select import pathway_name, select
 
 logger = log.get("pipeline")
 
 
 # ---------------------------------------------------------------- A (guideline, at upload)
-
-
-def slug(s: str, n: int = 60) -> str:
-    return re.sub(r"-+", "-", re.sub(r"[^a-z0-9]+", "-", (s or "").lower())).strip("-")[:n].strip("-")
 
 
 def add_guideline(text: str, filename: str, sha: str, gid: Optional[str] = None) -> str:
@@ -64,202 +67,6 @@ def add_guideline(text: str, filename: str, sha: str, gid: Optional[str] = None)
     logger.info("guideline %s: %d spans from %s%s", gid, len(spans), filename,
                 f"; private-use characters left as extracted: {odd}" if odd else "")
     return gid
-
-
-# ---------------------------------------------------------------- B
-
-
-class _Proc(BaseModel):
-    cpt: list[str] = Field(default_factory=list)
-    as_written: Optional[str] = None
-    target: Optional[str] = None
-    surgeon: Optional[str] = None
-    diagnosis: Optional[str] = None
-    plan: Optional[str] = None
-
-
-class BOut(BaseModel):
-    patient_name: Optional[str] = None
-    payer: Optional[str] = None
-    procedure: _Proc = Field(default_factory=_Proc)
-    refs: list[str] = Field(default_factory=list)
-
-
-_CODE = re.compile(r"^\s*([0-9]{4}[0-9A-Z]|[A-Z][0-9]{4})")
-
-
-def base_code(c: str) -> str:
-    """The CPT/HCPCS code without its modifier: "36475-LT", "36475 RT", "36475-50" -> "36475". A code table lists
-    base codes; the side is the order's target, not part of the code."""
-    m = _CODE.match((c or "").upper())
-    return m.group(1) if m else (c or "").strip().upper()
-
-
-def detect_order(rspans: list[Span], chart_id: str, run_id: str) -> Order:
-    out = llm.call(run_id, "detect_order", llm.prompt("detect_order", chart_spans=render_chart(rspans)), BOut,
-                   model=llm.pick_models()[0])
-    tbl = table(rspans)
-    text = " ".join(s.text for s in rspans)
-    cpt = []
-    for c in out.procedure.cpt:
-        c = base_code(c)
-        if c and re.search(rf"(?<![0-9A-Z]){re.escape(c)}(?![0-9A-Z])", text.upper()):
-            cpt.append(c)
-        else:
-            logger.warning("order: code %r is not written in the chart; dropped", c)
-    plan = (out.procedure.plan or "").strip() or None
-    if plan and not refs.written_in([s.text for s in rspans], plan):
-        logger.warning("order: plan %r is not written in the chart; dropped", plan)
-        plan = None
-    o = Order(id=chart_id, chart_id=chart_id, patient_name=out.patient_name, payer=out.payer,
-              procedure=Procedure(cpt=list(dict.fromkeys(cpt)), as_written=out.procedure.as_written,
-                                  target=out.procedure.target, surgeon=out.procedure.surgeon,
-                                  diagnosis=out.procedure.diagnosis, plan=plan),
-              refs=[r for r in out.refs if resolves(r, tbl)])
-    logger.info("order: payer=%r cpt=%s as_written=%r target=%r surgeon=%r plan=%r", o.payer, o.procedure.cpt,
-                o.procedure.as_written, o.procedure.target, o.procedure.surgeon, o.procedure.plan)
-    return o
-
-
-def apply_override(o: Order, override: Optional[dict]) -> Order:
-    """The coordinator's corrections: codes, target and/or the member's plan."""
-    if not override:
-        return o
-    p = o.procedure.model_copy()
-    if override.get("cpt") is not None:
-        p.cpt = list(dict.fromkeys(base_code(c) for c in override["cpt"] if c and c.strip()))
-    if override.get("target"):
-        p.target = str(override["target"]).strip()
-    if override.get("plan"):
-        p.plan = str(override["plan"]).strip()
-    return o.model_copy(update={"procedure": p})
-
-
-# ---------------------------------------------------------------- the cache key
-
-
-_SIDE = re.compile(r"\b(left|right|bilateral|both|lt|rt|l|r)\b\.?", re.I)
-
-
-def target_key(p: Procedure) -> str:
-    """Side does not change which section applies; it is dropped from the key."""
-    t = p.target or ("" if p.cpt else p.as_written or "")
-    return slug(_SIDE.sub(" ", t), 50) or "any"
-
-
-# The prompt files each step-H mode reads (C reads narrow_guideline). Their bytes, with the mode, make the prompt
-# version in the cache keys, so a tree built from other prompts is never served.
-C_PROMPTS = ["narrow_guideline"]
-H_PROMPTS = {
-    "loose": ["criteria_guideline", "criteria_audit", "reduce/plan"],
-    "loose-loop": ["criteria_guideline_loop", "loop_round", "reduce/plan"],
-    "loose-next": ["criteria_guideline_next", "criteria_audit_next", "reduce/plan"],
-    "code": ["reduce/policies", "reduce/indication_given", "reduce/indication_find", "reduce/brief", "reduce/plan",
-             "reduce/sweep", "reduce/task", "reduce/fix", "reduce/sweep_code", "reduce/audit"],
-    "form": ["reduce/form", "reduce/brief", "reduce/policies", "reduce/indication_given", "reduce/indication_find",
-             "reduce/plan", "reduce/sweep", "reduce/sweep_form", "criteria_audit"],
-    "script": ["reduce/script", "reduce/plan", "reduce/sweep", "reduce/pitfalls", "reduce/script_audit"],
-    "tools": ["reduce/tools", "reduce/plan", "reduce/sweep", "reduce/pitfalls", "reduce/tools_audit"],
-}
-
-
-def step_h() -> str:
-    """Shipped step H: loose-next (owner, 2026-10-10). STEP_H=loose rolls back."""
-    return os.environ.get("STEP_H", "loose-next")
-
-
-def _prompt_bytes(name: str) -> bytes:
-    p = llm.PROMPTS / f"{name}.md"
-    return p.read_bytes() if p.exists() else b""
-
-
-def prompt_version(with_c: bool = True, mode: Optional[str] = None, hint: Optional[str] = None) -> str:
-    """8 hex over the mode's name and the bytes of every prompt file C (with_c) and its H read; `hint` (the payer
-    structure hint's `<name>.<sha8>`, only when one was applied) joins them, so the version without one is unchanged."""
-    mode = mode or step_h()
-    h = hashlib.sha1(mode.encode())
-    for name in (C_PROMPTS if with_c else []) + H_PROMPTS.get(mode, []):
-        h.update(b"\0" + name.encode() + b"\0" + _prompt_bytes(name))
-    if hint:
-        h.update(b"\0hint\0" + hint.encode())
-    return h.hexdigest()[:8]
-
-
-# The step-H modes that inject the payer structure hint (criteria.build and its audit; app/hints.py).
-HINT_MODES = ("loose", "loose-next")
-
-
-def h_hint(gspans: Optional[list[Span]]) -> Optional[str]:
-    """The payer structure hint H applies to this guideline (`<name>.<sha8>`), or None: flag off, unknown payer, two
-    files matching, no guideline lines given, or a mode that does not inject it."""
-    return hints.payer_id(gspans) if gspans and step_h() in HINT_MODES else None
-
-
-def _pin(with_c: bool, hint: Optional[str] = None) -> str:
-    """`-m<structure model>-v<prompt version>`: what built a cached tree, so another model's or prompt's never is."""
-    return f"-m{re.sub(r'[^A-Za-z0-9._-]+', '_', llm.pick_models()[0])[:40]}-v{prompt_version(with_c, hint=hint)}"
-
-
-def order_facts(p: Procedure) -> str:
-    """Every order fact step H's prompt receives (criteria.request_line), as a key part: the sorted CPT codes, the
-    target (side dropped), the ICD codes in the diagnosis and a hash of the plan; `<cpts|nocpt>-<target>[-icd][-p<8>]`.
-    The order key (cache_key) and the H key (h_cache_key) both build on it, so the two can never drift."""
-    icd = sorted(set(re.findall(r"\b[A-TV-Z][0-9][0-9A-Z](?:\.[0-9A-Z]{1,4})?\b", p.diagnosis or "")))
-    return (f"{'+'.join(sorted(p.cpt)) or 'nocpt'}-{target_key(p)}" + (f"-{'+'.join(icd)}" if icd else "")
-            + (f"-p{hashlib.sha1(p.plan.encode()).hexdigest()[:8]}" if p.plan else ""))
-
-
-def legacy_cache_key(sha: str, p: Procedure) -> str:
-    """The order key before models and prompts were in it: read only for older cases that recorded no key."""
-    mode = step_h()
-    return (f"{sha[:16]}-{order_facts(p)}"
-            + ("" if mode == "loose" else f"-h{mode}") + ("-pf" if os.environ.get("PITFALLS") == "1" else ""))
-
-
-def cache_key(sha: str, p: Procedure, gspans: Optional[list[Span]] = None) -> str:
-    """C and H for an order: data/criteria/<sha16>-<cpts>-<target>[-icd][-plan][-hmode][-pf]-m<model>-v<prompts>.
-    `gspans`: the guideline's lines, to fold in the payer structure hint when H applies one (else the key is as before)."""
-    return legacy_cache_key(sha, p) + _pin(with_c=True, hint=h_hint(gspans))
-
-
-def h_cache_key(sha: str, n: Narrowed, pids: list[str], p: Optional[Procedure],
-                gspans: Optional[list[Span]] = None) -> str:
-    """H cached by the pathways a person confirmed AND the order: H's prompt carries the order (procedure, codes,
-    target, diagnosis, plan) and its tree holds order-specific conditions (a technique, a CPT descriptor), so one
-    order's tree is never served to another order on the same section. `h-<sha16>-<pids>-<ranges8>-o<order facts>
-    -m<model>-v<prompts>`: the guideline, the pathway ids, a hash of their line ranges (the same id over different
-    ranges is a different section), `order_facts(p)` (the same part cache_key uses), then the model and the H prompt
-    version (which includes the mode, and the payer structure hint when H applies one: `gspans`, app/hints.py).
-    `p=None` (precompute, no order) gives `-onone`, a key no order ever reads."""
-    by = {x.id: x for x in n.pathways}
-    pids = sorted(dict.fromkeys(pids))
-    ranges = json.dumps([[[r.first, r.last] for r in by[x].spans] if x in by else None for x in pids])
-    return ("h-" + sha[:16] + "-" + "+".join(pids) + "-" + hashlib.sha1(ranges.encode()).hexdigest()[:8]
-            + "-o" + (order_facts(p) if p is not None else "none") + _pin(with_c=False, hint=h_hint(gspans)))
-
-
-def case_order_key(sha: str, p: Procedure, chart_id: Optional[str] = None) -> str:
-    """The order key a case was read with, for showing it: the key its check recorded (status tree / resume, the
-    confirmation's narrowed_key) when that file exists; else today's key when cached; else the key older cases were
-    written under. Runs never read through this; they use cache_key."""
-    tried = []
-    if chart_id:
-        st = load_status(chart_id) or {}
-        conf = store.load_confirmation(chart_id) or {}
-        tk = (st.get("tree") or {}).get("criteria_key") or ""
-        tried += [tk if not tk.startswith("h-") else "", (st.get("resume") or {}).get("key") or "",
-                  conf.get("narrowed_key") or ""]
-    gspans = None
-    if chart_id and hints.enabled():          # today's key carries the payer structure hint when H applies one
-        try:
-            gspans = store.load_guideline_spans((load_status(chart_id) or {}).get("guideline_id") or "")[0]
-        except Exception:
-            gspans = None
-    tried += [cache_key(sha, p, gspans), legacy_cache_key(sha, p)]
-    for k in tried:
-        if k and store.criteria_cached(k):
-            return k
-    return cache_key(sha, p, gspans)
 
 
 # ---------------------------------------------------------------- C and H, cached
@@ -317,19 +124,19 @@ def build_h(gspans: list[Span], n: Narrowed, sel: Selection, key: str, run_id: s
     if mode not in ("loose", "loose-next") and progress:
         progress("Building the checklist from the whole guideline")
     if mode == "loose-loop":
-        from . import reduce_loop
+        from experiments.stepH import reduce_loop
         return reduce_loop.build(gspans, n, sel, key, run_id, procedure)
     if mode == "loose-next":
-        from . import reduce_next
+        from app.checklist import reduce_next
         return reduce_next.build(gspans, n, sel, key, run_id, procedure, progress=progress)
     if mode == "script":
-        from . import reduce_script
+        from experiments.stepH import reduce_script
         return reduce_script.build(gspans, n, sel, key, run_id, procedure)
     if mode == "tools":
-        from . import reduce_tools
+        from experiments.stepH import reduce_tools
         return reduce_tools.build(gspans, n, sel, key, run_id, procedure)
     if mode in ("code", "form"):
-        from . import reduce_code
+        from experiments.stepH import reduce_code
         return reduce_code.build(gspans, n, sel, key, run_id, procedure)
     return criteria.build(gspans, n, sel, key, run_id, procedure, progress=progress)
 
@@ -384,7 +191,7 @@ def evidence_for(chart_id: str, rspans: list[Span], run_id: str,
     planned-procedure block. Also the label counts, for the status and the case document."""
     sha = _lines_sha(rspans)
     model = llm.pick_models()[0]
-    hint = hints.clinic_id(rspans)                            # the clinic structure hint A2 is given (app/hints.py)
+    hint = hints.clinic_id(rspans)                            # the clinic structure hint A2 is given (app/checklist/hints.py)
     out = store.load_sections(chart_id, sha, model=model, hint=hint)   # another model's or hint's labels are a miss
     cached = out is not None
     if out is None:
@@ -443,14 +250,14 @@ def precompute_wanted() -> bool:
 def run(chart_text: str, chart_id: str, gid: str, override: Optional[dict] = None, filename: str = "chart.pdf",
         source: str = "api", order: Optional[Order] = None, rspans: Optional[list[Span]] = None,
         status: Optional[Recorder] = None, pause_at_pathways: bool = False) -> Optional[Result]:
-    """`status` records each stage (app/status.py) as it runs; a fresh persisting recorder when none is given, so
+    """`status` records each stage (app/core/status.py) as it runs; a fresh persisting recorder when none is given, so
     every check, browser or CLI, leaves a status.json beside its result.
 
     `pause_at_pathways`: stop after the section stage whenever there is a section to pick (every code passed the
     code gate, whether or not the guideline reader chose one) and wait for a person to confirm it: selection.json is
     written, the status is `paused` at the `confirm_pathways` gate, and None is returned; `resume` continues. A code
     stopped at the code gate does not pause: it runs to its NOT_COVERED / CANT_CHECK result as always. Before that,
-    an order with 2+ codes pauses on the order stage at the `pick_code` gate (one code, one pathway; app/onecode.py):
+    an order with 2+ codes pauses on the order stage at the `pick_code` gate (one code, one pathway; app/understand/onecode.py):
     C has not run; onecode.pick continues from C with the one code a person picked."""
     st = status or Recorder(chart_id, gid, filename, override, source)
     run_id = llm.new_run_id()
@@ -468,10 +275,10 @@ def run(chart_text: str, chart_id: str, gid: str, override: Optional[dict] = Non
         s.summary = _order_summary(order)
         st.doc["order"] = {"patient_name": order.patient_name, "procedure_text": order.procedure.as_written,
                            "cpt": order.procedure.cpt, "payer": order.payer}
-        # one code, one pathway (app/onecode.py): the review flow asks which code before C when the order has 2+
+        # one code, one pathway (app/understand/onecode.py): the review flow asks which code before C when the order has 2+
         picking = pause_at_pathways and len(dict.fromkeys(order.procedure.cpt)) >= 2
         if picking:
-            from . import onecode
+            from app.understand import onecode
             onecode.gate(s, chart_id, gid, order, rspans)
     if picking:
         st.pause("order", {"stage": "guideline", "needs": "code", "endpoint": f"/api/review/{chart_id}/code"})
@@ -518,9 +325,11 @@ def from_guideline(st: Recorder, chart_id: str, gid: str, override: Optional[dic
     judged = sel.applies and all(g.outcome == "judge" for g in sel.code_gate) and sel.pathways
     if judged:
         with st.stage("checklist", step="criteria_guideline") as s:
+            store.save_case_draft(chart_id, run_id, sel)          # the page shows the indication while H builds
             had = cs is not None and set(criteria.picked(sel)) <= {e.pathway for e in cs.expressions}
             cs = criteria_for(gspans, n, sel, cs, key, run_id, order.procedure, doing(st, s))
             ids, asked = _checklist(s, n, sel, cs, gspans, cached=had, chart_id=chart_id)
+            store.save_case_draft(chart_id, run_id, sel, cs)      # and its requirements' words while the chart is read
             _tree_meta(st, cs, key)
         return _judge_and_decide(st, chart_id, gid, override, order, n, sel, cs, ids, asked, gspans, rspans, run_id)
     for sid in ("checklist", "record", "read", "verify"):
@@ -536,7 +345,7 @@ def _checklist(s, n: Narrowed, sel: Selection, cs: CriteriaSet, gspans: list[Spa
                chart_id: Optional[str] = None) -> tuple[list[str], list[str]]:
     """Inside the checklist stage, once the CriteriaSet is at hand: (every requirement id the picked pathways use,
     the ones a chart can answer); the stage's summary, cached flag and problems gate. Admin leaves this case prunes
-    (app/admin.py) are in neither: never sent to the judge."""
+    (app/checklist/admin.py) are in neither: never sent to the judge."""
     pruned = admin.applied(chart_id, cs, criteria.picked(sel))
     expr = {e.pathway: e.expr for e in pruned.expressions}
     ids = list(dict.fromkeys(i for p in criteria.picked(sel) if p in expr for i in leaf_ids(expr[p])))
@@ -553,7 +362,7 @@ def _checklist(s, n: Narrowed, sel: Selection, cs: CriteriaSet, gspans: list[Spa
 
 
 def _hints_meta(st: Recorder, gspans: list[Span], rspans: list[Span]) -> None:
-    """Which structure hints this check's prompts carry (app/hints.py; names, None when none applied): `hints`
+    """Which structure hints this check's prompts carry (app/checklist/hints.py; names, None when none applied): `hints`
     {payer, clinic} on the status document. The payer hint reaches H only in HINT_MODES."""
     st.doc["hints"] = {"payer": hints.payer_hint(gspans)[0] if step_h() in HINT_MODES else None,
                        "clinic": hints.clinic_hint(rspans)[0]}
@@ -608,14 +417,14 @@ def _decide(st: Recorder, chart_id: str, gid: str, override: Optional[dict], ord
             cs: Optional[CriteriaSet], verdicts: dict[str, Verdict], jreasons: dict[str, list[str]], gspans: list[Span],
             rspans: list[Span], run_id: str) -> Result:
     with st.stage("decide") as s:
-        # a person's strikes on this case (app/strikes.py) take their requirements out of the logic; none: cs itself
+        # a person's strikes on this case (app/review/strikes.py) take their requirements out of the logic; none: cs itself
         pids = [p.pathway for p in sel.pathways]
-        # admin leaves (billing, paperwork, headings: app/admin.py) are pruned first, then the strikes; a leaf a
+        # admin leaves (billing, paperwork, headings: app/checklist/admin.py) are pruned first, then the strikes; a leaf a
         # person restored ("Ask it anyway") stays, with the verdict its own judge call gave
         used = admin.applied(chart_id, cs, pids)
         v_dec, j_dec = admin.verdicts(chart_id, cs, verdicts, jreasons)
         used = strikes.applied(chart_id, used, gspans, pids)
-        # lines a person added to this case's checklist (app/additions.py) join as one more AND term, with the
+        # lines a person added to this case's checklist (app/review/additions.py) join as one more AND term, with the
         # verdicts their ask judged; the stored verdicts stay the judge's own
         used, v_all, j_all, _ = additions.extend(chart_id, used, v_dec, j_dec, pids)
         r = decide(order, n, sel, used, v_all, j_all, gspans, rspans, run_id)
@@ -721,6 +530,7 @@ def resume(chart_id: str, picks: Optional[list[dict]] = None, by: Optional[str] 
 
     # H, cached by the confirmed pathways and this order's facts (never another order's tree)
     with st.stage("checklist", step="criteria_guideline") as s:
+        store.save_case_draft(chart_id, run_id, sel)              # the page shows the indication while H builds
         covers = lambda c: c is not None and set(pids) <= {e.pathway for e in c.expressions}
         cs = store.load_hcache(key_h)
         built = False
@@ -737,6 +547,7 @@ def resume(chart_id: str, picks: Optional[list[dict]] = None, by: Optional[str] 
         if not covers(cs0) and {p for _, p in pairs} == {p.pathway for p in sel0.pathways}:
             store.save_criteria(key, n, cs)   # the same pick as the model's: fill its cache so the tree view reads it
         ids, asked = _checklist(s, n, sel, cs, gspans, cached=not built, chart_id=chart_id)
+        store.save_case_draft(chart_id, run_id, sel, cs)          # and its requirements' words while the chart is read
         _tree_meta(st, cs, key_h)
     return _judge_and_decide(st, chart_id, gid, doc.get("override"), order, n, sel, cs, ids, asked, gspans, rspans, run_id)
 

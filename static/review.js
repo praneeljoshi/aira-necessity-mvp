@@ -220,6 +220,7 @@ function home(){
 function landingHtml(){
   return `<div class="landing narrow"><label class="drop big" id="landDrop" tabindex="0"><input id="landFiles" type="file" accept="application/pdf" multiple>
       <i class="drop-doc" aria-hidden="true"></i><b>Drop a case PDF to add it</b><span>Add the payer's policy too if it is not on file, or click to choose the PDFs.</span></label>
+    ${hints().sample ? '' : '<p class="first-hint try-sample" data-hint="sample">Try robert_mitchell_chart_final.pdf <button type="button" class="hint-x" aria-label="Dismiss">×</button></p>'}
     <ol class="how">
       <li><b>Drop the case</b><span>The check reads it and finds the order.</span></li>
       <li><b>Confirm the pathway</b><span>It suggests the part of the policy that applies; you decide.</span></li>
@@ -233,6 +234,17 @@ function wireLanding(){
   z.addEventListener('dragleave', () => z.classList.remove('over'));
   z.addEventListener('drop', e => { e.preventDefault(); e.stopPropagation(); z.classList.remove('over'); openDlg(); takeFiles(e.dataTransfer.files); });
 }
+// one-time hints for a first visit (a sample chart on the landing, the tree switch after the first finished case);
+// each shows once in this browser and never comes back after use or dismissal
+const HINTS_KEY = 'review.hints.seen';
+const hints = () => { try { return JSON.parse(localStorage.getItem(HINTS_KEY)) || {}; } catch { return {}; } };
+function hintUsed(k){
+  try { localStorage.setItem(HINTS_KEY, JSON.stringify({ ...hints(), [k]: true })); } catch {}
+  const h = $(`.first-hint[data-hint="${k}"]`); if (h) h.remove();
+}
+document.addEventListener('click', e => {
+  const x = e.target.closest('.first-hint .hint-x'); if (x) { e.preventDefault(); e.stopPropagation(); hintUsed(x.closest('.first-hint').dataset.hint); }
+});
 
 // ------------------------------------------------------------------ load one chart and draw its state
 async function load(id, quiet){
@@ -258,7 +270,8 @@ async function load(id, quiet){
   const want = fresh ? decodeURIComponent(location.hash.slice(1)) : '', st0 = history.state || {};
   doc = d;
   const landed = !!(landNext && !quiet && d.case && !d.nofit && !want);   // opened from the rail: lands on the work
-  if (d.state === 'running') renderRunning(d);
+  if (d.preview) renderRunning(d);   // the check runs: a re-check's old `case` waits
+  else if (d.state === 'running') renderRunning(d);
   else if (d.state === 'failed') renderFailed(d);
   else if (d.state === 'paused') renderGate(d);
   else if (d.nofit) renderNoFit(d);
@@ -364,7 +377,27 @@ function runLinesHtml(st){
     const extra = run ? `${s.doing ? `<span class="rl-doing">${esc(s.doing)}</span>` : ''}${timed ? `<span class="rl-t"></span>${s.typical_s ? '<span class="rl-bar" aria-hidden="true"><i></i></span>' : ''}` : ''}` : '';
     return `<li class="rl ${esc(s.status)}"${timed ? ` data-stage="${esc(s.id)}" data-elapsed="${+s.elapsed_s}" data-typical="${+(s.typical_s || 0)}"` : ''}><span class="rl-m" aria-hidden="true">${s.status === 'done' || s.status === 'needs_person' ? '✓' : s.status === 'failed' ? '✗' : ''}</span><span>${esc(w)}${esc(sum)}${s.cached ? ' <small>(from an earlier read)</small>' : ''}${extra}</span></li>`; }).join('')}</ol>`;
 }
+// while the check runs the case page fills in: the guideline, then its requirements in one neutral wash; nothing to
+// act on until the case is finished. Redrawn in place while the phase holds (only the progress line moves)
+let previewKey = null;
+function renderPreview(d){
+  const p = d.preview, st = d.status || {}, cur = (st.stages||[]).find(s => s.status === 'running');
+  const key = d.chart_id + '|' + p.phase, line = cur ? runLinesHtml({ stages: [cur] }) : '';
+  const box = $('#main .preview-page');
+  if (box && previewKey === key) { box.querySelector('.pv-run').innerHTML = line; return; }
+  previewKey = key;
+  const g = p.guideline || {}, marks = p.marks || [], y = window.scrollY;
+  reqById = {}; blocks = {}; lineCrits = {}; navOrder = [];
+  for (const r of marks) reqById[r.criterion] = r;
+  let gl = guidelineHtml({ tree: g.tree, rest: g.rest, requirements: marks });
+  if (p.phase === 'guideline') gl = gl.replace(/<details class="rest-fold"/g, '<details open class="rest-fold"');
+  $('#main').innerHTML = `<div class="case preview-page pv-${esc(p.phase)}">${whoHtml(d)}<div class="pv-run">${line}</div>
+    <div class="tv gl" id="glDoc"><div class="doc gl-doc"><div class="doc-head"><b>${esc(glTitle(d.guideline || {}))}</b></div>${gl}</div></div></div>`;
+  window.scrollTo({ top: y, behavior: 'instant' });
+  marksRefresh();
+}
 function renderRunning(d){
+  if (d.preview) return renderPreview(d);
   const st = d.status || {};
   const cur = (st.stages||[]).find(s => s.status === 'running');
   if (document.documentElement.dataset.style !== 'classic') {
@@ -643,7 +676,7 @@ function indexCase(c){
   for (const r of (c.requirements||[])) { reqById[r.criterion] = r; for (const id of (r.refs||[])) (lineCrits[id] ||= []).push(r.criterion); }
   for (const b of ((c.tree||{}).blocks||[])) blocks[b.id] = b;
   for (const s of ((c.tree||{}).sections||[])) for (const l of s.lines) glOrder.push(l.id);
-  navOrder = (c.requirements||[]).filter(r => r.counted && cleadOf(r.criterion) === r.criterion).map(r => r.criterion);
+  navOrder = (c.requirements||[]).filter(r => r.counted && r.mark !== 'struck' && cleadOf(r.criterion) === r.criterion).map(r => r.criterion);
 }
 // identical words are one item (`same`, decided together); words that overlap or sit back to back are one run
 // (`near`: the first id of each item) with one row, one highlight and a stacked panel. The first id leads.
@@ -735,7 +768,7 @@ function changeCtl(it){
   return `<span class="added-note">Added for this case by ${esc(a.by || 'a person')}${a.at ? ' on ' + esc(fmtDate(a.at)) : ''}</span><a href="#" class="unadd" data-aid="${esc(a.id)}">Take it off</a>`;
 }
 function strikeCtl(it){
-  return `<a href="#" class="strike-btn" data-strike="${esc(it.criterion)}" title="Remove this requirement for this case only">Not needed for this case</a>`;
+  return `<a href="#" class="strike-btn" data-strike="${esc(it.criterion)}" title="Remove this requirement for this case only">Not needed for this case</a><kbd class="drop-key" title="Drop it now: no reason needed">${MOD}⌫</kbd>`;
 }
 // what was typed into a form that was closed before it was sent: kept for this page, given back when it reopens
 const drafts = {};
@@ -759,15 +792,7 @@ function strikeForm(crit){
 function strikeHint(form){
   if (!form) return;
   const ta = form.querySelector('.strike-why'), code = form.dataset.code;
-  const gap = groupGap(form.dataset.crit);
-  ta.placeholder = gap ? 'Required: a sentence on why, for the person signing off' : code === 'other' ? 'Required: the reason' : 'Note (optional)';
-}
-// a removal of a requirement the chart does not document needs a real sentence: at least 3 words and 8 distinct
-// letters, the same rule as app/strikes.real_sentence ("aaaaaaaaaaaa" is not a reason)
-function realSentence(t){
-  t = String(t || '');
-  const words = t.match(/\p{L}+/gu) || [], letters = new Set((t.toLowerCase().match(/\p{L}/gu) || []));
-  return words.length >= 3 && letters.size >= 8;
+  ta.placeholder = code === 'other' ? 'Required: the reason' : 'Note (optional)';
 }
 function pickReason(form, code){
   form.dataset.code = code;
@@ -796,7 +821,7 @@ const wholeOn = () => { try { return localStorage.getItem('review.whole') === '1
 function guidelineHtml(c){
   const t = c.tree || {};
   const hl = {};
-  for (const r of (c.requirements||[])) if ((r.same || [r.criterion])[0] === r.criterion) for (const h of (r.highlights||[])) (hl[h.id] ||= []).push({ crit: cleadOf(r.criterion), q: r.near ? runQ(r.near) : null, start: h.start, end: h.end });
+  for (const r of (c.requirements||[])) if (r.mark !== 'struck' && (r.same || [r.criterion])[0] === r.criterion) for (const h of (r.highlights||[])) (hl[h.id] ||= []).push({ crit: cleadOf(r.criterion), q: r.near ? runQ(r.near) : null, start: h.start, end: h.end });
   const ind = s => (String(s).match(/^ */) || [''])[0].length;
   let docHtml = '';
   // lines are grouped into paragraphs (a new one at a blank line, a heading, a bullet or a numbered item): the Classic
@@ -815,7 +840,7 @@ function guidelineHtml(c){
   takeRest(null, true);
   let page = null, prevBlock = null;
   const lineHtml = ln => {
-    const b = ln.block ? blocks[ln.block] : null;
+    const b = ln.block && (blocks[ln.block] || {}).mark !== 'struck' ? blocks[ln.block] : null;   // a block of dropped requirements only: plain policy text
     let h = '';
     if (ln.page !== page) { h += `<div class="pg" data-p="p. ${esc(ln.page)}">page ${esc(ln.page)}</div>`; page = ln.page; }
     const first = b && ln.block !== prevBlock;
@@ -1090,7 +1115,6 @@ function progWords(p, bold){
     if (by.contradicted) bits.push(`${B(by.contradicted)} contradicted`);
     if (by.applies) bits.push(`${B(by.applies)} ${by.applies > 1 ? 'exclusions apply' : 'exclusion applies'}`);
   } else if (p.to_ask) bits.push(`${B(p.to_ask)} to ask`);
-  if (p.struck) bits.push(`${B(p.struck)} struck`);
   return bits.join(' · ');
 }
 // the slim summary that fills as the coordinator works
@@ -1158,7 +1182,7 @@ const DIM_SAY = { not_needed: 'Not needed: another option is met', other_option:
 function viewBarHtml(c){
   if (!hasTree(c)) return '';
   const v = curView(), b = (k, w) => `<button type="button" role="radio" data-view="${k}" aria-checked="${v === k}" tabindex="${v === k ? 0 : -1}">${w}</button>`;
-  return `<div class="view-bar"><div class="seg" role="radiogroup" aria-label="View">${b('guideline', 'Guideline')}${b('tree', 'Tree')}</div><span class="view-key"><kbd>t</kbd> switch</span></div>`;
+  return `<div class="view-bar"><div class="seg" role="radiogroup" aria-label="View">${b('guideline', 'Guideline')}${b('tree', 'Tree')}</div><span class="view-key"><kbd>t</kbd> switch</span>${hints().tree ? '' : '<span class="first-hint tree-hint" data-hint="tree">Check out the tree <button type="button" class="hint-x" aria-label="Dismiss">×</button></span>'}</div>`;
 }
 function leafHtml(n){
   const r = reqById[n.criterion]; if (!r) return '';
@@ -1217,6 +1241,7 @@ function placeOf(id){
 // tree: it measures again either way (nothing to draw, or the guideline's words back where they are)
 function setView(v, how){
   view = v === 'tree' ? 'tree' : 'guideline';
+  if (view === 'tree' && !hints().tree) hintUsed('tree');
   try { localStorage.setItem(VIEW_KEY, view); } catch {}
   applyView(how);
 }
@@ -1646,8 +1671,6 @@ function strikeClick(e, d){
       const msg = form.querySelector('.strike-msg'), say = (t, el) => { msg.innerHTML = `<span class="err">${esc(t)}</span>`; (el || form.querySelector('.strike-why')).focus(); };
       if (!code) { say('Pick a reason first.', form.querySelector('.chip')); return true; }
       if (code === 'other' && !reason) { say('Say what the reason is.'); return true; }
-      const gap = groupGap(form.dataset.crit);
-      if (gap && !realSentence(reason)) { say('This requirement is not in the case: say in a sentence (three words or more) why it is not needed for this case.'); return true; }
       if (needName()) return true;
       go.disabled = true; msg.textContent = 'Removing…';
       (async () => { let nd; for (const m of idsOf(form.dataset.crit)) nd = await post('/review/' + id + '/strikes', { criterion: m, code, reason, by: myName() || null }); return nd; })()   // identical requirements: all together
@@ -1673,6 +1696,44 @@ function strikeClick(e, d){
     return true;
   }
   return false;
+}
+
+// ⌘/Ctrl+Backspace drops the selected requirement at once (the owner: "the human is the judge; they can drop without
+// any justification"): the focused row or leaf, else the open one in the panel; every id of the item together. No
+// form, no reason; a strike {criterion, by} like any other. A small toast offers Undo (the same un-strike).
+let dropping = false;
+function dropSelected(t){
+  const el = t.closest && t.closest('.nv[data-crit], .tl[data-crit]');
+  const id = (el && el.dataset.crit) || (panelMode === 'req' ? selectedCrit : null), r = id && reqById[id];
+  if (!r || r.mark === 'struck' || r.added || dropping || !doc) return;
+  const ids = [...new Set(unitsOf(id).flatMap(idsOf))], cid = encodeURIComponent(doc.chart_id);
+  const seq = stepOrder(), at = seq.indexOf(id);
+  const next = seq.slice(at + 1).concat(seq.slice(0, Math.max(at, 0))).find(x => !ids.includes(x)) || null;
+  const inReq = panelMode === 'req';
+  dropping = true;
+  (async () => { let nd; for (const m of ids) nd = await post('/review/' + cid + '/strikes', { criterion: m, by: myName() || null }); return nd; })()
+    .then(nd => {
+      redraw(nd, inReq ? (next || '') : null);
+      const nv = !inReq && next && (curView() === 'tree' ? placeOf(next) : document.querySelector(`.nv[data-crit="${CSS.escape(next)}"]`));
+      if (nv) nv.focus({ preventScroll: true });
+      const sids = (nd.strikes || []).filter(k => !k.undone && ids.includes(k.criterion)).map(k => k.id);
+      dropToast(nd.chart_id, sids, id);
+    })
+    .catch(err => failed(err))
+    .finally(() => { dropping = false; });
+}
+function dropToast(chart, sids, id){
+  document.querySelectorAll('.drop-toast').forEach(x => x.remove());
+  const el = document.createElement('div');
+  el.className = 'drop-toast'; el.setAttribute('role', 'status');
+  el.innerHTML = 'Removed · <button type="button">Undo</button>';
+  document.body.appendChild(el);
+  const timer = setTimeout(() => el.remove(), 7000);
+  el.querySelector('button').onclick = () => {
+    clearTimeout(timer); el.remove();
+    (async () => { let nd; for (const sid of sids) nd = await api('/review/' + encodeURIComponent(chart) + '/strikes/' + encodeURIComponent(sid) + '?by=' + encodeURIComponent(myName()), {method:'DELETE'}); return nd; })()
+      .then(nd => { if (nd) redraw(nd, panelMode === 'req' ? id : null); }).catch(err => failed(err));
+  };
 }
 
 // ------------------------------------------------------------------ selecting a requirement: its words in the guideline, its evidence beside them
@@ -1709,7 +1770,7 @@ function goToLine(id){
   marksRefresh();
 }
 // a gap opened or folded: remember it, and the highlighter re-measures
-document.addEventListener('toggle', e => { const d = e.target; if (!d.matches || !d.matches('details.rest-fold')) return; d.open ? openGaps.add(d.dataset.gap) : openGaps.delete(d.dataset.gap); marksRefresh(); }, true);
+document.addEventListener('toggle', e => { const d = e.target; if (!d.matches || !d.matches('details.rest-fold') || d.closest('.pv-guideline')) return; d.open ? openGaps.add(d.dataset.gap) : openGaps.delete(d.dataset.gap); marksRefresh(); }, true);
 document.addEventListener('click', e => {
   const a = e.target.closest && e.target.closest('a.gap-less, a.gl-all'); if (!a) return;
   e.preventDefault();
@@ -2203,6 +2264,7 @@ document.addEventListener('keydown', e => {
   }
   if (doc && doc.state === 'paused' && gateKeys && $('.gcards')) { if (!typing) gateKey(e); return; }
   if (!doc || doc.state !== 'done' || !doc.case || doc.nofit) return;
+  if (e.key === 'Backspace' && (e.metaKey || e.ctrlKey) && !e.altKey && !typing) { e.preventDefault(); if (!e.repeat) dropSelected(t); return; }
   if (typing || e.altKey || e.metaKey || e.ctrlKey) return;
   if (e.shiftKey && (e.key === 'ArrowDown' || e.key === 'ArrowUp')) { if (extendProbe(e.key === 'ArrowDown' ? 1 : -1)) e.preventDefault(); return; }
   if ((e.key === 'Enter' || e.key === ' ') && t.matches('mark.q[data-crit][tabindex]')) { e.preventDefault(); selectRequirement(t.dataset.crit, true); t.focus({ preventScroll: true }); return; }
@@ -2267,7 +2329,7 @@ $('#dlgGo').onclick = async () => {
   else { fd.append('guideline_id', choice); $('#dlgMsg').textContent = `Reading ${dlg.chart.name}…`; }
   dlg.busy = true; dlgUpdate(); $('#dlgCancel').disabled = true;
   try { const d = await api('/review/charts', {method:'POST', body:fd});
-    dlg.busy = false; $('#dlgCancel').disabled = false; closeDlg();
+    dlg.busy = false; $('#dlgCancel').disabled = false; closeDlg(); hintUsed('sample');
     await loadGuidelines(); await loadOrders(); go(d.chart_id); }
   catch(err){ dlg.busy = false; $('#dlgCancel').disabled = false; dlgUpdate(); $('#dlgMsg').innerHTML = `<span class="err">${esc(err.message)}</span>`; }
 };

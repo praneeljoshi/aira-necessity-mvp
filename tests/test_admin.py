@@ -1,13 +1,15 @@
-"""Admin leaves (app/admin.py): step H's `admin` flag prunes billing / paperwork / heading lines from a case's logic
+"""Admin leaves (app/checklist/admin.py): step H's `admin` flag prunes billing / paperwork / heading lines from a case's logic
 before strikes, with guards; the case page lists them as `set_aside`; "Ask it anyway" restores one with one judge
 call; ADMIN_PRUNE=0 is today's behaviour. Offline: the stub model, the store and feedback in tmp_path."""
 from __future__ import annotations
 
 import json
 
-from app import admin, feedback, store
-from app.evaluate import leaf_ids
-from app.models import CriteriaSet, Criterion, Expression
+from app.checklist import admin
+from app.core import store
+from app.review import feedback
+from app.decide.evaluate import leaf_ids
+from app.core.models import CriteriaSet, Criterion, Expression
 from tests.conftest import accept_all
 from tests.fake import reimburse_line
 from tests.test_strikes import world  # noqa: F401  (the review-flow fixture)
@@ -75,7 +77,7 @@ def test_admin_leaf_is_set_aside_not_asked(world, fl_spans):
 
 
 def test_the_judge_is_not_asked_about_it(world, fl_spans, monkeypatch):
-    from app import llm
+    from app.core import llm
     cid = _case(world, fl_spans)
     stub = llm.call
     assert any(s == "judge_chart" for s, _ in stub.prompts)
@@ -100,7 +102,7 @@ def test_admin_prune_off_restores_today(world, fl_spans, monkeypatch):
 
 
 def test_ask_it_anyway_and_set_it_aside_again(world, fl_spans):
-    from app import llm
+    from app.core import llm
     cid = _case(world, fl_spans, verdicts={"bill": {"status": "INSUFFICIENT"}})
     accept_all(world.client, cid)
     assert world.client.post(f"/api/review/{cid}/signoff", json={"by": "Dana"}).status_code in (200, 201)

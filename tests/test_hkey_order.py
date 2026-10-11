@@ -1,4 +1,4 @@
-"""The review flow's H cache is keyed by the order as well as the confirmed section (pipeline.h_cache_key): H's
+"""The review flow's H cache is keyed by the order as well as the confirmed section (keys.h_cache_key): H's
 prompt carries the order (criteria.request_line) and its tree can hold order-specific conditions (a technique, a CPT
 descriptor). Found on real data: a laser order (36478) was served a radiofrequency order's (36475) checklist for the
 same section, and resume copied that tree into the laser order's cache. Offline: stub model, store in tmp_path; the
@@ -10,9 +10,11 @@ import re
 
 import pytest
 
-from app import llm, pipeline, store
-from app.models import Procedure
-from app.status import load_status
+from app import pipeline
+from app.checklist import keys
+from app.core import llm, store
+from app.core.models import Procedure
+from app.core.status import load_status
 from tests.conftest import SAMPLES
 from tests.fake import Stub
 
@@ -81,7 +83,7 @@ def test_two_orders_on_one_section_get_their_own_trees(world):
     assert "radiofrequency" in _words(store.load_case_criteria("rf"))
     # the laser order's own C/H cache is filled from its own tree, not the radiofrequency one
     k_order = store.load_confirmation("laser")["narrowed_key"]
-    assert k_order == pipeline.cache_key(world.sha, store.load_order("laser").procedure) and "-36478-" in k_order
+    assert k_order == keys.cache_key(world.sha, store.load_order("laser").procedure) and "-36478-" in k_order
     assert "laser" in _words(store.load_criteria(k_order)[1]) and "radiofrequency" not in _words(store.load_criteria(k_order)[1])
 
 
@@ -99,11 +101,11 @@ def test_precompute_trees_are_never_read_for_an_order(world, fl_spans):
     """Precompute writes under the order-less key (-onone); every order's key carries its facts instead."""
     from types import SimpleNamespace
     n = SimpleNamespace(pathways=[SimpleNamespace(id="gsv", spans=[SimpleNamespace(first=fl_spans[0].id, last=fl_spans[3].id)])])
-    none = pipeline.h_cache_key(world.sha, n, ["gsv"], None)
+    none = keys.h_cache_key(world.sha, n, ["gsv"], None)
     assert "-onone-" in none
     for p in (Procedure(), Procedure(cpt=["36475"]), Procedure(target="great saphenous vein"),
               Procedure(diagnosis="I83.811"), Procedure(plan="RFA")):
-        assert pipeline.h_cache_key(world.sha, n, ["gsv"], p) != none
+        assert keys.h_cache_key(world.sha, n, ["gsv"], p) != none
 
 
 def test_the_order_key_and_the_h_key_share_one_order_part(world, fl_spans):
@@ -111,10 +113,10 @@ def test_the_order_key_and_the_h_key_share_one_order_part(world, fl_spans):
     n = SimpleNamespace(pathways=[SimpleNamespace(id="gsv", spans=[SimpleNamespace(first=fl_spans[0].id, last=fl_spans[3].id)])])
     p = Procedure(cpt=["36478", "36475"], target="left great saphenous vein", diagnosis="Varicose veins I83.811, I87.2",
                   plan="laser then sclerotherapy")
-    facts = pipeline.order_facts(p)
+    facts = keys.order_facts(p)
     assert facts.startswith("36475+36478-great-saphenous-vein-I83.811+I87.2-p")
-    assert f"-{facts}-" in pipeline.cache_key(world.sha, p) and f"-o{facts}-" in pipeline.h_cache_key(world.sha, n, ["gsv"], p)
+    assert f"-{facts}-" in keys.cache_key(world.sha, p) and f"-o{facts}-" in keys.h_cache_key(world.sha, n, ["gsv"], p)
     right = p.model_copy(update={"target": "right great saphenous vein"})       # side is not an order fact
-    assert pipeline.h_cache_key(world.sha, n, ["gsv"], right) == pipeline.h_cache_key(world.sha, n, ["gsv"], p)
+    assert keys.h_cache_key(world.sha, n, ["gsv"], right) == keys.h_cache_key(world.sha, n, ["gsv"], p)
     for k, v in (("cpt", ["36475"]), ("target", "small saphenous vein"), ("diagnosis", "I83.812"), ("plan", "RFA")):
-        assert pipeline.h_cache_key(world.sha, n, ["gsv"], p.model_copy(update={k: v})) != pipeline.h_cache_key(world.sha, n, ["gsv"], p)
+        assert keys.h_cache_key(world.sha, n, ["gsv"], p.model_copy(update={k: v})) != keys.h_cache_key(world.sha, n, ["gsv"], p)

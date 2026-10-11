@@ -18,12 +18,12 @@ is long, work section by section; do not summarise or sample.
 
 ## Read the PDF
 `pdftotext -layout <pdf> -` (poppler is installed), or
-`.venv/bin/python -c "from pathlib import Path; from app.pdf import pdf_to_text; print(pdf_to_text(Path('<pdf>')))"`.
+`.venv/bin/python -c "from pathlib import Path; from app.ingest.pdf import pdf_to_text; print(pdf_to_text(Path('<pdf>')))"`.
 Run from the repo root.
 
-## Format: the app's `Guideline` schema (`app/models.py`)
+## Format: the app's `Guideline` schema (`app/core/models.py`)
 Model your file on the hand-built example `data/guidelines/bcbsfl-02-33000-31.json` (read it first; read
-`app/models.py` for the schema). Write `tests/fixtures/truth/<slug>.json` where slug is given in your task.
+`app/core/models.py` for the schema). Write `tests/fixtures/truth/<slug>.json` where slug is given in your task.
 
 - `payer`, `payer_aliases`, `title`, `guideline_number`, `effective_date` as printed. `payer` is the issuing
   organization (not "Medical Policy").

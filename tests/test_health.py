@@ -1,4 +1,4 @@
-"""Policy health (app/health.py, GET /api/health/{id}, /experimental/health/{id}): counts across the cases on one guideline
+"""Policy health (app/review/health.py, GET /api/health/{id}, /experimental/health/{id}): counts across the cases on one guideline
 from what coordinators stored, read-only, and a note to the payer that names no patient. Offline: the stub model,
 the store and the feedback folder in tmp_path (the review-flow fixture). Never touches data/."""
 from __future__ import annotations
@@ -7,7 +7,8 @@ import hashlib
 import json
 from pathlib import Path
 
-from app import feedback, health, store
+from app.core import store
+from app.review import feedback, health
 from tests.conftest import accept_all, sid
 from tests.test_strikes import reqs, world  # noqa: F401  (the review-flow fixture)
 
@@ -116,7 +117,8 @@ def test_short_labels_match_the_navigator():
 
 
 def test_the_seeder_writes_demo_cases_into_the_store_it_is_given(tmp_store, tmp_path, fl_text, fl_spans, delgado_spans, monkeypatch):
-    from app import llm, main, pipeline
+    from app import main, pipeline
+    from app.core import llm
     from scripts.seed_health import seed
     from tests.conftest import SAMPLES
 

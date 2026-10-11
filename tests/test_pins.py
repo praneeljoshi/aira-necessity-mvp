@@ -10,8 +10,10 @@ from types import SimpleNamespace
 import pytest
 from fastapi.testclient import TestClient
 
-from app import llm, main, pipeline, status, store
-from app.models import Procedure
+from app import main, pipeline
+from app.checklist import keys
+from app.core import llm, status, store
+from app.core.models import Procedure
 from tests.conftest import SAMPLES
 from tests.fake import Stub
 
@@ -31,7 +33,7 @@ def test_pins_without_the_api(monkeypatch, no_api):
         monkeypatch.delenv(k, raising=False)
     assert llm.pick_models() == ("gpt-6-sol", "gpt-6-luna")
     assert llm.pick_models(["gpt-5.5", "gpt-5.5-2026-01-01"]) == ("gpt-6-sol", "gpt-6-luna")   # a list is ignored
-    assert pipeline.step_h() == "loose-next"
+    assert keys.step_h() == "loose-next"
     monkeypatch.setenv("MODEL_STRUCTURE", "gpt-x")
     assert llm.pick_models() == ("gpt-x", "gpt-6-luna")
     monkeypatch.setenv("MODEL_JUDGE", "gpt-y")
@@ -48,37 +50,37 @@ def _n(fl_spans):
 def test_keys_follow_the_model(monkeypatch, fl_spans):
     monkeypatch.setenv("STEP_H", "loose")
     monkeypatch.setattr(llm, "pick_models", lambda ids=None: ("gpt-6-sol", "gpt-6-luna"))
-    k1 = pipeline.cache_key(SHA, PROC)
-    assert k1 == f"ssssssssssssssss-36475-great-saphenous-vein-mgpt-6-sol-v{pipeline.prompt_version()}"
+    k1 = keys.cache_key(SHA, PROC)
+    assert k1 == f"ssssssssssssssss-36475-great-saphenous-vein-mgpt-6-sol-v{keys.prompt_version()}"
     n = _n(fl_spans)
-    h1 = pipeline.h_cache_key(SHA, n, ["gsv"], PROC)
-    assert h1.endswith(f"-mgpt-6-sol-v{pipeline.prompt_version(with_c=False)}")
+    h1 = keys.h_cache_key(SHA, n, ["gsv"], PROC)
+    assert h1.endswith(f"-mgpt-6-sol-v{keys.prompt_version(with_c=False)}")
     monkeypatch.setattr(llm, "pick_models", lambda ids=None: ("gpt-5.5", "gpt-6-luna"))
-    assert pipeline.cache_key(SHA, PROC) != k1 and "-mgpt-5.5-v" in pipeline.cache_key(SHA, PROC)
-    assert pipeline.h_cache_key(SHA, n, ["gsv"], PROC) != h1
+    assert keys.cache_key(SHA, PROC) != k1 and "-mgpt-5.5-v" in keys.cache_key(SHA, PROC)
+    assert keys.h_cache_key(SHA, n, ["gsv"], PROC) != h1
     monkeypatch.setattr(llm, "pick_models", lambda ids=None: ("gpt-6-sol", "gpt-5.5"))   # the judge is not in the key
-    assert pipeline.cache_key(SHA, PROC) == k1 and pipeline.h_cache_key(SHA, n, ["gsv"], PROC) == h1
+    assert keys.cache_key(SHA, PROC) == k1 and keys.h_cache_key(SHA, n, ["gsv"], PROC) == h1
 
 
 def test_keys_follow_the_prompt_files(monkeypatch, fl_spans):
     monkeypatch.delenv("STEP_H", raising=False)
     monkeypatch.setattr(llm, "pick_models", lambda ids=None: ("m", "m"))
     n = _n(fl_spans)
-    k, h = pipeline.cache_key(SHA, PROC), pipeline.h_cache_key(SHA, n, ["gsv"], PROC)
-    real = pipeline._prompt_bytes
+    k, h = keys.cache_key(SHA, PROC), keys.h_cache_key(SHA, n, ["gsv"], PROC)
+    real = keys._prompt_bytes
 
     def edited(which):
         return lambda name: real(name) + (b" edited" if name == which else b"")
-    monkeypatch.setattr(pipeline, "_prompt_bytes", edited("reduce/plan"))          # an H prompt: both keys move
-    assert pipeline.cache_key(SHA, PROC) != k and pipeline.h_cache_key(SHA, n, ["gsv"], PROC) != h
-    monkeypatch.setattr(pipeline, "_prompt_bytes", edited("narrow_guideline"))     # C's prompt: the order key only
-    assert pipeline.cache_key(SHA, PROC) != k and pipeline.h_cache_key(SHA, n, ["gsv"], PROC) == h
-    monkeypatch.setattr(pipeline, "_prompt_bytes", edited("judge_chart"))          # not C or H: nothing moves
-    assert pipeline.cache_key(SHA, PROC) == k and pipeline.h_cache_key(SHA, n, ["gsv"], PROC) == h
-    monkeypatch.setattr(pipeline, "_prompt_bytes", real)
+    monkeypatch.setattr(keys, "_prompt_bytes", edited("reduce/plan"))          # an H prompt: both keys move
+    assert keys.cache_key(SHA, PROC) != k and keys.h_cache_key(SHA, n, ["gsv"], PROC) != h
+    monkeypatch.setattr(keys, "_prompt_bytes", edited("narrow_guideline"))     # C's prompt: the order key only
+    assert keys.cache_key(SHA, PROC) != k and keys.h_cache_key(SHA, n, ["gsv"], PROC) == h
+    monkeypatch.setattr(keys, "_prompt_bytes", edited("judge_chart"))          # not C or H: nothing moves
+    assert keys.cache_key(SHA, PROC) == k and keys.h_cache_key(SHA, n, ["gsv"], PROC) == h
+    monkeypatch.setattr(keys, "_prompt_bytes", real)
     monkeypatch.setenv("STEP_H", "script")                                          # another mode, other files
-    assert pipeline.prompt_version(with_c=False) != pipeline.prompt_version(with_c=False, mode="loose")
-    assert pipeline.h_cache_key(SHA, n, ["gsv"], PROC) != h
+    assert keys.prompt_version(with_c=False) != keys.prompt_version(with_c=False, mode="loose")
+    assert keys.h_cache_key(SHA, n, ["gsv"], PROC) != h
 
 
 @pytest.fixture
@@ -131,7 +133,7 @@ def test_an_old_case_still_renders(world, monkeypatch):
     st = status.load_status("old")
     key = st["tree"]["criteria_key"]
     o = store.load_order("old")
-    legacy = pipeline.legacy_cache_key(sha, o.procedure)
+    legacy = keys.legacy_cache_key(sha, o.procedure)
     (store.CRITERIA / f"{key}.json").rename(store.CRITERIA / f"{legacy}.json")
     st.pop("tree")
     status.save_status("old", st)
@@ -140,7 +142,7 @@ def test_an_old_case_still_renders(world, monkeypatch):
     def no_model(*a, **k):
         raise AssertionError("showing a case never calls the model")
     monkeypatch.setattr(llm, "call", no_model)
-    assert pipeline.case_order_key(sha, o.procedure, "old") == legacy
+    assert keys.case_order_key(sha, o.procedure, "old") == legacy
     assert store.load_case_criteria("old") is not None          # its checklist: the copy pinned in its folder
     after = c.get("/api/orders/old/tree").json()["tree"]
     assert after["sections"] == before["sections"]

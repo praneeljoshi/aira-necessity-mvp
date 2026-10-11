@@ -3,7 +3,8 @@ fit"), sections that look alike offered for comparison, and "None of these": the
 other guidelines on file and a re-check against one of them. Offline: the stub model, tmp_path. Never touches data/."""
 from __future__ import annotations
 
-from app import llm, pipeline
+from app import pipeline
+from app.core import llm
 from tests.conftest import SAMPLES
 from tests.fake import Stub
 from tests.test_strikes import CHART, world  # noqa: F401  (the review-flow fixture)
@@ -57,7 +58,7 @@ def test_none_of_these_means_the_guideline_does_not_apply(world, monkeypatch, fl
 def test_a_paused_gate_shows_this_runs_suggestion_not_an_old_confirmation(world, monkeypatch, fl_spans, delgado_spans):
     """A re-checked case pauses again: its gate suggests what this run's selection.json says, never the suggestion
     recorded in an earlier run's pathways.json."""
-    from app import store
+    from app.core import store
     cid = paused(world, monkeypatch, fl_spans, delgado_spans)
     store.save_confirmation(cid, {"suggested": [{"code": "36475", "pathway": "accessory"}],
                                   "confirmed": [{"code": "36475", "pathway": "accessory"}], "by": "Dana", "at": "2026-01-01T00:00:00"})

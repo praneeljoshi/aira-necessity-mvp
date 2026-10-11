@@ -1,7 +1,7 @@
 """Step A: lines are spans, verbatim; blank lines and page breaks are rendered but not citable; ranges expand."""
-from app.models import Range, Span
-from app.narrow import code_in
-from app.spans import expand, in_range, render_chart, render_guideline, resolves, split_chart, split_guideline, table, text_of
+from app.core.models import Range, Span
+from app.understand.narrow import code_in
+from app.ingest.spans import expand, in_range, render_chart, render_guideline, resolves, split_chart, split_guideline, table, text_of
 from tests.conftest import rng, sid
 from tests.fake import codes_of
 
@@ -35,7 +35,7 @@ def test_ids_zero_padded_to_the_width_needed():
 
 
 def test_fl_one_span_per_nonblank_line(fl_text, fl_spans):
-    from app.spans import GLYPHS
+    from app.ingest.spans import GLYPHS
     lines = [ln.replace("\t", "    ").rstrip() for ln in fl_text.translate(GLYPHS).replace("\f", "\n").split("\n")]
     assert [s.text for s in fl_spans] == [ln for ln in lines if ln]
     assert fl_spans[0].id == "g0001"
@@ -86,7 +86,7 @@ def test_manual_spans_default_page_and_gap():
 
 
 def test_private_use_bullets_map_one_for_one():
-    from app.spans import unmapped_glyphs
+    from app.ingest.spans import unmapped_glyphs
     raw = "      reflux\n         lavage\n odd"
     spans = split_guideline(raw)
     assert [s.text for s in spans] == ["   •   reflux", "      ▪   lavage", " odd"]

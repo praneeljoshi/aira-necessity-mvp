@@ -9,9 +9,12 @@ import re
 import pytest
 from fastapi.testclient import TestClient
 
-from app import feedback, llm, main, pipeline, review, status, store
-from app.select import select
-from app.spans import table
+from app import main, pipeline
+from app.checklist import keys
+from app.core import llm, status, store
+from app.review import feedback, review
+from app.understand.select import select
+from app.ingest.spans import table
 from tests.conftest import SAMPLES, sid
 from tests.fake import Stub
 
@@ -143,7 +146,7 @@ def _pause_by_hand(check, chart_id, fl_spans, **kw):
     r, _ = check(chart_id, **kw)
     o = store.load_order(chart_id)
     gspans, sha, _ = store.load_guideline_spans(r.guideline_id)
-    key = pipeline.cache_key(sha, o.procedure)
+    key = keys.cache_key(sha, o.procedure)
     n, _ = store.load_criteria(key)
     sel = select(n, o, gspans)
     (store.RESULTS / chart_id / "result.json").unlink()
@@ -313,7 +316,7 @@ def test_retry_after_a_failed_resume(world, fl_spans, delgado_spans, monkeypatch
 def test_evidence_order_leads_with_what_the_page_shows_first():
     """One quote shows by default: the strongest against quote when contradicted, else the first for quote; a duration
     leads with the start note and the latest note comes next."""
-    from app.review import order_evidence
+    from app.review.review import order_evidence
     f1, f2, f3, a1, a2 = ({"side": "for", "span": "r1", "date": "2025-07-22"}, {"side": "for", "span": "r2", "date": "2025-03-18"},
                           {"side": "for", "span": "r3", "date": None}, {"side": "against", "span": "r4"}, {"side": "against", "span": "r5"})
     assert [e["span"] for e in order_evidence([f1, f2, a1, a2], "contradicted", False)] == ["r4", "r5", "r1", "r2"]

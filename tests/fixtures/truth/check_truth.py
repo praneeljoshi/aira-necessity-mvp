@@ -2,7 +2,7 @@
 
     python tests/fixtures/truth/check_truth.py tests/fixtures/truth/<slug>.json <guideline.pdf>
 
-Schema (app.models.Guideline); every criterion and exclusion text verbatim in the PDF (whitespace, hyphenation and
+Schema (app.core.models.Guideline); every criterion and exclusion text verbatim in the PDF (whitespace, hyphenation and
 quote marks normalised); leaf ids exist; every criterion used; every scope code appears in the PDF. Exit 1 on problems.
 """
 from __future__ import annotations
@@ -12,8 +12,8 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
-from app.models import Guideline  # noqa: E402
-from app.pdf import pdf_to_text  # noqa: E402
+from app.core.models import Guideline  # noqa: E402
+from app.ingest.pdf import pdf_to_text  # noqa: E402
 
 
 def norm(s: str) -> str:

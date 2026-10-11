@@ -1,11 +1,11 @@
-"""The Tree view's outline (app/tree.outline): the case's logic after strikes and additions, each group's status
+"""The Tree view's outline (app/review/tree.outline): the case's logic after strikes and additions, each group's status
 compiled from its children by code (met · ask · open · contradicted), options made unneeded dimmed, the root's
 status and what it waits on. Offline: the stub model and tmp_path stores, never data/."""
 from __future__ import annotations
 
-from app.evaluate import compile_expr
-from app.models import Verdict
-from app.tree import outline, outline_case
+from app.decide.evaluate import compile_expr
+from app.core.models import Verdict
+from app.review.tree import outline, outline_case
 from tests.test_strikes import world  # noqa: F401  (the review-flow fixture)
 
 ST = {"y": "MET", "n": "NOT_MET", "?": "INSUFFICIENT"}

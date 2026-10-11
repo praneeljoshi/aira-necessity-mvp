@@ -6,9 +6,9 @@ from pathlib import Path
 
 import pytest
 
-from app import llm, store
-from app.pdf import pdf_to_text
-from app.spans import split_chart, split_guideline
+from app.core import llm, store
+from app.ingest.pdf import pdf_to_text
+from app.ingest.spans import split_chart, split_guideline
 
 ROOT = Path(__file__).resolve().parents[1]
 SAMPLES = ROOT / "data" / "samples"

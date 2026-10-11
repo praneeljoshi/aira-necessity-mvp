@@ -1,7 +1,8 @@
 """The API shape the screen reads, offline (stub model, store in tmp_path)."""
 from fastapi.testclient import TestClient
 
-from app import llm, main
+from app import main
+from app.core import llm
 from tests.conftest import SAMPLES
 from tests.fake import Stub
 

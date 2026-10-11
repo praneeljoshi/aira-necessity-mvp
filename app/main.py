@@ -17,12 +17,16 @@ from fastapi.responses import FileResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
-from . import log, onecode, pipeline, review, review_api, signoff, status, store, tree
-from .models import CriteriaSet, Narrowed, Order, Result, Selection
-from .pdf import EmptyPdfText, pdf_to_text
-from .select import pathway_name
-from .spans import table, text_of
-from .templates import fmt_date
+from app import pipeline
+from app.checklist import keys
+from app.core import log, status, store
+from app.review import review, review_api, signoff, tree
+from app.understand import onecode
+from app.core.models import CriteriaSet, Narrowed, Order, Result, Selection
+from app.ingest.pdf import EmptyPdfText, pdf_to_text
+from app.understand.select import pathway_name
+from app.ingest.spans import table, text_of
+from app.decide.templates import fmt_date
 
 ROOT = Path(__file__).resolve().parents[1]
 @asynccontextmanager
@@ -125,7 +129,7 @@ def _decided(chart_id: str, r: Result, sel: Selection, gid: str) -> dict:
     n: Optional[Narrowed] = None
     cs: Optional[CriteriaSet] = None
     if o:
-        n, cs = store.load_criteria(pipeline.case_order_key(sha, o.procedure, chart_id))
+        n, cs = store.load_criteria(keys.case_order_key(sha, o.procedure, chart_id))
     conf = store.load_confirmation(chart_id)
     if conf and conf.get("h_key"):
         cs = store.load_criteria(conf["h_key"])[1] or cs
@@ -190,7 +194,7 @@ def _start(chart_id: str, text: str, gid: str, filename: str, source: str = "api
     """Runs the check in a thread (or inline when BACKGROUND is off) and returns what the page needs right away:
     the chart id and the status to poll. The recorder owns status.json from this moment; a stage that raises is
     recorded as failed by the recorder itself, so nothing fails silently. `pause_at_pathways` is the review flow's
-    stop at the section gate (app/review_api.py); the check then waits for pipeline.resume."""
+    stop at the section gate (app/review/review_api.py); the check then waits for pipeline.resume."""
     signoff.withdraw(chart_id, None, "re-check")   # a sign-off never outlives the check it was made on (a no-op if none)
     rec = status.Recorder(chart_id, gid, filename, override, source)
 
@@ -236,7 +240,7 @@ def health():
 def list_guidelines():
     return [{"id": g["id"], "payer": g.get("payer") or "", "title": g.get("filename") or g["id"], "guideline_number": None,
              "n_pathways": g.get("n_pathways"), "n_codes": g.get("n_codes"),
-             # the review page's names: the guideline's own title and number (app/titles.py), never the file name
+             # the review page's names: the guideline's own title and number (app/review/titles.py), never the file name
              "name": g.get("title_text") or "", "number": g.get("number") or "", "issuer": g.get("issuer") or g.get("payer") or ""}
             for g in store.list_guidelines()]
 

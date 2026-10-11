@@ -1,4 +1,4 @@
-"""Known-structure hints (app/hints.py, STRUCTURE_HINTS=1): a payer block before "## The guideline" in step H (loose
+"""Known-structure hints (app/checklist/hints.py, STRUCTURE_HINTS=1): a payer block before "## The guideline" in step H (loose
 and loose-next, main and audit), a clinic block before "## Chart" in A2 and the judge; byte-identical prompts when the
 flag is off or nothing (or more than one file) matches; the hint's name + hash in the cache keys only when applied.
 Pure: placeholder hints under tests/fixtures/hints, a scripted fake model, tmp_path only."""
@@ -9,10 +9,14 @@ from pathlib import Path
 
 import pytest
 
-from app import criteria, hints, judge, llm, pipeline, reduce_next, sections, store
-from app.models import CriteriaSet, Order, Procedure
-from tests.test_reduce_code import REFLUX, _sel
-from tests.test_reduce_loop import HEAD, C, H, offline, pid, script  # noqa: F401
+from app import pipeline
+from app.checklist import keys
+from app.checklist import criteria, hints, reduce_next
+from app.core import llm, store
+from app.evidence import judge
+from app.ingest import sections
+from app.core.models import CriteriaSet, Order, Procedure
+from tests.stepH_fake import HEAD, REFLUX, C, H, _sel, offline, pid, script  # noqa: F401
 
 FIX = Path(__file__).resolve().parent / "fixtures" / "hints"
 PAYER = "## What this payer's guidelines look like\n"
@@ -95,7 +99,7 @@ def test_flag_off_and_two_matches_give_none(fl_spans, delgado_spans, hinted, tmp
 
 def test_shipped_hint_files_parse_and_match_nothing_internal():
     """The shipped hint files (QA, guideline-reduce 3d96dcf) all parse with front matter; no test/internal file ships."""
-    from app import hints
+    from app.checklist import hints
     files = sorted(p for p in (hints.DIR).glob("*/*.md"))
     assert files, "prompts/hints/ should carry the QA hint files"
     for f in files:
@@ -176,21 +180,21 @@ def test_h_keys_change_only_when_the_hint_applies(fl_spans, delgado_spans, offli
     p, sha = Procedure(cpt=["36475"]), "s" * 64
     monkeypatch.setenv("STEP_H", "loose")
     hinted(False)
-    k, h = pipeline.cache_key(sha, p), pipeline.h_cache_key(sha, n, ["gsv"], p)
-    assert pipeline.cache_key(sha, p, fl_spans) == k and pipeline.h_cache_key(sha, n, ["gsv"], p, fl_spans) == h
+    k, h = keys.cache_key(sha, p), keys.h_cache_key(sha, n, ["gsv"], p)
+    assert keys.cache_key(sha, p, fl_spans) == k and keys.h_cache_key(sha, n, ["gsv"], p, fl_spans) == h
     hinted(True)
-    assert pipeline.cache_key(sha, p) == k                     # no guideline lines given: as before
-    assert pipeline.cache_key(sha, p, delgado_spans) == k      # nothing matches
-    k2, h2 = pipeline.cache_key(sha, p, fl_spans), pipeline.h_cache_key(sha, n, ["gsv"], p, fl_spans)
+    assert keys.cache_key(sha, p) == k                     # no guideline lines given: as before
+    assert keys.cache_key(sha, p, delgado_spans) == k      # nothing matches
+    k2, h2 = keys.cache_key(sha, p, fl_spans), keys.h_cache_key(sha, n, ["gsv"], p, fl_spans)
     assert k2 != k and h2 != h and k2.rsplit("-v", 1)[0] == k.rsplit("-v", 1)[0]
-    assert pipeline.prompt_version(hint=hints.payer_id(fl_spans)) == k2.rsplit("-v", 1)[1]
+    assert keys.prompt_version(hint=hints.payer_id(fl_spans)) == k2.rsplit("-v", 1)[1]
     monkeypatch.setenv("STEP_H", "loose-next")
-    assert pipeline.cache_key(sha, p, fl_spans) != pipeline.cache_key(sha, p)
+    assert keys.cache_key(sha, p, fl_spans) != keys.cache_key(sha, p)
     monkeypatch.setenv("STEP_H", "code")                       # a mode that does not inject it: key unchanged
-    assert pipeline.cache_key(sha, p, fl_spans) == pipeline.cache_key(sha, p)
+    assert keys.cache_key(sha, p, fl_spans) == keys.cache_key(sha, p)
     monkeypatch.setenv("STEP_H", "loose")
     monkeypatch.setattr(hints, "DIR", nomatch)
-    assert pipeline.cache_key(sha, p, fl_spans) == k
+    assert keys.cache_key(sha, p, fl_spans) == k
 
 
 def test_a2_cache_keeps_the_clinic_hint(tmp_store, delgado_spans, monkeypatch, hinted):

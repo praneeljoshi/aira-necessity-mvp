@@ -12,7 +12,8 @@ import time
 import pytest
 from fastapi.testclient import TestClient
 
-from app import llm, main, pipeline, status
+from app import main, pipeline
+from app.core import llm, status
 from tests.conftest import SAMPLES
 from tests.fake import Stub
 

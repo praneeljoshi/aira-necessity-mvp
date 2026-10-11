@@ -11,7 +11,9 @@ import json
 import pytest
 from fastapi.testclient import TestClient
 
-from app import ask, feedback, llm, main, pipeline, store
+from app import main, pipeline
+from app.core import llm, store
+from app.review import ask, feedback
 from tests.conftest import SAMPLES, idx, rng, sid
 from tests.fake import Stub, ask_answer, selected_lines
 from tests.conftest import accept_all
@@ -119,7 +121,7 @@ def test_a_gap_across_paragraphs_still_asks(world):
 
 def test_a_gap_outside_the_confirmed_section_is_never_known(fl_spans):
     """between_cited: only a paragraph's inner uncited lines, only inside the section's ranges."""
-    from app.models import Range
+    from app.core.models import Range
     g = fl_spans
     size, lead, ulcer = (sid(g, n, P(g)) for n in ("at least 3 millimeters", "one or more of the following", "1. Ulceration"))
     gsv = Range(first=sid(g, "Great or Small Saphenous Veins", P(g)), last=sid(g, "considered cosmetic and does not", P(g)))
@@ -203,7 +205,7 @@ def test_the_stub_reads_a_and_either_b_or_c():
               "[g0042]     •   There is documentation of one or more of the following indications:\n"
               "[g0043]         1. Ulceration secondary to venous stasis; OR\n[g0044]         2. Recurrent superficial thrombophlebitis; OR\n\n## The lines")
     assert [i for i, _ in selected_lines(prompt)] == ["g0041", "g0042", "g0043", "g0044"]
-    from app.models import Span
+    from app.core.models import Span
     a = ask_answer([Span(id="r0001", text="No ulceration.")], prompt)
     assert a["logic"] == {"all": ["p1", {"any": ["p2", "p3"]}]}
 

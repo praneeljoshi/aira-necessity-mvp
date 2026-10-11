@@ -9,8 +9,10 @@ import json
 import pytest
 from fastapi.testclient import TestClient
 
-from app import llm, main, pipeline, status, store
-from app.models import Selection
+from app import main, pipeline
+from app.checklist import keys
+from app.core import llm, status, store
+from app.core.models import Selection
 from tests.conftest import SAMPLES
 from tests.fake import Stub
 
@@ -62,7 +64,7 @@ def test_pause_at_the_section_gate(world):
     assert stub.calls == ["detect_order", "narrow_guideline"]
     st = status.load_status("c1")
     assert st["state"] == "paused" and st["ended_at"] and st["current"] is None and st["run_id"]
-    key = pipeline.cache_key(world.sha256, store.load_order("c1").procedure)
+    key = keys.cache_key(world.sha256, store.load_order("c1").procedure)
     assert st["resume"] == {"stage": "checklist", "needs": "pathways", "key": key, "endpoint": "/api/review/c1/pathways"}
     s = world.stages("c1")
     assert [s[x]["status"] for x in ("chart", "order", "guideline")] == ["done"] * 3
@@ -112,12 +114,12 @@ def test_resume_with_the_suggested_section(world):
     assert set(conf) == {"chart_id", "run_id", "guideline_id", "guideline_sha", "narrowed_key", "suggested", "confirmed",
                          "by", "at", "h_key"}
     assert conf["chart_id"] == "c1" and conf["run_id"] == run_id and conf["guideline_id"] == world.guideline
-    assert conf["guideline_sha"] == world.sha256 and conf["narrowed_key"] == pipeline.cache_key(world.sha256, store.load_order("c1").procedure)
+    assert conf["guideline_sha"] == world.sha256 and conf["narrowed_key"] == keys.cache_key(world.sha256, store.load_order("c1").procedure)
     assert conf["suggested"] == [GSV] and conf["confirmed"] == [GSV] and conf["by"] == "Dana" and conf["at"]
     n = store.load_criteria(conf["narrowed_key"])[0]
-    assert conf["h_key"] == pipeline.h_cache_key(world.sha256, n, ["gsv"], store.load_order("c1").procedure)
+    assert conf["h_key"] == keys.h_cache_key(world.sha256, n, ["gsv"], store.load_order("c1").procedure)
     assert conf["h_key"].startswith(f"h-{world.sha256[:16]}-gsv-") and len(conf["h_key"].split("-")[3]) == 8
-    assert conf["h_key"].endswith(f"-mm-v{pipeline.prompt_version(with_c=False)}")      # the model ("m") and the prompts
+    assert conf["h_key"].endswith(f"-mm-v{keys.prompt_version(with_c=False)}")      # the model ("m") and the prompts
     assert store.load_hcache(conf["h_key"]).expressions[0].pathway == "gsv"
     assert store.load_criteria(conf["h_key"])[0] is None                  # the H-only file has no narrowed
     assert json.loads((store.CRITERIA / f"{conf['h_key']}.json").read_text())["narrowed"] is None
@@ -146,7 +148,7 @@ def test_resume_with_a_different_section(world):
     conf = store.load_confirmation("c1")
     assert conf["suggested"] == [GSV] and conf["confirmed"] == [{"code": "36475", "pathway": "accessory"}]
     n = store.load_criteria(conf["narrowed_key"])[0]
-    assert conf["h_key"] == pipeline.h_cache_key(world.sha256, n, ["accessory"], store.load_order("c1").procedure) != pipeline.h_cache_key(world.sha256, n, ["gsv"], store.load_order("c1").procedure)
+    assert conf["h_key"] == keys.h_cache_key(world.sha256, n, ["accessory"], store.load_order("c1").procedure) != keys.h_cache_key(world.sha256, n, ["gsv"], store.load_order("c1").procedure)
     sel = Selection.model_validate(store.load_result("c1")["selection"])
     assert [(p.code, p.pathway, p.how) for p in sel.pathways] == [("36475", "accessory", "code")]
     acc = next(p for p in n.pathways if p.id == "accessory")
@@ -161,7 +163,7 @@ def test_resume_with_a_different_section(world):
 def test_two_codes_pick_one_then_the_section(world):
     # one code, one pathway: 2+ codes pause at pick_code before C; the picked code alone goes on to the section gate.
     # 36478 is not written in the Delgado chart, so the order step would drop it: the second code comes as an override
-    from app import onecode
+    from app.understand import onecode
     r, stub = world.start("c1", override={"cpt": ["36475", "36478"]})
     assert r is None and stub.calls == ["detect_order"]
     st = status.load_status("c1")

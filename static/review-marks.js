@@ -116,7 +116,7 @@ function measure(){
   const docEl = document.getElementById('glDoc'); if (!docEl) { need(); return; }
   if (docEl.dataset.view === 'tree') { draft = []; need(); return; }    // the tree view: no words of the guideline on screen, nothing to draw
   for (const m of docEl.querySelectorAll('mark.q[data-crit]')) {
-    const tone = m.classList.contains('struck') ? null : m.classList.contains('acc') ? 'acc'
+    const tone = m.classList.contains('struck') ? null : m.closest('.preview-page') ? 'alt' : m.classList.contains('acc') ? 'acc'
       : m.classList.contains('t-miss') ? 'miss' : m.classList.contains('t-bad') ? 'bad' : m.classList.contains('t-alt') ? 'alt' : 'doc';
     if (!tone) continue;
     marks.push({ crit: m.dataset.crit, tone, sel: m.classList.contains('sel') || m.classList.contains('inask'), rects: textRects(m) });

@@ -1,33 +1,21 @@
-"""The sweep's safety fixes on the review flow: a gap strike needs a real sentence (client and server share the rule),
+"""The sweep's safety fixes on the review flow: a gap strike needs no reason (the human is the judge),
 sign-off is tied to the version of the case the signer saw and refused when one already stands, removals made while
 a requirement was not in the chart need an explicit check at sign-off, and the payer packet carries nothing about
 removals (they go into a separate internal audit note). Offline: the stub model and tmp_path; never touches data/."""
 from __future__ import annotations
 
-import pytest
-
-from app import strikes
 from tests.conftest import accept_all
 from tests.test_strikes import world  # noqa: F401  (the review-flow fixture)
 
 
-@pytest.mark.parametrize("note, ok", [
-    ("aaaaaaaaaaaa", False), ("too short", False), ("billing", False), ("a b c", False),
-    ("abcdefgh ijk lmn", True), ("The surgeon measured it in clinic; not needed here.", True),
-    ("not for this pt", True), ("", False), (None, False),
-])
-def test_real_sentence(note, ok):
-    assert strikes.real_sentence(note) is ok
-
-
-def test_a_gap_strike_needs_three_words_and_eight_letters(world):
+def test_a_gap_strike_needs_no_reason(world):
+    # the human is the judge: a requirement the chart does not document drops with no reason and no note (the ⌘⌫
+    # key sends {criterion, by}); who and when are still kept
     cid = world.case(verdicts={"size": {"status": "INSUFFICIENT", "for": []}})
-    c = world.client
-    for bad in ("aaaaaaaaaaaa", "aaaa bbbb cccc", "not needed"):
-        r = c.post(f"/api/review/{cid}/strikes", json={"criterion": "size", "code": "billing", "reason": bad, "by": "Dana"})
-        assert r.status_code == 400, bad
-    r = c.post(f"/api/review/{cid}/strikes", json={"criterion": "size", "code": "billing", "reason": "Measured in clinic, not needed.", "by": "Dana"})
+    r = world.client.post(f"/api/review/{cid}/strikes", json={"criterion": "size", "by": "Dana"})
     assert r.status_code == 201, r.text
+    (sk,) = r.json()["strikes"]
+    assert sk["by"] == "Dana" and sk["at"] and sk["was"] == "missing" and sk["reason"] == ""
 
 
 def test_sign_off_is_tied_to_the_version_the_signer_saw(world):
@@ -127,7 +115,7 @@ def test_no_audit_note_when_nothing_was_removed_or_added(world):
 
 
 def test_pretty_heading_matches_the_page():
-    from app.review import pretty_heading
+    from app.review.review import pretty_heading
     assert pretty_heading("Visit Date: September 30, 2025 | Attending: Dr. X | Type: Follow-Up") == "Follow-Up visit, September 30, 2025"
     assert pretty_heading("7. PHYSICAL EXAMINATION") == "Physical Examination"
     assert pretty_heading("") == ""

@@ -25,9 +25,10 @@ from pathlib import Path
 
 import uvicorn
 
-from app import llm, pipeline, store
-from app.pdf import pdf_to_text
-from app.spans import split_chart, split_guideline
+from app import pipeline
+from app.core import llm, store
+from app.ingest.pdf import pdf_to_text
+from app.ingest.spans import split_chart, split_guideline
 from tests.fake import Stub
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -56,7 +57,7 @@ def main() -> None:
         d.mkdir(parents=True, exist_ok=True)
         setattr(store, name, d)
     llm.RUNS = data / "runs"
-    from app import feedback
+    from app.review import feedback
     feedback.FEEDBACK = data / "feedback"       # feedback goes to the scratch folder too, never data/
     llm.pick_models = lambda ids=None: ("stub", "stub")
 

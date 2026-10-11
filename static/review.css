@@ -739,3 +739,24 @@ html[data-style="marker"] .gl .rest-open > .rest-label { padding-left:42px }
 .dlg-gl { display:block; margin:0 0 4px; font-size:14px; color:var(--sec) } .dlg-gl[hidden] { display:none }
 .dlg-gl select { font:inherit; color:var(--ink); max-width:100%; margin-left:4px }
 html[data-style] .dlg-card .drop.big { padding:26px 20px 22px; margin-bottom:12px }
+
+/* ⌘⌫ drops the selected requirement: a quiet key chip beside "Not needed for this case", and the Undo toast */
+#side .drop-key { margin-left:8px; font:11px var(--f-ui); color:var(--dim); border:1px solid var(--line); border-radius:4px; padding:0 4px }
+@media (hover: none) { #side .drop-key, .gl .ev .drop-key { display:none } }
+.gl .ev .drop-key { display:none }
+.drop-toast { position:fixed; z-index:60; left:50%; bottom:calc(20px + env(safe-area-inset-bottom)); transform:translateX(-50%); padding:8px 14px; border-radius:8px;
+  background:var(--ink); color:var(--paper); font:13px var(--f-ui); box-shadow:var(--slip-shadow) }
+.drop-toast button { background:none; border:0; padding:0; color:inherit; font:inherit; font-weight:700; text-decoration:underline; cursor:pointer }
+
+/* one-time first-visit hints: a quiet line under the landing drop zone, a small callout under the Guideline | Tree switch */
+.first-hint { color:var(--sec); font-size:13px }
+.first-hint .hint-x { margin-left:4px; padding:0 4px; border:0; background:none; box-shadow:none; color:var(--sec); font-size:14px; line-height:1; cursor:pointer }
+.landing .try-sample { margin:12px 2px 0 }
+.view-bar { position:relative }
+.view-bar .tree-hint { position:absolute; top:calc(100% + 6px); right:0; z-index:5; white-space:nowrap; padding:4px 6px 4px 10px; border:1px solid var(--line); border-radius:8px; background:var(--panel, #fff); box-shadow:0 2px 6px rgba(0,0,0,.08) }
+@media (max-width:640px) { .view-bar .tree-hint { display:none } }
+/* the case page while the check runs: one neutral wash for every requirement, nothing to click; the progress line above */
+.preview-page .pv-run .runlines { margin:6px 0 14px }
+html:not([data-style="marker"]) .preview-page .gl mark.q, html.nogl .preview-page .gl mark.q { background:rgb(224 230 238) !important; border-bottom-color:transparent; color:inherit; cursor:default }
+html[data-theme="dark"]:not([data-style="marker"]) .preview-page .gl mark.q, html[data-theme="dark"].nogl .preview-page .gl mark.q { background:rgb(44 52 64) !important }
+.pv-guideline .rest-fold > summary, .pv-guideline .rest-hint { display:none }

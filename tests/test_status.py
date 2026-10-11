@@ -1,4 +1,4 @@
-"""The check's status, stage by stage (app/status.py), recorded by pipeline.run and read by the screen. Offline:
+"""The check's status, stage by stage (app/core/status.py), recorded by pipeline.run and read by the screen. Offline:
 stub model, store in tmp_path."""
 from __future__ import annotations
 
@@ -8,7 +8,8 @@ import time
 import pytest
 from fastapi.testclient import TestClient
 
-from app import llm, main, pipeline, status
+from app import main, pipeline
+from app.core import llm, status
 from tests.conftest import SAMPLES
 from tests.fake import Stub
 
@@ -208,7 +209,7 @@ def test_api_failed_check_is_listed_and_can_be_retried(tmp_store, fl_spans, delg
 def test_each_stage_says_what_it_is_doing_then_clears_it(setup, fl_spans, delgado_spans, monkeypatch):
     """`doing` as the page polls it: read from status.json while each model step is in its call (a stub hook) and
     while J verifies, and empty on every stage once the check is done. Coordinator words only."""
-    from app import judge
+    from app.evidence import judge
     seen: dict[str, str] = {}
     inner = Stub(fl_spans, delgado_spans)
     verify = judge.verify

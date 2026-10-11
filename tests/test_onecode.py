@@ -1,4 +1,4 @@
-"""One code, one pathway (app/onecode.py): in the review flow an order with 2+ codes pauses at pick_code before C;
+"""One code, one pathway (app/understand/onecode.py): in the review flow an order with 2+ codes pauses at pick_code before C;
 the picked code alone goes on to the section gate; an unpicked not-covered code does not stop the case; /split makes
 a sibling case for another code; single-code orders and the / flow are unchanged. Offline: stub model, store and
 feedback in tmp_path; never touches data/."""
@@ -9,7 +9,10 @@ import hashlib
 import pytest
 from fastapi.testclient import TestClient
 
-from app import feedback, llm, main, onecode, pipeline, status, store
+from app import main, pipeline
+from app.core import llm, status, store
+from app.review import feedback
+from app.understand import onecode
 from tests.conftest import SAMPLES
 from tests.fake import Stub
 

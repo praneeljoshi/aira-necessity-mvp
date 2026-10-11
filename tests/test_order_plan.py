@@ -9,10 +9,11 @@ import re
 
 import pytest
 
-from app import llm, pipeline
-from app.models import Order, Procedure
-from app.pdf import pdf_to_text
-from app.spans import split_chart
+from app import pipeline
+from app.core import llm
+from app.core.models import Order, Procedure
+from app.ingest.pdf import pdf_to_text
+from app.ingest.spans import split_chart
 from tests.conftest import SAMPLES
 from tests.fake import Stub
 
@@ -67,7 +68,7 @@ def test_the_coordinators_plan_overrides(run_with):
 def test_a_plan_wrapped_over_two_chart_lines_is_kept():
     """Mitchell's chart prints the plan in a two-column layout and wraps it: "Plan Name: AARP Medicare Advantage
     Choice   Plan ID: H0062-001-000" / "PPO". Joined line by line the Plan ID sits in the middle; it was dropped."""
-    from app import refs
+    from app.evidence import refs
     lines = [" Payer: UnitedHealthcare                                  Plan Type: Medicare Advantage",
              " Plan Name: AARP Medicare Advantage Choice                Plan ID: H0062-001-000",
              " PPO",
@@ -80,6 +81,6 @@ def test_a_plan_wrapped_over_two_chart_lines_is_kept():
 
 
 def test_mitchells_real_chart_keeps_his_plan():
-    from app import refs
+    from app.evidence import refs
     rs = split_chart(pdf_to_text(SAMPLES / "robert_mitchell_chart_final.pdf"))
     assert refs.written_in([s.text for s in rs], "AARP Medicare Advantage Choice PPO")

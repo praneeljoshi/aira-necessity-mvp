@@ -4,9 +4,11 @@ July 24, 2025" in the planned-procedure block; within DATE_LOOKBACK of it, that 
 quote read July 24, 2025. Pure: the sample chart's lines, the stub's checklist, no store."""
 from __future__ import annotations
 
-from app import judge, sections, tree
-from app.models import CriteriaSet, Criterion, DateRef, Threshold, Verdict
-from app.spans import table
+from app.evidence import judge
+from app.ingest import sections
+from app.review import tree
+from app.core.models import CriteriaSet, Criterion, DateRef, Threshold, Verdict
+from app.ingest.spans import table
 from tests.conftest import rng, sid
 from tests.fake import sections_answer
 

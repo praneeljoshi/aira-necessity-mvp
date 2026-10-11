@@ -116,7 +116,7 @@ def extra_criteria(g, pid: str) -> tuple[list[dict], str]:
 
 
 def asked_pathways(prompt: str) -> tuple[str, ...]:
-    """The pathway ids the H prompt asks for: the `- `<pid>`: “…” (lines …)` lines app.criteria renders."""
+    """The pathway ids the H prompt asks for: the `- `<pid>`: “…” (lines …)` lines app.checklist.criteria renders."""
     m = re.search(r"## The confirmed indication\(s\)\n\n(.*?)\n\n## ", prompt, re.S)
     found = tuple(dict.fromkeys(re.findall(r"^- `(\w+)`: ", m.group(1) if m else "", re.M)))
     return found or ("gsv",)
@@ -220,7 +220,7 @@ def _words(t: str) -> set[str]:
 
 
 def selected_lines(prompt: str) -> list[tuple[str, str]]:
-    """The (id, text) pairs app.ask renders under "## The selected guideline lines"."""
+    """The (id, text) pairs app.review.ask renders under "## The selected guideline lines"."""
     m = re.search(r"## The selected guideline lines\n\n(.*?)\n\n## ", prompt, re.S)
     return re.findall(r"^\[(g\d+)\] (.*)$", m.group(1) if m else "", re.M)
 

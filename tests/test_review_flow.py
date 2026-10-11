@@ -10,7 +10,9 @@ import json
 import pytest
 from fastapi.testclient import TestClient
 
-from app import feedback, llm, main, pipeline, store
+from app import main, pipeline
+from app.core import llm, store
+from app.review import feedback
 from tests.conftest import SAMPLES
 from tests.fake import Stub
 

@@ -8,7 +8,8 @@ import time
 import pytest
 from fastapi.testclient import TestClient
 
-from app import llm, main, pipeline
+from app import main, pipeline
+from app.core import llm
 from tests.conftest import SAMPLES, sid
 from tests.fake import Stub
 

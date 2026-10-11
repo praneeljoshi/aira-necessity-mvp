@@ -8,7 +8,9 @@ import json
 import pytest
 from fastapi.testclient import TestClient
 
-from app import feedback, llm, main, pipeline
+from app import main, pipeline
+from app.core import llm
+from app.review import feedback
 from tests.conftest import SAMPLES, sid
 from tests.fake import Stub
 
@@ -139,7 +141,7 @@ def test_cross_case_list(world, fl_spans):
 def test_feedback_before_the_check_finishes(world, delgado_spans):
     """A running check has a status but no result: feedback is still accepted, the fields it can't know are null."""
     check, c, gid, sha, _ = world
-    from app import status
+    from app.core import status
     status.Recorder("run1", gid, "chart.pdf")
     item = c.post("/api/review/run1/feedback", json={"kind": "logic_wrong", "side": "guideline", "spans": ["g0001-g0002"]}).json()
     assert item["guideline_id"] == gid and item["guideline_sha"] == sha and item["pathway"] == [] and item["run_id"] is None

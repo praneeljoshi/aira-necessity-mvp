@@ -12,6 +12,11 @@ stress
 data/score_v11/
 data/stress_v11/
 data/feedback/*
+# experiment runners' output (experiments/scripts), never committed
+data/reduce_*/
+data/record_eval/
+data/baseline_v11/
+experiments/**/data/
 
 # local, never committed
 .venv

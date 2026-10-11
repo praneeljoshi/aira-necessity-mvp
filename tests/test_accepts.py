@@ -86,11 +86,10 @@ def test_packet_quotes_are_whole_sentences(world):
     assert not any("   " in q or q.endswith(" No") for q in qs)
 
 
-def test_striking_a_gap_needs_a_real_reason_and_is_recorded(world):
+def test_striking_a_gap_needs_no_reason_and_is_recorded(world):
     cid = world.case(verdicts={"size": {"status": "INSUFFICIENT", "for": []}})
     c = world.client
-    assert c.post(f"/api/review/{cid}/strikes", json={"criterion": "size", "reason": "billing", "by": "Dana"}).status_code == 400
-    d = world.strike(cid, "size", reason="The surgeon measured it in clinic; not needed here.")
+    d = world.strike(cid, "size", reason="billing")                  # the human is the judge: any reason, or none
     sk = [x for x in d["strikes"] if not x["undone"]]
     assert sk[0]["was"] == "missing" and d["case"]["result"]["queue"] == "ready"
     # a documented requirement can still be struck with a short reason
@@ -108,7 +107,7 @@ def test_a_recheck_withdraws_the_sign_off_as_it_starts(world):
     assert r.status_code == 200, r.text
     d = world.doc(cid)
     assert d["state"] == "paused" and world.row(cid)["signoff"] != "signed"
-    rec = d["signoff"]["record"] if d["signoff"].get("record") else __import__("app.signoff", fromlist=["x"]).load(cid)
+    rec = d["signoff"]["record"] if d["signoff"].get("record") else __import__("app.review.signoff", fromlist=["x"]).load(cid)
     assert rec["withdrawn"]["why"] == "re-check"
 
 
@@ -116,7 +115,8 @@ def test_new_accepts_and_sign_offs_name_the_tree_they_were_made_on(world):
     """status.json's tree {criteria_key, step_h, model, run_id} is stamped on each new accept and sign-off record;
     a case with no tree on its status reads nulls. Fingerprints are untouched."""
     import json
-    from app import accepts, signoff, status, store
+    from app.core import status, store
+    from app.review import accepts, signoff
     cid = world.case()
     c = world.client
     t = status.load_status(cid)["tree"]

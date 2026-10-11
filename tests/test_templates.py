@@ -1,11 +1,11 @@
-"""The surgeon ask's wording (app/templates.py): each item is the guideline's words as quoted, then what is needed (no
+"""The surgeon ask's wording (app/decide/templates.py): each item is the guideline's words as quoted, then what is needed (no
 sentence built around a quote, no lower-casing), a chart quote once per draft, and no text predicts the payer's
 decision. Shipped once: "Documentation that federal Employee Program (FEP)…", "endovenous radiofrequency,." and
 "Florida Blue will deny without it". Pure: no store, no model."""
 from __future__ import annotations
 
-from app import templates as T
-from app.models import Criterion, Threshold
+from app.decide import templates as T
+from app.core.models import Criterion, Threshold
 from tests.test_pipeline import DENY, assert_no_denial
 
 PAYER = "Florida Blue"

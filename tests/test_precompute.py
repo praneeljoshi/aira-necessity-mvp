@@ -3,7 +3,9 @@ which resume never reads (the H key carries the order: tests/test_hkey_order.py)
 ahead of a chart."""
 from __future__ import annotations
 
-from app import llm, pipeline, store
+from app import pipeline
+from app.checklist import keys
+from app.core import llm, store
 from tests.fake import Stub
 
 
@@ -23,8 +25,8 @@ def test_precompute_builds_h_per_pathway_under_the_orderless_key(tmp_store, fl_t
     assert out["pathways"] and set(out["built"]) == set(out["pathways"]) and out["cached"] == []
     assert stub.calls.count("narrow_guideline") == 1 and stub.calls.count("criteria_guideline") == len(out["pathways"])
     _, sha, _ = store.load_guideline_spans(gid)
-    n, _ = store.load_criteria(pipeline.cache_key(sha, pipeline.Procedure()))
+    n, _ = store.load_criteria(keys.cache_key(sha, pipeline.Procedure()))
     for pid in out["pathways"]:
-        assert store.load_hcache(pipeline.h_cache_key(sha, n, [pid], None)) is not None
+        assert store.load_hcache(keys.h_cache_key(sha, n, [pid], None)) is not None
     again = pipeline.precompute(gid)                      # a second call reads the cache
     assert again["built"] == [] and set(again["cached"]) == set(out["pathways"])

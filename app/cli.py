@@ -5,8 +5,9 @@ import hashlib
 import sys
 from pathlib import Path
 
-from . import log, pipeline, store
-from .pdf import pdf_to_text
+from app import pipeline
+from app.core import log, store
+from app.ingest.pdf import pdf_to_text
 
 
 def add(p: Path, gid: str | None = None) -> str:

@@ -16,8 +16,10 @@ import random
 import time
 from pathlib import Path
 
-from app import feedback, llm, main, store
-from app.health import DEMO_FILE
+from app import main
+from app.core import llm, store
+from app.review import feedback
+from app.review.health import DEMO_FILE
 from tests.conftest import rng, sid
 from tests.fake import P, Stub
 

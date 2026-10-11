@@ -1,5 +1,5 @@
 """Strike a requirement for one case, and sign-off before Ready, in the review flow. The prune rules per operator,
-the strike endpoints (reason required, per case only, reversible, K-L again with no model call, filed as feedback),
+the strike endpoints (no reason needed, per case only, reversible, K-L again with no model call, filed as feedback),
 the sign-off (only a ready case, who and when, withdrawn by any later change). Offline: the stub model, the store
 and the feedback folder in tmp_path. Never touches data/."""
 from __future__ import annotations
@@ -10,8 +10,10 @@ import json
 import pytest
 from fastapi.testclient import TestClient
 
-from app import feedback, llm, main, pipeline, signoff, store, strikes
-from app.models import CriteriaSet, Criterion, Expression
+from app import main, pipeline
+from app.core import llm, store
+from app.review import feedback, signoff, strikes
+from app.core.models import CriteriaSet, Criterion, Expression
 from tests.conftest import SAMPLES
 from tests.fake import Stub
 from tests.conftest import accept_all
@@ -59,7 +61,7 @@ def test_prune_under_not_drops_the_exclusion():
 
 
 def test_split_lists_what_a_compound_strike_takes_with_it(tmp_store, fl_spans):
-    from app.spans import table, wording
+    from app.ingest.spans import table, wording
     g = fl_spans[:3]
     crit = [Criterion(id=i, refs=[g[k].id], question=i) for k, i in enumerate(("a", "x", "y"))]
     cs = CriteriaSet(key="k1", criteria=crit, expressions=[Expression(pathway="p", expr={"all": ["a", {"not": {"all": ["x", "y"]}}]})])
@@ -177,8 +179,7 @@ def test_strike_reruns_the_decision_per_case_and_is_reversible(world):
     h_key = d["confirmation"]["h_key"]
     cache = (store.CRITERIA / f"{h_key}.json").read_bytes()
     calls = len(world.calls)
-    # refused: no reason, not a requirement of this case, a paused or unknown case
-    world.strike(cid, "size", reason="  ", expect=400)
+    # refused: not a requirement of this case, a paused or unknown case (no reason is needed)
     world.strike(cid, "nope", expect=400)
     world.strike("nope", "size", expect=404)
     # struck: K-L again, no model call; the result is now ready, waiting for sign-off
@@ -293,11 +294,7 @@ def test_a_strike_carries_its_reason_code_to_the_record_and_the_feedback(world):
     d = world.doc(cid)
     assert [x["code"] for x in d["strike_reasons"]] == [x[0] for x in strikes.REASONS] and len(d["strike_reasons"]) == 6
     post({"criterion": "ceap", "code": "nope"}, 400)                          # not one of the chips
-    post({"criterion": "ceap", "code": "other"}, 400)                         # "Other" needs a note
-    post({"criterion": "ceap", "code": "other", "reason": "  "}, 400)
-    # a requirement the chart does not document needs a sentence whatever chip is chosen
-    post({"criterion": "size", "code": "billing"}, 400)
-    post({"criterion": "size", "code": "billing", "reason": "too short"}, 400)
+    # no note is needed for any chip, nor for a requirement the chart does not document (the human is the judge)
     # a documented requirement: the chip alone is enough; the label stands in for the reason
     d = post({"criterion": "ceap", "code": "paperwork"}, 201)
     (k,) = [x for x in d["strikes"] if x["criterion"] == "ceap"]

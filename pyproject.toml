@@ -16,4 +16,5 @@ dependencies = [
 testpaths = ["tests"]
 
 [tool.setuptools]
-packages = ["app"]
+packages = ["app", "app.ingest", "app.understand", "app.checklist", "app.evidence", "app.decide", "app.review",
+            "app.core"]

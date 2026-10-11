@@ -1,5 +1,5 @@
-from app.evaluate import compile_expr, leaf_ids, missing, parse, path_nodes
-from app.models import Verdict
+from app.decide.evaluate import compile_expr, leaf_ids, missing, parse, path_nodes
+from app.core.models import Verdict
 
 
 def v(status, conf=0.9):
@@ -63,7 +63,7 @@ def test_leaf_ids():
 
 
 def test_not_over_a_list_names_the_items():
-    from app.result import _items
+    from app.decide.result import _items
     e = {"not": {"any": ["reversible", "asymptomatic", "sleep"]}}
     n = compile_expr(e, {"reversible": v("NOT_MET"), "asymptomatic": v("MET"), "sleep": v("NOT_MET")})
     assert _items(n) == [(["asymptomatic"], "NOT_MET", "Must not apply: ")]
