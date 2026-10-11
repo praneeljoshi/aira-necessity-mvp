@@ -12,3 +12,12 @@ stress
 data/score_v11/
 data/stress_v11/
 data/feedback/*
+
+# local, never committed
+.venv
+.DS_Store
+data/stage_timings.json
+data/guidelines/*/guideline.json
+data/guidelines/generated/
+demo-store/
+*.zip
