@@ -1,7 +1,7 @@
 # v1.2-code, Phase 0: can step H run as a sandboxed coding agent on OpenAI?
 
 Answer: **yes, on paper, with the model we already use.** The live probe (`scripts/probe_code_tool.py`, about $0.05) has
-not run yet: this session cannot hold the API key. Run it once before the build is trusted.
+not run yet: it needs the API key. Run it once before the build is trusted.
 
 Read 2026-10-10 from the vendor docs (links at the end). Nothing here is from memory.
 
@@ -18,7 +18,7 @@ Read 2026-10-10 from the vendor docs (links at the end). Nothing here is from me
 | Lifetime | A container expires after **20 minutes idle** and cannot be revived; its files are discarded. We re-verify on the host and keep our own copies, so this is fine. | tools guide |
 | Rate limit | 100 RPM per org for containers. | tools guide |
 | Max tool calls per response | Not documented on the pages read. The probe will show how many cells one response runs. | — |
-| Determinism | gpt-5.5 rejects `temperature`; runs will vary, the same as today. | CLAUDE.md, model behaviour |
+| Determinism | gpt-5.5 rejects `temperature`; runs will vary, the same as today. | model behaviour |
 | Data handling | The guideline text and the order go to a vendor container (no chart, no PHI: orders are synthetic in the harness). Containers are ephemeral, and on expiry their data is discarded. ZDR / residency apply per the account. | tools guide |
 
 ## Pricing
@@ -53,13 +53,13 @@ The host then re-verifies with the same checks as v1.2-loose: quotes found, ids,
 - **Container expiry mid-loop:** handled by re-upload.
 - **The docs don't state a max cell count per response:** the probe measures it.
 
-## If OpenAI fails the probe (owner's decision; I will not switch vendor)
+## If OpenAI fails the probe (the vendor choice is a separate decision)
 
-- Anthropic Messages API code-execution tool, or Managed Agents. The swarm itself was Claude.
+- Anthropic Messages API code-execution tool, or Managed Agents.
 - OpenAI Agents SDK with a locally hosted Python sandbox.
 - Spec section 5, no sandbox: the model returns the JSON form (conditions, named blocks, logic). Host code runs the `helpers` checks and sends the failures back for 2–3 rounds, then the add-only audit. This is also the cheapest.
 
-## Owner policies, flags default ON (spec 3.2)
+## Policies, flags default ON (spec 3.2)
 
 - **A:** prune routes only on facts the order fixes.
 - **C:** an ambiguous and/or takes the stricter reading, with the alternative in `notes`.

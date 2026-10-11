@@ -41,7 +41,7 @@ Steps (each printed, each screenshot path printed):
      internals' words (criterion, verdict, confidence, pathway, span); screenshot after each;
   6b'. (this round) the case is three columns: the navigator (↑/↓, j/k), the guideline (never moves) and the side
      panel; sign-off stays held back until every requirement is accepted (Ctrl+Enter from the keyboard) or struck;
-     Undo takes an accept back; the summary fills ("5 of 5 accepted · 1 struck"); the packet copies from accepted items
+     Undo takes an accept back; the summary fills ("5 of 5 accepted"; a removed requirement leaves the count); the packet copies from accepted items
   6c. highlight to ask on the first chart (answers open in the side panel; the live stroke is checked mid-drag): a mouse drag over a requirement line snaps to whole lines and the card
      reads the stored answer ("Already on this case's checklist", no model call); Esc closes it; a drag over "the
      varicosities … AND one or more of the following: 1. …; 2. …; 3. …" shows the logic as a small checklist with
@@ -765,7 +765,7 @@ class Run:
         pg.wait_js(f"(() => {{ const r = Review.state().case.requirements.find(x => x.criterion === {json.dumps(crit)}); return r && (r.accepted || r.in_ask); }})()", 15, f"{crit} accepted from the tree")
         pg.pump(0.3)
         both = pg.ev(f"""(() => {{ const t = document.querySelector('#treeDoc .tl[data-crit="{crit}"]'), n = document.querySelector('.nv[data-crit="{crit}"]');
-            return [!!(t && t.querySelector('.ck, .ia')), !!(n && n.querySelector('.ck, .ia')), document.querySelector('#glDoc').dataset.view]; }})()""")
+            return [!!(t && t.querySelector('.ck, .ia')), !!(n && n.matches('.in-pk, .st-inask')), document.querySelector('#glDoc').dataset.view]; }})()""")
         say(f"  accepted: tree mark {both[0]}, navigator mark {both[1]}, view {both[2]}")
         grp = len(pg.ev(f"Review.state().case.requirements.find(x => x.criterion === {json.dumps(crit)}).near || [1]")) > 1     # a row of a group is marked once every member is
         if not (both[0] and (both[1] or grp)) or both[2] != "tree":
@@ -835,7 +835,7 @@ class Run:
 
     # ------------------------------------------------------------ sign-off, accept and strikes
 
-    VOCAB = r"\b(criterion|criteria|verdicts?|confidence|pathways?|spans?)\b"     # the screen says "indication" (the owner's call)
+    VOCAB = r"\b(criterion|criteria|verdicts?|confidence|pathways?|spans?)\b"     # the screen says "indication" (by design)
 
     def vocab(self, pg: Page, where: str) -> None:
         """The page's own words (outside the fold; the guideline's lines, the chart's quotes and typed reasons are
@@ -897,7 +897,7 @@ class Run:
         pg.key("Escape")        # the requirement's panel: the packet
         verdict = pg.text(".verdict").strip()
         say(f"ready case: verdict {verdict!r}, rail group {self.rail_group(pg, cid)!r}")
-        # evidence is not a sign-off: until every requirement is accepted the header says so (the owner's scope rule)
+        # evidence is not a sign-off: until every requirement is accepted the header says so (the scope rule)
         if not (verdict.startswith("Evidence found") and verdict.endswith("Accept each to sign off.")):
             self.problem(f"a ready case with nothing accepted reads {verdict!r}, expected 'Evidence found for all N requirements. Accept each to sign off.'")
         if self.rail_group(pg, cid) != "Ready for sign-off":
@@ -929,7 +929,8 @@ class Run:
         pg.type_into("#side .strike-form .strike-why", reason)
         self.snap(pg, "mid-strike")
         pg.click("#side .strike-form .strike-go")
-        pg.wait_for(f'mark.q.struck[data-crit="{crit}"]', 20)
+        # a removed requirement's words are plain policy text in the guideline (no mark): wait for the state, then the panel
+        pg.wait_js(f"(() => {{ const r = Review.state().case.requirements.find(x => x.criterion === {json.dumps(crit)}); return r && r.mark === 'struck'; }})()", 20, f"{crit} struck")
         pg.wait_for('#side .struck-why', 10)
         why = pg.text('#side .struck-why')
         say(f"  struck: {why.strip()!r}")
@@ -941,6 +942,11 @@ class Run:
         if len(sk) != 1 or sk[0]["criterion"] != crit or sk[0].get("code") != "billing" or len(fb) != 1 \
                 or fb[0]["kind"] != "not_a_requirement" or fb[0].get("code") != "billing":
             self.problem(f"strike on the server: {sk} / {fb}")
+        # a removed requirement leaves the navigator and the highlight (its words are plain policy text)
+        gone = pg.ev(f"[!!document.querySelector('.rq-nav .nv[data-crit=\"{crit}\"]'), document.querySelectorAll('mark.q[data-crit=\"{crit}\"]').length]")
+        say(f"  after the strike: navigator row {gone[0]}, highlights {gone[1]}")
+        if gone[0] or gone[1]:
+            self.problem(f"the removed requirement is still in the navigator or highlighted: {gone}")
         self.snap(pg, "struck")
         # accept everything else from the keyboard; the summary fills; sign-off opens
         say("accept every requirement: Ctrl+Enter, ArrowDown")
@@ -948,9 +954,10 @@ class Run:
         pg.key("Escape")
         summary = (pg.ev("(document.querySelector('#prog .ticks') || {}).title || ''") or "").strip()      # the count is the bar's title; no words in the row
         say(f"  summary {summary!r}; packet panel lists {pg.count('#side .removed li')} removal(s)")
-        if n != 5 or not summary.startswith("5 of 5 accepted") or "1 struck" not in summary:
+        if n != 5 or not summary.startswith("5 of 5 accepted"):      # a removed requirement is out of the count
             self.problem(f"after accepting: {n} accepted, summary {summary!r}")
-        if pg.count("#side .removed li") != 1 or not pg.count("#signBtn:not([disabled])"):
+        removed = pg.ev("[...document.querySelectorAll('#side .removed:not(.added) li a[data-sel]')].map(a => a.dataset.sel)")
+        if removed != [crit] or "Removed for this case" not in pg.text("#side .removed") or not pg.count("#signBtn:not([disabled])"):
             self.problem("the packet panel does not list the removal, or sign-off is still held back")
         self.vocab(pg, "all accepted")
         self.snap(pg, "accepted-all")
@@ -970,10 +977,14 @@ class Run:
         self.vocab(pg, "signed off")
         self.snap(pg, "signed-off")
         # put it back: the case changed, the sign-off no longer counts; the put-back requirement is open again
-        self.open_req(pg, crit)
+        # through the sign-off panel's "Removed for this case" list (a removed requirement has no navigator row)
+        pg.key("Escape")
+        pg.wait_for(f'#side .removed li a[data-sel="{crit}"]', 10)
+        pg.click_text(f'#side .removed li a[data-sel="{crit}"]')      # the link wraps: click its first line
+        pg.wait_for('#side .unstrike', 10)
         say("click 'Put it back'")
         pg.click('#side .unstrike')
-        pg.wait_js("!document.querySelector('mark.q.struck')", 20, "the strike to be undone")
+        pg.wait_js(f"(() => {{ const r = Review.state().case.requirements.find(x => x.criterion === {json.dumps(crit)}); return r && r.mark !== 'struck' && document.querySelector('.rq-nav .nv[data-crit=\"{crit}\"]') && document.querySelector('mark.q[data-crit=\"{crit}\"]'); }})()", 20, "the strike undone: back in the navigator and highlighted")
         pg.wait_js("/^Evidence found.*Accept each to sign off\\.$/.test(document.querySelector('.verdict').textContent.trim())", 10, "the verdict back to 'Evidence found … Accept each to sign off.' (one requirement open again)")
         if pg.count(".sigblock"):
             self.problem("the signature stayed on the sheet after the sign-off stopped counting")
@@ -1164,7 +1175,7 @@ class Run:
         self.snap(pg, "landing")
 
     def deliverables(self, pg: Page, base: str, cid: str) -> None:
-        """The owner's two pictures: desktop light and desktop dark, a requirement open beside the guideline; and
+        """Two reference pictures: desktop light and desktop dark, a requirement open beside the guideline; and
         the Classic style, which keeps today's look."""
         pg.goto(f"{base}/review/{cid}")
         self.wait_case(pg)
@@ -1302,11 +1313,12 @@ class Run:
             self.accept_key(pg)
             # added: the page moves on (here, to the packet: nothing else is open) and says "Added to the ask … Undo"
             pg.wait_for("#side .sp-done .unaccept", 10)
-            nav = pg.text(f'.nv[data-crit="{rest}"]')
+            # the navigator row is only a dot: what it says is its tooltip (title) and its class
+            nav = pg.ev(f"(document.querySelector('.nv[data-crit=\"{rest}\"]') || {{}}).title || ''") or ""
             d = http(f"{base}/api/review/{cid}")
             p = d["case"]["progress"]
             say(f"  after Ctrl+Enter: navigator {nav.strip()!r}, progress {p}, message {len(d['case']['message'])} chars")
-            if "In the ask" not in nav or pg.count(f'.nv[data-crit="{rest}"] .ck') or p["in_ask"] != 1 or p["accepted"] != 0 or not d["case"]["message"]:
+            if "In the ask" not in nav or not pg.count(f'.nv.st-inask[data-crit="{rest}"]') or pg.count(f'.nv.in-pk[data-crit="{rest}"]') or p["in_ask"] != 1 or p["accepted"] != 0 or not d["case"]["message"]:
                 self.problem(f"adding to the ask: navigator {nav!r}, progress {p}")
             if "1 in the ask" not in (pg.ev("(document.querySelector('#prog .ticks') || {}).title || ''") or "") or pg.count("#prog .n"):
                 self.problem(f"the bar's title does not say what is in the ask, or the row shows words: {(pg.ev("(document.querySelector('#prog .ticks') || {}).title || ''") or "")!r}")
@@ -1380,7 +1392,7 @@ class Run:
                 # exclusions read as exclusions, driven by the server's proof
                 ex = pg.ev("""(() => { const r = Review.state().case.requirements.filter(x => x.counted && (x.role === 'exclusion' || x.role === 'part'));
                     return r.map(x => [x.criterion, x.proof]); })()""")
-                navx = pg.ev("[...document.querySelectorAll('.nv .nv-w')].filter(x => x.textContent.startsWith('Must not apply: ')).length")
+                navx = pg.ev("[...document.querySelectorAll('.nv')].filter(x => (x.title || '').startsWith('Must not apply: ')).length")   # rows are dots: the words are the tooltip
                 say(f"  NCD exclusions {len(ex)}, navigator labels 'Must not apply:' {navx}")
                 if not ex or navx != len(ex):
                     self.problem(f"exclusions are not framed as exclusions in the navigator: {navx} of {len(ex)}")
@@ -1397,7 +1409,7 @@ class Run:
                 applies = next((c for c, p in ex if not p), None)
                 if applies:
                     self.open_req(pg, applies)
-                    rl, hint = pg.text("#side .sp-ruling").strip(), pg.text("#side .sp-act .hint")
+                    rl, hint = pg.text("#side .sp-ruling").strip(), pg.text("#side .sp-act")   # the panel has no caption under the buttons now
                     say(f"  exclusion that applies {applies}: {rl!r}; {hint!r}")
                     if not rl.startswith(("✗Applies", "?Can't tell")) or "signed off once the case shows it" in hint:
                         self.problem(f"an exclusion that applies reads {rl!r} / {hint!r}")

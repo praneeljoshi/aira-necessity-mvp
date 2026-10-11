@@ -9,7 +9,7 @@ Documents (in `sourcing/library/facet-joint-injections/`):
 | **Evolent** | Evolent 2026 Interventional Pain Management Guidelines; facet content is CG 1753 (injections and blocks) and CG 1754 (denervation), PDF pp.31-44 (CG 1753) and 45-56 (CG 1754) of 102 | Effective July 1, 2026 - July 1, 2027 | 102 |
 | **Cigna** | Cigna Coverage Policy 0551, Anesthesia Services for Interventional Pain Management Procedures in an Adult | Effective 9/15/2026 | 29 |
 
-**Important sourcing warning.** The Cigna document is not a facet injection coverage policy. It decides when moderate sedation or monitored anesthesia care is covered during pain procedures, and facet joint injection appears only as one of the procedures it may accompany. Cigna's facet criteria are in separate policies the document names under Related Coverage Resources ("Facet Joint Injections/Medial Branch Blocks" and "Interventional Pain Management Guidelines") and are not in the library. The Cigna column below therefore covers sedation only. Carelon and Evolent PDFs are also filed under epidural-injections; their profiles for that treatment were written by another worker, so the facet profiles are saved with a `--facet-joint-injections` suffix.
+**Important sourcing warning.** The Cigna document is not a facet injection coverage policy. It decides when moderate sedation or monitored anesthesia care is covered during pain procedures, and facet joint injection appears only as one of the procedures it may accompany. Cigna's facet criteria are in separate policies the document names under Related Coverage Resources ("Facet Joint Injections/Medial Branch Blocks" and "Interventional Pain Management Guidelines") and are not in the library. The Cigna column below therefore covers sedation only. Carelon and Evolent PDFs are also filed under epidural-injections; their profiles for that treatment were written in a separate pass, so the facet profiles are saved with a `--facet-joint-injections` suffix.
 
 ## What it is
 
@@ -123,7 +123,7 @@ Facts are invented; each case yields different outcomes by payer, with criteria 
 4. **Ultrasound-guided injection when fluoroscopy is not possible (bonus): Evolent only.**
    A patient with BMI 52 who cannot be positioned for fluoroscopy requests ultrasound-guided lumbar facet injection (0216T). FL: "experimental or investigational". Carelon: excluded ("Any facet joint interventions performed under ultrasound guidance"). Evolent: ultrasound "can be an effective alternative if CT or fluoroscopy guided techniques are contraindicated", and a note says poor visualization at high BMI may limit it; a reviewer decision.
 
-## Notes for the project owner
+## Notes for the checker
 
 - The Florida Blue facet guideline is a good second test of the tree: simple shape, but nearly every leaf depends on injection history and dated pain scores. The common outcome will be INSUFFICIENT rather than NOT_MET for first-time requests, because "subsequent" and "prior" criteria cannot be evaluated.
 - For a corpus on facet injection, Cigna's own facet policy needs to be added to the library; 0551 is the wrong document.

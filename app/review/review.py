@@ -552,7 +552,7 @@ PREVIEW_STAGES = ("checklist", "record", "read", "verify")
 
 
 def preview_view(chart_id: str, st: Optional[dict]) -> Optional[dict]:
-    """What the case page may draw while a confirmed check runs, before the judge's evidence (the owner's progressive
+    """What the case page may draw while a confirmed check runs, before the judge's evidence (the progressive
     page). While H builds: {phase: "guideline", guideline: {tree: {sections, codes, blocks: []}, rest: []}}, the
     confirmed indication's lines as tree.layout draws them, unfolded (no rest). Once the checklist exists (draft.json
     carries it; stages record / read / verify): {phase: "highlights", guideline: {tree, rest}, marks}: the same

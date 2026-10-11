@@ -56,8 +56,8 @@ pipeline could go on without the answer.
 
 | confirm_pathways | section | the review flow (`pipeline.run(pause_at_pathways=True)`) and every code passed the code gate | the suggested section names ([] when the model chose none) | `{"confirm": {"endpoint": "/api/review/<id>/pathways"}}` | yes | **pauses**: `selection.json` written, `state = paused`, `resume = {stage: checklist, needs: pathways, key, endpoint}`; `pipeline.resume` continues from H with the confirmed picks |
 
-In the `/` flow nothing pauses: a gate is recorded and the pipeline behaves as before (CLAUDE.md's rule "keep pipeline logic
-unchanged"). The screen shows the gate inside the stage with the re-check form for its field (a radio list of the
+In the `/` flow nothing pauses: a gate is recorded and the pipeline behaves as before (pipeline logic
+unchanged). The screen shows the gate inside the stage with the re-check form for its field (a radio list of the
 candidate sections for `which_section`, the code box for `confirm_code`, the guideline picker for
 `guideline_problems`) and "Run it again" for an error. The queue lists a running check under "Checking now" with
 its stage, and a failed one under "Stopped — needs a look".

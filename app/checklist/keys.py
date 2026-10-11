@@ -44,7 +44,7 @@ H_PROMPTS = {
 
 
 def step_h() -> str:
-    """Shipped step H: loose-next (owner, 2026-10-10). STEP_H=loose rolls back."""
+    """Shipped step H: loose-next (2026-10-10). STEP_H=loose rolls back."""
     return os.environ.get("STEP_H", "loose-next")
 
 

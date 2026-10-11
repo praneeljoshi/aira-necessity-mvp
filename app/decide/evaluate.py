@@ -182,7 +182,7 @@ def leaf_ids(e: Any) -> list[str]:
 
 def _confidence(kind: str, status: VerdictStatus, kids: list[NodeResult], k: int = 0) -> float:
     """all MET = product; any MET = noisy-or over MET children; at_least MET = product of the k most confident MET
-    children; INSUFFICIENT = min over non-MET children; NOT_MET rules are placeholders the owner has not specified."""
+    children; INSUFFICIENT = min over non-MET children; NOT_MET rules are placeholders, not yet specified."""
     if not kids:
         return 1.0
     met = sorted((c.confidence for c in kids if c.status == "MET"), reverse=True)

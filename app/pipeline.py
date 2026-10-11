@@ -118,7 +118,7 @@ def shared_h(key_h: str, build) -> tuple[CriteriaSet, bool]:
 
 def build_h(gspans: list[Span], n: Narrowed, sel: Selection, key: str, run_id: str,
             procedure: Optional[Procedure] = None, progress: Optional[Callable[[str], None]] = None) -> CriteriaSet:
-    """Step H in the mode STEP_H names (loose by default); see CLAUDE.md. `progress` gets the status page's short
+    """Step H in the mode STEP_H names (loose by default). `progress` gets the status page's short
     lines (loose reports its first pass and its audit; the other modes the start only)."""
     mode = step_h()
     if mode not in ("loose", "loose-next") and progress:
@@ -212,7 +212,7 @@ def evidence_for(chart_id: str, rspans: list[Span], run_id: str,
 
 def precompute(gid: str, run_id: Optional[str] = None) -> dict:
     """Build the checklist for every covered indication of a guideline ahead of any chart, so the first chart's wait
-    drops from the H build (1-2 min) to the judge (~30 s). Off unless PRECOMPUTE_H=1 (the owner decides the spend).
+    drops from the H build (1-2 min) to the judge (~30 s). Off unless PRECOMPUTE_H=1 (an opt-in spend).
     Step C runs once with no order (cached by cache_key(sha, Procedure())); H runs per pathway under the order-less
     H key (h_cache_key(..., None), `-onone`). Resume reads only the order's own H key (H's prompt and tree carry the
     order), so these trees are never served to a case: today precompute only warms the order-less C and H entries,

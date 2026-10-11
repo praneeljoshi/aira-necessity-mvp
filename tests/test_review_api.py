@@ -39,10 +39,10 @@ def world(tmp_store, tmp_path, fl_text, fl_spans, delgado_spans, monkeypatch):
 
 def _needs_a():
     if not hasattr(pipeline, "resume"):
-        pytest.skip("pipeline.resume not landed yet (agent A)")
+        pytest.skip("pipeline.resume not landed yet")
     import inspect
     if "pause_at_pathways" not in inspect.signature(main._start).parameters:
-        pytest.skip("main._start(pause_at_pathways=) not landed yet (agent A)")
+        pytest.skip("main._start(pause_at_pathways=) not landed yet")
 
 
 # ---------------------------------------------------------------- states

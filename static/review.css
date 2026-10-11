@@ -760,3 +760,19 @@ html[data-style] .dlg-card .drop.big { padding:26px 20px 22px; margin-bottom:12p
 html:not([data-style="marker"]) .preview-page .gl mark.q, html.nogl .preview-page .gl mark.q { background:rgb(224 230 238) !important; border-bottom-color:transparent; color:inherit; cursor:default }
 html[data-theme="dark"]:not([data-style="marker"]) .preview-page .gl mark.q, html[data-theme="dark"].nogl .preview-page .gl mark.q { background:rgb(44 52 64) !important }
 .pv-guideline .rest-fold > summary, .pv-guideline .rest-hint { display:none }
+
+/* the navigator and the packet box: each requirement is only its status dot (blue once it is in the packet); its words
+   are the row's tooltip and aria-label. Rows stay buttons: click, ↑/↓ and focus work as before */
+.rq-nav .nv-dots { display:flex; flex-wrap:wrap; gap:2px; margin:0 0 4px 4px }
+html[data-style] .rq-nav .nv-dots .nv { display:inline-flex; align-items:center; justify-content:center; width:24px; height:24px; min-width:0; padding:0; margin:0;
+  border-radius:6px; font-size:0; line-height:0 }
+html[data-style] .rq-nav .nv-dots .nv .dot { width:10px; height:10px; top:0 }
+html[data-style] .rq-nav .nv-dots .nv[aria-current] { box-shadow:inset 0 -2px 0 var(--act) }
+html[data-style] .rq-nav .nv-dots .nv.in-pk .dot, html[data-style] .rq-nav .pk-box .nv-dots .nv .dot { background:var(--act) !important; box-shadow:none !important }
+html[data-style] .rq-nav .pk-box .nv-dots .nv[aria-current] { box-shadow:inset 0 -2px 0 var(--packet-ink, #1B3754) }
+.rq-nav .pk-box .nv-dots { margin:2px 0 0 2px }
+
+/* the side panel's Drop action: the same drop as ⌘⌫, beside Accept; its key chip hides on touch like the others */
+#side .sp-act .drop-btn { background:transparent; color:var(--sec); border:1px solid var(--line); box-shadow:none; font-weight:500 }
+#side .sp-act .drop-btn:hover { color:var(--no); border-color:var(--no) }
+#side .sp-act .drop-btn kbd { color:var(--dim); border-color:var(--line) }

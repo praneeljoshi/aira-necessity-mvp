@@ -35,7 +35,7 @@ const api = async (path, opts={}) => {
   if (!r.ok) { const e = new Error(j.detail || r.statusText); e.status = r.status; throw e; } return j;
 };
 const post = (path, body) => api(path, {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(body)});
-// Fun mode is gone (the owner's call): forget its old setting
+// Fun mode is gone: forget its old setting
 try { localStorage.removeItem('review.fun'); localStorage.removeItem('review.fun.sound'); } catch {}
 
 // ------------------------------------------------------------------ words and marks (as index.html / tree.js)
@@ -177,7 +177,7 @@ function group(title, cls, list, lane){
     else if ((o.queue === 'running' || o.queue === 'failed') && st.stage_label) sub = (o.queue === 'failed' ? 'Stopped while ' : '') + st.stage_label.charAt(0).toLowerCase() + st.stage_label.slice(1) + (o.queue === 'running' ? '…' : '');
     else if (lane === 'LOOK') sub = [o.determination === 'NOT_COVERED' ? 'Code not covered' : WAITS.includes(o.determination) ? "Guideline can't decide it" : sec + ' · to ask', ago].filter(Boolean).join(' · ');
     else sub = [sec, ago].filter(Boolean).join(' · ');
-    // the row shows only the patient's name (the owner's call); the detail stays on hover
+    // the row shows only the patient's name; the detail stays on hover
     const full = [sub, o.procedure_text || '', o.in_ask ? `${o.in_ask} in the ask, waiting on ${surgeonName(o.surgeon)}` : ''].filter(Boolean).join(' · ');
     // the one exception: "removed while missing" never disappears (a safety line, not a detail)
     const gap = (lane === 'READY' || lane === 'SIGNOFF') && o.removed_missing ? `<i class="row-gap" title="${esc(gapWords(o.removed_missing))}" aria-label="${esc(gapWords(o.removed_missing))}"></i>` : '';
@@ -768,7 +768,7 @@ function changeCtl(it){
   return `<span class="added-note">Added for this case by ${esc(a.by || 'a person')}${a.at ? ' on ' + esc(fmtDate(a.at)) : ''}</span><a href="#" class="unadd" data-aid="${esc(a.id)}">Take it off</a>`;
 }
 function strikeCtl(it){
-  return `<a href="#" class="strike-btn" data-strike="${esc(it.criterion)}" title="Remove this requirement for this case only">Not needed for this case</a><kbd class="drop-key" title="Drop it now: no reason needed">${MOD}⌫</kbd>`;
+  return `<a href="#" class="strike-btn" data-strike="${esc(it.criterion)}" title="Remove this requirement for this case only">Not needed for this case</a>`;
 }
 // what was typed into a form that was closed before it was sent: kept for this page, given back when it reopens
 const drafts = {};
@@ -997,7 +997,7 @@ function gapLineHtml(d){
 // quietly, above the policy it is about
 function confHtml(d, np){
   const c = d.confirmation, sec = c && navOrder.length ? [...new Set((c.confirmed || []).map(x => nameOf(x.pathway)))].join(', ') : '';
-  // the sheet starts with the policy (the owner's call): no confirmation line and no signature stamp on it; only the
+  // the sheet starts with the policy: no confirmation line and no signature stamp on it; only the
   // review reasons tied to no requirement are said here, when there are any (the header carries the signed state and
   // the "removed while missing" warning)
   const bits = [...looseReasons(d)].filter(Boolean);
@@ -1148,17 +1148,16 @@ let packetWas = null;           // {chart, ids}: what the box held at the last d
 function navRow(id){
   const r = reqById[id], [k, w] = stateOf(r), rs = (r.reasons || []).map(reqReason);
   const moved = packetWas && packetWas.chart === (doc || {}).chart_id && packetWas.ids.has(id) !== inPacket(r);
-  const us = unitsOf(id), open = navOpen.has(id), ask = us.some(u => reqById[u].in_ask);
-  const cnt = us.length > 1 ? `<span class="nv-n" data-tog="${esc(id)}" role="button" aria-expanded="${open}" title="${us.length} requirements on these words">${us.length}</span>` : '';
-  const subs = open ? us.map(u => `<span class="nv-sub">${esc(navWords(reqById[u]))}${reqById[u].accepted ? ' ✓' : reqById[u].in_ask ? ' · in the ask' : ''}</span>`).join('') : '';
-  return `<button class="nv st-${k} t-${toneOf(r)}${rs.length ? ' rsn' : ''}${moved ? ' moved' : ''}" data-crit="${esc(id)}" title="${esc(trimDot(r.words) + ' — ' + [w, ...rs].join(' · '))}"><span class="dot" aria-hidden="true"></span><span class="nv-w">${esc(navWords(r))}</span>${inPacket(r) ? '<span class="ck" aria-label="accepted">✓</span>' : ask ? '<span class="ia">In the ask</span>' : ''}${cnt}${subs}</button>`;
+  // a row is only its status dot (blue once it is in the packet); its words are the tooltip and the aria-label
+  const tip = navWords(r) + ' — ' + [inPacket(r) ? 'In the packet' : w, ...rs].join(' · ');
+  return `<button class="nv st-${k} t-${toneOf(r)}${inPacket(r) ? ' in-pk' : ''}${rs.length ? ' rsn' : ''}${moved ? ' moved' : ''}" data-crit="${esc(id)}" title="${esc(tip)}" aria-label="${esc(tip)}"><span class="dot" aria-hidden="true"></span></button>`;
 }
 function navHtml(){
   if (!navOrder.length) return '<div class="nv-empty">No requirements to accept for this order.</div>';
   const p = ((doc || {}).case || {}).progress || {}, of = p.of != null ? p.of : (p.total || navOrder.length);
   const left = navOrder.filter(id => !inPacket(reqById[id])), got = navOrder.filter(id => inPacket(reqById[id]));
-  const h = `<div class="nv-h">Requirements</div>` + (left.length ? left.map(navRow).join('') : '<div class="nv-none">Nothing left to approve.</div>')
-    + `<div class="pk-box${got.length ? '' : ' empty'}" id="pkBox" role="group" aria-label="The packet"><div class="pk-box-h">The packet <span class="pk-box-n">· ${got.reduce((n, id) => n + unitsOf(id).length, 0)} of ${of}</span></div>${got.map(navRow).join('')}</div>`;
+  const h = `<div class="nv-h">Requirements</div>` + (left.length ? `<div class="nv-dots">${left.map(navRow).join('')}</div>` : '<div class="nv-none">Nothing left to approve.</div>')
+    + `<div class="pk-box${got.length ? '' : ' empty'}" id="pkBox" role="group" aria-label="The packet"><div class="pk-box-h">The packet <span class="pk-box-n">· ${got.reduce((n, id) => n + unitsOf(id).length, 0)} of ${of}</span></div>${got.length ? `<div class="nv-dots">${got.map(navRow).join('')}</div>` : ''}</div>`;
   packetWas = { chart: (doc || {}).chart_id, ids: new Set(got) };
   return h;
 }
@@ -1220,7 +1219,7 @@ function treeHtml(d){
     : [counts.ask ? `${counts.ask} in the ask` : '', counts.open ? `${counts.open} not in the case` : '', counts.contradicted ? `${counts.contradicted} contradicted` : '',
        counts.applies ? `${counts.applies} ${counts.applies > 1 ? 'exclusions apply' : 'exclusion applies'}` : ''].filter(Boolean).join(' · ');
   const st = ready && !signed && !so.can_sign ? 'evidence' : L.status;
-  // no count line under the verdict (the owner's call): the counts are the header bar's title and the root's tooltip
+  // no count line under the verdict: the counts are the header bar's title and the root's tooltip
   let h = `<div class="tr-root s-${esc(st)}"${sub ? ` title="${esc(sub)}"` : ''}><span class="tr-v">${esc(verdict)}</span></div>`;
   for (const s of L.sections) {
     h += `<section class="tr-sec">${L.sections.length > 1 || s.name ? `<div class="tr-name">${esc(s.name || nameOf(s.pathway))}</div>` : ''}<ul class="tr" role="list">${groupHtml(s.tree, true)}</ul></section>`;
@@ -1506,15 +1505,10 @@ function showRequirement(id){
   const ti = b ? (b.items||[]).find(x => x.criterion === id) : null;
   const [g, cls, say] = r.accepted && r.mark !== 'struck' ? ['✓', 'm-acc', r.mark === 'confirm' ? 'Confirmed outside the case' : isExcl(r) ? "Accepted: doesn't apply to this patient" : 'Accepted'] : ruling(r);  // in the ask keeps its own mark
   const seenEv = new Set(), evs = ids.flatMap(m => QUIET.includes(reqById[m].mark) ? [] : (reqById[m].evidence || []).map(e => ({ e, m }))).filter(x => { const k = x.e.span + x.e.side + x.m; return seenEv.has(k) ? false : seenEv.add(k); });
-  const src = r.source;
-  const bid = (first ? 'id="acceptBtn" ' : '') + `data-crit="${esc(id)}"`;
+    const bid = (first ? 'id="acceptBtn" ' : '') + `data-crit="${esc(id)}"`;
   const aids = ids.map(m => (reqById[m].accepted || reqById[m].in_ask || {}).id).filter(Boolean).join(' ');
   let h = '';
-  h += `<blockquote class="sp-words">“${esc(trimDot(r.words))}”</blockquote>`;
-  // the citation: the policy's own heading for the part and the page; a link to that line (a warm dot when it is
-  // outside the confirmed indication, no commentary)
-  const cited = src && src.pathway && pwLabels[src.pathway] ? `Cited: ${pwLabels[src.pathway]}${src.page != null ? `, p. ${src.page}` : ''}` : src && src.say;
-  if (src) h += `<div class="sp-from${src.other ? ' other' : ''}">${src.line ? `<a href="#" class="sp-cite" data-line="${esc(src.line)}">${esc(short(cited, 110))}</a>` : esc(short(cited, 110))}</div>`;
+  // the requirement's own words are on the guideline beside the panel (and in the row's tooltip): not quoted again here
   h += `${isExcl(r) ? '<div class="sp-kind">Must not apply</div>' : ''}<div class="sp-ruling ${cls}"><b>${g}</b>${esc(say)}</div>`;
   if (grp) h += `<div class="sp-also">${ids.length} requirements quote these same words. They are one item: what you decide applies to all of them.</div>`;
   if (r.route) h += `<div class="sp-route">Or: another route; needs its own evidence</div>`;
@@ -1536,16 +1530,14 @@ function showRequirement(id){
       // no chart can show it: a person confirms it outside the chart (who and when, like an accept; it counts to sign off)
       const rec = r.accepted;
       h += rec ? `<div class="sp-acc">By <b>${esc(rec.by || 'a person')}</b>${rec.at ? ' on ' + esc(fmtDate(rec.at)) : ''}. <a href="#" class="unaccept" data-aid="${esc(aids)}">Undo</a></div>`
-        : `<div class="sp-act"><button class="primary acceptBtn" ${bid}>Confirmed outside the case <kbd>${MOD}↵</kbd></button></div>`;
+        : `<div class="sp-act"><button class="primary acceptBtn" ${bid}>Confirmed outside the case <kbd>${MOD}↵</kbd></button><button class="drop-btn" data-drop="${esc(id)}" title="Drop this requirement for this case">Drop <kbd>${MOD}⌫</kbd></button></div>`;
     } else if (r.counted) {
       // Accept means proof: only a documented requirement is accepted; one the chart does not show yet goes in the ask
       const rec = r.accepted || r.in_ask, k = `<kbd>${MOD}↵</kbd>`;
       h += rec ? `<div class="sp-acc">${r.accepted ? 'Accepted' : 'In the ask, added'} by <b>${esc(rec.by || 'a person')}</b>${rec.at ? ' on ' + esc(fmtDate(rec.at)) : ''}. <a href="#" class="unaccept" data-aid="${esc(aids)}">Undo</a></div>`
-        : grp ? `<div class="sp-act"><button class="primary acceptBtn" ${bid}>Accept ${k}</button><button class="acceptBtn" data-crit="${esc(id)}" data-ask="1">Add to the ask</button><span class="hint">You decide: it applies to all ${ids.length}.</span></div>`
-        : r.proof ? `<div class="sp-act"><button class="primary acceptBtn" ${bid}>Accept ${k}</button><span class="hint">${isExcl(r) ? "It goes into the packet: the case shows this doesn't apply." : 'It goes into the packet with its quote.'}</span></div>`
-        : `<div class="sp-act"><button class="primary acceptBtn" ${bid}>Add to the ask ${k}</button><span class="hint">${isExcl(r)
-            ? `${esc(surgeonName((doc.case || {}).surgeon))} is asked to confirm this does not apply to the patient.`
-            : `It goes into the message to ${esc(surgeonName((doc.case || {}).surgeon))}; the case can be signed off once the case shows it.`}</span></div>`;
+        : grp ? `<div class="sp-act"><button class="primary acceptBtn" ${bid}>Accept ${k}</button><button class="acceptBtn" data-crit="${esc(id)}" data-ask="1">Add to the ask</button><button class="drop-btn" data-drop="${esc(id)}" title="Drop this requirement for this case">Drop <kbd>${MOD}⌫</kbd></button></div>`
+        : r.proof ? `<div class="sp-act"><button class="primary acceptBtn" ${bid}>Accept ${k}</button><button class="drop-btn" data-drop="${esc(id)}" title="Drop this requirement for this case">Drop <kbd>${MOD}⌫</kbd></button></div>`
+        : `<div class="sp-act"><button class="primary acceptBtn" ${bid}>Add to the ask ${k}</button><button class="drop-btn" data-drop="${esc(id)}" title="Drop this requirement for this case">Drop <kbd>${MOD}⌫</kbd></button></div>`;
     } else h += `<div class="hint sp-note">Another option in the guideline is documented, so this one is not needed for the case.</div>`;
     h += `<div class="ev sp-more" data-crit="${esc(id)}">${changeCtl(r)}<a href="#" class="report" data-report="${esc(id)}">Report on this</a></div>`;
   }
@@ -1567,6 +1559,7 @@ function sideClick(e, d){
   const sel = e.target.closest('[data-sel]'); if (sel) { e.preventDefault(); selectRequirement(sel.dataset.sel); return; }
   const gt = e.target.closest('[data-goto]'); if (gt) { e.preventDefault(); const ln = lineEl(gt.dataset.goto); if (ln) { scrollToEl(ln); setProbe([gt.dataset.goto], 'key'); } return; }
   const ab = e.target.closest('.acceptBtn'); if (ab) { acceptSelected(ab.dataset.crit, ab.dataset.ask); return; }
+  if (e.target.closest('.drop-btn')) { dropSelected(e.target); return; }   // the same drop as ⌘⌫
   const un = e.target.closest('.unaccept');
   if (un) { e.preventDefault(); un.textContent = 'Undoing…';
     const back = un.dataset.crit || (panelMode === 'req' ? selectedCrit : null);
@@ -1698,8 +1691,8 @@ function strikeClick(e, d){
   return false;
 }
 
-// ⌘/Ctrl+Backspace drops the selected requirement at once (the owner: "the human is the judge; they can drop without
-// any justification"): the focused row or leaf, else the open one in the panel; every id of the item together. No
+// ⌘/Ctrl+Backspace drops the selected requirement at once (the human is the judge and can drop without any
+// justification): the focused row or leaf, else the open one in the panel; every id of the item together. No
 // form, no reason; a strike {criterion, by} like any other. A small toast offers Undo (the same un-strike).
 let dropping = false;
 function dropSelected(t){
@@ -2336,7 +2329,7 @@ $('#dlgGo').onclick = async () => {
 
 // ------------------------------------------------------------------ who is working: one remembered name for every record (confirm, accept, strike, add, sign off)
 // the sign-in screen: a name, nothing else (no password; it names the person on every record). Shown before the app
-// when no name is remembered in this browser (there is no Switch: the owner's call).
+// when no name is remembered in this browser (there is no Switch, by design).
 let afterSignin = null, signinY = 0;       // what to finish once a name is given (an accept asked for without one)
 function showSignin(why, then){
   const f = $('#signinName'); f.value = myName(); f.classList.toggle('need', !!why);

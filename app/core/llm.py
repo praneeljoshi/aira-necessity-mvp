@@ -211,7 +211,7 @@ def call(run_id: str, step: str, user_prompt: str, schema: Type[T], system: str 
     raise RuntimeError(f"{step}: model output failed validation twice: {last_err}")
 
 
-# List prices per 1M tokens (owner's table, 2026-10-10): input, cached input, output. A dated snapshot id prices as
+# List prices per 1M tokens (as of 2026-10-10): input, cached input, output. A dated snapshot id prices as
 # its base model. An unknown model prices as gpt-5.5 and is logged once, so a cost figure is never silently zero.
 PRICES: dict[str, tuple[float, float, float]] = {
     "gpt-6-astra": (10.00, 1.00, 50.00),

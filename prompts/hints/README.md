@@ -1,7 +1,7 @@
 # Known-structure hints
 
-Read by `app/hints.py`, only when `STRUCTURE_HINTS=1` (default off). This folder ships empty: QA writes the hint
-files in `experiments/structure_hints/` on the guideline-reduce worktree and the lead engineer copies them here.
+Read by `app/hints.py`, only when `STRUCTURE_HINTS=1` (default off). This folder ships empty: hint files are written in
+`experiments/structure_hints/` and copied here once reviewed.
 
 - `payers/<name>.md`: how one payer's guidelines are laid out and what each section means. Injected into step H
   (loose and loose-next; the main prompt and the audit) as `## What this payer's guidelines look like`, just

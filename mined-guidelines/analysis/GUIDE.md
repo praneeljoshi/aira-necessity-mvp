@@ -13,7 +13,7 @@ The evidence behind it:
 
 - 25 cross-payer treatment reports (`treatments/*.md`)
 - three Florida Blue template surveys covering 87 more guidelines (`bcbsfl/batch*.md`)
-- 143 structured document profiles (`profiles/*.json`, schema in `PROFILE.md`)
+- 143 structured document profiles (`profiles/*.json`, one JSON per document)
 - regex signals for all 205 documents (`survey.json`)
 - the library manifest
 
@@ -58,11 +58,11 @@ Keep that shape in mind. Most of this guide is about where real documents fit it
 
 **How it was analysed.**
 
-- **Treatment reports.** One worker per cross-payer treatment wrote a report comparing the documents side by side, with
+- **Treatment reports.** One report per cross-payer treatment comparing the documents side by side, with
   invented test cases that come out differently by payer.
-- **Template surveys.** Three workers surveyed the other 87 Florida Blue guidelines in batches of 29, looking at the house
+- **Template surveys.** Three surveys covered the other 87 Florida Blue guidelines in batches of 29, looking at the house
   template.
-- **Profiles.** Workers wrote 143 profiles: 55 Florida Blue and 88 other. A profile records:
+- **Profiles.** 143 profiles: 55 Florida Blue and 88 other. A profile records:
   - sections in order and where the criteria live
   - top-level logic, nesting depth, k-of-n groups and AND/OR ambiguities
   - requirement kinds, thresholds and time windows
@@ -1032,7 +1032,7 @@ them.
 ## 10. A test-set plan
 
 Fifteen documents and scenarios, chosen so that each exercises one construct or hazard. Charts are invented from the
-workers' test cases. For each, write one chart per expected outcome and run it twice.
+treatment reports' test cases. For each, write one chart per expected outcome and run it twice.
 
 | # | Document (`sourcing/library/<treatment>/...`) | Scenario | Expected | Tests |
 |---|---|---|---|---|

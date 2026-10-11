@@ -139,7 +139,7 @@ def test_pipeline_dispatch(fl_spans, monkeypatch):
 
 
 def test_original_loose_prompts_unchanged():
-    # owner-approved 2026-10-10: admin flag (the loose prompts' hashes; the loop comparison is in experiments/tests)
+    # approved 2026-10-10: admin flag (the loose prompts' hashes; the loop comparison is in experiments/tests)
     sha = {"criteria_guideline.md": "25aeb5c67c521df207a8238700d4da4d17e31b66e009a8c3f2423837ee513ecd",
            "criteria_audit.md": "b6d0c075684446077687b2b1fbaf3081f13689b51b6518765a2e1fbf011cc5c6"}
     for name, want in sha.items():

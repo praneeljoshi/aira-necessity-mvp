@@ -140,7 +140,7 @@ Facts are invented for illustration; each scenario shows a different outcome by 
    - FL: "Sclerotherapy of isolated tributary veins without prior or concurrent treatment of saphenous veins" is investigational. Not covered.
    - BCBSRI: sclerotherapy needs veins > 2 and < 6 mm (4 mm passes) and "saphenous vein is competent" (it is). With duplex, 6 weeks conservative therapy, and a listed indication, approved.
 
-## Notes for the project owner
+## Notes for the checker
 
 - The Florida Blue document is the best-behaved of the set for a tree, but items 2, 3, 8, 9 and 12 above are where chart evidence will most often be INSUFFICIENT rather than NOT_MET.
 - If the checker gets a chart for a UHC member, the right answer from the document is "criteria are in InterQual; not in this guideline".

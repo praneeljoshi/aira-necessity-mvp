@@ -1,5 +1,5 @@
 PY ?= python3
-PORT ?= 8000          # 8000 is the owner's manual server; agents verify on another port (make run PORT=8001)
+PORT ?= 8000          # 8000 is the manual server; verify on another port (make run PORT=8001)
 VENV := .venv
 BIN := $(VENV)/bin
 

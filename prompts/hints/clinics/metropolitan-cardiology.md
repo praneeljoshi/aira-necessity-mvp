@@ -3,7 +3,7 @@ match:
   - METROPOLITAN CARDIOLOGY ASSOCIATES
 where: first 10 lines
 # Metropolitan Cardiology Associates (New York) chart, as in robert_mitchell_chart_final.pdf. One sample on file; it is synthetic
-# ("Patient identifiers are fictional"), the format the owner gave as this clinic's.
+# ("Patient identifiers are fictional"); this is the format on file for this clinic.
 # Must NOT match: a chart from another clinic that encloses an echo from "Metropolitan Cardiology Imaging" (different name, and not in the
 # letterhead lines); the Gulf Coast Vascular Surgery Associates charts, which share this numbered layout but not the letterhead.
 ---
