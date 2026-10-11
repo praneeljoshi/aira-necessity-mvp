@@ -27,6 +27,7 @@ Code is the execution layer between them:
     - slicing documents, pruning trees needed
 
 ## Tradeoffs:
+I traded: 
 
 false positives for false negatives : better to review non-issue than miss an issue
     - prioritized carefulness. always ref checked.  
@@ -49,11 +50,11 @@ automation for validation
 
 ## What breaks: 
 
-    - policy reduction on complex logic - shared subtrees, crossing, referential language (bcbsf is generally clear, and short)
+    - policy reduction on complex logic - shared subtrees, crossing, referential language (if pathway 1000 lines above AND...) (bcbsf is generally clear, and short)
         - experiment with agents using declaritive languages - json, python - to build reusable blocks that are easy to invoke
             * v1.2-form, v1.2-script
 
-    - evidence sourcing on really long charts, messy charts
+    - evidence sourcing on really long charts, messy charts - especially if order is shuffled
         - maybe try some kind of event sourcing, walking the record (sliding window + merge/accumulate evidence) 
 
     - passive validators (approve approve approve)
