@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en" data-style="plain" data-flow="health">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Policy health</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<script>
+  /* the theme before anything is drawn: Soft unless the person chose Light or Dark (the same key as /review) */
+  (function () { var t = 'soft'; try { var v = localStorage.getItem('review.theme'); if (v === 'light' || v === 'dark' || v === 'soft') t = v; } catch (e) {}
+    document.documentElement.setAttribute('data-theme', t); })();
+</script>
+<link rel="stylesheet" href="/static/theme.css">
+<link rel="stylesheet" href="/static/health.css">
+<!--
+  Policy health (static/health.js): what coordinators' work on one guideline says about the guideline itself. One
+  page per guideline, /experimental/health/<guideline_id> (listed at /experimental; not linked from /review or /).
+    GET /api/health/<guideline_id>    app/health.py: headline, removed, missing, outside, confused, flagged, note, demo
+  Payer-facing: it names requirements and sections in the policy's own words and counts checks; it never shows a
+  patient. Each row links to one example case in the review flow.
+-->
+</head>
+<body>
+<header class="bar">
+  <a class="back" href="/review">Prior auth</a>
+  <button id="themeBtn" class="theme-btn" type="button" aria-label="Theme"></button>
+</header>
+<main class="page" id="page" aria-busy="true">
+  <p class="loading">Reading every case on this policy…</p>
+</main>
+<script src="/static/health.js"></script>
+</body>
+</html>

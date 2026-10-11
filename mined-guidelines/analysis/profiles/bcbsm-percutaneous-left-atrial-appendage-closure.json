@@ -1,0 +1,126 @@
+{
+ "file": "bcbsm-percutaneous-left-atrial-appendage-closure.pdf",
+ "treatment": "laa-closure",
+ "payer": "bcbsm",
+ "doc_kind": "medical policy",
+ "lines_of_business": [
+  "BCBSM and BCN joint policy; commercial HMO covered, criteria apply; BCNA Medicare Advantage see Government Regulations; may be used for MA where CMS rules not fully developed"
+ ],
+ "effective_or_revised": "Current policy effective 11/1/26; prior 11/1/25; next review 3rd Qtr 2027",
+ "sections_in_order": [
+  "Description",
+  "Medical Policy Statement",
+  "Inclusionary and Exclusionary Guidelines",
+  "CPT/HCPCS Level II Codes",
+  "Background",
+  "Rationale/Summary of Evidence",
+  "Supplemental Information (clinical input, practice guidelines)",
+  "Ongoing trials",
+  "Regulatory Status",
+  "Government Regulations",
+  "Related Policies",
+  "References",
+  "Policy History",
+  "Pre-Consolidation History",
+  "Blue Care Network Benefit Coverage"
+ ],
+ "criteria_location": "Medical Policy Statement p.1 and Inclusionary and Exclusionary Guidelines p.2, six lines in total. Everything else is background. The score tables (CHA2DS2-VASc, HAS-BLED) are in the Background pp.3-4.",
+ "procedures_covered": [
+  "FDA-approved percutaneous LAAC (Watchman, Watchman FLX, Amulet), 33340",
+  "Non-FDA devices (Lariat, Amplatzer Cardiac Plug) experimental"
+ ],
+ "logic": {
+  "top_level": "all",
+  "max_nesting_depth": 1,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "Exclusions list: non-FDA devices; FDA devices in people not meeting the inclusion criteria.",
+  "initial_vs_repeat": "None.",
+  "and_or_ambiguity": [
+   {
+    "quote": "increased risk of stroke and systemic embolism based on CHADS2 or CHA2DS2-VASc score and systemic anticoagulation therapy is recommended; AND The long term risks of systemic anticoagulation outweigh the risks of the device implantation.",
+    "why_ambiguous": "No cutoffs for either score; 'or' lets the submitter choose the score; 'outweigh' has no measure; the policy omits the 'contraindication' wording used by guidelines it cites."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "measurement threshold",
+   "quote": "increased risk of stroke and systemic embolism based on CHADS2 or CHA2DS2-VASc score",
+   "where": "Inclusions"
+  },
+  {
+   "kind": "other",
+   "quote": "systemic anticoagulation therapy is recommended",
+   "where": "Inclusions"
+  },
+  {
+   "kind": "other",
+   "quote": "The long term risks of systemic anticoagulation outweigh the risks of the device implantation",
+   "where": "Inclusions"
+  },
+  {
+   "kind": "provider/facility qualification",
+   "quote": "U.S. FDA-approved percutaneous left atrial appendage closure devices (e.g., Watchman, Watchman FLX, Amplatzer Amulet)",
+   "where": "Medical Policy Statement"
+  }
+ ],
+ "thresholds": [],
+ "time_windows": [],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "33340 'established'; 'Other codes: N/A'.",
+  "non_covered_code_lists": "None"
+ },
+ "external_dependencies": [
+  {
+   "what": "Medicare NCD 20.34",
+   "quote": "National Coverage Determination (NCD) for Percutaneous Left Atrial Appendage Closure (LAAC) (20.34)"
+  },
+  {
+   "what": "Member certificate",
+   "quote": "Please reference the appropriate certificate or contract for benefit information."
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "CHA2DS2-VASc",
+   "definition_quote": "Age \u226575 y 2; ... Age 65-74 y 1; Sex category of female 1 (Table 1)"
+  },
+  {
+   "term": "HAS-BLED high risk",
+   "definition_quote": "Scores of 3 or greater are considered to be associated with a high risk of bleeding"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "increased risk of stroke",
+   "problem": "No threshold in criteria; score table is in Background."
+  },
+  {
+   "quote": "long term risks ... outweigh",
+   "problem": "Undefined; Background gives HAS-BLED >= 3 as 'high risk' but the criteria do not adopt it."
+  },
+  {
+   "quote": "established when criteria are met",
+   "problem": "Status word, not a rule."
+  }
+ ],
+ "extraction_hazards": [
+  "33-page document, about 30 pages evidence review with study numbers (CHA2DS2-VASc means 4.7 etc.) that look like thresholds",
+  "Table 1 is titled CHADS2 and CHA2DS2-VASc but lists only CHA2DS2-VASc rows",
+  "Policy effective date 11/1/26 is after today's date; version history includes a row marked 'Added new E/I MPS; Added Exclusions'",
+  "Ongoing trials table, Table 4",
+  "Blue Care Network coverage page appended",
+  "Reference numbers superscripted into prose"
+ ],
+ "interesting_structures": [
+  "Joint policy for two plans",
+  "Inclusions/Exclusions format with an exclusion that restates the negation of the inclusion",
+  "Criteria so generic they delegate all numbers to the clinician"
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "why": "Structure is trivial (all of two plus device), but both leaves are judgement statements with no thresholds, so a checker would have to invent cutoffs."
+ }
+}

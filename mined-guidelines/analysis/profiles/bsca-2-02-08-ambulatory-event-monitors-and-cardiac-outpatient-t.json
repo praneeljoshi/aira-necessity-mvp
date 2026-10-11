@@ -1,0 +1,175 @@
+{
+ "file": "bsca-2-02-08-ambulatory-event-monitors-and-cardiac-outpatient-t.pdf",
+ "treatment": "cardiac-monitoring",
+ "payer": "blueshield-ca",
+ "doc_kind": "medical policy",
+ "lines_of_business": [
+  "Not stated by line of business; Benefit Application says determinations follow member health services contract language"
+ ],
+ "effective_or_revised": "Original 04/05/2007; Effective Aug 1, 2026 as printed (library metadata says 07/01/2023)",
+ "sections_in_order": [
+  "Policy Statement",
+  "Policy Guidelines (incl. Types of Devices, Coding)",
+  "Description",
+  "Summary of Evidence",
+  "Additional Information (2025 Input)",
+  "Related Policies",
+  "Benefit Application",
+  "Regulatory Status",
+  "Rationale (Background, device table, evidence reviews)",
+  "Appendix 1 (2025 clinical input)",
+  "Codes",
+  "References",
+  "Policy History",
+  "Appendix A (before/after redline of policy statement)"
+ ],
+ "criteria_location": "Policy Statement pp.1-2 (I-IV). Policy Guidelines p.2 restate some of it. Pages ~7-50 are rationale/evidence; Codes pp.52-57; Appendix A pp.68-70 is a before/after redline that repeats the criteria in old and new wording.",
+ "procedures_covered": [
+  "External AEM / continuous ambulatory monitors >48 h",
+  "Implantable ambulatory event monitors (ILR)",
+  "Mobile cardiac outpatient telemetry (MCOT)",
+  "Mobile apps (investigational)"
+ ],
+ "logic": {
+  "top_level": "pathways (I external, II implantable, III MCOT, IV investigational list), each any-of",
+  "max_nesting_depth": 3,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "Section IV lists investigational uses (MCOT for other conditions, asymptomatic monitoring with risk factors, antiarrhythmic effectiveness, ST-segment ischemia). MCOT prerequisite allows 'nondiagnostic or contraindicated' external monitor.",
+  "initial_vs_repeat": "No repeat or replacement rule.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Holter monitor and/or external AEM has been nondiagnostic or contraindicated",
+    "why_ambiguous": "'and/or' plus 'nondiagnostic or contraindicated' creates four readings; no definition of either"
+   },
+   {
+    "quote": "long-term monitoring with an external event monitor, OR a continuous ambulatory monitor ... OR an implantable ambulatory monitor may be considered medically necessary",
+    "why_ambiguous": "Policy Guidelines say the three device types are interchangeable for stroke/ablation indications, so a checker cannot enforce the I -> II -> III escalation implied elsewhere"
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "symptom",
+   "quote": "Infrequent symptoms (less frequently than every 48 hours) suggestive of cardiac arrhythmias (i.e., palpitations, dizziness, presyncope, or syncope)",
+   "where": "Policy Statement I.A"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "To guide discontinuation of systemic anticoagulation in individuals with history of atrial fibrillation (AF) and prior catheter ablation",
+   "where": "Policy Statement I.B / II.B"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "History of cryptogenic stroke with a negative standard workup for AF including a 24-hour Holter monitor",
+   "where": "Policy Statement I.C / II.C"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "Recurrent symptoms ... and a negative prior evaluation with external ambulatory event monitors",
+   "where": "Policy Statement II.A (ILR)"
+  },
+  {
+   "kind": "symptom",
+   "quote": "Symptoms are thought to be due to a cardiac arrhythmia as the most likely diagnosis",
+   "where": "Policy Statement III.A.1"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "Holter monitor and/or external AEM has been nondiagnostic or contraindicated",
+   "where": "Policy Statement III.A.2"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "There is documentation that real-time monitoring is essential for patient safety and will lead to immediate clinical changes such as medication or other emergent procedures",
+   "where": "Policy Statement III.A.3"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "Evaluation of cryptogenic stroke thought to be caused by atrial fibrillation, with non-diagnostic 24- to 48-hour Holter monitor or 48-hour telemetry",
+   "where": "Policy Statement III.B"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "monitoring period",
+   "value": "> 48",
+   "unit": "hours",
+   "quote": "record and store information for periods longer than 48 hours"
+  },
+  {
+   "quantity": "symptom frequency",
+   "value": "< 1 per 48",
+   "unit": "hours",
+   "quote": "less frequently than every 48 hours"
+  },
+  {
+   "quantity": "prior Holter duration (stroke)",
+   "value": "24",
+   "unit": "hours",
+   "quote": "including a 24-hour Holter monitor"
+  },
+  {
+   "quantity": "prior Holter/telemetry (MCOT stroke)",
+   "value": "24-48",
+   "unit": "hours",
+   "quote": "non-diagnostic 24- to 48-hour Holter monitor or 48-hour telemetry"
+  }
+ ],
+ "time_windows": [],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": true,
+  "codes_tied_to_criteria": "Codes in a table by type, not mapped to criteria; stated as 'general reference'",
+  "non_covered_code_lists": "Code table includes 0497T/0498T etc.; no separate non-covered list found"
+ },
+ "external_dependencies": [
+  {
+   "what": "Contract language controls; state/federal law may require FDA-approved services",
+   "quote": "the contract language will control"
+  },
+  {
+   "what": "2025 specialty-society clinical input (HRS, ACC EP Council) used to justify MCOT criteria",
+   "quote": "clinical input was received from 3 respondents"
+  }
+ ],
+ "definitions_that_change_meaning": [],
+ "vague_terms": [
+  {
+   "quote": "clinically significant presyncope",
+   "problem": "MCOT uses 'clinically significant' and 'severe palpitations' but external AEM uses plain palpitations; no grading"
+  },
+  {
+   "quote": "negative standard workup for AF",
+   "problem": "standard workup beyond Holter not defined"
+  },
+  {
+   "quote": "nondiagnostic or contraindicated",
+   "problem": "no definition; contraindications not listed"
+  },
+  {
+   "quote": "essential for patient safety and will lead to immediate clinical changes",
+   "problem": "prediction about future care; rarely in a chart"
+  },
+  {
+   "quote": "may be considered medically necessary",
+   "problem": "permissive 'may' rather than 'is'"
+  }
+ ],
+ "extraction_hazards": [
+  "70 pages, about 55 are evidence review and references; criteria are only the first 2 pages",
+  "Appendix A is a redline with before/after columns and red/blue font; pdftotext interleaves old and new text, so old criteria (e.g., MCOT = investigational) look current",
+  "Appendix 1 repeats MCOT criteria as clinical input",
+  "Wide device table in Rationale",
+  "Header/footer repeated each page",
+  "Effective date printed Aug 1 2026 vs library note 07/01/2023"
+ ],
+ "interesting_structures": [
+  "Policy Guidelines make device types interchangeable for stroke and post-ablation",
+  "MCOT justified by 2025 society input; Appendix A shows MCOT moved from investigational to conditionally necessary",
+  "Real-time monitoring must be 'essential for patient safety' (unusual)"
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "why": "Clear any/all blocks, but criteria are scattered across Policy Statement, Policy Guidelines, Additional Information and Appendix A in several versions, and several leaves are predictions or undefined."
+ }
+}

@@ -1,0 +1,187 @@
+{
+ "doc_kind": "medical policy (Florida Blue Medical Coverage Guideline)",
+ "lines_of_business": [
+  "All lines of business unless noted in Program Exceptions (disclaimer p.1)",
+  "Federal Employee Program (FEP): follow FEP guidelines",
+  "State Account Organization (SAO): follow SAO guidelines",
+  "Medicare Advantage: reviewed NCD/LCD listed in Program Exceptions"
+ ],
+ "effective_or_revised": "Original Effective Date 03/15/10; Reviewed 09/25/25; Revised 01/01/26 (23 pages)",
+ "sections_in_order": [
+  "Header block (policy number, Original Effective Date, Reviewed, Revised)",
+  "Subject",
+  "Disclaimer (all caps)",
+  "Navigation bar (Position Statement / Billing/Coding / ... hyperlinks)",
+  "DESCRIPTION",
+  "POSITION STATEMENT",
+  "BILLING/CODING INFORMATION",
+  "REIMBURSEMENT INFORMATION",
+  "PROGRAM EXCEPTIONS",
+  "DEFINITIONS",
+  "RELATED GUIDELINES",
+  "OTHER",
+  "REFERENCES",
+  "COMMITTEE APPROVAL",
+  "GUIDELINE UPDATE INFORMATION"
+ ],
+ "criteria_location": "Position Statement ~80 lines: five paragraph-level rulings (AxiaLIF investigational; open SI joint fusion covered for 4 indications; minimally invasive SI fusion with a 9-item ALL list; posterior/intra-articular SI approaches investigational; annular repair devices investigational). Description (230 lines) and References (530 lines) are evidence review.",
+ "procedures_covered": [
+  "Axial lumbosacral interbody fusion, AxiaLIF (22586, investigational)",
+  "Open sacroiliac joint fusion (27280)",
+  "Minimally invasive SI joint fusion (27278 investigational, 27279)",
+  "Annular repair/closure devices (63032, C9757, investigational)"
+ ],
+ "logic": {
+  "top_level": "pathways: open SI fusion = any of 4 indications; minimally invasive SI fusion = ALL of ~9 criteria with nested ALL/any sub-lists; others investigational",
+  "max_nesting_depth": 3,
+  "k_of_n": [
+   {
+    "k": 3,
+    "n": 6,
+    "quote": "There is a positive response to a cluster of 3 provocative tests (eg, thigh thrust test, compression test, Gaenslen sign, distraction test, Patrick test, or posterior provocation test)"
+   }
+  ],
+  "exclusions_or_contraindications": "Inline: 'There is an absence of generalized pain behavior (eg, somatoform disorder) or generalized pain disorders (eg, fibromyalgia)'; imaging must exclude 'destructive lesions (eg, tumor, infection) or inflammatory arthropathy'.",
+  "initial_vs_repeat": "None.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Has undergone and failed a minimum 6 months of intensive nonoperative treatment that must include all of the following:",
+    "why_ambiguous": "Embedded 'all of' inside a bullet that is itself one ALL item; the bullet's final sub-bullet ends with ', AND' that belongs to the outer list."
+   },
+   {
+    "quote": "Pain is at least 5 on a 0 to 10 rating scale; and pain impacts quality of life or limits activities of daily living, AND",
+    "why_ambiguous": "Lowercase 'and' inside the bullet and uppercase AND at the end serve different roles."
+   },
+   {
+    "quote": "Minimally invasive sacroiliac joint fusion/stabilization using a posterior (dorsal) approach and/or using an intra-articular implant(s) ... is considered experimental or investigational.",
+    "why_ambiguous": "'and/or' makes the investigational condition either approach alone."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "measurement threshold",
+   "quote": "Pain is at least 5 on a 0 to 10 rating scale",
+   "where": "MIS SI fusion 1"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "Participation in at least 6 weeks of active physical therapy targeted at the lumbar spine, pelvis, sacroiliac joint, and hip",
+   "where": "MIS SI fusion 3"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "Imaging of the pelvis (anteroposterior plain radiograph) rules out concomitant hip pathology",
+   "where": "MIS SI fusion imaging"
+  },
+  {
+   "kind": "lab value",
+   "quote": "at least a 75% reduction in pain for the expected duration of the anesthetic used following an image-guided, contrast-enhanced intra-articular sacroiliac joint injection on 2 separate occasions",
+   "where": "diagnostic block"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "A tumor involving the sacrum and/or sacroiliac joint",
+   "where": "Open SI fusion"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "A trial of a therapeutic sacroiliac joint injection (ie, corticosteroid injection) has been performed at least once",
+   "where": "last item"
+  },
+  {
+   "kind": "provider/facility qualification",
+   "quote": "using a U.S. Food and Drug Administration (FDA) approved implant",
+   "where": "MIS SI fusion lead"
+  },
+  {
+   "kind": "psych/nutrition evaluation",
+   "quote": "Evaluation and appropriate management of associated cognitive, behavioral, or addiction issues, if any",
+   "where": "conservative bullet"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "pain score",
+   "value": ">= 5",
+   "unit": "0-10 scale",
+   "quote": "Pain is at least 5 on a 0 to 10 rating scale"
+  },
+  {
+   "quantity": "pain reduction after block",
+   "value": ">= 75",
+   "unit": "%",
+   "quote": "at least a 75% reduction in pain"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "intensive nonoperative treatment",
+   "length": "minimum 6 months",
+   "quote": "a minimum 6 months of intensive nonoperative treatment"
+  },
+  {
+   "what": "active physical therapy",
+   "length": "at least 6 weeks",
+   "quote": "at least 6 weeks of active physical therapy"
+  },
+  {
+   "what": "diagnostic injections",
+   "length": "2 separate occasions",
+   "quote": "on 2 separate occasions"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Codes carry inline '(investigational)' tags for 22586, 27278, 63032, C9757; covered ones (27279, 27280) untagged. Tag is the only mapping from code to ruling.",
+  "non_covered_code_lists": "Marked inline with '(investigational)'."
+ },
+ "external_dependencies": [
+  {
+   "what": "FDA approval",
+   "quote": "using a U.S. Food and Drug Administration (FDA) approved implant"
+  },
+  {
+   "what": "Product lists in Other are illustrative",
+   "quote": "The use of specific product names is illustrative only."
+  }
+ ],
+ "definitions_that_change_meaning": [],
+ "vague_terms": [
+  {
+   "quote": "intensive nonoperative treatment",
+   "problem": "'intensive' undefined."
+  },
+  {
+   "quote": "consistent with sacroiliac joint pain",
+   "problem": "clinical judgment."
+  },
+  {
+   "quote": "Imaging of the sacroiliac joint indicates evidence of injury and/or degeneration",
+   "problem": "no grading."
+  }
+ ],
+ "extraction_hazards": [
+  "Bullets are either the private-use character U+F0B7 or U+2022 depending on the document (the fusion guideline uses both), never '-' or '*'; nested bullets use other glyphs ('o') or only deeper indentation",
+  "Hyperlink navigation bar after the disclaimer is flattened into a 2-3 row text block that looks like headings",
+  "Form-feed (\\f) page breaks can fall mid-list or immediately before a section heading, so '^HEADING' regexes can miss; no running headers/footers or page numbers to strip",
+  "Second-level bullets lose their glyph and appear only as extra indentation",
+  "Brand-name device list inside a sentence (dorsal-approach devices) and a second device list in OTHER could be mistaken for covered devices",
+  "Very long (23 page) document: Description and References are 70% of text",
+  "Update history records that bracing was removed as a requirement in 06/15/18, yet the current text lists Bracing among the nonoperative treatments -- history and body are not guaranteed consistent"
+ ],
+ "interesting_structures": [
+  "Multi-paragraph position statement mixing covered, conditional and investigational rulings; later paragraphs carve down earlier ones ('all other conditions')",
+  "Diagnostic injection response (75% relief twice) as a criterion",
+  "Procedure code investigational flags in coding table drive part of the ruling"
+ ],
+ "fit_to_tree": {
+  "score": 2,
+  "scale": "1 = all/any/not expresses it cleanly ... 5 = needs new constructs or human judgment",
+  "why": "Dense but regular ALL-of tree for the one real criteria block; trouble is separating the five rulings and two-level bullets."
+ },
+ "payer": "bcbsfl",
+ "treatment": "minimally-invasive-fusion-techniques",
+ "file": "bcbsfl-02-61000-36-minimally-invasive-fusion-techniques.pdf"
+}

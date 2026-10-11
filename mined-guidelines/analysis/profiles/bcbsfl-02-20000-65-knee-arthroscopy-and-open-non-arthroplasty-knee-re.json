@@ -1,0 +1,351 @@
+{
+ "file": "bcbsfl-02-20000-65-knee-arthroscopy-and-open-non-arthroplasty-knee-re.pdf",
+ "treatment": "knee-arthroscopy",
+ "payer": "bcbsfl",
+ "doc_kind": "medical coverage guideline",
+ "lines_of_business": [
+  "All lines of business unless noted in Program Exceptions",
+  "FEP: follow FEP guidelines",
+  "SAO: follow SAO guidelines",
+  "Medicare Advantage: NCDs 150.9 and 150.12 reviewed"
+ ],
+ "effective_or_revised": "Original 10/15/16; Reviewed 05/28/26; Revised 06/15/26",
+ "sections_in_order": [
+  "Description",
+  "Summary and Analysis of Evidence",
+  "Position Statement",
+  "Billing/Coding Information",
+  "Reimbursement Information",
+  "Program Exceptions",
+  "Definitions",
+  "Related Guidelines",
+  "Other",
+  "References",
+  "Committee Approval",
+  "Guideline Update Information"
+ ],
+ "criteria_location": "Position Statement, pp.~5-9 of 16, one titled block per procedure. K-L and Outerbridge grade tables sit right after the last block (footnotes ** and ***), not beside the criteria that use them. Definitions section says 'No guideline specific definitions apply'. About 10 pages are evidence summary and references.",
+ "procedures_covered": [
+  "Diagnostic knee arthroscopy",
+  "Arthroscopic debridement (OA, Outerbridge I-II)",
+  "Debridement femoral condyle/tibial plateau cartilage",
+  "Debridement patellofemoral chondrosis",
+  "Debridement arthrofibrosis",
+  "Meniscectomy/meniscal repair",
+  "Meniscal allograft transplant",
+  "ACL reconstruction/repair",
+  "PCL reconstruction",
+  "Microfracture/abrasion/drilling",
+  "Osteochondral allografting and autografting",
+  "Synovectomy",
+  "Loose body removal",
+  "Lateral release",
+  "Patellar realignment",
+  "Lysis of adhesions",
+  "MISHA implanted shock absorber (investigational)"
+ ],
+ "logic": {
+  "top_level": "pathways (one block per procedure; several have inner any-of pathways)",
+  "max_nesting_depth": 4,
+  "k_of_n": [
+   {
+    "k": 2,
+    "n": 6,
+    "quote": "Failure of at least 3 months of conservative non-operative management that includes at least 2 of the following: Medications (unless contraindicated); assistive device(s); home exercise; physical therapy, therapeutic injections into the joint; activity modification"
+   }
+  ],
+  "exclusions_or_contraindications": "Inline negatives inside the all-of lists ('No imaging evidence of meniscus tear, loose body, advanced arthritis (Kellgren grade III or IV), or fracture'; 'No patellar dislocation'). No separate contraindication section, no global exclusions.",
+  "initial_vs_repeat": "None. No repeat-procedure, second-side or revision rules. Only 'inadequate response to a prior surgical procedure' as a prerequisite for osteochondral autografting.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Meniscectomy and/or meniscal repair meets the definition of medical necessity for any of the following: ... Acute injury ... when the following are met: o MRI evidence of a frank lateral or medial meniscus-bucket handle tear, AND o Failure of at least 6 weeks",
+    "why_ambiguous": "Top bullets are any-of, inner o bullets are all-of, but only the first lead-in says 'when the following are met'; the second bullet's inner list uses AND while the third bullet has no conservative-therapy requirement at all."
+   },
+   {
+    "quote": "Synovectomy meets the definition of medical necessity for the following: Bleeding into the joint ... Painful plica, and the following ... Presence of proliferative synovial disease ...",
+    "why_ambiguous": "No ALL/ANY word at the top; reader must infer the bullets are alternatives and the 'and the following' sub-bullets are conjunctive. One sub-bullet ends with 'AND' only on some items."
+   },
+   {
+    "quote": "Patellar realignment ... Recurrent patellar dislocation or subluxation, and the following: ... Failure of 6 months ... OR  o Patellofemoral tenderness and abnormal articulation ...",
+    "why_ambiguous": "Stray OR at the end of a nested list closes one branch; where the any-of scope ends is a layout inference."
+   },
+   {
+    "quote": "Osteochondral autografting ... Candidate is a skeletally mature adolescent with documented closure of growth plates (e.g., \u226515 years), OR an adult considered too young ... (e.g., \u226455 years), AND",
+    "why_ambiguous": "OR nested inside one AND bullet; 'e.g.' makes the age cutoffs examples, not thresholds."
+   },
+   {
+    "quote": "Diagnostic ... Xray and MRI results are inconclusive, AND No imaging evidence of meniscus tear, loose body, advanced arthritis ...",
+    "why_ambiguous": "Second bullet repeats and narrows the first; whether 'inconclusive' can coexist with a documented finding is unclear."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "conservative therapy",
+   "quote": "Failure of at least 3 months of conservative non-operative management that includes at least 2 of the following",
+   "where": "Position Statement: diagnostic, debridement OA/cartilage/PF, ACL(persistent), PCL, plica synovectomy"
+  },
+  {
+   "kind": "duration",
+   "quote": "Failure of at least 6 weeks of conservative non-operative management",
+   "where": "Meniscectomy, meniscal transplant, proliferative synovitis"
+  },
+  {
+   "kind": "duration",
+   "quote": "Failure of at least 6 months of conservative non-operative management that included supervised physical therapy",
+   "where": "Lateral release, patellar realignment"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "MRI evidence of a frank (non-degenerative) meniscus tear",
+   "where": "Meniscectomy second bullet"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "Xrays demonstrate absent or minimal osteoarthritis (Kellgren-Lawrence grade 0-2)",
+   "where": "Meniscectomy, ACL, PCL"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "Osteoarthritis is classified as Outerbridge grade I or II",
+   "where": "Arthroscopic debridement"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "between 1 and 2.5 cm2 in size",
+   "where": "Osteochondral autografting"
+  },
+  {
+   "kind": "age",
+   "quote": "Individual is considered too young (e.g., age 54 or younger) to be an appropriate candidate for total knee arthroplasty",
+   "where": "Meniscal allograft transplant"
+  },
+  {
+   "kind": "symptom",
+   "quote": "There are mechanical symptoms (including, but are not limited to, locking, snapping, or popping)",
+   "where": "Debridement OA; microfracture"
+  },
+  {
+   "kind": "symptom",
+   "quote": "Limited range of motion, effusion, and/or painful weight bearing, present for at least 3 months",
+   "where": "Diagnostic arthroscopy"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "Post-surgical, post-trauma, or post-infection arthrofibrosis of the knee",
+   "where": "Lysis of adhesions"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "Inadequate response to a prior surgical procedure (e.g., abrasion, microfracture, drilling)",
+   "where": "Osteochondral autografting"
+  },
+  {
+   "kind": "lab value / drug trial",
+   "quote": "No improvement in symptoms following a minimum of 6 months of DMARD therapy (if not contraindicated)",
+   "where": "Synovectomy, rheumatoid"
+  },
+  {
+   "kind": "other",
+   "quote": "Allograft is non-collagen and harvested via a cadaver (either fresh viable, fresh frozen, cryopreserved, or lyophilized)",
+   "where": "Meniscal allograft"
+  },
+  {
+   "kind": "other",
+   "quote": "At least 3 months have passed since surgery, traumatic injury, or infection",
+   "where": "Lysis of adhesions"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "conservative therapy",
+   "value": ">= 3 months, >=2 modalities",
+   "unit": "months",
+   "quote": "at least 3 months of conservative non-operative management that includes at least 2 of the following"
+  },
+  {
+   "quantity": "K-L grade (diagnostic)",
+   "value": "not 3 or 4",
+   "unit": "grade",
+   "quote": "advanced arthritis (Kellgren grade III or IV)"
+  },
+  {
+   "quantity": "K-L grade (meniscectomy, ACL, PCL)",
+   "value": "0-2",
+   "unit": "grade",
+   "quote": "Kellgren-Lawrence grade 0-2"
+  },
+  {
+   "quantity": "K-L grade (lateral release, medial PF OA)",
+   "value": "0 or 1",
+   "unit": "grade",
+   "quote": "Medial patellofemoral osteoarthritis is Kellgren-Lawrence grade 0 or 1"
+  },
+  {
+   "quantity": "Outerbridge (debridement OA)",
+   "value": "I or II",
+   "unit": "grade",
+   "quote": "Osteoarthritis is classified as Outerbridge grade I or II"
+  },
+  {
+   "quantity": "meniscal allograft age",
+   "value": "<= 54 (e.g.)",
+   "unit": "years",
+   "quote": "too young (e.g., age 54 or younger)"
+  },
+  {
+   "quantity": "meniscus absent",
+   "value": "> 50%",
+   "unit": "percent",
+   "quote": "Absence of greater than 50% of the meniscus, established by imaging or prior surgery"
+  },
+  {
+   "quantity": "joint space narrowing (allograft)",
+   "value": "< 50%",
+   "unit": "percent",
+   "quote": "<50% joint space narrowing"
+  },
+  {
+   "quantity": "lesion size (autograft)",
+   "value": "1-2.5",
+   "unit": "cm2",
+   "quote": "between 1 and 2.5 cm2 in size"
+  },
+  {
+   "quantity": "autograft age",
+   "value": ">=15 adolescent or <=55 adult (e.g.)",
+   "unit": "years",
+   "quote": "(e.g., \u226515 years) ... (e.g., \u226455 years)"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "symptom duration, diagnostic arthroscopy",
+   "length": "3 months",
+   "quote": "present for at least 3 months"
+  },
+  {
+   "what": "conservative therapy (most)",
+   "length": "3 months",
+   "quote": "Failure of at least 3 months of conservative non-operative management"
+  },
+  {
+   "what": "conservative therapy meniscus/allograft/synovitis",
+   "length": "6 weeks",
+   "quote": "Failure of at least 6 weeks of conservative non-operative management"
+  },
+  {
+   "what": "arthrofibrosis debridement PT",
+   "length": "6 weeks",
+   "quote": "Failure of at least 6 weeks of physical therapy"
+  },
+  {
+   "what": "lateral release / patellar realignment",
+   "length": "6 months",
+   "quote": "Failure of at least 6 months of conservative non-operative management"
+  },
+  {
+   "what": "DMARD trial",
+   "length": "6 months",
+   "quote": "minimum of 6 months of DMARD therapy"
+  },
+  {
+   "what": "post-event wait before lysis of adhesions",
+   "length": "3 months",
+   "quote": "At least 3 months have passed since surgery, traumatic injury, or infection"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Listed in one flat table (27332-27428, 29866-29889, C8003, G0289) with no mapping to criteria blocks. 27412 (ACI) and 29871/29885-29887 are absent here although other payers list them; ACI is pushed to a related guideline.",
+  "non_covered_code_lists": "C8003 (MISHA) marked Investigational; MISHA 'for any indication' is experimental."
+ },
+ "external_dependencies": [
+  {
+   "what": "Medicare Advantage: NCD 150.9 (arthroscopic lavage/debridement for OA knee) and NCD 150.12 (collagen meniscus implant)",
+   "quote": "The following National Coverage Determinations (NCDs) were reviewed on the last guideline review date"
+  },
+  {
+   "what": "ACI policy",
+   "quote": "Autologous Chondrocyte Implantation (ACI), 02-20000-17"
+  },
+  {
+   "what": "Knee arthroplasty policy",
+   "quote": "Knee Arthroplasty, 02-20000-60"
+  },
+  {
+   "what": "FEP/SAO plans follow their own guidelines",
+   "quote": "Federal Employee Program (FEP): Follow FEP guidelines."
+  },
+  {
+   "what": "Florida step therapy exemption statute",
+   "quote": "in compliance with Florida law 627.42393, members or providers may request a step therapy protocol exemption"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Kellgren-Lawrence",
+   "definition_quote": "Grade 2: Definite osteophyte formation with possible joint space narrowing on anteroposterior weight-bearing radiograph"
+  },
+  {
+   "term": "Outerbridge",
+   "definition_quote": "Grade II: Partial thickness defect, fissures < 1.5cm diameter/wide"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "Xray and MRI results are inconclusive",
+   "problem": "No definition of inconclusive; chart must contain a radiologist statement of that kind."
+  },
+  {
+   "quote": "MRI evidence of a tear considered repairable by the surgeon",
+   "problem": "Defers to surgeon opinion; not a chart fact."
+  },
+  {
+   "quote": "Disabling knee pain with activity",
+   "problem": "'Disabling' undefined, no scale."
+  },
+  {
+   "quote": "Normal knee biomechanics or alignment and stability is present or will be achieved concurrently",
+   "problem": "Prospective plan, no measurement."
+  },
+  {
+   "quote": "too young (e.g., age 54 or younger)",
+   "problem": "Example, not a rule; boundary is judgement."
+  },
+  {
+   "quote": "mechanical symptoms (including, but not limited to, locking, snapping, or popping)",
+   "problem": "Open list."
+  },
+  {
+   "quote": "conservative non-operative management",
+   "problem": "No minimum dose, frequency or visit count for PT; 'failure' not defined."
+  },
+  {
+   "quote": "limited ability to straighten the le.g., limping",
+   "problem": "Typo-corrupted criterion ('leg' fused with 'e.g.'); symptoms any-of list unclear."
+  }
+ ],
+ "extraction_hazards": [
+  "Two-column-looking bullets with three nested levels (bullet, o, dash) rendered as indentation only",
+  "A stray OR/AND at the end of a nested bullet carries scope",
+  "Page break splits Meniscectomy third bullet and the 'Failure of at least 6 weeks' sub-list is separated from its parent by a blank line",
+  "Grade tables at the end of the position statement, referenced by ** and *** footnote marks that pdftotext does not attach to the criteria",
+  "Typos: 'kneeing', 'le.g.,', 'the all of the following' (LAA doc)",
+  "Revision log lists criteria that existed earlier (e.g., 'Marx scale and Tegner score') which are no longer in the text; a naive reader may think they exist",
+  "Evidence summary is 230 lines of prose with numbers (e.g., '<2 cm2', 'Outerbridge') that look like criteria but are not"
+ ],
+ "interesting_structures": [
+  "Per-procedure blocks with different therapy durations (6 weeks / 3 months / 6 months)",
+  "Recurring k-of-n 'at least 2 of 6' conservative therapy menu, with one variant 'supervised PT plus at least 1 of the rest' (lateral release, realignment)",
+  "Alternative branches with one branch having no conservative-therapy requirement (pediatric meniscal tear)",
+  "Imaging negative findings required (no meniscal tear) for diagnostic arthroscopy: criteria that depend on the absence of a finding",
+  "Experimental-for-any-indication carve-out (MISHA)",
+  "Silent gaps: no coverage statement for ACI, collateral ligaments, MUA"
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "why": "Each block is clean all/any with a k-of-n leaf, but the procedure must be picked first (pathway selection), grade thresholds depend on tables elsewhere, and several leaves need surgeon judgement ('repairable', 'inconclusive', 'disabling')."
+ }
+}

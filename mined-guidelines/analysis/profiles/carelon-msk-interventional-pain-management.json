@@ -1,0 +1,263 @@
+{
+ "file": "carelon-msk-interventional-pain-management.pdf",
+ "treatment": "sacroiliac-joint-injections",
+ "payer": "carelon",
+ "doc_kind": "clinical guideline (vendor)",
+ "lines_of_business": [
+  "Applies as adopted by health plans; Anthem Medicaid noted in history; 'Approval and implementation dates for specific health plans may vary'"
+ ],
+ "effective_or_revised": "Effective 04/14/2024 (redline shows 04/09/2023); Last review 07/18/2023; Doc ID MSK01-04240423.1",
+ "sections_in_order": [
+  "Description and Application of the Guidelines",
+  "General Clinical Guideline",
+  "Epidural Injection Procedures and Diagnostic Selective Nerve Root Blocks",
+  "Paravertebral Facet Injection/Medial Branch Nerve Block/Neurolysis",
+  "Regional Sympathetic Nerve Block",
+  "Sacroiliac Joint Injection (Description, Clinical Indications, Exclusions, Selected References, Codes)",
+  "Spinal Cord and Dorsal Root Ganglion Stimulators",
+  "History"
+ ],
+ "criteria_location": "SI section pp.24-27 of 34: general definitions (conservative management, failure, symptom severity) inside 'Clinical Indications' p.24-25, Patient Requirements p.25, diagnostic/therapeutic/repeat p.25-26, Exclusions p.26. Cross-cutting repeat/simultaneous rules in General Clinical Guideline pp.4-5.",
+ "procedures_covered": [
+  "Diagnostic intra-articular SI joint injection",
+  "Therapeutic intra-articular SI joint injection",
+  "Repeat therapeutic injection",
+  "Excluded: sacral lateral branch blocks, RF ablation (CPT 27096, 64451, 64625, G0260 listed)"
+ ],
+ "logic": {
+  "top_level": "all (Patient Requirements) then procedure-specific sub-rules (diagnostic, therapeutic, repeat)",
+  "max_nesting_depth": 4,
+  "k_of_n": [
+   {
+    "k": 1,
+    "n": 6,
+    "quote": "At least ONE of the following provocative tests is positive"
+   }
+  ],
+  "exclusions_or_contraindications": "Exclusions section: 'Indications other than those addressed in this guideline are considered not medically necessary including ... on the same day as other spine injection procedures; ... in a previously fused sacroiliac joint; Use of corticosteroid with diagnostic ... injections; sacral lateral branch blocks; RF'. Radiculopathy handled as conditional inside Patient Requirements.",
+  "initial_vs_repeat": "'An injection is considered a repeat injection if the last injection was performed within the previous 12 months. If 12 months or more have elapsed, it is considered a new (initial) injection.' Repeat needs >= 50% relief and ADL improvement for >= 6 weeks; not < 3 months apart; max 3 in 12 months.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Conservative management should include a combination of strategies ... including physical therapy AND at least one complementary conservative treatment strategy.",
+    "why_ambiguous": "Three overlapping definitions (conservative management, complementary management, complementary treatment) with different option lists."
+   },
+   {
+    "quote": "relief of the primary (index) pain and the onset and minimum duration of relief is consistent with the local anesthetic agent employed",
+    "why_ambiguous": "Second diagnostic block 'only if' first is positive; is the second block also required, or optional?"
+   },
+   {
+    "quote": "The specific requirements take precedence over any stated general requirement.",
+    "why_ambiguous": "Precedence rule means general rules can be silently overridden."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "symptom",
+   "quote": "persistent typically unilateral non-radicular pain that is predominantly below the lumbar spine (L5) ... present for at least 3 months",
+   "where": "Patient Requirements p.25"
+  },
+  {
+   "kind": "symptom",
+   "quote": "localized tenderness with palpation over the sacral sulcus just inferior to the posterior superior iliac spine (PSIS)",
+   "where": "p.25"
+  },
+  {
+   "kind": "symptom",
+   "quote": "At least ONE of the following provocative tests is positive: pelvic distraction, lateral iliac compression, sacral compression/thrust, thigh thrust, FABER, Gaenslen's",
+   "where": "p.25"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "no evidence of acute or subacute radicular pain/radiculopathy or neurogenic claudication",
+   "where": "p.25"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "Lack of adequate improvement following 6 weeks of conservative management",
+   "where": "p.25"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "physical therapy AND at least one complementary conservative treatment strategy",
+   "where": "General Information p.24"
+  },
+  {
+   "kind": "functional impairment",
+   "quote": "pain that is at least 3 out of 10 in intensity and is associated with inability to perform at least two (2) ADLs and/or IADLs",
+   "where": "p.25"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "second confirmatory injection ... only if the first injection produces at least 75% relief",
+   "where": "Diagnostic p.26"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "Anesthetic volume must be limited to 1.5 cc; Total injection volume should be limited to 2.0 cc",
+   "where": "p.26"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "Injections may not be repeated at intervals of less than 3 months, with a maximum of three (3) injections in a 12-month period",
+   "where": "Repeat p.26"
+  },
+  {
+   "kind": "provider/facility qualification",
+   "quote": "Procedures must be performed with image guidance, either fluoroscopy or CT. Ultrasound is the only imaging guidance appropriate for use during pregnancy.",
+   "where": "p.25-26"
+  },
+  {
+   "kind": "documentation",
+   "quote": "All imaging must be performed and read by an independent radiologist",
+   "where": "p.25"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "pain duration",
+   "value": ">= 3",
+   "unit": "months",
+   "quote": "present for at least 3 months"
+  },
+  {
+   "quantity": "conservative management",
+   "value": "6",
+   "unit": "weeks",
+   "quote": "Lack of adequate improvement following 6 weeks of conservative management"
+  },
+  {
+   "quantity": "pain intensity on injection day",
+   "value": ">= 3",
+   "unit": "0-10",
+   "quote": "the patient's pain must be at least 3 out of 10 in severity at rest or during a consistently provocative maneuver"
+  },
+  {
+   "quantity": "diagnostic relief",
+   "value": ">= 75",
+   "unit": "%",
+   "quote": "at least 75% relief"
+  },
+  {
+   "quantity": "repeat relief",
+   "value": ">= 50",
+   "unit": "% for >= 6 weeks",
+   "quote": "at least 50% pain relief, and improvement in patient-specific ADLs, for at least 6 weeks"
+  },
+  {
+   "quantity": "repeat interval",
+   "value": ">= 3",
+   "unit": "months",
+   "quote": "Injections may not be repeated at intervals of less than 3 months"
+  },
+  {
+   "quantity": "annual cap",
+   "value": "3",
+   "unit": "per 12 months",
+   "quote": "maximum of three (3) injections in a 12-month period"
+  },
+  {
+   "quantity": "diagnostic injections",
+   "value": "max 2",
+   "unit": "count",
+   "quote": "A maximum of only 2 diagnostic unilateral (same side) intraarticular injections"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "pain duration",
+   "length": "3 months",
+   "quote": "at least 3 months"
+  },
+  {
+   "what": "conservative management",
+   "length": "6 weeks",
+   "quote": "6 weeks of conservative management"
+  },
+  {
+   "what": "repeat vs new injection",
+   "length": "12 months",
+   "quote": "If 12 months or more have elapsed, it is considered a new (initial) injection."
+  },
+  {
+   "what": "relief durability",
+   "length": "6 weeks",
+   "quote": "for at least 6 weeks after a previous injection"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Listed only at end of SI section: 27096, 64451, 64625, G0260.",
+  "non_covered_code_lists": "Codes 64451 and 64625 appear though the guideline excludes lateral branch blocks and RF"
+ },
+ "external_dependencies": [
+  {
+   "what": "Health plan can substitute its own policy",
+   "quote": "If requested by a health plan, Carelon will review requests based on health plan medical policy/guidelines in lieu of the Carelon Guidelines."
+  },
+  {
+   "what": "Peer-to-peer for unmet elements",
+   "quote": "the determination of appropriateness will most likely require a peer-to-peer conversation"
+  },
+  {
+   "what": "State/federal mandates",
+   "quote": "Applicable federal and state coverage mandates take precedence over these clinical guidelines."
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "significant pain and functional impairment",
+   "definition_quote": "pain that is at least 3 out of 10 in intensity and is associated with inability to perform at least two (2) ADLs and/or IADLs"
+  },
+  {
+   "term": "repeat injection",
+   "definition_quote": "considered a repeat injection if the last injection was performed within the previous 12 months"
+  },
+  {
+   "term": "Failure of conservative management",
+   "definition_quote": "completed a full course ... Worsening of or no significant improvement ... More invasive forms of therapy are being considered"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "Lack of adequate improvement",
+   "problem": "no measure"
+  },
+  {
+   "quote": "significant improvement",
+   "problem": "undefined"
+  },
+  {
+   "quote": "maximally optimized through comprehensive treatment",
+   "problem": "undefined"
+  },
+  {
+   "quote": "in unusual circumstances",
+   "problem": "exception judgment"
+  },
+  {
+   "quote": "consistent with the local anesthetic agent employed",
+   "problem": "requires knowing drug and expected duration"
+  }
+ ],
+ "extraction_hazards": [
+  "Redline: revisions shown as blue underline/red strikethrough; text contains both old and new words fused, e.g. 'nerve rootneural elements', 'glucocorticoidscorticosteroids', '20243', 'Effective Date: 04/14/2024 04/09/2023'",
+  "Three SI-relevant definitions of conservative management in one block",
+  "Footnote markers 1, 2 and * carry conditions ('In the absence of contraindications')",
+  "Vendor guideline contains 5 other procedures; SI is pp.24-27 of 34",
+  "Page breaks mid-list (diagnostic list splits pp.25-26)"
+ ],
+ "interesting_structures": [
+  "Conservative management defined as PT + one complementary strategy with an 'exception in unusual circumstances'",
+  "Supervised home program has 3 sub-requirements",
+  "Repeat vs initial determined by 12-month look-back",
+  "Volume limits (1.5 cc, 2.0 cc) as procedural criteria",
+  "Diagnostic injection tied to planned fusion only",
+  "Specific requirements override general ones"
+ ],
+ "fit_to_tree": {
+  "score": 4,
+  "why": "Clear numbers, but definitions are nested and overridable; dependency on unrecorded drug/onset facts; peer-to-peer fallback."
+ }
+}

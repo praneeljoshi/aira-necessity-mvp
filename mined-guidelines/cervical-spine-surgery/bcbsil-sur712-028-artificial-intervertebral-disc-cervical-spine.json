@@ -1,0 +1,19 @@
+{
+  "payer": "Blue Cross Blue Shield of Illinois",
+  "payer_key": "bcbsil",
+  "treatment": "cervical-spine-surgery",
+  "title": "Artificial Intervertebral Disc: Cervical Spine",
+  "policy_number": "SUR712.028",
+  "effective": "2026-01-01",
+  "url": "https://medicalpolicy.bcbsil.com/content/dam/bcbs/medicalpolicy/pdf/surgery/SUR712.028_2026-01-01.pdf",
+  "final_url": "https://medicalpolicy.bcbsil.com/content/dam/bcbs/medicalpolicy/pdf/surgery/SUR712.028_2026-01-01.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "bcbsil-sur712-028-artificial-intervertebral-disc-cervical-spine.pdf",
+  "sha256": "f2ca44aa0d15207ae3dc67e9e7eb3f02495a3c83d632cc95011563c2160bf0d7",
+  "pages": 51,
+  "bytes": 700627,
+  "retrieved": "2026-10-09",
+  "printed_date": "Effective 01/01/2026 (51 pages)"
+}

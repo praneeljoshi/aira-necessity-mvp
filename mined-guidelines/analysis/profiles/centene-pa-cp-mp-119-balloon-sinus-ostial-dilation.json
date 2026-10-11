@@ -1,0 +1,85 @@
+{
+  "file": "centene-pa-cp-mp-119-balloon-sinus-ostial-dilation.pdf",
+  "treatment": "balloon-sinuplasty",
+  "payer": "centene-pa-health-wellness",
+  "doc_kind": "clinical policy (Pennsylvania Health and Wellness, Centene, PA.CP.MP.119)",
+  "lines_of_business": ["Not stated beyond the plan name 'Pennsylvania Health and Wellness (PHW)'; a Medicaid managed-care plan, but the document does not say so"],
+  "effective_or_revised": "Effective 01/18; Last Review Date 10/19",
+  "sections_in_order": ["Description", "Policy/Criteria", "Background", "Guideline Recommendations (AAO-HNS, ARS, AAAAI/ACAAI/JCAAI)", "Coding Implications (CPT, ICD-10-CM)", "Reviews, Revisions, and Approvals", "References"],
+  "criteria_location": "Policy/Criteria, pp. 1-2 of 6: one 'I.' list with A (diagnosis, 2 branches), B (medical therapy), C (etiology ruled out) and a second list headed 'I.' (not medically necessary).",
+  "procedures_covered": ["Balloon sinuplasty / sinus ostial dilation of maxillary, sphenoid and frontal ostia (31295-31298), alone or with endoscopic sinus surgery"],
+  "logic": {
+    "top_level": "all (A and B and C), where A is any-of two diagnosis pathways",
+    "max_nesting_depth": 5,
+    "k_of_n": [
+      {"k": 1, "n": 4, "quote": "Has at least one of the following symptoms: Anterior or posterior mucopurulent nasal discharge; Nasal obstruction; Facial pain/pressure/fullness; Decreased or lost sense of smell", "pointer": "A.1.a.i (age over 18)"},
+      {"k": 2, "n": 4, "quote": "Has at least two of the following symptoms: Purulent rhinorrhea; Nasal obstruction; Facial pressure/pain; Cough", "pointer": "A.1.b.i (age 18 or under)"},
+      {"k": 1, "n": 2, "quote": "Computed tomography (CT) scan shows either of the following: Polyps ... and/or sinus opacification; Inflammation of the paranasal sinuses", "pointer": "A.1.a.ii"},
+      {"k": 1, "n": 2, "quote": "Has at least one of the following findings: Endoscopic signs of mucosal edema, purulent drainage, or nasal polyposis; Mucosal changes within the ostiomeatal complex and/or sinuses, by CT scan", "pointer": "A.1.b.ii"},
+      {"k": 1, "n": 2, "quote": "Antibiotic therapy meeting one of the following (a or b)", "pointer": "B.1"}
+    ],
+    "exclusions_or_contraindications": "A second list headed 'not medically necessary in any of the following situations': ethmoid disease; extensive previous sinus surgery with significant osteoneogenesis. Also C: allergic or immune etiologies ruled out or treated.",
+    "initial_vs_repeat": "none",
+    "and_or_ambiguity": [
+      {"quote": "a. If > 18 years of age, meets both ... b. If ≤ 18 years of age", "why_ambiguous": "Age band split: > 18 vs ≤ 18, so an 18-year-old falls in the pediatric branch, whereas most definitions of adult are 18 and over."},
+      {"quote": "Polyps in nasal cavity or the middle meatus, and/or sinus opacification", "why_ambiguous": "'and/or' inside one CT option; polyps in the nasal cavity are not a sinus CT finding of the ostium to be dilated."},
+      {"quote": "Therapy guided by culture and sensitivity for ≥ 3 weeks; b. Beta-lactamase resistant antibiotic for ≥ 3 weeks (e.g., amoxicillin [recommended], amoxicillin-clavulanate ...", "why_ambiguous": "Amoxicillin is listed as a beta-lactamase resistant antibiotic; plain amoxicillin is not beta-lactamase resistant. Examples in the criteria may be taken literally."},
+      {"quote": "Continued symptoms after medical therapy consisting of both of the following (1 and 2): ... B.", "why_ambiguous": "B's required medical therapy (antibiotics 3 weeks, steroids 4 weeks) is required for both CRS and RARS pathways although A.2 (RARS) has no persistent symptoms between episodes."},
+      {"quote": "I. It is the policy of PHW that balloon sinuplasty is not medically necessary in any of the following situations", "why_ambiguous": "Second list is numbered 'I.' again, so heading numbering cannot be used to separate the criteria from the exclusions."}
+    ]
+  },
+  "requirement_kinds": [
+    {"kind": "diagnosis", "quote": "Chronic rhinosinusitis (CRS) has persisted for ≥ 12 weeks", "where": "A.1"},
+    {"kind": "diagnosis", "quote": "Documented ≥ 4 episodes of acute bacterial rhinosinusitis in the past year without signs or symptoms of rhinosinusitis between episodes", "where": "A.2.a"},
+    {"kind": "symptom", "quote": "Has at least one of the following symptoms ... (adults); at least two of the following symptoms ... (18 or under)", "where": "A.1.a.i, A.1.b.i"},
+    {"kind": "imaging finding", "quote": "Computed tomography (CT) scan shows either of the following: Polyps ... sinus opacification; Inflammation of the paranasal sinuses", "where": "A.1.a.ii"},
+    {"kind": "conservative therapy", "quote": "Antibiotic therapy ... Therapy guided by culture and sensitivity for ≥ 3 weeks; Beta-lactamase resistant antibiotic for ≥ 3 weeks", "where": "B.1"},
+    {"kind": "conservative therapy", "quote": "Intranasal corticosteroids for ≥ 4 weeks", "where": "B.2"},
+    {"kind": "other", "quote": "Allergic or immune etiologies of symptoms have been ruled out or treated appropriately", "where": "C"},
+    {"kind": "age", "quote": "If > 18 years of age ... If ≤ 18 years of age", "where": "A.1"},
+    {"kind": "other", "quote": "not medically necessary: For the treatment of ethmoid disease; Extensive previous sinus surgery with significant osteoneogenesis", "where": "second list"}
+  ],
+  "thresholds": [
+    {"quantity": "CRS duration", "value": ">= 12", "unit": "weeks", "quote": "Chronic rhinosinusitis (CRS) has persisted for ≥ 12 weeks"},
+    {"quantity": "RARS episodes", "value": ">= 4 in past year", "unit": "episodes", "quote": "Documented ≥ 4 episodes of acute bacterial rhinosinusitis in the past year"},
+    {"quantity": "antibiotic course", "value": ">= 3", "unit": "weeks", "quote": "for ≥ 3 weeks"},
+    {"quantity": "intranasal corticosteroid", "value": ">= 4", "unit": "weeks", "quote": "Intranasal corticosteroids for ≥ 4 weeks"},
+    {"quantity": "age split", "value": "> 18 / <= 18", "unit": "years", "quote": "If > 18 years of age ... If ≤ 18 years of age"},
+    {"quantity": "symptom count (pediatric)", "value": ">= 2 of 4", "unit": "symptoms", "quote": "Has at least two of the following symptoms"}
+  ],
+  "time_windows": [
+    {"what": "CRS persistence", "length": "12 weeks or more", "quote": "persisted for ≥ 12 weeks"},
+    {"what": "RARS episodes", "length": "past year", "quote": "in the past year"},
+    {"what": "antibiotic therapy", "length": "3 weeks or more", "quote": "for ≥ 3 weeks"},
+    {"what": "intranasal corticosteroids", "length": "4 weeks or more", "quote": "Intranasal corticosteroids for ≥ 4 weeks"}
+  ],
+  "codes": {"cpt_hcpcs_listed": true, "icd10_listed": true, "codes_tied_to_criteria": "CPT 31295-31298 listed; 'ICD-10-CM Diagnosis Codes that Support Coverage Criteria' lists J01.01, J01.11, J01.31 (acute recurrent maxillary/frontal/sphenoidal) and J32.0, J32.1, J32.3 (chronic maxillary/frontal/sphenoidal). Ethmoid and pansinusitis codes are absent, consistent with the ethmoid exclusion.", "non_covered_code_lists": "none; 'other' and 'unspecified' ICD codes removed in 10/18"},
+  "external_dependencies": [
+    {"what": "Society positions cited as support, not as delegated criteria", "quote": "strong consensus that CT documentation of sinonasal disease is required before surgical management with balloon sinus ostial dilation (AAO 2018 Consensus Statement)"}
+  ],
+  "definitions_that_change_meaning": [
+    {"term": "CRS (Background)", "definition_quote": "an inflammatory condition involving the paranasal sinuses and linings of the nasal passages, which persists for 12 weeks or longer"},
+    {"term": "RARS (Background)", "definition_quote": "4 or more episodes of ABRS within a year, without persistent symptoms between episodes"}
+  ],
+  "vague_terms": [
+    {"quote": "Allergic or immune etiologies of symptoms have been ruled out or treated appropriately", "problem": "'ruled out' how (testing?); 'appropriately' undefined; a chart often has nothing on this"},
+    {"quote": "Extensive previous sinus surgery with significant osteoneogenesis", "problem": "'extensive' and 'significant' undefined; osteoneogenesis is a CT/exam judgment"},
+    {"quote": "For the treatment of ethmoid disease", "problem": "unclear whether any ethmoid involvement excludes, even when dilating maxillary/frontal/sphenoid"},
+    {"quote": "Documented ≥ 4 episodes of acute bacterial rhinosinusitis", "problem": "how an episode is documented (culture, clinician diagnosis) is not defined"}
+  ],
+  "extraction_hazards": [
+    "Roman numeral 'I.' is used twice (criteria and exclusions); lettering A, B, C then a restart.",
+    "Page break between A.2.b.i and A.2.b.ii splits a list; header 'CLINICAL POLICY / Balloon Sinuplasty' repeats at each page top.",
+    "Trailing '. .' after item C and typo-like punctuation.",
+    "Revision-log table lines wrap and are split across pages; the log describes earlier versions of the criteria (e.g., adults once could qualify by endoscopy) which could be mistaken for current rules.",
+    "Background restates definitions and includes 'more than three courses of antibiotics in 12 months' not in the criteria."
+  ],
+  "interesting_structures": [
+    "Age-banded criteria: adult (>18) needs 1 symptom + CT; child (<=18) needs 2 symptoms + endoscopy or CT.",
+    "Two diagnosis pathways (CRS and RARS) with a shared medical-therapy requirement and etiology clause.",
+    "Medical therapy defined with drug-class examples and minimum durations, with an either/or on culture-guided vs beta-lactamase resistant antibiotic.",
+    "ICD-10 codes listed as 'support coverage criteria'; six codes only, sinus-specific.",
+    "Revision log shows the criteria evolving (adult endoscopy option removed in 10/19)."
+  ],
+  "fit_to_tree": {"score": 2, "scale": "1 = clean, 5 = needs new constructs or human judgment", "why": "Well-formed all/any/k-of-n with numeric thresholds and clear numbering. Strain: age band branches, the culture-vs-empiric antibiotic alternative, an etiology 'ruled out' leaf that charts rarely contain, and the duplicate numbering of the exclusion list."}
+}

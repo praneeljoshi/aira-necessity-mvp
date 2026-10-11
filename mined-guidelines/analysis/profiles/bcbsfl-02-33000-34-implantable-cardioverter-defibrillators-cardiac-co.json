@@ -1,0 +1,102 @@
+{
+  "file": "bcbsfl-02-33000-34-implantable-cardioverter-defibrillators-cardiac-co.pdf",
+  "treatment": "icd",
+  "payer": "bcbsfl",
+  "doc_kind": "medical policy (Medical Coverage Guideline)",
+  "lines_of_business": ["All lines of business unless noted in Program Exceptions", "FEP: follow FEP guidelines", "SAO: follow SAO guidelines", "Medicare Advantage: NCD 20.4 Implantable Automatic Defibrillators reviewed"],
+  "effective_or_revised": "Original 12/15/13; Reviewed 04/23/26; Revised 05/15/26",
+  "sections_in_order": ["Description (with long Summary and Analysis of Evidence)", "Position Statement (Adults primary/secondary, Pediatrics, Subcutaneous ICD, replacement note, CCM)", "Billing/Coding Information (CPT incl. 0408T-0927T investigational; LOINC documentation table)", "Reimbursement Information", "Program Exceptions", "Definitions (NYHA table)", "Related Guidelines (Wearable cardioverter-defibrillators 01-93000-30)", "Other", "References", "Committee Approval", "Guideline Update Information"],
+  "criteria_location": "Position Statement, pp. 3-5 of 14. Adult criteria, an investigational list for primary prevention, pediatric criteria, S-ICD criteria, a one-line replacement note and CCM. The Description contains a long evidence summary with clinical statements that are not criteria.",
+  "procedures_covered": ["Transvenous ICD (adults, primary and secondary prevention)", "Pediatric ICD", "Subcutaneous ICD (33270-33273, 93260, 93261, 93644)", "ICD replacement (one sentence note)", "Cardiac contractility modulation (investigational, 0408T-0418T, 0915T-0927T)", "Substernal ICD is not addressed"],
+  "logic": {
+    "top_level": "pathways (adult primary prevention six numbered alternatives; secondary prevention one bullet; pediatrics ten alternatives; S-ICD an ALL list built on the ICD pathways)",
+    "max_nesting_depth": 3,
+    "k_of_n": [
+      {"k": 1, "n": 7, "quote": "adults who meet ONE of the following criteria", "pointer": "Adults: primary prevention 1-6 plus secondary prevention"},
+      {"k": 1, "n": 10, "quote": "children who meet ANY of the following criteria", "pointer": "Pediatrics"},
+      {"k": 1, "n": 4, "quote": "Diagnosis of ONE of the following cardiac ion channelopathies: congenital long QT syndrome; Brugada syndrome; short QT syndrome OR catecholaminergic polymorphic ventricular tachycardia", "pointer": "Primary prevention 5"},
+      {"k": 1, "n": 3, "quote": "contraindication to a transvenous ICD due to one or more of the following: (1) lack of adequate vascular access; (2) compelling reason to preserve existing vascular access ...; or (3) history of need for explanation of a transvenous ICD", "pointer": "S-ICD"},
+      {"k": 1, "n": 4, "quote": "HCM with 1 or more major risk factors for sudden cardiac death (history of premature HCM-related sudden death ...; LVH greater than 30 mm; 1 or more runs of NSVT ...; prior unexplained syncope ...)", "pointer": "Primary prevention 4"}
+    ],
+    "exclusions_or_contraindications": "A paragraph stating the ICD is 'experimental or investigational' in primary prevention members who 'do not meet the above criteria or have had ANY of the following': acute MI less than 40 days; NYHA IV (unless CRT-D eligible); cardiac revascularization in the past 3 months or candidate for revascularization; noncardiac disease with life expectancy under 1 year. It is placed after the criteria, and uses 'investigational' rather than 'not medically necessary'.",
+    "initial_vs_repeat": "A single Note: 'Replacement of an ICD meets the definition of medical necessity for device/lead malfunction, change in member's medical condition, battery depletion, or generator end-of-life.' No conditions beyond the list.",
+    "and_or_ambiguity": [
+      {"quote": "Ischemic cardiomyopathy with NYHA functional Class II or Class III symptoms, a history of myocardial infarction at least 40 days before ICD treatment, AND left ventricular ejection fraction of 35% or less; OR", "why_ambiguous": "Commas and one AND: reading as three required items (cardiomyopathy + MI history + LVEF) is intended, but the grammar joins only the last item with AND. The trailing 'OR' is part of the criterion text."},
+      {"quote": "HCM ... and judged to be at high risk for sudden cardiac death by a physician experienced in the care of members with HCM OR", "why_ambiguous": "No semicolon before the OR; the 'judged to be at high risk' clause is a physician-judgment leaf layered on top of the risk-factor leaf."},
+      {"quote": "short QT syndrome OR catecholaminergic polymorphic ventricular tachycardia.", "why_ambiguous": "OR placed inside a bullet list of four items that began with 'ONE of the following'; also 'OR' after the third bullet and a period after the fourth, then item 6 follows with no OR."},
+      {"quote": "The use of the ICD is considered experimental or investigational in primary prevention members who do not meet the above criteria or have had ANY of the following", "why_ambiguous": "Restates criteria negatively; the ANY list overrides criteria. A member meeting criterion 1 who had a revascularization 2 months ago meets inclusion and also falls in the investigational list. Precedence is not stated."},
+      {"quote": "Members with a history of a life-threatening clinical event associated with ventricular arrhythmic events such as sustained ventricular tachyarrhythmia after reversible causes (eg, acute ischemia) have been excluded.", "why_ambiguous": "Reads as an exclusion of the members, grammatically; intended: members for whom reversible causes have been excluded."},
+      {"quote": "NYHA Class IV congestive heart failure (unless member is eligible to receive a combination cardiac resynchronization therapy ICD device)", "why_ambiguous": "Exception delegates to a CRT-D policy (not in this document)."}
+    ]
+  },
+  "requirement_kinds": [
+    {"kind": "diagnosis", "quote": "Ischemic cardiomyopathy ... Nonischemic dilated cardiomyopathy ... Hypertrophic cardiomyopathy ... cardiac ion channelopathies ... cardiac sarcoid", "where": "Primary prevention 1-6"},
+    {"kind": "measurement threshold", "quote": "left ventricular ejection fraction of 35% or less (NYHA II-III); 30% or less (NYHA I); NICM 35% or less", "where": "Primary prevention 1-3"},
+    {"kind": "symptom", "quote": "New York Heart Association (NYHA) functional Class II or Class III symptoms", "where": "Primary prevention 1"},
+    {"kind": "prior procedure", "quote": "a history of myocardial infarction at least 40 days before ICD treatment", "where": "Primary prevention 1-2"},
+    {"kind": "conservative therapy", "quote": "after reversible causes have been excluded, AND the response to optimal medical therapy has been adequately determined", "where": "Primary prevention 3 (NICM)"},
+    {"kind": "imaging finding", "quote": "left ventricular hypertrophy greater than 30 mm", "where": "Primary prevention 4"},
+    {"kind": "documentation/photos", "quote": "1 or more runs of nonsustained ventricular tachycardia at heart rates of 120 beats per minute or greater on 24-hour Holter monitoring", "where": "Primary prevention 4"},
+    {"kind": "provider/facility qualification", "quote": "judged to be at high risk for sudden cardiac death by a physician experienced in the care of members with HCM", "where": "Primary prevention 4"},
+    {"kind": "diagnosis", "quote": "Members with a history of a life-threatening clinical event associated with ventricular arrhythmic events such as sustained ventricular tachyarrhythmia", "where": "Secondary prevention"},
+    {"kind": "other", "quote": "contraindication to a transvenous ICD due to ... lack of adequate vascular access ...", "where": "S-ICD"},
+    {"kind": "other", "quote": "Have no indication for antibradycardia pacing; Do not have ventricular arrhythmias that are known or anticipated to respond to antitachycardia pacing", "where": "S-ICD"},
+    {"kind": "documentation/photos", "quote": "physician history and physical ... medication current ... Include all data of the selected type that represents observations made six months or fewer before starting date of service", "where": "Billing/Coding LOINC table"},
+    {"kind": "age", "quote": "ADULTS ... PEDIATRICS ... children", "where": "Position Statement headings (no ages stated)"}
+  ],
+  "thresholds": [
+    {"quantity": "LVEF (ischemic, NYHA II-III)", "value": "<= 35", "unit": "%", "quote": "left ventricular ejection fraction of 35% or less"},
+    {"quantity": "LVEF (ischemic, NYHA I)", "value": "<= 30", "unit": "%", "quote": "left ventricular ejection fraction of 30% or less"},
+    {"quantity": "LVEF (nonischemic dilated)", "value": "<= 35", "unit": "%", "quote": "Nonischemic dilated cardiomyopathy AND left ventricular ejection fraction of 35% or less"},
+    {"quantity": "time since MI", "value": ">= 40", "unit": "days", "quote": "a history of myocardial infarction at least 40 days before ICD treatment"},
+    {"quantity": "LVH", "value": "> 30", "unit": "mm", "quote": "left ventricular hypertrophy greater than 30 mm"},
+    {"quantity": "NSVT rate", "value": ">= 120", "unit": "bpm on 24-hour Holter", "quote": "heart rates of 120 beats per minute or greater on 24-hour Holter monitoring"},
+    {"quantity": "HCM relative age", "value": "< 50", "unit": "years", "quote": "first-degree relatives younger than 50 years"},
+    {"quantity": "life expectancy", "value": "< 1", "unit": "year (exclusion)", "quote": "noncardiac disease that would be associated with life expectancy less than 1 year"},
+    {"quantity": "revascularization window", "value": "past 3", "unit": "months (exclusion)", "quote": "a cardiac revascularization procedure in the past 3 months"}
+  ],
+  "time_windows": [
+    {"what": "after MI", "length": "at least 40 days", "quote": "history of myocardial infarction at least 40 days before ICD treatment"},
+    {"what": "after revascularization", "length": "3 months", "quote": "cardiac revascularization procedure in the past 3 months (CABG or PTCA)"},
+    {"what": "life expectancy", "length": "less than 1 year", "quote": "life expectancy less than 1 year"},
+    {"what": "documentation recency", "length": "6 months or fewer before date of service", "quote": "observations made six months or fewer before starting date of service"}
+  ],
+  "codes": {"cpt_hcpcs_listed": true, "icd10_listed": false, "codes_tied_to_criteria": "55 CPT codes in one flat list: ICD lead/generator/removal codes, S-ICD codes, EP evaluation codes, and CCM codes marked '(Investigational)'. ICD codes are not mapped to adult vs pediatric vs S-ICD criteria. LOINC codes tied to a documentation table (H&P, progress note, current medications, discharge medications).", "non_covered_code_lists": "CCM codes 0408T-0418T and 0915T-0927T annotated (Investigational) in the list"},
+  "external_dependencies": [
+    {"what": "Medicare Advantage: NCD 20.4", "quote": "Medicare Advantage products: The following National Coverage Determination (NCD) was reviewed on the last guideline review date: Implantable Automatic Defibrillators (20.4)"},
+    {"what": "Wearable defibrillators in another guideline", "quote": "Wearable and Non-Wearable Cardioverter-Defibrillators (WCD) for the Prevention of Sudden Cardiac Death, 01-93000-30"},
+    {"what": "CRT-D eligibility determined elsewhere", "quote": "NYHA Class IV congestive heart failure (unless member is eligible to receive a combination cardiac resynchronization therapy ICD device)"},
+    {"what": "FEP and SAO", "quote": "Federal Employee Program (FEP): Follow FEP guidelines. State Account Organization (SAO): Follow SAO guidelines."},
+    {"what": "Step therapy exemption", "quote": "Florida law 627.42393"}
+  ],
+  "definitions_that_change_meaning": [
+    {"term": "NYHA Class", "definition_quote": "II Slight limitation of physical activity. Comfortable at rest. Ordinary physical activity results in fatigue, palpitation, dyspnea (shortness of breath)."},
+    {"term": "Scope", "definition_quote": "This guideline addresses ICDs alone when used solely to treat patients at risk for ventricular arrhythmias."}
+  ],
+  "vague_terms": [
+    {"quote": "the response to optimal medical therapy has been adequately determined", "problem": "no duration (Cigna, Carelon say 3 months / 90 days); 'optimal' and 'adequately' undefined"},
+    {"quote": "considered to be at high risk for sudden cardiac death", "problem": "used for channelopathy and sarcoid pathways with no definition or test; physician judgment only"},
+    {"quote": "after reversible causes have been excluded", "problem": "no list of causes or evidence standard"},
+    {"quote": "compelling reason to preserve existing vascular access (ie, need for chronic dialysis; younger members with anticipated long-term need for ICD therapy)", "problem": "'compelling' and 'younger' undefined"},
+    {"quote": "candidates for a cardiac revascularization procedure", "problem": "a judgment about hypothetical care"},
+    {"quote": "history of need for explanation of a transvenous ICD", "problem": "typo (explantation); a text parser may match 'explanation'"}
+  ],
+  "extraction_hazards": [
+    "Pre-criteria Summary and Analysis of Evidence is one huge paragraph with many conditions (HCM, ion channelopathy, cardiac sarcoid) that mirror criteria but include different wording ('who have not responded to optimal medical therapy' for sarcoid appears only there).",
+    "Dangling OR/AND at ends of bullets: items end with 'OR' or 'AND' or ';', and the OR after bullet 5's third sub-bullet sits inside a nested list.",
+    "Code list of 55 rows (31 marked '(Investigational)') including 0915T-0927T with '(Investigational)' markers; code table splits across pages and hangs continuation lines.",
+    "LOINC table has duplicate rows and columns 'LOINC Codes' and 'Time Frame Modifier' flattened.",
+    "Navigation bar text repeated at the top ('Position Statement Billing/Coding...').",
+    "NYHA definitions table in Definitions, class labels in a separate column from descriptions."
+  ],
+  "interesting_structures": [
+    "Primary and secondary prevention both under 'ADULTS', with the secondary prevention item a single bullet.",
+    "Investigational override list for primary prevention comes after the inclusion list and can negate a met criterion.",
+    "Adult/pediatric split by heading with no age definition.",
+    "S-ICD criteria reference the ICD criteria by pointer ('meet the criteria for ICD implantation ...').",
+    "CCM therapy blanket investigational with 31 investigational codes.",
+    "No time/count limit or 'survival with good functional status' condition (which Carelon/BCBSM have).",
+    "Replacement is a one-line note with an open list (including 'change in member's medical condition')."
+  ],
+  "fit_to_tree": {"score": 3, "scale": "1 = clean, 5 = needs new constructs or human judgment", "why": "Pathway structure (any of N) with numeric leaves is easy, but the investigational override list and the prose-embedded OR/AND need a rule for precedence, 'high risk' and 'optimal medical therapy' are judgment leaves, and criteria are split between the inclusion list and the negative list."}
+}

@@ -1,0 +1,104 @@
+{
+  "file": "bcbsfl-02-33000-31-treatments-for-varicose-veins-venous-insufficiency.pdf",
+  "treatment": "varicose-veins",
+  "payer": "bcbsfl",
+  "doc_kind": "medical policy (Medical Coverage Guideline)",
+  "lines_of_business": ["All lines of business unless noted in Program Exceptions", "FEP: follow FEP guidelines", "SAO: follow SAO guidelines", "Medicare Advantage: LCD L38720 and LCA A58250 (First Coast) reviewed"],
+  "effective_or_revised": "Original 02/15/02; Reviewed 07/24/25; Revised 01/01/26",
+  "sections_in_order": ["Description", "Position Statement (Great or Small Saphenous Veins; Accessory Saphenous Veins; Symptomatic Varicose Tributaries; Perforator Veins; Telangiectasia; Other)", "CEAP footnote", "Billing/Coding Information (CPT, HCPCS, ICD-10, LOINC documentation table)", "Reimbursement Information", "Program Exceptions", "Definitions", "Related Guidelines", "Other", "References", "Updates (revision history)"],
+  "criteria_location": "Position Statement only, pp.1-3 of 14. Criteria are split by anatomic target (great/small saphenous, accessory saphenous, tributaries, perforators, telangiectasia, Other). The CEAP key sits in a footnote below the position statement. Related documentation expectations are in the Billing/Coding LOINC paragraph (not in the Position Statement). Pages 5-14 are references and revision history.",
+  "procedures_covered": ["Ligation and stripping, endovenous radiofrequency, laser ablation, microfoam sclerotherapy and cyanoacrylate adhesive of great/small saphenous veins", "Same modalities for accessory saphenous veins", "Stab avulsion, hook phlebectomy, sclerotherapy, transilluminated powered phlebectomy for symptomatic tributaries", "Perforator vein ligation/SEPS/RF/laser ablation (ulcer indication only)", "Telangiectasia treatment (cosmetic)", "Investigational: MOCA, cryoablation, CHIVA, non-microfoam sclerotherapy of truncal veins, ultrasound-guided sclerotherapy of tributaries"],
+  "logic": {
+    "top_level": "pathways (one criteria block per vein type), each block an all-of with a nested any-of of 4 indications",
+    "max_nesting_depth": 4,
+    "k_of_n": [{"k": 1, "n": 4, "quote": "There is documentation of one or more of the following indications: 1. Ulceration ... OR 2. ... OR 3. ... OR 4. ..."}],
+    "exclusions_or_contraindications": "No contraindication list. Exclusions are written as default-to-cosmetic or default-to-investigational sentences after each block ('that do not meet the criteria described above is considered cosmetic'), plus an 'Other' list of investigational techniques, plus one embedded negative in the perforator block: 'The venous insufficiency is not secondary to deep venous thromboembolism.'",
+    "initial_vs_repeat": "No repeat-procedure or retreatment rules. Sequencing rules instead: accessory vein needs 'great or small saphenous veins had been previously eliminated (at least 3 months)' or isolated incompetence; perforator needs superficial veins 'previously eliminated' and not concurrent. Reimbursement section limits 36471, 36476, 36479, 37765/37766 to once per leg (billing, not necessity).",
+    "and_or_ambiguity": [
+      {"quote": "Persistent pain, swelling, itching, burning, or other symptoms are associated with saphenous reflux, AND the symptoms significantly interfere with activities of daily living, AND conservative management including compression therapy for at least 3 months has not improved the symptoms.", "why_ambiguous": "Indication 4 is itself an all-of (symptom AND ADL interference AND failed conservative care), nested inside the any-of of 4 indications; the flat bullet layout hides that. 'pain, swelling, itching, burning, or other symptoms' is an any-of with an open tail."},
+      {"quote": "The varicosities are at least 3 millimeters in size AND There is documentation of one or more of the following", "why_ambiguous": "Fine as a conjunction, but the 3 mm applies to 'varicosities', not clearly to the refluxing saphenous vein itself."},
+      {"quote": "conservative management including compression therapy for at least 3 months", "why_ambiguous": "'including' makes compression one example; is compression required or can other conservative care satisfy 3 months? Defined in the Description as elevation, graded compression, wound care."},
+      {"quote": "Incompetence of the accessory saphenous vein is isolated, or the great or small saphenous veins had been previously eliminated (at least 3 months); AND", "why_ambiguous": "An inline OR inside an AND bullet; 'isolated' is not defined."},
+      {"quote": "Concurrent treatment of the accessory saphenous veins along with the great or small saphenous veins meets the definition of medical necessity when criteria is met for each vein and there is documentation of anatomy showing that the accessory saphenous vein discharged directly into the common femoral vein.", "why_ambiguous": "Restates the accessory criteria for concurrent treatment but the accessory criterion 'GSV previously eliminated' cannot be true when treated concurrently, so the first bullet must be waived; the text does not say so."}
+    ]
+  },
+  "requirement_kinds": [
+    {"kind": "imaging finding", "quote": "There is demonstrated saphenous reflux and CEAP ... class C2* or greater", "where": "Position Statement, Great or Small Saphenous Veins, bullet 1"},
+    {"kind": "measurement threshold", "quote": "The varicosities are at least 3 millimeters in size", "where": "Saphenous, accessory and perforator blocks"},
+    {"kind": "diagnosis", "quote": "Ulceration secondary to venous stasis; OR Recurrent superficial thrombophlebitis; OR Hemorrhage or recurrent bleeding episodes from a ruptured superficial varicosity", "where": "Indications 1-3"},
+    {"kind": "symptom", "quote": "Persistent pain, swelling, itching, burning, or other symptoms are associated with saphenous reflux", "where": "Indication 4"},
+    {"kind": "functional impairment", "quote": "the symptoms significantly interfere with activities of daily living", "where": "Indication 4"},
+    {"kind": "conservative therapy", "quote": "conservative management including compression therapy for at least 3 months has not improved the symptoms", "where": "Indication 4"},
+    {"kind": "prior procedure", "quote": "the great or small saphenous veins had been previously eliminated (at least 3 months)", "where": "Accessory Saphenous Veins bullet 1"},
+    {"kind": "prior procedure", "quote": "The superficial saphenous veins (great, small, or accessory saphenous and symptomatic varicose tributaries) have been previously eliminated", "where": "Perforator Veins"},
+    {"kind": "conservative therapy", "quote": "Ulcers have not resolved following combined superficial vein treatment and compression therapy for at least 3 months", "where": "Perforator Veins"},
+    {"kind": "diagnosis", "quote": "The venous insufficiency is not secondary to deep venous thromboembolism.", "where": "Perforator Veins"},
+    {"kind": "documentation/photos", "quote": "documentation of anatomy showing that the accessory saphenous vein discharged directly into the common femoral vein", "where": "Accessory, concurrent treatment"},
+    {"kind": "documentation/photos", "quote": "Physician history and physical, attending physician treatment plan, progress notes, and treatment notes including documentation of symptoms, failure of at least 3 consecutive months of medical management, and radiology reports (if applicable).", "where": "Billing/Coding, LOINC Codes paragraph"},
+    {"kind": "other", "quote": "Ultrasound guidance for sclerotherapy of the varicose tributaries does not meet the definition of medical necessity.", "where": "Symptomatic Varicose Tributaries"},
+    {"kind": "other", "quote": "Ligation or ablation of incompetent perforator veins performed concurrently with superficial venous surgery does not meet the definition of medical necessity.", "where": "Perforator Veins"}
+  ],
+  "thresholds": [
+    {"quantity": "varicosity size", "value": ">= 3", "unit": "mm", "quote": "The varicosities are at least 3 millimeters in size"},
+    {"quantity": "CEAP class", "value": ">= C2", "unit": "class", "quote": "CEAP (Clinical-Etiology-Anatomy-Pathophysiology) class C2* or greater"},
+    {"quantity": "compression therapy duration", "value": ">= 3", "unit": "months", "quote": "compression therapy for at least 3 months"},
+    {"quantity": "prior saphenous elimination before accessory treatment", "value": ">= 3", "unit": "months", "quote": "previously eliminated (at least 3 months)"},
+    {"quantity": "once per leg billing caps", "value": "1", "unit": "per leg", "quote": "Code 36471 should be reported only once per leg"}
+  ],
+  "time_windows": [
+    {"what": "compression/conservative therapy before saphenous or accessory treatment", "length": "3 months", "quote": "conservative management including compression therapy for at least 3 months"},
+    {"what": "ulcer non-resolution after superficial treatment plus compression before perforator treatment", "length": "3 months", "quote": "Ulcers have not resolved following combined superficial vein treatment and compression therapy for at least 3 months"},
+    {"what": "interval since saphenous elimination before accessory treatment", "length": "3 months", "quote": "(at least 3 months)"},
+    {"what": "documentation recency (LOINC table)", "length": "6 months", "quote": "observations made six months or fewer before starting date of service for the claim"}
+  ],
+  "codes": {
+    "cpt_hcpcs_listed": true,
+    "icd10_listed": true,
+    "codes_tied_to_criteria": "Not tied. CPT list is a flat table with three inline tags (Non-covered on 36468; Investigational on 36473, 36474, 0524T). ICD-10 'support medical necessity' are ranges I83.001-I83.899 and I87.2. 37785 (varicose vein cluster excision) and 36470/36471 appear in the table but no position statement maps to 37785 directly. S2202 echosclerotherapy is listed with no criterion.",
+    "non_covered_code_lists": "36468 (Non-covered, spider veins); 36473, 36474, 0524T (Investigational). Code 37500 deleted 01/01/26 (revision history). Note 'Mechanochemical ablation may be billed with codes 37241 or 37244.'"
+  },
+  "external_dependencies": [
+    {"what": "Medicare Advantage: First Coast LCD L38720 and LCA A58250 'were reviewed' (not incorporated)", "quote": "Medicare Advantage Products: The following were reviewed on the last guideline reviewed date: Local Coverage Determination (LCD) Treatment of Chronic Venous Insufficiency of the Lower Extremities (L38720)"},
+    {"what": "FEP and SAO members follow their own guidelines", "quote": "Federal Employee Program (FEP): Follow FEP guidelines."},
+    {"what": "Florida step-therapy exemption statute applies to the conservative-therapy requirement", "quote": "in compliance with Florida law 627.42393, members or providers may request a step therapy protocol exemption"},
+    {"what": "Cosmetic exclusion rules in another BCBSFL guideline", "quote": "Reconstructive Surgery/Cosmetic Surgery, 02-12000-01"},
+    {"what": "CEAP class definitions cited from Lurie 2020", "quote": "(Lurie, et al. The 2020 update of the CEAP classification system and reporting standards)"}
+  ],
+  "definitions_that_change_meaning": [
+    {"term": "Accessory saphenous vein", "definition_quote": "A vein running in the thigh parallel to the great and small saphenous veins."},
+    {"term": "Telangiectasia", "definition_quote": "a type of varicose veins also known as spider veins; small bluish-purple veins, usually found in clusters on the leg."},
+    {"term": "Conservative medical treatment (Description)", "definition_quote": "Conservative medical treatment consists of elevation of the extremities, graded compression, and wound care when indicated."},
+    {"term": "CEAP C2", "definition_quote": "C2: Varicose veins; C2r: Recurrent varicose veins ... S: Symptomatic A: Asymptomatic"},
+    {"term": "Tributaries", "definition_quote": "Tributaries: veins that empty into larger veins."}
+  ],
+  "vague_terms": [
+    {"quote": "the symptoms significantly interfere with activities of daily living", "problem": "'significantly' undefined; no ADL list, no scale or score."},
+    {"quote": "has not improved the symptoms", "problem": "No threshold for improvement; chart must show failure but nothing defines failure."},
+    {"quote": "Persistent pain, swelling, itching, burning, or other symptoms", "problem": "'Persistent' undefined; open-ended 'other symptoms'."},
+    {"quote": "There is demonstrated saphenous reflux", "problem": "No duplex threshold (reflux seconds, vein segment) stated; evidence type (duplex) is not even named."},
+    {"quote": "The varicosities are at least 3 millimeters in size", "problem": "Which vein is measured, at what site, standing or supine, by which modality is not stated."},
+    {"quote": "Incompetence of the accessory saphenous vein is isolated", "problem": "Undefined; requires anatomic inference from a duplex report."},
+    {"quote": "recurrent bleeding episodes", "problem": "'Recurrent' count not given."},
+    {"quote": "Recurrent superficial thrombophlebitis", "problem": "Number and interval of episodes not given."},
+    {"quote": "symptomatic varicose veins/venous insufficiency", "problem": "Used in the lead-in of each block as a precondition separate from the indication list; unclear whether it is an extra criterion."}
+  ],
+  "extraction_hazards": [
+    "Bullets render as a private-use glyph in pdftotext, so list items lose their AND/OR connectors visually; the AND/OR words sit at line ends.",
+    "A footnote asterisk on 'C2*' carries the CEAP class table, which lies below the Perforator/Other sections, not next to the criterion.",
+    "The bullet 'at least 3 millimeters in size AND' (no punctuation) runs straight into the list of indications; the same bullet is repeated verbatim in three blocks (copy-paste duplication), so a parser must not dedupe the three blocks.",
+    "Concurrent-treatment and cosmetic fall-through sentences are plain paragraphs between blocks and are easy to attach to the wrong block.",
+    "Definitions run together: 'Superficial veins ... two major superficial veins.Telangiectasia: ...' lost a line break.",
+    "Documentation requirements ('failure of at least 3 consecutive months of medical management') live under a LOINC Codes heading in the coding section, not the Position Statement; it says 'consecutive', which the criteria do not.",
+    "Navigation bar and the legal disclaimer repeat at page top; Revision history (Updates) is long and includes superseded positions (e.g. 01/15/20 'investigational position for cyanoacrylate adhesive maintained') that contradict the current text.",
+    "14 pages, of which about 9 are references."
+  ],
+  "interesting_structures": [
+    "Pathways by anatomic target with nearly identical sub-criteria copy-pasted three times (saphenous, accessory, perforator), differing only in one or two bullets.",
+    "Default-deny sentence after each block: anything not meeting criteria is declared cosmetic, which turns a failed criterion into a benefit exclusion rather than a plain denial.",
+    "Sequencing across procedures: accessory needs saphenous eliminated 3 months earlier, perforator needs everything superficial eliminated, tributary treatment is allowed concurrently or after. The chart must show prior procedures and dates.",
+    "Modality list inside a block (surgery, RF, laser, microfoam, cyanoacrylate) is an any-of over procedures, not over patient facts; same criteria apply to each, so the checker must judge the patient against the block once, then check the requested CPT is in the any-of.",
+    "Other section: positive investigational list; MOCA, cryoablation, CHIVA and non-microfoam sclerotherapy never covered regardless of chart.",
+    "CEAP 2020 key includes C2r and C6r, so 'C2 or greater' hides a non-numeric ordering (C4a/b/c, C6r)."
+  ],
+  "fit_to_tree": {"score": 2, "scale": "1 = all/any/not expresses it cleanly ... 5 = needs new constructs or human judgment", "why": "Closest to a clean tree of any in this set: an all-of with a single any-of of four indications, nested all-of inside indication 4. Strain comes from undefined terms (significantly, improved, demonstrated reflux), the prior-procedure sequencing and the procedure-to-block mapping, not from the logic shape."}
+}

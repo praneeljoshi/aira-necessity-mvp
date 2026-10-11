@@ -1,0 +1,1226 @@
+{
+  "id": "florida-blue-02-12000-18",
+  "payer": "Florida Blue",
+  "payer_aliases": [
+    "Florida Blue",
+    "BCBS FL",
+    "BCBSFL",
+    "Blue Cross Blue Shield of Florida",
+    "Blue Cross and Blue Shield of Florida",
+    "BCBS of Florida"
+  ],
+  "title": "Surgical Treatments for Lymphedema and Lipedema",
+  "guideline_number": "02-12000-18",
+  "effective_date": "2026-05-15",
+  "reviewed_date": "2026-04-23",
+  "source_file": "bcbsfl-02-12000-18-surgical-treatments-for-lymphedema-and-lipedema.pdf",
+  "plan_types": [
+    "All lines of business"
+  ],
+  "excluded_plans": [
+    "Federal Employee Program (FEP)",
+    "State Account Organization (SAO)"
+  ],
+  "scope": {
+    "cpt": {
+      "15757": "covered",
+      "15758": "covered",
+      "15832": "covered",
+      "15833": "covered",
+      "15836": "covered",
+      "15839": "covered",
+      "15860": "covered",
+      "15877": "covered",
+      "15878": "covered",
+      "15879": "covered",
+      "35206": "covered",
+      "38308": "covered",
+      "78195": "covered",
+      "93702": "covered",
+      "1019T": "covered",
+      "73218": "covered",
+      "73219": "covered"
+    },
+    "icd10": []
+  },
+  "criteria": [
+    {
+      "id": "benefit_terms",
+      "text": "Coverage for surgical treatments for lymphedema is subject to the member's benefit terms, limitations and maximums",
+      "question": "Do the member's benefit terms, limitations and maximums allow surgical treatment of lymphedema? (contract question; not answerable from a chart)",
+      "answerable": false
+    },
+    {
+      "id": "functional_impairment",
+      "text": "There is significant physical functional impairment (such as: difficulty ambulating or performing activities of daily living)",
+      "question": "Does the chart document significant physical functional impairment from the lymphedema, such as difficulty walking or performing activities of daily living?"
+    },
+    {
+      "id": "skin_condition",
+      "text": "A chronic or recurrent skin condition such as: cellulitis, intertriginous infections or ulcerations",
+      "question": "Does the chart document a chronic or recurrent skin condition of the affected limb, such as cellulitis, intertriginous infections or ulcerations?"
+    },
+    {
+      "id": "pain_weakness",
+      "text": "Significant pain or weakness in the affected extremity",
+      "question": "Does the chart document significant pain or weakness in the affected extremity?"
+    },
+    {
+      "id": "unilateral_disease",
+      "text": "Unilateral disease",
+      "question": "Is the lymphedema unilateral (one extremity affected, with an unaffected contralateral limb to compare)?"
+    },
+    {
+      "id": "bilateral_disease",
+      "text": "Bilateral disease",
+      "question": "Is the lymphedema bilateral (both extremities affected)?"
+    },
+    {
+      "id": "volumetry_differential",
+      "text": "Volumetry differential (circumferential measurements and/or perometry differential) >10% (if affected extremity dominant extremity) or >7% (affected extremity is non-dominant extremity)",
+      "question": "Do circumferential or perometry measurements show a limb volume differential greater than 10% when the affected extremity is the dominant one, or greater than 7% when it is the non-dominant one?",
+      "threshold": {
+        "kind": "number",
+        "op": "gt",
+        "value": 10,
+        "unit": "% volume differential (dominant extremity; >7% if non-dominant)"
+      }
+    },
+    {
+      "id": "ldex_differential",
+      "text": "Bioimpedance (L-Dex) differential of at least 10 units",
+      "question": "Does bioimpedance spectroscopy show an L-Dex differential of at least 10 units?",
+      "threshold": {
+        "kind": "number",
+        "op": "gte",
+        "value": 10,
+        "unit": "L-Dex units"
+      }
+    },
+    {
+      "id": "lymphoscintigraphy_delayed_transit",
+      "text": "Lymphoscintigraphy findings must show a minimum of a one-hour delayed transit time to first-level lymph nodes, axillary lymph nodes (upper extremity lymphedema) or dermal back flow",
+      "question": "Does lymphoscintigraphy show at least a one-hour delayed transit time to the first-level (axillary) lymph nodes, or dermal backflow?",
+      "threshold": {
+        "kind": "number",
+        "op": "gte",
+        "value": 1,
+        "unit": "hour delayed transit"
+      }
+    },
+    {
+      "id": "lymphoscintigraphy_delayed_transit_reductive",
+      "text": "Lymphoscintigraphy findings must show a minimum of a one-hour delayed transit time to first-level lymph nodes, axillary lymph nodes (upper extremity lymphedema) or inguinal lymph nodes (lower extremity lymphedema) or dermal back flow",
+      "question": "Does lymphoscintigraphy show at least a one-hour delayed transit time to the first-level lymph nodes (axillary for the upper extremity, inguinal for the lower extremity), or dermal backflow?",
+      "threshold": {
+        "kind": "number",
+        "op": "gte",
+        "value": 1,
+        "unit": "hour delayed transit"
+      }
+    },
+    {
+      "id": "bmi_le_35",
+      "text": "Member has BMI ≤ 35kg/m2",
+      "question": "Is the member's BMI 35 kg/m2 or less?",
+      "threshold": {
+        "kind": "number",
+        "op": "lte",
+        "value": 35,
+        "unit": "kg/m2"
+      }
+    },
+    {
+      "id": "conservative_6_months",
+      "text": "Member has completed a course of conservative treatment defined as lymphedema therapy for a minimum of 20 hours/week for 6 months",
+      "question": "Has the member completed a course of lymphedema therapy lasting 6 months, shown by dated notes?",
+      "threshold": {
+        "kind": "duration_months",
+        "op": "gte",
+        "value": 6,
+        "unit": "months"
+      }
+    },
+    {
+      "id": "conservative_20_hours_week",
+      "text": "lymphedema therapy for a minimum of 20 hours/week",
+      "question": "Was the lymphedema therapy performed for at least 20 hours per week?",
+      "threshold": {
+        "kind": "number",
+        "op": "gte",
+        "value": 20,
+        "unit": "hours/week"
+      }
+    },
+    {
+      "id": "compression_therapy",
+      "text": "compression therapy (bandaging/garment/gauntlet)",
+      "question": "Did the lymphedema therapy include compression therapy (bandaging, garment or gauntlet)?"
+    },
+    {
+      "id": "manual_lymphatic_drainage",
+      "text": "manual lymphatic drainage",
+      "question": "Did the lymphedema therapy include manual lymphatic drainage?"
+    },
+    {
+      "id": "complete_decongestive_therapy",
+      "text": "complete decongestive therapy",
+      "question": "Did the lymphedema therapy include complete decongestive therapy?"
+    },
+    {
+      "id": "pneumatic_compression_pump",
+      "text": "use of pneumatic compression pump",
+      "question": "Did the lymphedema therapy include use of a pneumatic compression pump?"
+    },
+    {
+      "id": "targeted_exercises",
+      "text": "targeted exercises for lymphedema treatment",
+      "question": "Did the lymphedema therapy include targeted exercises for lymphedema?"
+    },
+    {
+      "id": "tolerate_postsurgical_therapy",
+      "text": "Member demonstrates the ability to tolerate post-surgical compression therapy and physical therapy sessions per treating lymphedema provider",
+      "question": "Has the treating lymphedema provider documented that the member can tolerate post-surgical compression therapy and physical therapy sessions?"
+    },
+    {
+      "id": "icg_lymphatic_channels",
+      "text": "ICG lymphangiography findings demonstrate the presence of lymphatic channels",
+      "question": "Does indocyanine green (ICG) lymphangiography demonstrate the presence of lymphatic channels?"
+    },
+    {
+      "id": "mri_fat_hypertrophy",
+      "text": "Member has MRI imaging findings consistent with moderate to severe fat hypertrophy",
+      "question": "Does MRI of the limb show findings consistent with moderate to severe fat hypertrophy?"
+    },
+    {
+      "id": "upper_extremity",
+      "text": "For upper extremity",
+      "question": "Is the requested reductive surgery on an upper extremity (arm)?"
+    },
+    {
+      "id": "not_candidate_for_physiologic_surgery",
+      "text": "member has been evaluated by a surgeon who performs lymphatic surgery who determined they are a not a candidate for VLNT or lymphovenous bypass before this reductive surgery",
+      "question": "Has a surgeon who performs lymphatic surgery evaluated the member and determined they are not a candidate for vascularized lymph node transfer or lymphovenous bypass?"
+    },
+    {
+      "id": "transient_lymphedema",
+      "text": "Transient lymphedema: any swelling that may meet the threshold for lymphedema criteria but is not persistent for at least six months post last oncologic treatment",
+      "question": "Is the swelling transient, i.e. not persistent for at least six months after the last oncologic treatment?",
+      "threshold": {
+        "kind": "duration_months",
+        "op": "lt",
+        "value": 6,
+        "unit": "months"
+      }
+    },
+    {
+      "id": "lipedema_without_lymphatic_dysfunction",
+      "text": "Lipidema without lymphatic dysfunction",
+      "question": "Is the swelling lipedema without lymphatic dysfunction?"
+    },
+    {
+      "id": "venous_disease",
+      "text": "Venous disease (deep vein thrombosis (DVT), superior vena cava syndrome)",
+      "question": "Does the member have uncontrolled venous disease (deep vein thrombosis, superior vena cava syndrome)?"
+    },
+    {
+      "id": "congestive_heart_failure",
+      "text": "Congestive heart failure (CHF)",
+      "question": "Does the member have uncontrolled congestive heart failure?"
+    },
+    {
+      "id": "medication_induced_swelling",
+      "text": "Medication-induced swelling",
+      "question": "Is the swelling medication-induced?"
+    },
+    {
+      "id": "liver_disease",
+      "text": "Liver disease, including but not limited to cirrhosis, hypoproteinemia",
+      "question": "Does the member have uncontrolled liver disease (for example cirrhosis or hypoproteinemia)?"
+    },
+    {
+      "id": "nephropathy",
+      "text": "Nephropathy including end-stage renal disease",
+      "question": "Does the member have uncontrolled nephropathy, including end-stage renal disease?"
+    },
+    {
+      "id": "peripheral_arterial_disease",
+      "text": "Peripheral arterial disease - clinically significant such as rest pain, claudication or ischemic ulcers",
+      "question": "Does the member have clinically significant peripheral arterial disease (rest pain, claudication or ischemic ulcers)?"
+    },
+    {
+      "id": "pregnancy",
+      "text": "Pregnancy",
+      "question": "Is the member pregnant?"
+    },
+    {
+      "id": "dye_anaphylaxis",
+      "text": "Dye anaphylaxis",
+      "question": "Does the member have a history of anaphylaxis to dye?"
+    },
+    {
+      "id": "active_infection",
+      "text": "Active infection of the affected extremity (cellulitis/erysipelas)",
+      "question": "Is there an active infection (cellulitis or erysipelas) of the affected extremity?"
+    },
+    {
+      "id": "lower_extremity_inguinal",
+      "text": "inguinal lymph nodes (lower extremity lymphedema)",
+      "question": "Is the lymphedema in a lower extremity (transfer to or bypass at the inguinal lymph nodes)?"
+    },
+    {
+      "id": "lip_functional_impairment",
+      "text": "There is significant physical functional impairment (difficulty ambulating or performing activities of daily living)",
+      "question": "Does the chart document significant physical functional impairment from the lipedema (difficulty walking or performing activities of daily living)?"
+    },
+    {
+      "id": "lip_recurrent_infections",
+      "text": "Recurrent cellulitis, intertriginous infections or ulcerations",
+      "question": "Does the chart document recurrent cellulitis, intertriginous infections or ulcerations of the affected areas?"
+    },
+    {
+      "id": "lip_pain_tenderness",
+      "text": "Pain and significant tenderness or hypersensitivity of affected areas",
+      "question": "Does the chart document pain with significant tenderness or hypersensitivity of the affected areas?"
+    },
+    {
+      "id": "lip_easy_bruising",
+      "text": "History of easy bruising or bruising without apparent cause in lipedema-affected area",
+      "question": "Does the chart document easy bruising, or bruising without apparent cause, in the lipedema-affected area?"
+    },
+    {
+      "id": "lip_photographs",
+      "text": "Photographs are submitted documenting the affected extremities requested for treatment",
+      "question": "Are photographs of the affected extremities requested for treatment included or documented as obtained?"
+    },
+    {
+      "id": "lip_thickened_fat_symmetric",
+      "text": "Thickened subcutaneous fat in the affected extremities bilaterally and symmetrically (legs, thighs, hips or buttocks, or occasionally arms are affected)",
+      "question": "Does the exam document thickened subcutaneous fat affecting the extremities bilaterally and symmetrically (legs, thighs, hips, buttocks, or occasionally arms)?"
+    },
+    {
+      "id": "lip_cuffing",
+      "text": "\"Cuffing\" (tissue enlargement ends abruptly at ankles or wrists, with sparing of hands and feet) (also called \"braceleting\" or \"inverse shouldering\")",
+      "question": "Does the exam document cuffing (tissue enlargement ending abruptly at the ankles or wrists with sparing of the hands and feet; also called braceleting or inverse shouldering)?"
+    },
+    {
+      "id": "lip_early_or_late_stage",
+      "text": "This may be absent in early or late stages",
+      "question": "Is the lipedema documented as early-stage or late-stage disease (when cuffing may be absent)?"
+    },
+    {
+      "id": "lip_absence_pitting_edema",
+      "text": "Absence of pitting edema",
+      "question": "Does the exam document absence of pitting edema?"
+    },
+    {
+      "id": "lip_comorbid_lymphedema",
+      "text": "the member has co-morbid lymphedema",
+      "question": "Does the member have co-morbid lymphedema (which would explain pitting edema)?"
+    },
+    {
+      "id": "lip_soft_to_palpation",
+      "text": "Overlying skin/tissue in affected areas is soft to palpation",
+      "question": "Does the exam document that the overlying skin and tissue of the affected areas is soft to palpation?"
+    },
+    {
+      "id": "lip_late_stage_or_associated_lymphedema",
+      "text": "may be absent in late-stage disease or with associated lymphedema",
+      "question": "Is the lipedema late-stage, or is there associated lymphedema (when soft tissue may be absent)?"
+    },
+    {
+      "id": "lip_conservative_3_months",
+      "text": "Minimally responsive to at least 3 consecutive months of optimal medical management (a comprehensive decongestive therapy regimen- education, manual lymph drainage, introduction of compression garments and, if indicated, physical mobilization)",
+      "question": "Has the member been minimally responsive to at least 3 consecutive months of optimal medical management (a comprehensive decongestive therapy regimen of education, manual lymph drainage, compression garments and, if indicated, physical mobilization), shown by dated notes?",
+      "threshold": {
+        "kind": "duration_months",
+        "op": "gte",
+        "value": 3,
+        "unit": "months"
+      }
+    },
+    {
+      "id": "lip_morbidly_obese",
+      "text": "Morbidly obese",
+      "question": "Is the member morbidly obese?"
+    },
+    {
+      "id": "lip_weight_loss_program",
+      "text": "must first complete a formal weight loss program",
+      "question": "Has the member completed a formal weight loss program?"
+    },
+    {
+      "id": "extremity_surgery",
+      "text": "For extremity surgery",
+      "question": "Is the requested lipedema surgery on an extremity (arm or leg) rather than the trunk?"
+    },
+    {
+      "id": "lip_plan_of_care_ongoing_therapy",
+      "text": "Submission of a plan of care agreement signed by the member which states the member understands the requirement for ongoing conservative therapy postoperatively (the wearing of compression garments and possibly decongestive therapy in order to maintain the benefits of the surgery)",
+      "question": "Has the member signed a plan of care agreement stating they understand the requirement for ongoing postoperative conservative therapy (compression garments and possibly decongestive therapy)?"
+    },
+    {
+      "id": "lip_plan_of_care_multiple_procedures",
+      "text": "they understand there is a strong likelihood that 2 or 3 procedures might be required to achieve meaningful goals of surgical intervention",
+      "question": "Does the signed plan of care agreement state the member understands that 2 or 3 procedures will likely be required to achieve meaningful goals?"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "lymph_node_transplant",
+      "name": "Lymph node transplant (LNT) (lymph node transfer, vascularized lymph node transfer) for lymphedema",
+      "applies_to_cpt": [
+        "15757",
+        "15758",
+        "35206",
+        "15860"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "Criteria (I-III) are met",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "benefit_terms"
+          },
+          {
+            "type": "all",
+            "label": "I. Diagnostic criteria - must satisfy A and B",
+            "children": [
+              {
+                "type": "any",
+                "label": "A. Signs and symptoms - must satisfy at least one",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "functional_impairment"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "skin_condition"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "pain_weakness"
+                  }
+                ]
+              },
+              {
+                "type": "any",
+                "label": "B. Quantitative measurements",
+                "children": [
+                  {
+                    "type": "all",
+                    "label": "1. Unilateral disease - must satisfy at least one",
+                    "children": [
+                      {
+                        "type": "leaf",
+                        "criterion": "unilateral_disease"
+                      },
+                      {
+                        "type": "any",
+                        "label": "at least one",
+                        "children": [
+                          {
+                            "type": "leaf",
+                            "criterion": "volumetry_differential"
+                          },
+                          {
+                            "type": "leaf",
+                            "criterion": "ldex_differential"
+                          },
+                          {
+                            "type": "leaf",
+                            "criterion": "lymphoscintigraphy_delayed_transit"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "all",
+                    "label": "2. Bilateral disease - must satisfy a",
+                    "children": [
+                      {
+                        "type": "leaf",
+                        "criterion": "bilateral_disease"
+                      },
+                      {
+                        "type": "leaf",
+                        "criterion": "lymphoscintigraphy_delayed_transit"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "all",
+            "label": "II. General lymph node transplant eligibility criteria - must satisfy A, B, and C",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "bmi_le_35"
+              },
+              {
+                "type": "all",
+                "label": "B. Completed a course of conservative treatment",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "conservative_6_months"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "conservative_20_hours_week"
+                  },
+                  {
+                    "type": "all",
+                    "label": "Lymphedema therapy includes compression therapy AND any of the following treatment modalities",
+                    "children": [
+                      {
+                        "type": "leaf",
+                        "criterion": "compression_therapy"
+                      },
+                      {
+                        "type": "any",
+                        "label": "any of the following treatment modalities",
+                        "children": [
+                          {
+                            "type": "leaf",
+                            "criterion": "manual_lymphatic_drainage"
+                          },
+                          {
+                            "type": "leaf",
+                            "criterion": "complete_decongestive_therapy"
+                          },
+                          {
+                            "type": "leaf",
+                            "criterion": "pneumatic_compression_pump"
+                          },
+                          {
+                            "type": "leaf",
+                            "criterion": "targeted_exercises"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "leaf",
+                "criterion": "tolerate_postsurgical_therapy"
+              }
+            ]
+          },
+          {
+            "type": "not",
+            "label": "III. NONE of the following contraindications exist",
+            "child": {
+              "type": "any",
+              "label": "contraindications",
+              "children": [
+                {
+                  "type": "leaf",
+                  "criterion": "transient_lymphedema"
+                },
+                {
+                  "type": "leaf",
+                  "criterion": "lipedema_without_lymphatic_dysfunction"
+                },
+                {
+                  "type": "any",
+                  "label": "Any of the following uncontrolled comorbidities",
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "criterion": "venous_disease"
+                    },
+                    {
+                      "type": "leaf",
+                      "criterion": "congestive_heart_failure"
+                    },
+                    {
+                      "type": "leaf",
+                      "criterion": "medication_induced_swelling"
+                    },
+                    {
+                      "type": "leaf",
+                      "criterion": "liver_disease"
+                    },
+                    {
+                      "type": "leaf",
+                      "criterion": "nephropathy"
+                    },
+                    {
+                      "type": "leaf",
+                      "criterion": "peripheral_arterial_disease"
+                    },
+                    {
+                      "type": "leaf",
+                      "criterion": "pregnancy"
+                    },
+                    {
+                      "type": "leaf",
+                      "criterion": "dye_anaphylaxis"
+                    },
+                    {
+                      "type": "leaf",
+                      "criterion": "active_infection"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "type": "not",
+            "label": "Not an investigational location (inguinal lymph nodes / lower extremity lymphedema)",
+            "child": {
+              "type": "leaf",
+              "criterion": "lower_extremity_inguinal"
+            }
+          }
+        ]
+      },
+      "notes": [
+        "LNT is experimental or investigational for all other indications and locations, including inguinal lymph nodes (lower extremity lymphedema) and prophylactic LNT at the time of axillary lymph node dissection (ILR / LYMPHA)."
+      ]
+    },
+    {
+      "id": "lymphovenous_bypass",
+      "name": "Lymphovenous bypass (microsurgical anastomoses between lymphatic vessels and veins) for lymphedema",
+      "applies_to_cpt": [
+        "38308",
+        "1019T",
+        "35206",
+        "15860"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "Criteria (I-III) are met",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "benefit_terms"
+          },
+          {
+            "type": "all",
+            "label": "I. Diagnostic criteria - must satisfy A and B",
+            "children": [
+              {
+                "type": "any",
+                "label": "A. Signs and symptoms - must satisfy at least one",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "functional_impairment"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "skin_condition"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "pain_weakness"
+                  }
+                ]
+              },
+              {
+                "type": "any",
+                "label": "B. Quantitative measurements",
+                "children": [
+                  {
+                    "type": "all",
+                    "label": "1. Unilateral disease - must satisfy at least one",
+                    "children": [
+                      {
+                        "type": "leaf",
+                        "criterion": "unilateral_disease"
+                      },
+                      {
+                        "type": "any",
+                        "label": "at least one",
+                        "children": [
+                          {
+                            "type": "leaf",
+                            "criterion": "volumetry_differential"
+                          },
+                          {
+                            "type": "leaf",
+                            "criterion": "ldex_differential"
+                          },
+                          {
+                            "type": "leaf",
+                            "criterion": "lymphoscintigraphy_delayed_transit"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "all",
+                    "label": "2. Bilateral disease - must satisfy a",
+                    "children": [
+                      {
+                        "type": "leaf",
+                        "criterion": "bilateral_disease"
+                      },
+                      {
+                        "type": "leaf",
+                        "criterion": "lymphoscintigraphy_delayed_transit"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "all",
+            "label": "II. General lymphovenous bypass eligibility criteria - must satisfy A, B, and C",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "bmi_le_35"
+              },
+              {
+                "type": "leaf",
+                "criterion": "icg_lymphatic_channels"
+              },
+              {
+                "type": "all",
+                "label": "C. Member has completed a course of conservative treatment",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "conservative_6_months"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "conservative_20_hours_week"
+                  },
+                  {
+                    "type": "all",
+                    "label": "Lymphedema therapy includes compression therapy AND any of the following treatment modalities",
+                    "children": [
+                      {
+                        "type": "leaf",
+                        "criterion": "compression_therapy"
+                      },
+                      {
+                        "type": "any",
+                        "label": "any of the following treatment modalities",
+                        "children": [
+                          {
+                            "type": "leaf",
+                            "criterion": "manual_lymphatic_drainage"
+                          },
+                          {
+                            "type": "leaf",
+                            "criterion": "complete_decongestive_therapy"
+                          },
+                          {
+                            "type": "leaf",
+                            "criterion": "pneumatic_compression_pump"
+                          },
+                          {
+                            "type": "leaf",
+                            "criterion": "targeted_exercises"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "leaf",
+                "criterion": "tolerate_postsurgical_therapy"
+              }
+            ]
+          },
+          {
+            "type": "not",
+            "label": "III. NONE of the following contraindications exist",
+            "child": {
+              "type": "any",
+              "label": "contraindications",
+              "children": [
+                {
+                  "type": "leaf",
+                  "criterion": "transient_lymphedema"
+                },
+                {
+                  "type": "leaf",
+                  "criterion": "lipedema_without_lymphatic_dysfunction"
+                },
+                {
+                  "type": "any",
+                  "label": "Any of the following uncontrolled comorbidities",
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "criterion": "venous_disease"
+                    },
+                    {
+                      "type": "leaf",
+                      "criterion": "congestive_heart_failure"
+                    },
+                    {
+                      "type": "leaf",
+                      "criterion": "medication_induced_swelling"
+                    },
+                    {
+                      "type": "leaf",
+                      "criterion": "liver_disease"
+                    },
+                    {
+                      "type": "leaf",
+                      "criterion": "nephropathy"
+                    },
+                    {
+                      "type": "leaf",
+                      "criterion": "peripheral_arterial_disease"
+                    },
+                    {
+                      "type": "leaf",
+                      "criterion": "pregnancy"
+                    },
+                    {
+                      "type": "leaf",
+                      "criterion": "dye_anaphylaxis"
+                    },
+                    {
+                      "type": "leaf",
+                      "criterion": "active_infection"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "type": "not",
+            "label": "Not an investigational location (inguinal lymph nodes / lower extremity lymphedema)",
+            "child": {
+              "type": "leaf",
+              "criterion": "lower_extremity_inguinal"
+            }
+          }
+        ]
+      },
+      "notes": [
+        "Lymphovenous bypass is experimental or investigational for all other indications, including inguinal lymph nodes (lower extremity lymphedema) and prophylactic bypass at the time of axillary lymph node surgery (ILR / LYMPHA)."
+      ]
+    },
+    {
+      "id": "reductive_procedures",
+      "name": "Reductive procedures: excision/debulking and/or suction-assisted liposuction of the limb for lymphedema",
+      "applies_to_cpt": [
+        "15832",
+        "15833",
+        "15836",
+        "15839",
+        "15878",
+        "15879"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "Criteria (I-III) are met",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "benefit_terms"
+          },
+          {
+            "type": "all",
+            "label": "I. Diagnostic criteria - must satisfy A and B",
+            "children": [
+              {
+                "type": "any",
+                "label": "A. Signs and symptoms - must satisfy one",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "functional_impairment"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "skin_condition"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "pain_weakness"
+                  }
+                ]
+              },
+              {
+                "type": "any",
+                "label": "B. Quantitative measurements",
+                "children": [
+                  {
+                    "type": "all",
+                    "label": "1. For unilateral disease - must satisfy one",
+                    "children": [
+                      {
+                        "type": "leaf",
+                        "criterion": "unilateral_disease"
+                      },
+                      {
+                        "type": "any",
+                        "label": "one of",
+                        "children": [
+                          {
+                            "type": "leaf",
+                            "criterion": "volumetry_differential"
+                          },
+                          {
+                            "type": "leaf",
+                            "criterion": "ldex_differential"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "all",
+                    "label": "2. For bilateral disease - must satisfy a",
+                    "children": [
+                      {
+                        "type": "leaf",
+                        "criterion": "bilateral_disease"
+                      },
+                      {
+                        "type": "leaf",
+                        "criterion": "lymphoscintigraphy_delayed_transit_reductive"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "all",
+            "label": "II. General eligibility criteria - must satisfy all",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "bmi_le_35"
+              },
+              {
+                "type": "leaf",
+                "criterion": "mri_fat_hypertrophy"
+              },
+              {
+                "type": "any",
+                "label": "C. For upper extremity: evaluated by a lymphatic surgeon and found not a candidate for VLNT or lymphovenous bypass",
+                "children": [
+                  {
+                    "type": "not",
+                    "label": "not an upper extremity",
+                    "child": {
+                      "type": "leaf",
+                      "criterion": "upper_extremity"
+                    }
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "not_candidate_for_physiologic_surgery"
+                  }
+                ]
+              },
+              {
+                "type": "leaf",
+                "criterion": "conservative_6_months"
+              },
+              {
+                "type": "leaf",
+                "criterion": "conservative_20_hours_week"
+              },
+              {
+                "type": "all",
+                "label": "E. Lymphedema therapy includes compression therapy AND any of the following treatment modalities",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "compression_therapy"
+                  },
+                  {
+                    "type": "any",
+                    "label": "any of the following treatment modalities",
+                    "children": [
+                      {
+                        "type": "leaf",
+                        "criterion": "manual_lymphatic_drainage"
+                      },
+                      {
+                        "type": "leaf",
+                        "criterion": "complete_decongestive_therapy"
+                      },
+                      {
+                        "type": "leaf",
+                        "criterion": "pneumatic_compression_pump"
+                      },
+                      {
+                        "type": "leaf",
+                        "criterion": "targeted_exercises"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "leaf",
+                "criterion": "tolerate_postsurgical_therapy"
+              }
+            ]
+          },
+          {
+            "type": "not",
+            "label": "III. NONE of the following contraindications exist",
+            "child": {
+              "type": "any",
+              "label": "contraindications",
+              "children": [
+                {
+                  "type": "leaf",
+                  "criterion": "transient_lymphedema"
+                },
+                {
+                  "type": "any",
+                  "label": "B. Any of the following uncontrolled comorbidities",
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "criterion": "venous_disease"
+                    },
+                    {
+                      "type": "leaf",
+                      "criterion": "congestive_heart_failure"
+                    },
+                    {
+                      "type": "leaf",
+                      "criterion": "medication_induced_swelling"
+                    },
+                    {
+                      "type": "leaf",
+                      "criterion": "liver_disease"
+                    },
+                    {
+                      "type": "leaf",
+                      "criterion": "nephropathy"
+                    },
+                    {
+                      "type": "leaf",
+                      "criterion": "pregnancy"
+                    },
+                    {
+                      "type": "leaf",
+                      "criterion": "active_infection"
+                    },
+                    {
+                      "type": "leaf",
+                      "criterion": "peripheral_arterial_disease"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "lipedema_liposuction_lipectomy",
+      "name": "Lipedema: liposuction (tumescent or water-assisted) and/or lipectomy with or without skin excision",
+      "applies_to_cpt": [
+        "15832",
+        "15833",
+        "15836",
+        "15839",
+        "15877",
+        "15878",
+        "15879"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "The following criteria are met",
+        "children": [
+          {
+            "type": "any",
+            "label": "I. Signs and symptoms - must satisfy at least one",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "lip_functional_impairment"
+              },
+              {
+                "type": "leaf",
+                "criterion": "lip_recurrent_infections"
+              },
+              {
+                "type": "leaf",
+                "criterion": "lip_pain_tenderness"
+              },
+              {
+                "type": "leaf",
+                "criterion": "lip_easy_bruising"
+              }
+            ]
+          },
+          {
+            "type": "leaf",
+            "criterion": "lip_photographs"
+          },
+          {
+            "type": "leaf",
+            "criterion": "lip_thickened_fat_symmetric"
+          },
+          {
+            "type": "any",
+            "label": "IV. Cuffing (may be absent in early or late stages)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "lip_cuffing"
+              },
+              {
+                "type": "leaf",
+                "criterion": "lip_early_or_late_stage"
+              }
+            ]
+          },
+          {
+            "type": "any",
+            "label": "V. Absence of pitting edema (unless the member has co-morbid lymphedema)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "lip_absence_pitting_edema"
+              },
+              {
+                "type": "leaf",
+                "criterion": "lip_comorbid_lymphedema"
+              }
+            ]
+          },
+          {
+            "type": "any",
+            "label": "VI. Soft to palpation (may be absent in late-stage disease or with associated lymphedema)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "lip_soft_to_palpation"
+              },
+              {
+                "type": "leaf",
+                "criterion": "lip_late_stage_or_associated_lymphedema"
+              }
+            ]
+          },
+          {
+            "type": "leaf",
+            "criterion": "lip_conservative_3_months"
+          },
+          {
+            "type": "any",
+            "label": "VIII. Morbidly obese members must first complete a formal weight loss program",
+            "children": [
+              {
+                "type": "not",
+                "label": "not morbidly obese",
+                "child": {
+                  "type": "leaf",
+                  "criterion": "lip_morbidly_obese"
+                }
+              },
+              {
+                "type": "leaf",
+                "criterion": "lip_weight_loss_program"
+              }
+            ]
+          },
+          {
+            "type": "any",
+            "label": "IX. For extremity surgery: absence of peripheral arterial disease",
+            "children": [
+              {
+                "type": "not",
+                "label": "not extremity surgery (trunk)",
+                "child": {
+                  "type": "leaf",
+                  "criterion": "extremity_surgery"
+                }
+              },
+              {
+                "type": "not",
+                "label": "Absence of peripheral arterial disease",
+                "child": {
+                  "type": "leaf",
+                  "criterion": "peripheral_arterial_disease"
+                }
+              }
+            ]
+          },
+          {
+            "type": "leaf",
+            "criterion": "lip_plan_of_care_ongoing_therapy"
+          },
+          {
+            "type": "leaf",
+            "criterion": "lip_plan_of_care_multiple_procedures"
+          }
+        ]
+      }
+    }
+  ],
+  "exclusions": [
+    {
+      "text": "Lymph node transplant (LNT) is considered experimental or investigational for all other indications and locations, including, but not limited to inguinal lymph nodes (lower extremity lymphedema) AND prophylactic LNT at time of axillary lymph node dissection, including immediate lymphatic reconstruction (ILR) (also known as Lymphatic Microsurgical Preventing Healing Approach (LYMPHA))",
+      "cpt": []
+    },
+    {
+      "text": "Lymphovenous bypass is considered experimental or investigational for all other indications, including, but not limited to inguinal lymph nodes (lower extremity lymphedema), prophylactic bypass at the time of axillary lymph node surgery, including immediate lymphatic reconstruction (ILR) (also known as Lymphatic Microsurgical Preventing Healing Approach (LYMPHA))",
+      "cpt": []
+    },
+    {
+      "text": "Axillary reverse mapping/reverse lymphatic mapping performed during",
+      "cpt": []
+    },
+    {
+      "text": "Axillary reverse mapping/reverse lymphatic mapping performed during axillary lymph node dissection to prevent lymphedema in members who are being treated for breast cancer is considered experimental or investigational",
+      "cpt": []
+    }
+  ],
+  "notes": [
+    "Dates: 'Original Effective Date: 01/01/22', 'Reviewed: 04/23/26', 'Revised: 05/15/26'. Following the hand-built example, effective_date carries the Revised date and reviewed_date the Reviewed date.",
+    "Codes to pathways: the coding section says the codes 'may be use[d] for diagnostic imaging, physiologic interventions (LVB, VLNT) and reductive interventions (suction-assisted lipectomy)' without assigning any code to a procedure. Assignment here is by code description: free flaps with microvascular anastomosis (15757, 15758) to LNT; lymphangiotomy (38308) and 1019T (lymphovenous bypass by name) to LVB; 35206 (direct repair of blood vessel, upper extremity) and 15860 (injection of agent to test flow in a flap/graft, also used for ICG lymphangiography) to both microsurgical pathways; excision with lipectomy (15832, 15833, 15836, 15839) and suction-assisted lipectomy (15878 upper, 15879 lower) to the reductive-procedure and lipedema pathways; 15877 (trunk) to lipedema only, because the reductive lymphedema pathway is 'of the limb' while lipedema involves 'Upper and Lower Extremities and Trunk'. Diagnostic codes 78195 (lymphoscintigraphy), 93702 (bioimpedance) and the MRI codes 73218/73219 are governed by no pathway. A reviewer could instead leave applies_to_cpt empty for every pathway (the document assigns nothing).",
+    "73218 and 73219 are named in the coding section's MRI heading and are included as covered; the MRI paragraph says MRI 'may be helpful' and sets no criteria for it, so it is tagged covered on the heading alone.",
+    "All codes are tagged covered: the document attaches no non-covered or investigational statement to any code. The investigational statements (LNT/LVB for other indications and locations, prophylactic ILR/LYMPHA, axillary reverse mapping) name no code, so every exclusion's cpt list is empty.",
+    "The POSITION STATEMENT NOTE 'Coverage for surgical treatments for lymphedema is subject to the member's benefit terms, limitations and maximums' is a contract term: an answerable:false leaf in each of the three lymphedema pathways, not in the lipedema pathway (the NOTE says lymphedema).",
+    "Shared criteria: LNT, LVB and reductive procedures list the same signs and symptoms, measurements, BMI, conservative-treatment and tolerance requirements with small wording differences ('Has a significant ...' vs 'There is significant ...'; LNT's lymphoscintigraphy 'a dermal back flow pattern'; LNT II.B 'Completed a course ...' vs LVB II.C 'Member has completed ...'; reductive I.A.1 omits 'difficulty ambulating'). One criterion per requirement is used, with the LVB wording as its text, since a chart documents the same fact for all three. The lipedema pathway has its own signs and symptoms (different disease, different list).",
+    "Laterality: each lymphedema pathway's quantitative block is 'Unilateral disease - must satisfy at least one' versus 'Bilateral disease - must satisfy a'. Modelled as any[ all[Unilateral disease, any[...]], all[Bilateral disease, lymphoscintigraphy] ] with 'Unilateral disease' and 'Bilateral disease' as leaves, because a bilateral patient cannot qualify by a volume or L-Dex differential (no unaffected limb to compare).",
+    "The reductive pathway's unilateral list has only volumetry and L-Dex (no lymphoscintigraphy option), and its bilateral lymphoscintigraphy sentence adds 'or inguinal lymph nodes (lower extremity lymphedema)', so that sentence is a separate criterion from the LNT/LVB one.",
+    "Volumetry threshold: >10% when the affected extremity is dominant, >7% when non-dominant. One criterion; the threshold records the 10% figure with the 7% alternative in the unit and question.",
+    "'a course of conservative treatment defined as lymphedema therapy for a minimum of 20 hours/week for 6 months' holds a duration (6 months) and an intensity (20 hours/week): two criteria. 'Lymphedema therapy includes compression therapy (bandaging/garment/gauntlet) AND any of the following treatment modalities' is nested as all[compression, any[manual lymphatic drainage, complete decongestive therapy, pneumatic compression pump, targeted exercises]]. The reductive pathway prints the same requirement as items D and E; same leaves.",
+    "LNT II says 'must satisfy A, B, and C' and lists A-C; LVB II says 'must satisfy A, B, and C' but lists A-D (ICG lymphangiography is B). All four LVB items are required; the 'A, B, and C' is read as a drafting slip.",
+    "LVB III prints 'C. Any of the following uncontrolled comorbidities:' followed by D-L as separate letters; they are nested under C as in the LNT and reductive lists, which the heading plainly intends.",
+    "'uncontrolled' qualifies every comorbidity in the contraindication lists; it is carried in the any label and each question rather than in the verbatim text.",
+    "Contraindication 'Transient lymphedema ... not persistent for at least six months post last oncologic treatment' carries a duration_months lt 6 threshold: the leaf is MET (contraindication present) when the swelling has persisted for less than six months since the last oncologic treatment.",
+    "LNT and LVB are 'experimental or investigational for all other indications and locations, including ... inguinal lymph nodes (lower extremity lymphedema)'. Read with the criteria (which name only axillary nodes) and the reductive pathway (which requires an upper-extremity patient to be ruled out for VLNT/LVB first), this makes LNT and LVB covered for upper-extremity lymphedema only, so each pathway carries a not-leaf on 'inguinal lymph nodes (lower extremity lymphedema)'. A reviewer could treat this as an exclusion only. Prophylactic LNT/bypass (ILR, LYMPHA) is recorded as an exclusion only: a prophylactic procedure cannot meet the diagnostic measurement criteria anyway.",
+    "Reductive II.C 'For upper extremity: member has been evaluated by a surgeon ... not a candidate for VLNT or lymphovenous bypass' is conditional on the site: any[not(For upper extremity), evaluated and not a candidate]. The same pattern is used for lipedema VIII ('Morbidly obese members must first complete a formal weight loss program' = any[not(morbidly obese), program completed]) and lipedema IX ('For extremity surgery: Absence of peripheral arterial disease' = any[not(extremity surgery), not(peripheral arterial disease)]). Lipedema IX reuses the lymphedema peripheral-arterial-disease criterion (same clinical fact, identical parenthetical) under a not.",
+    "Lipedema IV, V and VI each carry a waiver ('This may be absent in early or late stages'; 'unless the member has co-morbid lymphedema'; 'may be absent in late-stage disease or with associated lymphedema'). Per the brief each is an any at that requirement with the waiver as a leaf.",
+    "Lipedema X 'plan of care agreement ... states the member understands the requirement for ongoing conservative therapy postoperatively ... AND that they understand there is a strong likelihood that 2 or 3 procedures might be required' holds two statements the agreement must contain: two leaves under all.",
+    "Lipedema II 'Photographs are submitted' is kept as an answerable leaf (a chart can carry photographs or record that they were obtained) although the coding section's NOTE says 'Photos are not required with the initial review ... Florida Blue may request photos'; the conflict is the document's.",
+    "Lipedema VII 'at least 3 consecutive months' is duration_months gte 3 ('consecutive' is the app's convention to strip).",
+    "Not modelled as criteria: the coding section's MRI paragraph (MRI 'may be helpful' to distinguish fluid- from solid-phase disease; its 3-6 month CDT trial language describes when MRI is useful, while the reductive pathway's own MRI requirement is criterion II.B); 'The following information is required documentation for medical review: physician history and physical, physician operative report, pathology report, and attending physician visit notes' (a documentation list; operative and pathology reports are post-service); the LOINC table; the DESCRIPTION and Summary of Evidence; the ISL staging table (no pathway cites a stage).",
+    "Program exceptions: FEP and SAO follow their own guidelines (excluded_plans). For Medicare Advantage the document says no NCD or LCD was found, so Medicare Advantage members are not excluded and this guideline applies to them. The Florida step-therapy exemption paragraph is procedural and not modelled.",
+    "No ICD-10 codes are listed; scope.icd10 is empty.",
+    "The first axillary-reverse-mapping exclusion reads in full: 'Axillary reverse mapping/reverse lymphatic mapping performed during sentinel lymph node biopsy to prevent lymphedema in members who are being treated for breast cancer is considered experimental or investigational.' In the PDF that sentence shares a table row with its label ('Axillary reverse mapping (ARM)/reverse lymphatic mapping'), and text extraction interleaves the label into the sentence line by line, so the exclusion's verbatim text is cut to its first line; the second (axillary lymph node dissection) sentence has no label beside it and is carried in full."
+  ],
+  "status": "ok"
+}

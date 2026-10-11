@@ -1,0 +1,145 @@
+{
+  "id": "florida-blue-02-33000-22",
+  "payer": "Florida Blue",
+  "payer_aliases": ["Florida Blue", "BCBS FL", "BCBSFL", "Blue Cross Blue Shield of Florida", "Blue Cross and Blue Shield of Florida", "BCBS of Florida"],
+  "title": "Endovascular Stent Grafts for Abdominal Aortic Aneurysms",
+  "guideline_number": "02-33000-22",
+  "effective_date": "2026-08-15",
+  "reviewed_date": "2026-07-23",
+  "source_file": "bcbsfl-02-33000-22-endovascular-stent-grafts-for-abdominal-aortic-ane.pdf",
+  "plan_types": [
+    "All lines of business unless otherwise noted in the Program Exceptions section",
+    "Medicare Advantage products (no National Coverage Determination (NCD) and/or Local Coverage Determination (LCD) were found at the time of the last guideline reviewed date)"
+  ],
+  "excluded_plans": [
+    "Federal Employee Program (FEP): Follow FEP guidelines.",
+    "State Account Organization (SAO): Follow SAO guidelines."
+  ],
+  "scope": {
+    "cpt": {
+      "34701": "covered", "34702": "covered", "34703": "covered", "34704": "covered", "34705": "covered", "34706": "covered",
+      "34709": "covered", "34710": "covered", "34711": "covered",
+      "34812": "covered", "34820": "covered",
+      "34839": "covered",
+      "34841": "covered", "34842": "covered", "34843": "covered", "34844": "covered",
+      "34845": "covered", "34846": "covered", "34847": "covered", "34848": "covered"
+    },
+    "icd10": ["I71.30-I71.33", "I71.40-I71.43"]
+  },
+  "criteria": [
+    {
+      "id": "fda_approved_stent_graft",
+      "text": "FDA approved endovascular stent grafts",
+      "question": "Is the endovascular stent graft planned for the abdominal aortic aneurysm repair an FDA-approved device (a named, commercially approved endograft; not a custom-made, physician-modified or investigational graft)?",
+      "refs": []
+    },
+    {
+      "id": "aneurysm_diameter_gt_5cm",
+      "text": "Aneurysmal diameter greater than 5.0 cm",
+      "question": "Does imaging (CT angiography, ultrasound or MRI) document a maximum abdominal aortic aneurysm diameter greater than 5.0 cm?",
+      "threshold": {"kind": "number", "op": "gt", "value": 5.0, "unit": "cm"},
+      "refs": []
+    },
+    {
+      "id": "aneurysm_diameter_4_to_5cm",
+      "text": "Aneurysmal diameter of 4 – 5.0 cm",
+      "question": "Does imaging document a current abdominal aortic aneurysm diameter in the range of 4 to 5.0 cm?",
+      "threshold": {"kind": "number", "op": "gte", "value": 4, "unit": "cm"},
+      "refs": []
+    },
+    {
+      "id": "aneurysm_growth_05cm_in_6_months",
+      "text": "has increased in size by 0.5 cm in the last 6 months",
+      "question": "Do serial imaging measurements (two dated studies within the last 6 months) show the aneurysm diameter has increased by 0.5 cm or more?",
+      "threshold": {"kind": "number", "op": "gte", "value": 0.5, "unit": "cm"},
+      "refs": []
+    },
+    {
+      "id": "aneurysm_diameter_twice_normal_infrarenal_aorta",
+      "text": "Aneurysmal diameter that measures twice the size of the normal infrarenal aorta",
+      "question": "Does imaging document an aneurysm diameter that is twice (or more) the diameter of the patient's normal, non-aneurysmal infrarenal aorta?",
+      "threshold": {"kind": "number", "op": "gte", "value": 2, "unit": "times the normal infrarenal aortic diameter"},
+      "refs": []
+    },
+    {
+      "id": "ruptured_aaa",
+      "text": "A ruptured abdominal aortic aneurysm",
+      "question": "Is the abdominal aortic aneurysm ruptured (imaging or clinical documentation of rupture)?",
+      "refs": []
+    },
+    {
+      "id": "ineligible_for_open_repair",
+      "text": "members who are ineligible for open repair due to physical limitations or other factors",
+      "question": "Is the member documented as ineligible for (not a candidate for) open surgical repair of the aneurysm because of physical limitations or other factors?",
+      "refs": []
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "aaa_diameter_gt_5cm",
+      "name": "Elective repair: aneurysmal diameter greater than 5.0 cm",
+      "applies_to_cpt": ["34701", "34703", "34705", "34709", "34710", "34711", "34812", "34820", "34839", "34841", "34842", "34843", "34844", "34845", "34846", "34847", "34848"],
+      "requires": {"type": "all", "label": "FDA approved endovascular stent graft for an AAA with diameter greater than 5.0 cm", "children": [
+        {"type": "leaf", "criterion": "fda_approved_stent_graft"},
+        {"type": "leaf", "criterion": "aneurysm_diameter_gt_5cm"},
+        {"type": "not", "label": "Not a member who is ineligible for open repair (investigational)", "child": {"type": "leaf", "criterion": "ineligible_for_open_repair"}}
+      ]},
+      "notes": ["Treatment of aneurysms that do meet the recommended threshold for surgery in members who are ineligible for open repair due to physical limitations or other factors is experimental or investigational."]
+    },
+    {
+      "id": "aaa_diameter_4_to_5cm_with_growth",
+      "name": "Elective repair: aneurysmal diameter 4 – 5.0 cm that has increased by 0.5 cm in the last 6 months",
+      "applies_to_cpt": ["34701", "34703", "34705", "34709", "34710", "34711", "34812", "34820", "34839", "34841", "34842", "34843", "34844", "34845", "34846", "34847", "34848"],
+      "requires": {"type": "all", "label": "FDA approved endovascular stent graft for an AAA of 4 – 5.0 cm that has grown 0.5 cm in the last 6 months", "children": [
+        {"type": "leaf", "criterion": "fda_approved_stent_graft"},
+        {"type": "leaf", "criterion": "aneurysm_diameter_4_to_5cm"},
+        {"type": "leaf", "criterion": "aneurysm_growth_05cm_in_6_months"},
+        {"type": "not", "label": "Not a member who is ineligible for open repair (investigational)", "child": {"type": "leaf", "criterion": "ineligible_for_open_repair"}}
+      ]},
+      "notes": ["Treatment of aneurysms that do meet the recommended threshold for surgery in members who are ineligible for open repair due to physical limitations or other factors is experimental or investigational."]
+    },
+    {
+      "id": "aaa_diameter_twice_normal",
+      "name": "Elective repair: aneurysmal diameter twice the size of the normal infrarenal aorta",
+      "applies_to_cpt": ["34701", "34703", "34705", "34709", "34710", "34711", "34812", "34820", "34839", "34841", "34842", "34843", "34844", "34845", "34846", "34847", "34848"],
+      "requires": {"type": "all", "label": "FDA approved endovascular stent graft for an AAA measuring twice the normal infrarenal aorta", "children": [
+        {"type": "leaf", "criterion": "fda_approved_stent_graft"},
+        {"type": "leaf", "criterion": "aneurysm_diameter_twice_normal_infrarenal_aorta"},
+        {"type": "not", "label": "Not a member who is ineligible for open repair (investigational)", "child": {"type": "leaf", "criterion": "ineligible_for_open_repair"}}
+      ]},
+      "notes": ["Treatment of aneurysms that do meet the recommended threshold for surgery in members who are ineligible for open repair due to physical limitations or other factors is experimental or investigational."]
+    },
+    {
+      "id": "ruptured_aaa",
+      "name": "Ruptured abdominal aortic aneurysm",
+      "applies_to_cpt": ["34702", "34704", "34706", "34709", "34710", "34711", "34812", "34820", "34839", "34841", "34842", "34843", "34844", "34845", "34846", "34847", "34848"],
+      "requires": {"type": "all", "label": "FDA approved endovascular stent graft for a ruptured AAA", "children": [
+        {"type": "leaf", "criterion": "fda_approved_stent_graft"},
+        {"type": "leaf", "criterion": "ruptured_aaa"}
+      ]}
+    }
+  ],
+  "exclusions": [
+    {"text": "The use of FDA approved endovascular stent grafts for the treatment of abdominal aortic aneurysms is considered experimental or investigational for all other indications", "cpt": []},
+    {"text": "Treatment of smaller aneurysms that do not meet the current recommended threshold for surgery", "cpt": []},
+    {"text": "Treatment of aneurysms that do meet the recommended threshold for surgery in members who are ineligible for open repair due to physical limitations or other factors.", "cpt": []},
+    {"text": "The use of non-FDA approved endovascular stent grafts for the treatment of abdominal aortic aneurysms is considered experimental or investigational.", "cpt": []}
+  ],
+  "notes": [
+    "Source: the PDF holds a single clean copy of guideline 02-33000-22 (Original Effective Date 08/15/00, Reviewed 07/23/26, Revised 08/15/26); there is no redline. effective_date is the Revised date 08/15/26 (the current version; the update log's last entry is 08/15/26 'Annual review: Position statements maintained and references updated'); reviewed_date is 07/23/26, the committee approval date.",
+    "Structure: the position statement is one sentence ('meets the definition of medical necessity for ONE of the following indications') with four bullets. It is built as four pathways rather than one any-of-four so that each pathway can carry its own code list (the CPT descriptors split elective 'for other than rupture' codes from 'for rupture' codes) and so that the ineligible-for-open-repair exclusion can sit on the elective pathways only. Logically the four pathways are the document's OR; the general qualifier 'FDA approved endovascular stent grafts' goes inside every pathway's all.",
+    "Bullet 2 holds two requirements ('Aneurysmal diameter of 4 – 5.0 cm' AND 'has increased in size by 0.5 cm in the last 6 months') and is split into two criteria under one all. The range 4 – 5.0 cm is typed as a single threshold gte 4 cm; the upper bound 5.0 cm needs no check because an aneurysm above 5.0 cm meets the first pathway on its own. The growth criterion's threshold is the 0.5 cm increase; the 'in the last 6 months' window is a 'within' period (two dated measurements inside the last 6 months), not an 'at least' duration, so it is not typed as duration_months and is carried in the question.",
+    "Bullet 3, 'twice the size of the normal infrarenal aorta', is typed as a ratio threshold gte 2 (unit: times the normal infrarenal aortic diameter). A reviewer could read 'twice' as exactly 2; at least twice is the clinically intended reading, and the chart must show both the aneurysm diameter and the normal infrarenal aortic diameter (or a stated ratio).",
+    "Hardest call, ineligible for open repair: the investigational list says 'Treatment of aneurysms that do meet the recommended threshold for surgery in members who are ineligible for open repair due to physical limitations or other factors' is experimental or investigational. Read literally, a member who meets a size/growth threshold but is documented as not a candidate for open repair does NOT meet medical necessity under this guideline (this mirrors the evidence summary: 'AAAs not eligible for open repair ... insufficient clinical evidence'). It is therefore built as not(ineligible_for_open_repair) inside each of the three elective pathways, and also listed as an exclusion. A chart silent on open-repair candidacy evaluates INSUFFICIENT at this leaf (same pattern as the hand-built varicose-vein example's not(secondary to DVT)); a chart stating the patient is a candidate for open or endovascular repair satisfies it; a chart stating the patient is unfit for or not a candidate for open repair fails it. A reasonable reviewer could instead treat this only as an exclusion with no leaf in the tree; the literal text supports the leaf.",
+    "The ineligible-for-open-repair exclusion is not placed on the ruptured-AAA pathway: it is phrased for 'aneurysms that do meet the recommended threshold for surgery', i.e. the elective size/growth indications, and the evidence summary treats ruptured AAA separately with sufficient evidence (EVAR comparable to open repair). Rupture is an emergency indication with no candidacy condition in the text.",
+    "fda_approved_stent_graft is kept answerable (true): a chart can name the planned device, and the non-FDA-approved sentence is an explicit investigational statement, so a named commercially approved endograft (or a stated 'FDA-approved') satisfies it and a custom-made/physician-modified graft fails it. A reviewer could mark it unanswerable (device approval status is a lookup, not a chart fact); it is left answerable because the device name is a chart fact the surgeon can supply.",
+    "Exclusion 'Treatment of smaller aneurysms that do not meet the current recommended threshold for surgery' needs no leaf: it is the complement of the size indications and fails naturally when none of the diameter/growth/rupture leaves is met. It is listed as an exclusion only. The umbrella sentence 'considered experimental or investigational for all other indications' is likewise listed as an exclusion; no code is tagged investigational because no code in the table is by itself one of the excluded things (the exclusions are about indications and device approval status, not procedures).",
+    "Code-to-pathway mapping: the document ties no code to any section; the mapping follows the CPT descriptors. (a) 34701, 34703, 34705 are 'for other than rupture' (aorto-aortic tube, aorto-uni-iliac, aorto-bi-iliac endografts) and are governed by the three elective size/growth pathways only, never the rupture pathway. (b) 34702, 34704, 34706 are 'for rupture including temporary aortic and/or iliac balloon occlusion' and are governed by the ruptured-AAA pathway only. (c) Every other code is tied to no indication by its descriptor and is listed on all four pathways: 34709 (extension at the primary repair, add-on), 34710 and 34711 (delayed extension for aneurysm, false aneurysm, dissection, endoleak or endograft migration), 34812 and 34820 (open femoral/iliac exposure for delivery of the endovascular prosthesis, add-ons), 34839 (physician planning of a patient-specific fenestrated endograft) and 34841-34848 (fenestrated visceral aortic endografts, with or without a concomitant infrarenal endograft).",
+    "34710/34711 (delayed extension for endoleak or endograft migration) and 34839 (fenestrated planning, 90 minutes of physician time): the document gives no separate criteria for endoleak, migration or planning, so the governing requirement is the indication for the aneurysm being treated; a reviewer could argue 34839 is elective-only in practice, but its descriptor does not say so, so it is mapped to all four pathways like the other untied codes.",
+    "Fenestrated grafts: the DESCRIPTION says 'Fenestrated grafts have also been investigated' and that a large number of endografts have FDA PMA approval. This is background, not a position; the fenestrated codes 34841-34848 are in the billing table and the position statement's 'FDA approved endovascular stent grafts' covers them, so they are tagged covered and governed by the FDA-approved leaf like every other code.",
+    "Plan types: 'THIS MEDICAL COVERAGE GUIDELINE APPLIES TO ALL LINES OF BUSINESS UNLESS OTHERWISE NOTED IN THE PROGRAM EXCEPTIONS SECTION.' FEP and SAO follow their own guidelines (excluded_plans). Medicare Advantage is NOT excluded: the Program Exceptions say no NCD and/or LCD were found at the last reviewed date, so this guideline applies to Medicare Advantage products.",
+    "Left out as not requirements: the DESCRIPTION and 'Summary and Analysis of Evidence' paragraphs (background and evidence review; the evidence sentences on ineligibility for open repair are reflected through the position statement's investigational bullet, not quoted as criteria); the two evidence sentences that close the position statement ('The evidence is insufficient to determine the effects of the technology on health outcomes.' and 'There is insufficient clinical evidence to permit conclusions on efficacy and net health outcomes.'), which state the rationale for the investigational findings and add no requirement; the LOINC documentation table ('may be required documentation': physician H&P, progress notes, plan of treatment, laboratory studies within six months of the date of service; a documentation request, not a coverage criterion); 'REIMBURSEMENT INFORMATION: Refer to section entitled POSITION STATEMENT'; the step therapy protocol exemption paragraph (this guideline contains no step therapy requirement); DEFINITIONS and OTHER ('None applicable'); RELATED GUIDELINES (02-33000-29, thoracic aorta, a separate document); references, committee approval and the update log.",
+    "ICD-10 codes 'That Support Medical Necessity' are I71.30-I71.33 (ruptured) and I71.40-I71.43 (without rupture); they are recorded in scope.icd10 and are not criteria."
+  ],
+  "status": "ok"
+}

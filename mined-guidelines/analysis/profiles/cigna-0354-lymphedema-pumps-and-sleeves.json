@@ -1,0 +1,181 @@
+{
+ "file": "cigna-0354-lymphedema-pumps-and-sleeves.pdf",
+ "treatment": "pneumatic-compression",
+ "payer": "cigna",
+ "doc_kind": "coverage policy",
+ "lines_of_business": [
+  "Health benefit plans administered by Cigna Companies; plan document supersedes; federal/state mandates for lymphedema may govern"
+ ],
+ "effective_or_revised": "Effective Date 5/15/2026; Next Review Date 4/15/2027 (Coverage Policy 0354, titled 'Compression Devices')",
+ "sections_in_order": [
+  "Instructions for Use",
+  "Overview",
+  "Coverage Policy",
+  "Coding Information",
+  "General Background",
+  "References",
+  "Revision Details"
+ ],
+ "criteria_location": "Coverage Policy pp.2-3 (about 1.5 pages): standard device, calibrated gradient device, continuation, experimental, not covered. Rest is coding, background, literature.",
+ "procedures_covered": [
+  "Standard pneumatic compression device E0650/E0651 and appliances",
+  "Calibrated gradient pressure E0652 and appliances",
+  "Continuation of use",
+  "Non-pneumatic compression (E0677-E0683) - experimental",
+  "E0675 arterial insufficiency, E0676 intermittent limb device, cooling pneumatic devices (Game Ready, C9817) - not covered",
+  "Cryotherapy machines (mentioned in coverage statement)"
+ ],
+ "logic": {
+  "top_level": "pathways: two indications (lymphedema OR CVI with ulcer) for standard device; E0652 as AND over standard criteria and an OR of two",
+  "max_nesting_depth": 3,
+  "k_of_n": [
+   {
+    "k": 1,
+    "n": 2,
+    "quote": "medically necessary for EITHER of the following: for the treatment of intractable lymphedema ... for the treatment of chronic venous insufficiency (CVI) with venous stasis ulcer(s)"
+   }
+  ],
+  "exclusions_or_contraindications": "'NOT COVERED OR REIMBURSABLE' and 'EXPERIMENTAL' lists by code; 'Pneumatic compression devices used in the home setting are not covered or reimbursable if the above criteria are not met.'",
+  "initial_vs_repeat": "'Continuation of Use' with BOTH adherence and clinical improvement.",
+  "and_or_ambiguity": [
+   {
+    "quote": "for the treatment of intractable lymphedema when there is failure of a four-week trial of conservative medical management including ALL of the following: home exercise program, limb elevation, compression bandage or compression garment use",
+    "why_ambiguous": "Rendered with ALL in caps but items 'compression bandage or compression garment' contain an inner OR."
+   },
+   {
+    "quote": "EITHER of the following: documented failure of relief with standard pneumatic compression device; individual requires specified pressure to a localized area",
+    "why_ambiguous": "The 'localized pressure' option does not require prior failure of standard device in the text, only that standard criteria were met."
+   },
+   {
+    "quote": "Coverage for pneumatic compression devices/lymphedema pumps and cryotherapy machines varies across plans.",
+    "why_ambiguous": "Benefit variation precedes the criteria; whether criteria apply depends on the plan."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "diagnosis",
+   "quote": "for the treatment of intractable lymphedema",
+   "where": "p.2"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "failure of a four-week trial of conservative medical management including ALL of the following: home exercise program; limb elevation; compression bandage or compression garment use",
+   "where": "p.2"
+  },
+  {
+   "kind": "duration",
+   "quote": "medically-supervised treatment of the ulcer(s) for at least 24 weeks using standard wound care treatment, including compression, wound dressings, exercise, and elevation",
+   "where": "p.2 CVI"
+  },
+  {
+   "kind": "symptom",
+   "quote": "Failure of the ulcer(s) to decrease in size or demonstrate improvement despite conventional therapy.",
+   "where": "p.2"
+  },
+  {
+   "kind": "other",
+   "quote": "documented failure of relief with standard pneumatic compression device; individual requires specified pressure to a localized area",
+   "where": "E0652"
+  },
+  {
+   "kind": "patient commitment",
+   "quote": "there is adherence with the use of equipment as ordered by the healthcare professional",
+   "where": "Continuation"
+  },
+  {
+   "kind": "functional impairment",
+   "quote": "clinical documentation ... confirms clinical improvement (e.g., improvement in venous stasis ulcers, decrease in edema or lymphedema)",
+   "where": "Continuation"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "ICD-10 I89.0, I89.1, I97.2, Q82.0, I87.2, I83.001-I83.229, L97.xxx ulcer codes",
+   "where": "Coding Information"
+  }
+ ],
+ "thresholds": [],
+ "time_windows": [
+  {
+   "what": "conservative trial for lymphedema",
+   "length": "4 weeks",
+   "quote": "failure of a four-week trial of conservative medical management"
+  },
+  {
+   "what": "venous ulcer standard wound care",
+   "length": "24 weeks",
+   "quote": "at least 24 weeks using standard wound care treatment"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": true,
+  "codes_tied_to_criteria": "Criteria cite HCPCS ranges (e.g., 'E0655, E0660, E0665-E0669, E0671-E0673'); ICD-10 table lists covered diagnoses and says all other codes are not covered, i.e. diagnosis code is itself a coverage gate.",
+  "non_covered_code_lists": "E0677-E0683, E1399 experimental; E0675, E0676, C9817 not covered; 'All other codes' ICD not covered."
+ },
+ "external_dependencies": [
+  {
+   "what": "Plan benefit and mandates",
+   "quote": "coverage for the treatment of lymphedema, including lymphedema pumps, may be governed by federal and/or state mandates"
+  },
+  {
+   "what": "Delegated vendors",
+   "quote": "In certain markets, delegated vendor guidelines may be used to support medical necessity"
+  },
+  {
+   "what": "Guidelines cited for E0652 rationale",
+   "quote": "(International Society of Lymphology, 2023; Ridner, et al., 2012 ...)"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "E0652 segmented device with calibrated gradient pressure",
+   "definition_quote": "characterized by a manual control on at least three outflow ports that can deliver individually determined pressure to each segmental unit"
+  },
+  {
+   "term": "E0651",
+   "definition_quote": "either (a) the same pressure is present in each segment, or (b) there is a predetermined pressure gradient"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "intractable lymphedema",
+   "problem": "Undefined; no stage or skin finding."
+  },
+  {
+   "quote": "conventional therapy",
+   "problem": "Undefined for CVI beyond 'standard wound care treatment'."
+  },
+  {
+   "quote": "requires specified pressure to a localized area",
+   "problem": "Background explains scarring/contracture but criterion text does not."
+  },
+  {
+   "quote": "clinical improvement",
+   "problem": "No measure."
+  },
+  {
+   "quote": "failure of a four-week trial",
+   "problem": "No measure of 'failure' (volume change?)."
+  }
+ ],
+ "extraction_hazards": [
+  "Long ICD-10 ranges with hyphens (L97.111-L97.119) and 'All other codes' rows spanning page breaks.",
+  "Criteria nested with private-use bullet glyphs (sub-bullets for ALL-of lists become plain lines).",
+  "Instructions for Use is a half page of boilerplate before the criteria.",
+  "Coverage statement also covers cryotherapy but the criteria do not (only 'not covered').",
+  "Background Literature Review carries clinical statements that could be mistaken for criteria (e.g., E0652 use for trunk edema)."
+ ],
+ "interesting_structures": [
+  "Two disease pathways (lymphedema, CVI ulcer) in one policy.",
+  "Diagnosis code table acts as a coverage gate.",
+  "Explicit 24 week wound-care requirement for CVI.",
+  "No stage, no trunk-specific criteria (BCBSFL/BCBSM have these).",
+  "Cooling devices explicitly excluded."
+ ],
+ "fit_to_tree": {
+  "score": 2,
+  "scale": "1 clean ... 5 judgment",
+  "why": "Short all/any with two pathways; the strain comes from undefined 'intractable', 'failure', and ICD-code gating."
+ }
+}

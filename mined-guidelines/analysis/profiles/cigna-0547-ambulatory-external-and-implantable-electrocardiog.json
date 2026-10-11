@@ -1,0 +1,229 @@
+{
+ "file": "cigna-0547-ambulatory-external-and-implantable-electrocardiog.pdf",
+ "treatment": "cardiac-monitoring",
+ "payer": "cigna",
+ "doc_kind": "coverage policy",
+ "lines_of_business": [
+  "Health benefit plans administered by Cigna Companies; benefit plan document supersedes",
+  "Medicare section lists NCD/LCDs for reference only"
+ ],
+ "effective_or_revised": "Effective 9/15/2026; next review 11/15/2026",
+ "sections_in_order": [
+  "Overview",
+  "Coverage Policy (Ambulatory External; Mobile Cardiac Monitoring with Telemetry; Ambulatory Implantable - ADULT; Implantable - PEDIATRIC; Cardiac Self-Monitoring)",
+  "Coding Information",
+  "General Background",
+  "Health Equity Considerations",
+  "Medicare Coverage Determinations",
+  "Appendix",
+  "References",
+  "Revision Details"
+ ],
+ "criteria_location": "Coverage Policy, pp.2-4 (about 2.5 pages). Coding Information pp.4-18 (heavy ICD-10 tables). General Background pp.18-28 evidence. Revision Details p.34.",
+ "procedures_covered": [
+  "Ambulatory external cardiac monitoring 48 h to 30 days (93241-93248, 93268, 93270-93272, 0937T-0940T)",
+  "Mobile cardiac outpatient telemetry (93228, 93229)",
+  "Implantable loop recorder adult (33285, C1764) and pediatric <=21",
+  "ILR replacement",
+  "Cardiac self-monitoring devices (not covered)"
+ ],
+ "logic": {
+  "top_level": "pathways (one block per device; adult vs pediatric ILR), each any-of; some indications carry nested all-of",
+  "max_nesting_depth": 3,
+  "k_of_n": [
+   {
+    "k": 1,
+    "n": 7,
+    "quote": "considered medically necessary when ANY of the following criteria are met"
+   }
+  ],
+  "exclusions_or_contraindications": "Closing 'any other indication' not covered statement per device; pediatric ILR has an explicit 'not medically necessary' list (reflex syncope with frequent/severe episodes, epilepsy, etc.); self-monitoring devices excluded as convenience items.",
+  "initial_vs_repeat": "ILR replacement allowed if 'continues to meet ALL of the above criteria and the existing monitor is no longer under warranty and cannot be repaired'. No repeat-study interval for external monitors.",
+  "and_or_ambiguity": [
+   {
+    "quote": "following stroke or transient ischemic attack (TIA) of undetermined cause (CPT 93268, 93270-93272)",
+    "why_ambiguous": "The CPT list in parentheses restricts this one bullet to event-monitor codes, so an item-level code condition is embedded in a clinical bullet"
+   },
+   {
+    "quote": "continues to meet ALL of the above criteria",
+    "why_ambiguous": "The ILR list is ANY-of; 'ALL of the above' can't be literal (patient could not satisfy both syncope and CTI ablation bullets)"
+   },
+   {
+    "quote": "if an individual is identified with atrial fibrillation in the setting of acute medical illness or surgery, especially in those who underwent noncardiac surgery and with risk factors for stroke (e.g., CHA2DS2-VASc* score >=2)",
+    "why_ambiguous": "'especially' and 'e.g.' make the CHA2DS2-VASc threshold look optional"
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "symptom",
+   "quote": "symptoms of presyncope, syncope, or severe palpitations when there is clinical suspicion of a significant bradyarrhythmia or tachyarrhythmia",
+   "where": "Coverage Policy p.2, external monitoring bullet 1"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "following stroke or transient ischemic attack (TIA) of undetermined cause",
+   "where": "Coverage Policy p.2"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "individual with hypertrophic cardiomyopathy",
+   "where": "Coverage Policy p.2 (added 11/15/2025)"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "following cavotricuspid isthmus (CTI) ablation for typical atrial flutter (AFL) if individual is not receiving ongoing anticoagulation and deemed to be at high thromboembolic risk",
+   "where": "Coverage Policy p.2"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "CHA2DS2-VASc* score >=2",
+   "where": "Coverage Policy p.2-3"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "Mobile cardiac outpatient telemetry ... is considered medically necessary when ambulatory external cardiac monitoring is non-diagnostic",
+   "where": "Coverage Policy p.2 (MCOT)"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "non-arrhythmic causes have been excluded by appropriate testing (e.g., reflex syncope, orthostatic hypotension, volume depletion, dehydration, blood loss)",
+   "where": "ILR adult, syncope bullet"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "noninvasive ambulatory cardiac monitoring for a minimum of 14 days is inconclusive or non-diagnostic",
+   "where": "ILR adult, syncope and stroke bullets"
+  },
+  {
+   "kind": "age",
+   "quote": "An implantable electrocardiographic event monitor ... in an individual (<=21 years of age) when an external monitor has not demonstrated the symptoms of concern",
+   "where": "Pediatric ILR"
+  },
+  {
+   "kind": "symptom",
+   "quote": "infrequent symptoms (>30-day intervals) suspected to be due to an arrhythmia",
+   "where": "Pediatric ILR bullet 3"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "CHA2DS2-VASc score",
+   "value": ">= 2",
+   "unit": "points",
+   "quote": "CHA2DS2-VASc* score >=2"
+  },
+  {
+   "quantity": "prior noninvasive monitoring before adult ILR",
+   "value": ">= 14",
+   "unit": "days",
+   "quote": "a minimum of 14 days of noninvasive ambulatory cardiac monitoring is inconclusive"
+  },
+  {
+   "quantity": "pediatric age",
+   "value": "<= 21",
+   "unit": "years",
+   "quote": "(<=21 years of age)"
+  },
+  {
+   "quantity": "pediatric symptom interval",
+   "value": "> 30",
+   "unit": "days",
+   "quote": "infrequent symptoms (>30-day intervals)"
+  },
+  {
+   "quantity": "external monitoring range covered",
+   "value": "48 h to 30 days",
+   "unit": "",
+   "quote": "Ambulatory external cardiac monitoring from 48 hours to 30 days"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "noninvasive monitoring before ILR",
+   "length": "minimum 14 days",
+   "quote": "noninvasive ambulatory cardiac monitoring for a minimum of 14 days"
+  },
+  {
+   "what": "pediatric infrequent symptom interval",
+   "length": ">30 days",
+   "quote": ">30-day intervals"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": true,
+  "codes_tied_to_criteria": "CPT codes are named inside the policy statements for external monitoring, MCOT and ILR; ICD-10-CM tables in Coding Information list covered vs 'Not Covered or Reimbursable' diagnoses per code group",
+  "non_covered_code_lists": "Yes: 'Not Covered or Reimbursable' ICD-10 tables and a 'Considered Convenience Item/Not Covered' code group"
+ },
+ "external_dependencies": [
+  {
+   "what": "Related Cigna policies (ablation, EP studies, tilt table, echo) and eviCore cardiac imaging guideline",
+   "quote": "Cardiac Electrophysiological (EP) Studies ... Tilt Table Testing"
+  },
+  {
+   "what": "Medicare NCD 20.15 and LCDs (CGS L33952, First Coast L33380, Palmetto L34573)",
+   "quote": "Electrocardiographic Services (20.15)"
+  },
+  {
+   "what": "Benefit plan document supersedes the policy",
+   "quote": "a customer's benefit plan document always supersedes the information in the Coverage Policies"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "CHA2DS2-VASc",
+   "definition_quote": "CHA2DS2-VASc is a clinical risk score for prediction of stroke and systemic embolism: Congestive heart failure or left ventricular dysfunction, hypertension, age >=75 (doubled), diabetes, stroke (doubled)-vascular disease, age 65-74, sex category."
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "severe palpitations",
+   "problem": "'severe' undefined"
+  },
+  {
+   "quote": "clinical suspicion of a significant bradyarrhythmia or tachyarrhythmia",
+   "problem": "'significant' undefined; clinician suspicion"
+  },
+  {
+   "quote": "when the results will directly impact clinical decision-making",
+   "problem": "future-oriented intent"
+  },
+  {
+   "quote": "deemed to be at high thromboembolic risk (e.g., CHA2DS2-VASc score >=2)",
+   "problem": "'deemed' and 'e.g.'"
+  },
+  {
+   "quote": "appropriate testing",
+   "problem": "which tests are enough to exclude non-arrhythmic syncope?"
+  },
+  {
+   "quote": "inconclusive or non-diagnostic",
+   "problem": "undefined"
+  },
+  {
+   "quote": "recovered left ventricular function",
+   "problem": "no EF threshold"
+  }
+ ],
+ "extraction_hazards": [
+  "Coding Information is ~14 pages of repeated ICD-10 tables with repeated headers ('Medical Coverage Policy: 0547')",
+  "Footnote asterisk defines CHA2DS2-VASc, split from the bullet it modifies",
+  "Rows labeled 'Not Covered or Reimbursable' sit among covered tables",
+  "Adult vs pediatric ILR sections look alike",
+  "General Background (~10 pages) and references (~6 pages) after the criteria",
+  "Cigna ILR bullets repeat the same text as the external/MCOT bullets (copied bullets)"
+ ],
+ "interesting_structures": [
+  "Same 5-7 indication bullets reused across external, MCOT and ILR (copy-paste family)",
+  "MCOT is escalation: needs non-diagnostic external monitoring AND an indication",
+  "CHA2DS2-VASc risk score as a threshold",
+  "Adult vs pediatric split by age <=21",
+  "Policy-level ICD-10 covered/not-covered code lists",
+  "Revision history shows which statements changed and when"
+ ],
+ "fit_to_tree": {
+  "score": 2,
+  "why": "Mostly any-of lists with a few all-of children and numeric thresholds; ICD tables help. Hazards are copy-pasted bullets, 'e.g.' thresholds and forward-looking intent."
+ }
+}

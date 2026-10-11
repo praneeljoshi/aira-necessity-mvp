@@ -1,0 +1,19 @@
+{
+  "payer": "Cigna",
+  "payer_key": "cigna",
+  "treatment": "bariatric-surgery",
+  "title": "Bariatric Surgery",
+  "policy_number": "0051",
+  "effective": "",
+  "url": "https://static.cigna.com/assets/chcp/pdf/coveragePolicies/medical/mm_0051_coveragepositioncriteria_bariatric_surgery.pdf",
+  "final_url": "https://static.cigna.com/assets/chcp/pdf/coveragePolicies/medical/mm_0051_coveragepositioncriteria_bariatric_surgery.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "cigna-0051-bariatric-surgery.pdf",
+  "sha256": "120c728b0adc91403d032799087d9568890893bdddfe6d76f2a20854dece44d6",
+  "pages": 111,
+  "bytes": 1347632,
+  "retrieved": "2026-10-09",
+  "printed_date": "Effective 7/15/2026; Next Review 7/15/2027"
+}

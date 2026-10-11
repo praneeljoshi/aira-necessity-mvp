@@ -1,0 +1,208 @@
+{
+ "file": "bsca-bsc7-11-hip-arthroplasty-in-adults.pdf",
+ "treatment": "hip-arthroplasty",
+ "payer": "blueshieldca",
+ "doc_kind": "medical policy",
+ "lines_of_business": [
+  "Not stated; defers to member contract"
+ ],
+ "effective_or_revised": "Original 04/01/2016; Effective November 1, 2025",
+ "sections_in_order": [
+  "Policy Statement",
+  "Policy Guidelines (Conservative Treatment)",
+  "Coding",
+  "Description",
+  "Related Policies",
+  "Benefit Application",
+  "Regulatory Status",
+  "Rationale (background, literature, shared decision making, THA, AVN, fracture, revision, summary)",
+  "Supplemental Information (practice guidelines)",
+  "References",
+  "Documentation for Clinical Review",
+  "Codes",
+  "Policy History",
+  "Appendix A"
+ ],
+ "criteria_location": "Policy Statement pp.1-2 (I.A-H, II); Conservative Treatment and relative contraindications in Policy Guidelines p.2; documentation list p.15.",
+ "procedures_covered": [
+  "Total hip arthroplasty (27130, 27132)",
+  "Revision (27134, 27137, 27138)",
+  "Hemiarthroplasty 27125 and resurfacing S2118 are listed in codes but policy rules only on THA/revision"
+ ],
+ "logic": {
+  "top_level": "all (A-G general conditions) AND any-of H (five indications, some with nested all/any)",
+  "max_nesting_depth": 5,
+  "k_of_n": [
+   {
+    "k": 2,
+    "n": 6,
+    "quote": "Severe osteoarthritis of hip joint as evidenced by two or more of the following"
+   }
+  ],
+  "exclusions_or_contraindications": "Expressed as positive 'NO' items C-G (no infection, no skin infection/open wound, no implant allergy, no skeletal immaturity, no paraplegia/quadriplegia/progressive neurologic disease) plus relative contraindications in guidelines (BMI > 40, age < 50).",
+  "initial_vs_repeat": "Revision is H.5 within the same policy; no repeat limits.",
+  "and_or_ambiguity": [
+   {
+    "quote": "An individual has any of the following conditions: 1. Degenerative joint disease when all of the following exist: ... c. Radiographic evidence of any of the following: i. ... v.",
+    "why_ambiguous": "Conditions H.2-H.5 do not need the OA conditions, but criterion A still says the reason must be OA/RA/AVN/post-traumatic arthritis, which conflicts with tumor, fracture, FAI, revision."
+   },
+   {
+    "quote": "Avascular necrosis (osteonecrosis) with greater than stage II with collapse and in stage II avascular necrosis with severe recalcitrant hip pain",
+    "why_ambiguous": "'and' reads as 'or'; staging system not named"
+   },
+   {
+    "quote": "Relative contraindications to joint replacement include the following: Morbid obesity (BMI greater than 40), or age less than 50 years unless there are no other treatment options",
+    "why_ambiguous": "relative contraindication is not tied to approval or denial; 'exhaust all appropriate nonsurgical treatment'"
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "diagnosis",
+   "quote": "The reason for the arthroplasty is osteoarthritis (OA), rheumatoid arthritis, avascular necrosis (osteonecrosis), or post-traumatic arthritis of the hip",
+   "where": "I.A p.1"
+  },
+  {
+   "kind": "other",
+   "quote": "It is NOT for a customized hip replacement ... does NOT use a 'Gender specific' implant",
+   "where": "I.B"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "Documentation of failure of conservative therapy ... or documentation of rationale if conservative therapy is considered inappropriate",
+   "where": "I.H.1.a"
+  },
+  {
+   "kind": "symptom",
+   "quote": "limited range of motion, antalgic gait, and pain in hip joint with passive range of motion on physical examination",
+   "where": "I.H.1.b"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "Severe osteoarthritis ... two or more of: subchondral cysts, sclerosis, periarticular osteophytes, joint subluxation, bone on bone articulation, joint space narrowing",
+   "where": "I.H.1.c.i"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "AVN greater than stage II with collapse; RA (joint space narrowing)",
+   "where": "I.H.1.c.ii-iii"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "Tumor involving proximal femur or acetabulum; Unstable fracture of femoral neck or acetabulum; FAI with advanced OA",
+   "where": "I.H.2-4"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "Previous arthroplasty or resurfacing revision: instability, implant failure, infection, dislocation, displaced fracture, allergy",
+   "where": "I.H.5"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "all of the following unless contraindicated: anti-inflammatories or analgesics; activity modification; supervised PT (may be instructed HEP); weight reduction counseling; assistive device",
+   "where": "Policy Guidelines p.2"
+  },
+  {
+   "kind": "BMI/comorbidity",
+   "quote": "Morbid obesity (BMI greater than 40), or age less than 50 years",
+   "where": "relative contraindications p.2"
+  },
+  {
+   "kind": "documentation",
+   "quote": "History and physical ... prior conservative treatments, duration, and response ... radiology reports",
+   "where": "p.15"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "BMI",
+   "value": "> 40 relative contraindication",
+   "unit": "kg/m2",
+   "quote": "Morbid obesity (BMI greater than 40)"
+  },
+  {
+   "quantity": "age",
+   "value": "< 50 relative contraindication",
+   "unit": "years",
+   "quote": "age less than 50 years unless there are no other treatment options"
+  },
+  {
+   "quantity": "radiographic findings",
+   "value": ">= 2 of 6",
+   "unit": "findings",
+   "quote": "two or more of the following"
+  }
+ ],
+ "time_windows": [],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "General reference table: 27125, 27130, 27132, 27134, 27137, 27138, S2118; 'may not cover all codes'.",
+  "non_covered_code_lists": "none"
+ },
+ "external_dependencies": [
+  {
+   "what": "CMS LCD cited only as a reference (a knee LCD, L36575); no Medicare criteria incorporated",
+   "quote": "Local Coverage Determination (LCD): Total Knee Arthroplasty (L36575). 2016."
+  },
+  {
+   "what": "Related policy Knee Arthroplasty for Adults",
+   "quote": "Knee Arthroplasty for Adults"
+  },
+  {
+   "what": "ACR/OARSI guidelines cited as conservative care standard",
+   "quote": "The American College of Rheumatology and Osteoarthritis Research Society International have extensive guidelines"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Customized",
+   "definition_quote": "something that is made specifically for that individual and could not be used for anyone else"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "failure of conservative therapy",
+   "problem": "no duration"
+  },
+  {
+   "quote": "As medically indicated",
+   "problem": "conservative treatment may be skipped"
+  },
+  {
+   "quote": "severe recalcitrant hip pain",
+   "problem": "undefined"
+  },
+  {
+   "quote": "significant (advanced) osteoarthritis",
+   "problem": "undefined"
+  },
+  {
+   "quote": "as appropriate",
+   "problem": "weight reduction counseling"
+  },
+  {
+   "quote": "Gender specific",
+   "problem": "not tied to a code or device list"
+  }
+ ],
+ "extraction_hazards": [
+  "Policy statement spans a page break between H.1.c.i and its bullets",
+  "Appendix A is a before/after side-by-side comparison with duplicated policy text",
+  "Typos: 'hip join', 'acetablular'",
+  "19 pages mostly literature review",
+  "Conservative-treatment guideline text appears twice (Policy Guidelines and Rationale) with different lists",
+  "Note: 'Post-op physical therapy visits will be allowed' is a benefit rule inside clinical text",
+  "Documentation list on PDF p.15-16 sits after 70+ references"
+ ],
+ "interesting_structures": [
+  "General conditions A-G act as NOT-list followed by a pathway list",
+  "Customized implant exclusion",
+  "Relative contraindications not decisive",
+  "Shared decision-making discussion in rationale (not a criterion)"
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "why": "all + any + nested lists fit; scope conflict between criterion A and H.2-5, and soft/relative items are unresolved."
+ }
+}

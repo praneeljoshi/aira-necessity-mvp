@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "icd",
+  "title": "Implantable Cardioverter Defibrillators/Cardiac Contractility Modulation (CCM) Therapy",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JJV1UU11MCSA0I4YH",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-33000-34",
+  "original_effective": "12/15/13",
+  "reviewed": "04/23/26",
+  "revised": "05/15/26",
+  "file": "bcbsfl-02-33000-34-implantable-cardioverter-defibrillators-cardiac-co.pdf",
+  "sha256": "89b6db5c13d63ce1e06cf832797f34b881de14c2f40601b884cf558471ec8daa",
+  "pages": 14,
+  "bytes": 205306,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original 12/15/13; Reviewed 04/23/26; Revised 05/15/26"
+}

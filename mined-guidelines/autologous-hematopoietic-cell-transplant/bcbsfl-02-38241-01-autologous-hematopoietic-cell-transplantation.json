@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "autologous-hematopoietic-cell-transplant",
+  "title": "Autologous Hematopoietic Cell Transplantation",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JQH77YH7YBGM14RT5",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-38241-01",
+  "original_effective": "08/15/02",
+  "reviewed": "01/22/26",
+  "revised": "09/15/26",
+  "file": "bcbsfl-02-38241-01-autologous-hematopoietic-cell-transplantation.pdf",
+  "sha256": "962198d95151785a017ed564f5809c9705668dfbf52ac945d41bd7e7760b067e",
+  "pages": 20,
+  "bytes": 324470,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original Effective Date 08/15/02; Reviewed 01/22/26; Revised 09/15/26; committee approval 08/27/26 (header 'Reviewed' date is stale versus committee date)"
+}

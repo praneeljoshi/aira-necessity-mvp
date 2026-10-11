@@ -1,0 +1,19 @@
+{
+  "payer": "Premera Blue Cross",
+  "payer_key": "premera",
+  "treatment": "spinal-cord-stimulation",
+  "title": "Spinal Cord and Dorsal Root Ganglion Stimulation",
+  "policy_number": "7.01.546",
+  "effective": "",
+  "url": "https://www.premera.com/medicalpolicies/7.01.546.pdf",
+  "final_url": "https://www.premera.com/medicalpolicies/7.01.546.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "premera-7-01-546-spinal-cord-and-dorsal-root-ganglion-stimulation.pdf",
+  "sha256": "ac05e831b606bad856af45823c1142abadee5cc2f81396006c4db1121519d0f9",
+  "pages": 33,
+  "bytes": 1076393,
+  "retrieved": "2026-10-09",
+  "printed_date": "Effective Jul. 1, 2026; last revised Jun. 8, 2026; replaces 7.01.25 (BCBSA ref 7.01.25)"
+}

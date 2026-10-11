@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "total-artificial-hearts-and-implantable",
+  "title": "Total Artificial Hearts and Implantable Ventricular Assist Devices",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JEWFS1O0FLC30P055",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-33000-25",
+  "original_effective": "01/01/02",
+  "reviewed": "01/22/26",
+  "revised": "02/15/26",
+  "file": "bcbsfl-02-33000-25-total-artificial-hearts-and-implantable-ventricula.pdf",
+  "sha256": "78d5e959a942e93b63a3c5040c3e0f05c006139cb52fd4c03afac87b9fc3d453",
+  "pages": 17,
+  "bytes": 738963,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original Effective Date 01/01/02; Reviewed 01/22/26; Revised 02/15/26"
+}

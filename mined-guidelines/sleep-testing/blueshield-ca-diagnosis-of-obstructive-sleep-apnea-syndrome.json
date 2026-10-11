@@ -1,0 +1,19 @@
+{
+  "payer": "Blue Shield of California",
+  "payer_key": "blueshield-ca",
+  "treatment": "sleep-testing",
+  "title": "Diagnosis of Obstructive Sleep Apnea Syndrome",
+  "policy_number": "",
+  "effective": "",
+  "url": "https://blueshieldca.com/content/dam/bsca/en/provider/docs/medical-policies/DX-OSA-Syndrome.pdf",
+  "final_url": "https://www.blueshieldca.com/content/dam/bsca/en/provider/docs/medical-policies/DX-OSA-Syndrome.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "blueshield-ca-diagnosis-of-obstructive-sleep-apnea-syndrome.pdf",
+  "sha256": "a81ca23620839c2b428561ca857befe520daba965a557b4b0f463cebf2b679b2",
+  "pages": 26,
+  "bytes": 351467,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original Policy Date April 3, 2009; Effective Date July 1, 2026 (policy 2.01.18)"
+}

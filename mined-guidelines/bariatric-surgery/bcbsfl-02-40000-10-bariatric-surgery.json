@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "bariatric-surgery",
+  "title": "Bariatric Surgery",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JEWFS1I3NVLQGYSXL",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-40000-10",
+  "original_effective": "10/15/99",
+  "reviewed": "01/22/26",
+  "revised": "02/15/26",
+  "file": "bcbsfl-02-40000-10-bariatric-surgery.pdf",
+  "sha256": "3ef883f71fb005af15a997d6855a75e8d8c572afe579493f362bee9df26e5712",
+  "pages": 22,
+  "bytes": 826828,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original 10/15/99; Reviewed 01/22/26; Revised 02/15/26"
+}

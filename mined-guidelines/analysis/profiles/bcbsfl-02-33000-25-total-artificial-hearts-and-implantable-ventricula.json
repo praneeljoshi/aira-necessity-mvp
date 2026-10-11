@@ -1,0 +1,220 @@
+{
+ "lines_of_business": [
+  "All lines of business unless noted in PROGRAM EXCEPTIONS (disclaimer: 'THIS MEDICAL COVERAGE GUIDELINE APPLIES TO ALL LINES OF BUSINESS UNLESS OTHERWISE NOTED IN THE PROGRAM EXCEPTIONS SECTION')",
+  "FEP: 'Follow FEP guidelines.'",
+  "SAO: 'Follow SAO guidelines.'",
+  "Medicare Advantage Products: NCD Ventricular Assist Devices (20.9.1) reviewed"
+ ],
+ "effective_or_revised": "Original Effective Date 01/01/02; Reviewed 01/22/26; Revised 02/15/26",
+ "sections_in_order": [
+  "Header block (MCG number, Original Effective Date, Reviewed, Revised)",
+  "Subject",
+  "Disclaimer (all caps)",
+  "Navigation bar (Position Statement / Billing/Coding / Reimbursement / Program Exceptions / Definitions / Related Guidelines / Other / References / Updates)",
+  "DESCRIPTION",
+  "POSITION STATEMENT",
+  "BILLING/CODING INFORMATION",
+  "REIMBURSEMENT INFORMATION",
+  "PROGRAM EXCEPTIONS",
+  "DEFINITIONS",
+  "RELATED GUIDELINES",
+  "OTHER",
+  "REFERENCES",
+  "COMMITTEE APPROVAL",
+  "GUIDELINE UPDATE INFORMATION"
+ ],
+ "criteria_location": "POSITION STATEMENT (about 56 lines, pp.3-5) under plain sub-headings 'Ventricular Assist Devices' and 'Total Artificial Hearts'. OTHER (about 90 lines) lists FDA-approved device indications by brand (HeartMate II, HeartMate 3, Berlin Heart ...) that read like criteria but are labelled illustrative.",
+ "procedures_covered": [
+  "Implantable VAD: bridge to transplant, bridge to recovery (post-cardiotomy), destination therapy",
+  "Percutaneous VAD for cardiogenic shock / AMI / high-risk PCI",
+  "Right VAD (up to 30 days)",
+  "Total artificial heart as bridge to transplant",
+  "Accessories and supplies"
+ ],
+ "logic": {
+  "top_level": "pathways",
+  "max_nesting_depth": 3,
+  "k_of_n": [
+   {
+    "k": 1,
+    "n": 2,
+    "quote": "meeting ONE of the following: On optimal medical management ... for at least 45 of the last 60 days ... OR Advanced heart failure for at least 14 days and dependent on intra-aortic balloon pump for >=7 days"
+   }
+  ],
+  "exclusions_or_contraindications": "None listed as such; 'Other applications ... including the use of total artificial hearts as destination therapy, are considered experimental or investigational.'",
+  "initial_vs_repeat": "Not addressed in the statement (codes include replacement and removal, no criteria).",
+  "and_or_ambiguity": [
+   {
+    "quote": "Inotrope-dependent, OR cardiac index <2.2 liters/min/m2, while not on inotropes and also meeting ONE of the following:",
+    "why_ambiguous": "Destination-therapy bullets are an implicit AND list (no connector between NYHA, LVEF and this bullet), but this bullet has an inner OR and the 'ONE of' sub-list applies to one or to both of its options."
+   },
+   {
+    "quote": "Are currently listed as heart transplant candidates, OR Are undergoing evaluation to determine candidacy for heart transplant, AND Are not expected to survive until a donor heart can be obtained",
+    "why_ambiguous": "OR then AND at the same level: (listed OR evaluating) AND not expected to survive."
+   },
+   {
+    "quote": "when both of the following are met: Device is used for temporary circulatory support for up to thirty days ... AND Member is willing and able to be treated with heparin",
+    "why_ambiguous": "Fine, but 'willing and able' is a patient-commitment item with no objective test."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "functional impairment",
+   "quote": "New York Heart Association (NYHA) Class III heart failure with dyspnea upon mild physical activity or NYHA Class IV",
+   "where": "Position Statement destination therapy"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "Left ventricular ejection fraction <= 25%",
+   "where": "Position Statement destination therapy"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "cardiac index <2.2 liters/min/m2, while not on inotropes",
+   "where": "Position Statement destination therapy"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "On optimal medical management, based on current heart failure practice guidelines for at least 45 of the last 60 days and are failing to respond",
+   "where": "Position Statement destination therapy"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "Biventricular failure with no other reasonable medical or surgical treatment options",
+   "where": "Position Statement TAH"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "Currently listed as a heart transplant candidate or undergoing evaluation to determine candidacy for heart transplant",
+   "where": "Position Statement VAD / TAH"
+  },
+  {
+   "kind": "patient commitment",
+   "quote": "Member is willing and able to be treated with heparin or an appropriate alternative anticoagulant",
+   "where": "Position Statement RVAD"
+  },
+  {
+   "kind": "other",
+   "quote": "Not expected to survive until a donor heart can be obtained",
+   "where": "Position Statement VAD/TAH"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "LVEF",
+   "value": "<= 25",
+   "unit": "%",
+   "quote": "Left ventricular ejection fraction <= 25%"
+  },
+  {
+   "quantity": "cardiac index",
+   "value": "< 2.2",
+   "unit": "L/min/m2",
+   "quote": "cardiac index <2.2 liters/min/m2"
+  },
+  {
+   "quantity": "optimal medical management days",
+   "value": ">= 45 of last 60",
+   "unit": "days",
+   "quote": "for at least 45 of the last 60 days"
+  },
+  {
+   "quantity": "intra-aortic balloon pump dependence",
+   "value": ">= 7",
+   "unit": "days",
+   "quote": "dependent on intra-aortic balloon pump for >=7 days"
+  },
+  {
+   "quantity": "RVAD support duration",
+   "value": "<= 30",
+   "unit": "days",
+   "quote": "temporary circulatory support for up to thirty days"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "optimal medical management",
+   "length": "45 of last 60 days",
+   "quote": "at least 45 of the last 60 days"
+  },
+  {
+   "what": "advanced heart failure",
+   "length": "at least 14 days",
+   "quote": "Advanced heart failure for at least 14 days"
+  },
+  {
+   "what": "IABP dependence",
+   "length": ">= 7 days",
+   "quote": "intra-aortic balloon pump for >=7 days"
+  },
+  {
+   "what": "RVAD use",
+   "length": "up to 30 days",
+   "quote": "up to thirty days"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "CPT 33927-33997 and dozens of HCPCS (L8698, Q0477-Q0496 ...) listed, not tied to pathways. No ICD-10 table.",
+  "non_covered_code_lists": "None tagged."
+ },
+ "external_dependencies": [
+  {
+   "what": "CMS NCD 20.9.1 reviewed for Medicare Advantage",
+   "quote": "Ventricular Assist Devices (20.9.1) located at cms.gov"
+  },
+  {
+   "what": "Companion transplant policies",
+   "quote": "Heart Transplant, 02-33000-23"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Destination therapy",
+   "definition_quote": "the use of a ventricular assist device (VAD) for long-term, permanent support in those who are not candidates for transplant."
+  },
+  {
+   "term": "Humanitarian Device Exemption (HDE)",
+   "definition_quote": "a device that is intended to benefit persons by treating or diagnosing a disease or condition that affects or is manifested in fewer than 4,000 people in the United States per year."
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "optimal medical management, based on current heart failure practice guidelines",
+   "problem": "Guidelines not named."
+  },
+  {
+   "quote": "no other reasonable medical or surgical treatment options",
+   "problem": "Judgment."
+  },
+  {
+   "quote": "Ineligible for other univentricular or biventricular support devices",
+   "problem": "Basis for ineligibility not described."
+  },
+  {
+   "quote": "unable to be weaned off cardiopulmonary bypass",
+   "problem": "No duration/attempt count."
+  }
+ ],
+ "extraction_hazards": [
+  "Sub-headings ('Ventricular Assist Devices', 'Total Artificial Hearts') are plain lines; 'Bridge' indications are bullets with 'o' sub-bullets and '-' third-level markers.",
+  "'OTHER' section (about 90 lines) is product-by-product FDA approvals with bullets that look like criteria; the first line says it is illustrative, 'not intended to be a recommendation'.",
+  "Description of codes in a 60-row HCPCS table with wrapped descriptions.",
+  "Reference list is ~96 items long, nearly half the file."
+ ],
+ "interesting_structures": [
+  "Several device types, each with its own indication set; reuse of 'FDA-approved or cleared [including Humanitarian Device Exemption (HDE)]' as a device-status leaf.",
+  "Time ratios (45 of 60 days) and 'at least 14 days' as multi-window requirements.",
+  "Device-label detail in OTHER (e.g. pediatric BSA 0.7-1.5 m2) not in Position Statement: coverage rules and FDA labels can diverge."
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "why": "Numeric leaves fit well, but implicit AND/OR with an inner 'ONE of', patient-intent leaf, and labelling text in OTHER create ambiguity. Device status ('FDA-approved') is a non-chart fact."
+ },
+ "file": "bcbsfl-02-33000-25-total-artificial-hearts-and-implantable-ventricula.pdf",
+ "treatment": "total-artificial-hearts-and-implantable",
+ "payer": "bcbsfl",
+ "doc_kind": "medical policy (Florida Blue Medical Coverage Guideline)"
+}

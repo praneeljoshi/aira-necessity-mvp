@@ -1,0 +1,87 @@
+{
+  "file": "bcbsfl-02-20000-60-knee-arthroplasty.pdf",
+  "treatment": "knee-arthroplasty",
+  "payer": "bcbsfl",
+  "doc_kind": "medical policy (Medical Coverage Guideline)",
+  "lines_of_business": ["All lines of business unless noted in Program Exceptions", "FEP: follow FEP guidelines", "SAO: follow SAO guidelines", "Medicare Advantage: LCD L33618 reviewed"],
+  "effective_or_revised": "Original 10/15/16; Reviewed 04/23/26; Revised 05/15/26 (history: 05/15/26 'no change in position statement')",
+  "sections_in_order": ["Description (with Summary and Analysis of Evidence)", "Position Statement (TKA, Revision, contraindications, UKA, Kellgren-Lawrence)", "Billing/Coding Information", "Reimbursement Information", "Program Exceptions", "Definitions", "Related Guidelines", "Other", "References", "Committee Approval", "Guideline Update Information"],
+  "criteria_location": "Position Statement only (pp. 3-4 of 8). Description is a long UpToDate quote that contains clinical statements (contraindications, age caveats) that are NOT criteria. Contraindications are in a footnote (*) after the revision section; Kellgren-Lawrence scale is a footnote (**).",
+  "procedures_covered": ["Total knee arthroplasty (27447)", "Revision arthroplasty (27486, 27487)", "Unicompartmental knee arthroplasty (27446)", "Patellar arthroplasty with prosthesis (27438)"],
+  "logic": {
+    "top_level": "pathways (but written as one flat bullet list with OR on the first six bullets and AND on the rest; see ambiguity)",
+    "max_nesting_depth": 3,
+    "k_of_n": [
+      {"k": 1, "n": 8, "quote": "includes 1 or more of the following: Anti-inflammatory medications / Analgesics / ... / Therapeutic injections into the knee as appropriate", "pointer": "Position Statement, TKA conservative management"},
+      {"k": 1, "n": 8, "quote": "Revision arthroplasty meets the definition of medical necessity when 1 or more of the following conditions exist", "pointer": "Revision"}
+    ],
+    "exclusions_or_contraindications": "Footnote list '*Contraindications for total and revision knee arthroplasty' (4 items) referenced by an AND bullet 'There are no contraindications*'. UKA embeds its own contraindication list as the last nested bullet under conservative management (mis-nested).",
+    "initial_vs_repeat": "Revision arthroplasty has its own criteria list (disabling pain, bone loss, infection, loosening, wear, dislocation, instability). Failure of previous UKA or osteotomy is a pathway for TKA. No limit on second side/bilateral (statement on simultaneous bilateral deleted 12/15/22).",
+    "and_or_ambiguity": [
+      {"quote": "Failure of a previous osteotomy, OR ... Avascular necrosis of the knee, OR Proximal tibia fracture, OR Advanced joint disease demonstrated by radiographic or magnetic resonance imaging (MRI) evidence of ... avascular necrosis), AND Pain or functional disability ... AND Failure of at least 3 months of conservative ... AND There are no contraindications*", "why_ambiguous": "A flat bullet list mixes OR and AND. Reading 1: any of the 6 diagnoses alone suffices, OR the 'advanced joint disease' bullet plus pain plus 3 months conservative plus no contraindications (the intended reading from the lead-in 'one or more'). Reading 2: the trailing AND bullets apply to every diagnosis (then a distal femur fracture would require 3 months of conservative care). Reading 3: only the contraindication bullet applies to all ('for any indication above'). The text offers no indentation to resolve it."},
+      {"quote": "subchondral cysts, subchondral sclerosis, periarticular osteophytes, joint subluxation, joint space narrowing, avascular necrosis)", "why_ambiguous": "Unbalanced parenthesis; 'evidence of' list with no k stated, so one finding is enough by default. Avascular necrosis is both in the imaging list and its own pathway."},
+      {"quote": "Revision ... Disabling pain or functional disability, OR ... Instability of the knee joint, AND There are no contraindications*", "why_ambiguous": "Same pattern: AND after an OR list; the final AND presumably applies to the whole OR list."},
+      {"quote": "Failure of at least of 3 months of conservative non-surgical medical management ... includes all of the following: ... None of the following contraindications for unicompartmental arthroplasty are present", "why_ambiguous": "A 'none of' contraindication list is nested inside the conservative-management 'all of' list as a sixth item, so a parser would read it as a conservative therapy component."}
+    ]
+  },
+  "requirement_kinds": [
+    {"kind": "diagnosis", "quote": "Failure of a previous osteotomy / Distal femur fracture / Malignancy of the distal femur, proximal tibia, knee joint or adjacent soft tissue / Failure of previous unicompartmental knee replacement / Avascular necrosis of the knee / Proximal tibia fracture", "where": "Position Statement, TKA bullets 1-6"},
+    {"kind": "imaging finding", "quote": "Advanced joint disease demonstrated by radiographic or magnetic resonance imaging (MRI) evidence of subchondral cysts, subchondral sclerosis, periarticular osteophytes, joint subluxation, joint space narrowing, avascular necrosis", "where": "Position Statement, TKA bullet 7"},
+    {"kind": "imaging finding", "quote": "Advanced osteoarthritis or posttraumatic arthritis (Kellgren-Lawrence Grade 3 or 4) affecting only a single compartment (medial, lateral or patellofemoral)", "where": "UKA bullet 1"},
+    {"kind": "symptom", "quote": "Pain or functional disability from injury due to trauma or arthritis of the joint", "where": "TKA bullet 8"},
+    {"kind": "symptom", "quote": "Crepitus, effusion, or swelling with limited range of motion", "where": "UKA bullet 2"},
+    {"kind": "functional impairment", "quote": "Pain and functional disability that interferes with activities of daily living", "where": "UKA bullet 3"},
+    {"kind": "measurement threshold", "quote": "Total arc of motion by goniometer > 90 degrees", "where": "UKA bullet 4"},
+    {"kind": "conservative therapy", "quote": "Failure of at least 3 months of conservative non-surgical management that is clearly documented in the medical record, and includes 1 or more of the following", "where": "TKA bullet 9"},
+    {"kind": "conservative therapy", "quote": "includes all of the following: Activity modification, AND Anti-inflammatory medications or analgesics (unless contraindicated), AND Supervised physical therapy, AND Assistive device use, AND Therapeutic injections into the knee (unless contraindicated)", "where": "UKA bullet 6"},
+    {"kind": "prior procedure", "quote": "Failure of previous unicompartmental knee replacement", "where": "TKA bullet 4"},
+    {"kind": "documentation/photos", "quote": "clearly documented in the medical record", "where": "TKA and UKA conservative management"},
+    {"kind": "other", "quote": "Active systemic bacteremia / Active skin infection or open wound within the planned surgical site of the knee / Neuropathic arthritis / Rapidly progressive neurological disease", "where": "Contraindications footnote (TKA and revision)"},
+    {"kind": "other", "quote": "Varus deformity > 15 degrees for medial unicompartmental knee arthroplasty; Valgus deformity > 20 degrees for lateral ...; Flexion contracture > 15 degrees", "where": "UKA contraindications"}
+  ],
+  "thresholds": [
+    {"quantity": "total arc of motion (UKA)", "value": "> 90", "unit": "degrees (goniometer)", "quote": "Total arc of motion by goniometer > 90 degrees"},
+    {"quantity": "Kellgren-Lawrence grade (UKA)", "value": ">= 3", "unit": "grade", "quote": "(Kellgren-Lawrence Grade 3 or 4)"},
+    {"quantity": "flexion contracture (UKA exclusion)", "value": "> 15", "unit": "degrees", "quote": "Flexion contracture > 15 degrees"},
+    {"quantity": "varus deformity (medial UKA exclusion)", "value": "> 15", "unit": "degrees", "quote": "Varus deformity > 15 degrees for medial unicompartmental knee arthroplasty"},
+    {"quantity": "valgus deformity (lateral UKA exclusion)", "value": "> 20", "unit": "degrees", "quote": "Valgus deformity > 20 degrees for lateral unicompartmental knee arthroplasty"}
+  ],
+  "time_windows": [
+    {"what": "TKA conservative non-surgical management", "length": "at least 3 months", "quote": "Failure of at least 3 months of conservative non-surgical management"},
+    {"what": "UKA conservative management", "length": "at least 3 months", "quote": "Failure of at least of 3 months of conservative non-surgical medical management"}
+  ],
+  "codes": {"cpt_hcpcs_listed": true, "icd10_listed": false, "codes_tied_to_criteria": "Codes listed in a flat table (27438, 27446, 27447, 27486, 27487); not mapped to the TKA/UKA/revision sections except by description wording. 27446 is 'medial OR lateral compartment' and is the UKA code; patellofemoral UKA is not clearly coded (27438 is patella with prosthesis).", "non_covered_code_lists": "none"},
+  "external_dependencies": [
+    {"what": "Medicare Advantage: CMS LCD Major Joint Replacement (Hip and Knee) L33618", "quote": "Medicare Advantage products: The following Local Coverage Determination (LCD) was reviewed on the last guideline review date: Major Joint Replacement (Hip and Knee) (L33618)"},
+    {"what": "FEP and SAO plans defer to their own guidelines", "quote": "Federal Employee Program (FEP): Follow FEP guidelines. State Account Organization (SAO): Follow SAO guidelines."},
+    {"what": "Florida step therapy exemption law", "quote": "in compliance with Florida law 627.42393, members or providers may request a step therapy protocol exemption"}
+  ],
+  "definitions_that_change_meaning": [
+    {"term": "Kellgren-Lawrence Grade", "definition_quote": "Grade 3: Moderate multiple osteophytes, definite narrowing of joint space, some sclerosis and possible deformity of bone contour"},
+    {"term": "Definitions section", "definition_quote": "No guideline specific definitions apply."}
+  ],
+  "vague_terms": [
+    {"quote": "Activity restrictions as is reasonable", "problem": "'reasonable' undefined; no duration/adherence standard"},
+    {"quote": "Weight reduction as appropriate / Therapeutic injections into the knee as appropriate", "problem": "'appropriate' left to clinician; a chart that says nothing cannot be distinguished from 'not appropriate'"},
+    {"quote": "Failure of at least 3 months of conservative non-surgical management", "problem": "'Failure' not defined (no pain score, no functional measure); 3 months continuous? any one modality enough?"},
+    {"quote": "Pain or functional disability", "problem": "No severity threshold, no scale; the Description says 'severe limitation' but criteria do not"},
+    {"quote": "Progressive and substantial bone loss", "problem": "No measurement"},
+    {"quote": "Disabling pain or functional disability", "problem": "Undefined 'disabling'"},
+    {"quote": "Instability of the knee joint", "problem": "Revision pathway; no exam/imaging standard"}
+  ],
+  "extraction_hazards": [
+    "Bullets (•) and sub-bullets (o, ▪) carry the logic via indentation; pdftotext keeps indentation but OR/AND are in trailing words, so a parser must read the keywords at line ends.",
+    "Mis-nested list in UKA: contraindication list appears as a sixth item inside the conservative-management list.",
+    "Footnote markers (* and **) hold the contraindication list and the K-L scale below the criteria.",
+    "Description contains a ~100-line UpToDate quotation with words like 'contraindications', 'age', 'BMI' that are not criteria; keyword extraction will pick up false requirements (e.g., 'under the age of 50' caution, UKA 'ideal candidates... weighing less than 82 kg').",
+    "Typo 'Unicomparmental' heading; unbalanced parenthesis in imaging list.",
+    "Navigation bar text (Position Statement / Billing/Coding / ...) repeated in the header block."
+  ],
+  "interesting_structures": [
+    "Three sub-policies in one section (TKA, revision, UKA) with different logic shapes: TKA OR-list-then-AND, revision OR-list-then-AND, UKA a straight AND list.",
+    "Same concept (conservative therapy) is 1-of-8 for TKA but all-of-5 for UKA: the more conservative operation gets stricter prerequisites.",
+    "No BMI, HbA1c, tobacco or age criteria at all; BMI > 40 contraindication was deleted 08/15/19 (history).",
+    "Step therapy exemption statement attached to the policy under Florida law."
+  ],
+  "fit_to_tree": {"score": 3, "scale": "1 = clean, 5 = needs new constructs or human judgment", "why": "Content is all/any/not, but the flat bullet list with OR then AND (TKA) needs a human decision about grouping, the UKA contraindications are mis-nested, and the leaves ('failure', 'reasonable', 'appropriate') are soft. The 8-way conservative-therapy menu is a clean 1-of-n."}
+}

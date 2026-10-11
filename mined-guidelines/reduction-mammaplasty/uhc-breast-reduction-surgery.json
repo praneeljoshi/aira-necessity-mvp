@@ -1,0 +1,19 @@
+{
+  "payer": "UnitedHealthcare",
+  "payer_key": "uhc",
+  "treatment": "reduction-mammaplasty",
+  "title": "Breast Reduction Surgery",
+  "policy_number": "",
+  "effective": "",
+  "url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-medical-drug/breast-reduction-surgery.pdf",
+  "final_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-medical-drug/breast-reduction-surgery.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "uhc-breast-reduction-surgery.pdf",
+  "sha256": "0e6a4039cbb752af9979227f7d5577e1103686a3e546305ad083282e4e72027c",
+  "pages": 3,
+  "bytes": 296829,
+  "retrieved": "2026-10-09",
+  "printed_date": "Effective June 1, 2026 (MP.004.32)"
+}

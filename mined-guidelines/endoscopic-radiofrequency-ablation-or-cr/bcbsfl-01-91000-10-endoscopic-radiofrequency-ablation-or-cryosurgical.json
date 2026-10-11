@@ -1,0 +1,19 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "endoscopic-radiofrequency-ablation-or-cr",
+  "title": "Endoscopic Radiofrequency Ablation or Cryosurgical Ablation for Barrett\u2019s Esophagus",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JEWFS1U4BTJR78BG9",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "01-91000-10",
+  "original_effective": "01/15/13",
+  "reviewed": "01/22/26",
+  "revised": "02/15/26",
+  "file": "bcbsfl-01-91000-10-endoscopic-radiofrequency-ablation-or-cryosurgical.pdf",
+  "sha256": "f1cc7bf5c9a8cc460a35ee0af0888611a3db1cc07ee878e8e2a2ebc1be5a54d5",
+  "pages": 5,
+  "bytes": 674707,
+  "retrieved": "2026-10-09"
+}

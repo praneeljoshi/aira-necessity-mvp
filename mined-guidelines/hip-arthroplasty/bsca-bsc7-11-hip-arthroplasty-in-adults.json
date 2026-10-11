@@ -1,0 +1,19 @@
+{
+  "payer": "Blue Shield of California",
+  "payer_key": "blueshield-ca",
+  "treatment": "hip-arthroplasty",
+  "title": "Hip Arthroplasty in Adults",
+  "policy_number": "BSC7.11",
+  "effective": "10/1/2024",
+  "url": "https://www.blueshieldca.com/content/dam/bsca/en/provider/docs/medical-policies/Hip-Arthroplasty-Adults.pdf",
+  "final_url": "https://www.blueshieldca.com/content/dam/bsca/en/provider/docs/medical-policies/Hip-Arthroplasty-Adults.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "bsca-bsc7-11-hip-arthroplasty-in-adults.pdf",
+  "sha256": "71135703fe2c75d0a46b2ebc6427c23a4c87383ee0b134b733922ea607f61614",
+  "pages": 19,
+  "bytes": 283197,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original 04/01/2016; Effective November 1, 2025"
+}

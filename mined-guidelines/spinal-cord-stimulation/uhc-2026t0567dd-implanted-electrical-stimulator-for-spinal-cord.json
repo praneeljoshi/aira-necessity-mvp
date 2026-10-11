@@ -1,0 +1,19 @@
+{
+  "payer": "UnitedHealthcare",
+  "payer_key": "uhc",
+  "treatment": "spinal-cord-stimulation",
+  "title": "Implanted Electrical Stimulator for Spinal Cord",
+  "policy_number": "2026T0567DD",
+  "effective": "01/01/2026",
+  "url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-medical-drug/implanted-electrical-stimulator-spinal-cord.pdf",
+  "final_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-medical-drug/implanted-electrical-stimulator-spinal-cord.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "uhc-2026t0567dd-implanted-electrical-stimulator-for-spinal-cord.pdf",
+  "sha256": "f3807fe648eada0a90b0bdba3f95040bdf06c8e0f14b44f242f68b487de798a5",
+  "pages": 13,
+  "bytes": 431312,
+  "retrieved": "2026-10-09",
+  "printed_date": "Effective January 1, 2026"
+}

@@ -1,0 +1,19 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "isolated-small-bowel-transplant",
+  "title": "Isolated Small Bowel Transplant",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76F1SDSAE3APJO9ZM4P",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-40000-18",
+  "original_effective": "07/15/02",
+  "reviewed": "06/26/25",
+  "revised": "07/15/25",
+  "file": "bcbsfl-02-40000-18-isolated-small-bowel-transplant.pdf",
+  "sha256": "b5f1ea0facf2b77e2e00b67bbefb30b66f7cd1489f123df2e7d1c8e2ca18cea2",
+  "pages": 6,
+  "bytes": 768041,
+  "retrieved": "2026-10-09"
+}

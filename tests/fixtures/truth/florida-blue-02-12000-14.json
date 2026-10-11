@@ -1,0 +1,170 @@
+{
+  "id": "florida-blue-02-12000-14",
+  "payer": "Florida Blue",
+  "payer_aliases": [
+    "Florida Blue",
+    "BCBS FL",
+    "BCBSFL",
+    "Blue Cross Blue Shield of Florida",
+    "Blue Cross and Blue Shield of Florida",
+    "BCBS of Florida"
+  ],
+  "title": "Mastectomy for Gynecomastia",
+  "guideline_number": "02-12000-14",
+  "effective_date": "02/15/26",
+  "reviewed_date": "01/22/26",
+  "source_file": "bcbsfl-02-12000-14-mastectomy-for-gynecomastia.pdf",
+  "scope": {
+    "cpt": {
+      "19300": "covered"
+    },
+    "icd10": [
+      "N62"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "post_adolescent_male",
+      "text": "Gynecomastia in post adolescent male",
+      "question": "Is the patient a male whose gynecomastia is post-adolescent (puberty completed, adult testicular size attained)?"
+    },
+    {
+      "id": "male_over_18",
+      "text": "Male is over age 18 years of age",
+      "question": "Is the male patient over 18 years of age?",
+      "threshold": {
+        "kind": "number",
+        "op": "gt",
+        "value": 18,
+        "unit": "years"
+      }
+    },
+    {
+      "id": "glandular_not_fatty_tissue",
+      "text": "Tissue removed is glandular breast tissue and not fatty tissue",
+      "question": "Is the tissue to be removed glandular breast tissue (true gynecomastia on exam/imaging) rather than fatty tissue (pseudogynecomastia)?"
+    },
+    {
+      "id": "not_result_of_obesity_adolescence_drugs_endocrine",
+      "text": "Enlargement of the breast (glandular breast tissue) is not the result of obesity, adolescence, medications and or drugs (e.g., steroids, marijuana), reversible drug treatment, or endocrine disorder.",
+      "question": "Does the chart document that the glandular breast enlargement is not caused by obesity, adolescence, medications or drugs (e.g., steroids, marijuana), a reversible drug treatment, or an endocrine disorder?"
+    },
+    {
+      "id": "symptomatology_and_duration",
+      "text": "Symptomatology and duration (e.g., pain symptoms and discomfort [distention and tightness to the breast], signs of deformity, mastitis)",
+      "question": "Are the symptoms (e.g., pain, discomfort, distention/tightness, deformity, mastitis) and their duration documented?"
+    },
+    {
+      "id": "endocrine_workup",
+      "text": "Endocrine work-up (endocrine causes ruled out e.g., hyperthyroidism)",
+      "question": "Has an endocrine work-up been done that rules out endocrine causes (e.g., hyperthyroidism, testosterone/estradiol, hCG, prolactin, LH)?"
+    },
+    {
+      "id": "post_surgical_pathology_report",
+      "text": "Post surgical pathology report.",
+      "question": "Is a post-surgical pathology report available (a claim-time submission requirement; cannot exist in a pre-service chart)?",
+      "answerable": false
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "mastectomy_for_gynecomastia",
+      "name": "Mastectomy for gynecomastia",
+      "applies_to_cpt": [
+        "19300"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "Mastectomy for gynecomastia meets the definition of medical necessity when ALL of the following exist, with the Required Documentation",
+        "children": [
+          {
+            "type": "all",
+            "label": "ALL of the following exist",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "post_adolescent_male"
+              },
+              {
+                "type": "leaf",
+                "criterion": "male_over_18"
+              },
+              {
+                "type": "leaf",
+                "criterion": "glandular_not_fatty_tissue"
+              },
+              {
+                "type": "leaf",
+                "criterion": "not_result_of_obesity_adolescence_drugs_endocrine"
+              }
+            ]
+          },
+          {
+            "type": "all",
+            "label": "Required Documentation: the primary treating physician MUST submit the following information",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "symptomatology_and_duration"
+              },
+              {
+                "type": "leaf",
+                "criterion": "endocrine_workup"
+              },
+              {
+                "type": "leaf",
+                "criterion": "post_surgical_pathology_report"
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "Liposuction performed as an adjunct procedure to a surgical mastectomy may be considered an appropriate treatment option (note under the criteria; no separate code is listed).",
+        "All requests are reviewed to rule out cosmetic versus medical necessity; photos are not required with the initial review but should be maintained in the medical record and may be requested."
+      ]
+    }
+  ],
+  "notes": [
+    "Built from the single clean copy in the PDF (02-12000-14, Reviewed 01/22/26, Revised 02/15/26); the download holds no redline.",
+    "effective_date is the 'Revised: 02/15/26' date of this version; the Original Effective Date printed is 05/15/01; reviewed_date is 'Reviewed: 01/22/26'.",
+    "One pathway: the document grants coverage for one procedure (19300) with one 'ALL of the following' list. The Reimbursement Information 'Required Documentation' block (physician MUST submit) applies to that pathway and is nested inside its 'all' as a second labelled block.",
+    "'Male is over age 18 years of age' is read literally as greater than 18 (threshold gt 18 years); a reviewer could read it as 18 or older.",
+    "'Tissue removed is glandular breast tissue and not fatty tissue' is one requirement (glandular, not fat), not two.",
+    "'Enlargement ... is not the result of obesity, adolescence, medications and or drugs (e.g., steroids, marijuana), reversible drug treatment, or endocrine disorder' is one leaf (one bullet, one requirement that the listed causes are excluded). A reviewer could instead build not(any(obesity, adolescence, medications/drugs, reversible drug treatment, endocrine disorder)) with five one-word leaves; the endocrine work-up leaf is where a chart shows the endocrine part.",
+    "'Post surgical pathology report' is a required submission the document lists, but it is produced by the surgery being authorized, so no pre-service chart can show it: kept as a criterion with answerable: false (a claim-time document) rather than dropped. Symptomatology/duration and the endocrine work-up exist pre-operatively and are answerable.",
+    "The LOINC table ('may be required documentation': physician history and physical, progress notes, plan of treatment, within six months before the date of service) is permissive ('may') and is not in the tree.",
+    "The lead-in 'Mastectomy for gynecomastia is considered cosmetic in nature and is generally a contract exclusion for the following indications' introduces three bullets, recorded as three exclusions with the bullet text. No code is tagged non-covered: 19300 is the covered procedure and is cosmetic only in those circumstances; no liposuction code appears in the billing table, so the liposuction-as-sole-procedure exclusion carries no code.",
+    "Code mapping: 19300 is the only code and is governed by the one pathway. ICD-10 N62 (Hypertrophy of the breast) is listed as supporting medical necessity.",
+    "The DESCRIPTION's UpToDate summary (surgery considered when gynecomastia does not regress, causes considerable discomfort or psychological distress, or is longstanding greater than 12 months; adolescents generally not until adult testicular size) is background, not a Florida Blue requirement, and is not in the tree.",
+    "Program exceptions: FEP follows FEP guidelines; SAO follows SAO guidelines; Medicare Advantage products: the document both cites LCD 'Cosmetic and Reonstructive Surgery, (L38914)' (printed as an NCD, with that spelling) and states 'No National Coverage Determination (NCD) was found at the time of the last guideline review'.",
+    "The step-therapy protocol exemption paragraph (Florida law 627.42393) is boilerplate; this guideline contains no step-therapy requirement."
+  ],
+  "plan_types": [
+    "All lines of business unless otherwise noted in the Program Exceptions section"
+  ],
+  "excluded_plans": [
+    "Federal Employee Program (FEP): Follow FEP guidelines",
+    "State Account Organization (SAO): Follow SAO guidelines",
+    "Medicare Advantage products: Cosmetic and Reconstructive Surgery (L38914); no NCD found at the last guideline review"
+  ],
+  "exclusions": [
+    {
+      "text": "When performed for cosmetic purposes",
+      "cpt": []
+    },
+    {
+      "text": "Breast enlargement resulting from obesity",
+      "cpt": []
+    },
+    {
+      "text": "Removal of fatty tissue alone.",
+      "cpt": []
+    },
+    {
+      "text": "Liposuction as the sole procedure for reduction mammaplasty or breast reduction is considered experimental or investigational as there is insufficient clinical evidence to support the use of liposuction as the sole procedure for all indications.",
+      "cpt": []
+    }
+  ],
+  "status": "ok"
+}

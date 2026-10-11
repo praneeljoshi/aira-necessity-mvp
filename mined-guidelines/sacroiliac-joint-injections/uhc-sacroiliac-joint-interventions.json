@@ -1,0 +1,19 @@
+{
+  "payer": "UnitedHealthcare",
+  "payer_key": "uhc",
+  "treatment": "sacroiliac-joint-injections",
+  "title": "Sacroiliac Joint Interventions",
+  "policy_number": "",
+  "effective": "2026-01-01",
+  "url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/surest/sacroiliac-joint-interventions.pdf",
+  "final_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/surest/sacroiliac-joint-interventions.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "uhc-sacroiliac-joint-interventions.pdf",
+  "sha256": "cc3b4aafa300ff1a88f80baa8e80a0965251406512155056d206c0b0dba1fd22",
+  "pages": 12,
+  "bytes": 419048,
+  "retrieved": "2026-10-09",
+  "printed_date": "Policy 2026T0621O; Effective September 10, 2026"
+}

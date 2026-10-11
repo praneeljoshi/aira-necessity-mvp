@@ -1,0 +1,80 @@
+{
+  "id": "florida-blue-02-40000-25",
+  "payer": "Florida Blue",
+  "payer_aliases": ["Florida Blue", "BCBSF", "Blue Cross and Blue Shield of Florida", "Blue Cross Blue Shield of Florida", "BCBSFL", "BCBS FL", "BCBS of Florida"],
+  "title": "Frenectomy or Frenotomy for Ankyloglossia (Tongue-Tie) in Newborns, Children, & Adolescents",
+  "guideline_number": "02-40000-25",
+  "effective_date": "03/15/24",
+  "reviewed_date": "02/27/25",
+  "source_file": "bcbsfl-02-40000-25-frenectomy-or-frenotomy-for-ankyloglossia-tongue-t.pdf",
+  "plan_types": ["All lines of business unless otherwise noted in the Program Exceptions section"],
+  "excluded_plans": ["Federal Employee Program (FEP)", "State Account Organization (SAO)"],
+  "scope": {
+    "cpt": {
+      "40806": "covered",
+      "40819": "covered",
+      "41010": "covered",
+      "41115": "covered",
+      "41520": "covered"
+    },
+    "icd10": ["Q18.9", "Q38.1", "Q38.6"]
+  },
+  "criteria": [
+    {
+      "id": "ankyloglossia",
+      "text": "to treat ankyloglossia",
+      "question": "Is ankyloglossia (tongue-tie: a short lingual frenum or one attached too close to the tip of the tongue) diagnosed, and is the procedure being done to treat it?"
+    },
+    {
+      "id": "newborn_feeding_difficulties",
+      "text": "newborn feeding difficulties",
+      "question": "Is the patient a newborn with documented feeding difficulties (for example difficulty latching or breastfeeding) attributed to the tongue-tie?"
+    },
+    {
+      "id": "childhood_adolescent_articulation_problems",
+      "text": "childhood and adolescent articulation problems",
+      "question": "Is the patient a child or adolescent with documented articulation problems (difficulty producing speech sounds because of restricted tongue movement), as opposed to a general speech or language disorder?"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "newborn_feeding_difficulties",
+      "name": "Ankyloglossia with newborn feeding difficulties",
+      "applies_to_cpt": ["40806", "40819", "41010", "41115", "41520"],
+      "requires": {"type": "all", "label": "to treat ankyloglossia ... when newborn feeding difficulties ... are present", "children": [
+        {"type": "leaf", "criterion": "ankyloglossia"},
+        {"type": "leaf", "criterion": "newborn_feeding_difficulties"}
+      ]}
+    },
+    {
+      "id": "childhood_adolescent_articulation_problems",
+      "name": "Ankyloglossia with childhood and adolescent articulation problems",
+      "applies_to_cpt": ["40806", "40819", "41010", "41115", "41520"],
+      "requires": {"type": "all", "label": "to treat ankyloglossia ... when ... childhood and adolescent articulation problems are present", "children": [
+        {"type": "leaf", "criterion": "ankyloglossia"},
+        {"type": "leaf", "criterion": "childhood_adolescent_articulation_problems"}
+      ]},
+      "notes": [
+        "Surgical correction of ankyloglossia to resolve speech pathology is experimental or investigational; only articulation problems are a covered indication."
+      ]
+    }
+  ],
+  "exclusions": [
+    {"text": "All other indications, including surgical correction of ankyloglossia to resolve speech pathology, are considered experimental or investigational.", "cpt": []}
+  ],
+  "notes": [
+    "Built by hand from the PDF only (pdftotext -layout). The download holds a single clean copy of the guideline (no redline), 5 pages, Revised 03/15/24, Reviewed 02/27/25, Original Effective Date 03/15/15. effective_date is the printed 'Revised' date; reviewed_date is the printed 'Reviewed' date. (The update table also shows a 03/15/25 review with position statements maintained.)",
+    "Payer is printed as 'Florida Blue Medical Policy and Coverage Committee'; BCBSF / Blue Cross and Blue Shield of Florida are aliases.",
+    "plan_types is the header statement: all lines of business unless otherwise noted in Program Exceptions. excluded_plans are FEP (follow FEP guidelines) and SAO (follow SAO guidelines). Medicare Advantage is NOT excluded: the Program Exceptions say no NCD and/or LCD were found, so no other document governs it.",
+    "The whole coverage position is one sentence: 'Lingual frenectomy, lingual frenotomy (i.e., frenulectomy), frenum incision/excision, or frenoplasty to treat ankyloglossia meets the definition of medical necessity when newborn feeding difficulties or childhood and adolescent articulation problems are present.' It is read as all(ankyloglossia, any(newborn feeding difficulties, childhood and adolescent articulation problems)) and split into two pathways, one per indication/population, because the title names the populations separately (Newborns, Children, & Adolescents) and each indication belongs to a different age group. A reviewer could equally keep one pathway with an any of the two indications; the leaves are the same.",
+    "'to treat ankyloglossia' is a leaf because the diagnosis is a chart-documentable requirement and the covered procedures are covered only for it (the exclusion says all other indications are investigational). The text is the verbatim phrase from the position statement.",
+    "'newborn feeding difficulties' carries the population (newborn) and the indication (feeding difficulties) in one phrase; it is kept as one leaf with no numeric threshold because the document does not define newborn by age. Likewise 'childhood and adolescent articulation problems' is one leaf (child or adolescent, with articulation problems).",
+    "Hardest call: 'childhood and adolescent articulation problems' is covered while 'surgical correction of ankyloglossia to resolve speech pathology' is experimental or investigational. The reading taken: articulation problems (mechanical speech-sound production limited by tongue restriction) are the covered indication, and a general speech or language disorder (speech pathology) is not. The criterion question says so; the exclusion carries no codes because the same CPT codes are covered for the other indications.",
+    "The exclusion's codes are empty: 40806, 40819, 41010, 41115 and 41520 are covered for the two indications, and no code describes exactly 'surgical correction of ankyloglossia to resolve speech pathology' or 'all other indications'.",
+    "Code-to-pathway mapping: the document ties no code to an indication, so both pathways govern all five codes (listed explicitly rather than left empty). The labial codes 40806 (incision of labial frenum) and 40819 (excision of frenum, labial or buccal) are in the table untagged and are therefore covered, even though ankyloglossia is a lingual condition; the position statement's 'frenum incision/excision' is not limited to the lingual frenum. A reviewer could argue the labial codes describe lip-tie, which this guideline does not address.",
+    "The DESCRIPTION sentences about office procedures in neonates versus operating-room division or excision (with or without Z-plasty) in older children are background on setting and technique, not coverage requirements, and are left out. The DEFINITIONS section (partial versus complete ankyloglossia, frenum types) is background; 'Complete ankyloglossia requires extensive surgical reconstruction' is a definition, not a criterion.",
+    "REIMBURSEMENT INFORMATION only refers back to the position statement; nothing to add. The step therapy protocol exemption paragraph (Florida law 627.42393) is a process, not a chart requirement, and this guideline has no step therapy requirement.",
+    "ICD-10 codes Q18.9, Q38.1 and Q38.6 are listed as supporting medical necessity (the PDF header is misprinted 'Support edical Necessity'); they are recorded in scope.icd10 and are not criteria."
+  ],
+  "status": "ok"
+}

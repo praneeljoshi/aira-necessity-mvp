@@ -1,0 +1,225 @@
+{
+ "file": "premera-7-01-546-spinal-cord-and-dorsal-root-ganglion-stimulation.pdf",
+ "treatment": "spinal-cord-stimulation",
+ "payer": "premera",
+ "doc_kind": "medical policy",
+ "lines_of_business": [
+  "Not listed by product; site-of-service criteria do not apply to Indian Health Services facilities"
+ ],
+ "effective_or_revised": "Effective Jul. 1, 2026; last revised Jun. 8, 2026; replaces 7.01.25 (BCBSA ref 7.01.25)",
+ "sections_in_order": [
+  "Introduction",
+  "Policy Coverage Criteria (Site of Service table; procedure tables)",
+  "Documentation Requirements",
+  "Coding",
+  "Related Information",
+  "Definition of Terms",
+  "Evidence Review",
+  "References",
+  "History"
+ ],
+ "criteria_location": "Policy Coverage Criteria pp.2-6 (two stacked tables: site of service, then procedure criteria). Documentation Requirements p.7. Definitions p.9-10.",
+ "procedures_covered": [
+  "SCS trial and permanent (standard and high-frequency)",
+  "DRG stimulation trial and permanent",
+  "Replacement of SCS/DRG",
+  "Site of service for elective surgery (ASC vs hospital outpatient vs inpatient)",
+  "Replacement of functioning standard SCS with HF"
+ ],
+ "logic": {
+  "top_level": "pathways (site of service; SCS; DRG; replacement; investigational) in a two-column table",
+  "max_nesting_depth": 3,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "'Investigational' row lists other situations: central deafferentation, nociceptive pain, CLI, refractory angina, pelvic pain, cancer pain, heart failure. Site of service: hospital outpatient allowed if no ASC within 30 miles or a listed high-risk condition.",
+  "initial_vs_repeat": "Replacement 'only a small subset' when device not working/broken OR condition changed so processor inadequate. HF replacement of functioning standard SCS not medically necessary.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Medically necessary sites of service ... may be considered medically necessary if there is no access to an ambulatory surgical center due to one of the following criteria ... OR The individual has a clinical condition which puts them at increased risk",
+    "why_ambiguous": "Nested bullets with an OR at table-cell level; extracted text loses which list the 'OR' joins"
+   },
+   {
+    "quote": "Replacement ... when: The stimulator is not working or is broken OR Replacement is needed because the individual's condition has changed",
+    "why_ambiguous": "'in only a small subset of individuals' is non-operational"
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "conservative therapy",
+   "quote": "Other treatment modalities (pharmacological, surgical, psychological, or physical, if applicable) have failed, or are judged to be unsuitable or contraindicated",
+   "where": "SCS and DRG rows"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "severe and chronic neuropathic pain of the trunk or limbs resulting from actual damage to peripheral nerves (such as failed lumbar back surgery syndrome, complex regional pain syndrome, arachnoiditis, phantom limb/stump pain, peripheral neuropathy, or painful diabetic neuropathy)",
+   "where": "SCS row bullet 2"
+  },
+  {
+   "kind": "psych/nutrition evaluation",
+   "quote": "Member has obtained clearance by a licensed psychologist, psychiatrist, or other licensed mental health professional",
+   "where": "SCS row bullet 3"
+  },
+  {
+   "kind": "other",
+   "quote": "No untreated drug habituation exists",
+   "where": "SCS row bullet 4"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "demonstration of at least a 50% reduction in pain with at least a 3-day trial of temporary spinal cord stimulation",
+   "where": "Permanent placement"
+  },
+  {
+   "kind": "site of service",
+   "quote": "There is no qualifying ASC within 30 miles ... individual is aged 18 or younger ... ASA classification III or higher",
+   "where": "Site of Service table"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "Relevant history and physical showing that the individual has severe and chronic neuropathic pain ...",
+   "where": "Documentation Requirements"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "Morbid obesity (BMI greater than or equal to 50); COPD (FEV1 less than 50%); MELD Score greater than 8; recent MI (less than 3 months)",
+   "where": "Site-of-service risk list"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "trial pain reduction",
+   "value": ">= 50",
+   "unit": "%",
+   "quote": "at least a 50% reduction in pain"
+  },
+  {
+   "quantity": "trial duration",
+   "value": ">= 3",
+   "unit": "days",
+   "quote": "at least a 3-day trial"
+  },
+  {
+   "quantity": "distance to ASC",
+   "value": "30",
+   "unit": "miles",
+   "quote": "no qualifying ASC within 30 miles"
+  },
+  {
+   "quantity": "age for hospital site exception",
+   "value": "<= 18",
+   "unit": "years",
+   "quote": "aged 18 or younger"
+  },
+  {
+   "quantity": "BMI",
+   "value": ">= 50",
+   "unit": "kg/m2",
+   "quote": "BMI greater than or equal to 50"
+  },
+  {
+   "quantity": "FEV1 (COPD)",
+   "value": "< 50",
+   "unit": "%",
+   "quote": "FEV1 less than 50%"
+  },
+  {
+   "quantity": "MELD",
+   "value": "> 8",
+   "unit": "points",
+   "quote": "MELD Score greater than 8"
+  },
+  {
+   "quantity": "recent MI/CVA",
+   "value": "< 3",
+   "unit": "months",
+   "quote": "Recent history of myocardial infarction (MI) (less than 3 months)"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "temporary stimulation trial",
+   "length": "at least 3 days",
+   "quote": "at least a 3-day trial of temporary spinal cord stimulation"
+  },
+  {
+   "what": "drug eluting stent / angioplasty (site-of-service risk)",
+   "length": "<1 year / <90 days",
+   "quote": "drug eluting stent placed less than 1 year or angioplasty less than 90 days"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Listed only; no mapping to SCS vs DRG",
+  "non_covered_code_lists": "None"
+ },
+ "external_dependencies": [
+  {
+   "what": "Site-of-service policy for ASC-selected procedures",
+   "quote": "11.01.525 Site of Service Ambulatory Service Center (ASC) Select Surgical Procedures"
+  },
+  {
+   "what": "Related policies",
+   "quote": "7.01.574 Implantable Peripheral Nerve Stimulation ..."
+  },
+  {
+   "what": "BCBSA reference policy 7.01.25",
+   "quote": "BCBSA Ref. Policy: 7.01.25"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Neuropathic pain",
+   "definition_quote": "Placement of a spinal cord stimulator is only appropriate for the treatment of neuropathic pain."
+  },
+  {
+   "term": "Nociceptive pain",
+   "definition_quote": "Nociceptive pain happens after tissue in the body has been damaged or is inflamed."
+  },
+  {
+   "term": "Poorly controlled, resistant hypertension",
+   "definition_quote": "3 or more drugs to control blood pressure"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "severe and chronic",
+   "problem": "no threshold"
+  },
+  {
+   "quote": "clearance by a licensed psychologist, psychiatrist, or other licensed mental health professional",
+   "problem": "'clearance' undefined; no content standard"
+  },
+  {
+   "quote": "No untreated drug habituation exists",
+   "problem": "negative; 'habituation' undefined"
+  },
+  {
+   "quote": "in only a small subset of individuals",
+   "problem": "not operational"
+  },
+  {
+   "quote": "(this list may not be all inclusive)",
+   "problem": "open-ended risk list"
+  }
+ ],
+ "extraction_hazards": [
+  "Two-column table: left column row header, right column criteria; pdftotext interleaves cells and bullet markers",
+  "Site-of-service table repeats headers at each page ('Site of Service for / Medical Necessity')",
+  "Footnote asterisks (*, **, ***) define terms below the table",
+  "Navigation icon glyph appears at page bottoms",
+  "Table rows split across pages mid-bullet",
+  "Related Information includes anatomic lead levels (not criteria)",
+  "33 pages, ~22 evidence review"
+ ],
+ "interesting_structures": [
+  "Site-of-service medical necessity bundled with clinical criteria (ASC preferred)",
+  "Clinical risk checklist with numeric thresholds for hospital outpatient site",
+  "Trial length of at least 3 days",
+  "Documentation requirements section mirrors criteria"
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "why": "Clinical criteria are a simple ALL list; the site-of-service table adds a second tree (OR of access barriers and clinical risks, with numeric thresholds) mixed into the same table."
+ }
+}

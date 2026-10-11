@@ -1,0 +1,179 @@
+{
+ "file": "bcbsma-703-reduction-mammaplasty-for-breast-related-symptoms.pdf",
+ "treatment": "reduction-mammaplasty",
+ "payer": "bcbsma",
+ "doc_kind": "medical policy (BCBSA 7.01.21 based)",
+ "lines_of_business": [
+  "Commercial: Managed Care (HMO and POS), PPO, Indemnity",
+  "Medicare HMO Blue / PPO Blue via LCD L35001"
+ ],
+ "effective_or_revised": "Policy history table shows entries through 4/2020 (current effective date not located in text)",
+ "sections_in_order": [
+  "Policy (Commercial; Medicare)",
+  "Prior Authorization Information",
+  "CPT/HCPCS/ICD Codes",
+  "Description",
+  "Policy History",
+  "Information Pertaining to All Policies",
+  "References",
+  "Endnotes"
+ ],
+ "criteria_location": "Policy section p.1-2: age criteria, clinical symptoms, weight rule, Schnur table, repeat-procedure rule.",
+ "procedures_covered": [
+  "Reduction mammaplasty CPT 19318 for macromastia"
+ ],
+ "logic": {
+  "top_level": "all (age criteria if under 18 AND symptoms AND weight)",
+  "max_nesting_depth": 3,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "'INVESTIGATIONAL for all other indications'; repeat reduction NOT MEDICALLY NECESSARY unless complications.",
+  "initial_vs_repeat": "Yes: 'Repeat reduction mammaplasty is considered NOT MEDICALLY NECESSARY unless there are complications resulting from the initial surgery.'",
+  "and_or_ambiguity": [
+   {
+    "quote": "Documentation of a minimum 6-week history of shoulder, neck, or back pain ... This includes documentation of the presence of shoulder grooving ... OR Recurrent or chronic intertrigo",
+    "why_ambiguous": "Is shoulder grooving required with the pain pathway ('This includes') or just an example?"
+   },
+   {
+    "quote": "Documented tanner stage IV or V for members aged 15-18, AND Stable height measurements for 6 months, OR Puberty completion as shown on wrist radiograph",
+    "why_ambiguous": "Precedence of AND/OR; what about under 15?"
+   },
+   {
+    "quote": "a minimum of 500g per breast removed OR the surgeon should follow the below Schnur sliding scale ... if the planned weight ... falls below 500g",
+    "why_ambiguous": "'should follow' and 'suggests' are advisory, not mandatory; table stops at BSA 1.90 (527 g) so BSA >1.90 is effectively 500 g only"
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "age",
+   "quote": "if a member is under age 18, the following age criteria must also be met",
+   "where": "Policy"
+  },
+  {
+   "kind": "other",
+   "quote": "Documented tanner stage IV or V for members aged 15-18",
+   "where": "Policy"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "Puberty completion as shown on wrist radiograph",
+   "where": "Policy"
+  },
+  {
+   "kind": "symptom",
+   "quote": "minimum 6-week history of shoulder, neck, or back pain related to macromastia",
+   "where": "Policy"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "not responsive to conservative therapy, such as an appropriate support bra, exercises, heat/cold treatment, and appropriate nonsteroidal anti-inflammatory agents/muscle relaxants",
+   "where": "Policy"
+  },
+  {
+   "kind": "symptom",
+   "quote": "Recurrent or chronic intertrigo ... resistant to topical treatment",
+   "where": "Policy"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "minimum of 500g per breast removed OR ... Schnur sliding scale",
+   "where": "Policy"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "Repeat reduction mammaplasty is considered NOT MEDICALLY NECESSARY unless there are complications",
+   "where": "Policy"
+  },
+  {
+   "kind": "other",
+   "quote": "precertification/preauthorization IS REQUIRED for all products if the procedure is performed inpatient",
+   "where": "Prior Authorization"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "tissue removed per breast",
+   "value": ">=500 or Schnur 22nd percentile (table to BSA 1.90 = 527 g)",
+   "unit": "g",
+   "quote": "minimum of 500g per breast removed"
+  },
+  {
+   "quantity": "symptom duration",
+   "value": ">=6",
+   "unit": "weeks",
+   "quote": "minimum 6-week history"
+  },
+  {
+   "quantity": "stable height",
+   "value": "6",
+   "unit": "months",
+   "quote": "Stable height measurements for 6 months"
+  },
+  {
+   "quantity": "Tanner stage",
+   "value": "IV or V",
+   "unit": "stage",
+   "quote": "tanner stage IV or V for members aged 15-18"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "symptom history",
+   "length": "6 weeks",
+   "quote": "minimum 6-week history"
+  },
+  {
+   "what": "stable height",
+   "length": "6 months",
+   "quote": "Stable height measurements for 6 months"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": true,
+  "codes_tied_to_criteria": "CPT 19318 and ICD-10-PCS excision codes 0HBT0ZZ etc. 'MUST be met for the following codes'; no ICD-10-CM diagnosis codes.",
+  "non_covered_code_lists": ""
+ },
+ "external_dependencies": [
+  {
+   "what": "Medicare Advantage LCD L35001",
+   "quote": "Local Coverage Determination (LCD): Reduction Mammaplasty (L35001)"
+  },
+  {
+   "what": "Gynecomastia policy 661",
+   "quote": "Surgical Treatment of Gynecomastia, #661"
+  }
+ ],
+ "definitions_that_change_meaning": [],
+ "vague_terms": [
+  {
+   "quote": "well-documented clinical symptoms",
+   "problem": "Undefined"
+  },
+  {
+   "quote": "appropriate support bra",
+   "problem": "No specification"
+  },
+  {
+   "quote": "The surgeon should follow the below Schnur sliding scale, which suggests",
+   "problem": "Advisory language in a criterion"
+  }
+ ],
+ "extraction_hazards": [
+  "Table truncated at BSA 1.90",
+  "Footnote asterisk BSA formula after the table",
+  "Age criteria listed before symptoms though conditional",
+  "Policy history shows old dates, hard to identify current version"
+ ],
+ "interesting_structures": [
+  "Pediatric/adolescent maturity criteria (Tanner, stable height or wrist x-ray)",
+  "500 g floor with Schnur as an alternative when below 500g",
+  "Repeat-surgery rule",
+  "PA depends on product and inpatient/outpatient"
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "scale": "1-5",
+  "why": "Mostly tree-shaped, but nested AND/OR in age block, advisory wording, and weight rule that is prospective."
+ }
+}

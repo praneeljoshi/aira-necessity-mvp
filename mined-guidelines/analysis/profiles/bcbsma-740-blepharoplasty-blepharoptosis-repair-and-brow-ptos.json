@@ -1,0 +1,189 @@
+{
+ "file": "bcbsma-740-blepharoplasty-blepharoptosis-repair-and-brow-ptos.pdf",
+ "treatment": "blepharoplasty",
+ "payer": "bcbsma",
+ "doc_kind": "medical policy (Blue Cross Blue Shield of Massachusetts)",
+ "lines_of_business": [
+  "Commercial: Managed Care (HMO and POS), PPO, Indemnity",
+  "Medicare HMO Blue and PPO Blue (points to LCD L34528 / CMS)"
+ ],
+ "effective_or_revised": "Policy 740; no effective date printed; Policy History latest 5/2020 (new policy 10/1/2015)",
+ "sections_in_order": [
+  "Policy: Commercial (Children; Children >9 and Adults; Blepharoplasty; Blepharoptosis Repair; Brow Lift; Not Medically Necessary; Cosmetic; Reconstructive)",
+  "Policy: Medicare",
+  "Prior Authorization Information",
+  "CPT/HCPCS/ICD codes",
+  "Description",
+  "Policy History",
+  "Information Pertaining to All Blue Cross Blue Shield Medical Policies",
+  "References"
+ ],
+ "criteria_location": "Policy: Commercial, pp.1-2. Prior authorization by product table p.3. No separate evidence section beyond a short description.",
+ "procedures_covered": [
+  "Upper eyelid blepharoplasty 15822, 15823",
+  "Lower eyelid blepharoplasty 15820, 15821 (cosmetic unless conjunctival irritation)",
+  "Blepharoptosis repair 67901-67908",
+  "Brow lift 67900",
+  "ICD-10-PCS eyelid reposition codes listed"
+ ],
+ "logic": {
+  "top_level": "pathways: children <=9; children >9 and adults (ANY of four conditions); blepharoplasty ALL; blepharoptosis ALL; brow lift ALL (single bullet)",
+  "max_nesting_depth": 3,
+  "k_of_n": [
+   {
+    "k": 1,
+    "n": 4,
+    "quote": "Upper eyelid blepharoplasty or blepharoptosis repair is considered MEDICALLY NECESSARY for ANY of the following conditions: Difficulty tolerating a prosthesis ...; Repair of a functional defect caused by trauma, tumor or surgery; Periorbital sequelae of thyroid disease; Nerve palsy"
+   }
+  ],
+  "exclusions_or_contraindications": "Closing 'Not Medically Necessary' (criteria not met), 'Cosmetic and Not Medically Necessary' (appearance absent functional signs; lower lid not meeting conjunctival irritation criteria) and 'Reconstructive' definition paragraphs. No contraindication list.",
+  "initial_vs_repeat": "None.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Upper field must improve by at least 20 degrees with eyelid taped compared to visual field with untaped lid, OR visual field obstruction by lid or brow must limit upper field to within 30 degrees of fixation.",
+    "why_ambiguous": "An OR inside an ALL list; two different tests (improvement >= 20 degrees OR absolute field <= 30 degrees). Repeated verbatim in three procedures. 'by lid or brow' means the same sentence serves blepharoplasty, ptosis and brow lift without distinguishing the source."
+   },
+   {
+    "quote": "There is either redundant skin overhanging the upper eyelid margin and resting on the eyelashes or significant dermatitis on the upper eyelid caused by redundant tissue, AND",
+    "why_ambiguous": "'either ... and ... or' nesting inside criterion 2; 'significant' undefined."
+   },
+   {
+    "quote": "Upper eyelid blepharoplasty or blepharoptosis repair is considered MEDICALLY NECESSARY for ANY of the following conditions",
+    "why_ambiguous": "Applies to two different procedures at once; and unlike the sections below, no vision/field criterion is required for these conditions."
+   },
+   {
+    "quote": "Brow lift ... when ALL of the following criteria are met: • Upper field must improve ...",
+    "why_ambiguous": "'ALL' over a single bullet."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "age",
+   "quote": "Individual is less than or equal to 9 years of age",
+   "where": "Children"
+  },
+  {
+   "kind": "risk",
+   "quote": "intended to relieve obstruction of central vision which, in the judgment of the treating physician, is severe enough to produce occlusion amblyopia",
+   "where": "Children criterion 2"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "Difficulty tolerating a prosthesis in an anophthalmic socket; trauma, tumor or surgery; thyroid sequelae; nerve palsy",
+   "where": "Children >9 and adults"
+  },
+  {
+   "kind": "symptom",
+   "quote": "Documented complaints of interference with vision or visual field-related activities such as difficulty reading or driving",
+   "where": "Blepharoplasty 1; ptosis 1"
+  },
+  {
+   "kind": "exam finding",
+   "quote": "redundant skin overhanging the upper eyelid margin and resting on the eyelashes or significant dermatitis",
+   "where": "Blepharoplasty 2"
+  },
+  {
+   "kind": "visual field threshold",
+   "quote": "Upper field must improve by at least 20 degrees with eyelid taped ... OR ... limit upper field to within 30 degrees of fixation",
+   "where": "all three procedures"
+  },
+  {
+   "kind": "lower lid",
+   "quote": "Lower lid blepharoplasty that does not meet the above conjunctival irritation criteria is considered cosmetic",
+   "where": "Cosmetic section"
+  },
+  {
+   "kind": "combined procedures",
+   "quote": "the individual must meet the criteria for each procedure",
+   "where": "Note"
+  },
+  {
+   "kind": "site/auth",
+   "quote": "Commercial Managed Care (HMO and POS): Prior authorization is required; PPO and Indemnity: not required",
+   "where": "Prior Authorization table"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "age (children pathway)",
+   "value": "<= 9",
+   "unit": "years",
+   "quote": "Individual is less than or equal to 9 years of age"
+  },
+  {
+   "quantity": "visual field improvement with taping",
+   "value": ">= 20",
+   "unit": "degrees",
+   "quote": "Upper field must improve by at least 20 degrees with eyelid taped"
+  },
+  {
+   "quantity": "upper field limit",
+   "value": "within 30",
+   "unit": "degrees of fixation",
+   "quote": "limit upper field to within 30 degrees of fixation"
+  }
+ ],
+ "time_windows": [],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "One line says criteria must be met for the CPT codes to be covered; no mapping. ICD-10-PCS (procedure) codes listed, not diagnoses.",
+  "non_covered_code_lists": "None."
+ },
+ "external_dependencies": [
+  {
+   "what": "Medicare LCD L34528 and CMS",
+   "quote": "Local Coverage Determination (LCD): Blepharoplasty, Blepharoptosis and Brow Lift (L34528)"
+  },
+  {
+   "what": "Ectropion/entropion/other eyelid conditions decided case by case, not in this policy",
+   "quote": "These conditions are not discussed in this document."
+  },
+  {
+   "what": "Related plastic surgery policy",
+   "quote": "Plastic Surgery, #068"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Reconstructive",
+   "definition_quote": "intended to correct a significant variation from normal related to accidental injury, disease, trauma, treatment of a disease or congenital defect are considered reconstructive in nature"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "in the judgment of the treating physician, is severe enough to produce occlusion amblyopia",
+   "problem": "Delegated to physician judgment."
+  },
+  {
+   "quote": "significant dermatitis",
+   "problem": "Undefined."
+  },
+  {
+   "quote": "Repair of a functional defect caused by trauma, tumor or surgery",
+   "problem": "'functional defect' not defined and no test."
+  },
+  {
+   "quote": "The medical necessity of the surgical correction of these problems should be determined by considering the specific underlying medical and ophthalmologic issues",
+   "problem": "Non-criteria."
+  }
+ ],
+ "extraction_hazards": [
+  "Numbered lists within lists and 'AND'/'OR' trailing; the 'either ... or' sentence is wrapped.",
+  "Page footers are single page digits.",
+  "ICD-10-PCS table could be mistaken for diagnosis codes.",
+  "Typo 'bleparoptosis' in the Summary.",
+  "Policy has no printed effective date (extraction metadata empty)."
+ ],
+ "interesting_structures": [
+  "Age-banded pathways: <= 9 years (amblyopia risk) vs > 9 and adults.",
+  "Photographs not required (removed 12/2015: 'Photograph requirements for blepharoplasty removed').",
+  "Prior authorization varies by product (HMO/POS requires, PPO/Indemnity does not).",
+  "Visual-field alternative: improvement >= 20 degrees OR absolute limit <= 30 degrees."
+ ],
+ "fit_to_tree": {
+  "score": 2,
+  "why": "Short, tidy any/all. The OR embedded in an ALL list and the age-banded pathways are the only structure."
+ }
+}

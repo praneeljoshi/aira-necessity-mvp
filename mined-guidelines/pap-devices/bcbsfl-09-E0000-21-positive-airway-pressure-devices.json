@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "pap-devices",
+  "title": "Positive Airway Pressure Devices",
+  "category": "Durable Medical Equipment",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76F53GIU535C8JS7QKX",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "09-E0000-21",
+  "original_effective": "02/15/01",
+  "reviewed": "08/28/25",
+  "revised": "09/15/25",
+  "file": "bcbsfl-09-E0000-21-positive-airway-pressure-devices.pdf",
+  "sha256": "912e7d9c2d2efe360178d189cf235537a6dcbd4522157305a65a462df19cb928",
+  "pages": 19,
+  "bytes": 638399,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original 02/15/01; Reviewed 08/28/25; Revised 09/15/25"
+}

@@ -1,0 +1,211 @@
+{
+  "id": "kaiser-redundant-skin-surgery",
+  "payer": "Kaiser Permanente Mid-Atlantic States",
+  "payer_aliases": ["Kaiser Permanente Mid-Atlantic States", "KPMAS", "Kaiser Permanente", "Kaiser Foundation Health Plan", "KFHP", "Kaiser Foundation Health Plan, Inc.", "Kaiser Foundation Health Plan of the Mid-Atlantic States, Inc.", "Mid-Atlantic Permanente Medical Group, P.C.", "Kaiser"],
+  "title": "Redundant Skin Surgery including Panniculectomy",
+  "guideline_number": null,
+  "effective_date": "2025-03-26",
+  "reviewed_date": "2025-03-26",
+  "source_file": "kp-redundant-skin-surgery-incl-panniculectomy.pdf",
+  "plan_types": [],
+  "excluded_plans": ["Medicare members: refer to CMS guidelines through Medicare Coverage Database requirements (if no NCD/LCD/LCA is found, use this policy)"],
+  "scope": {"cpt": {}, "icd10": []},
+  "criteria": [
+    {"id": "pannus_grade_2_or_above", "text": "Pannus is Grade II or above as documented by clinical notes and/or pre-operative notes", "question": "Do the clinical or pre-operative notes document the pannus as Grade II or higher (the panniculus lies over the genitals down to the thigh crease, or lower)?", "threshold": {"kind": "enum", "op": "gte_enum", "value": "Grade 2", "enum_values": ["Grade 1", "Grade 2", "Grade 3", "Grade 4", "Grade 5"]}},
+    {"id": "pannus_chronic_skin_condition", "text": "Pannus has caused chronic and persistent skin condition (panniculitis, intertriginous dermatitis, cellulitis, and skin ulcerations)", "question": "Has the pannus caused a chronic and persistent skin condition such as panniculitis, intertriginous dermatitis, cellulitis or skin ulceration?"},
+    {"id": "skin_condition_refractory_3_months", "text": "unresponsive and refractory to three or more months of medical treatment", "question": "Has the skin condition remained unresponsive to three or more months of medical treatment (good hygiene practices, topical antifungals, topical and/or systemic corticosteroids, and local and/or systemic antibiotics), with dates?", "threshold": {"kind": "duration_months", "op": "gte", "value": 3, "unit": "months"}},
+    {"id": "pannus_interferes_adl", "text": "Pannus interferes with activities of daily living", "question": "Does the pannus interfere with the patient's activities of daily living?"},
+    {"id": "concurrent_abdominal_or_gyn_procedure", "text": "Panniculectomy performed in conjunction with abdominal or gynecological procedures (such as hysterectomy, obesity surgery, including hernia repair that are reducible and have associated symptoms)", "question": "Is the panniculectomy planned in conjunction with an abdominal or gynecological procedure (such as hysterectomy, obesity surgery, or repair of a reducible symptomatic hernia)?"},
+    {"id": "persistent_infection_unresolved", "text": "there is persistent documented infection which cannot be resolved with medical treatments", "question": "Is there documented persistent infection that could not be resolved with medical treatment?"},
+    {"id": "reduce_skin_tension_wound_healing", "text": "the panniculectomy will reduce excessive skin tension that may impair wound healing", "question": "Does the surgeon document that the panniculectomy will reduce excessive skin tension that may impair healing of the abdominal or gynecological procedure's wound?"},
+    {"id": "undergoing_renal_transplant", "text": "patients undergoing renal transplant", "question": "Is the patient undergoing (listed or scheduled for) renal transplant?"},
+    {"id": "large_pannus_wound_complication_risk", "text": "whose large pannus creates a very high risk for wound complications", "question": "Does the chart document a large pannus that creates a very high risk of wound complications for the transplant?"},
+    {"id": "redundant_tissue_limits_rom_adl", "text": "Interference with activities of daily living due to the redundant soft tissues limiting range of motion", "question": "Does the redundant soft tissue limit range of motion so that it interferes with activities of daily living?"},
+    {"id": "redundant_tissue_pain_evaluated", "text": "Pain due to the redundant tissue requiring evaluation by a medical professional", "question": "Is there pain due to the redundant tissue that required evaluation by a medical professional?"},
+    {"id": "intertriginous_skin_breakdown", "text": "Skin breakdown and skin infections including fungal infections due to friction in the intertriginous zones", "question": "Is there skin breakdown and skin infection (including fungal infection) from friction in the intertriginous zones under the redundant tissue?"},
+    {"id": "skin_breakdown_refractory_3_months", "text": "don’t respond to three or more months of medical treatment", "question": "Has the skin breakdown/infection failed to respond to three or more months of medical treatment (good hygiene practices, topical antifungals, topical and/or systemic corticosteroids, and local and/or systemic antibiotics), with dates?", "threshold": {"kind": "duration_months", "op": "gte", "value": 3, "unit": "months"}},
+    {"id": "bmi_greater_than_35", "text": "obese patients (BMI greater than 35)", "question": "Is the patient's documented BMI greater than 35?", "threshold": {"kind": "number", "op": "gt", "value": 35, "unit": "kg/m2"}},
+    {"id": "nutrition_education_3_months", "text": "must receive nutrition education for 3 or more months", "question": "Has the patient received nutrition education for 3 or more months, with dates?", "threshold": {"kind": "duration_months", "op": "gte", "value": 3, "unit": "months"}},
+    {"id": "nutrition_class_attendance", "text": "Documentation of attendance of professional nutrition class such as KPMAS Nutrition for Weight Control", "question": "Is attendance at a professional nutrition class (such as KPMAS Nutrition for Weight Control) documented?"},
+    {"id": "nutrition_counseling_2_sessions", "text": "Documentation and completion of two or more individual professional nutrition counseling sessions", "question": "Are two or more completed individual professional nutrition counseling sessions documented?", "threshold": {"kind": "number", "op": "gte", "value": 2, "unit": "sessions"}},
+    {"id": "after_significant_weight_loss", "text": "the panniculectomy is being performed after significant weight loss", "question": "Is the panniculectomy being performed after significant weight loss?"},
+    {"id": "stable_weight_6_months", "text": "the patient has maintained a stable weight for a minimum of six (6) months", "question": "Is it documented that the patient has maintained a stable weight for at least six months, with dated weights?", "threshold": {"kind": "duration_months", "op": "gte", "value": 6, "unit": "months"}},
+    {"id": "weight_loss_from_bariatric_surgery", "text": "the significant weight loss is the result of bariatric surgery", "question": "Is the significant weight loss the result of bariatric surgery?"},
+    {"id": "eighteen_months_post_bariatric_surgery", "text": "eighteen (18) months post bariatric surgery", "question": "Is the panniculectomy at least eighteen months after the bariatric surgery (bariatric surgery date documented)?", "threshold": {"kind": "duration_months", "op": "gte", "value": 18, "unit": "months"}},
+    {"id": "weight_stable_most_recent_6_months", "text": "the weight loss has been stable for the most recent six (6) months", "question": "Has the weight been stable for the most recent six months, with dated weights?", "threshold": {"kind": "duration_months", "op": "gte", "value": 6, "unit": "months"}}
+  ],
+  "scenarios": [
+    {
+      "id": "panniculectomy",
+      "name": "III.A Panniculectomy",
+      "applies_to_cpt": [],
+      "requires": {"type": "all", "label": "Panniculectomy is a covered service when ALL of the following criteria are met", "children": [
+        {"type": "leaf", "criterion": "pannus_grade_2_or_above"},
+        {"type": "leaf", "criterion": "pannus_chronic_skin_condition"},
+        {"type": "leaf", "criterion": "skin_condition_refractory_3_months"},
+        {"type": "leaf", "criterion": "pannus_interferes_adl"},
+        {"type": "any", "label": "IV.A In addition to the Section III criteria, obese patients (BMI greater than 35) must receive nutrition education for 3 or more months", "children": [
+          {"type": "not", "label": "Not obese (BMI 35 or less)", "child": {"type": "leaf", "criterion": "bmi_greater_than_35"}},
+          {"type": "all", "label": "Nutrition education for 3 or more months, as follows (1 and 2)", "children": [
+            {"type": "leaf", "criterion": "nutrition_education_3_months"},
+            {"type": "leaf", "criterion": "nutrition_class_attendance"},
+            {"type": "leaf", "criterion": "nutrition_counseling_2_sessions"}
+          ]}
+        ]},
+        {"type": "any", "label": "IV.B If the panniculectomy is being performed after significant weight loss, stable weight for a minimum of six (6) months", "children": [
+          {"type": "not", "label": "Not after significant weight loss", "child": {"type": "leaf", "criterion": "after_significant_weight_loss"}},
+          {"type": "leaf", "criterion": "stable_weight_6_months"}
+        ]},
+        {"type": "any", "label": "IV.C If the significant weight loss is the result of bariatric surgery", "children": [
+          {"type": "not", "label": "Weight loss not the result of bariatric surgery", "child": {"type": "leaf", "criterion": "weight_loss_from_bariatric_surgery"}},
+          {"type": "all", "label": "Not until eighteen (18) months post bariatric surgery and when the weight loss has been stable for the most recent six (6) months", "children": [
+            {"type": "leaf", "criterion": "eighteen_months_post_bariatric_surgery"},
+            {"type": "leaf", "criterion": "weight_stable_most_recent_6_months"}
+          ]}
+        ]}
+      ]}
+    },
+    {
+      "id": "panniculectomy_with_abdominal_or_gyn_procedure",
+      "name": "III.B Panniculectomy performed in conjunction with abdominal or gynecological procedures",
+      "applies_to_cpt": [],
+      "requires": {"type": "all", "label": "Panniculectomy performed in conjunction with abdominal or gynecological procedures is considered medically necessary if", "children": [
+        {"type": "leaf", "criterion": "concurrent_abdominal_or_gyn_procedure"},
+        {"type": "any", "label": "all the criteria for performing panniculectomy (III A.) have been met or there is persistent documented infection which cannot be resolved with medical treatments", "children": [
+          {"type": "all", "label": "All the criteria for performing panniculectomy (III A.)", "children": [
+            {"type": "leaf", "criterion": "pannus_grade_2_or_above"},
+            {"type": "leaf", "criterion": "pannus_chronic_skin_condition"},
+            {"type": "leaf", "criterion": "skin_condition_refractory_3_months"},
+            {"type": "leaf", "criterion": "pannus_interferes_adl"}
+          ]},
+          {"type": "leaf", "criterion": "persistent_infection_unresolved"}
+        ]},
+        {"type": "any", "label": "IV.A In addition to the Section III criteria, obese patients (BMI greater than 35) must receive nutrition education for 3 or more months", "children": [
+          {"type": "not", "label": "Not obese (BMI 35 or less)", "child": {"type": "leaf", "criterion": "bmi_greater_than_35"}},
+          {"type": "all", "label": "Nutrition education for 3 or more months, as follows (1 and 2)", "children": [
+            {"type": "leaf", "criterion": "nutrition_education_3_months"},
+            {"type": "leaf", "criterion": "nutrition_class_attendance"},
+            {"type": "leaf", "criterion": "nutrition_counseling_2_sessions"}
+          ]}
+        ]},
+        {"type": "any", "label": "IV.B If the panniculectomy is being performed after significant weight loss, stable weight for a minimum of six (6) months", "children": [
+          {"type": "not", "label": "Not after significant weight loss", "child": {"type": "leaf", "criterion": "after_significant_weight_loss"}},
+          {"type": "leaf", "criterion": "stable_weight_6_months"}
+        ]},
+        {"type": "any", "label": "IV.C If the significant weight loss is the result of bariatric surgery", "children": [
+          {"type": "not", "label": "Weight loss not the result of bariatric surgery", "child": {"type": "leaf", "criterion": "weight_loss_from_bariatric_surgery"}},
+          {"type": "all", "label": "Not until eighteen (18) months post bariatric surgery and when the weight loss has been stable for the most recent six (6) months", "children": [
+            {"type": "leaf", "criterion": "eighteen_months_post_bariatric_surgery"},
+            {"type": "leaf", "criterion": "weight_stable_most_recent_6_months"}
+          ]}
+        ]}
+      ]}
+    },
+    {
+      "id": "panniculectomy_to_reduce_skin_tension",
+      "name": "III.C Panniculectomy in relation to abdominal or gynecological procedures to reduce excessive skin tension that may impair wound healing",
+      "applies_to_cpt": [],
+      "requires": {"type": "all", "label": "Panniculectomy is considered medically necessary in relation to the abdominal or gynecological procedures when the panniculectomy will reduce excessive skin tension that may impair wound healing", "children": [
+        {"type": "leaf", "criterion": "concurrent_abdominal_or_gyn_procedure"},
+        {"type": "leaf", "criterion": "reduce_skin_tension_wound_healing"},
+        {"type": "any", "label": "IV.A In addition to the Section III criteria, obese patients (BMI greater than 35) must receive nutrition education for 3 or more months", "children": [
+          {"type": "not", "label": "Not obese (BMI 35 or less)", "child": {"type": "leaf", "criterion": "bmi_greater_than_35"}},
+          {"type": "all", "label": "Nutrition education for 3 or more months, as follows (1 and 2)", "children": [
+            {"type": "leaf", "criterion": "nutrition_education_3_months"},
+            {"type": "leaf", "criterion": "nutrition_class_attendance"},
+            {"type": "leaf", "criterion": "nutrition_counseling_2_sessions"}
+          ]}
+        ]},
+        {"type": "any", "label": "IV.B If the panniculectomy is being performed after significant weight loss, stable weight for a minimum of six (6) months", "children": [
+          {"type": "not", "label": "Not after significant weight loss", "child": {"type": "leaf", "criterion": "after_significant_weight_loss"}},
+          {"type": "leaf", "criterion": "stable_weight_6_months"}
+        ]},
+        {"type": "any", "label": "IV.C If the significant weight loss is the result of bariatric surgery", "children": [
+          {"type": "not", "label": "Weight loss not the result of bariatric surgery", "child": {"type": "leaf", "criterion": "weight_loss_from_bariatric_surgery"}},
+          {"type": "all", "label": "Not until eighteen (18) months post bariatric surgery and when the weight loss has been stable for the most recent six (6) months", "children": [
+            {"type": "leaf", "criterion": "eighteen_months_post_bariatric_surgery"},
+            {"type": "leaf", "criterion": "weight_stable_most_recent_6_months"}
+          ]}
+        ]}
+      ]}
+    },
+    {
+      "id": "panniculectomy_pre_renal_transplant",
+      "name": "III.D Panniculectomy pre-transplant for select patients undergoing renal transplant",
+      "applies_to_cpt": [],
+      "requires": {"type": "all", "label": "Select patients undergoing renal transplant whose large pannus creates a very high risk for wound complications should be considered for a medically necessary panniculectomy pre-transplant", "children": [
+        {"type": "leaf", "criterion": "undergoing_renal_transplant"},
+        {"type": "leaf", "criterion": "large_pannus_wound_complication_risk"},
+        {"type": "any", "label": "IV.A In addition to the Section III criteria, obese patients (BMI greater than 35) must receive nutrition education for 3 or more months", "children": [
+          {"type": "not", "label": "Not obese (BMI 35 or less)", "child": {"type": "leaf", "criterion": "bmi_greater_than_35"}},
+          {"type": "all", "label": "Nutrition education for 3 or more months, as follows (1 and 2)", "children": [
+            {"type": "leaf", "criterion": "nutrition_education_3_months"},
+            {"type": "leaf", "criterion": "nutrition_class_attendance"},
+            {"type": "leaf", "criterion": "nutrition_counseling_2_sessions"}
+          ]}
+        ]},
+        {"type": "any", "label": "IV.B If the panniculectomy is being performed after significant weight loss, stable weight for a minimum of six (6) months", "children": [
+          {"type": "not", "label": "Not after significant weight loss", "child": {"type": "leaf", "criterion": "after_significant_weight_loss"}},
+          {"type": "leaf", "criterion": "stable_weight_6_months"}
+        ]},
+        {"type": "any", "label": "IV.C If the significant weight loss is the result of bariatric surgery", "children": [
+          {"type": "not", "label": "Weight loss not the result of bariatric surgery", "child": {"type": "leaf", "criterion": "weight_loss_from_bariatric_surgery"}},
+          {"type": "all", "label": "Not until eighteen (18) months post bariatric surgery and when the weight loss has been stable for the most recent six (6) months", "children": [
+            {"type": "leaf", "criterion": "eighteen_months_post_bariatric_surgery"},
+            {"type": "leaf", "criterion": "weight_stable_most_recent_6_months"}
+          ]}
+        ]}
+      ]},
+      "notes": ["The document says these patients 'should be considered for' a medically necessary panniculectomy; the two leaves are the facts the sentence names."]
+    },
+    {
+      "id": "other_redundant_skin_and_fat_removal",
+      "name": "III.E Other redundant skin and fat removal surgeries (brachioplasty, thigh lift, back lift and similar)",
+      "applies_to_cpt": [],
+      "requires": {"type": "all", "label": "covered if there is clear documentation of significant functional deficits, including (1 and 2 and 3)", "children": [
+        {"type": "leaf", "criterion": "redundant_tissue_limits_rom_adl"},
+        {"type": "leaf", "criterion": "redundant_tissue_pain_evaluated"},
+        {"type": "leaf", "criterion": "intertriginous_skin_breakdown"},
+        {"type": "leaf", "criterion": "skin_breakdown_refractory_3_months"},
+        {"type": "any", "label": "IV.A In addition to the Section III criteria, obese patients (BMI greater than 35) must receive nutrition education for 3 or more months", "children": [
+          {"type": "not", "label": "Not obese (BMI 35 or less)", "child": {"type": "leaf", "criterion": "bmi_greater_than_35"}},
+          {"type": "all", "label": "Nutrition education for 3 or more months, as follows (1 and 2)", "children": [
+            {"type": "leaf", "criterion": "nutrition_education_3_months"},
+            {"type": "leaf", "criterion": "nutrition_class_attendance"},
+            {"type": "leaf", "criterion": "nutrition_counseling_2_sessions"}
+          ]}
+        ]}
+      ]},
+      "notes": ["IV.B and IV.C speak only of 'the panniculectomy' and are not applied to this pathway; see guideline notes."]
+    }
+  ],
+  "exclusions": [
+    {"text": "Procedures and services intended to improve or maintain appearance, not expected to significantly improve physical function, are considered cosmetic and usually excluded contractually.", "cpt": []},
+    {"text": "Treatment of neck or back pain", "cpt": []},
+    {"text": "Minimizing risk of hernia formation or recurrence", "cpt": []},
+    {"text": "Repairing abdominal wall laxity or diastasis recti", "cpt": []},
+    {"text": "Suction assisted lipectomy performed alone and not as a part of a medically necessary panniculectomy procedure, is not medically necessary and not a covered benefit", "cpt": []}
+  ],
+  "notes": [
+    "Payer: the policy header reads 'Mid-Atlantic States Medical Coverage Policy'; the body names Kaiser Foundation Health Plan, Inc. (KFHP) and Kaiser Permanente Mid-Atlantic States (KPMAS); the copyright lines name Kaiser Foundation Health Plan of the Mid-Atlantic States, Inc. and Mid-Atlantic Permanente Medical Group, P.C. All printed names are aliases. No policy number is printed (guideline_number null).",
+    "Dates: no effective or revised date is printed as such. The Approval History table's latest row is 'Date approved by RUMC 03/26/2025 / Date of Implementation 03/26/2025'; both effective_date and reviewed_date are set to 2025-03-26. The copyright year is 2025.",
+    "Lines of business: the document names no plan types it governs; section II.C warns that contracts may differ for Maryland, Virginia, DC, Federal, Medicare and self-pay members. The Utilization ALERT sends Medicare members to CMS guidelines (Medicare Coverage Database) and back to this policy if no NCD/LCD/LCA is found; recorded in excluded_plans with that condition. Reference 8 records that no applicable Medicare criteria were found (search 2/9/2016).",
+    "The document has no CPT/HCPCS or ICD-10 code table, so scope.cpt and scope.icd10 are empty, every pathway's applies_to_cpt is empty (all codes), and every exclusion's cpt list is empty. Which pathway applies must be decided from the procedure requested (panniculectomy alone, panniculectomy with an abdominal/gynecological procedure, pre-renal-transplant panniculectomy, or brachioplasty/thigh lift/back lift).",
+    "III.A.2 is one sentence holding two chart facts and was split: 'Pannus has caused chronic and persistent skin condition (panniculitis, intertriginous dermatitis, cellulitis, and skin ulcerations)' and 'unresponsive and refractory to three or more months of medical treatment'. The parenthetical list is read as examples of qualifying conditions (any one), despite the 'and', because the sentence says 'skin condition' in the singular.",
+    "'Medical treatment should consist of good hygiene practices, topical antifungals, topical and/or systemic corticosteroids, and local and/or systemic antibiotics' (printed in both III.A.2 and III.E.3) is not its own leaf: 'should' describes what an adequate trial looks like, and the and/or inside it makes a strict all-four reading unlikely to be intended. The components are carried in the question of each 3-month refractory criterion so the nurse asks what the trial consisted of. A reviewer could instead make it a separate criterion.",
+    "Pannus grade: the criterion says 'Grade II'; Section VI's Grading Scale uses 'Grade 2' ('the panniculus lies over the genitals down to the thigh crease'). Threshold is an enum gte_enum on Grade 2 over Grades 1-5; a chart may give the grade or describe where the panniculus hangs. A reviewer could use a number threshold (gte 2) instead.",
+    "III.B: 'Panniculectomy performed in conjunction with abdominal or gynecological procedures (such as hysterectomy, obesity surgery, including hernia repair that are reducible and have associated symptoms) is considered medically necessary if all the criteria for performing panniculectomy (III A.) have been met or there is persistent documented infection which cannot be resolved with medical treatments' is modelled as all(concurrent procedure, any(all four III.A leaves, persistent infection)). The parenthetical 'including hernia repair that are reducible and have associated symptoms' is read as an example of a qualifying concurrent procedure (carried in the question), not as a separate leaf. The '(III A.)' reference straddles the page break between page 1 and page 2.",
+    "III.C: 'in relation to the abdominal or gynecological procedures' reuses the III.B concurrent-procedure criterion (the same fact: the panniculectomy accompanies an abdominal or gynecological procedure) plus the wound-healing rationale leaf. III.B and III.C are kept as separate pathways because the document grants coverage on different grounds (III.A criteria or persistent infection vs. skin tension impairing wound healing).",
+    "III.D: 'Select patients undergoing renal transplant whose large pannus creates a very high risk for wound complications should be considered for a medically necessary panniculectomy pre-transplant' uses 'should be considered', softer than the other sections. It is modelled as a pathway with two leaves (undergoing renal transplant; large pannus creating a very high risk for wound complications). 'Select' is not a criterion.",
+    "III.E: 'covered if there is clear documentation of significant functional deficits, including: 1 ... and 2 ... and 3 ...'. 'Including' could be read as a non-exhaustive list of examples, but the three items are joined with 'and', so all three are required. The umbrella phrase 'clear documentation of significant functional deficits' is the heading of the list, not an extra leaf. III.E.3 was split like III.A.2 into the skin breakdown/infection fact and the 3-month refractory fact ('don't respond to three or more months of medical treatment'). The procedure list 'including but not limited to brachioplasty, thigh lift, back lift' is the pathway's scope (open-ended), not a criterion.",
+    "IV.A 'In addition to the Section III criteria, obese patients (BMI greater than 35) must receive nutrition education for 3 or more months, as follows: 1 ... and, 2 ...' is a conditional applied inside every Section III pathway (A-E) as any(not(BMI > 35), all(nutrition education ≥ 3 months, class attendance, ≥ 2 counseling sessions)). A chart silent on BMI cannot satisfy it (not(INSUFFICIENT) stays INSUFFICIENT), which is intended: the nurse needs a BMI. The 3-month duration is read as the span of the nutrition education made up of the class and the counseling sessions.",
+    "IV.B 'In addition to criteria A. above, if the panniculectomy is being performed after significant weight loss documentation, it must be documented that the patient has maintained a stable weight for a minimum of six (6) months' is a conditional: any(not(after significant weight loss), stable weight ≥ 6 months). 'criteria A. above' is read as IV.A (the sentence sits in Section IV), i.e. IV.B stacks on IV.A. Applied to the four panniculectomy pathways (III.A-D) because the sentence says 'the panniculectomy'; not applied to III.E (brachioplasty/thigh lift/back lift). A reviewer could reasonably apply IV.B and IV.C to III.E as well, since massive-weight-loss patients are exactly who gets those procedures.",
+    "IV.C 'If the significant weight loss is the result of bariatric surgery, panniculectomy should not be performed until eighteen (18) months post bariatric surgery and when the weight loss has been stable for the most recent six (6) months' is a conditional: any(not(weight loss from bariatric surgery), all(≥ 18 months post bariatric surgery, weight stable for the most recent 6 months)). The 'most recent six (6) months' stability leaf is kept separate from IV.B's 'stable weight for a minimum of six (6) months' leaf because the wording differs (most recent vs. any six months), although a chart meeting IV.C's will usually meet IV.B's.",
+    "The not() leaves 'after significant weight loss' and 'weight loss from bariatric surgery' require the chart to state whether there was significant weight loss and whether it came from bariatric surgery; a chart that is silent is INSUFFICIENT on those pathways, which matches what a nurse would ask.",
+    "Section II (general coverage statements) is contractual and administrative: II.A (coverage limited to procedures intended to significantly improve physical function), II.C (contract exclusions; inform the patient), II.D (a Kaiser Permanente-participating physician must order imaging and testing), II.E (direct inquiries to Member Services) are left out of the tree. II.B's cosmetic statement is recorded as an exclusion. II.D could be modelled as an answerable: false provider requirement; it is a general ordering rule for the specialty, not a criterion for these procedures.",
+    "The Utilization ALERT ('benefit coverage MUST be verified in the member's EOC or benefit document') is a benefit check, not a chart criterion; left out.",
+    "Section V exclusions: four indications for which panniculectomy is not medically necessary and not a covered benefit ('list is not inclusive'); each item's text is recorded as its own exclusion. V.D's own text already carries 'is not medically necessary and not a covered benefit'.",
+    "Section VI Grading Scale defines Grades 1-5 and is used only for the pannus_grade_2_or_above threshold; the Approval History, References and the closing note on clinical judgment hold no requirements."
+  ],
+  "status": "ok"
+}

@@ -1,0 +1,199 @@
+{
+ "file": "curative-mm-pnp-009-cardiac-event-monitors-policy.pdf",
+ "treatment": "cardiac-monitoring",
+ "payer": "curative",
+ "doc_kind": "other (internal utilization-management clinical policy)",
+ "lines_of_business": [
+  "Not stated; scope: 'Medical UM Department'"
+ ],
+ "effective_or_revised": "Original effective 10/01/2023; revision date N/A; footer shows 2022 copyright",
+ "sections_in_order": [
+  "1 Purpose",
+  "2 Scope",
+  "3 Definitions (N/A)",
+  "4 Policy (Medical Necessity; External Intermittent Cardiac Event Monitors; Mobile Cardiovascular Telemetry; Implantable Loop Recorder; Long-term External ECG Monitoring; Experimental and Investigational; Policy Limitations and Exclusions)",
+  "5 Procedure (N/A)",
+  "6 Training Requirement",
+  "7 Enforcement",
+  "8 Documentation (Zio AT note; Short-Term High Risk Criteria list)",
+  "9 Reference Documents",
+  "10 Collaborating Departments",
+  "11 Document Control",
+  "Appendices"
+ ],
+ "criteria_location": "Section 4 Policy, pp.1-3. The 'significant ECG abnormalities (see appendix)' list is actually under Section 8 'Documentation' as items 8.1-8.15 (mislabeled high-risk syncope list).",
+ "procedures_covered": [
+  "External loop recorders / intermittent event monitors",
+  "Mobile cardiovascular telemetry (MCT)",
+  "Implantable loop recorder",
+  "Long-term (>48 h) external ECG monitoring (Zio Patch)",
+  "Listed investigational devices (Kardia, BioMonitor, etc.)"
+ ],
+ "logic": {
+  "top_level": "pathways (one per device), each any-of with nested all-of",
+  "max_nesting_depth": 3,
+  "k_of_n": [
+   {
+    "k": 1,
+    "n": 6,
+    "quote": "for any of the following conditions"
+   }
+  ],
+  "exclusions_or_contraindications": "'experimental and investigational for all other indications' per device plus named investigational devices list.",
+  "initial_vs_repeat": "'requests for repeat studies within 1 year of a previous study are subject to medical necessity review.'",
+  "and_or_ambiguity": [
+   {
+    "quote": "o A cardiac arrhythmia is suspected as the cause of the symptoms; and o Members have a non-diagnostic Holter monitor or 48-hour telemetry, or symptoms occur infrequently ... ; or o For evaluation of members with suspected atrial fibrillation as a cause of cryptogenic stroke",
+    "why_ambiguous": "Third sub-bullet is joined by 'or' at the same indent as the two 'and' items; the stroke alternative's scope relative to the symptom criterion is unclear (the MCT text says 'either criteria in 1 or 2' but only one numbered bullet exists)"
+   },
+   {
+    "quote": "Implantable loop recorder ... A cardiac arrhythmia is suspected as the cause of the symptoms; and Either of the following criteria is met: ... or For evaluation of recurrent unexplained episodes ... when both of the following criteria are met",
+    "why_ambiguous": "ILR block ends with 'or' then a second full pathway, so the top-level 'and' with the first bullet may not apply to the second pathway"
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "prior procedure",
+   "quote": "persons with a non-diagnostic Holter monitor or 48-hour telemetry",
+   "where": "External monitors bullet 1; MCT; ILR; long-term external"
+  },
+  {
+   "kind": "symptom",
+   "quote": "persons whose symptoms occur infrequently (less frequently than daily) such that the arrhythmia is unlikely to be diagnosed by Holter monitoring",
+   "where": "Policy section 4"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "suspected atrial fibrillation as cause of cryptogenic stroke",
+   "where": "Policy section 4"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "noninvasive ambulatory monitoring, consisting of 30-day pre-symptom external loop recordings or MCT, fails to establish a definitive diagnosis",
+   "where": "ILR (heart failure/MI/ECG abnormality arm)"
+  },
+  {
+   "kind": "symptom",
+   "quote": "symptoms occur so infrequently and unpredictably (less frequently than once per month)",
+   "where": "ILR (low-risk arm)"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "persons with heart failure, prior myocardial infarction, or significant electrocardiogram (ECG) abnormalities (see appendix)",
+   "where": "ILR high-risk stratification"
+  },
+  {
+   "kind": "other",
+   "quote": "Requests ... for repeat studies within 1 year of a previous study are subject to medical necessity review",
+   "where": "Policy Limitations and Exclusions"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "symptom frequency for external monitors",
+   "value": "< daily",
+   "unit": "",
+   "quote": "less frequently than daily"
+  },
+  {
+   "quantity": "symptom frequency for ILR (low-risk)",
+   "value": "< 1 per month",
+   "unit": "",
+   "quote": "less frequently than once per month"
+  },
+  {
+   "quantity": "external loop recording before ILR (high-risk)",
+   "value": "30",
+   "unit": "days",
+   "quote": "30-day pre-symptom external loop recordings or MCT"
+  },
+  {
+   "quantity": "long-term monitoring definition",
+   "value": "> 48",
+   "unit": "hours",
+   "quote": "long-term (greater than 48 hours) external ECG monitoring"
+  },
+  {
+   "quantity": "repeat study",
+   "value": "within 1",
+   "unit": "year",
+   "quote": "repeat studies within 1 year of a previous study"
+  },
+  {
+   "quantity": "QRS duration in appendix list",
+   "value": ">= 120",
+   "unit": "ms",
+   "quote": "QRS duration >=120 ms"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "repeat study review trigger",
+   "length": "1 year",
+   "quote": "repeat studies within 1 year of a previous study"
+  },
+  {
+   "what": "pre-ILR external loop recording",
+   "length": "30 days",
+   "quote": "30-day pre-symptom external loop recordings"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": false,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "No codes at all.",
+  "non_covered_code_lists": "Device brand list of experimental items instead of codes"
+ },
+ "external_dependencies": [
+  {
+   "what": "Holter criteria live in another policy",
+   "quote": "see CPB 0019 - Holter Monitors"
+  },
+  {
+   "what": "Text appears derived from Aetna CPB-style criteria (brand names, 'CPB' reference) without citing it",
+   "quote": "see CPB 0019 - Holter Monitors"
+  }
+ ],
+ "definitions_that_change_meaning": [],
+ "vague_terms": [
+  {
+   "quote": "significant electrocardiogram (ECG) abnormalities (see appendix)",
+   "problem": "appendix is the Section 8 'high risk' list, not an ECG abnormality definition; 'Important co-morbidities' (8.13) is open-ended"
+  },
+  {
+   "quote": "non-diagnostic Holter monitor or 48-hour telemetry",
+   "problem": "undefined"
+  },
+  {
+   "quote": "unlikely to be diagnosed by Holter monitoring",
+   "problem": "clinician prediction"
+  },
+  {
+   "quote": "subject to medical necessity review",
+   "problem": "unclear whether it is a denial or a flag"
+  },
+  {
+   "quote": "Definitions 3.1 N/A",
+   "problem": "no definitions"
+  }
+ ],
+ "extraction_hazards": [
+  "Boilerplate sections (training, enforcement, document control) around a 2.5-page policy",
+  "Criteria and 'appendix' ECG list placed in a section titled Documentation",
+  "Nested bullets mix glyph bullets and 'o' sub-bullets; 'and'/'or' sit at ends of lines",
+  "Page header says 'Company Confidential'; copyright 2022 vs effective 2023",
+  "No numbered criteria in Section 4",
+  "Page 5 is blank"
+ ],
+ "interesting_structures": [
+  "ILR risk stratification (high-risk vs low-risk arms with different escalation requirements)",
+  "Notes that EPS no longer prerequisite for ILR",
+  "No payer-specific numbers beyond frequency thresholds",
+  "Internal UM policy rather than public medical policy"
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "why": "Logic is clear in intent, but and/or scope is lost in formatting (trailing 'or's at mixed indents), and the appendix reference points to the wrong list."
+ }
+}

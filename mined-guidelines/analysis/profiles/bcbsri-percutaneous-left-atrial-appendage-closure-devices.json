@@ -1,0 +1,126 @@
+{
+ "file": "bcbsri-percutaneous-left-atrial-appendage-closure-devices.pdf",
+ "treatment": "laa-closure",
+ "payer": "bcbsri",
+ "doc_kind": "medical coverage policy",
+ "lines_of_business": [
+  "Commercial Products",
+  "BlueCHiP for Medicare (clinical trial only)"
+ ],
+ "effective_or_revised": "Effective 02|01|2019; last updated 07|16|2020; Provider Updates through December 2020",
+ "sections_in_order": [
+  "Overview",
+  "Medical Criteria",
+  "Prior Authorization",
+  "Policy Statement",
+  "Coverage",
+  "Background",
+  "Coding",
+  "Related Policies",
+  "Published",
+  "References"
+ ],
+ "criteria_location": "Medical Criteria p.1 (three bullets) and Policy Statement pp.1-2. Criteria text is stated before the policy statement that refers back ('when the criteria above is met').",
+ "procedures_covered": [
+  "Percutaneous LAAC with FDA-approved device (e.g., Watchman), 33340",
+  "Other devices (Lariat, Amplatzer) not medically necessary",
+  "BlueCHiP for Medicare: only within a CMS-approved clinical trial"
+ ],
+ "logic": {
+  "top_level": "all (commercial); any-of trial (Medicare)",
+  "max_nesting_depth": 1,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "Other devices not medically necessary because not FDA approved.",
+  "initial_vs_repeat": "None.",
+  "and_or_ambiguity": [
+   {
+    "quote": "There is an increased risk of stroke and systemic embolism based on CHADS2 score, or CHA2DS2-VASc score and; Systemic anticoagulation therapy is recommended, and; The long-term risks of systemic anticoagulation outweigh the risks of the device implantation",
+    "why_ambiguous": "Bullets chained with 'and;' and 'and,' - the 'or' joins two scores inside bullet one; the trailing 'and' is placed at the line end, so the nesting is by punctuation."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "measurement threshold",
+   "quote": "increased risk of stroke and systemic embolism based on CHADS2 score, or CHA2DS2-VASc score",
+   "where": "Medical Criteria"
+  },
+  {
+   "kind": "other",
+   "quote": "Systemic anticoagulation therapy is recommended",
+   "where": "Medical Criteria"
+  },
+  {
+   "kind": "other",
+   "quote": "The long-term risks of systemic anticoagulation outweigh the risks of the device implantation",
+   "where": "Medical Criteria"
+  },
+  {
+   "kind": "provider/facility qualification",
+   "quote": "The use of a device with FDA approval for percutaneous left atrial appendage closure (e.g., the Watchman)",
+   "where": "Medical Criteria"
+  },
+  {
+   "kind": "other",
+   "quote": "patients enrolled in a Centers for Medicare and Medicaid Services (CMS) approved clinical trial",
+   "where": "Policy Statement, BlueCHiP for Medicare"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "Prior authorization is recommended and obtained via the online tool for participating providers.",
+   "where": "Prior Authorization"
+  }
+ ],
+ "thresholds": [],
+ "time_windows": [],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "33340 'medically necessary when the criteria above has been met'; Medicare code allowed only in a CMS study with Q0/Q1 modifiers.",
+  "non_covered_code_lists": "None"
+ },
+ "external_dependencies": [
+  {
+   "what": "Medicare NCD and LCD policy; clinical trials policy",
+   "quote": "BlueCHiP for Medicare National and Local Coverage Determinations"
+  },
+  {
+   "what": "Online prior-authorization tool",
+   "quote": "Prior Authorization via Web-Based Tool for Procedures"
+  }
+ ],
+ "definitions_that_change_meaning": [],
+ "vague_terms": [
+  {
+   "quote": "may be considered medically necessary",
+   "problem": "Discretionary wording."
+  },
+  {
+   "quote": "increased risk ... based on CHADS2 score, or CHA2DS2-VASc score",
+   "problem": "No cutoff."
+  },
+  {
+   "quote": "outweigh the risks",
+   "problem": "No measure."
+  },
+  {
+   "quote": "Prior authorization is recommended",
+   "problem": "Not required?"
+  }
+ ],
+ "extraction_hazards": [
+  "Policy Statement and Criteria split with cross reference 'criteria above'",
+  "Two product populations (Medicare vs Commercial) interleaved in each section",
+  "Policy dated 2020 and names only Watchman (no FLX or Amulet)",
+  "Typos: 'colure', 'criteria is met'",
+  "Reference numbering gaps (2, 11, 12 missing; two 25s)"
+ ],
+ "interesting_structures": [
+  "Product-split criteria (Commercial vs Medicare)",
+  "Medicare path is a trial-only rule using modifiers Q0 and Q1"
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "why": "Simple structure but no thresholds, plus a second product pathway that needs plan type to select."
+ }
+}

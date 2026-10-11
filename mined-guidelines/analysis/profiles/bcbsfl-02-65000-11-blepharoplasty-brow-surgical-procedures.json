@@ -1,0 +1,233 @@
+{
+ "file": "bcbsfl-02-65000-11-blepharoplasty-brow-surgical-procedures.pdf",
+ "treatment": "blepharoplasty",
+ "payer": "bcbsfl",
+ "doc_kind": "medical coverage guideline (payer medical policy)",
+ "lines_of_business": [
+  "All lines of business unless noted",
+  "FEP: follow FEP guidelines",
+  "SAO: follow SAO guidelines",
+  "Medicare Advantage: LCD L34028 reviewed"
+ ],
+ "effective_or_revised": "Policy 02-65000-11; original 04/27/00; reviewed 04/24/25; revised 05/15/25",
+ "sections_in_order": [
+  "Description",
+  "Position Statement (general; Blepharoplasty; Blepharoptosis Repair; Brow Lift; NOTE)",
+  "LOINC Codes (documentation table)",
+  "Billing/Coding Information",
+  "Reimbursement Information",
+  "Program Exceptions",
+  "Definitions",
+  "Related Guidelines",
+  "Other",
+  "References",
+  "Updates"
+ ],
+ "criteria_location": "Position Statement pp.1-3: a general restore-function sentence, then four procedure subsections each with its own list and its own 'does not meet the definition of medical necessity when performed' cosmetic exclusion. A trailing '*NOTE' on visual field testing exemptions follows the brow lift list. Documentation hints are in the LOINC table after the statement.",
+ "procedures_covered": [
+  "Upper eyelid blepharoplasty 15822, 15823",
+  "Lower eyelid blepharoplasty 15820, 15821",
+  "Blepharoptosis repair 67901-67908",
+  "Brow ptosis repair 67900"
+ ],
+ "logic": {
+  "top_level": "pathways (blepharoplasty upper = ANY of six indications; lower = one indication; blepharoptosis = ALL of five; brow lift = BOTH of two)",
+  "max_nesting_depth": 4,
+  "k_of_n": [
+   {
+    "k": 1,
+    "n": 6,
+    "quote": "Unilateral or bilateral upper eyelid blepharoplasty meets the definition of medical necessity to correct obstruction of central vision when performed to correct ANY of the following"
+   }
+  ],
+  "exclusions_or_contraindications": "A repeated cosmetic exclusion under each procedure: 'does not meet the definition of medical necessity when performed: For cosmetic purposes or to correct deformities resulting from previous cosmetic surgery, OR Solely to improve appearance in the absence of signs and symptoms of functional abnormalities'.",
+  "initial_vs_repeat": "None.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Unilateral or bilateral upper eyelid blepharoplasty meets the definition of medical necessity to correct obstruction of central vision when performed to correct ANY of the following",
+    "why_ambiguous": "The lead-in says 'to correct obstruction of central vision' but the ANY list includes prosthesis difficulty, thyroid sequelae, nerve palsy and trauma, none of which is about central vision. It is unclear whether central-vision obstruction is a separate requirement for each item."
+   },
+   {
+    "quote": "Before taping, the superior visual field is 20 degrees or less, AND After taping, the superior visual field is increased 30% or more",
+    "why_ambiguous": "'20 degrees or less' is an absolute field extent; '30% or more' is a relative increase, base unspecified (30% of what: the 20 degrees, or of the normal field?). Units mix degrees and percent."
+   },
+   {
+    "quote": "Visual field testing performed with and without taping that demonstrates",
+    "why_ambiguous": "The visual-field and photograph requirements apply only to the last (interference with vision) item; a parser that attaches 'documentation must include' to the whole ANY list will over-require."
+   },
+   {
+    "quote": "The margin reflex distance (MRD) between the pupillary light reflex and the upper eyelid skin edge is ≤ to 2 mm",
+    "why_ambiguous": "Definitions say MRD is measured to the 'eyelid margin' (and 'corneal light reflex or center of the pupil'); criterion says 'upper eyelid skin edge'. Eye (right/left) not specified."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "diagnosis/etiology",
+   "quote": "restore function to a structure that has been altered by trauma, infection, inflammation, degeneration, neoplasia, or developmental errors",
+   "where": "Position Statement opening"
+  },
+  {
+   "kind": "diagnosis: dermatitis",
+   "quote": "Chronic symptomatic dermatitis of pretarsal skin caused by redundant upper eye lid skin unresponsive to conservative therapy such as education regarding hygiene, antibiotics, etc.",
+   "where": "upper blepharoplasty item 1"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "Prosthesis difficulties in an anophthalmic socket / Periorbital sequelae of thyroid disease / Nerve palsy / Accidental injury, trauma, or congenital defect",
+   "where": "upper blepharoplasty items 2-5"
+  },
+  {
+   "kind": "symptom/functional",
+   "quote": "Interference with vision or visual field-related activities, such as difficulty reading or driving due to redundant skin overhanging the upper eyelid margin or resting on the eyelashes",
+   "where": "upper blepharoplasty item 6"
+  },
+  {
+   "kind": "photographs",
+   "quote": "Photographs from the front and side(s) on the operative side(s) in straight gaze",
+   "where": "item 6; also ptosis and brow"
+  },
+  {
+   "kind": "visual field threshold",
+   "quote": "Before taping, the superior visual field is 20 degrees or less ... After taping ... increased 30% or more",
+   "where": "item 6; ptosis"
+  },
+  {
+   "kind": "measurement",
+   "quote": "margin reflex distance ... is ≤ to 2 mm",
+   "where": "blepharoptosis repair"
+  },
+  {
+   "kind": "anatomy",
+   "quote": "Photographs demonstrate that the eyebrow is below the supraorbital rim",
+   "where": "brow lift"
+  },
+  {
+   "kind": "lower lid",
+   "quote": "corneal and/or conjunctival injury, irritation, tearing or pain due to ectropion, entropion or trichiasis",
+   "where": "lower blepharoplasty"
+  },
+  {
+   "kind": "cosmetic exclusion",
+   "quote": "For cosmetic purposes or to correct deformities resulting from previous cosmetic surgery",
+   "where": "each procedure"
+  },
+  {
+   "kind": "documentation exemption",
+   "quote": "If visual field testing is not completed as indicated above, the medical documentation must support evidence of the medical condition which prevents the performance of the test",
+   "where": "NOTE"
+  },
+  {
+   "kind": "documentation",
+   "quote": "physician history and physical, physician progress notes, treatment plan, frontal photographs, and visual field testing (LOINC with six-month look-back)",
+   "where": "LOINC table"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "superior visual field before taping",
+   "value": "<= 20",
+   "unit": "degrees",
+   "quote": "Before taping, the superior visual field is 20 degrees or less"
+  },
+  {
+   "quantity": "visual field improvement with taping",
+   "value": ">= 30",
+   "unit": "% increase",
+   "quote": "After taping, the superior visual field is increased 30% or more"
+  },
+  {
+   "quantity": "margin reflex distance (MRD)",
+   "value": "<= 2",
+   "unit": "mm",
+   "quote": "The margin reflex distance (MRD) between the pupillary light reflex and the upper eyelid skin edge is ≤ to 2 mm"
+  },
+  {
+   "quantity": "documentation look-back",
+   "value": "<= 6",
+   "unit": "months before date of service",
+   "quote": "observations made six months or fewer before starting date of service"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "documentation look-back",
+   "length": "6 months",
+   "quote": "six months or fewer before starting date of service for the claim"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "CPT list only, no mapping. Descriptions and criteria sections group by procedure so mapping is implicit (15822/15823 -> upper blepharoplasty).",
+  "non_covered_code_lists": "None."
+ },
+ "external_dependencies": [
+  {
+   "what": "Medicare Advantage: LCD L34028 reviewed (note BCBSMA cites L34528)",
+   "quote": "BLEPHAROPLASTY, Blepharoptosis Repair and Surgical Procedures of the Brow (L34028), located at cms.gov"
+  },
+  {
+   "what": "Reconstructive vs cosmetic surgery guideline",
+   "quote": "Reconstructive Surgery/Cosmetic Surgery, 02-12000-01"
+  },
+  {
+   "what": "Step therapy exemption statute (Florida 627.42393)",
+   "quote": "members or providers may request a step therapy protocol exemption"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Margin Reflex Distance (MRD)",
+   "definition_quote": "measurement (in millimeters) from the corneal light reflex or center of the pupil to the eyelid margin; also recorded as MRD-1 when referring to the upper eyelid margin"
+  },
+  {
+   "term": "Pseudoptosis",
+   "definition_quote": "the amount of excessive skin is so great as to overhang the eyelid margin and create its own ptosis"
+  },
+  {
+   "term": "Visual field",
+   "definition_quote": "extending about 60 degrees nasally and superiorly, about 70 degrees inferiorly, and about 90 degrees temporally"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "unresponsive to conservative therapy such as education regarding hygiene, antibiotics, etc.",
+   "problem": "No duration, no list ('etc.')."
+  },
+  {
+   "quote": "Chronic symptomatic dermatitis",
+   "problem": "'Chronic' undefined."
+  },
+  {
+   "quote": "Accidental injury, trauma, or congenital defect",
+   "problem": "No functional test required at all for this item despite the 'obstruction of central vision' lead-in."
+  },
+  {
+   "quote": "difficulty reading or driving",
+   "problem": "Patient report; examples not exhaustive."
+  },
+  {
+   "quote": "increased 30% or more",
+   "problem": "Base of percentage not given."
+  }
+ ],
+ "extraction_hazards": [
+  "Bulleted lists with 'AND' / 'OR' trailing on lines; nested bullets 'o' and small squares flatten.",
+  "Footnote-style '*NOTE' appears after the brow lift section but applies to all visual field requirements.",
+  "'ANY of the following' with a documentation sub-list that applies to only one item.",
+  "Typo in description ('tightening the he levator muscle').",
+  "LOINC table repeated cell text; page navigation tabs in header.",
+  "Document carries no ICD-10 codes."
+ ],
+ "interesting_structures": [
+  "Visual-field thresholds in two units (degrees for baseline, percent for improvement).",
+  "Blepharoptosis requires both field loss AND MRD <= 2 mm; blepharoplasty does not require MRD.",
+  "Explicit exemption path when the visual field test cannot be done (severe tremors, macular degeneration, physical deformities, glaucoma).",
+  "Many etiology-based indications that skip field testing (anophthalmic socket, thyroid, nerve palsy, trauma)."
+ ],
+ "fit_to_tree": {
+  "score": 2,
+  "why": "ANY-of indications over ALL-of measurement bundles; clean except for the lead-in vs list mismatch, mixed units and one inline exemption."
+ }
+}

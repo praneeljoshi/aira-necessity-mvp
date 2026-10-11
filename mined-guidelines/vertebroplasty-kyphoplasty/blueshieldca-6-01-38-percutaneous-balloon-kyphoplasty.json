@@ -1,0 +1,19 @@
+{
+  "payer": "Blue Shield of California",
+  "payer_key": "blueshield-ca",
+  "treatment": "vertebroplasty-kyphoplasty",
+  "title": "Percutaneous Balloon Kyphoplasty",
+  "policy_number": "6.01.38",
+  "effective": "2023-06-01",
+  "url": "https://blueshieldca.com/content/dam/bsca/en/provider/docs/2023/June/PRV_Percutaneous_Balloon_Kyphoplasty.pdf",
+  "final_url": "https://www.blueshieldca.com/content/dam/bsca/en/provider/docs/2023/June/PRV_Percutaneous_Balloon_Kyphoplasty.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "blueshieldca-6-01-38-percutaneous-balloon-kyphoplasty.pdf",
+  "sha256": "4b065f2026f30b823b43b8a179a052d64e0c0662bd51c7ada70f9b2857af25b1",
+  "pages": 27,
+  "bytes": 370580,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original 02/14/2001; Effective June 1, 2023"
+}

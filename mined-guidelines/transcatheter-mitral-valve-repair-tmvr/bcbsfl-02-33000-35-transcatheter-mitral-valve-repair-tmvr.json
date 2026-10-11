@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "transcatheter-mitral-valve-repair-tmvr",
+  "title": "Transcatheter Mitral Valve Repair (TMVR)",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JLIL6Z30LYXOF3M3L",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-33000-35",
+  "original_effective": "09/15/16",
+  "reviewed": "05/28/26",
+  "revised": "06/15/26",
+  "file": "bcbsfl-02-33000-35-transcatheter-mitral-valve-repair-tmvr.pdf",
+  "sha256": "52c6a4b69ca1ebf9bd3223bf300d4fc71462dec9285cfd3cae18500e4af05d7b",
+  "pages": 8,
+  "bytes": 172935,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original Effective Date 09/15/16; Reviewed 05/28/26; Revised 06/15/26 (9 pages)"
+}

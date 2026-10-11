@@ -1,0 +1,165 @@
+{
+ "lines_of_business": [
+  "All lines of business unless noted in PROGRAM EXCEPTIONS (disclaimer: \"THIS MEDICAL COVERAGE GUIDELINE APPLIES TO ALL LINES OF BUSINESS UNLESS OTHERWISE NOTED IN THE PROGRAM EXCEPTIONS SECTION\")",
+  "FEP: \"Follow FEP guidelines.\"",
+  "SAO: \"Follow SAO guidelines.\"",
+  "Medicare Advantage: NCD 20.6 Transmyocardial Revascularization 'reviewed'"
+ ],
+ "effective_or_revised": "Original Effective Date 06/15/00; Reviewed 01/22/26; Revised 02/15/26 (5 pages). Guideline number prints truncated as '02-33000-1' and the filename carries a random token, not the number.",
+ "sections_in_order": [
+  "header block (guideline number, Original Effective Date, Reviewed, Revised, Subject)",
+  "disclaimer paragraph",
+  "navigation bar (Position Statement / Billing/Coding / Reimbursement / Program Exceptions / Definitions / Related Guidelines / Other / References / Updates)",
+  "DESCRIPTION",
+  "POSITION STATEMENT",
+  "BILLING/CODING INFORMATION",
+  "REIMBURSEMENT INFORMATION",
+  "PROGRAM EXCEPTIONS",
+  "DEFINITIONS",
+  "RELATED GUIDELINES",
+  "OTHER",
+  "REFERENCES",
+  "COMMITTEE APPROVAL",
+  "GUIDELINE UPDATE INFORMATION"
+ ],
+ "criteria_location": "POSITION STATEMENT, pp.1-2: one all-of list for TMR in no-option angina, one adjunct-to-CABG paragraph, two investigational statements (all other indications; percutaneous TMR).",
+ "procedures_covered": [
+  "Transmyocardial laser revascularization by thoracotomy (CPT 33140, 33141)",
+  "TMR as adjunct to CABG",
+  "Percutaneous TMR: investigational"
+ ],
+ "logic": {
+  "top_level": "pathways: (1) standalone TMR all-of five criteria, (2) adjunct to CABG single criterion; then not covered otherwise",
+  "max_nesting_depth": 2,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "Inline negatives in the all-of list: 'No evidence of recent myocardial infarction (MI) or unstable angina within the last 21 days' and 'No severe comorbid illness such as chronic obstructive pulmonary disease (COPD)'.",
+  "initial_vs_repeat": "None.",
+  "and_or_ambiguity": [
+   {
+    "quote": "members with class III or IV angina, who are not candidates for coronary artery bypass graft (CABG) surgery or percutaneous transluminal coronary angioplasty (PTCA) surgery who meet ALL of the following criteria",
+    "why_ambiguous": "'not candidates for CABG or PTCA' could mean not a candidate for either or for both; it is a precondition sentence before the ALL list, and may be mis-read as an extra bullet."
+   },
+   {
+    "quote": "No evidence of recent myocardial infarction (MI) or unstable angina within the last 21 days; AND",
+    "why_ambiguous": "'within the last 21 days' modifies both MI and unstable angina, presumably."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "symptom",
+   "quote": "Presence of class III or IV angina refractory to medical management;",
+   "where": "Position Statement bullet 1"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "Documentation of reversible ischemia;",
+   "where": "bullet 2"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "Left ventricular ejection fraction greater than 30%;",
+   "where": "bullet 3"
+  },
+  {
+   "kind": "duration",
+   "quote": "No evidence of recent myocardial infarction (MI) or unstable angina within the last 21 days",
+   "where": "bullet 4"
+  },
+  {
+   "kind": "BMI/comorbidity",
+   "quote": "No severe comorbid illness such as chronic obstructive pulmonary disease (COPD)",
+   "where": "bullet 5"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "who are not candidates for coronary artery bypass graft (CABG) surgery or percutaneous transluminal coronary angioplasty (PTCA) surgery",
+   "where": "precondition sentence"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "documented areas of ischemic myocardium that are amenable to surgical revascularization",
+   "where": "adjunct to CABG paragraph"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "left ventricular ejection fraction",
+   "value": "> 30",
+   "unit": "%",
+   "quote": "Left ventricular ejection fraction greater than 30%"
+  },
+  {
+   "quantity": "angina class (CCS)",
+   "value": "III or IV",
+   "unit": "CCS class",
+   "quote": "class III or IV angina"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "no recent MI or unstable angina",
+   "length": "21 days",
+   "quote": "within the last 21 days"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": true,
+  "codes_tied_to_criteria": "No: CPT 33140, 33141 and ICD-10 I20.0-I20.9, I25.110-I25.119, I25.89, I25.9 (angina / chronic ischemic heart disease) are a flat screen; the criteria add severity (class III/IV) which no code expresses.",
+  "non_covered_code_lists": "none (percutaneous TMR has no code listed)"
+ },
+ "external_dependencies": [
+  {
+   "what": "Medicare Advantage NCD 20.6",
+   "quote": "Transmyocardial Revascularization (TMR) (20.6) located at cms.gov"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Class III angina",
+   "definition_quote": "Canadian Cardiovascular Society (CCS) functional classification for angina: Marked limitation of ordinary activity. Angina when walking one or two blocks on the level, or when climbing one flight of stairs at a normal pace."
+  },
+  {
+   "term": "Class IV angina",
+   "definition_quote": "Inability to carry on any physical activity without discomfort. Angina may be present at rest."
+  },
+  {
+   "term": "Ejection fraction",
+   "definition_quote": "a clinical cardiac measurement – end-systolic volume-end-systolic volume end diastolic volume = ejection fraction."
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "refractory to medical management",
+   "problem": "no drug classes or doses."
+  },
+  {
+   "quote": "No severe comorbid illness such as chronic obstructive pulmonary disease (COPD)",
+   "problem": "'severe' and 'such as' leave the comorbidity set open."
+  },
+  {
+   "quote": "not candidates for coronary artery bypass graft (CABG) surgery",
+   "problem": "who decides candidacy is not stated."
+  }
+ ],
+ "extraction_hazards": [
+  "Guideline number on the first line is clipped ('02-33000-1'); file name uses a random token.",
+  "Definition of ejection fraction contains a garbled formula ('end-systolic volume-end-systolic volume end diastolic volume').",
+  "Bullets are five U+F0B7 glyphs; sentence-final semicolons and 'AND' on the penultimate bullet.",
+  "Precondition ('who are not candidates ... who meet ALL') is in the lead sentence, not a bullet."
+ ],
+ "interesting_structures": [
+  "Clinical grading scale (CCS class) defined in DEFINITIONS and used as a threshold in the Position Statement.",
+  "Short all-of with numeric LVEF and a 21-day look-back."
+ ],
+ "fit_to_tree": {
+  "score": 2,
+  "scale": "1..5",
+  "why": "textbook all-of with a precondition and two negative leaves; definitions supply CCS grade meanings. Only 'severe comorbid illness' and 'refractory' need judgment."
+ },
+ "file": "bcbsfl-76JEWFS1H2QN1TDP2IH-transmyocardial-revascularization-tmr.pdf",
+ "treatment": "transmyocardial-revascularization-tmr",
+ "payer": "bcbsfl",
+ "doc_kind": "medical policy (Florida Blue 'Medical Coverage Guideline', MCG)"
+}

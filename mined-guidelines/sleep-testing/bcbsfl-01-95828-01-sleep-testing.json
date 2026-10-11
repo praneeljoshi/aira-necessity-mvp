@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "sleep-testing",
+  "title": "Sleep Testing",
+  "category": "Medicine",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JQH76YV224BKXICQX",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "01-95828-01",
+  "original_effective": "12/31/00",
+  "reviewed": "08/27/26",
+  "revised": "09/15/26",
+  "file": "bcbsfl-01-95828-01-sleep-testing.pdf",
+  "sha256": "fc58299d7dc4bcdf0e34be3cc6ef8380bde0469a5a874b5011132e1ec5c02d1e",
+  "pages": 28,
+  "bytes": 366977,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original 12/31/00; Reviewed 08/27/26; Revised 09/15/26"
+}

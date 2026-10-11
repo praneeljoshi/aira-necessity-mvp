@@ -1,0 +1,19 @@
+{
+  "payer": "Carelon Medical Benefits Management",
+  "payer_key": "carelon",
+  "treatment": "cervical-spine-surgery",
+  "title": "Clinical Appropriateness Guidelines: Spine Surgery",
+  "policy_number": "MSK03-1024.2",
+  "effective": "2024-10-20",
+  "url": "https://files.providernews.anthem.com/4826/MSK-Spine-Surgery-redline-2024-10-20.pdf",
+  "final_url": "https://files.providernews.anthem.com/4826/MSK-Spine-Surgery-redline-2024-10-20.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "carelon-msk03-1024-2-clinical-appropriateness-guidelines-spine-surgery.pdf",
+  "sha256": "df3573dee626ed2f2de1bbe55fe46a3b49141f00c6002d08f19db5a42066cc6a",
+  "pages": 66,
+  "bytes": 721792,
+  "retrieved": "2026-10-09",
+  "printed_date": "MSK03-1024.2, effective 10/20/2024 (redline against 01/01/2024 version); last review 01/23/2024"
+}

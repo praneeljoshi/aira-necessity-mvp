@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "radiofrequency-ablation-of-solid-tumors",
+  "title": "Radiofrequency Ablation of Solid Tumors Other Than Liver Tumors",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76F8EJ84R5WBR6YGYHT",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-99221-13",
+  "original_effective": "03/15/04",
+  "reviewed": "10/23/25",
+  "revised": "11/15/25",
+  "file": "bcbsfl-02-99221-13-radiofrequency-ablation-of-solid-tumors-other-than.pdf",
+  "sha256": "c70ea46e4f7f1356c8d0047e20725e6f84ab0198386f03f7ef971953056a27cd",
+  "pages": 11,
+  "bytes": 650603,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original Effective Date 03/15/04; Reviewed 10/23/25; Revised 11/15/25"
+}

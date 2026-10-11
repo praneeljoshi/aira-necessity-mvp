@@ -1,0 +1,254 @@
+{
+ "file": "blueshieldca-sacroiliac-joint-injections.pdf",
+ "treatment": "sacroiliac-joint-injections",
+ "payer": "blueshieldca",
+ "doc_kind": "medical policy (adopts Evolent clinical guideline 1756; BSC_EVO_1756)",
+ "lines_of_business": [
+  "Not stated; benefit application defers to member contract"
+ ],
+ "effective_or_revised": "Original 1/1/2017; Effective 7/1/2025",
+ "sections_in_order": [
+  "Policy Statement (indications, spondyloarthropathy, imaging guidance, diagnostic purposes, repeat injections, exclusions, contraindications)",
+  "Policy Guidelines (HEP, General Information)",
+  "Coding",
+  "Description",
+  "Related Policies",
+  "Benefit Application",
+  "Regulatory Status",
+  "Rationale (Background, Medical Necessity, Special Note)",
+  "References",
+  "Documentation for Clinical Review",
+  "Codes",
+  "Policy History",
+  "Feedback"
+ ],
+ "criteria_location": "Policy Statement pp.1-3; HEP definition in Policy Guidelines p.3; new-episode rule ('Special Note') buried in Rationale p.6.",
+ "procedures_covered": [
+  "Intra-articular or ligamentous SI joint injections (CPT 27096, HCPCS G0260)",
+  "Excluded: sacral lateral branch blocks, RF denervation of SI joint"
+ ],
+ "logic": {
+  "top_level": "pathways (SI joint pain; spondyloarthropathy; diagnostic for surgical planning), with repeat-injection rules layered on",
+  "max_nesting_depth": 4,
+  "k_of_n": [
+   {
+    "k": 3,
+    "n": 8,
+    "quote": "A cluster of any three (3) of the following positive provocation exam findings"
+   },
+   {
+    "k": 4,
+    "n": 5,
+    "quote": "Inflammatory back pain evidence with at least 4 of the following criteria present"
+   },
+   {
+    "k": 1,
+    "n": 11,
+    "quote": "1 or more spondyloarthropathy features"
+   }
+  ],
+  "exclusions_or_contraindications": "Separate EXCLUSIONS (lateral branch blocks, RF) and CONTRAINDICATIONS lists split into absolute (active systemic or spinal infection, skin infection, local malignancy, septic joint) and relative (coagulopathy, pregnancy, uncontrollable diabetes, blood thinners). Relative ones have no stated consequence.",
+  "initial_vs_repeat": "Initial phase up to 2 injections >= 2 weeks apart with >= 50% relief or significant functional improvement; therapeutic phase needs >= 50% relief 'for a minimum of 2 months', pain >= 6/10 or disability, ongoing active conservative treatment, repeat positive provocative finding after other spine injections, max 4 per 12 months per region. New episode of care after 2 years.",
+  "and_or_ambiguity": [
+   {
+    "quote": "at least 50% pain relief or significant documented functional improvement",
+    "why_ambiguous": "'or' between a percentage and an undefined functional judgment"
+   },
+   {
+    "quote": "Pain causing functional disability or average pain level of ≥ 6",
+    "why_ambiguous": "functional disability undefined; either path suffices"
+   },
+   {
+    "quote": "for a minimum of 6 weeks in the last 6 months unless the medical reason ... is clearly documented; OR details of active engagement in ongoing non-operative conservative treatment if the individual has had prior spinal injections",
+    "why_ambiguous": "The OR is a sub-bullet; applies only to people with prior injections, not stated as an exception."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "symptom",
+   "quote": "Primarily axial low back pain (below level of L5) which may radiate to the groin or lower extremity",
+   "where": "Policy Statement p.1"
+  },
+  {
+   "kind": "functional impairment",
+   "quote": "Pain causing functional disability or average pain level of ≥ 6 on a scale of 0 to 10",
+   "where": "p.1"
+  },
+  {
+   "kind": "symptom",
+   "quote": "A cluster of any three (3) of the following positive provocation exam findings (distraction, compression, sacral thrust, FABER, posterior shear, Yeoman's, Gaenslen's, thigh thrust)",
+   "where": "p.1"
+  },
+  {
+   "kind": "duration",
+   "quote": "Duration of pain of at least 3 months",
+   "where": "p.1"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "Failure to respond to non-operative conservative treatment ... for a minimum of 6 weeks in the last 6 months",
+   "where": "p.1"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "evidence of sacroiliitis on imaging (active inflammation on MRI or radiographic sacroiliitis grade 2-4 bilaterally or grade 3-4 unilaterally)",
+   "where": "Spondyloarthropathy p.1"
+  },
+  {
+   "kind": "lab value",
+   "quote": "Positive testing for HLA-B27; Elevated C-reactive protein (CRP)",
+   "where": "SpA features p.2"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "Spondyloarthropathy track: age of onset < 45 years, >= 3 months low back pain",
+   "where": "p.1"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "At least 75% pain relief for the expected duration of the anesthetic after each diagnostic injection",
+   "where": "Diagnostic p.2"
+  },
+  {
+   "kind": "documentation",
+   "quote": "Documentation of a pre-operative evaluation and plan for SIJ surgery",
+   "where": "Diagnostic p.2"
+  },
+  {
+   "kind": "provider/facility qualification",
+   "quote": "ALL procedures must be performed under imaging guidance; In person provocative exam required (no telehealth)",
+   "where": "p.2, Rationale p.5"
+  },
+  {
+   "kind": "other",
+   "quote": "Each sacroiliac joint injection requires an authorization",
+   "where": "Repeat p.2"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "average pain",
+   "value": ">= 6",
+   "unit": "0-10",
+   "quote": "average pain level of ≥ 6 on a scale of 0 to 10"
+  },
+  {
+   "quantity": "diagnostic relief",
+   "value": ">= 75",
+   "unit": "%",
+   "quote": "At least 75% pain relief"
+  },
+  {
+   "quantity": "therapeutic relief",
+   "value": ">= 50",
+   "unit": "%",
+   "quote": "at least 50% pain relief"
+  },
+  {
+   "quantity": "injections per 12 months per region (therapeutic)",
+   "value": "4",
+   "unit": "count",
+   "quote": "A maximum of 4 sacroiliac joint injections may be performed in a 12-month period per region"
+  },
+  {
+   "quantity": "provocation tests positive",
+   "value": "3 of 8",
+   "unit": "count",
+   "quote": "cluster of any three (3)"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "pain duration",
+   "length": "3 months",
+   "quote": "Duration of pain of at least 3 months"
+  },
+  {
+   "what": "conservative treatment",
+   "length": "6 weeks within last 6 months",
+   "quote": "for a minimum of 6 weeks in the last 6 months"
+  },
+  {
+   "what": "interval initial injections",
+   "length": "2 weeks",
+   "quote": "no sooner than 2 weeks apart"
+  },
+  {
+   "what": "relief duration before therapeutic repeat",
+   "length": "2 months",
+   "quote": "for a minimum of 2 months before each therapeutic injection"
+  },
+  {
+   "what": "new episode of care",
+   "length": "2 years",
+   "quote": "at least two years from prior injections in the same region"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Listed only (27096, G0260).",
+  "non_covered_code_lists": "none"
+ },
+ "external_dependencies": [
+  {
+   "what": "Evolent (formerly NIA) clinical guideline adopted",
+   "quote": "07/01/2025 Annual Evolent clinical guideline update."
+  },
+  {
+   "what": "CMS (reference only)",
+   "quote": "They are in keeping with the benefit guidelines developed by the Centers for Medicare & Medicaid Services (CMS)."
+  },
+  {
+   "what": "ASAS classification for spondyloarthritis",
+   "quote": "criteria developed by the Assessment of SpondyloArthritis International Society (ASAS)"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Home Exercise Program",
+   "definition_quote": "Documentation of an exercise prescription/plan provided by a physician, physical therapist, or chiropractor AND Follow-up documentation regarding completion of HEP after the required 6-week timeframe"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "significant documented functional improvement",
+   "problem": "no measure"
+  },
+  {
+   "quote": "Pain causing functional disability",
+   "problem": "undefined"
+  },
+  {
+   "quote": "non-operative conservative treatment targeting the requested spinal region",
+   "problem": "no required modalities listed"
+  },
+  {
+   "quote": "Relative contraindications",
+   "problem": "no consequence stated"
+  },
+  {
+   "quote": "engaged in ongoing active conservative treatment",
+   "problem": "undefined"
+  }
+ ],
+ "extraction_hazards": [
+  "Criteria carry superscript reference numbers like (1,2,3,4) that look like data",
+  "Spondyloarthropathy list splits across the page 1-2 break",
+  "Footer text between list items",
+  "Special Note (new episode of care after 2 years) is in Rationale, not Policy Statement",
+  "Appendix-style 'Refer to Appendix A' mention but none on policy",
+  "Eight-test list uses 'thigh thrust' vs 'Thigh Thrust test' naming variations"
+ ],
+ "interesting_structures": [
+  "k-of-n inside a pathway: 3 of 8 provocative tests; 4 of 5 inflammatory back pain criteria nested in 1+ of 11 features",
+  "Repeat-injection requires fresh provocative exam only if other injections intervened",
+  "Episode-of-care reset after 2 years",
+  "Identical text to Evolent guideline 1756: payer adopts vendor criteria verbatim"
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "why": "Nested all/any/k-of-n expresses it well; difficulty is stateful (injection history, relief durations, episode reset) and undefined functional terms."
+ }
+}

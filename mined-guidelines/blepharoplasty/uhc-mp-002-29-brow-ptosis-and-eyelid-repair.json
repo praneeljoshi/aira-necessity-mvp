@@ -1,0 +1,19 @@
+{
+  "payer": "UnitedHealthcare",
+  "payer_key": "uhc",
+  "treatment": "blepharoplasty",
+  "title": "Brow Ptosis and Eyelid Repair",
+  "policy_number": "MP.002.29",
+  "effective": "2026-08-01",
+  "url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-medical-drug/brow-ptosis-eyelid-repair.pdf",
+  "final_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-medical-drug/brow-ptosis-eyelid-repair.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "uhc-mp-002-29-brow-ptosis-and-eyelid-repair.pdf",
+  "sha256": "f1b6b20f1288b36c78c90e204a13b5def8dea4ac9afb3b5f6f142c8ff96dd2d4",
+  "pages": 9,
+  "bytes": 412351,
+  "retrieved": "2026-10-09",
+  "printed_date": "Policy MP.002.29; effective August 1, 2026 (library metadata matches)"
+}

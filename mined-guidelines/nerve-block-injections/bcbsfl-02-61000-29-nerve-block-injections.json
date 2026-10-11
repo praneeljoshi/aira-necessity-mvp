@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "nerve-block-injections",
+  "title": "Nerve Block Injections",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JQQQ4QT7W14QPJ20P",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-61000-29",
+  "original_effective": "11/15/00",
+  "reviewed": "01/22/26",
+  "revised": "10/01/26",
+  "file": "bcbsfl-02-61000-29-nerve-block-injections.pdf",
+  "sha256": "0ad8b907056d4547a4193d7d57fc44a1fec2e11b225b1df38a7a7b0d2c77788a",
+  "pages": 16,
+  "bytes": 302592,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original Effective Date 11/15/00; Reviewed 01/22/26; Revised 10/01/26 (16 pages)"
+}

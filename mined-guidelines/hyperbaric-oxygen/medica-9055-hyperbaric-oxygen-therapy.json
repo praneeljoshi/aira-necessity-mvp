@@ -1,0 +1,19 @@
+{
+  "payer": "Medica",
+  "payer_key": "medica",
+  "treatment": "hyperbaric-oxygen",
+  "title": "Hyperbaric Oxygen Therapy",
+  "policy_number": "9055",
+  "effective": "",
+  "url": "https://mo-central.medica.com/Document-Library/pdf/Medical-Policies/Hyperbaric-oxygen-therapy-9055",
+  "final_url": "https://mo-central.medica.com/Document-Library/pdf/Medical-Policies/Hyperbaric-oxygen-therapy-9055",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "medica-9055-hyperbaric-oxygen-therapy.pdf",
+  "sha256": "bcc89b95b20378bfc235454c2dd2c8a7eb7e3e68c979658b6dbf6ef50a5c0806",
+  "pages": 3,
+  "bytes": 131834,
+  "retrieved": "2026-10-09",
+  "printed_date": "Effective 10/01/2025; re-review 05/15/2025"
+}

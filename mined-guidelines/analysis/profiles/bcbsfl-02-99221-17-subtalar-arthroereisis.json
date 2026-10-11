@@ -1,0 +1,84 @@
+{
+ "lines_of_business": [
+  "All lines of business unless noted in PROGRAM EXCEPTIONS (disclaimer: 'THIS MEDICAL COVERAGE GUIDELINE APPLIES TO ALL LINES OF BUSINESS UNLESS OTHERWISE NOTED IN THE PROGRAM EXCEPTIONS SECTION')",
+  "FEP: 'Follow FEP guidelines.'",
+  "SAO: 'Follow SAO guidelines.'",
+  "Medicare Advantage products: 'No National Coverage Determination (NCD) and/or Local Coverage Determination (LCD) was found at the time of the last guideline reviewed date.'"
+ ],
+ "effective_or_revised": "Original Effective Date 09/15/12; Reviewed 05/28/26; Revised 06/15/26 (committee approval 05/28/26)",
+ "sections_in_order": [
+  "Header block (MCG number, Original Effective Date, Reviewed, Revised)",
+  "Subject",
+  "Disclaimer (all caps)",
+  "Navigation bar (Position Statement / Billing/Coding / Reimbursement / Program Exceptions / Definitions / Related Guidelines / Other / References / Updates)",
+  "DESCRIPTION",
+  "POSITION STATEMENT",
+  "BILLING/CODING INFORMATION",
+  "REIMBURSEMENT INFORMATION",
+  "PROGRAM EXCEPTIONS",
+  "DEFINITIONS",
+  "RELATED GUIDELINES",
+  "OTHER",
+  "REFERENCES",
+  "COMMITTEE APPROVAL",
+  "GUIDELINE UPDATE INFORMATION"
+ ],
+ "criteria_location": "There are no criteria. The whole coverage rule is one sentence in POSITION STATEMENT (p.2). DESCRIPTION holds a 'Summary and Analysis of Evidence' paragraph that explains why, but it is evidence, not criteria.",
+ "procedures_covered": [
+  "Subtalar arthroereisis (sinus tarsi implant insertion, removal, removal and reinsertion) - all investigational"
+ ],
+ "logic": {
+  "top_level": "other",
+  "max_nesting_depth": 0,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "None. The single statement is a blanket exclusion.",
+  "initial_vs_repeat": "Not addressed; removal and reinsertion codes are listed as Investigational too.",
+  "and_or_ambiguity": []
+ },
+ "requirement_kinds": [
+  {
+   "kind": "other",
+   "quote": "Subtalar arthroereisis is considered experimental or investigational for all indications.",
+   "where": "Position Statement (p.2)"
+  }
+ ],
+ "thresholds": [],
+ "time_windows": [],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "No criteria to tie to. Each code carries an inline '(Investigational)' tag: '0335T Insertion of sinus tarsi implant (Investigational)'.",
+  "non_covered_code_lists": "0335T, 0510T, 0511T, S2117 each tagged '(Investigational)'."
+ },
+ "external_dependencies": [
+  {
+   "what": "FEP and SAO members are sent to their own guidelines; Medicare Advantage notes no NCD/LCD found",
+   "quote": "Federal Employee Program (FEP): Follow FEP guidelines."
+  }
+ ],
+ "definitions_that_change_meaning": [],
+ "vague_terms": [
+  {
+   "quote": "The evidence is insufficient to determine the effects of the technology on health outcomes.",
+   "problem": "Boilerplate rationale, not a testable condition."
+  }
+ ],
+ "extraction_hazards": [
+  "Navigation bar (Position Statement / Billing/Coding / ... / Updates) is flattened into three text lines between the disclaimer and DESCRIPTION.",
+  "Disclaimer wraps mid-sentence and is all caps, easy to mistake for content.",
+  "Update-history table: from 06/15/22 onward the dates lose their indent (lines 198-203), so the table looks irregular.",
+  "REFERENCES run 30 items and occupy half the file; nothing there is criteria."
+ ],
+ "interesting_structures": [
+  "Pure 'investigational for all indications' policy: the entire tree is a single NOT-covered leaf. Update history repeats 'Position statement maintained' every year, showing the stance has been frozen since 2012.",
+  "'Reimbursement Information' just says 'Refer to section entitled POSITION STATEMENT.'"
+ ],
+ "fit_to_tree": {
+  "score": 1,
+  "why": "Nothing to evaluate: always not covered. The checker should return a fixed 'not medically necessary / investigational' result, not a tree."
+ },
+ "file": "bcbsfl-02-99221-17-subtalar-arthroereisis.pdf",
+ "treatment": "subtalar-arthroereisis",
+ "payer": "bcbsfl",
+ "doc_kind": "medical policy (Florida Blue Medical Coverage Guideline)"
+}

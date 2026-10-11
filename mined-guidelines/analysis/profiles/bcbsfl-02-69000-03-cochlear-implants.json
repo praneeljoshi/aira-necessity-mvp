@@ -1,0 +1,204 @@
+{
+ "doc_kind": "medical policy (Florida Blue Medical Coverage Guideline)",
+ "lines_of_business": [
+  "All lines of business unless noted in Program Exceptions (disclaimer p.1)",
+  "Federal Employee Program (FEP): follow FEP guidelines",
+  "State Account Organization (SAO): follow SAO guidelines",
+  "Medicare Advantage: reviewed NCD/LCD listed in Program Exceptions"
+ ],
+ "effective_or_revised": "Original Effective Date 08/15/03; Reviewed 07/24/25; Revised 08/15/25 (12 pages)",
+ "sections_in_order": [
+  "Header block (policy number, Original Effective Date, Reviewed, Revised)",
+  "Subject",
+  "Disclaimer (all caps)",
+  "Navigation bar (Position Statement / Billing/Coding / ... hyperlinks)",
+  "DESCRIPTION",
+  "POSITION STATEMENT",
+  "BILLING/CODING INFORMATION",
+  "REIMBURSEMENT INFORMATION",
+  "PROGRAM EXCEPTIONS",
+  "DEFINITIONS",
+  "RELATED GUIDELINES",
+  "OTHER",
+  "REFERENCES",
+  "COMMITTEE APPROVAL",
+  "GUIDELINE UPDATE INFORMATION"
+ ],
+ "criteria_location": "Position Statement pp.2-4: standard cochlear implant ALL list; implantation sequencing note; hybrid implant ALL list; programming; replacement/upgrade rules. Reimbursement Information adds replacement coverage conditions; Definitions define severe/profound hearing impairment.",
+ "procedures_covered": [
+  "Unilateral or bilateral cochlear implant (69930)",
+  "Hybrid cochlear implant/hearing aid",
+  "Diagnostic analysis and programming (92601-92604)",
+  "Replacement of components, batteries (L8614-L8629, V5273)",
+  "Upgrades (not covered)"
+ ],
+ "logic": {
+  "top_level": "pathways: standard implant (ALL of 4), hybrid implant (ALL of 4 with nested ALL thresholds), plus conditional statements for programming, replacement, upgrade",
+  "max_nesting_depth": 3,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "Inline: 'No contraindications to surgery (e.g., deafness due to lesions of the eighth cranial (acoustic) nerve ..., active or chronic infections ..., cochlear ossification ...)'. Upgrades: 'solely for the purpose of upgrading ... does not meet the definition of medical necessity'.",
+  "initial_vs_repeat": "Bilateral-sequential: 'it is not required that hearing tests be repeated between implantation procedures.' Replacement only if 'inadequate response ... or ... no longer functional and cannot be repaired.'",
+  "and_or_ambiguity": [
+   {
+    "quote": "Unilateral or bilateral severe-to-profound prelingual or postlingual (sensorineural) hearing loss ... defined as a hearing threshold pure-tone average of 70 dB hearing loss or greater at 500, 1000, and 2000 Hz",
+    "why_ambiguous": "Definitions section separately defines 'Severe' as 70-90 dB and 'Profound' as 90 dB and above; criterion repeats threshold inline."
+   },
+   {
+    "quote": "Low-frequency hearing thresholds no poorer than 60 dB hearing level ... AND ... ≥75 dB ... AND ... ≤ 60 dB ... AND ... Aided CNC word recognition score from 10% to 60%",
+    "why_ambiguous": "Four audiometric conditions per ear (implanted vs contralateral); contralateral conditions interleave with the implanted-ear ones."
+   },
+   {
+    "quote": "Replacement of internal and/or external components meets the definition of medical necessity only in those who have inadequate response ... or the component(s) is/are no longer functional",
+    "why_ambiguous": "'only in those who' reads as any-of but 'to the point of interfering with ADLs' modifies only the first."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "measurement threshold",
+   "quote": "pure-tone average of 70 dB hearing loss or greater at 500, 1000, and 2000 Hz",
+   "where": "Standard 1"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "scores of 50% correct or less in the ear to be implanted on tape-recorded sets of open-set sentence recognition",
+   "where": "Standard 2 (adults)"
+  },
+  {
+   "kind": "age",
+   "quote": "Age 18 years or older",
+   "where": "Hybrid"
+  },
+  {
+   "kind": "patient commitment",
+   "quote": "The individual is able to participate in a post-implant rehabilitation program",
+   "where": "Standard 3"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "the absence of cochlear development as demonstrated on computed tomography scan",
+   "where": "contraindication"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "limited or no benefit from appropriately fit conventional hearing aids",
+   "where": "Standard 2"
+  },
+  {
+   "kind": "lab value",
+   "quote": "Aided consonant-nucleus-consonant word recognition score from 10% to 60%",
+   "where": "Hybrid"
+  },
+  {
+   "kind": "other",
+   "quote": "Upgrades of an existing, functioning external system to achieve a cosmetic improvement ... are considered cosmetic",
+   "where": "exclusion"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "pure-tone average (standard)",
+   "value": ">= 70",
+   "unit": "dB",
+   "quote": "pure-tone average of 70 dB hearing loss or greater at 500, 1000, and 2000 Hz"
+  },
+  {
+   "quantity": "open-set sentence score, adult",
+   "value": "<= 50",
+   "unit": "% correct",
+   "quote": "scores of 50% correct or less"
+  },
+  {
+   "quantity": "open-set test, older children",
+   "value": "<= 30",
+   "unit": "% correct",
+   "quote": "30% or less correct on open-set tests"
+  },
+  {
+   "quantity": "hybrid low-frequency threshold",
+   "value": "<= 60 (no poorer than)",
+   "unit": "dB HL",
+   "quote": "no poorer than 60 dB hearing level"
+  },
+  {
+   "quantity": "hybrid mid-high frequency, implanted ear",
+   "value": ">= 75",
+   "unit": "dB HL",
+   "quote": "threshold average of 2000, 3000, and 4000 Hz ≥75 dB hearing level"
+  },
+  {
+   "quantity": "CNC word score",
+   "value": "10-60 (contralateral not more than 80)",
+   "unit": "%",
+   "quote": "from 10% to 60% in the ear to be implanted"
+  }
+ ],
+ "time_windows": [],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Procedure and 20+ HCPCS device codes listed; no mapping to criteria, no ICD-10.",
+  "non_covered_code_lists": "None."
+ },
+ "external_dependencies": [
+  {
+   "what": "Medicare Advantage NCD 50.3",
+   "quote": "Cochlear Implantation (50.3) located at cms.gov"
+  },
+  {
+   "what": "FDA approval",
+   "quote": "U.S. Food and Drug Administration (FDA) approved cochlear implant"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Severe sensorineural hearing impairment",
+   "definition_quote": "a bilateral hearing threshold of 70-90 decibels (dB)."
+  },
+  {
+   "term": "Profound sensorineural hearing impairment",
+   "definition_quote": "a bilateral hearing threshold of 90 decibels and above."
+  },
+  {
+   "term": "Hybrid cochlear implant",
+   "definition_quote": "a unilateral implant with a shorter cochlear electrode in combination with a hearing aid-like amplification device"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "appropriately fit conventional hearing aids",
+   "problem": "fit standard not stated."
+  },
+  {
+   "quote": "failure to develop basic auditory skills",
+   "problem": "pediatric test not specified."
+  },
+  {
+   "quote": "Limited or no benefit",
+   "problem": "defined parenthetically for adults and children, but in different instruments."
+  }
+ ],
+ "extraction_hazards": [
+  "Bullets are either the private-use character U+F0B7 or U+2022 depending on the document (the fusion guideline uses both), never '-' or '*'; nested bullets use other glyphs ('o') or only deeper indentation",
+  "Hyperlink navigation bar after the disclaimer is flattened into a 2-3 row text block that looks like headings",
+  "Form-feed (\\f) page breaks can fall mid-list or immediately before a section heading, so '^HEADING' regexes can miss; no running headers/footers or page numbers to strip",
+  "Parenthetical definitions with nested parentheses and semicolons span 4-6 lines",
+  "Age-split definition ('defined in adults as ... defined in children as ...') inside one bullet",
+  "Hybrid threshold bullets use nested 'o' glyphs and the thresholds mix ≥ and ≤ symbols whose encoding must be checked",
+  "Definitions section includes 'Perlingual' that is not used in criteria"
+ ],
+ "interesting_structures": [
+  "Age-banded thresholds (adults vs children) inside one criterion",
+  "Audiometric frequency-specific thresholds per ear (ipsilateral vs contralateral)",
+  "Hybrid device pathway with different candidacy",
+  "Replacement/upgrade rules distinguish need vs convenience"
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "scale": "1 = all/any/not expresses it cleanly ... 5 = needs new constructs or human judgment",
+  "why": "ALL-lists with numeric audiometry leaves express well, but the leaves require audiograms and speech scores, age branches inside leaves, and definitions section overlapping thresholds."
+ },
+ "payer": "bcbsfl",
+ "treatment": "cochlear-implants",
+ "file": "bcbsfl-02-69000-03-cochlear-implants.pdf"
+}

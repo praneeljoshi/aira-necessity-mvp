@@ -1,0 +1,19 @@
+{
+  "payer": "Blue Cross Blue Shield of Michigan",
+  "payer_key": "bcbsm",
+  "treatment": "sleep-apnea-surgery",
+  "title": "Obstructive Sleep Apnea and Snoring - Surgical Treatment - Medicare Advantage",
+  "policy_number": "",
+  "effective": "6/20/2026",
+  "url": "https://www.bcbsm.com/amslibs/content/dam/public/mpr/mprsearch/pdf/2197062.pdf",
+  "final_url": "https://www.bcbsm.com/amslibs/content/dam/public/mpr/mprsearch/pdf/2197062.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "bcbsm-hypoglossal-nerve-stimulation-for-osa.pdf",
+  "sha256": "7727280b8036384056ae8d00bc829aef9930d528657ae994ce9b118d976b6776",
+  "pages": 6,
+  "bytes": 198034,
+  "retrieved": "2026-10-09",
+  "printed_date": "UM Committee approval 5/20/2026; Effective 6/20/2026 (6 pages)"
+}

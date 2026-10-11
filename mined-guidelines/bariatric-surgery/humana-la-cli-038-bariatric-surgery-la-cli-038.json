@@ -1,0 +1,19 @@
+{
+  "payer": "Humana",
+  "payer_key": "humana",
+  "treatment": "bariatric-surgery",
+  "title": "Bariatric Surgery LA.CLI.038",
+  "policy_number": "LA.CLI.038",
+  "effective": "05/18/2026",
+  "url": "https://assets.humana.com/is/content/humana/LA.CLI.038.001%20Bariatric%20Surgery%20ed%205.18.26pdf",
+  "final_url": "https://assets.humana.com/is/content/humana/LA.CLI.038.001%20Bariatric%20Surgery%20ed%205.18.26pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "humana-la-cli-038-bariatric-surgery-la-cli-038.pdf",
+  "sha256": "ba36215075640c265fa7d1093a8a1289881c25b9f9277c470656d92c80f8973e",
+  "pages": 7,
+  "bytes": 285150,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original 08/08/2022; Effective 05/18/2026; Review 09/02/2025"
+}

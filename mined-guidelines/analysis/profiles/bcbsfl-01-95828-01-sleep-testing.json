@@ -1,0 +1,407 @@
+{
+ "file": "bcbsfl-01-95828-01-sleep-testing.pdf",
+ "treatment": "sleep-testing",
+ "payer": "bcbsfl",
+ "doc_kind": "medical coverage guideline (payer medical policy)",
+ "lines_of_business": [
+  "All lines of business unless noted in Program Exceptions",
+  "FEP: follow FEP guidelines (excluded from NIA review)",
+  "SAO: follow SAO guidelines",
+  "Medicare Advantage: CMS NCD 240.4.1, NCD 240.4, LCD L38398, L33405, Article A57496"
+ ],
+ "effective_or_revised": "Original 12/31/00; Reviewed 08/27/26; Revised 09/15/26",
+ "sections_in_order": [
+  "Description",
+  "Position Statement",
+  "Billing/Coding Information",
+  "Reimbursement Information",
+  "Program Exceptions",
+  "Definitions",
+  "Related Guidelines",
+  "Other",
+  "References",
+  "Updates"
+ ],
+ "criteria_location": "Position Statement (pp.~3-14): a signs/symptoms box, a site-of-service box, then a two-column layout (test name left, criteria right) for HSAT, PSG, titration, split night, repeat testing, MSLT, MWT, actigraphy, CDL, pediatric, hypoglossal nerve stimulation (HGNS) pre/post-implant, and non-covered tests. Frequency limits and required documentation are NOT in the Position Statement but in Reimbursement Information; AHI/ESS definitions are in Definitions.",
+ "procedures_covered": [
+  "HSAT (G0398-G0400, 95800/95801/95806)",
+  "Attended PSG (95808, 95810; pediatric 95782)",
+  "Split-night study (95811)",
+  "Attended PAP titration (95811, pediatric 95783) and APAP unattended titration (E0601)",
+  "Repeat HSAT/PSG/split night",
+  "Repeat attended titration",
+  "MSLT (95805)",
+  "MWT (95805)",
+  "Actigraphy (95803)",
+  "Testing for CDL/government licence",
+  "Pediatric sleep testing",
+  "Testing before/after hypoglossal nerve stimulator implant",
+  "Non-covered: overnight oximetry for OSA, acoustic pharyngometry, SNAP <3 channels, cephalometric x-ray for OSA dx, PAP-Nap, etc."
+ ],
+ "logic": {
+  "top_level": "pathways: one block per test type, each with its own mix of all/any; the HSAT block is 'all of A,B,C,D', PSG is '(A and B) or (A and C) or D'",
+  "max_nesting_depth": 4,
+  "k_of_n": [
+   {
+    "k": 1,
+    "n": 2,
+    "quote": "witnessed apnea during sleep; OR at least one sign/symptom from category A and one sign/symptom from category B"
+   },
+   {
+    "k": 1,
+    "n": 3,
+    "quote": "meets the definition of medical necessity when a member presents with (A&B, A&C, or D)"
+   }
+  ],
+  "exclusions_or_contraindications": "HSAT eligibility is expressed as a negative: 'B. Absence of other comorbid medical conditions or concomitant sleep disorders such as:' followed by ~8 comorbidities and ~6 sleep disorders ('such as' = non-exhaustive). The very same comorbidity list is reused as a POSITIVE criterion for PSG (B), split night (B), titration (C) and repeat titration (2B). A separate Noncovered list gives indications where PSG/HSAT never qualify (insomnia, circadian, RLS, snoring only, asymptomatic, employer-mandated).",
+  "initial_vs_repeat": "Separate 'Repeat Diagnostic Testing' blocks: repeat HSAT/PSG/split night requires initial criteria AND at least ONE of 4 conditions; repeat attended titration '(1 and 2 or 3)'; repeat MSLT limited to one repeat by Reimbursement section; frequency cap 'two (2) in 12 months'.",
+  "and_or_ambiguity": [
+   {
+    "quote": "HSAT meets the definition of medical necessity when all of the following conditions are met (A,B,C,& D)",
+    "why_ambiguous": "Condition B is a negative list ('Absence of ... such as') so 'all' includes a NOT over an open-ended list."
+   },
+   {
+    "quote": "A full night, attended titration study (95811) meets the definition of medical necessity when the following conditions are met (A &B, A&C, or A&D).",
+    "why_ambiguous": "Group of three alternatives, each AND-ed with A; then the next sentence says APAP is allowed only 'when condition A is met and conditions B, C, and D are not' - so the same four letters drive two opposite decisions."
+   },
+   {
+    "quote": "A repeat in-lab PAP titration (95811) meets the definition of medical necessity for a member who is known to have OSA when (1 and 2 or 3)",
+    "why_ambiguous": "Precedence of 'and' vs 'or' is not stated; context suggests (1 AND 2) OR 3 but 1 itself contains 'AND any of the following'."
+   },
+   {
+    "quote": "AHI or RDI or REI measured on HSAT greater than or greater than or equal to 5 events per hour but less than 15",
+    "why_ambiguous": "Garbled threshold wording (typo); intended >=5 and <15."
+   },
+   {
+    "quote": "The member was unable to tolerate positive airway pressure therapy following a 1-month minimum trial of APAP as evidenced by the objective data (as noted in the bullet above AND the member did not have a previous attended titration.",
+    "why_ambiguous": "Missing close parenthesis; the final 'AND the member did not have a previous attended titration' might apply to the last bullet only or to all of D."
+   },
+   {
+    "quote": "at least ONE of the following conditions is met: ... 2. Member has had any of the following • a significant change in weight ... • persistent or recurring signs or symptoms of OSA and adherent with PAP therapy • develop or have a change in cardiovascular status",
+    "why_ambiguous": "Condition 2 is itself an any-of list nested under an at-least-one list."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "symptom",
+   "quote": "witnessed apnea during sleep; OR at least one sign/symptom from category A and one sign/symptom from category B",
+   "where": "Position Statement, Signs and Symptoms box"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "Epworth Sleepiness Scale (ESS) greater than or equal to 10",
+   "where": "Category A, EDS"
+  },
+  {
+   "kind": "BMI/comorbidity",
+   "quote": "BMI greater than or equal to 30",
+   "where": "Category B"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "Neck circumference greater than 17 in. (men) or greater than 16 in. (women)",
+   "where": "Category B"
+  },
+  {
+   "kind": "age",
+   "quote": "D. Age 18 years or older.",
+   "where": "HSAT conditions"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "Moderate to severe heart failure with New York Heart Association (NYHA) Classification III or IV or reduced EF less than or equal to 40%",
+   "where": "HSAT B / PSG B"
+  },
+  {
+   "kind": "lab value",
+   "quote": "pCO 2 greater than 45 mm Hg and pO2 less than 60 mm Hg on arterial blood gas",
+   "where": "Obesity hypoventilation syndrome definition"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "Recent Home Sleep Apnea Test (HSAT) (less than 1 year old) confirmed to be non-diagnostic",
+   "where": "PSG C"
+  },
+  {
+   "kind": "other",
+   "quote": "chronic use defined as use of opioids on most days for greater than 3 months",
+   "where": "HSAT B, PSG B"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "The member has failed recent APAP trial at home.",
+   "where": "Titration D; adherence use >=4 h/night on 70% of nights over 30 consecutive days"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "Reassessment of clinical indicators of obstructive sleep apnea to determine the effectiveness of treatment after surgical intervention",
+   "where": "Repeat testing 3"
+  },
+  {
+   "kind": "provider/facility qualification",
+   "quote": "ordered by a licensed physician or advanced practice provider and reviewed and interpreted by a board certified sleep physician",
+   "where": "Diagnostic Testing note"
+  },
+  {
+   "kind": "site of service",
+   "quote": "criteria based on recent comparative effectiveness studies will be applied for the site of service determination during the preauthorization process",
+   "where": "Position Statement NOTE"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "physician history and physical, physician procedure note, treatment plan, plan of treatment, electroencephalogram study, and polysomnography (sleep) study",
+   "where": "Reimbursement Information"
+  },
+  {
+   "kind": "functional impairment",
+   "quote": "Assessment of the member's cognitive and physical ability to safely and effectively perform the sleep test outside of the sleep laboratory",
+   "where": "Site of service item 4 / HSAT C"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "ESS",
+   "value": ">= 10",
+   "unit": "score",
+   "quote": "Epworth Sleepiness Scale (ESS) greater than or equal to 10"
+  },
+  {
+   "quantity": "BMI (symptom)",
+   "value": ">= 30",
+   "unit": "kg/m2",
+   "quote": "BMI greater than or equal to 30"
+  },
+  {
+   "quantity": "neck circumference",
+   "value": "> 17 men / > 16 women",
+   "unit": "inches",
+   "quote": "greater than 17 in. (men) or greater than 16 in. (women)"
+  },
+  {
+   "quantity": "LVEF",
+   "value": "<= 40",
+   "unit": "%",
+   "quote": "reduced EF less than or equal to 40%"
+  },
+  {
+   "quantity": "pulmonary artery pressure",
+   "value": "> 40",
+   "unit": "mm Hg",
+   "quote": "pulmonary artery pressure greater than 40 mm Hg"
+  },
+  {
+   "quantity": "PLMD index",
+   "value": ">= 15",
+   "unit": "movements/hour",
+   "quote": "greater than or equal to 15 periodic limb movements per hour resulting in arousal"
+  },
+  {
+   "quantity": "central apnea share and rate",
+   "value": "> 50% and >= 5/h",
+   "unit": "",
+   "quote": "central apneas/ hypopneas greater than 50% of the total apneas/hypopneas and central apneas/hypopneas greater than or equal to 5 times per hour"
+  },
+  {
+   "quantity": "AHI/RDI/REI for titration",
+   "value": ">= 15, or >= 5 and < 15 with symptom/comorbidity",
+   "unit": "events/h",
+   "quote": "AHI or RDI or REI measured on HSAT greater than or equal to 15 events per hour"
+  },
+  {
+   "quantity": "O2 saturation",
+   "value": "<90% for >15% of recording OR <80% for >1%",
+   "unit": "",
+   "quote": "O2 saturation <90% for greater than 15% of recording time"
+  },
+  {
+   "quantity": "PAP adherence",
+   "value": ">=4 h/night on 70% of nights, 30 consecutive days",
+   "unit": "",
+   "quote": "use ≥4 hours per night on 70% of nights during a consecutive 30 day period"
+  },
+  {
+   "quantity": "residual AHI on APAP",
+   "value": ">= 5",
+   "unit": "events/h",
+   "quote": "residual AHI on APAP download of greater than or equal to 5"
+  },
+  {
+   "quantity": "weight change",
+   "value": ">= 10",
+   "unit": "% body weight",
+   "quote": "weight gain or weight loss of greater than or equal to 10% of total body weight"
+  },
+  {
+   "quantity": "HGNS BMI",
+   "value": "< 35",
+   "unit": "kg/m2",
+   "quote": "Body mass index (BMI) is less than 35 kg/m2"
+  },
+  {
+   "quantity": "HGNS AHI",
+   "value": "15 to 65",
+   "unit": "events/h",
+   "quote": "AHI is 15 to 65 events per hour"
+  },
+  {
+   "quantity": "HGNS central+mixed",
+   "value": "< 25",
+   "unit": "% of AHI",
+   "quote": "central and mixed apneas less than 25% of the total AHI"
+  },
+  {
+   "quantity": "pediatric OSA AHI/RDI",
+   "value": ">= 1",
+   "unit": "events/h",
+   "quote": "AHI or RDI greater than or equal to 1 on polysomnography"
+  },
+  {
+   "quantity": "reimbursement cap",
+   "value": "2 per 12 months (sleep studies); 1 day per 12 months (MSLT)",
+   "unit": "",
+   "quote": "is limited to two (2) in 12 months"
+  },
+  {
+   "quantity": "minimum channels",
+   "value": ">= 3",
+   "unit": "channels",
+   "quote": "measure fewer than 3 channels ... does not meet the definition of medical necessity"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "prior non-diagnostic HSAT",
+   "length": "< 1 year old",
+   "quote": "Recent Home Sleep Apnea Test (HSAT) (less than 1 year old)"
+  },
+  {
+   "what": "HGNS diagnostic study before first consultation",
+   "length": "within 24 months",
+   "quote": "performed within 24 months of first consultation for HGNS implant"
+  },
+  {
+   "what": "APAP trial",
+   "length": "1 month minimum; 30 consecutive days adherence data",
+   "quote": "following a 1-month minimum trial of APAP"
+  },
+  {
+   "what": "chronic opioid",
+   "length": "> 3 months",
+   "quote": "opioids on most days for greater than 3 months"
+  },
+  {
+   "what": "narcolepsy-type MSLT symptom history",
+   "length": "> 3 months",
+   "quote": "routine unintentional naps or lapses into sleep during the day for at least more than 3 months"
+  },
+  {
+   "what": "actigraphy recommended duration",
+   "length": "7 days",
+   "quote": "recommended that actigraphy be performed for at least 7 days"
+  },
+  {
+   "what": "documentation recency (LOINC)",
+   "length": "6 months or fewer before date of service",
+   "quote": "observations made six months or fewer before starting date of service for the claim"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Partly: criteria headings cite codes (PSG 95808/95810, titration/split night 95811, MSLT/MWT 95805, actigraphy 95803, E0601) but the HSAT block does not cite G0398-G0400; the code table lists everything in one list; 95807 marked Non-covered in table only.",
+  "non_covered_code_lists": "95807 flagged '(Non-covered)'; Noncovered list of tests in Position Statement has no codes."
+ },
+ "external_dependencies": [
+  {
+   "what": "CMS NCDs/LCDs for Medicare Advantage",
+   "quote": "National Coverage Determination (NCD) for Sleep Testing for Obstructive Sleep Apnea (OSA) (240.4.1)"
+  },
+  {
+   "what": "NIA (vendor) review of site of service, FEP excluded",
+   "quote": "FEP is excluded from the National Imaging Associates (NIA) review; follow FEP guidelines."
+  },
+  {
+   "what": "Related policies",
+   "quote": "Positive Airway Pressure Devices, 09-E0000-21"
+  },
+  {
+   "what": "Florida step-therapy exemption statute",
+   "quote": "in compliance with Florida law 627.42393, members or providers may request a step therapy protocol exemption"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Excessive Daytime Sleepiness",
+   "definition_quote": "Score greater than or equal to 10 on the Epworth Sleepiness Scale."
+  },
+  {
+   "term": "HSAT",
+   "definition_quote": "This test is used to diagnose OSA in patients without comorbid conditions."
+  },
+  {
+   "term": "Apnea",
+   "definition_quote": "cessation of airflow for 10 seconds or more"
+  },
+  {
+   "term": "AHI",
+   "definition_quote": "If the AHI is calculated based on less than 2 hours of continuous recorded sleep, the total number of recorded events ... must be at least ... greater than or equal to 10 events"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "Disturbed or restless sleep / Non restorative sleep / Fatigue.",
+   "problem": "Category A symptoms are subjective and overlap; 'Fatigue' alone satisfies Category A, so almost any patient has one."
+  },
+  {
+   "quote": "Absence of other comorbid medical conditions or concomitant sleep disorders such as:",
+   "problem": "'such as' makes the exclusion list open-ended."
+  },
+  {
+   "quote": "Uncontrolled or refractory cardiac arrhythmia(s) supported by clinical documentation",
+   "problem": "'Uncontrolled/refractory' undefined; clinical documentation examples are loose symptoms."
+  },
+  {
+   "quote": "Cognitive and physical ability to safely and effectively perform the sleep test outside of the sleep laboratory",
+   "problem": "Judgement; no instrument or threshold."
+  },
+  {
+   "quote": "Moderate to severe COPD ... as diagnosed on pulmonary function studies",
+   "problem": "No FEV1 cutoff given for 'moderate to severe' (UHC and BCBSM give one)."
+  },
+  {
+   "quote": "significant oxygen desaturations",
+   "problem": "Defined only in the following bullets; fine, but 'recording time' needs the study report."
+  },
+  {
+   "quote": "high pretest probability of OSA",
+   "problem": "Undefined in this guideline."
+  },
+  {
+   "quote": "persistent or recurring signs or symptoms of OSA and adherent with PAP therapy",
+   "problem": "Adherence defined elsewhere (70%/4h) but not restated here."
+  }
+ ],
+ "extraction_hazards": [
+  "Two-column table layout: test name in left column, criteria in right; pdftotext interleaves, and the criteria text for one block continues after page breaks with the left label missing.",
+  "The same 8+6 item comorbidity/sleep-disorder list is copy-pasted 6 times (HSAT B, PSG B/D, titration C, split night B/D, repeat titration 2B/C) with small wording drifts (e.g. 'most days' vs 'most days per week'; truncated bullet 'greater' with text cut: 'opioids on most days per week for greater' then a page break).",
+  "Section heading 'Multiple Latency Test (MSLT) Attended Titration' is a garbled label (MSLT is not titration).",
+  "Bullets use ○/▪ glyphs and indentation to show nesting; the PDF text loses them in places (e.g. pediatric list nesting).",
+  "Criteria are scattered: frequency cap and required documents are in Reimbursement Information; the 'attestation' fallback sits as free-floating notes between tables.",
+  "Typos affect logic ('greater than or greater than or equal to 5', missing parenthesis).",
+  "LOINC documentation table and long CPT list follow the criteria."
+ ],
+ "interesting_structures": [
+  "Same four letters A-D mean different things per test and the combination rule is written in the heading '(A&B, A&C, or D)'.",
+  "APAP vs attended titration decided by whether A holds and B, C, D do NOT (a derived negation).",
+  "Comorbidity list is used both as a exclusion (HSAT) and an inclusion (PSG): HSAT and PSG are mutually steered by the same facts.",
+  "Reimbursement caps (2 in 12 months) and an 'attestation will be accepted' escape hatch when the previous test is not available.",
+  "Pediatric branch (<18) with its own indications, HSAT never covered in children.",
+  "HGNS pre-implant criteria embedded in a sleep-testing policy (BMI<35, AHI 15-65, CPAP failure definition)."
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "scale": "1 clean ... 5 judgment",
+  "why": "Logic is all/any/not and mostly numeric, so a tree fits; strain comes from the repeated large exclusion lists, 'such as' open lists, derived negation (APAP when B,C,D absent), hidden frequency caps, and chart facts (PFT results, ABG, PAP download) that are often missing."
+ }
+}

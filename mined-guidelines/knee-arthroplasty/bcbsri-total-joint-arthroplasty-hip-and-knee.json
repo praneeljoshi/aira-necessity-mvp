@@ -1,0 +1,19 @@
+{
+  "payer": "Blue Cross & Blue Shield of Rhode Island",
+  "payer_key": "bcbsri",
+  "treatment": "knee-arthroplasty",
+  "title": "Total Joint Arthroplasty - Hip and Knee",
+  "policy_number": "",
+  "effective": "2026",
+  "url": "https://www.bcbsri.com/providers/sites/providers/files/policies/2026/08/2026%20Total%20Joint%20Arthroplasty%20-%20Hip%20and%20Knee.pdf",
+  "final_url": "https://www.bcbsri.com/providers/sites/providers/files/policies/2026/08/2026%20Total%20Joint%20Arthroplasty%20-%20Hip%20and%20Knee.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "bcbsri-total-joint-arthroplasty-hip-and-knee.pdf",
+  "sha256": "e4f1d1a2fcc8d2c25a08654ed33991f06fd094e9709f0e630adc532435099e22",
+  "pages": 9,
+  "bytes": 269716,
+  "retrieved": "2026-10-09",
+  "printed_date": "Effective 03|01|2025; Policy last reviewed 08|05|2026"
+}

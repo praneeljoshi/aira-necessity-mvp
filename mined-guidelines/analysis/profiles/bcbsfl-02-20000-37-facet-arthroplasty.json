@@ -1,0 +1,86 @@
+{
+ "doc_kind": "medical policy (Florida Blue Medical Coverage Guideline)",
+ "lines_of_business": [
+  "All lines of business unless noted in Program Exceptions (disclaimer p.1)",
+  "Federal Employee Program (FEP): follow FEP guidelines",
+  "State Account Organization (SAO): follow SAO guidelines",
+  "Medicare Advantage: reviewed NCD/LCD listed in Program Exceptions"
+ ],
+ "effective_or_revised": "Original Effective Date 11/15/09; Reviewed 08/27/26; Revised 09/15/26 (6 pages)",
+ "sections_in_order": [
+  "Header block (policy number, Original Effective Date, Reviewed, Revised)",
+  "Subject",
+  "Disclaimer (all caps)",
+  "Navigation bar (Position Statement / Billing/Coding / ... hyperlinks)",
+  "DESCRIPTION",
+  "POSITION STATEMENT",
+  "BILLING/CODING INFORMATION",
+  "REIMBURSEMENT INFORMATION",
+  "PROGRAM EXCEPTIONS",
+  "DEFINITIONS",
+  "RELATED GUIDELINES",
+  "OTHER",
+  "REFERENCES",
+  "COMMITTEE APPROVAL",
+  "GUIDELINE UPDATE INFORMATION"
+ ],
+ "criteria_location": "No criteria. Position Statement (p.5, three lines) says: 'Total facet arthroplasty (facet replacement) is considered experimental or investigational for all indications.' Description (90 lines) is evidence review.",
+ "procedures_covered": [
+  "Total facet arthroplasty / facet replacement (CPT 0202T, tagged investigational)"
+ ],
+ "logic": {
+  "top_level": "other: single blanket not-covered statement",
+  "max_nesting_depth": 0,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "The whole procedure is excluded.",
+  "initial_vs_repeat": "",
+  "and_or_ambiguity": []
+ },
+ "requirement_kinds": [
+  {
+   "kind": "other",
+   "quote": "considered experimental or investigational for all indications",
+   "where": "Position Statement"
+  }
+ ],
+ "thresholds": [],
+ "time_windows": [],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Single CPT 0202T with descriptor ending '(investigational)'.",
+  "non_covered_code_lists": "0202T marked '(investigational)'; update history refers to deleting 0719T by pointing to another guideline: '(refer to MCG 09-A0000-03 Investigational Services)'."
+ },
+ "external_dependencies": [
+  {
+   "what": "General investigational services guideline",
+   "quote": "Deleted CPT 0719T (refer to MCG 09-A0000-03 Investigational Services)"
+  }
+ ],
+ "definitions_that_change_meaning": [],
+ "vague_terms": [
+  {
+   "quote": "The evidence is insufficient to determine that the technology results in an improvement in the net health outcome.",
+   "problem": "Standard rationale phrase, not a testable condition."
+  }
+ ],
+ "extraction_hazards": [
+  "Bullets are either the private-use character U+F0B7 or U+2022 depending on the document (the fusion guideline uses both), never '-' or '*'; nested bullets use other glyphs ('o') or only deeper indentation",
+  "Hyperlink navigation bar after the disclaimer is flattened into a 2-3 row text block that looks like headings",
+  "Form-feed (\\f) page breaks can fall mid-list or immediately before a section heading, so '^HEADING' regexes can miss; no running headers/footers or page numbers to strip",
+  "Over 70% of the file is Description and References; the real policy is three lines",
+  "Cross-reference to another guideline occurs only in the update history"
+ ],
+ "interesting_structures": [
+  "Template for 'investigational for all indications' documents: one sentence plus rationale boilerplate",
+  "Coverage rule for a code lives in a different guideline (09-A0000-03)"
+ ],
+ "fit_to_tree": {
+  "score": 1,
+  "scale": "1 = all/any/not expresses it cleanly ... 5 = needs new constructs or human judgment",
+  "why": "A single always-NOT_MET leaf; the 'tree' is trivial, but a checker should recognise it as a no-coverage policy rather than looking for criteria."
+ },
+ "payer": "bcbsfl",
+ "treatment": "facet-arthroplasty",
+ "file": "bcbsfl-02-20000-37-facet-arthroplasty.pdf"
+}

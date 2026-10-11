@@ -1,0 +1,19 @@
+{
+  "payer": "Curative",
+  "payer_key": "curative",
+  "treatment": "cardiac-monitoring",
+  "title": "Cardiac Event Monitors Policy",
+  "policy_number": "MM-PNP-009",
+  "effective": "",
+  "url": "https://static.curative.com/health_plan/medical-policies/MM-PNP-009%20Cardiac%20Event%20Monitors%20Policy.pdf",
+  "final_url": "https://static.curative.com/health_plan/medical-policies/MM-PNP-009%20Cardiac%20Event%20Monitors%20Policy.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "curative-mm-pnp-009-cardiac-event-monitors-policy.pdf",
+  "sha256": "a0f36cc2760adcc52e64f8431731ec1fa787d6e147b46c838702b8c6979a1282",
+  "pages": 5,
+  "bytes": 149165,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original effective 10/01/2023; revision date N/A; footer shows 2022 copyright"
+}

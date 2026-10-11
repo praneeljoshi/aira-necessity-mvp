@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "knee-arthroplasty",
+  "title": "Knee Arthroplasty",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JJV1UD638SUPN8GLT",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-20000-60",
+  "original_effective": "10/15/16",
+  "reviewed": "04/23/26",
+  "revised": "05/15/26",
+  "file": "bcbsfl-02-20000-60-knee-arthroplasty.pdf",
+  "sha256": "781c9f044bed8b767e0d5aa0e254c098b5f8a145d0afee99f1fb27d3fdc8855f",
+  "pages": 8,
+  "bytes": 178884,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original 10/15/16; Reviewed 04/23/26; Revised 05/15/26 (history: 05/15/26 'no change in position statement')"
+}

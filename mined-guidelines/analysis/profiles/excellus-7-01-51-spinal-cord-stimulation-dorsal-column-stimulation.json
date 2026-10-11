@@ -1,0 +1,260 @@
+{
+ "file": "excellus-7-01-51-spinal-cord-stimulation-dorsal-column-stimulation.pdf",
+ "treatment": "spinal-cord-stimulation",
+ "payer": "excellus",
+ "doc_kind": "medical policy",
+ "lines_of_business": [
+  "Commercial (incl. Essential Plan, Child Health Plus), Medicaid without eMedNY criteria, Medicare without national/local decision (Product Disclaimer, p.1)"
+ ],
+ "effective_or_revised": "Current effective 09/15/23; original 11/15/01",
+ "sections_in_order": [
+  "Medical Policy Details/Product Disclaimer",
+  "Policy Statement I-XII",
+  "Policy Guidelines I-IV",
+  "Description (Rutherford classification table, CRPS, CCS classification)",
+  "Rationale",
+  "Regulatory Status",
+  "Coding (CPT, HCPCS, ICD10)",
+  "References",
+  "Search Terms",
+  "Policy History"
+ ],
+ "criteria_location": "Policy Statement I-XII pp.1-4 and Policy Guidelines pp.4-5; Rutherford and CCS tables in Description (pp.5-6) are needed to apply the CLI and angina criteria.",
+ "procedures_covered": [
+  "SCS trial and permanent (standard and high-frequency) for FBSS with leg pain",
+  "Non-HF SCS for CRPS/RSD",
+  "Non-HF SCS for critical limb ischemia",
+  "Non-HF SCS for refractory angina (CCS III/IV)",
+  "SCS/DRG replacement and revision",
+  "Burst, closed-loop, DRG, peripheral nerve field stimulation (investigational)"
+ ],
+ "logic": {
+  "top_level": "pathways (separate indications: FBSS, CRPS, CLI, angina) each with trial criteria (all-of) and permanent criteria (response)",
+  "max_nesting_depth": 4,
+  "k_of_n": [
+   {
+    "k": 3,
+    "n": 4,
+    "quote": "Patient reports at least one of the symptoms in three out of four of the following categories"
+   },
+   {
+    "k": 2,
+    "n": 4,
+    "quote": "patient displays at least one of the signs in two or more of the following categories"
+   }
+  ],
+  "exclusions_or_contraindications": "Statements VI-XII list investigational uses (phantom limb, post-herpetic neuralgia, peripheral neuropathy, MS pain, etc.), plus 'no other medical or psychological diagnoses ... concordant' for CRPS and behavioral health attestation.",
+  "initial_vs_repeat": "V: replacement when malfunctioning, cannot be repaired, out of warranty, OR revision of electrodes needed. VI: replacing functioning non-HF SCS with HF is not medically necessary.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Surgical intervention is not indicated, or the patient does not wish to proceed with spinal surgery",
+    "why_ambiguous": "Patient preference substitutes for clinical indication (FBSS only; CRPS requires only 'not indicated')"
+   },
+   {
+    "quote": "Patient has failed at least six consecutive months of physician-supervised, conservative medical management (e.g., pharmacotherapy, physical therapy, cognitive therapy, and activity lifestyle modification)",
+    "why_ambiguous": "'and' in the e.g. list vs 'or' in the CRPS copy ('cognitive behavioral therapy, or activity lifestyle modification'): all, any, or one?"
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "conservative therapy",
+   "quote": "failed at least six consecutive months of physician-supervised, conservative medical management",
+   "where": "Statement I.A.1, II.A.2"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "failed back surgery syndrome (FBSS) with intractable neuropathic leg pain",
+   "where": "Statement I"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "CRPS/RSD ... only of the upper and lower extremities",
+   "where": "Statement II"
+  },
+  {
+   "kind": "symptom",
+   "quote": "at least one of the symptoms in three out of four of the following categories (sensory, vasomotor, sudomotor/edema, motor/trophic)",
+   "where": "Statement II.A.1.b"
+  },
+  {
+   "kind": "symptom",
+   "quote": "On physical examination, patient displays at least one of the signs in two or more of the following categories",
+   "where": "Statement II.A.1.c"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "Advanced imaging (i.e., angiographic imaging, CT or MRI) demonstrates multi-level disease with absence of named vessel with flow into the foot",
+   "where": "Statement III.A.3 (CLI)"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "resting ankle pressure less than 40 mmHg ... toe pressure less than 30 mmHg",
+   "where": "Statement III.A.2"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "Angina pectoris is Canadian Cardiovascular Society (CCS) functional class III or class IV",
+   "where": "Statement IV.A.1"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "Optimal medical treatment (OMT) that has failed ... anti-platelet; statin; anti-anginal ... goal heart rate of 60; anti-hypertensive ... SBP <140 and DBP <90",
+   "where": "Statement IV.A.3"
+  },
+  {
+   "kind": "provider/facility qualification",
+   "quote": "Attestation is received from a vascular surgeon that the individual is not a suitable candidate for vascular reconstruction; attestation from the patient's treating cardiologist",
+   "where": "Statements III.A.1, IV.A.2"
+  },
+  {
+   "kind": "psych/nutrition evaluation",
+   "quote": "An attestation by a behavioral health provider ... reveals no evidence of an inadequately controlled behavioral health condition/issue",
+   "where": "Statements I.A.3, II.A.4, III.A.4, IV.A.4"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "at least a 50% reduction in pain has been demonstrated during a short-term trial",
+   "where": "Statements I.B, II.B, III.B (angina: 'beneficial clinical response')"
+  },
+  {
+   "kind": "other",
+   "quote": "Duration of refractory pain is six months or greater",
+   "where": "Policy Guideline II"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "conservative management",
+   "value": ">= 6 consecutive",
+   "unit": "months",
+   "quote": "failed at least six consecutive months"
+  },
+  {
+   "quantity": "trial pain reduction",
+   "value": ">= 50",
+   "unit": "%",
+   "quote": "at least a 50% reduction in pain"
+  },
+  {
+   "quantity": "trial length",
+   "value": "> 48",
+   "unit": "hours",
+   "quote": "short-term trial (e.g., greater than 48 hours)"
+  },
+  {
+   "quantity": "resting ankle pressure",
+   "value": "< 40",
+   "unit": "mmHg",
+   "quote": "resting ankle pressure less than 40 mmHg"
+  },
+  {
+   "quantity": "toe pressure",
+   "value": "< 30",
+   "unit": "mmHg",
+   "quote": "toe pressure less than 30 mmHg"
+  },
+  {
+   "quantity": "CCS class",
+   "value": "III or IV",
+   "unit": "",
+   "quote": "functional class III or class IV"
+  },
+  {
+   "quantity": "blood pressure goal",
+   "value": "<140/<90",
+   "unit": "mmHg",
+   "quote": "SBP of less than 140 mmHG and ... DBP of less than 90 mmHG"
+  },
+  {
+   "quantity": "heart rate goal",
+   "value": "60",
+   "unit": "bpm",
+   "quote": "goal heart rate of 60 beats per minute"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "supervised conservative management",
+   "length": "6 consecutive months",
+   "quote": "at least six consecutive months of physician-supervised, conservative medical management"
+  },
+  {
+   "what": "refractory pain duration",
+   "length": ">= 6 months",
+   "quote": "Duration of refractory pain is six months or greater"
+  },
+  {
+   "what": "typical trial length",
+   "length": "3-7 days",
+   "quote": "This trial period will typically last for a period of three to seven days"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Codes are listed with (E/I) flags only; ICD10 says 'Multiple diagnosis codes'",
+  "non_covered_code_lists": "C1826 closed-loop generator tagged (E/I)"
+ },
+ "external_dependencies": [
+  {
+   "what": "Corporate policies for experimental services and psychological testing",
+   "quote": "Refer to Corporate Medical Policy #3.01.02 Psychological Testing"
+  },
+  {
+   "what": "Rutherford and CCS tables in Description are normative",
+   "quote": "Rutherford Classification (see Description section below)"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Rutherford Grade II Category 4",
+   "definition_quote": "Resting AP < 40 mmHg, flat or barely pulsatile ankle or metatarsal PVR; TP < 30 mmHg"
+  },
+  {
+   "term": "CCS functional class III",
+   "definition_quote": "Marked limitation of ordinary physical activity. Walking one to two blocks on the level and climbing one flight"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "physician-supervised, conservative medical management",
+   "problem": "which modalities, how many"
+  },
+  {
+   "quote": "inadequately controlled behavioral health condition/issue",
+   "problem": "'inadequately controlled' undefined; attestation form unspecified"
+  },
+  {
+   "quote": "no other medical or psychological diagnoses ... concordant with the presenting signs",
+   "problem": "negative finding; requires clinician exclusion"
+  },
+  {
+   "quote": "beneficial clinical response",
+   "problem": "angina permanent criterion has no percent threshold"
+  },
+  {
+   "quote": "Patients must be carefully screened ... by a multidisciplinary team",
+   "problem": "Guideline IV: team undefined, 'may include' psych evaluation"
+  }
+ ],
+ "extraction_hazards": [
+  "Four nested levels (I.A.1.b.i) with lowercase letters and roman numerals",
+  "Criteria split between Policy Statement and Policy Guidelines (6-month refractory duration and 50% documentation live only in guidelines)",
+  "Rutherford and CCS tables are in Description, referenced by 'see below'",
+  "Page breaks fall mid-list (II.A at top of p.2)",
+  "Statement VII lists investigational conditions in letter items",
+  "Typos: 'MMHG', 'Please to refer'"
+ ],
+ "interesting_structures": [
+  "Four separate indication pathways each with trial and permanent stage",
+  "k-of-n symptom/sign categories (3 of 4, 2 of 4) like Budapest CRPS criteria",
+  "Objective vascular thresholds (ankle/toe pressure) via Rutherford",
+  "Optimal medical therapy list with BP and HR goals",
+  "Device-mode rules: HF only for FBSS; dual-mode equivalence; burst, closed-loop, DRG investigational"
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "why": "Rich but explicit: all/any plus k-of-n are expressible. Strain comes from depth, cross-references to guidelines and tables, and attestation leaves a chart rarely shows."
+ }
+}

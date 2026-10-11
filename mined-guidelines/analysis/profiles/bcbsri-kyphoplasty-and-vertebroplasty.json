@@ -1,0 +1,174 @@
+{
+ "file": "bcbsri-kyphoplasty-and-vertebroplasty.pdf",
+ "treatment": "vertebroplasty-kyphoplasty",
+ "payer": "bcbsri",
+ "doc_kind": "Medicare Advantage medical coverage policy (BlueCHiP for Medicare)",
+ "lines_of_business": [
+  "BlueCHiP for Medicare only; commercial refers to Preauthorization via Web-Based Tool"
+ ],
+ "effective_or_revised": "Effective 04/01/2019; last updated 04/16/2019",
+ "sections_in_order": [
+  "Overview",
+  "Medical Criteria",
+  "Prior Authorization",
+  "Policy Statement",
+  "Coverage",
+  "Background",
+  "Coding",
+  "Related Policies",
+  "Published",
+  "References"
+ ],
+ "criteria_location": "Medical Criteria (p.1) for indications; Policy Statement (p.1-2) for contraindications and chronic-pain exclusion; Background defines 'recent' fracture.",
+ "procedures_covered": [
+  "Percutaneous vertebroplasty 22510-22512",
+  "Vertebral augmentation 22513-22515"
+ ],
+ "logic": {
+  "top_level": "any (list of indications) plus a NOT list of absolute contraindications and relative contraindications",
+  "max_nesting_depth": 2,
+  "k_of_n": [
+   {
+    "k": 1,
+    "n": 6,
+    "quote": "Percutaneous vertebroplasty is medically necessary when one of the following criteria are met"
+   }
+  ],
+  "exclusions_or_contraindications": "Separate absolute contraindication list (coagulopathy or anticoagulation, allergy, infection, retropulsed fragments with canal compromise, tumor canal compromise with myelopathy) and relative lists per procedure.",
+  "initial_vs_repeat": "None.",
+  "and_or_ambiguity": [
+   {
+    "quote": "persistent debilitating pain that has not responded to accepted standard medical treatment;* and/or",
+    "why_ambiguous": "'and/or' between list items on the kyphoplasty list, while heading says 'one of'; asterisk with no footnote"
+   },
+   {
+    "quote": "Reinforcement, or stabilization, of vertebral body prior to surgery.",
+    "why_ambiguous": "Preceding item ends with 'and' while list heading says 'one of'"
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "diagnosis",
+   "quote": "An osteoporotic or osteopenic compression fracture of the lumbar or thoracic vertebrae",
+   "where": "Medical Criteria"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "has not responded to accepted standard medical treatment generally within six (6) weeks to three months",
+   "where": "Vertebroplasty 1"
+  },
+  {
+   "kind": "symptom",
+   "quote": "persistent debilitating pain",
+   "where": "Medical Criteria"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "Painful and/or aggressive vertebral hemangiomas (or eosinophilic granulomas of the spine)",
+   "where": "Vertebroplasty"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "Painful vertebral fracture associated with osteonecrosis (Kummell Disease)",
+   "where": "Vertebroplasty"
+  },
+  {
+   "kind": "other",
+   "quote": "any existing uncorrected coagulopathy or anticoagulation therapy",
+   "where": "Absolute contraindications"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "vertebra reduced to less than one-third [1/3] of its original height",
+   "where": "Relative contraindications"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "A 'recent' compression fracture ... demonstrates uptake on a bone scan or exhibits increased intensity on fluid-sensitive MRI sequences",
+   "where": "Background"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "conservative duration",
+   "value": "6 weeks to 3 months",
+   "unit": "",
+   "quote": "generally within six (6) weeks to three months"
+  },
+  {
+   "quantity": "vertebral height",
+   "value": "<1/3 original (relative contraindication to vertebroplasty)",
+   "unit": "",
+   "quote": "less than one-third"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "failed standard medical treatment",
+   "length": "6 weeks to 3 months",
+   "quote": "generally within six (6) weeks to three months"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "CPT 22510-22515 'covered when the medical criteria is met'; add-on codes covered if the primary is approved",
+  "non_covered_code_lists": ""
+ },
+ "external_dependencies": [
+  {
+   "what": "Commercial: Preauthorization via Web-Based Tool",
+   "quote": "For commercial products, please refer to the following policy: Preauthorization via Web-Based Tool for Procedures"
+  },
+  {
+   "what": "NGS LCD L33569",
+   "quote": "Local Coverage Determination (LCD): Vertebroplasty and Vertebral Augmentation (Percutaneous) (L33569)"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "recent compression fracture",
+   "definition_quote": "one which demonstrates uptake on a bone scan or exhibits increased intensity on fluid-sensitive MRI sequences"
+  },
+  {
+   "term": "pathologic fracture",
+   "definition_quote": "Vertebral compression fractures due to osteoporosis are considered pathologic fractures."
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "persistent debilitating pain",
+   "problem": "Undefined"
+  },
+  {
+   "quote": "accepted standard medical treatment generally within six (6) weeks to three months",
+   "problem": "'generally' and a range"
+  },
+  {
+   "quote": "Relative contraindications",
+   "problem": "Relative means case judgment, not a hard NOT"
+  },
+  {
+   "quote": "chronic back pain of long-standing duration ... unless pain is localized to a specific chronic fracture and medical therapy has failed",
+   "problem": "'long-standing' undefined"
+  }
+ ],
+ "extraction_hazards": [
+  "Bullets as glyph characters; list items end in ';' 'and' or 'and/or'",
+  "Asterisk after 'standard medical treatment;*' has no matching footnote",
+  "Criteria spread over Medical Criteria and Policy Statement; Policy Statement says 'when the above criteria are met'",
+  "Old 2019 document"
+ ],
+ "interesting_structures": [
+  "Absolute vs relative contraindications split by procedure",
+  "Imaging-based definition of 'recent' fracture",
+  "Pre-surgical stabilization indication",
+  "Medicare-only scope"
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "scale": "1-5",
+  "why": "Any-of indications plus a NOT list work, but relative contraindications are judgment, and/or conflicts in the lists."
+ }
+}

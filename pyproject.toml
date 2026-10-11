@@ -1,0 +1,19 @@
+[project]
+name = "necessity"
+version = "0.1.0"
+description = "Prior-auth medical necessity checker: guideline PDF + chart PDF -> determination, citations, gap list"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.110",
+  "uvicorn>=0.27",
+  "python-multipart>=0.0.9",
+  "pydantic>=2.6",
+  "openai>=1.30",
+  "pypdf>=4.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.setuptools]
+packages = ["app"]

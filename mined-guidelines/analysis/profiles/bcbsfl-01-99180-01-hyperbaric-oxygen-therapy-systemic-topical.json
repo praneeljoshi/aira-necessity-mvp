@@ -1,0 +1,208 @@
+{
+ "payer": "bcbsfl",
+ "doc_kind": "medical policy (Medical Coverage Guideline)",
+ "lines_of_business": [
+  "All lines of business unless noted in Program Exceptions",
+  "FEP: follow FEP guidelines",
+  "SAO: follow SAO guidelines",
+  "Medicare Advantage: NCDs 20.29 and 270.4 reviewed"
+ ],
+ "effective_or_revised": "Original 01/01/01; Reviewed 01/22/26; Revised 02/15/26",
+ "sections_in_order": [
+  "Description",
+  "Position Statement",
+  "Billing/Coding Information",
+  "Reimbursement Information",
+  "LOINC Codes",
+  "Program Exceptions",
+  "Definitions",
+  "Related Guidelines",
+  "Other",
+  "References",
+  "Committee Approval",
+  "Guideline Update Information"
+ ],
+ "criteria_location": "Position Statement (pp.1-3): a covered-condition list, a long investigational list, and a 3-part sub-criteria block only for diabetic wounds. Session cap and documentation sit in Reimbursement Information, not the Position Statement.",
+ "procedures_covered": [
+  "Systemic HBOT (99183, G0277)",
+  "Topical HBOT (A4575) - investigational",
+  "Limb specific hyperbaric pressurization - investigational",
+  "Ozone therapy - investigational"
+ ],
+ "logic": {
+  "top_level": "pathways (list of ~19 covered indications, each its own entry; only diabetic wounds has sub-criteria)",
+  "max_nesting_depth": 2,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "Default-deny: 'considered experimental or investigational in all other situations, including but not limited to' a long list. Chronic wounds excluded 'other than those in members with diabetes who meet the criteria specified above' (inline unless). No contraindications.",
+  "initial_vs_repeat": "No separate repeat criteria. Reimbursement Information: 'limited to thirty (30) treatments within a 12 month period'; excess 'subject to medical review'; documentation 'should include measurable signs of healing within any 30-day period of treatment'.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Systemic hyperbaric oxygen therapy meets the definition of medical necessity for the treatment of the following conditions",
+    "why_ambiguous": "List is implicitly any-of; 'Pre- and post-treatment ... irradiated jaw' and 'Profound anemia ... only when' mix a condition with a clause."
+   },
+   {
+    "quote": "Member has no measurable signs of healing after 30 days of an adequate course of standard wound therapy",
+    "why_ambiguous": "'Adequate course' undefined; Definitions section says 'None'."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "diagnosis",
+   "quote": "Acute carbon monoxide poisoning; Gas gangrene; Decompression sickness ...",
+   "where": "Position Statement"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "Nonhealing diabetic wounds of the lower extremities in members who meet the following 3 criteria",
+   "where": "Position Statement"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "Member has a wound classified as Wagner* grade 3 or higher",
+   "where": "Position Statement, diabetic wounds b"
+  },
+  {
+   "kind": "duration",
+   "quote": "no measurable signs of healing after 30 days of an adequate course of standard wound therapy",
+   "where": "Position Statement, diabetic wounds c"
+  },
+  {
+   "kind": "other",
+   "quote": "Reimbursement for HBOT (99183) is limited to thirty (30) treatments within a 12 month period.",
+   "where": "Reimbursement Information"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "physician initial assessment, physician history and physical, physician visit notes, and laboratory studies",
+   "where": "Reimbursement Information"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "wound location, size, description of wound bed and drainage",
+   "where": "Reimbursement Information"
+  },
+  {
+   "kind": "other",
+   "quote": "Profound anemia with exceptional blood loss: only when blood transfusion is impossible or must be delayed",
+   "where": "Position Statement"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "Wagner grade",
+   "value": ">= 3",
+   "unit": "grade",
+   "quote": "Wagner* grade 3 or higher"
+  },
+  {
+   "quantity": "treatments",
+   "value": "30 per 12 months before medical review",
+   "unit": "treatments",
+   "quote": "limited to thirty (30) treatments within a 12 month period"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "standard wound therapy without healing",
+   "length": "30 days",
+   "quote": "no measurable signs of healing after 30 days"
+  },
+  {
+   "what": "lookback for LOINC documents",
+   "length": "6 months before date of service",
+   "quote": "observations made six months or fewer before starting date of service"
+  },
+  {
+   "what": "healing evidence during treatment",
+   "length": "any 30-day period",
+   "quote": "measurable signs of healing within any 30-day period of treatment"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": true,
+  "codes_tied_to_criteria": "ICD-10 list is titled 'Codes That Support Medical Necessity' but is not mapped to individual conditions; ranges are broad (e.g. L97.101-L97.929 any lower-limb chronic ulcer, which would also fit conditions the text calls investigational).",
+  "non_covered_code_lists": "A4575 marked '(Investigational)'. Topical, limb-specific and ozone declared investigational for all indications."
+ },
+ "external_dependencies": [
+  {
+   "what": "Medicare Advantage: CMS NCDs 20.29 and 270.4",
+   "quote": "The following National Coverage Determinations (NCDs) were reviewed on the last guideline reviewed date: Hyperbaric Oxygen Therapy (20.29) and Treatment of Decubitus Ulcers (270.4)"
+  },
+  {
+   "what": "FEP and SAO have own guidelines",
+   "quote": "Federal Employee Program (FEP): Follow FEP guidelines."
+  },
+  {
+   "what": "Related guideline",
+   "quote": "Oxygen, 09-E0400-00"
+  },
+  {
+   "what": "Florida step therapy exemption law",
+   "quote": "in compliance with Florida law 627.42393"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Wagner grades",
+   "definition_quote": "grade 3- deep ulcer with abscess or osteomyelitis; grade 4- forefoot gangrene; grade 5- whole foot gangrene"
+  },
+  {
+   "term": "treatment unit",
+   "definition_quote": "Each unit billed equals one treatment, regardless of the length of time spent in the HBOT chamber."
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "adequate course of standard wound therapy",
+   "problem": "not defined; no list of components (Excellus and BCBSTX do list them)"
+  },
+  {
+   "quote": "measurable signs of healing",
+   "problem": "no percent area reduction given"
+  },
+  {
+   "quote": "Acute arterial insufficiency",
+   "problem": "no definition; ICD range I73.81-I73.9 includes chronic disease"
+  },
+  {
+   "quote": "Chronic refractory osteomyelitis",
+   "problem": "'refractory' undefined, no duration of failed therapy"
+  },
+  {
+   "quote": "Compromised skin graft and flap",
+   "problem": "no signs of compromise defined"
+  },
+  {
+   "quote": "Acute thermal burn injury",
+   "problem": "no depth or %TBSA"
+  },
+  {
+   "quote": "Profound anemia with exceptional blood loss",
+   "problem": "no Hgb threshold"
+  }
+ ],
+ "extraction_hazards": [
+  "Bulleted lists lose bullet glyphs in text; sub-items a/b/c are indented only",
+  "Footnote asterisk (Wagner scale) is inside the list item",
+  "Navigation tab row printed at top",
+  "Session cap and documentation requirements live outside the Position Statement",
+  "ICD-10 ranges with en dashes, multi-line groups where only the first row has a description (S-codes)",
+  "LOINC table flattened",
+  "Update history mentions criteria no longer present (CRAO 2011, continuation criteria 2009)"
+ ],
+ "interesting_structures": [
+  "Default-deny with an explicit investigational list",
+  "Reimbursement-section cap of 30 treatments / 12 months turns repeat rules into a utilization review trigger",
+  "ICD list says 'support medical necessity' without tying to criteria",
+  "Per-session unit rule: 1 hour or 2 hours equals one 99183 unit"
+ ],
+ "fit_to_tree": {
+  "score": 2,
+  "scale": "1 = all/any/not expresses it cleanly ... 5 = needs new constructs",
+  "why": "A flat any-of of indications plus one all-of of 3 leaves for diabetic wounds. Strain comes from undefined 'adequate course' and the 30-treatment cap (a count over time, not chart state)."
+ },
+ "file": "bcbsfl-01-99180-01-hyperbaric-oxygen-therapy-systemic-topical.pdf",
+ "treatment": "hyperbaric-oxygen"
+}

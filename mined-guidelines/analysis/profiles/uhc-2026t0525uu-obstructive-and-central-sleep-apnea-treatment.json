@@ -1,0 +1,257 @@
+{
+ "file": "uhc-2026t0525uu-obstructive-and-central-sleep-apnea-treatment.pdf",
+ "treatment": "sleep-apnea-surgery",
+ "payer": "UnitedHealthcare",
+ "doc_kind": "medical policy (Commercial and Individual Exchange)",
+ "lines_of_business": [
+  "UnitedHealthcare Commercial",
+  "UnitedHealthcare Individual Exchange (Community Plan and Medicare Advantage have separate policies)"
+ ],
+ "effective_or_revised": "Effective October 1, 2026; policy number printed 2026T0525VV (file name says UU); 31 pages",
+ "sections_in_order": [
+  "Application",
+  "Coverage Rationale (Diagnosis; Nonsurgical Treatment; Surgical Treatment; Other Surgical Procedures; Central Sleep Apnea)",
+  "Medical Records Documentation Used for Reviews",
+  "Definitions",
+  "Applicable Codes",
+  "Description of Services",
+  "Clinical Evidence",
+  "U.S. Food and Drug Administration",
+  "References",
+  "Policy History/Revision Information",
+  "Instructions for Use"
+ ],
+ "criteria_location": "Coverage Rationale pp.1-3 (surgical treatment on p.2); Definitions pp.3-4 supply AHI/RDI, severity and the polysomnography requirement. Clinical Evidence (pp.7-24) is evidence.",
+ "procedures_covered": [
+  "Oral appliances (criteria delegated to InterQual)",
+  "UPPP, mandibular osteotomy, MMA",
+  "Implantable HGNS adult and Down syndrome adolescent",
+  "Unproven: lingual suspension, isolated hyoid myotomy, stand-alone uvulectomy, TORS, distraction osteogenesis, phrenic nerve stimulation for CSA, many nonsurgical devices"
+ ],
+ "logic": {
+  "top_level": "pathways: separate all-of lists for (UPPP/mandibular osteotomy/MMA), (adult HGNS), (adolescent Down syndrome HGNS); 'In addition' criteria per procedure for MMA and mandibular osteotomy",
+  "max_nesting_depth": 2,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "'Unproven and not medically necessary' lists; one negative criterion inside HGNS (absence of complete concentric collapse; absence of tracheostomy). No patient contraindication list.",
+  "initial_vs_repeat": "No revision or replacement criteria. Footnote: polysomnography should be repeated if clinically significant weight change, CVD change, or persistent/recurrent symptoms since the last study.",
+  "and_or_ambiguity": [
+   {
+    "quote": "PAP therapy resulted in no therapeutic efficacy or individual's refusal or intolerance",
+    "why_ambiguous": "Three alternatives in one bullet; 'refusal' alone suffices (like Cigna's 'unwillingness', looser than a numeric adherence test)."
+   },
+   {
+    "quote": "Total AHI of < 25% for central and mixed Apneas",
+    "why_ambiguous": "Garbled: AHI is not a percentage; means central+mixed < 25% of total events."
+   },
+   {
+    "quote": "an AHI ≥ 10 and Respiratory Disturbance Index ≤ 50 events per hour",
+    "why_ambiguous": "Down syndrome row mixes AHI for lower bound and RDI for upper bound; also says 'severe OSA' while AHI >= 10 only; 'severe' (> 30) is defined elsewhere."
+   },
+   {
+    "quote": "In addition, the following criteria need to be met: For MMA ...; For mandibular osteotomy ...",
+    "why_ambiguous": "Conditional criteria: apply only to the named procedure; UPPP has no extra item."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "diagnosis/evaluation",
+   "quote": "evaluation (in person or via telemedicine) with a qualified physician or with an Advanced Practice Provider working under the direct supervision of a physician",
+   "where": "Diagnosis requirement"
+  },
+  {
+   "kind": "severity threshold",
+   "quote": "Moderate to severe OSA ... [Apnea-Hypopnea Index (AHI) ≥ 15 or Respiratory Disturbance Index ≥ 15], as determined by Polysomnography (Attended)",
+   "where": "Surgical p.2"
+  },
+  {
+   "kind": "symptom score",
+   "quote": "Excessive daytime sleepiness documented with an Epworth Sleepiness Scale of > 10 or with another validated tool",
+   "where": "UPPP/MMA"
+  },
+  {
+   "kind": "prior therapy (PAP)",
+   "quote": "PAP therapy resulted in no therapeutic efficacy or individual's refusal or intolerance",
+   "where": "UPPP/MMA, HGNS"
+  },
+  {
+   "kind": "anatomy",
+   "quote": "For MMA, craniofacial disproportion or deformities with evidence of maxillomandibular deficiency; For mandibular osteotomy, retrolingual or lower pharyngeal function obstruction",
+   "where": "extra"
+  },
+  {
+   "kind": "BMI",
+   "quote": "Body Mass Index of ≤ 40 kg/m2",
+   "where": "HGNS adult"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "AHI of ≥ 15 and ≤ 100, as determined by Polysomnography (Attended)",
+   "where": "HGNS adult"
+  },
+  {
+   "kind": "diagnostic test",
+   "quote": "Absence of a complete blockage or complete concentric collapse of the soft palate, confirmed by drug-induced sleep endoscopy",
+   "where": "HGNS"
+  },
+  {
+   "kind": "device",
+   "quote": "FDA-approved device; Used in accordance with FDA guidelines",
+   "where": "HGNS"
+  },
+  {
+   "kind": "pediatric",
+   "quote": "aged 10 to 18 years with Down syndrome ... BMI < 95th percentile; contraindication for or not effectively treated with prior adenotonsillectomy; Absence of tracheostomy use during sleep; Individual and caregiver refusal of an MMA procedure for nonconcentric palatal collapse",
+   "where": "Down syndrome HGNS"
+  },
+  {
+   "kind": "test type restriction",
+   "quote": "attended polysomnography required (home sleep test not accepted for surgical criteria)",
+   "where": "asterisked criteria"
+  },
+  {
+   "kind": "documentation",
+   "quote": "Medical records documentation ... refer to the guidelines titled Medical Records Documentation Used for Reviews",
+   "where": "p.3"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "AHI/RDI (UPPP/MMA)",
+   "value": ">= 15",
+   "unit": "events/hr",
+   "quote": "AHI ≥ 15 or Respiratory Disturbance Index ≥ 15"
+  },
+  {
+   "quantity": "Epworth",
+   "value": "> 10",
+   "unit": "points",
+   "quote": "Epworth Sleepiness Scale of > 10"
+  },
+  {
+   "quantity": "HGNS BMI",
+   "value": "<= 40",
+   "unit": "kg/m2",
+   "quote": "Body Mass Index of ≤ 40 kg/m2"
+  },
+  {
+   "quantity": "HGNS AHI",
+   "value": ">= 15 and <= 100",
+   "unit": "events/hr",
+   "quote": "AHI of ≥ 15 and ≤ 100"
+  },
+  {
+   "quantity": "central+mixed",
+   "value": "< 25",
+   "unit": "% of total",
+   "quote": "Total AHI of < 25% for central and mixed Apneas"
+  },
+  {
+   "quantity": "Down syndrome age",
+   "value": "10-18",
+   "unit": "years",
+   "quote": "adolescents aged 10 to 18 years"
+  },
+  {
+   "quantity": "Down syndrome AHI",
+   "value": ">= 10 ... <= 50",
+   "unit": "events/hr",
+   "quote": "AHI ≥ 10 and Respiratory Disturbance Index ≤ 50 events per hour"
+  },
+  {
+   "quantity": "OSA severity",
+   "value": "mild 5-<15; moderate 15-30; severe >30",
+   "unit": "events/hr",
+   "quote": "Mild ... ≥ 5 and < 15; Moderate ... ≥ 15 and ≤ 30; Severe ... > 30/hour"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "repeat polysomnography",
+   "length": "when clinically significant weight change, CVD change, or persistent/recurrent symptoms",
+   "quote": "Polysomnography should be repeated if there has been clinically significant weight loss or gain..."
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Applicable Codes lists everything (surgical, nonsurgical, DME) in one table; 'Listing of a code ... does not imply that the service ... is a covered or non-covered health service.'",
+  "non_covered_code_lists": "none per code"
+ },
+ "external_dependencies": [
+  {
+   "what": "InterQual CP for oral appliances",
+   "quote": "refer to the InterQual® CP: Durable Medical Equipment, Noninvasive Airway Assistive Devices"
+  },
+  {
+   "what": "Sleep Studies policy for sleep study validity",
+   "quote": "Refer to the Medical Policy titled Sleep Studies for further information."
+  },
+  {
+   "what": "Related policies",
+   "quote": "Orthognathic (Jaw) Surgery; Outpatient Surgical Procedures - Site of Service"
+  },
+  {
+   "what": "Medical Records Documentation guidelines",
+   "quote": "refer to the guidelines titled Medical Records Documentation Used for Reviews"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "OSA severity",
+   "definition_quote": "Moderate for AHI or RDI of ≥ 15 and ≤ 30; Severe for AHI or RDI of > 30/hour"
+  },
+  {
+   "term": "Apnea / Hypopnea",
+   "definition_quote": "cessation of airflow (≥ 90% decrease ...) lasting at least 10 seconds; at least a 30% reduction in airflow and with at least a 3% decrease in oxygen saturation ... or ... an arousal"
+  },
+  {
+   "term": "Polysomnogram (Attended)",
+   "definition_quote": "A laboratory-based sleep study that uses multiple channels..."
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "PAP therapy resulted in no therapeutic efficacy",
+   "problem": "efficacy undefined; no AHI or adherence number"
+  },
+  {
+   "quote": "another validated tool",
+   "problem": "which tool, which cutoff?"
+  },
+  {
+   "quote": "clinically significant weight loss or gain",
+   "problem": "undefined"
+  },
+  {
+   "quote": "evidence of maxillomandibular deficiency",
+   "problem": "no measurement"
+  },
+  {
+   "quote": "Total AHI of < 25%",
+   "problem": "garbled"
+  }
+ ],
+ "extraction_hazards": [
+  "Bullet glyphs missing in text (criteria lines appear with no marker so 'all the following' items cannot be told from continuation lines)",
+  "Asterisk footnote carries a criterion (repeat PSG) at the bottom of the criteria block",
+  "Criteria continue across a page break (Other Surgical Procedures starts on p.2 and continues p.3)",
+  "Policy number in header differs from file name (VV vs UU)",
+  "Definitions on pages 3-4 supply thresholds and test types",
+  "Square brackets inside criterion [AHI >=15 or RDI >=15]",
+  "Clinical Evidence is 17 pages with thresholds from studies",
+  "Unicode ≥, ≤"
+ ],
+ "interesting_structures": [
+  "Surgical block treats UPPP, mandibular osteotomy and MMA as a group with extra per-procedure conditions",
+  "Attended polysomnography is required (HSAT not accepted for surgical criteria) via footnote",
+  "Delegates oral appliance criteria to InterQual",
+  "Epworth Sleepiness Scale required for surgery but not HGNS",
+  "Caregiver/individual refusal of MMA is a criterion for Down syndrome HGNS"
+ ],
+ "fit_to_tree": {
+  "score": 2,
+  "scale": "1 = all/any/not expresses it cleanly ... 5 = needs new constructs or human judgment",
+  "why": "Short all-of lists with numeric leaves and one conditional-per-procedure add-on. The garbled AHI/RDI wording and footnote are the main hazards; oral appliance criteria are external (InterQual)."
+ }
+}

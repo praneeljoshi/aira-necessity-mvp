@@ -1,0 +1,109 @@
+{
+ "file": "uhc-breast-reduction-surgery.pdf",
+ "treatment": "reduction-mammaplasty",
+ "payer": "uhc",
+ "doc_kind": "medical policy (commercial and individual exchange) delegating to InterQual",
+ "lines_of_business": [
+  "UnitedHealthcare Commercial",
+  "Individual Exchange"
+ ],
+ "effective_or_revised": "Effective June 1, 2026 (MP.004.32)",
+ "sections_in_order": [
+  "Application",
+  "Coverage Rationale",
+  "Medical Records Documentation Used for Reviews",
+  "Definitions",
+  "Applicable Codes",
+  "Benefit Considerations",
+  "References",
+  "Policy History/Revision Information",
+  "Instructions for Use"
+ ],
+ "criteria_location": "Coverage Rationale (p.1) says only 'refer to the InterQual CP: Procedures: Reduction Mammaplasty, Female / Female, Adolescent'. No clinical criteria in the PDF.",
+ "procedures_covered": [
+  "Breast reduction CPT 19318"
+ ],
+ "logic": {
+  "top_level": "other (benefit-exclusion statement plus delegation to InterQual)",
+  "max_nesting_depth": 1,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "'Most UnitedHealthcare plans have a specific exclusion for breast reduction surgery except as required by the Women's Health and Cancer Rights Act of 1998.'",
+  "initial_vs_repeat": "None.",
+  "and_or_ambiguity": [
+   {
+    "quote": "some plans may allow breast reduction surgery if we determine the surgery will treat a physiological functional impairment. However, some plans exclude breast reduction surgery even if it treats a physiological functional impairment",
+    "why_ambiguous": "Coverage depends on the individual plan document, not on the policy"
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "other",
+   "quote": "Breast reduction surgery is considered reconstructive and medically necessary in certain circumstances. For medical necessity clinical coverage criteria, refer to the InterQual",
+   "where": "Coverage Rationale"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "N62 Hypertrophy of breast; N65.1 Disproportion of reconstructed breast",
+   "where": "Applicable Codes"
+  },
+  {
+   "kind": "other",
+   "quote": "surgery will treat a physiological functional impairment",
+   "where": "Benefit Considerations"
+  }
+ ],
+ "thresholds": [],
+ "time_windows": [],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": true,
+  "codes_tied_to_criteria": "Reference only: 'Listing of a code ... does not imply that the service ... is a covered'",
+  "non_covered_code_lists": ""
+ },
+ "external_dependencies": [
+  {
+   "what": "InterQual CP: Procedures Reduction Mammaplasty, Female and Female Adolescent",
+   "quote": "refer to the InterQual CP: Procedures: Reduction Mammaplasty, Female"
+  },
+  {
+   "what": "Women's Health and Cancer Rights Act",
+   "quote": "All plans cover breast reduction surgeries that qualify under the Women's Health and Cancer Rights Act of 1998"
+  },
+  {
+   "what": "Gynecomastia and Gender Dysphoria policies",
+   "quote": "Gynecomastia Surgery"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "WHCRA",
+   "definition_quote": "coverage for ... surgery and reconstruction of the other breast to produce symmetrical appearance"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "in certain circumstances",
+   "problem": "Circumstances defined only in proprietary InterQual"
+  },
+  {
+   "quote": "physiological functional impairment",
+   "problem": "Undefined"
+  }
+ ],
+ "extraction_hazards": [
+  "Policy is a 3-page shell with repeated headers",
+  "Link to InterQual not reproducible",
+  "Table of contents sidebar with related policies"
+ ],
+ "interesting_structures": [
+  "Benefit-level exclusion overrides clinical criteria",
+  "Statutory (WHCRA) mandate route",
+  "Delegation to proprietary criteria"
+ ],
+ "fit_to_tree": {
+  "score": 5,
+  "scale": "1-5",
+  "why": "No clinical criteria in the document; a checker can encode only WHCRA symmetry and benefit-exclusion check, with InterQual as an opaque leaf."
+ }
+}

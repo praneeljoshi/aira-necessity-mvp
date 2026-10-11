@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "epidural-injections",
+  "title": "Epidural Injections",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76EX2P8Y95HM4PAMKM9",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-61000-31",
+  "original_effective": "12/15/04",
+  "reviewed": "02/27/25",
+  "revised": "04/30/25",
+  "file": "bcbsfl-02-61000-31-epidural-injections.pdf",
+  "sha256": "03ae1a3fdb224f75ece39aa0d73ed2c46badcc1edc3ae125cbe7cb86202ced7d",
+  "pages": 12,
+  "bytes": 664177,
+  "retrieved": "2026-10-09",
+  "printed_date": "Policy 02-61000-31; original 12/15/04; reviewed 02/27/25; revised 04/30/25"
+}

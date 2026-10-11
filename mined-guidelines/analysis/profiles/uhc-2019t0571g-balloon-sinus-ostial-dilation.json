@@ -1,0 +1,84 @@
+{
+  "file": "uhc-2019t0571g-balloon-sinus-ostial-dilation.pdf",
+  "treatment": "balloon-sinuplasty",
+  "payer": "uhc",
+  "doc_kind": "medical policy (UnitedHealthcare Commercial Medical Policy 2019T0571G)",
+  "lines_of_business": ["Commercial", "Community Plan policy and Medicare Advantage Coverage Summary are separate documents (Related Policy list)", "'may also be applied to Medicare Advantage plans in certain instances'"],
+  "effective_or_revised": "Effective November 1, 2019 (printed on every page); no later revision date",
+  "sections_in_order": ["Coverage Rationale", "Documentation Requirements", "Definitions", "Applicable Codes", "Description of Services", "Clinical Evidence", "U.S. Food and Drug Administration", "Centers for Medicare and Medicaid Services", "References", "Policy History/Revision Information", "Instructions for Use"],
+  "criteria_location": "Coverage Rationale (p.1, one page) plus Documentation Requirements table (pp.1-2) listing what medical notes must contain per CPT code. Definitions (p.2) define the diagnoses.",
+  "procedures_covered": ["Balloon sinus ostial dilation of frontal, maxillary, sphenoid sinuses (31295, 31296, 31297, 31298)"],
+  "logic": {
+    "top_level": "any (two conditions, CRS or RARS, each an ALL list), then 'unproven' exclusions",
+    "max_nesting_depth": 3,
+    "k_of_n": [
+      {"k": 1, "n": 5, "quote": "CT scan with findings of one or more of the following: Mucosal thickening; Bony remodeling; Bony thickening; Obstruction of the ostiomeatal complex; Opacified sinus", "pointer": "Coverage Rationale, CRS"}
+    ],
+    "exclusions_or_contraindications": "A closing 'unproven and not medically necessary' list: 'Nasal polyps or tumors' and 'All other conditions that do not meet the above criteria'.",
+    "initial_vs_repeat": "none",
+    "and_or_ambiguity": [
+      {"quote": "Persistence of symptoms despite administration of full courses of all of the following treatments: Antibiotic therapy, if bacterial infection is suspected, Nasal lavage, and Intranasal corticosteroids", "why_ambiguous": "'all of the following' includes a conditional item (antibiotics only if bacterial infection suspected). A chart without suspected bacterial infection must satisfy the other two; 'full courses' has no duration."},
+      {"quote": "Chronic Rhinosinusitis of the sinus to be dilated is confirmed on a computed tomography (CT) scan", "why_ambiguous": "CT confirmation is per sinus to be dilated; a multi-sinus request needs per-sinus evidence."},
+      {"quote": "Balloon sinus ostial dilation is performed either as a stand-alone procedure or as part of Functional Endoscopic Sinus Surgery (FESS)", "why_ambiguous": "Written as an 'ALL' bullet but is satisfied by either setting; it is effectively a non-restriction."},
+      {"quote": "Sinonasal symptoms, and CT evidence of ostial occlusion and/or mucosal thickening", "why_ambiguous": "RARS sub-bullets: 'Sinonasal symptoms' not defined; 'and/or' in the CT item."},
+      {"quote": "Nasal polyps or tumors", "why_ambiguous": "Excluded as unproven, yet CRS 'with nasal polyps' is not excluded in the CRS definition; polyps seen on CT count as 'opacified sinus' etc. Conflicts are unresolved."}
+    ]
+  },
+  "requirement_kinds": [
+    {"kind": "diagnosis", "quote": "Chronic Rhinosinusitis which has lasted longer than 12 weeks", "where": "Coverage Rationale"},
+    {"kind": "diagnosis", "quote": "Recurrent Acute Rhinosinusitis with four or more episodes per year with distinct symptom free intervals between episodes", "where": "Coverage Rationale"},
+    {"kind": "conservative therapy", "quote": "Persistence of symptoms despite administration of full courses of all of the following treatments: Antibiotic therapy, if bacterial infection is suspected, Nasal lavage, and Intranasal corticosteroids", "where": "Coverage Rationale"},
+    {"kind": "imaging finding", "quote": "confirmed on a computed tomography (CT) scan with findings of one or more of the following: Mucosal thickening, Bony remodeling, Bony thickening, Obstruction of the ostiomeatal complex, Opacified sinus", "where": "Coverage Rationale"},
+    {"kind": "site of service", "quote": "limited to the frontal, maxillary or sphenoid sinuses", "where": "Coverage Rationale"},
+    {"kind": "symptom", "quote": "Sinonasal symptoms", "where": "RARS branch"},
+    {"kind": "imaging finding", "quote": "CT evidence of ostial occlusion and/or mucosal thickening in the sinus to be dilated", "where": "RARS branch"},
+    {"kind": "documentation/photos", "quote": "Medical notes documenting all of the following: History of illness; Recent physical exam; One of the following ...", "where": "Documentation Requirements"},
+    {"kind": "documentation/photos", "quote": "each episode needs to be diagnosed by a clinician", "where": "Documentation Requirements, RARS"},
+    {"kind": "other", "quote": "Additional testing, if applicable: Endoscopically obtained cultures; Allergy testing; Peripheral eosinophil count; Immunodeficiency evaluation", "where": "Documentation Requirements"}
+  ],
+  "thresholds": [
+    {"quantity": "CRS duration", "value": "> 12", "unit": "weeks", "quote": "Chronic Rhinosinusitis which has lasted longer than 12 weeks"},
+    {"quantity": "RARS episodes", "value": ">= 4 per year", "unit": "episodes", "quote": "four or more episodes per year with distinct symptom free intervals"},
+    {"quantity": "ARS duration (definition)", "value": "<= 4", "unit": "weeks", "quote": "sudden onset of symptoms ... of up to 4 weeks duration"}
+  ],
+  "time_windows": [
+    {"what": "CRS", "length": "longer than 12 weeks", "quote": "lasted longer than 12 weeks"},
+    {"what": "RARS frequency", "length": "per year", "quote": "four or more episodes per year"},
+    {"what": "physical exam recency", "length": "'recent' (no length)", "quote": "Recent physical exam"}
+  ],
+  "codes": {"cpt_hcpcs_listed": true, "icd10_listed": false, "codes_tied_to_criteria": "CPT 31295-31298 appear both in the Documentation Requirements table (as a merged cell spanning four codes) and the Applicable Codes table. No ICD-10 list.", "non_covered_code_lists": "none; 'Listing of a code in this policy does not imply that the service ... is a covered or non-covered health service.'"},
+  "external_dependencies": [
+    {"what": "Member benefit plan document governs", "quote": "the member specific benefit plan document must be referenced as the terms of the member specific benefit plan may differ from the standard plan"},
+    {"what": "Medicare Advantage", "quote": "Medicare does not have a National Coverage Determination (NCD) for balloon sinus ostial dilation. Local Coverage Determinations (LCDs) do not exist at this time."},
+    {"what": "Related policy for FESS", "quote": "Related Commercial Policy: Functional Endoscopic Sinus Surgery (FESS)"},
+    {"what": "Third-party tools may be used", "quote": "UnitedHealthcare may also use tools developed by third parties, such as the MCG Care Guidelines"}
+  ],
+  "definitions_that_change_meaning": [
+    {"term": "Chronic Rhinosinusitis", "definition_quote": "An inflammatory process that involves the paranasal sinuses and persists for longer than 12 weeks"},
+    {"term": "Recurrent Acute Rhinosinusitis", "definition_quote": "four episodes per year of acute rhinosinusitis with distinct symptom free intervals between episodes"},
+    {"term": "Acute Rhinosinusitis", "definition_quote": "sudden onset of symptoms of purulent nasal drainage accompanied by nasal obstruction, facial pain/pressure/fullness, or both of up to 4 weeks duration"}
+  ],
+  "vague_terms": [
+    {"quote": "full courses of all of the following treatments", "problem": "'full course' has no duration for lavage or steroid; Cigna and Centene give weeks"},
+    {"quote": "Antibiotic therapy, if bacterial infection is suspected", "problem": "suspicion is a judgment; a chart showing no antibiotic cannot tell 'not suspected' from 'not tried'"},
+    {"quote": "Recent physical exam", "problem": "'recent' undefined"},
+    {"quote": "distinct symptom free intervals between episodes", "problem": "how long counts as 'distinct'? not defined"},
+    {"quote": "Systemic and/or topical steroids; Topical and/or systemic decongestants; Treatment of concomitant allergic rhinitis", "problem": "documentation list asks for items that are not in the coverage criteria (decongestants, allergic rhinitis treatment, systemic steroids)"}
+  ],
+  "extraction_hazards": [
+    "Documentation Requirements table: CPT codes 31295, 31296, 31297, 31298 are in a left cell that spans the whole right-hand block; text extraction splits the codes across pages (31295 on page 1, 31296-31298 at the top of page 2) and the list continues after the page break.",
+    "Bullets are private-use glyphs; sub-bullets (o) and sub-sub-bullets (square) differ by indentation only.",
+    "Documentation Requirements and Coverage Rationale list the same concepts in different words (CT findings list lacks 'in the sinus to be dilated' in the table; the table adds decongestants and allergic rhinitis).",
+    "Footer repeats on each page ('Proprietary Information of UnitedHealthcare').",
+    "Roughly 8 pages of clinical evidence follow a 1-page criteria section; keyword hits on 'failed medical therapy' there are not criteria.",
+    "Effective date 2019 appears alongside references and codes that are older; no revision after 11/2019 despite file retrieval 2026."
+  ],
+  "interesting_structures": [
+    "Criteria page plus a separate documentation-requirements table: what must be in the medical notes, keyed by CPT.",
+    "The policy permits both stand-alone and with-FESS dilation (the opposite of Florida Blue's bundling rule).",
+    "Exclusion 'All other conditions that do not meet the above criteria' makes the list closed.",
+    "Per-sinus confirmation on CT ('sinus to be dilated').",
+    "Policy history documents the shift from 'one or more' of the medical therapies to 'all' of them in 11/2019."
+  ],
+  "fit_to_tree": {"score": 2, "scale": "1 = clean, 5 = needs new constructs or human judgment", "why": "Short, clean any(all(...)) shape with a closed list. Strain: conditional 'if bacterial infection is suspected', undefined 'full courses', per-sinus CT scoping, and a separate documentation table that restates criteria in different words."}
+}

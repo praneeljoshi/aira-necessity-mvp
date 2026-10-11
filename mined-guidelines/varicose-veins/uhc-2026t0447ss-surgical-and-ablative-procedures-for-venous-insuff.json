@@ -1,0 +1,19 @@
+{
+  "payer": "UnitedHealthcare",
+  "payer_key": "uhc",
+  "treatment": "varicose-veins",
+  "title": "Surgical and Ablative Procedures for Venous Insufficiency and Varicose Veins",
+  "policy_number": "2026T0447SS",
+  "effective": "07/01/2026",
+  "url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/index/commercial/surgical-ablative-procedures-venous-insufficiency-varicose-veins-07012026.pdf",
+  "final_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/index/commercial/surgical-ablative-procedures-venous-insufficiency-varicose-veins-07012026.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "uhc-2026t0447ss-surgical-and-ablative-procedures-for-venous-insuff.pdf",
+  "sha256": "a7bd4ad4b3cc69c58b78a87f24b4452441d8079b265a15012c5251847a293f47",
+  "pages": 16,
+  "bytes": 467732,
+  "retrieved": "2026-10-09",
+  "printed_date": "Effective 07/01/2026 (Policy 2026T0447SS)"
+}

@@ -1,0 +1,175 @@
+{
+ "file": "bcbsil-sur712-028-artificial-intervertebral-disc-cervical-spine.pdf",
+ "treatment": "cervical-spine-surgery",
+ "payer": "Blue Cross Blue Shield of Illinois",
+ "doc_kind": "medical policy (BCBSA-derived)",
+ "lines_of_business": [
+  "Not stated in the criteria; disclaimer says 'Carefully check state regulations and/or the member contract'"
+ ],
+ "effective_or_revised": "Effective 01/01/2026 (51 pages)",
+ "sections_in_order": [
+  "Coverage",
+  "Policy Guidelines (None)",
+  "Description",
+  "Rationale (Regulatory Status, long evidence review, Summary of Evidence cervical and lumbar)",
+  "Coding",
+  "References",
+  "Policy History/Revision"
+ ],
+ "criteria_location": "Coverage section, pp.1-3 only (cervical artificial disc single level, two level, subsequent level, investigational list; lumbar disc follows). The remaining ~40 pages are evidence review.",
+ "procedures_covered": [
+  "Cervical artificial disc single level",
+  "Two-level simultaneous and subsequent adjacent-level cervical disc arthroplasty",
+  "Lumbar artificial disc (same document, out of scope here)"
+ ],
+ "logic": {
+  "top_level": "all (one numbered all-of list per procedure variant: single level, subsequent level); two-level simultaneous is a by-reference rule",
+  "max_nesting_depth": 3,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "Bulleted list 'considered experimental, investigational and/or unproven for all other indications, including but not limited to' containing more than two levels, disc plus fusion, prior surgery at level, prior fusion elsewhere, translational instability, deformity, RA/autoimmune, facet arthritis, infection, metabolic bone disease, malignancy. Criterion 5/5 also says 'free from contraindications' without listing them (the list is the investigational list).",
+  "initial_vs_repeat": "Subsequent adjacent-level arthroplasty has its own 7-item list: criteria restated, 'different cervical level than the initial', 'fully healed'.",
+  "and_or_ambiguity": [
+   {
+    "quote": "3. ... due to herniated disc or osteophyte formation; AND a) ... failed at least six weeks ... ; or b) The individual has severe or rapidly progressive symptoms ... ; AND 4.",
+    "why_ambiguous": "The 'AND' after item 3 comes before the a)/b) sub-items, which are an OR. Inline lowercase 'or' vs capital 'OR'. Sub-items are a one-of-two inside an all-of."
+   },
+   {
+    "quote": "The disc will be used for single-level reconstruction following cervical discectomy within the C3-C7 region",
+    "why_ambiguous": "Restated unchanged for the second-level criteria, where 'single-level' sits oddly with a 2-level procedure."
+   },
+   {
+    "quote": "considered experimental, investigational and/or unproven for all other indications, including but not limited to",
+    "why_ambiguous": "Open-ended; the 'free from contraindications' leaf points to a list that is not labelled as the contraindications."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "device / regulatory",
+   "quote": "using a disc approved by the U.S. Food and Drug Administration (FDA)*",
+   "where": "Coverage p.1"
+  },
+  {
+   "kind": "age/maturity",
+   "quote": "The individual is skeletally mature",
+   "where": "Coverage p.1"
+  },
+  {
+   "kind": "level restriction",
+   "quote": "single-level reconstruction following cervical discectomy within the C3-C7 region",
+   "where": "Coverage p.1"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "failed at least six weeks of conservative nonoperative treatment, including an active pain management program or protocol, under the direction of a physician, with pharmacotherapy that addresses neuropathic pain and other pain sources and physical therapy",
+   "where": "Coverage 3a"
+  },
+  {
+   "kind": "urgent alternative",
+   "quote": "severe or rapidly progressive symptoms of nerve root or spinal cord compression requiring hospitalization or immediate surgical treatment",
+   "where": "Coverage 3b (waives 6 weeks)"
+  },
+  {
+   "kind": "symptom + deficit + imaging",
+   "quote": "Symptomatic nerve root and/or spinal cord compression are documented by ALL the following: a) Neck and/or arm pain; b) Functional and/or neurological deficit; c) Radiographic imaging (e.g., CT, MRI, x-rays, etc.)",
+   "where": "Coverage 4"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "intractable cervical radiculopathy and/or myelopathy due to herniated disc or osteophyte formation",
+   "where": "Coverage 3"
+  },
+  {
+   "kind": "contraindication list",
+   "quote": "Prior surgery at the treated level; Previous fusion at another cervical level; Translational instability ...",
+   "where": "Investigational list p.2-3"
+  },
+  {
+   "kind": "prior procedure / healing",
+   "quote": "Clinical documentation that the initial cervical artificial intervertebral disc implantation is fully healed",
+   "where": "Subsequent level 7"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "conservative therapy duration",
+   "value": ">= 6",
+   "unit": "weeks",
+   "quote": "failed at least six weeks of conservative nonoperative treatment"
+  },
+  {
+   "quantity": "levels",
+   "value": "<= 2",
+   "unit": "levels",
+   "quote": "More than two level use whether done simultaneously or at different times"
+  },
+  {
+   "quantity": "spine region",
+   "value": "C3-C7",
+   "unit": "",
+   "quote": "within the C3-C7 region"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "conservative nonoperative treatment",
+   "length": "6 weeks",
+   "quote": "at least six weeks"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "One flat CPT line at the end: 22856, 22857, 22858, 22860, 22861, 22862, 22864, 22865, 0095T, 0098T, 0164T, 0165T; cervical and lumbar mixed, not mapped to criteria. Disclaimer says presence or absence of a code has no relevance.",
+  "non_covered_code_lists": "none"
+ },
+ "external_dependencies": [
+  {
+   "what": "FDA labeling for devices (Regulatory Status table)",
+   "quote": "*NOTE: Please refer to the Regulatory Status section for specific product information."
+  },
+  {
+   "what": "member contract governs",
+   "quote": "the benefit plan, summary plan description or contract will govern"
+  }
+ ],
+ "definitions_that_change_meaning": [],
+ "vague_terms": [
+  {
+   "quote": "intractable cervical radiculopathy",
+   "problem": "undefined"
+  },
+  {
+   "quote": "Functional and/or neurological deficit",
+   "problem": "no examples or measures"
+  },
+  {
+   "quote": "Radiographic imaging (e.g., Computed Tomography [CT], Magnetic Resonance Imaging [MRI], x-rays, etc.)",
+   "problem": "x-rays and 'etc.' - very low imaging bar; no recency window"
+  },
+  {
+   "quote": "active pain management program or protocol",
+   "problem": "undefined"
+  },
+  {
+   "quote": "free from contraindications to cervical disc arthroplasty",
+   "problem": "list is in the investigational section, not labelled contraindications"
+  }
+ ],
+ "extraction_hazards": [
+  "Only 3 of 51 pages hold criteria; Coverage text is easy to find but evidence review (Table 1 of FDA devices, ~70 references) dwarfs it",
+  "Cervical and lumbar disc criteria share one section; lumbar has ODI >= 40 and 6 months which must not leak into cervical",
+  "Footnote asterisk to Regulatory Status",
+  "Section nav table at top, page footers 'Artificial Intervertebral Disc/SUR712.028 Page N' repeated",
+  "Criteria restated almost verbatim for subsequent level"
+ ],
+ "interesting_structures": [
+  "Cervical 'subsequent level' list restates all single-level criteria plus 2 more",
+  "Contraindications expressed only as the investigational list"
+ ],
+ "fit_to_tree": {
+  "score": 2,
+  "scale": "1 = all/any/not expresses it cleanly ... 5 = needs new constructs or human judgment",
+  "why": "Short, numbered, all-of with one OR sub-pair and a NOT list. Only the contraindication reference and vague imaging/deficit leaves strain it."
+ }
+}

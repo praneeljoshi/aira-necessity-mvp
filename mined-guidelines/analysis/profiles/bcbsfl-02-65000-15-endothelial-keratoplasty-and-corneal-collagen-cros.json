@@ -1,0 +1,182 @@
+{
+ "lines_of_business": [
+  "All lines of business unless noted in PROGRAM EXCEPTIONS (disclaimer: \"THIS MEDICAL COVERAGE GUIDELINE APPLIES TO ALL LINES OF BUSINESS UNLESS OTHERWISE NOTED IN THE PROGRAM EXCEPTIONS SECTION\")",
+  "FEP: \"Follow FEP guidelines.\"",
+  "SAO: \"Follow SAO guidelines.\"",
+  "Medicare Advantage: NCD 80.7 Refractive Keratoplasty 'reviewed'",
+  "'Refractive surgery and related complications may be excluded by some contracts.' (benefit exclusion)"
+ ],
+ "effective_or_revised": "Original Effective Date 08/15/03; Reviewed 02/26/26; Revised 03/15/26 (11 pages).",
+ "sections_in_order": [
+  "header block (guideline number, Original Effective Date, Reviewed, Revised, Subject)",
+  "disclaimer paragraph",
+  "navigation bar (Position Statement / Billing/Coding / Reimbursement / Program Exceptions / Definitions / Related Guidelines / Other / References / Updates)",
+  "DESCRIPTION",
+  "POSITION STATEMENT",
+  "BILLING/CODING INFORMATION",
+  "REIMBURSEMENT INFORMATION",
+  "PROGRAM EXCEPTIONS",
+  "DEFINITIONS",
+  "RELATED GUIDELINES",
+  "OTHER",
+  "REFERENCES",
+  "COMMITTEE APPROVAL",
+  "GUIDELINE UPDATE INFORMATION"
+ ],
+ "criteria_location": "POSITION STATEMENT, pp.3-4: three topics in one document (endothelial keratoplasty list; femtosecond EK investigational; corneal collagen cross-linking criteria; computerized corneal topography; refractive-error exclusion list). A documentation/LOINC table sits at the end of the Position Statement, before BILLING/CODING.",
+ "procedures_covered": [
+  "Endothelial keratoplasty (DSEK, DSAEK, DMEK, DMAEK) CPT 65756, 65757",
+  "Femtosecond laser-assisted EK (FLEK, FELEK): investigational",
+  "Epithelium-off corneal collagen cross-linking 0402T",
+  "Epithelium-on cross-linking: investigational",
+  "Computerized corneal topography 92025",
+  "Refractive surgery (RK, LASIK, PRK, CLR, ALK, CK, etc.): not eligible (contract exclusion)"
+ ],
+ "logic": {
+  "top_level": "pathways: EK is any-of 'including but not limited to' a diagnosis list; CXL is an all-of of (progression evidence any-of) AND conservative treatment failed",
+  "max_nesting_depth": 3,
+  "k_of_n": [
+   {
+    "k": 1,
+    "n": 4,
+    "quote": "demonstrated by at least one of the following: An increase of 1 diopter in the steepest keratometry value, OR ... OR A myopic shift ... OR A decrease ≥0.1 mm in the back optical zone radius"
+   }
+  ],
+  "exclusions_or_contraindications": "Not-covered statements by technique (FLEK, FELEK, epi-on, all other CXL indications) and by service (topography for non-covered procedures; refractive procedures listed because 'Correction of refractive errors is generally a contract exclusion').",
+  "initial_vs_repeat": "None.",
+  "and_or_ambiguity": [
+   {
+    "quote": "A decrease ≥0.1 mm in the back optical zone radius in rigid contact lens wearers where other information was not available, AND Conservative treatment such as spectacle correction or use of rigid contact lens has failed",
+    "why_ambiguous": "The final 'AND' is on the last bullet of an OR list, so it could join only the fourth bullet or the whole OR-group with conservative-treatment failure. Layout (the AND bullet is at the same indent as the OR items) suggests it joins the whole group, but a parser reading connectors would attach it to the last OR item."
+   },
+   {
+    "quote": "meets the definition of medical necessity when used for the treatment of endothelial dysfunction, including but not limited to:",
+    "why_ambiguous": "Open list: a diagnosis not on the list can still qualify."
+   },
+   {
+    "quote": "As a treatment of progressive keratoconus or corneal ectasia**, demonstrated by at least one of the following",
+    "why_ambiguous": "'progressive' is demonstrated by only the four changes, but no look-back interval is given for the increases."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "diagnosis",
+   "quote": "Ruptures in Descemet membrane / Endothelial dystrophy / Aphakic and pseudophakic bullous keratopathy / Iridocorneal endothelial syndrome / Corneal edema attributed to endothelial failure / Failure or rejection of a previous corneal transplant",
+   "where": "EK list"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "An increase of 1 diopter in the steepest keratometry value",
+   "where": "CXL progression criteria"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "A myopic shift (decrease in the spherical equivalent) of 0.50 diopter on subjective manifest refraction",
+   "where": "CXL"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "Conservative treatment such as spectacle correction or use of rigid contact lens has failed",
+   "where": "CXL"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "physician history and physical, physician operative report, and physician procedure note",
+   "where": "documentation sentence and LOINC table (28626-0, 28573-4, 11505-5)"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "steepest keratometry increase",
+   "value": ">= 1",
+   "unit": "diopter",
+   "quote": "An increase of 1 diopter in the steepest keratometry value"
+  },
+  {
+   "quantity": "regular astigmatism increase",
+   "value": ">= 1",
+   "unit": "diopter",
+   "quote": "An increase of 1 diopter in regular astigmatism evaluated by subjective manifest refraction"
+  },
+  {
+   "quantity": "myopic shift",
+   "value": ">= 0.50",
+   "unit": "diopter",
+   "quote": "A myopic shift ... of 0.50 diopter"
+  },
+  {
+   "quantity": "back optical zone radius decrease",
+   "value": ">= 0.1",
+   "unit": "mm",
+   "quote": "A decrease ≥0.1 mm in the back optical zone radius in rigid contact lens wearers"
+  }
+ ],
+ "time_windows": [],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": true,
+  "codes_tied_to_criteria": "Yes, per procedure: one ICD-10 table 'For Endothelial Keratoplasty (CPT code 65756, 65757)' (H18.1x bullous keratopathy, H18.33x, H18.50x, T85.39x, T86.84xx) and another 'For CPT Code 0402T' (H18.60x keratoconus, H18.71x ectasia). Rare in the batch: diagnosis code tables are split by CPT.",
+  "non_covered_code_lists": "Refractive codes named inside the Position Statement (65771 radial keratotomy, S0800 LASIK, S0810 PRK, 65765, 65760)."
+ },
+ "external_dependencies": [
+  {
+   "what": "Member contract exclusions for refractive surgery",
+   "quote": "Refer to member contract. Refractive surgery and related complications may be excluded by some contracts."
+  },
+  {
+   "what": "Medicare Advantage NCD 80.7",
+   "quote": "Refractive Keratoplasty (80.7) located at cms.gov"
+  },
+  {
+   "what": "Related MCGs",
+   "quote": "Implantation of Intrastromal Corneal Ring Segments, 09-V0000-02"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Corneal ectasia",
+   "definition_quote": "thinning of the cornea causing a cone-shaped bulging of the cornea (keratoconus) that occurs after refractive surgery"
+  },
+  {
+   "term": "Diopters",
+   "definition_quote": "A unit of measure of the refractive power if a lens."
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "including but not limited to",
+   "problem": "EK diagnosis list is open."
+  },
+  {
+   "quote": "has failed",
+   "problem": "conservative treatment failure undefined."
+  },
+  {
+   "quote": "Refractive surgery and related complications may be excluded by some contracts",
+   "problem": "coverage depends on contract the policy cannot see."
+  }
+ ],
+ "extraction_hazards": [
+  "Bullets are U+F0B7 glyphs (18) and 'o' sub-bullets; the AND at the end of the last OR sub-bullet is the only marker joining the OR-group to the next bullet.",
+  "Footnote '**' after 'corneal ectasia' points to the NOTE below the list ('** NOTE: Refer to member contract.'); stripping asterisks hides the contract caveat.",
+  "The documentation-requirement sentence and a 3-column LOINC table sit at the end of the Position Statement and are followed directly by BILLING/CODING with no blank line; a section splitter may swallow the table into the criteria.",
+  "Subject line wraps over two lines ('Endothelial Keratoplasty and Corneal / Collagen Cross-Linking'); title is two procedures in one document.",
+  "Two ICD-10 tables with long titles that wrap; 'CPT code 0402T' appears in the table title as the key."
+ ],
+ "interesting_structures": [
+  "Several unrelated services in one policy, each with its own coverage logic.",
+  "Per-CPT ICD-10 support tables.",
+  "Contract exclusion for refractive surgery spelled out as a list of services.",
+  "Quantitative progression criteria for CXL expressed as four alternative changes."
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "scale": "1..5",
+  "why": "CXL maps cleanly to all(any(4 measurements), conservative failed) if the AND scope is read from layout; strain is the multi-topic document, open diagnosis lists, and contract-exclusion dependency."
+ },
+ "file": "bcbsfl-02-65000-15-endothelial-keratoplasty-and-corneal-collagen-cros.pdf",
+ "treatment": "endothelial-keratoplasty-and-corneal-col",
+ "payer": "bcbsfl",
+ "doc_kind": "medical policy (Florida Blue 'Medical Coverage Guideline', MCG)"
+}

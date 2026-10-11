@@ -1,0 +1,19 @@
+{
+  "payer": "Carelon (via Louisiana Medicaid)",
+  "payer_key": "carelon",
+  "treatment": "icd",
+  "title": "Implantable Cardioverter Defibrillators",
+  "policy_number": "",
+  "effective": "",
+  "url": "https://www.ldh.la.gov/assets/medicaid/MCPP/10_28_24/1051_HBL_CAR_Implantable_Cardioverter_Defibrillators_redline.pdf",
+  "final_url": "https://www.ldh.la.gov/assets/medicaid/MCPP/10_28_24/1051_HBL_CAR_Implantable_Cardioverter_Defibrillators_redline.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "carelon-implantable-cardioverter-defibrillators.pdf",
+  "sha256": "075db0a707454586af08dee44638dda953518ab7ddfd45a44a935ee495eb7560",
+  "pages": 12,
+  "bytes": 317524,
+  "retrieved": "2026-10-09",
+  "printed_date": "Status Revised; Effective Date 11/17/2024 (printed as '11/1710/20/2024' with a strikethrough overprint); Last Review Date 04/15/2024 (printed '04/15/2024 01/23/2024'); Doc ID CAR06-111024.32"
+}

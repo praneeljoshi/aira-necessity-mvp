@@ -1,0 +1,19 @@
+{
+  "payer": "UnitedHealthcare",
+  "payer_key": "uhc",
+  "treatment": "balloon-sinuplasty",
+  "title": "Balloon Sinus Ostial Dilation",
+  "policy_number": "2019T0571G",
+  "effective": "11/01/2019",
+  "url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/index/commercial/balloon-sinus-ostial-dilation-11012019.pdf",
+  "final_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/index/commercial/balloon-sinus-ostial-dilation-11012019.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "uhc-2019t0571g-balloon-sinus-ostial-dilation.pdf",
+  "sha256": "358d29e3dd5ff472dae04503492aebe386424c8a539d2406a4b33c7b33c73658",
+  "pages": 12,
+  "bytes": 590633,
+  "retrieved": "2026-10-09",
+  "printed_date": "Effective November 1, 2019 (printed on every page); no later revision date"
+}

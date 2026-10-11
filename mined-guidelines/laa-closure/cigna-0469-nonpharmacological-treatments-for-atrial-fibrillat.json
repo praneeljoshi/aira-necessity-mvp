@@ -1,0 +1,19 @@
+{
+  "payer": "Cigna",
+  "payer_key": "cigna",
+  "treatment": "laa-closure",
+  "title": "Nonpharmacological Treatments for Atrial Fibrillation (incl. LAA closure)",
+  "policy_number": "0469",
+  "effective": "",
+  "url": "https://static.cigna.com/assets/chcp/pdf/coveragePolicies/medical/mm_0469_coveragepositioncriteria_transcatheter_ablation_arrhythmogenic_foci.pdf",
+  "final_url": "https://static.cigna.com/assets/chcp/pdf/coveragePolicies/medical/mm_0469_coveragepositioncriteria_transcatheter_ablation_arrhythmogenic_foci.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "cigna-0469-nonpharmacological-treatments-for-atrial-fibrillat.pdf",
+  "sha256": "1e1e04417c98b5f3af025605978734a834f405b9199f3ba176bfbfdd037debab",
+  "pages": 39,
+  "bytes": 585850,
+  "retrieved": "2026-10-09",
+  "printed_date": "Effective 11/15/2025; Next Review 10/15/2026"
+}

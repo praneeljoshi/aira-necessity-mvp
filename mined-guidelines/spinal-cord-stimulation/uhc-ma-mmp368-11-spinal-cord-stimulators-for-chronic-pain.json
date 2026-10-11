@@ -1,0 +1,19 @@
+{
+  "payer": "UnitedHealthcare Medicare Advantage",
+  "payer_key": "uhc-ma",
+  "treatment": "spinal-cord-stimulation",
+  "title": "Spinal Cord Stimulators for Chronic Pain",
+  "policy_number": "MMP368.11",
+  "effective": "06/01/2024",
+  "url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-mp/spinal-cord-stimulators-chronic-pain.pdf",
+  "final_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-mp/spinal-cord-stimulators-chronic-pain.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "uhc-ma-mmp368-11-spinal-cord-stimulators-for-chronic-pain.pdf",
+  "sha256": "8bd463443b1117cccca4b1db0fbc0561512292f1c8fb8df83d914f911343f870",
+  "pages": 13,
+  "bytes": 439689,
+  "retrieved": "2026-10-09",
+  "printed_date": "Text prints policy number MMP368.14, last committee approval June 10, 2026, effective September 1, 2026 (library file name and metadata say MMP368.11, effective 06/01/2024)"
+}

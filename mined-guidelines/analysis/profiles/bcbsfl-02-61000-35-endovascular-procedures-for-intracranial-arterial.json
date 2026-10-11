@@ -1,0 +1,185 @@
+{
+ "lines_of_business": [
+  "All lines of business unless noted in PROGRAM EXCEPTIONS (disclaimer: 'THIS MEDICAL COVERAGE GUIDELINE APPLIES TO ALL LINES OF BUSINESS UNLESS OTHERWISE NOTED IN THE PROGRAM EXCEPTIONS SECTION')",
+  "FEP: 'Follow FEP guidelines.'",
+  "SAO: 'Follow SAO guidelines.'",
+  "Medicare Advantage products: NCD Percutaneous Transluminal Angioplasty (PTA) (20.7) reviewed"
+ ],
+ "effective_or_revised": "Original Effective Date 07/15/08; Reviewed 02/26/26; Revised 03/15/26",
+ "sections_in_order": [
+  "Header block (MCG number, Original Effective Date, Reviewed, Revised)",
+  "Subject",
+  "Disclaimer (all caps)",
+  "Navigation bar (Position Statement / Billing/Coding / Reimbursement / Program Exceptions / Definitions / Related Guidelines / Other / References / Updates)",
+  "DESCRIPTION",
+  "POSITION STATEMENT",
+  "BILLING/CODING INFORMATION",
+  "REIMBURSEMENT INFORMATION",
+  "PROGRAM EXCEPTIONS",
+  "DEFINITIONS",
+  "RELATED GUIDELINES",
+  "OTHER",
+  "REFERENCES",
+  "COMMITTEE APPROVAL",
+  "GUIDELINE UPDATE INFORMATION"
+ ],
+ "criteria_location": "POSITION STATEMENT (about 50 lines, pp.2-3), split into two printed sub-headings: 'Intracranial Arterial Disease' and 'Extracranial Vertebral Artery Disease'. The flow-diverter anatomic criteria sit in an asterisk footnote immediately after the paragraph.",
+ "procedures_covered": [
+  "Intracranial stent for aneurysm (wide-neck)",
+  "Flow-diverting stent for large/giant wide-necked aneurysms",
+  "Mechanical embolectomy for acute ischemic stroke",
+  "Intracranial PTA +/- stent for atherosclerotic disease (investigational)",
+  "Extracranial vertebral artery PTA/stent (investigational)"
+ ],
+ "logic": {
+  "top_level": "pathways",
+  "max_nesting_depth": 2,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "'Have no evidence of intracranial hemorrhage or arterial dissection on CT or MRI imaging.' as one ALL item; 'not amenable to surgical treatment or standard endovascular therapy'.",
+  "initial_vs_repeat": "Not addressed.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Can receive endovascular mechanical embolectomy within 12 hours of symptom onset OR within 24 hours of symptom onset if there is evidence of a mismatch between specific clinical and imaging criteria; AND",
+    "why_ambiguous": "OR with a conditional inside a single bullet of an ALL list; the 'specific clinical and imaging criteria' are not given."
+   },
+   {
+    "quote": "when surgical treatment is not appropriate AND standard endovascular techniques do not allow for complete isolation of the aneurysm, (e.g., wide-neck aneurysm of 4 mm or more, or sack-to-neck ratio less than 2:1).",
+    "why_ambiguous": "Examples (e.g.) nested in a criterion: unclear if the numbers are required or illustrative."
+   },
+   {
+    "quote": "that meet anatomic criteria* and are not amenable to surgical treatment or standard endovascular therapy.",
+    "why_ambiguous": "Asterisk footnote carries the actual numeric criteria and it is separated from the sentence by a blank line."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "imaging finding",
+   "quote": "Have a demonstrated occlusion within the proximal intracranial anterior circulation (intracranial internal carotid artery, or M1 or M2 segments of the middle cerebral artery, or A1 or A2 segments of the anterior cerebral artery)",
+   "where": "Position Statement embolectomy"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "wide-neck aneurysm of 4 mm or more, or sack-to-neck ratio less than 2:1",
+   "where": "Position Statement stent"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "a size of 10 mm or more and a neck diameter of 4 mm or more",
+   "where": "Position Statement footnote"
+  },
+  {
+   "kind": "functional impairment",
+   "quote": "Have evidence of substantial and clinically significant neurological deficits (e.g. baseline (post-stroke) National Institutes of Health Stroke Scale (NIHSS) score)",
+   "where": "Position Statement embolectomy"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "Have evidence of salvageable brain tissue in the affected vascular territory (e.g. Alberta Stroke Program Early CT (ASPECTs) score)",
+   "where": "Position Statement embolectomy"
+  },
+  {
+   "kind": "provider/facility qualification",
+   "quote": "device with FDA approval for the treatment of acute ischemic stroke",
+   "where": "Position Statement embolectomy"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "when surgical treatment is not appropriate",
+   "where": "Position Statement stent"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "aneurysm neck width",
+   "value": ">= 4",
+   "unit": "mm",
+   "quote": "wide-neck aneurysm of 4 mm or more"
+  },
+  {
+   "quantity": "sack-to-neck ratio",
+   "value": "< 2:1",
+   "unit": "ratio",
+   "quote": "sack-to-neck ratio less than 2:1"
+  },
+  {
+   "quantity": "aneurysm size (flow diverter)",
+   "value": ">= 10",
+   "unit": "mm",
+   "quote": "a size of 10 mm or more"
+  },
+  {
+   "quantity": "neck diameter (flow diverter)",
+   "value": ">= 4",
+   "unit": "mm",
+   "quote": "neck diameter of 4 mm or more"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "embolectomy from symptom onset",
+   "length": "12 hours (24 hours if mismatch)",
+   "quote": "within 12 hours of symptom onset OR within 24 hours of symptom onset if there is evidence of a mismatch"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": true,
+  "codes_tied_to_criteria": "ICD-10 list is mapped to specific codes: 'ICD-10 Diagnosis Codes That Support Medical Necessity for codes 61635, 61645' (I63.00-I63.9, I66.01-I66.9, I67.0-I67.9). Note 61635 (stent incl. angioplasty) has no '(Investigational)' tag although the position statement says intracranial PTA +/- stent for atherosclerosis is investigational.",
+  "non_covered_code_lists": "Inline '(Investigational)' on 61630, 61640, 61641, 61642, 0075T, 0076T (and not on 61635, 61645)."
+ },
+ "external_dependencies": [
+  {
+   "what": "CMS NCD 20.7 reviewed for Medicare Advantage",
+   "quote": "Percutaneous Transluminal Angioplasty (PTA) (20.7) located at cms.gov."
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "NIHSS",
+   "definition_quote": "National Institutes of Health Stroke Scale (NIHSS) score- https://www.mdcalc.com/nih-stroke-scale-score-nihss"
+  },
+  {
+   "term": "ASPECTs",
+   "definition_quote": "Alberta Stroke Program Early CT (ASPECTs) score- https://www.mdcalc.com/alberta-stroke-program-early-ct-score-aspects"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "substantial and clinically significant neurological deficits",
+   "problem": "No NIHSS cutoff; the scale is named but only as 'e.g.'."
+  },
+  {
+   "quote": "evidence of salvageable brain tissue",
+   "problem": "No ASPECTS cutoff."
+  },
+  {
+   "quote": "specific clinical and imaging criteria",
+   "problem": "Not specified."
+  },
+  {
+   "quote": "not appropriate / not amenable to surgical treatment",
+   "problem": "Judgment."
+  }
+ ],
+ "extraction_hazards": [
+  "Sub-headings 'Intracranial Arterial Disease' / 'Extracranial Vertebral Artery Disease' are plain lines.",
+  "Asterisk footnote '*(Flow-diverting stents are indicated ...' carries criteria and sits after a blank line.",
+  "Note paragraph before the first criterion limits scope ('not intended to address ... delayed cerebral ischemia').",
+  "Inline '(Investigational)' tags repeat on the following line in the CPT table (long descriptors wrap) so a code row spans 2-3 lines.",
+  "DEFINITIONS contain only URLs."
+ ],
+ "interesting_structures": [
+  "Three body-system pathways plus two blanket investigational statements in one policy.",
+  "Clinical scales (NIHSS, ASPECTS) named without thresholds, with definitions that are only web links.",
+  "Code list tags disagree with position statement (61635)."
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "why": "Embolectomy is a clean ALL with five leaves, but two leaves (deficit severity, salvageable tissue) lack thresholds, a clinical-imaging 'mismatch' criterion is unspecified, and the footnote criteria must be joined to a different sentence."
+ },
+ "file": "bcbsfl-02-61000-35-endovascular-procedures-for-intracranial-arterial.pdf",
+ "treatment": "endovascular-procedures-for-intracranial",
+ "payer": "bcbsfl",
+ "doc_kind": "medical policy (Florida Blue Medical Coverage Guideline)"
+}

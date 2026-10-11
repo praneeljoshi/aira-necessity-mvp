@@ -1,0 +1,130 @@
+{
+ "file": "uhc-cs007oh-d-bariatric-surgery.pdf",
+ "treatment": "bariatric-surgery",
+ "payer": "uhc",
+ "doc_kind": "Medicaid policy (UnitedHealthcare Community Plan, Ohio) delegating criteria to InterQual",
+ "lines_of_business": [
+  "UnitedHealthcare Community Plan (Medicaid), Ohio only: 'This Medical Policy only applies to the state of Ohio.'"
+ ],
+ "effective_or_revised": "Text shows Policy CS007OH.E effective July 1, 2026 (library metadata labels the file CS007OH.D / 05/01/2025; the PDF says it archived version D)",
+ "sections_in_order": [
+  "Application",
+  "Coverage Rationale",
+  "Medical Records Documentation Used for Reviews",
+  "Definitions",
+  "Applicable Codes",
+  "Description of Services",
+  "Clinical Evidence",
+  "U.S. Food and Drug Administration",
+  "References",
+  "Policy History/Revision Information",
+  "Instructions for Use"
+ ],
+ "criteria_location": "There are no clinical criteria in the document. Coverage Rationale (p.1) says 'For medical necessity clinical coverage criteria, refer to the InterQual CP: Procedures: Bariatric or Metabolic Surgery' (adult and adolescent) and lists only unproven procedures.",
+ "procedures_covered": [
+  "Bariatric or Metabolic Surgery (adult and adolescent; via InterQual)",
+  "Unproven: bariatric artery embolization, gastric electrical stimulation, laparoscopic greater curvature plication, mini/OAGB, Silastic ring vertical gastric bypass, SADI-S, transoral endoscopic surgery (ESG, liners, balloon, TORe, TransPyloric Shuttle), VBLOC"
+ ],
+ "logic": {
+  "top_level": "other (delegated to InterQual; the document itself contains only a NOT list of unproven procedures)",
+  "max_nesting_depth": 2,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "Bulleted list of unproven procedures, plus 'Bariatric surgery as the primary treatment for any condition other than obesity'.",
+  "initial_vs_repeat": "None in policy; Definitions define Conversion, Corrective, Reversal for revisional surgery but set no criteria (InterQual presumably).",
+  "and_or_ambiguity": []
+ },
+ "requirement_kinds": [
+  {
+   "kind": "other",
+   "quote": "For medical necessity clinical coverage criteria, refer to the InterQual CP: Procedures: Bariatric or Metabolic Surgery",
+   "where": "Coverage Rationale p.1"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "The patient's medical record must contain documentation that fully supports the medical necessity for the requested services",
+   "where": "Medical Records Documentation p.2"
+  },
+  {
+   "kind": "BMI/comorbidity",
+   "quote": "NHLBI classes: 35 to 39.9 Obesity Class II; ≥ 40 Obesity Class III (definition only)",
+   "where": "Definitions p.2"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "BMI classes (definition only)",
+   "value": "35-39.9 class II; ≥40 class III",
+   "unit": "kg/m2",
+   "quote": "≥ 40 kg/m2 –Obesity Class III"
+  },
+  {
+   "quantity": "OSA severity (definition only)",
+   "value": "mild AHI ≥5 and <15; moderate ≥15 and ≤30; severe >30",
+   "unit": "events/h",
+   "quote": "Severe for AHI or RDI of > 30/hour"
+  },
+  {
+   "quantity": "Adolescent classes (definition only)",
+   "value": "120%/140% of 95th percentile",
+   "unit": "%",
+   "quote": "Class III obesity – 140% of the 95th percentile"
+  }
+ ],
+ "time_windows": [],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Not tied; 'Listing of a code in this policy does not imply that the service described by the code is a covered or non-covered health service.'",
+  "non_covered_code_lists": "None as separate list; includes 0813T, 43290, 43291, 43889, 43647 etc. in one table"
+ },
+ "external_dependencies": [
+  {
+   "what": "InterQual CP Bariatric or Metabolic Surgery (adult and adolescent), proprietary",
+   "quote": "refer to the InterQual® CP: Procedures: Bariatric or Metabolic Surgery"
+  },
+  {
+   "what": "Ohio Administrative Code 5160-1-01 for unproven services",
+   "quote": "evaluated for medical necessity using Ohio Administrative Code 5160 -1-01"
+  },
+  {
+   "what": "Other UHC policies if InterQual silent",
+   "quote": "If InterQual does not have applicable criteria, UnitedHealthcare may also use UnitedHealthcare Medical Policies"
+  },
+  {
+   "what": "Related: OSA treatment, Upper GI minimally invasive, Robotic surgery",
+   "quote": "Related Policies"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Revisional Bariatric Surgery",
+   "definition_quote": "Conversion – A second bariatric procedure that changes the bariatric approach ... Corrective ... Reversal – A procedure that restores original anatomy"
+  },
+  {
+   "term": "Multidisciplinary",
+   "definition_quote": "Bariatric center or regimen combining or involving several academic disciplines or professional specializations"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "unproven and not medically necessary for treating obesity due to insufficient evidence of efficacy",
+   "problem": "Unproven list excludes OAGB etc.; but 'including but not limited to' makes it open-ended"
+  }
+ ],
+ "extraction_hazards": [
+  "43 pages, roughly 35 are clinical evidence and references that mention thresholds (BMI, AHI) as evidence, not criteria",
+  "Criteria link is a hyperlink to InterQual, not present in PDF",
+  "Nested 'o' and triangle bullets under 'Transoral endoscopic surgery'",
+  "Library metadata (CS007OH.D, 05/01/2025) disagrees with the PDF text (CS007OH.E, July 1, 2026)"
+ ],
+ "interesting_structures": [
+  "Criteria fully outsourced to a proprietary vendor tool; the policy is a procedure NOT list plus evidence summary",
+  "Ohio-only scope with OAC rule for unproven services",
+  "MBSAQIP accreditation discussed in description only"
+ ],
+ "fit_to_tree": {
+  "score": 5,
+  "scale": "1-5",
+  "why": "No criteria exist in the document to tree-ify; any checker needs InterQual content which is not in the PDF."
+ }
+}

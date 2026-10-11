@@ -1,0 +1,183 @@
+{
+ "file": "uhc-2026t0581q-percutaneous-vertebroplasty-and-kyphoplasty.pdf",
+ "treatment": "vertebroplasty-kyphoplasty",
+ "payer": "uhc",
+ "doc_kind": "medical policy",
+ "lines_of_business": [
+  "UnitedHealthcare Commercial",
+  "Individual Exchange"
+ ],
+ "effective_or_revised": "Effective March 1, 2026 (2026T0581Q)",
+ "sections_in_order": [
+  "Application",
+  "Coverage Rationale",
+  "Medical Records Documentation Used for Reviews",
+  "Definitions",
+  "Applicable Codes",
+  "Description of Services",
+  "Clinical Evidence",
+  "U.S. Food and Drug Administration",
+  "References",
+  "Policy History/Revision Information",
+  "Instructions for Use"
+ ],
+ "criteria_location": "Coverage Rationale, page 1-2 (about 30 lines), definitions on p.2 change meaning of 'Functional or Physical Impairment' and 'Optimal Medical Therapy'. Pages 3-20 are evidence.",
+ "procedures_covered": [
+  "Percutaneous vertebroplasty 22510-22512",
+  "Kyphoplasty 22513-22515",
+  "Sacral augmentation excluded (other policy)"
+ ],
+ "logic": {
+  "top_level": "all (indication AND CT/MRI rules out other causes AND none of six exclusions)",
+  "max_nesting_depth": 3,
+  "k_of_n": [
+   {
+    "k": 1,
+    "n": 6,
+    "quote": "for the following indications: Osteoporotic VCF; Steroid-induced vertebral fracture; Osteolytic metastatic disease; Multiple myeloma; Vertebral Hemangioma with aggressive features; Unstable fractures due to Osteonecrosis"
+   }
+  ],
+  "exclusions_or_contraindications": "Block 'The following are not present:' with six items joined by 'or' (cord compression, collapse <1/3, healed VCF, sacrum/coccyx lesions, asymptomatic VCF, VCF responding to conservative therapy).",
+  "initial_vs_repeat": "None.",
+  "and_or_ambiguity": [
+   {
+    "quote": "The following are not present: ... or ... or ...",
+    "why_ambiguous": "'not present' with 'or' means none of them; reading 'not (A or B)' vs '(not A) or (not B)' matters"
+   },
+   {
+    "quote": "within 4 months of pain onset, that has failed to respond to Optimal Medical Therapy for the following indications",
+    "why_ambiguous": "Modifiers attach to pain; unclear whether 4 months applies to hemangioma/metastatic disease"
+   },
+   {
+    "quote": "and Computed tomography (CT) or magnetic resonance imaging (MRI) has ruled out other causes of spinal pain, including but not limited to",
+    "why_ambiguous": "'including but not limited to' is open-ended"
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "symptom",
+   "quote": "treating pain causing Functional or Physical Impairment",
+   "where": "Coverage Rationale"
+  },
+  {
+   "kind": "duration",
+   "quote": "within 4 months of pain onset",
+   "where": "Coverage Rationale"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "failed to respond to Optimal Medical Therapy",
+   "where": "Coverage Rationale"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "Osteoporotic vertebral compression fracture (VCF); Steroid-induced vertebral fracture; Osteolytic metastatic disease; Multiple myeloma; Vertebral Hemangioma with aggressive features; Unstable fractures due to Osteonecrosis",
+   "where": "Coverage Rationale"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "CT or MRI has ruled out other causes of spinal pain ... Foraminal stenosis; Herniated intervertebral disk",
+   "where": "Coverage Rationale"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "vertebra reduced to less than one-third of its original height",
+   "where": "Not-present list"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "Healed VCF, as confirmed by CT or MRI",
+   "where": "Not-present list"
+  },
+  {
+   "kind": "other",
+   "quote": "VCFs responding appropriately to conservative therapy",
+   "where": "Not-present list"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "time from pain onset",
+   "value": "<=4",
+   "unit": "months",
+   "quote": "within 4 months of pain onset"
+  },
+  {
+   "quantity": "vertebral height",
+   "value": ">= 1/3 original (collapse not <1/3)",
+   "unit": "",
+   "quote": "less than one-third of its original height"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "pain onset to procedure",
+   "length": "4 months",
+   "quote": "within 4 months of pain onset"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "CPT listed for reference only",
+  "non_covered_code_lists": ""
+ },
+ "external_dependencies": [
+  {
+   "what": "Sacral augmentation in Minimally Invasive Spine Surgery Procedures",
+   "quote": "refer to the Medical Policy titled Minimally Invasive Spine Surgery Procedures"
+  },
+  {
+   "what": "Medical Records Documentation guideline / member plan document",
+   "quote": "Medical Records Documentation Used for Reviews"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Optimal Medical Therapy",
+   "definition_quote": "Treatments that are used as first line before moving to more invasive, risky, or complex procedures (Gibbons and Miller, 2017)."
+  },
+  {
+   "term": "Functional or Physical Impairment",
+   "definition_quote": "significantly limited, impaired, or delayed capacity to move, coordinate actions, or perform physical activities"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "Optimal Medical Therapy",
+   "problem": "Defined circularly; no modalities or duration"
+  },
+  {
+   "quote": "VCFs responding appropriately to conservative therapy",
+   "problem": "'appropriately' undefined"
+  },
+  {
+   "quote": "Vertebral Hemangioma with aggressive features",
+   "problem": "'aggressive' only described in definitions"
+  },
+  {
+   "quote": "Other significant coexistent spinal or bony pain generators",
+   "problem": "Open-ended"
+  }
+ ],
+ "extraction_hazards": [
+  "Coverage Rationale uses 'and' on its own lines to join three blocks",
+  "'or' at end of bullets in the not-present list",
+  "Definitions section is required to interpret criteria",
+  "20 pages of evidence after criteria",
+  "Page header/footer on each page",
+  "Medicare Advantage uses separate Spine Procedures policy"
+ ],
+ "interesting_structures": [
+  "Four-month ceiling from pain onset (an upper bound on time, unlike peers that need a minimum wait)",
+  "No minimum number of weeks of conservative care; instead 'failed to respond' to optimal therapy",
+  "NOT-present exclusions using CT/MRI",
+  "One policy for both procedures with a single set of criteria"
+ ],
+ "fit_to_tree": {
+  "score": 2,
+  "scale": "1-5",
+  "why": "Explicit all/any/not; strained by 'Optimal Medical Therapy', open-ended 'including but not limited to', and the NOT-present or-list reading."
+ }
+}

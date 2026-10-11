@@ -1,0 +1,19 @@
+{
+  "payer": "Cigna",
+  "payer_key": "cigna",
+  "treatment": "hyperbaric-oxygen",
+  "title": "Hyperbaric and Topical Oxygen Therapies",
+  "policy_number": "0053",
+  "effective": "",
+  "url": "https://static.cigna.com/assets/chcp/pdf/coveragePolicies/medical/mm_0053_coveragepositioncriteria_hyperbaric_oxygen.pdf",
+  "final_url": "https://static.cigna.com/assets/chcp/pdf/coveragePolicies/medical/mm_0053_coveragepositioncriteria_hyperbaric_oxygen.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "cigna-0053-hyperbaric-and-topical-oxygen-therapies.pdf",
+  "sha256": "e21b545e71489add47e014fab5098018c082faff33838334340a374c6c4a4295",
+  "pages": 39,
+  "bytes": 531353,
+  "retrieved": "2026-10-09",
+  "printed_date": "Effective 5/15/2026; next review 5/15/2027"
+}

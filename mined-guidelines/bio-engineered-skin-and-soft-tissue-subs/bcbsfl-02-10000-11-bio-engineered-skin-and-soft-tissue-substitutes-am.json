@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "bio-engineered-skin-and-soft-tissue-subs",
+  "title": "Bio-Engineered Skin and Soft Tissue Substitutes, Amniotic Membrane and Amniotic Fluid",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JQQQ4QS7VAPR1FRAX",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-10000-11",
+  "original_effective": "01/01/01",
+  "reviewed": "04/23/26",
+  "revised": "10/01/26",
+  "file": "bcbsfl-02-10000-11-bio-engineered-skin-and-soft-tissue-substitutes-am.pdf",
+  "sha256": "8c1d24c4ff6df1a6cb875f38ee0e167af6e608430fa8bfb2c420204e342ac314",
+  "pages": 39,
+  "bytes": 457790,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original Effective Date 01/01/01; Reviewed 04/23/26; Revised 10/01/26 (39 pages)"
+}

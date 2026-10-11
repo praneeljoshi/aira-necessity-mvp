@@ -1,0 +1,19 @@
+{
+  "payer": "Blue Cross Blue Shield of Texas",
+  "payer_key": "bcbstx",
+  "treatment": "reduction-mammaplasty",
+  "title": "Reduction Mammaplasty",
+  "policy_number": "SUR716.012",
+  "effective": "2024-12-01",
+  "url": "https://medicalpolicy.bcbstx.com/content/dam/bcbs/medicalpolicy/pdf/surgery/SUR716.012_2024-12-01.pdf",
+  "final_url": "https://medicalpolicy.bcbstx.com/content/dam/bcbs/medicalpolicy/pdf/surgery/SUR716.012_2024-12-01.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "bcbstx-sur716-012-reduction-mammaplasty.pdf",
+  "sha256": "6b7af813aa808cb844349a365a91f2330570a8557ebba59f8c75eed58b692875",
+  "pages": 17,
+  "bytes": 344807,
+  "retrieved": "2026-10-09",
+  "printed_date": "Effective 12/01/2024; Policy End Date 12/31/2025"
+}

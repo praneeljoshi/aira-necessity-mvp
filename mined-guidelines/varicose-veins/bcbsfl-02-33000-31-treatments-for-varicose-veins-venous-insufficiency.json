@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "varicose-veins",
+  "title": "Treatments for Varicose Veins/Venous Insufficiency",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76FAC6X4B8MJSUR77N5",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-33000-31",
+  "original_effective": "02/15/02",
+  "reviewed": "07/24/25",
+  "revised": "01/01/26",
+  "file": "bcbsfl-02-33000-31-treatments-for-varicose-veins-venous-insufficiency.pdf",
+  "sha256": "9c5e1989cf9cfdf45ae9826e896a342a520506ca6a59f7daaa89c04c8fd1ca0f",
+  "pages": 14,
+  "bytes": 677728,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original 02/15/02; Reviewed 07/24/25; Revised 01/01/26"
+}

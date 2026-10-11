@@ -1,0 +1,19 @@
+{
+  "payer": "Blue Cross & Blue Shield of Rhode Island",
+  "payer_key": "bcbsri",
+  "treatment": "varicose-veins",
+  "title": "Varicose Vein Treatment",
+  "policy_number": "",
+  "effective": "2021",
+  "url": "https://www.bcbsri.com/providers/sites/providers/files/policies/2021/07/2021%20Varicose%20Vein%20Treatment.pdf",
+  "final_url": "https://www.bcbsri.com/providers/sites/providers/files/policies/2021/07/2021%20Varicose%20Vein%20Treatment.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "bcbsri-varicose-vein-treatment.pdf",
+  "sha256": "8535ae486faaecac9dc7b505a6cd175e7a4c70c56028a06f839a2580d88e69ab",
+  "pages": 10,
+  "bytes": 234226,
+  "retrieved": "2026-10-09",
+  "printed_date": "Effective 05|01|2019; Policy last updated 07|07|2021 (library metadata says 2021 posting)"
+}

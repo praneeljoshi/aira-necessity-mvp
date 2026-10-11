@@ -1,0 +1,380 @@
+{
+ "file": "evolent-knee-arthroscopy.pdf",
+ "treatment": "knee-arthroscopy",
+ "payer": "evolent",
+ "doc_kind": "clinical guideline (vendor)",
+ "lines_of_business": [
+  "CHIP",
+  "Commercial",
+  "Exchange/Marketplace",
+  "Medicaid",
+  "Medicare Advantage: unchecked"
+ ],
+ "effective_or_revised": "Original Nov 2015; Last Revised Nov 2024 (redline shows 'December 2023November 2024'); Implementation July 2025 (redline shows 'July 20242025'). Library URL is Louisiana Healthcare Connections Medicaid.",
+ "sections_in_order": [
+  "Statement (General Information, Purpose, Scope, Special Note)",
+  "General Requirements",
+  "Indications (Diagnostic; Chondroplasty; Meniscectomy/Meniscal Repair with Absolute/Relative Contraindications; Meniscal Transplant; Ligament Reconstruction; Articular Cartilage Restoration; Synovectomy; Loose Body Removal; Lateral Release/Patellar Realignment; MUA; Lysis of Adhesions)",
+  "Legislative Language (Washington)",
+  "Coding and Standards",
+  "Background",
+  "Grading Appendix (K-L, Outerbridge, Marx, Tegner)",
+  "Policy History",
+  "Legal and Compliance",
+  "References"
+ ],
+ "criteria_location": "General Requirements p.3-4 apply across procedures ('Unless otherwise stated in the subsections below'), then per-procedure Indications pp.4-18. Washington State HTCC determinations pp.18-20 add state-specific limits. Background p.20-21 contains an operative rule (only ONE of MRI or X-ray is required). Grading and activity tables pp.21-23. IMPORTANT: the PDF is 84 pages and holds three bound copies of the guideline (29-page redline with struck/inserted text merged, a 27-page copy lacking the 2024 WA chondral section, and a 28-page copy). The 28-page copy (last) is the clean final; differences exist (e.g., lysis of adhesions in the redline still lists 'Individual has native knee' and 'Manipulation under anesthesia is also performed', which the final removes).",
+ "procedures_covered": [
+  "Diagnostic knee arthroscopy",
+  "Chondroplasty (non-PF and PF)",
+  "Meniscectomy/repair",
+  "Meniscal transplant",
+  "ACL, PCL, collateral ligament",
+  "Articular cartilage reparative and restorative (OAT, OCA, ACI, MACI, microfracture)",
+  "Synovectomy",
+  "Loose body removal",
+  "Lateral patellar compression syndrome release",
+  "Patellar malalignment/instability surgery",
+  "MUA",
+  "Lysis of adhesions"
+ ],
+ "logic": {
+  "top_level": "pathways (general requirements all-of, then procedure blocks; many blocks are 'any of Section One..Four')",
+  "max_nesting_depth": 4,
+  "k_of_n": [
+   {
+    "k": 2,
+    "n": 9,
+    "quote": "Unless otherwise stated in the subsections below, non-operative management must include at least TWO or more of the following, unless otherwise specified"
+   },
+   {
+    "k": 2,
+    "n": 4,
+    "quote": "When at least two of the following physical examination findings are present or there is at least one of the following physical examination findings and there is a history of mechanical symptoms"
+   }
+  ],
+  "exclusions_or_contraindications": "Dedicated Absolute and Relative Contraindication subsections for meniscectomy and meniscal transplant, plus inline 'No K-L grade 3-4' and a universal 'No intra-articular cortisone injections within 4 weeks of surgery' repeated in almost every block. Relative contraindication carries an unless-clause with two sub-conditions.",
+  "initial_vs_repeat": "None for repeat procedures. Only: prior meniscectomy in same compartment bars cartilage restoration unless meniscal transplant; revision not addressed.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Section Four ... o Weight-bearing X-rays ... demonstrate no moderate or severe osteoarthritic changes ... OR o MRI results confirm a frank meniscal tear ... o Failure of at least 6 weeks of non-operative treatment",
+    "why_ambiguous": "An OR between two imaging bullets sits in the middle of an all-of list; whether the failed-therapy and cortisone bullets bind to both sides of the OR depends on indentation."
+   },
+   {
+    "quote": "Two or more or persistent effusion(s)",
+    "why_ambiguous": "Garbled: two or more WHAT (effusions? episodes?) or persistent effusion; the noun is missing."
+   },
+   {
+    "quote": "Meniscectomy or repair is considered NOT MEDICALLY NECESSARY in the presence of Kellgren-Lawrence Grade 3 osteoarthritis, Unless: acute onset of locking ...; AND MRI evidence of a bucket-handle or displaced meniscal fragment",
+    "why_ambiguous": "Absolute contraindication says K-L 4 'never'; Section Four says no K-L 3-4; the relative K-L 3 rule has an exception that Section Four does not."
+   },
+   {
+    "quote": "Section One ... Acute ACL tear confirmed by MRI in high demand occupation or competitive athlete (as quantified by Marx activity score ... (any score > 4) and Tegner ... (score > 2)",
+    "why_ambiguous": "'and/or' between athletics and occupation not stated cleanly; Marx scale in the appendix is 0-16, Tegner 0-10, and a Tegner > 2 includes light-labor jobs."
+   },
+   {
+    "quote": "Individual is > 12 weeks post-surgery fracture or resolved infection",
+    "why_ambiguous": "'post-surgery fracture' is not a coherent phrase (post-surgery, fracture, or resolved infection?)."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "functional impairment",
+   "quote": "Knee pain with documented loss of function: ... inadequate range of motion (> 10 degrees flexion contracture or < 110 degrees flexion or both)",
+   "where": "General Requirements p.3"
+  },
+  {
+   "kind": "BMI/comorbidity",
+   "quote": "Individual is medically stable and optimized for surgery, and any treatable comorbidities are adequately medically managed such as diabetes, nicotine addiction, or an excessively high BMI",
+   "where": "General Requirements"
+  },
+  {
+   "kind": "BMI/comorbidity",
+   "quote": "BMI < 35 (optimal outcomes if patient BMI < 30)",
+   "where": "Restorative cartilage procedures"
+  },
+  {
+   "kind": "other",
+   "quote": "Individual does not have active, untreated drug dependency (including but not limited to narcotics, opioids, or muscle relaxants) unless engaged in a treatment program",
+   "where": "General Requirements"
+  },
+  {
+   "kind": "other",
+   "quote": "No intra-articular cortisone injections within 4 weeks of surgery",
+   "where": "General Requirements; repeated in each block"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "Failure of at least 12 weeks of non-operative treatment, including at least TWO of the following",
+   "where": "Diagnostic; chondroplasty; PF; cartilage; plica"
+  },
+  {
+   "kind": "duration",
+   "quote": "Failure of at least 6 weeks of non-operative treatment",
+   "where": "Meniscectomy S4; meniscal transplant; synovectomy S1/S3"
+  },
+  {
+   "kind": "duration",
+   "quote": "Failure of at least 6 months of non-operative treatment, including quadriceps strengthening ...",
+   "where": "Lateral patellar compression syndrome"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "Indeterminate radiographs AND MRI findings ... should not demonstrate ... Kellgren-Lawrence Grade 3-4 ..., meniscus tears, ligament tears, loose bodies, stress fractures ... or patellofemoral instability",
+   "where": "Diagnostic"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "MRI confirms an isolated full-thickness chondral or osteochondral lesion ... < 2.0 cm2",
+   "where": "Marrow stimulation; OAT"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "knee has normal alignment as defined as +/- 3 degrees from neutral on full-length mechanical axis long-leg x-ray",
+   "where": "Restorative cartilage"
+  },
+  {
+   "kind": "age",
+   "quote": "Individual is < 40 years of age",
+   "where": "Meniscal transplant"
+  },
+  {
+   "kind": "age",
+   "quote": "Individual is < 50 years of age",
+   "where": "Restorative cartilage"
+  },
+  {
+   "kind": "age",
+   "quote": "patient age <21 years",
+   "where": "Meniscectomy Section Two"
+  },
+  {
+   "kind": "symptom",
+   "quote": "Documentation of mechanical symptoms that cause limitation or loss of function",
+   "where": "Loose body removal"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "instrumented (KT-1000 or KT-2000) laxity of greater than 3 mm side-side difference",
+   "where": "ACL Section Three"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "TT-TG distance of 15 mm or greater, trochlear dysplasia, or patella alta",
+   "where": "Patellar instability"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "previous arthroscopy photographs or video showing subtotal or total meniscectomy",
+   "where": "Meniscal transplant"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "All appropriate supporting documentation, including recent pertinent office visit notes, laboratory data, and results of any special testing must be provided",
+   "where": "General Information"
+  },
+  {
+   "kind": "exclusion",
+   "quote": "Exclude individuals with evidence of meniscal deficiency and/or malalignment if these are not being addressed",
+   "where": "Cartilage, skeletally immature"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "conservative therapy",
+   "value": ">=12 weeks / >=6 weeks / 6 months",
+   "unit": "time",
+   "quote": "Failure of at least 12 weeks of non-operative treatment"
+  },
+  {
+   "quantity": "flexion contracture",
+   "value": "> 10",
+   "unit": "degrees",
+   "quote": "> 10 degrees flexion contracture or < 110 degrees flexion"
+  },
+  {
+   "quantity": "flexion",
+   "value": "< 110",
+   "unit": "degrees",
+   "quote": "< 110 degrees flexion"
+  },
+  {
+   "quantity": "cortisone injection gap",
+   "value": ">= 4",
+   "unit": "weeks",
+   "quote": "No intra-articular cortisone injections within 4 weeks of surgery"
+  },
+  {
+   "quantity": "K-L",
+   "value": "not 3-4 (meniscectomy S1,S4), <=2 (cartilage), no arthritis (meniscal transplant), 1-3 lateral facet (lateral compression)",
+   "unit": "grade",
+   "quote": "No Kellgren-Lawrence Grade 3-4 changes on standing X-rays"
+  },
+  {
+   "quantity": "lesion size",
+   "value": "<2.0 OAT; >2.0 ACI/MACI/OCA",
+   "unit": "cm2",
+   "quote": "< 2.0 cm2 - OAT; > 2.0 cm2 - ACI, MACI, OCA"
+  },
+  {
+   "quantity": "BMI",
+   "value": "< 35",
+   "unit": "kg/m2",
+   "quote": "BMI < 35 (optimal outcomes if patient BMI < 30)"
+  },
+  {
+   "quantity": "age (transplant)",
+   "value": "< 40",
+   "unit": "years",
+   "quote": "Individual is < 40 years of age"
+  },
+  {
+   "quantity": "malalignment (transplant)",
+   "value": "> 5 varus or valgus is absolute contraindication",
+   "unit": "degrees",
+   "quote": "malalignment greater than 5 degrees varus or 5 degrees valgus"
+  },
+  {
+   "quantity": "MUA window",
+   "value": "< 20 weeks after reconstruction; <110 flexion; 6 weeks (12 visits) PT",
+   "unit": "mixed",
+   "quote": "less than 20 weeks after ligamentous or joint reconstruction"
+  },
+  {
+   "quantity": "Marx/Tegner",
+   "value": "Marx > 4; Tegner > 2",
+   "unit": "score",
+   "quote": "any score > 4) and Tegner activity score for athletics and/or occupation ((score > 2)"
+  },
+  {
+   "quantity": "TT-TG",
+   "value": ">= 15",
+   "unit": "mm",
+   "quote": "TT-TG distance of 15 mm or greater"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "PT before MUA/LOA",
+   "length": "6 weeks (12 visits)",
+   "quote": "despite 6 weeks (12 visits) of documented physical therapy"
+  },
+  {
+   "what": "symptom duration cartilage restoration",
+   "length": "6 months",
+   "quote": "symptomatic ... for at least 6 months"
+  },
+  {
+   "what": "pain with loss of function (diagnostic, chondroplasty)",
+   "length": "12 weeks",
+   "quote": "At least 12 weeks of knee pain with documented loss of function"
+  },
+  {
+   "what": "patellar instability",
+   "length": "6 months including 3 months PT",
+   "quote": "Failure of at least 6 months of non-operative treatment, including at least 3 months of physical therapy"
+  },
+  {
+   "what": "DMARD",
+   "length": "6 months",
+   "quote": "Non-responsive to disease modifying drug (DMARD) therapy for at least 6 months"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Codes grouped by family (MUA; ligament; meniscus; 'Surgery - Other') but not mapped to individual indication blocks.",
+  "non_covered_code_lists": "Cartilage 'Exclusions' list names products (BioCartilage, AMIC, BMAC, DeNovo, Chondrofix, Cartiform, Agili-C...) rather than codes. 'Subchondroplasty and in-office diagnostic arthroscopy ... are not managed by Evolent'."
+ },
+ "external_dependencies": [
+  {
+   "what": "Washington HTCC determinations 20080815B and 20240920A (state-specific coverage and limits)",
+   "quote": "Knee Arthroscopy for osteoarthritis of the knee is not a covered benefit."
+  },
+  {
+   "what": "Plan-level applicability: delegated vendor guideline; coverage varies by plan",
+   "quote": "Coverage for services varies for individual members according to the terms of their health care coverage or government program."
+  },
+  {
+   "what": "ACR classification for RA (redline only)",
+   "quote": "according to the American College of Rheumatology Guidelines [see Grading Appendix]"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "normal alignment",
+   "definition_quote": "normal alignment as defined as +/- 3 degrees from neutral on full-length mechanical axis long-leg x-ray"
+  },
+  {
+   "term": "instability",
+   "definition_quote": "as defined subjectively as 'giving way', 'giving out', 'buckling', two-fist sign"
+  },
+  {
+   "term": "locking",
+   "definition_quote": "acute onset of locking (does not include catching, popping, cracking, etc.)"
+  },
+  {
+   "term": "Kellgren-Lawrence",
+   "definition_quote": "Grade 3: Moderate multiple osteophytes, definite narrowing of joint space, some sclerosis and possible deformity of bone contour"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "Diagnostic knee arthroscopy should rarely be required however may be medically necessary",
+   "problem": "Policy discourages the service; no definition of rarely."
+  },
+  {
+   "quote": "adequately medically managed ... an excessively high BMI",
+   "problem": "No BMI cutoff in General Requirements."
+  },
+  {
+   "quote": "shared decision between the patient and physician",
+   "problem": "A process step not necessarily in a chart."
+  },
+  {
+   "quote": "other tear that the requesting physician considers repairable",
+   "problem": "Surgeon opinion."
+  },
+  {
+   "quote": "moderate' or 'advanced/severe' arthritis",
+   "problem": "Depends on radiologist wording."
+  },
+  {
+   "quote": "stable surrounding articular cartilage",
+   "problem": "Undefined."
+  },
+  {
+   "quote": "Asymptomatic patients will be reviewed on a case-by-case basis",
+   "problem": "Discretion branch inside a criterion."
+  },
+  {
+   "quote": "The following clinical scenarios will be considered and decided on a case-by-case basis",
+   "problem": "Whole branch of PCL criteria is non-deterministic."
+  }
+ ],
+ "extraction_hazards": [
+  "PDF contains three copies of the guideline (84 pages): redline with deleted and inserted text concatenated ('December 2023November 2024', 'individualpatient'), plus two clean copies that differ",
+  "Repeated 9-item non-operative therapy list under nearly every indication (about 25 repeats) plus footnote citations like '(1,2,3)' glued to criteria",
+  "Operative rules hidden in Background (only one of MRI or X-ray required) and in General Requirements",
+  "Asterisk notes ('* (see background section)') and TT-TG footnote after the criteria",
+  "Mixed bullet glyphs (\u25cf, \u25cb, \u25a0, \u25a1, o) carry nesting level",
+  "Page breaks split sub-lists mid-bullet",
+  "Marx and Tegner tables flattened to rows of digits",
+  "Washington legislative text sits inside the guideline and reads like criteria"
+ ],
+ "interesting_structures": [
+  "General requirements that apply to every procedure (cortisone injection washout, optimization, infection, drug dependency)",
+  "Numbered 'Section One..Four' any-of pathways inside several blocks",
+  "Absolute vs relative contraindication tiers with an unless-clause",
+  "Quantified activity scores (Marx, Tegner) used as an eligibility threshold",
+  "Case-by-case branches for age <13 and open physis",
+  "State overrides (Washington) embedded in the document",
+  "Product-level exclusion list for cartilage products",
+  "Size-based routing (<2.0 cm2 OAT vs >2.0 cm2 ACI/MACI/OCA)"
+ ],
+ "fit_to_tree": {
+  "score": 4,
+  "why": "Needs shared preconditions applied to every pathway, tiered contraindications with exceptions, quantified scores, case-by-case branches, state overrides and three stacked document versions; the leaves themselves are mostly measurable."
+ }
+}

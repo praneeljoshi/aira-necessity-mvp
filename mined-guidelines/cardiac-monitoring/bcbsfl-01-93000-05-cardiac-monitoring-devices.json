@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "cardiac-monitoring",
+  "title": "Cardiac Monitoring Devices",
+  "category": "Medicine",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76FA22J2O7OQZNBF0Y1",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "01-93000-05",
+  "original_effective": "11/15/01",
+  "reviewed": "12/04/25",
+  "revised": "12/15/25",
+  "file": "bcbsfl-01-93000-05-cardiac-monitoring-devices.pdf",
+  "sha256": "343d0e5aac21594758c4d99ce10613222f9123afd45aa5eef3fa8785605e6d07",
+  "pages": 13,
+  "bytes": 772261,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original 11/15/01; Reviewed 12/04/25; Revised 12/15/25"
+}

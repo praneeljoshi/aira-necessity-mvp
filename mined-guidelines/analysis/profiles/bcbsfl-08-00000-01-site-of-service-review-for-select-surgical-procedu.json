@@ -1,0 +1,231 @@
+{
+ "doc_kind": "medical policy (Florida Blue Medical Coverage Guideline, site-of-service review)",
+ "lines_of_business": [
+  "All lines of business unless noted in Program Exceptions (disclaimer p.1)",
+  "Federal Employee Program (FEP): follow FEP guidelines",
+  "State Account Organization (SAO): follow SAO guidelines",
+  "Medicare Advantage: reviewed NCD/LCD listed in Program Exceptions",
+  "Comparative-effectiveness section 'only applies to member contracts that contain a comparative effectiveness analysis within the definition of Medical Necessity ... issued or renewed on or after January 1, 2014'"
+ ],
+ "effective_or_revised": "Original Effective Date 10/01/25; Reviewed 07/24/25; no Revised line (17 pages)",
+ "sections_in_order": [
+  "Header block (policy number, Original Effective Date, Reviewed, Revised)",
+  "Subject",
+  "Disclaimer (all caps)",
+  "Navigation bar (Position Statement / Billing/Coding / ... hyperlinks)",
+  "DESCRIPTION",
+  "POSITION STATEMENT",
+  "BILLING/CODING INFORMATION",
+  "REIMBURSEMENT INFORMATION",
+  "PROGRAM EXCEPTIONS",
+  "DEFINITIONS",
+  "RELATED GUIDELINES",
+  "OTHER",
+  "REFERENCES",
+  "COMMITTEE APPROVAL",
+  "GUIDELINE UPDATE INFORMATION"
+ ],
+ "criteria_location": "Position Statement pp.3-5: a ~25-item any-of list of patient conditions justifying hospital outpatient setting, a second any-of list of ASC-inaccessibility reasons, and a Comparative Effectiveness Analysis prose algorithm. Definitions section supplies thresholds (HbA1c, BP, arrhythmia). The procedures covered are the ~230-line CPT list in Billing/Coding.",
+ "procedures_covered": [
+  "~200+ CPT codes of select surgical procedures (11770 through 69660) when performed in an outpatient department of a hospital"
+ ],
+ "logic": {
+  "top_level": "any (patient conditions) OR any (ASC access barriers); then a separate cost-comparison step that can still deny",
+  "max_nesting_depth": 2,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "Complement rule: 'do not meet the definition of medical necessity when the criteria above are not met.' Plus comparative effectiveness can override a met criteria set.",
+  "initial_vs_repeat": "None.",
+  "and_or_ambiguity": [
+   {
+    "quote": "meet the definition of medically necessity for a member with any of the following conditions: (not an all-inclusive list)",
+    "why_ambiguous": "Declared non-exhaustive: other conditions might qualify, so a closed any-of tree is wrong."
+   },
+   {
+    "quote": "If a service meets the medical necessity criteria set forth above ... an analysis under this comparative effectiveness section should be applied",
+    "why_ambiguous": "Meeting the criteria is necessary but not sufficient when the contract has comparative effectiveness language."
+   },
+   {
+    "quote": "For Medicare Advantage Members, procedure not on Medicare's ASC list of covered procedures.",
+    "why_ambiguous": "A line-of-business conditional inside an any-of list."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "diagnosis",
+   "quote": "Significant cardiac arrhythmias",
+   "where": "condition list"
+  },
+  {
+   "kind": "time window",
+   "quote": "History of cerebrovascular accident (CVA) < 3 months",
+   "where": "condition list"
+  },
+  {
+   "kind": "BMI/comorbidity",
+   "quote": "Morbid obesity with BMI ≥ 40",
+   "where": "condition list"
+  },
+  {
+   "kind": "age",
+   "quote": "Less than 19 years of age",
+   "where": "condition list"
+  },
+  {
+   "kind": "lab value",
+   "quote": "Advanced liver disease (MELD Score > 8)",
+   "where": "condition list"
+  },
+  {
+   "kind": "site of service",
+   "quote": "No geographically accessible ASC has the necessary equipment for the procedure",
+   "where": "ASC barriers"
+  },
+  {
+   "kind": "provider/facility qualification",
+   "quote": "No geographically accessible ASC is available where the member's physician has privileges",
+   "where": "ASC barriers"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "Prolonged surgery (> 3 hours)",
+   "where": "condition list"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "BMI",
+   "value": ">= 40",
+   "unit": "kg/m2",
+   "quote": "Morbid obesity with BMI ≥ 40"
+  },
+  {
+   "quantity": "MELD score",
+   "value": "> 8",
+   "unit": "points",
+   "quote": "Advanced liver disease (MELD Score > 8)"
+  },
+  {
+   "quantity": "age",
+   "value": "< 19",
+   "unit": "years",
+   "quote": "Less than 19 years of age"
+  },
+  {
+   "quantity": "surgery duration",
+   "value": "> 3",
+   "unit": "hours",
+   "quote": "Prolonged surgery (> 3 hours)"
+  },
+  {
+   "quantity": "HbA1c (poorly controlled DM)",
+   "value": ">= 9",
+   "unit": "%",
+   "quote": "Hemoglobin A1c (HbA1c) ≥ 9%"
+  },
+  {
+   "quantity": "blood pressure (poorly controlled HTN)",
+   "value": ">= 140 / >= 90",
+   "unit": "mmHg",
+   "quote": "systolic blood pressure ≥ 140 mmHg and/or diastolic blood pressure ≥ 90 mmHg"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "recent CVA",
+   "length": "< 3 months",
+   "quote": "History of cerebrovascular accident (CVA) < 3 months"
+  },
+  {
+   "what": "recent TIA",
+   "length": "< 3 months",
+   "quote": "History of transient ischemic attack (TIA) < 3 months"
+  },
+  {
+   "what": "drug eluting stent",
+   "length": "within 1 year (bare metal/plain angioplasty 90 days)",
+   "quote": "drug eluting stent placed within 1-year, bare metal stents or plain angioplasty within 90 days"
+  },
+  {
+   "what": "myocardial infarction",
+   "length": "< 3 months",
+   "quote": "History of myocardial infarction, event < 3 months"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "The code list defines the scope (which procedures get reviewed) rather than supporting a diagnosis; no ICD-10.",
+  "non_covered_code_lists": "None."
+ },
+ "external_dependencies": [
+  {
+   "what": "Member contract wording on comparative effectiveness",
+   "quote": "For member contracts that include comparative effectiveness language, the relative cost ... may be considered"
+  },
+  {
+   "what": "Medicare ASC list",
+   "quote": "Medicare ASC Procedures List: https://www.cms.gov/medicare/payment/prospective-payment-systems/ambulatory-surgical-center-asc/asc-payment-rates-addenda"
+  },
+  {
+   "what": "Medicare Advantage claims manual",
+   "quote": "Claims Processing Manual. Chapter 14 - Ambulatory Surgical Centers"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Poorly controlled diabetes mellitus",
+   "definition_quote": "fasting blood glucose ≥ 180 mg/dL; Hemoglobin A1c (HbA1c) ≥ 9%; or postprandial blood glucose ≥ 250 mg/dL."
+  },
+  {
+   "term": "Poorly controlled hypertension",
+   "definition_quote": "systolic blood pressure ≥ 140 mmHg and/or diastolic blood pressure ≥ 90 mmHg, despite treatment"
+  },
+  {
+   "term": "Significant cardiac arrhythmias",
+   "definition_quote": "Examples of significant cardiac arrhythmias include ventricular fibrillation, ventricular tachycardia, atrial fibrillation"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "Developmental stage or cognitive status necessitating use of outpatient department of a hospital",
+   "problem": "circular."
+  },
+  {
+   "quote": "Advance surgical planning determines overnight recovery and care ... is necessary",
+   "problem": "physician plan, not chart fact."
+  },
+  {
+   "quote": "Expected need for transfusion",
+   "problem": "prediction."
+  },
+  {
+   "quote": "Moderate to severe obstructive sleep apnea (OSA)",
+   "problem": "no AHI cut-off."
+  }
+ ],
+ "extraction_hazards": [
+  "Bullets are either the private-use character U+F0B7 or U+2022 depending on the document (the fusion guideline uses both), never '-' or '*'; nested bullets use other glyphs ('o') or only deeper indentation",
+  "Hyperlink navigation bar after the disclaimer is flattened into a 2-3 row text block that looks like headings",
+  "Form-feed (\\f) page breaks can fall mid-list or immediately before a section heading, so '^HEADING' regexes can miss; no running headers/footers or page numbers to strip",
+  "Position statement embeds a literature 'Analysis' with numbered findings after the rules; rules and evidence summary run together",
+  "CPT list occupies lines ~285-527 with wrapped descriptors; code range spans many specialties",
+  "Original Effective Date (10/01/25) is later than Reviewed (07/24/25) and there is no Revised line",
+  "Comparative Effectiveness paragraph is one 16-line sentence block"
+ ],
+ "interesting_structures": [
+  "Site-of-service rather than service medical necessity: the question is where, not whether",
+  "Two-stage logic: criteria first, then cost comparison that can still deny",
+  "Open-ended 'not an all-inclusive list'",
+  "Line-of-business branch inside criteria (Medicare ASC list)",
+  "Definitions provide numeric thresholds for conditions named in criteria"
+ ],
+ "fit_to_tree": {
+  "score": 4,
+  "scale": "1 = all/any/not expresses it cleanly ... 5 = needs new constructs or human judgment",
+  "why": "Condition list is a clean any-of, but non-exhaustive wording, cost-based comparative step, contract-dependent applicability and ASC availability facts that are not in a clinical chart require constructs beyond all/any/not."
+ },
+ "payer": "bcbsfl",
+ "treatment": "site-of-service-review-for-select-surgic",
+ "file": "bcbsfl-08-00000-01-site-of-service-review-for-select-surgical-procedu.pdf"
+}

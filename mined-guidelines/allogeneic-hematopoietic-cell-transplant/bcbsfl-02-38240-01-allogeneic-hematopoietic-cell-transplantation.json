@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "allogeneic-hematopoietic-cell-transplant",
+  "title": "Allogeneic Hematopoietic Cell Transplantation",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JEWFS1K9TFJ4NIDIX",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-38240-01",
+  "original_effective": "08/15/02",
+  "reviewed": "01/22/26",
+  "revised": "02/15/26",
+  "file": "bcbsfl-02-38240-01-allogeneic-hematopoietic-cell-transplantation.pdf",
+  "sha256": "cf51b7882e6ecfcd1f01372c4fc65b6ae790ad998b53e5a699f3e67d252f6ef1",
+  "pages": 20,
+  "bytes": 846720,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original Effective Date 08/15/02; Reviewed 01/22/26; Revised 02/15/26 (20 pages)"
+}

@@ -1,0 +1,19 @@
+{
+  "payer": "UnitedHealthcare Community Plan",
+  "payer_key": "uhc-community",
+  "treatment": "knee-arthroscopy",
+  "title": "Surgery of the Knee",
+  "policy_number": "",
+  "effective": "2023-12-01",
+  "url": "https://ams-gateway.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan/surgery-knee-cs.pdf",
+  "final_url": "https://ams-gateway.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan/surgery-knee-cs.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "uhc-cs-surgery-of-the-knee.pdf",
+  "sha256": "893cdb265f374508b1a55afc51e84f8e0b992dcccdc84c89bc8ab2452527b975",
+  "pages": 10,
+  "bytes": 406114,
+  "retrieved": "2026-10-09",
+  "printed_date": "Effective June 1, 2026; policy CS068.AD"
+}

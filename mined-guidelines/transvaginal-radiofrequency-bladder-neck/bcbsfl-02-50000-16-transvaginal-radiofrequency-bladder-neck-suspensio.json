@@ -1,0 +1,19 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "transvaginal-radiofrequency-bladder-neck",
+  "title": "Transvaginal Radiofrequency Bladder Neck Suspension and Transurethral Radiofrequency Tissue Remodeling for Urinary Stress Incontinence",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JLIL6IC3HXXGPJJC9",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-50000-16",
+  "original_effective": "05/15/04",
+  "reviewed": "05/28/26",
+  "revised": "06/15/26",
+  "file": "bcbsfl-02-50000-16-transvaginal-radiofrequency-bladder-neck-suspensio.pdf",
+  "sha256": "b705895da4a9df5eaeab840aff8590a01779f4c6cfc6d19690f6f374c32770bf",
+  "pages": 5,
+  "bytes": 121513,
+  "retrieved": "2026-10-09"
+}

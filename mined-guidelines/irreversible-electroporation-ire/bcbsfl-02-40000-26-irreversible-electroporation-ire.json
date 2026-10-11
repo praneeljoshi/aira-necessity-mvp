@@ -1,0 +1,19 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "irreversible-electroporation-ire",
+  "title": "Irreversible Electroporation (IRE)",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JLIL6Z412LJ3LBKIP",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-40000-26",
+  "original_effective": "02/15/16",
+  "reviewed": "05/28/26",
+  "revised": "06/15/26",
+  "file": "bcbsfl-02-40000-26-irreversible-electroporation-ire.pdf",
+  "sha256": "0c15bd3d0c3abf2d00b9b2447cb615411d469a701076f5a6d7197822aeab6728",
+  "pages": 9,
+  "bytes": 181630,
+  "retrieved": "2026-10-09"
+}

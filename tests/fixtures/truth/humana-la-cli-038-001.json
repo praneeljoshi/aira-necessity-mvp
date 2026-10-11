@@ -1,0 +1,307 @@
+{
+  "id": "humana-la-cli-038-001",
+  "payer": "Humana",
+  "payer_aliases": ["Humana", "Humana Healthy Horizons in Louisiana", "Humana Healthy Horizons", "Humana Medicaid", "Humana Louisiana Medicaid", "Humana Healthy Horizons Louisiana"],
+  "title": "Bariatric Surgery",
+  "guideline_number": "LA.CLI.038.001",
+  "effective_date": "2026-05-18",
+  "reviewed_date": "2025-09-02",
+  "source_file": "humana-la-cli-038-bariatric-surgery-la-cli-038.pdf",
+  "plan_types": ["Medicaid", "Louisiana (LA)", "Humana Healthy Horizons in Louisiana"],
+  "excluded_plans": [],
+  "scope": {
+    "cpt": {
+      "43644": "covered", "43645": "covered", "43770": "covered", "43771": "covered", "43772": "covered",
+      "43773": "covered", "43774": "covered", "43775": "covered", "43843": "covered", "43845": "covered",
+      "43846": "covered", "43847": "covered", "43848": "covered", "43886": "covered", "43887": "covered",
+      "43888": "covered"
+    },
+    "icd10": []
+  },
+  "criteria": [
+    {"id": "preop_eval_within_12_months", "text": "The individual has received a preoperative evaluation within the previous 12 months of the scheduled surgery", "question": "Was a preoperative evaluation for bariatric surgery completed within the 12 months before the scheduled surgery date?", "threshold": {"kind": "duration_months", "op": "lte", "value": 12, "unit": "months"}},
+    {"id": "team_physician", "text": "A physician", "question": "Did the multidisciplinary preoperative evaluation include a physician?"},
+    {"id": "team_nutritionist_or_dietician", "text": "Nutritionist OR dietician", "question": "Did the multidisciplinary preoperative evaluation include a nutritionist or dietitian?"},
+    {"id": "team_mental_health_professional", "text": "A licensed qualified mental health professional", "question": "Did the multidisciplinary preoperative evaluation include a licensed qualified mental health professional (e.g., a psychological evaluation)?"},
+    {"id": "team_pediatric_expertise", "text": "For individuals under the age of 18, the multidisciplinary team must have pediatric expertise", "question": "For a patient under 18, does the multidisciplinary team have pediatric expertise?", "answerable": false},
+    {"id": "prior_weight_loss_unsuccessful", "text": "A determination that previous attempt(s) at weight loss have been unsuccessful", "question": "Does the preoperative evaluation determine that previous attempts at weight loss were unsuccessful?"},
+    {"id": "future_attempts_unlikely", "text": "future attempts, other than bariatric surgery, are not likely to be successful", "question": "Does the preoperative evaluation determine that future weight-loss attempts other than bariatric surgery are not likely to succeed?"},
+    {"id": "capable_of_adherence", "text": "A determination that the individual is capable of adhering to the post-surgery diet and follow-up care", "question": "Does the preoperative evaluation determine that the patient is capable of adhering to the post-surgery diet and follow-up care?"},
+    {"id": "capable_of_becoming_pregnant", "text": "individuals capable of becoming pregnant", "question": "Is the patient capable of becoming pregnant?"},
+    {"id": "pregnancy_counseling", "text": "counseling to avoid pregnancy preoperatively and for at least 12 months postoperatively and until weight has stabilized", "question": "Does the preoperative evaluation document counseling to avoid pregnancy before surgery and for at least 12 months after surgery and until weight has stabilized?"},
+    {"id": "age_18_or_older", "text": "Individuals age 18 and older", "question": "Is the patient 18 years of age or older?", "threshold": {"kind": "number", "op": "gte", "value": 18, "unit": "years"}},
+    {"id": "adult_bmi_40", "text": "BMI equal to or greater than 40 kg/m2", "question": "Is the documented BMI 40 kg/m2 or greater?", "threshold": {"kind": "number", "op": "gte", "value": 40, "unit": "kg/m2"}},
+    {"id": "adult_100_lbs_overweight", "text": "more than 100 lbs overweight", "question": "Is the patient documented as more than 100 lbs over ideal body weight?", "threshold": {"kind": "number", "op": "gt", "value": 100, "unit": "lbs"}},
+    {"id": "adult_bmi_35", "text": "BMI of greater or equal to 35 kg/m2", "question": "Is the documented BMI 35 kg/m2 or greater?", "threshold": {"kind": "number", "op": "gte", "value": 35, "unit": "kg/m2"}},
+    {"id": "adult_cardiovascular_disease", "text": "Cardiovascular disease (eg, stroke, myocardial infarction, poorly controlled hypertension (systemic blood pressure greater than 140 mm Hg or diastolic blood pressure 90 mm Hg or greater, despite pharmacotherapy)", "question": "Does the patient have cardiovascular disease related to obesity (e.g., stroke, myocardial infarction, or hypertension poorly controlled despite medication: systolic over 140 mm Hg or diastolic 90 mm Hg or greater)?"},
+    {"id": "adult_cardiomyopathy", "text": "History of cardiomyopathy", "question": "Does the patient have a history of cardiomyopathy?"},
+    {"id": "adult_cad_with_intervention", "text": "History of coronary artery disease with a surgical intervention such as coronary artery bypass or percutaneous transluminal coronary angioplasty", "question": "Does the patient have a history of coronary artery disease treated with a surgical intervention (e.g., bypass or angioplasty)?"},
+    {"id": "adult_osa_ahi_30", "text": "Obstructive sleep apnea confirmed on polysomnography with an AHI or RDI greater than or equal to 30", "question": "Is obstructive sleep apnea confirmed on polysomnography with an AHI or RDI of 30 or greater?", "threshold": {"kind": "number", "op": "gte", "value": 30, "unit": "AHI or RDI (events/hour)"}},
+    {"id": "type_2_diabetes", "text": "Type 2 diabetes mellitus", "question": "Does the patient have type 2 diabetes mellitus?"},
+    {"id": "other_obesity_comorbidity", "text": "Any other comorbidity related to obesity that is determined by the preoperative evaluation to be improved by weight loss", "question": "Does the preoperative evaluation identify another obesity-related comorbidity that it determines would improve with weight loss?"},
+    {"id": "adult_bmi_30_to_34_9", "text": "BMI of 30 to 34.9 kg/m2", "question": "Is the documented BMI between 30 and 34.9 kg/m2?", "threshold": {"kind": "number", "op": "gte", "value": 30, "unit": "kg/m2"}},
+    {"id": "t2dm_inadequately_controlled", "text": "hyperglycemia inadequately controlled despite optimal medical control by oral or injectable medications", "question": "Is the patient's type 2 diabetes hyperglycemia inadequately controlled despite optimal oral or injectable medication?"},
+    {"id": "age_13_through_17", "text": "Individuals age 13 through 17 years old", "question": "Is the patient 13 through 17 years of age?", "threshold": {"kind": "number", "op": "gte", "value": 13, "unit": "years"}},
+    {"id": "peds_bmi_40_or_140_pct", "text": "BMI equal to or greater than 40 kg/m2 or 140% of the 95th percentile for age and sex, whichever is lower", "question": "Is the BMI 40 kg/m2 or greater, or at least 140% of the 95th percentile for age and sex, whichever is lower?", "threshold": {"kind": "number", "op": "gte", "value": 40, "unit": "kg/m2"}},
+    {"id": "peds_bmi_35_or_120_pct", "text": "BMI of 35 to 39.9 kg/m2 or 120% of the 95th percentile for age and sex, whichever is lower", "question": "Is the BMI 35 to 39.9 kg/m2, or at least 120% of the 95th percentile for age and sex, whichever is lower?", "threshold": {"kind": "number", "op": "gte", "value": 35, "unit": "kg/m2"}},
+    {"id": "peds_blounts_disease", "text": "Blount’s disease", "question": "Does the patient have Blount's disease?"},
+    {"id": "peds_gerd", "text": "Gastroesophageal reflux disease", "question": "Does the patient have gastroesophageal reflux disease?"},
+    {"id": "peds_hypertension", "text": "Hypertension", "question": "Does the patient have hypertension?"},
+    {"id": "peds_idiopathic_intracranial_hypertension", "text": "Idiopathic intracranial hypertension", "question": "Does the patient have idiopathic intracranial hypertension?"},
+    {"id": "peds_nash", "text": "Nonalcoholic steatohepatitis", "question": "Does the patient have nonalcoholic steatohepatitis?"},
+    {"id": "peds_osa_ahi_5", "text": "Obstructive sleep apnea confirmed on polysomnography with an AHI greater than 5", "question": "Is obstructive sleep apnea confirmed on polysomnography with an AHI greater than 5?", "threshold": {"kind": "number", "op": "gt", "value": 5, "unit": "AHI (events/hour)"}},
+    {"id": "peds_scfe", "text": "Slipped capital femoral epiphysis", "question": "Does the patient have slipped capital femoral epiphysis?"},
+    {"id": "revision_major_complication", "text": "Major surgical complication resulting from the initial bariatric procedure or its mechanical failure", "question": "Has the patient had a major surgical complication resulting from the initial bariatric procedure or its mechanical failure?"},
+    {"id": "revision_anastomotic_leak_or_stricture", "text": "Anastomotic leak or stricture", "question": "Does the patient have an anastomotic leak or stricture from the initial bariatric procedure?"},
+    {"id": "revision_band_erosion", "text": "Band erosion", "question": "Does the patient have erosion of the gastric band?"},
+    {"id": "revision_band_migration", "text": "Band migration (slippage) with documentation that it was unable to be corrected with manipulation or an adjustment", "question": "Does the patient have band migration (slippage) that could not be corrected with manipulation or an adjustment?"},
+    {"id": "revision_band_removal_gi_symptoms", "text": "Band removal for gastrointestinal symptoms (eg, persistent nausea and/or vomiting, GERD) with or without imaging evidence of obstruction", "question": "Is the band being removed for gastrointestinal symptoms (e.g., persistent nausea, vomiting, GERD), with or without imaging evidence of obstruction?"},
+    {"id": "revision_bowel_obstruction_or_perforation", "text": "Bowel obstruction or perforation", "question": "Does the patient have a bowel obstruction or perforation from the initial bariatric procedure?"},
+    {"id": "revision_candy_cane_syndrome", "text": "Candy cane syndrome (Roux syndrome) when an individual is symptomatic (eg, abdominal pain, emesis, nausea) and diagnosis confirmed by endoscopy or upper gastrointestinal contrast studies", "question": "Does the patient have symptomatic candy cane (Roux) syndrome confirmed by endoscopy or upper GI contrast study?"},
+    {"id": "revision_fistula", "text": "Fistula", "question": "Does the patient have a fistula from the initial bariatric procedure?"},
+    {"id": "revision_gi_bleeding", "text": "GI bleeding", "question": "Does the patient have gastrointestinal bleeding from the initial bariatric procedure?"},
+    {"id": "revision_refractory_gerd", "text": "Postoperative GERD refractory to maximum medical treatment including anti-reflux medications (over-the-counter and/or prescription)", "question": "Does the patient have postoperative GERD refractory to maximum medical treatment including anti-reflux medications?"},
+    {"id": "revision_staple_line_dehiscence", "text": "Staple line dehiscence", "question": "Does the patient have staple line dehiscence?"},
+    {"id": "revision_stomal_stenosis", "text": "Stomal stenosis", "question": "Does the patient have stomal stenosis?"},
+    {"id": "pann_bariatric_18_months_prior", "text": "The individual had bariatric surgery at least 18 months prior", "question": "Was the bariatric surgery performed at least 18 months before the planned panniculectomy?", "threshold": {"kind": "duration_months", "op": "gte", "value": 18, "unit": "months"}},
+    {"id": "pann_weight_stable_6_months", "text": "the individual’s weight has been stable for at least 6 months", "question": "Has the patient's weight been stable for at least 6 months, per dated weights?", "threshold": {"kind": "duration_months", "op": "gte", "value": 6, "unit": "months"}},
+    {"id": "pann_pannus_below_pubic_symphysis", "text": "The pannus is at or below the level of the pubic symphysis", "question": "Does the exam document that the pannus hangs at or below the level of the pubic symphysis?"},
+    {"id": "pann_skin_condition_3_months", "text": "Cellulitis, other infections, skin ulcerations, or persistent dermatitis that failed to respond to at least 3 months of nonsurgical treatment", "question": "Has the pannus caused cellulitis, other infection, skin ulceration, or persistent dermatitis that failed at least 3 months of nonsurgical treatment, per dated notes?", "threshold": {"kind": "duration_months", "op": "gte", "value": 3, "unit": "months"}},
+    {"id": "pann_functional_impairment", "text": "Functional impairment such as interference with ambulation", "question": "Does the pannus cause functional impairment, such as interference with walking?"}
+  ],
+  "scenarios": [
+    {
+      "id": "initial_adult",
+      "name": "Bariatric surgery, adults 18 years of age and older",
+      "applies_to_cpt": ["43644", "43645", "43770", "43775", "43843", "43845", "43846", "43847"],
+      "requires": {"type": "all", "label": "ALL the following criteria are met", "children": [
+        {"type": "all", "label": "Preoperative evaluation within the previous 12 months including ALL of the following", "children": [
+          {"type": "leaf", "criterion": "preop_eval_within_12_months"},
+          {"type": "all", "label": "Conducted by a multidisciplinary team including, at a minimum", "children": [
+            {"type": "leaf", "criterion": "team_physician"},
+            {"type": "leaf", "criterion": "team_nutritionist_or_dietician"},
+            {"type": "leaf", "criterion": "team_mental_health_professional"}
+          ]},
+          {"type": "all", "label": "The preoperative evaluation must document all of the following", "children": [
+            {"type": "leaf", "criterion": "prior_weight_loss_unsuccessful"},
+            {"type": "leaf", "criterion": "future_attempts_unlikely"},
+            {"type": "leaf", "criterion": "capable_of_adherence"},
+            {"type": "any", "label": "For individuals capable of becoming pregnant, counseling to avoid pregnancy", "children": [
+              {"type": "not", "label": "Not capable of becoming pregnant", "child": {"type": "leaf", "criterion": "capable_of_becoming_pregnant"}},
+              {"type": "leaf", "criterion": "pregnancy_counseling"}
+            ]}
+          ]}
+        ]},
+        {"type": "leaf", "criterion": "age_18_or_older"},
+        {"type": "any", "label": "Individuals age 18 and older must meet the following criteria", "children": [
+          {"type": "any", "label": "BMI equal to or greater than 40 kg/m2, or more than 100 lbs overweight", "children": [
+            {"type": "leaf", "criterion": "adult_bmi_40"},
+            {"type": "leaf", "criterion": "adult_100_lbs_overweight"}
+          ]},
+          {"type": "all", "label": "BMI of greater or equal to 35 kg/m2 with one or more of the following comorbidities related to obesity", "children": [
+            {"type": "leaf", "criterion": "adult_bmi_35"},
+            {"type": "any", "label": "One or more of the following comorbidities related to obesity", "children": [
+              {"type": "leaf", "criterion": "adult_cardiovascular_disease"},
+              {"type": "leaf", "criterion": "adult_cardiomyopathy"},
+              {"type": "leaf", "criterion": "adult_cad_with_intervention"},
+              {"type": "leaf", "criterion": "adult_osa_ahi_30"},
+              {"type": "leaf", "criterion": "type_2_diabetes"},
+              {"type": "leaf", "criterion": "other_obesity_comorbidity"}
+            ]}
+          ]},
+          {"type": "all", "label": "BMI of 30 to 34.9 kg/m2 with type 2 diabetes mellitus if hyperglycemia inadequately controlled", "children": [
+            {"type": "leaf", "criterion": "adult_bmi_30_to_34_9"},
+            {"type": "leaf", "criterion": "type_2_diabetes"},
+            {"type": "leaf", "criterion": "t2dm_inadequately_controlled"}
+          ]}
+        ]}
+      ]}
+    },
+    {
+      "id": "initial_pediatric",
+      "name": "Bariatric surgery, pediatric individuals 13 through 17 years of age",
+      "applies_to_cpt": ["43644", "43645", "43770", "43775", "43843", "43845", "43846", "43847"],
+      "requires": {"type": "all", "label": "ALL the following criteria are met", "children": [
+        {"type": "all", "label": "Preoperative evaluation within the previous 12 months including ALL of the following", "children": [
+          {"type": "leaf", "criterion": "preop_eval_within_12_months"},
+          {"type": "all", "label": "Conducted by a multidisciplinary team including, at a minimum", "children": [
+            {"type": "leaf", "criterion": "team_physician"},
+            {"type": "leaf", "criterion": "team_nutritionist_or_dietician"},
+            {"type": "leaf", "criterion": "team_mental_health_professional"},
+            {"type": "leaf", "criterion": "team_pediatric_expertise"}
+          ]},
+          {"type": "all", "label": "The preoperative evaluation must document all of the following", "children": [
+            {"type": "leaf", "criterion": "prior_weight_loss_unsuccessful"},
+            {"type": "leaf", "criterion": "future_attempts_unlikely"},
+            {"type": "leaf", "criterion": "capable_of_adherence"},
+            {"type": "any", "label": "For individuals capable of becoming pregnant, counseling to avoid pregnancy", "children": [
+              {"type": "not", "label": "Not capable of becoming pregnant", "child": {"type": "leaf", "criterion": "capable_of_becoming_pregnant"}},
+              {"type": "leaf", "criterion": "pregnancy_counseling"}
+            ]}
+          ]}
+        ]},
+        {"type": "leaf", "criterion": "age_13_through_17"},
+        {"type": "any", "label": "Individuals age 13 through 17 years old must have one of the following", "children": [
+          {"type": "leaf", "criterion": "peds_bmi_40_or_140_pct"},
+          {"type": "all", "label": "BMI of 35 to 39.9 kg/m2 or 120% of the 95th percentile with one or more of the following comorbidities related to obesity", "children": [
+            {"type": "leaf", "criterion": "peds_bmi_35_or_120_pct"},
+            {"type": "any", "label": "One or more of the following comorbidities related to obesity", "children": [
+              {"type": "leaf", "criterion": "peds_blounts_disease"},
+              {"type": "leaf", "criterion": "peds_gerd"},
+              {"type": "leaf", "criterion": "peds_hypertension"},
+              {"type": "leaf", "criterion": "peds_idiopathic_intracranial_hypertension"},
+              {"type": "leaf", "criterion": "peds_nash"},
+              {"type": "leaf", "criterion": "peds_osa_ahi_5"},
+              {"type": "leaf", "criterion": "peds_scfe"},
+              {"type": "leaf", "criterion": "type_2_diabetes"},
+              {"type": "leaf", "criterion": "other_obesity_comorbidity"}
+            ]}
+          ]}
+        ]}
+      ]},
+      "notes": ["Requests for bariatric surgery for members under the age of 13 will be reviewed on a case-by-case basis."]
+    },
+    {
+      "id": "revision_conversion",
+      "name": "Bariatric surgery revision/conversion",
+      "applies_to_cpt": ["43771", "43772", "43773", "43774", "43848", "43886", "43887", "43888"],
+      "requires": {"type": "any", "label": "Revision/conversion when the following criteria are met", "children": [
+        {"type": "any", "label": "Initial bariatric surgery requirements are met", "children": [
+          {"type": "all", "label": "Initial requirements, adults 18 years of age and older", "children": [
+            {"type": "all", "label": "Preoperative evaluation within the previous 12 months including ALL of the following", "children": [
+              {"type": "leaf", "criterion": "preop_eval_within_12_months"},
+              {"type": "all", "label": "Conducted by a multidisciplinary team including, at a minimum", "children": [
+                {"type": "leaf", "criterion": "team_physician"},
+                {"type": "leaf", "criterion": "team_nutritionist_or_dietician"},
+                {"type": "leaf", "criterion": "team_mental_health_professional"}
+              ]},
+              {"type": "all", "label": "The preoperative evaluation must document all of the following", "children": [
+                {"type": "leaf", "criterion": "prior_weight_loss_unsuccessful"},
+                {"type": "leaf", "criterion": "future_attempts_unlikely"},
+                {"type": "leaf", "criterion": "capable_of_adherence"},
+                {"type": "any", "label": "For individuals capable of becoming pregnant, counseling to avoid pregnancy", "children": [
+                  {"type": "not", "label": "Not capable of becoming pregnant", "child": {"type": "leaf", "criterion": "capable_of_becoming_pregnant"}},
+                  {"type": "leaf", "criterion": "pregnancy_counseling"}
+                ]}
+              ]}
+            ]},
+            {"type": "leaf", "criterion": "age_18_or_older"},
+            {"type": "any", "label": "Individuals age 18 and older must meet the following criteria", "children": [
+              {"type": "any", "label": "BMI equal to or greater than 40 kg/m2, or more than 100 lbs overweight", "children": [
+                {"type": "leaf", "criterion": "adult_bmi_40"},
+                {"type": "leaf", "criterion": "adult_100_lbs_overweight"}
+              ]},
+              {"type": "all", "label": "BMI of greater or equal to 35 kg/m2 with one or more of the following comorbidities related to obesity", "children": [
+                {"type": "leaf", "criterion": "adult_bmi_35"},
+                {"type": "any", "label": "One or more of the following comorbidities related to obesity", "children": [
+                  {"type": "leaf", "criterion": "adult_cardiovascular_disease"},
+                  {"type": "leaf", "criterion": "adult_cardiomyopathy"},
+                  {"type": "leaf", "criterion": "adult_cad_with_intervention"},
+                  {"type": "leaf", "criterion": "adult_osa_ahi_30"},
+                  {"type": "leaf", "criterion": "type_2_diabetes"},
+                  {"type": "leaf", "criterion": "other_obesity_comorbidity"}
+                ]}
+              ]},
+              {"type": "all", "label": "BMI of 30 to 34.9 kg/m2 with type 2 diabetes mellitus if hyperglycemia inadequately controlled", "children": [
+                {"type": "leaf", "criterion": "adult_bmi_30_to_34_9"},
+                {"type": "leaf", "criterion": "type_2_diabetes"},
+                {"type": "leaf", "criterion": "t2dm_inadequately_controlled"}
+              ]}
+            ]}
+          ]},
+          {"type": "all", "label": "Initial requirements, pediatric individuals 13 through 17 years of age", "children": [
+            {"type": "all", "label": "Preoperative evaluation within the previous 12 months including ALL of the following", "children": [
+              {"type": "leaf", "criterion": "preop_eval_within_12_months"},
+              {"type": "all", "label": "Conducted by a multidisciplinary team including, at a minimum", "children": [
+                {"type": "leaf", "criterion": "team_physician"},
+                {"type": "leaf", "criterion": "team_nutritionist_or_dietician"},
+                {"type": "leaf", "criterion": "team_mental_health_professional"},
+                {"type": "leaf", "criterion": "team_pediatric_expertise"}
+              ]},
+              {"type": "all", "label": "The preoperative evaluation must document all of the following", "children": [
+                {"type": "leaf", "criterion": "prior_weight_loss_unsuccessful"},
+                {"type": "leaf", "criterion": "future_attempts_unlikely"},
+                {"type": "leaf", "criterion": "capable_of_adherence"},
+                {"type": "any", "label": "For individuals capable of becoming pregnant, counseling to avoid pregnancy", "children": [
+                  {"type": "not", "label": "Not capable of becoming pregnant", "child": {"type": "leaf", "criterion": "capable_of_becoming_pregnant"}},
+                  {"type": "leaf", "criterion": "pregnancy_counseling"}
+                ]}
+              ]}
+            ]},
+            {"type": "leaf", "criterion": "age_13_through_17"},
+            {"type": "any", "label": "Individuals age 13 through 17 years old must have one of the following", "children": [
+              {"type": "leaf", "criterion": "peds_bmi_40_or_140_pct"},
+              {"type": "all", "label": "BMI of 35 to 39.9 kg/m2 or 120% of the 95th percentile with one or more of the following comorbidities related to obesity", "children": [
+                {"type": "leaf", "criterion": "peds_bmi_35_or_120_pct"},
+                {"type": "any", "label": "One or more of the following comorbidities related to obesity", "children": [
+                  {"type": "leaf", "criterion": "peds_blounts_disease"},
+                  {"type": "leaf", "criterion": "peds_gerd"},
+                  {"type": "leaf", "criterion": "peds_hypertension"},
+                  {"type": "leaf", "criterion": "peds_idiopathic_intracranial_hypertension"},
+                  {"type": "leaf", "criterion": "peds_nash"},
+                  {"type": "leaf", "criterion": "peds_osa_ahi_5"},
+                  {"type": "leaf", "criterion": "peds_scfe"},
+                  {"type": "leaf", "criterion": "type_2_diabetes"},
+                  {"type": "leaf", "criterion": "other_obesity_comorbidity"}
+                ]}
+              ]}
+            ]}
+          ]}
+        ]},
+        {"type": "any", "label": "Major surgical complication resulting from the initial bariatric procedure or its mechanical failure (examples include, but are not limited to)", "children": [
+          {"type": "leaf", "criterion": "revision_major_complication"},
+          {"type": "leaf", "criterion": "revision_anastomotic_leak_or_stricture"},
+          {"type": "leaf", "criterion": "revision_band_erosion"},
+          {"type": "leaf", "criterion": "revision_band_migration"},
+          {"type": "leaf", "criterion": "revision_band_removal_gi_symptoms"},
+          {"type": "leaf", "criterion": "revision_bowel_obstruction_or_perforation"},
+          {"type": "leaf", "criterion": "revision_candy_cane_syndrome"},
+          {"type": "leaf", "criterion": "revision_fistula"},
+          {"type": "leaf", "criterion": "revision_gi_bleeding"},
+          {"type": "leaf", "criterion": "revision_refractory_gerd"},
+          {"type": "leaf", "criterion": "revision_staple_line_dehiscence"},
+          {"type": "leaf", "criterion": "revision_stomal_stenosis"}
+        ]}
+      ]},
+      "notes": ["A conversion billed with a primary procedure code (e.g., band removal 43774 with conversion to Roux-en-Y 43644) is also a revision/conversion under this pathway; the code list names only the codes whose descriptors are revision, removal or replacement."]
+    },
+    {
+      "id": "panniculectomy_after_bariatric",
+      "name": "Panniculectomy after bariatric surgery",
+      "applies_to_cpt": [],
+      "requires": {"type": "all", "label": "Panniculectomy subsequent to bariatric surgery when ALL the following criteria are met", "children": [
+        {"type": "leaf", "criterion": "pann_bariatric_18_months_prior"},
+        {"type": "leaf", "criterion": "pann_weight_stable_6_months"},
+        {"type": "leaf", "criterion": "pann_pannus_below_pubic_symphysis"},
+        {"type": "any", "label": "The pannus causes significant consequences, as indicated by one or more of the following", "children": [
+          {"type": "leaf", "criterion": "pann_skin_condition_3_months"},
+          {"type": "leaf", "criterion": "pann_functional_impairment"}
+        ]}
+      ]},
+      "notes": ["The coding table lists no panniculectomy code (15830 is absent), so applies_to_cpt is empty; this pathway is read against a panniculectomy request only."]
+    }
+  ],
+  "exclusions": [
+    {"text": "Humana Healthy Horizons in Louisiana members may NOT be eligible under the Plan for bariatric surgery or panniculectomy subsequent to bariatric surgery for any indication other than those above.", "cpt": []}
+  ],
+  "notes": [
+    "Payer: the issuing organization is Humana (Humana Medicaid Coverage Policy Adoption Forum); the plan named throughout is 'Humana Healthy Horizons in Louisiana'. Header: Line of Business: Medicaid; State: LA; Policy Number LA.CLI.038.001; Original Effective Date 08/08/2022; Effective Date 05/18/2026; Review Date 09/02/2025. No plans are excluded.",
+    "The preoperative-evaluation block ('ALL the following criteria are met' before the age sections) applies to every initial pathway; it is nested inside the adult and pediatric pathways (and inside the revision pathway's 'initial requirements' branch), never as its own pathway.",
+    "Team composition: 'A physician', 'Nutritionist OR dietician' and 'A licensed qualified mental health professional' are kept answerable because the chart holds each evaluator's note and signature (surgeon consult, dietitian note, psychological evaluation). 'Nutritionist OR dietician' is one leaf (one role, either title). 'For individuals under the age of 18, the multidisciplinary team must have pediatric expertise' is placed only in the pediatric pathway and marked not answerable: the team's expertise is a provider credential a chart does not show. A reviewer could keep it answerable (e.g., a note naming a pediatric bariatric program).",
+    "'A determination that previous attempt(s) at weight loss have been unsuccessful and that future attempts, other than bariatric surgery, are not likely to be successful' holds two determinations joined by 'and', so it is two criteria.",
+    "Pregnancy counseling: 'For individuals capable of becoming pregnant, counseling to avoid pregnancy ...' is conditional, modelled as any(not(capable of becoming pregnant), counseling). The counseling leaf carries no threshold: '12 months postoperatively' describes the counseling content, not a duration a chart can show before surgery.",
+    "Adults: 'BMI equal to or greater than 40 kg/m2, or more than 100 lbs overweight' is an any of two leaves; '100 lbs overweight' is read as more than 100 lbs over ideal body weight (gt 100 lbs).",
+    "Adults: 'Cardiovascular disease (eg, stroke, myocardial infarction, poorly controlled hypertension (systemic blood pressure greater than 140 mm Hg or diastolic blood pressure 90 mm Hg or greater, despite pharmacotherapy)' is one leaf with no threshold: the numbers define one example (poorly controlled hypertension) and a chart can meet the leaf by stroke or MI with no blood pressure at all. The question restates the pressures. The document's closing parenthesis is missing in the PDF; the text is copied as printed.",
+    "Adults: 'BMI of 30 to 34.9 kg/m2 with type 2 diabetes mellitus if hyperglycemia inadequately controlled despite optimal medical control by oral or injectable medications' is all(BMI 30-34.9, type 2 diabetes, hyperglycemia inadequately controlled); the Type 2 diabetes leaf is the same criterion used in the comorbidity lists. The BMI threshold holds the lower bound (gte 30) and the question states the 30-34.9 range; a BMI of 35 or more falls under the other branches.",
+    "'Type 2 diabetes mellitus' and 'Any other comorbidity related to obesity that is determined by the preoperative evaluation to be improved by weight loss' appear word-for-word in both the adult and pediatric comorbidity lists; each is one criterion used in both pathways.",
+    "Pediatrics: 'BMI equal to or greater than 40 kg/m2 or 140% of the 95th percentile for age and sex, whichever is lower' and 'BMI of 35 to 39.9 kg/m2 or 120% of the 95th percentile for age and sex, whichever is lower' are single leaves; the threshold holds the absolute BMI bound (gte 40 / gte 35) and the percentile alternative is in the question, since 'whichever is lower' makes the effective cut-off patient-specific. A reviewer could split each into a BMI leaf and a percentile leaf under an any.",
+    "Pediatrics: age '13 through 17' holds two bounds; the threshold is the lower bound (gte 13) and the question states the range. 'Requests for bariatric surgery for members under the age of 13 will be reviewed on a case-by-case basis' grants no criteria and is recorded as a pathway note only.",
+    "Revision/conversion: 'Initial bariatric surgery requirements are met; OR Major surgical complication ...' is an any whose first branch repeats the full adult and pediatric initial trees (preoperative evaluation included) and whose second branch is the complication list. The complication list is introduced by 'Examples of such a complication may include, but are not limited to', so the general sentence 'Major surgical complication resulting from the initial bariatric procedure or its mechanical failure' is itself a leaf beside the eleven examples under one any. The complication branch does not require the preoperative evaluation.",
+    "Revision/conversion codes: the pathway names the eight codes whose descriptors are revision, removal or replacement (43771, 43772, 43773, 43774, 43848, 43886, 43887, 43888). A conversion (e.g., band to Roux-en-Y) is billed with a primary code and would also be judged under this pathway; the document does not map codes to pathways, so this split is a judgment call.",
+    "Panniculectomy: 'The individual had bariatric surgery at least 18 months prior and the individual's weight has been stable for at least 6 months' holds two requirements joined by 'and', so it is two criteria with their own durations. 'The pannus causes significant consequences, as indicated by one or more of the following' is the any label; its two sub-bullets are the leaves. No panniculectomy CPT code is in the coding table, so applies_to_cpt is empty.",
+    "Codes: all sixteen CPT codes in the table are tagged covered; the Comments column is empty and the document says codes are informational only and inclusion does not guarantee coverage. No Category III or HCPCS codes are identified. No ICD-10 codes are listed.",
+    "Exclusion: the single Coverage Limitations sentence has no codes attached because every listed code is covered for the stated indications; the limitation is indication-based.",
+    "Left out: the Description section (procedure descriptions; 'endoscopic approaches are also being investigated' is descriptive, not a coverage statement, so it is not an exclusion); the Disclaimer and Coding Information disclaimers (contract terms); References; Change Summary; the sentence that long-limb RYGB is typically performed for BMI >= 50 (descriptive, not a requirement)."
+  ],
+  "status": "ok"
+}

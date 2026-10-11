@@ -1,0 +1,134 @@
+{
+  "id": "pennsylvania-health-and-wellness-pa-cp-mp-119",
+  "payer": "Pennsylvania Health and Wellness",
+  "payer_aliases": ["Pennsylvania Health and Wellness", "Pennsylvania Health & Wellness", "PHW"],
+  "title": "Balloon Sinus Ostial Dilation for Treatment of Chronic Sinusitis",
+  "guideline_number": "PA.CP.MP.119",
+  "effective_date": "2018-01",
+  "reviewed_date": "2019-10",
+  "source_file": "centene-pa-cp-mp-119-balloon-sinus-ostial-dilation.pdf",
+  "plan_types": [],
+  "excluded_plans": [],
+  "scope": {
+    "cpt": {"31295": "covered", "31296": "covered", "31297": "covered", "31298": "covered"},
+    "icd10": ["J01.01", "J01.11", "J01.31", "J32.0", "J32.1", "J32.3"]
+  },
+  "criteria": [
+    {"id": "crs_persisted_12_weeks", "text": "Chronic rhinosinusitis (CRS) has persisted for ≥ 12 weeks", "question": "Has chronic rhinosinusitis persisted for at least 12 weeks, with dates showing the duration?", "threshold": {"kind": "duration_months", "op": "gte", "value": 2.77, "unit": "months"}},
+    {"id": "age_over_18", "text": "If > 18 years of age", "question": "Is the patient older than 18 years of age?", "threshold": {"kind": "number", "op": "gt", "value": 18, "unit": "years"}},
+    {"id": "age_18_or_under", "text": "If ≤ 18 years of age", "question": "Is the patient 18 years of age or younger?", "threshold": {"kind": "number", "op": "lte", "value": 18, "unit": "years"}},
+    {"id": "mucopurulent_nasal_discharge", "text": "Anterior or posterior mucopurulent nasal discharge", "question": "Does the chart document anterior or posterior mucopurulent nasal discharge?"},
+    {"id": "nasal_obstruction", "text": "Nasal obstruction", "question": "Does the chart document nasal obstruction?"},
+    {"id": "facial_pain_pressure_fullness", "text": "Facial pain/pressure/fullness", "question": "Does the chart document facial pain, pressure or fullness?"},
+    {"id": "decreased_or_lost_smell", "text": "Decreased or lost sense of smell", "question": "Does the chart document a decreased or lost sense of smell?"},
+    {"id": "ct_polyps_or_sinus_opacification", "text": "Polyps in nasal cavity or the middle meatus, and/or sinus opacification", "question": "Does a CT scan show polyps in the nasal cavity or the middle meatus, and/or sinus opacification?"},
+    {"id": "ct_inflammation_paranasal_sinuses", "text": "Inflammation of the paranasal sinuses", "question": "Does a CT scan show inflammation of the paranasal sinuses?"},
+    {"id": "pediatric_purulent_rhinorrhea", "text": "Purulent rhinorrhea", "question": "Does the chart document purulent rhinorrhea?"},
+    {"id": "pediatric_facial_pressure_pain", "text": "Facial pressure/pain", "question": "Does the chart document facial pressure or pain?"},
+    {"id": "pediatric_cough", "text": "Cough", "question": "Does the chart document cough?"},
+    {"id": "pediatric_endoscopic_signs", "text": "Endoscopic signs of mucosal edema, purulent drainage, or nasal polyposis", "question": "Does nasal endoscopy show mucosal edema, purulent drainage, or nasal polyposis?"},
+    {"id": "pediatric_ct_mucosal_changes", "text": "Mucosal changes within the ostiomeatal complex and/or sinuses, by CT scan", "question": "Does a CT scan show mucosal changes within the ostiomeatal complex and/or the sinuses?"},
+    {"id": "rars_4_episodes_past_year", "text": "Documented ≥ 4 episodes of acute bacterial rhinosinusitis in the past year", "question": "Are at least 4 episodes of acute bacterial rhinosinusitis documented in the past year?", "threshold": {"kind": "number", "op": "gte", "value": 4, "unit": "episodes"}},
+    {"id": "rars_no_symptoms_between_episodes", "text": "without signs or symptoms of rhinosinusitis between episodes", "question": "Was the patient free of signs and symptoms of rhinosinusitis between the acute episodes?"},
+    {"id": "rars_purulent_nasal_discharge", "text": "Anterior or posterior purulent nasal discharge", "question": "Does the chart document anterior or posterior purulent nasal discharge?"},
+    {"id": "continued_symptoms_after_medical_therapy", "text": "Continued symptoms after medical therapy", "question": "Did symptoms continue after the course of medical therapy (antibiotics and intranasal corticosteroids)?"},
+    {"id": "antibiotics_culture_guided_3_weeks", "text": "Therapy guided by culture and sensitivity for ≥ 3 weeks", "question": "Was antibiotic therapy guided by culture and sensitivity given for at least 3 weeks?", "threshold": {"kind": "duration_months", "op": "gte", "value": 0.69, "unit": "months"}},
+    {"id": "antibiotics_beta_lactamase_resistant_3_weeks", "text": "Beta-lactamase resistant antibiotic for ≥ 3 weeks (e.g., amoxicillin [recommended], amoxicillin-clavulanate, trimethoprim-sulfisoxazole, cefuroxime)", "question": "Was a beta-lactamase resistant antibiotic (e.g., amoxicillin, amoxicillin-clavulanate, trimethoprim-sulfisoxazole, cefuroxime) given for at least 3 weeks?", "threshold": {"kind": "duration_months", "op": "gte", "value": 0.69, "unit": "months"}},
+    {"id": "intranasal_corticosteroids_4_weeks", "text": "Intranasal corticosteroids for ≥ 4 weeks", "question": "Were intranasal corticosteroids used for at least 4 weeks?", "threshold": {"kind": "duration_months", "op": "gte", "value": 0.92, "unit": "months"}},
+    {"id": "allergic_immune_etiologies_addressed", "text": "Allergic or immune etiologies of symptoms have been ruled out or treated appropriately", "question": "Have allergic or immune causes of the symptoms been ruled out (e.g., allergy testing) or appropriately treated?"}
+  ],
+  "scenarios": [
+    {
+      "id": "balloon_sinuplasty_crs_or_rars",
+      "name": "Balloon sinuplasty to relieve obstruction of the maxillary, sphenoid, and frontal sinus ostia (CRS or RARS)",
+      "applies_to_cpt": [],
+      "requires": {"type": "all", "label": "when all of the following are met", "children": [
+        {"type": "any", "label": "A. Diagnosis of one of the following (1 or 2)", "children": [
+          {"type": "all", "label": "1. Chronic rhinosinusitis (CRS) has persisted for ≥ 12 weeks and all of the following", "children": [
+            {"type": "leaf", "criterion": "crs_persisted_12_weeks"},
+            {"type": "any", "label": "a. If > 18 years of age / b. If ≤ 18 years of age", "children": [
+              {"type": "all", "label": "a. If > 18 years of age, meets both of the following (i and ii)", "children": [
+                {"type": "leaf", "criterion": "age_over_18"},
+                {"type": "any", "label": "i. Has at least one of the following symptoms", "children": [
+                  {"type": "leaf", "criterion": "mucopurulent_nasal_discharge"},
+                  {"type": "leaf", "criterion": "nasal_obstruction"},
+                  {"type": "leaf", "criterion": "facial_pain_pressure_fullness"},
+                  {"type": "leaf", "criterion": "decreased_or_lost_smell"}
+                ]},
+                {"type": "any", "label": "ii. Computed tomography (CT) scan shows either of the following", "children": [
+                  {"type": "leaf", "criterion": "ct_polyps_or_sinus_opacification"},
+                  {"type": "leaf", "criterion": "ct_inflammation_paranasal_sinuses"}
+                ]}
+              ]},
+              {"type": "all", "label": "b. If ≤ 18 years of age, meets both of the following (i and ii)", "children": [
+                {"type": "leaf", "criterion": "age_18_or_under"},
+                {"type": "any", "label": "i. Has at least two of the following symptoms", "children": [
+                  {"type": "all", "label": "Purulent rhinorrhea + Nasal obstruction", "children": [{"type": "leaf", "criterion": "pediatric_purulent_rhinorrhea"}, {"type": "leaf", "criterion": "nasal_obstruction"}]},
+                  {"type": "all", "label": "Purulent rhinorrhea + Facial pressure/pain", "children": [{"type": "leaf", "criterion": "pediatric_purulent_rhinorrhea"}, {"type": "leaf", "criterion": "pediatric_facial_pressure_pain"}]},
+                  {"type": "all", "label": "Purulent rhinorrhea + Cough", "children": [{"type": "leaf", "criterion": "pediatric_purulent_rhinorrhea"}, {"type": "leaf", "criterion": "pediatric_cough"}]},
+                  {"type": "all", "label": "Nasal obstruction + Facial pressure/pain", "children": [{"type": "leaf", "criterion": "nasal_obstruction"}, {"type": "leaf", "criterion": "pediatric_facial_pressure_pain"}]},
+                  {"type": "all", "label": "Nasal obstruction + Cough", "children": [{"type": "leaf", "criterion": "nasal_obstruction"}, {"type": "leaf", "criterion": "pediatric_cough"}]},
+                  {"type": "all", "label": "Facial pressure/pain + Cough", "children": [{"type": "leaf", "criterion": "pediatric_facial_pressure_pain"}, {"type": "leaf", "criterion": "pediatric_cough"}]}
+                ]},
+                {"type": "any", "label": "ii. Has at least one of the following findings", "children": [
+                  {"type": "leaf", "criterion": "pediatric_endoscopic_signs"},
+                  {"type": "leaf", "criterion": "pediatric_ct_mucosal_changes"}
+                ]}
+              ]}
+            ]}
+          ]},
+          {"type": "all", "label": "2. Recurrent acute rhinosinusitis (RARS), both of the following", "children": [
+            {"type": "all", "label": "a. Documented ≥ 4 episodes of acute bacterial rhinosinusitis in the past year without signs or symptoms of rhinosinusitis between episodes", "children": [
+              {"type": "leaf", "criterion": "rars_4_episodes_past_year"},
+              {"type": "leaf", "criterion": "rars_no_symptoms_between_episodes"}
+            ]},
+            {"type": "all", "label": "b. Anterior or posterior purulent nasal discharge and at least one of the following", "children": [
+              {"type": "leaf", "criterion": "rars_purulent_nasal_discharge"},
+              {"type": "any", "label": "at least one of the following", "children": [
+                {"type": "leaf", "criterion": "nasal_obstruction"},
+                {"type": "leaf", "criterion": "facial_pain_pressure_fullness"}
+              ]}
+            ]}
+          ]}
+        ]},
+        {"type": "all", "label": "B. Continued symptoms after medical therapy consisting of both of the following (1 and 2)", "children": [
+          {"type": "leaf", "criterion": "continued_symptoms_after_medical_therapy"},
+          {"type": "any", "label": "1. Antibiotic therapy meeting one of the following (a or b)", "children": [
+            {"type": "leaf", "criterion": "antibiotics_culture_guided_3_weeks"},
+            {"type": "leaf", "criterion": "antibiotics_beta_lactamase_resistant_3_weeks"}
+          ]},
+          {"type": "leaf", "criterion": "intranasal_corticosteroids_4_weeks"}
+        ]},
+        {"type": "leaf", "criterion": "allergic_immune_etiologies_addressed"}
+      ]},
+      "notes": [
+        "Covers balloon sinuplasty of the maxillary, sphenoid and frontal sinus ostia, alone or in combination with standard endoscopic sinus surgery; ethmoid disease is not medically necessary (see exclusions)."
+      ]
+    }
+  ],
+  "exclusions": [
+    {"text": "For the treatment of ethmoid disease", "cpt": []},
+    {"text": "Extensive previous sinus surgery with significant osteoneogenesis.", "cpt": []}
+  ],
+  "notes": [
+    "Payer: the policy is issued by Pennsylvania Health and Wellness (PHW). The source file name says Centene (PHW is a Centene plan), but 'Centene' is not printed anywhere in the document, so it is not an alias.",
+    "Dates as printed: 'Effective Date: 01/18' and 'Last Review Date: 10/19' (month/year only); recorded as 2018-01 and 2019-10. The revision log shows approvals 07/17, 10/18 and 10/19.",
+    "No lines of business or excluded plans are stated anywhere in the document; plan_types and excluded_plans are empty.",
+    "One pathway, nested exactly as the document nests it: Section I is a single 'all of the following' (A diagnosis, B failed medical therapy, C allergic/immune etiologies addressed) with the diagnosis an 'any' of CRS (adult or pediatric branch) or RARS. A reviewer could instead split it into three pathways (CRS > 18, CRS ≤ 18, RARS) each repeating B and C; the evaluation is identical.",
+    "The preamble 'in order to relieve obstruction of the maxillary, sphenoid, and frontal sinus ostia, either alone or in combination with standard endoscopic sinus surgery techniques' names which sinuses the policy covers (the four CPT codes are exactly those sinuses); it is not modelled as a criterion. The complementary not-medically-necessary statement 'For the treatment of ethmoid disease' is an exclusion.",
+    "Section II (printed as a second 'I.') lists two situations in which balloon sinuplasty is not medically necessary: ethmoid disease, and extensive previous sinus surgery with significant osteoneogenesis. They are standalone statements outside the 'all of the following' criteria, so they are recorded as exclusions (no code in the table is ethmoid-specific, so cpt is empty), not as not() leaves in the tree. A reviewer could add them as not() leaves; a nurse should still check the chart for either.",
+    "'If > 18 years of age' and 'If ≤ 18 years of age' are modelled as age criteria gating the adult (a) and pediatric (b) branches: all(age_over_18, i, ii) OR all(age_18_or_under, i, ii). Note the document's two branches together cover every age (> 18 and ≤ 18), so the age leaves only route the chart.",
+    "'Chronic rhinosinusitis (CRS) has persisted for ≥ 12 weeks' is a symptom duration: 12 weeks converted to months at 12/52 per week = 2.77 months (same conversion the app's resolve step uses). Likewise '≥ 3 weeks' = 0.69 months and '≥ 4 weeks' = 0.92 months.",
+    "Adult CT findings: the lead-in 'Computed tomography (CT) scan shows either of the following' is not contiguous with items a) and b), so each item's text is the item alone ('Polyps in nasal cavity or the middle meatus, and/or sinus opacification'; 'Inflammation of the paranasal sinuses') and the CT requirement is carried in the question and the any-node label. The 10/19 revision log confirms adults qualify only by CT findings, not endoscopy.",
+    "'Nasal obstruction' appears word-for-word in the adult CRS list, the pediatric CRS list and the RARS list; it is the same chart fact, so one criterion (nasal_obstruction) is reused in all three places. 'Facial pain/pressure/fullness' appears identically in the adult CRS and RARS lists and is likewise one criterion. The pediatric list's 'Facial pressure/pain' and 'Purulent rhinorrhea' are worded differently from the adult/RARS items and are kept as their own criteria so each text is verbatim; a reviewer could merge them with the adult items.",
+    "Pediatric 'Has at least two of the following symptoms' (4 symptoms) is modelled as any of the six pairs.",
+    "RARS item 2.a, 'Documented ≥ 4 episodes of acute bacterial rhinosinusitis in the past year without signs or symptoms of rhinosinusitis between episodes', holds two chart facts (episode count; symptom-free intervals) and was split into two criteria under an all-node. The threshold ≥ 4 episodes is recorded as a number (unit episodes), with the one-year window in the question rather than as a duration.",
+    "RARS item 2.b, 'Anterior or posterior purulent nasal discharge and at least one of the following: i. Nasal obstruction; ii. Facial pain/pressure/fullness', is all(discharge, any(obstruction, facial pain)); item ii is on page 2 after the page break.",
+    "Section B: 'Continued symptoms after medical therapy consisting of both of the following (1 and 2)' is read as three things a chart must show: symptoms continued after the therapy (its own leaf, continued_symptoms_after_medical_therapy), an antibiotic course meeting (a) or (b), and intranasal corticosteroids ≥ 4 weeks. A reviewer could fold 'continued symptoms' into the two therapy leaves; it is kept separate because a chart can document a completed course without saying whether symptoms persisted.",
+    "Section B.1 is printed run together on one line ('1. Antibiotic therapy meeting one of the following (a or b): a. Therapy guided by culture and sensitivity for ≥ 3 weeks; b. Beta-lactamase resistant antibiotic for ≥ 3 weeks (e.g., ...)'); it is an any of (a) and (b). The example drugs in (b) are examples ('e.g.'), carried in the criterion text and question, not a closed list.",
+    "Section C ends with a stray ' .' in the PDF ('treated appropriately. .'); the criterion text stops at 'appropriately'.",
+    "All four CPT codes (31295 maxillary, 31296 frontal, 31297 sphenoid, 31298 frontal and sphenoid) are tagged covered and the single pathway governs all of them (applies_to_cpt empty = all codes). HCPCS: N/A. ICD-10 codes are 'Diagnosis Codes that Support Coverage Criteria' and are recorded in scope.icd10 only.",
+    "The Coding Implications disclaimer, Background, Guideline Recommendations (AAO/ARS, AAAAI/ACAAI/JCAAI statements), revision log and References hold no requirements of their own; the Background's 'more than three courses of antibiotics ... within a 12-month period' is narrative about when surgery may be indicated, not a criterion, and is deliberately left out."
+  ],
+  "status": "ok"
+}

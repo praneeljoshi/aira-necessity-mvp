@@ -1,0 +1,196 @@
+{
+  "id": "cigna-companies-0480",
+  "payer": "Cigna Companies",
+  "payer_aliases": ["Cigna", "Cigna Companies", "Cigna Healthcare", "The Cigna Group", "Cigna Health and Life Insurance Company", "Connecticut General Life Insurance Company", "CHLIC", "CGLIC", "Evernorth"],
+  "title": "Balloon Sinus Ostial Dilation for Chronic Sinusitis and Eustachian Tube Dilation",
+  "guideline_number": "0480",
+  "effective_date": "2026-04-15",
+  "reviewed_date": null,
+  "source_file": "cigna-0480-balloon-sinuplasty.pdf",
+  "plan_types": ["health benefit plans administered by Cigna Companies"],
+  "excluded_plans": [],
+  "scope": {
+    "cpt": {
+      "31295": "covered", "31296": "covered", "31297": "covered", "31298": "covered",
+      "69705": "covered", "69706": "covered"
+    },
+    "icd10": []
+  },
+  "criteria": [
+    {"id": "crs_symptoms_3_months", "text": "presence of two or more of the following signs/symptoms for more than three consecutive months", "question": "Have the qualifying sinus signs/symptoms (at least two of: nasal obstruction, mucopurulent drainage, facial pain/pressure/fullness, decreased smell) been present for more than three consecutive months, per dated notes?", "threshold": {"kind": "duration_months", "op": "gt", "value": 3, "unit": "months"}},
+    {"id": "crs_nasal_obstruction", "text": "nasal obstruction", "question": "Does the chart document nasal obstruction (congestion/blockage) as a sign or symptom of chronic rhinosinusitis?"},
+    {"id": "crs_mucopurulent_drainage", "text": "anterior or posterior mucopurulent (foul) drainage", "question": "Does the chart document anterior or posterior mucopurulent (foul) drainage?"},
+    {"id": "crs_facial_pain_pressure", "text": "facial pain, pressure and/or fullness over the affected sinus", "question": "Does the chart document facial pain, pressure or fullness over the affected sinus?"},
+    {"id": "crs_decreased_smell", "text": "decreased sense of smell", "question": "Does the chart document a decreased sense of smell (hyposmia/anosmia)?"},
+    {"id": "crs_ct_each_sinus", "text": "evidence of chronic rhinosinusitis on computerized tomography (CT) scan in each of the sinuses being considered for treatment", "question": "Does a CT scan report show evidence of chronic rhinosinusitis in each sinus (maxillary, frontal or sphenoid) that is to be dilated?"},
+    {"id": "ct_mucosal_thickening", "text": "mucosal thickening", "question": "Does the CT report show mucosal thickening in the sinus(es) being considered for treatment?"},
+    {"id": "ct_air_fluid_levels", "text": "air fluid levels", "question": "Does the CT report show air-fluid levels in the sinus(es) being considered for treatment?"},
+    {"id": "ct_opacification", "text": "opacification", "question": "Does the CT report show opacification of the sinus(es) being considered for treatment?"},
+    {"id": "ct_nasal_polyposis", "text": "nasal polyposis", "question": "Does the CT report show nasal polyposis?"},
+    {"id": "crs_medical_management_8_weeks", "text": "failure, intolerance or contraindication of medical management when ALL the following have been tried, during at least eight (8) consecutive weeks", "question": "Has medical management (antibiotic, steroid spray, antihistamine spray and/or decongestant, saline irrigation) been tried for at least eight consecutive weeks and failed, not been tolerated, or been contraindicated, per dated notes?", "threshold": {"kind": "duration_months", "op": "gte", "value": 1.85, "unit": "months"}},
+    {"id": "crs_antibiotic_therapy", "text": "antibiotic therapy", "question": "Was antibiotic therapy tried as part of medical management (or documented as not tolerated / contraindicated)?"},
+    {"id": "crs_steroid_spray", "text": "steroid spray", "question": "Was a nasal steroid spray tried as part of medical management (or documented as not tolerated / contraindicated)?"},
+    {"id": "crs_antihistamine_nasal_spray", "text": "antihistamine nasal spray", "question": "Was an antihistamine nasal spray tried as part of medical management (or documented as not tolerated / contraindicated)?"},
+    {"id": "crs_decongestant", "text": "decongestant", "question": "Was a decongestant tried as part of medical management (or documented as not tolerated / contraindicated)?"},
+    {"id": "crs_nasal_saline_irrigation", "text": "nasal saline irrigation", "question": "Was nasal saline irrigation tried as part of medical management (or documented as not tolerated / contraindicated)?"},
+    {"id": "rars_four_episodes_per_year", "text": "Four or more episodes per year of acute rhinosinusitis", "question": "Does the chart document four or more episodes of acute rhinosinusitis in a year?", "threshold": {"kind": "number", "op": "gte", "value": 4, "unit": "episodes per year"}},
+    {"id": "rars_endoscopy_significant_disease", "text": "Nasal endoscopy findings suggestive of significant disease (i.e., abnormal mucosal status, fluid, or infection)", "question": "Do nasal endoscopy findings show significant disease (abnormal mucosa, fluid, or infection)?"},
+    {"id": "rars_ct_ostial_occlusion", "text": "CT scan evidence of ostial occlusion", "question": "Does the CT scan show ostial occlusion in each paranasal sinus being considered for treatment?"},
+    {"id": "rars_ct_mucosal_thickening_each_sinus", "text": "mucosal thickening in each paranasal sinus being considered for treatment", "question": "Does the CT scan show mucosal thickening in each paranasal sinus being considered for treatment?"},
+    {"id": "rars_sinonasal_symptoms", "text": "Sinonasal symptoms (e.g., pain, pressure, drainage, reduced sense of smell)", "question": "Does the chart document sinonasal symptoms (pain, pressure, drainage, reduced sense of smell)?"},
+    {"id": "etbd_once_per_lifetime", "text": "once per lifetime", "question": "Is this the patient's first Eustachian tube balloon dilation (no prior ETBD; the procedure is covered once per lifetime)?"},
+    {"id": "etbd_chronic_obstructive_etd", "text": "chronic obstructive Eustachian tube dysfunction", "question": "Is the diagnosis chronic obstructive (not patulous) Eustachian tube dysfunction?"},
+    {"id": "etbd_age_18_or_older", "text": "age 18 years or older", "question": "Is the patient 18 years of age or older?", "threshold": {"kind": "number", "op": "gte", "value": 18, "unit": "years"}},
+    {"id": "etbd_symptoms_6_months", "text": "any of the following symptoms continuously for at least six months", "question": "Has at least one qualifying symptom (aural fullness, aural pressure, hearing loss, autophony) been present continuously for at least six months, per dated notes?", "threshold": {"kind": "duration_months", "op": "gte", "value": 6, "unit": "months"}},
+    {"id": "etbd_aural_fullness", "text": "aural fullness", "question": "Does the chart document aural fullness?"},
+    {"id": "etbd_aural_pressure", "text": "aural pressure", "question": "Does the chart document aural pressure?"},
+    {"id": "etbd_hearing_loss", "text": "hearing loss", "question": "Does the chart document hearing loss?"},
+    {"id": "etbd_autophony", "text": "autophony", "question": "Does the chart document autophony?"},
+    {"id": "etbd_chronic_ear_disease", "text": "history of chronic ear disease", "question": "Is there a history of chronic ear disease of more than six months?", "threshold": {"kind": "duration_months", "op": "gt", "value": 6, "unit": "months"}},
+    {"id": "etbd_barometric_intolerance", "text": "intolerance to barometric changes greater than six months", "question": "Is there intolerance to barometric (pressure) changes of more than six months' duration?", "threshold": {"kind": "duration_months", "op": "gt", "value": 6, "unit": "months"}},
+    {"id": "etbd_two_abnormal_tympanograms", "text": "two abnormal tympanograms (Type B or C)", "question": "Have two abnormal tympanograms (Type B or C) been documented prior to ETBD?", "threshold": {"kind": "number", "op": "gte", "value": 2, "unit": "tympanograms"}},
+    {"id": "etbd_two_abnormal_tm_exams", "text": "two abnormal tympanic membrane examinations (i.e., retracted membrane, effusion, perforation)", "question": "Have two abnormal tympanic membrane examinations (retracted membrane, effusion, or perforation) been documented prior to ETBD?", "threshold": {"kind": "number", "op": "gte", "value": 2, "unit": "examinations"}},
+    {"id": "etbd_medical_management_4_weeks", "text": "failure, intolerance or contraindication to appropriate medical management including at least four weeks of a nasal topical spray", "question": "Has appropriate medical management, including at least four weeks of a nasal topical spray, failed, not been tolerated, or been contraindicated, per dated notes?", "threshold": {"kind": "duration_months", "op": "gte", "value": 0.92, "unit": "months"}},
+    {"id": "etbd_history_tympanostomy_tubes", "text": "history of tympanostomy tube placement", "question": "Does the patient have a history of tympanostomy tube placement?"},
+    {"id": "etbd_improved_with_tubes", "text": "symptoms of Eustachian tube obstruction improved while tubes were patent", "question": "Did the symptoms of Eustachian tube obstruction improve while the tympanostomy tubes were patent?"},
+    {"id": "etbd_peds_fda_device", "text": "using a U.S. Food and Drug Administration (FDA)-approved/cleared device", "question": "Is the planned device FDA-approved/cleared for pediatric Eustachian tube balloon dilation?"},
+    {"id": "etbd_peds_age_8_to_17", "text": "8 to 17 years of age", "question": "Is the patient 8 to 17 years of age?", "threshold": {"kind": "number", "op": "gte", "value": 8, "unit": "years"}},
+    {"id": "etbd_peds_persistent_etd_come", "text": "Objective signs of persistent Eustachian tube dysfunction (ETD) resulting in chronic otitis media with effusion", "question": "Are there objective signs of persistent Eustachian tube dysfunction resulting in chronic otitis media with effusion?"},
+    {"id": "etbd_peds_effusion_3_months", "text": "middle ear effusion persisting for ≥3 months", "question": "Has middle ear effusion persisted for at least 3 months, per dated notes?", "threshold": {"kind": "duration_months", "op": "gte", "value": 3, "unit": "months"}},
+    {"id": "etbd_peds_tm_retraction_hearing_loss", "text": "tympanic membrane retraction with associated hearing loss", "question": "Is there tympanic membrane retraction with associated hearing loss?"},
+    {"id": "etbd_peds_refractory_to_surgery", "text": "refractory to at least one surgical intervention (e.g. tympanostomy tubes, adenoidectomy) for persistent Eustachian tube dysfunction", "question": "Has the Eustachian tube dysfunction been refractory to at least one prior surgical intervention (e.g., tympanostomy tubes, adenoidectomy)?", "threshold": {"kind": "number", "op": "gte", "value": 1, "unit": "surgical interventions"}}
+  ],
+  "scenarios": [
+    {
+      "id": "sinuplasty_chronic_rhinosinusitis",
+      "name": "Balloon sinus ostial dilation for chronic rhinosinusitis",
+      "applies_to_cpt": ["31295", "31296", "31297", "31298"],
+      "requires": {"type": "all", "label": "Chronic rhinosinusitis when ALL of the following criteria are met", "children": [
+        {"type": "all", "label": "Two or more signs/symptoms for more than three consecutive months", "children": [
+          {"type": "leaf", "criterion": "crs_symptoms_3_months"},
+          {"type": "any", "label": "Two or more of the following signs/symptoms", "children": [
+            {"type": "all", "children": [{"type": "leaf", "criterion": "crs_nasal_obstruction"}, {"type": "leaf", "criterion": "crs_mucopurulent_drainage"}]},
+            {"type": "all", "children": [{"type": "leaf", "criterion": "crs_nasal_obstruction"}, {"type": "leaf", "criterion": "crs_facial_pain_pressure"}]},
+            {"type": "all", "children": [{"type": "leaf", "criterion": "crs_nasal_obstruction"}, {"type": "leaf", "criterion": "crs_decreased_smell"}]},
+            {"type": "all", "children": [{"type": "leaf", "criterion": "crs_mucopurulent_drainage"}, {"type": "leaf", "criterion": "crs_facial_pain_pressure"}]},
+            {"type": "all", "children": [{"type": "leaf", "criterion": "crs_mucopurulent_drainage"}, {"type": "leaf", "criterion": "crs_decreased_smell"}]},
+            {"type": "all", "children": [{"type": "leaf", "criterion": "crs_facial_pain_pressure"}, {"type": "leaf", "criterion": "crs_decreased_smell"}]}
+          ]}
+        ]},
+        {"type": "all", "label": "Evidence of chronic rhinosinusitis on CT in each sinus being considered", "children": [
+          {"type": "leaf", "criterion": "crs_ct_each_sinus"},
+          {"type": "any", "label": "Including ANY of the following", "children": [
+            {"type": "leaf", "criterion": "ct_mucosal_thickening"},
+            {"type": "leaf", "criterion": "ct_air_fluid_levels"},
+            {"type": "leaf", "criterion": "ct_opacification"},
+            {"type": "leaf", "criterion": "ct_nasal_polyposis"}
+          ]}
+        ]},
+        {"type": "all", "label": "Failure, intolerance or contraindication of medical management, ALL tried during at least eight consecutive weeks", "children": [
+          {"type": "leaf", "criterion": "crs_medical_management_8_weeks"},
+          {"type": "leaf", "criterion": "crs_antibiotic_therapy"},
+          {"type": "leaf", "criterion": "crs_steroid_spray"},
+          {"type": "any", "label": "antihistamine nasal spray and/or decongestant", "children": [
+            {"type": "leaf", "criterion": "crs_antihistamine_nasal_spray"},
+            {"type": "leaf", "criterion": "crs_decongestant"}
+          ]},
+          {"type": "leaf", "criterion": "crs_nasal_saline_irrigation"}
+        ]}
+      ]},
+      "notes": ["Medical necessity is determined in each of the sinuses being considered for dilation (maxillary, frontal or sphenoid); the CT criteria are read per sinus."]
+    },
+    {
+      "id": "sinuplasty_recurrent_acute_rhinosinusitis",
+      "name": "Balloon sinus ostial dilation for recurrent acute rhinosinusitis",
+      "applies_to_cpt": ["31295", "31296", "31297", "31298"],
+      "requires": {"type": "all", "label": "Recurrent acute rhinosinusitis when ALL of the following criteria are met", "children": [
+        {"type": "leaf", "criterion": "rars_four_episodes_per_year"},
+        {"type": "leaf", "criterion": "rars_endoscopy_significant_disease"},
+        {"type": "all", "label": "CT scan evidence of ostial occlusion and mucosal thickening in each paranasal sinus being considered", "children": [
+          {"type": "leaf", "criterion": "rars_ct_ostial_occlusion"},
+          {"type": "leaf", "criterion": "rars_ct_mucosal_thickening_each_sinus"}
+        ]},
+        {"type": "leaf", "criterion": "rars_sinonasal_symptoms"}
+      ]},
+      "notes": ["Medical necessity is determined in each of the sinuses being considered for dilation (maxillary, frontal or sphenoid); the CT criteria are read per sinus."]
+    },
+    {
+      "id": "etbd_adult",
+      "name": "Eustachian tube balloon dilation, adults (chronic obstructive Eustachian tube dysfunction)",
+      "applies_to_cpt": ["69705", "69706"],
+      "requires": {"type": "all", "label": "Adults: ALL of the following criteria are met", "children": [
+        {"type": "leaf", "criterion": "etbd_once_per_lifetime"},
+        {"type": "leaf", "criterion": "etbd_chronic_obstructive_etd"},
+        {"type": "leaf", "criterion": "etbd_age_18_or_older"},
+        {"type": "all", "label": "Any of the following symptoms continuously for at least six months", "children": [
+          {"type": "leaf", "criterion": "etbd_symptoms_6_months"},
+          {"type": "any", "label": "Any of the following symptoms", "children": [
+            {"type": "leaf", "criterion": "etbd_aural_fullness"},
+            {"type": "leaf", "criterion": "etbd_aural_pressure"},
+            {"type": "leaf", "criterion": "etbd_hearing_loss"},
+            {"type": "leaf", "criterion": "etbd_autophony"}
+          ]}
+        ]},
+        {"type": "any", "label": "History of chronic ear disease or intolerance to barometric changes greater than six months", "children": [
+          {"type": "leaf", "criterion": "etbd_chronic_ear_disease"},
+          {"type": "leaf", "criterion": "etbd_barometric_intolerance"}
+        ]},
+        {"type": "all", "label": "BOTH of the following prior to ETBD", "children": [
+          {"type": "leaf", "criterion": "etbd_two_abnormal_tympanograms"},
+          {"type": "leaf", "criterion": "etbd_two_abnormal_tm_exams"}
+        ]},
+        {"type": "leaf", "criterion": "etbd_medical_management_4_weeks"},
+        {"type": "any", "label": "If history of tympanostomy tube placement, symptoms improved while tubes were patent", "children": [
+          {"type": "not", "label": "No history of tympanostomy tube placement", "child": {"type": "leaf", "criterion": "etbd_history_tympanostomy_tubes"}},
+          {"type": "leaf", "criterion": "etbd_improved_with_tubes"}
+        ]}
+      ]},
+      "notes": ["Unilateral or bilateral; covered once per lifetime."]
+    },
+    {
+      "id": "etbd_pediatric",
+      "name": "Eustachian tube balloon dilation, pediatrics (8 to 17 years)",
+      "applies_to_cpt": ["69705", "69706"],
+      "requires": {"type": "all", "label": "Pediatrics: ALL of the following criteria are met", "children": [
+        {"type": "leaf", "criterion": "etbd_peds_fda_device"},
+        {"type": "leaf", "criterion": "etbd_peds_age_8_to_17"},
+        {"type": "all", "label": "Objective signs of persistent ETD resulting in chronic otitis media with effusion as evidenced by", "children": [
+          {"type": "leaf", "criterion": "etbd_peds_persistent_etd_come"},
+          {"type": "leaf", "criterion": "etbd_peds_effusion_3_months"},
+          {"type": "leaf", "criterion": "etbd_peds_tm_retraction_hearing_loss"}
+        ]},
+        {"type": "leaf", "criterion": "etbd_peds_refractory_to_surgery"}
+      ]},
+      "notes": ["Unilateral or bilateral."]
+    }
+  ],
+  "exclusions": [
+    {"text": "Balloon sinus ostial dilation (balloon sinuplasty) is considered not medically necessary for all other indications.", "cpt": []},
+    {"text": "Balloon sinus ostial dilation (balloon sinuplasty) when used as an adjunctive procedure during functional endoscopic sinus surgery (FESS) in the same sinus cavity is considered to be an integral part of the primary procedure and not separately reimbursable.", "cpt": []},
+    {"text": "Eustachian tube balloon dilation (ETBD) is considered not medically necessary for all other indications.", "cpt": []}
+  ],
+  "notes": [
+    "Payer: the policy 'applies to health benefit plans administered by Cigna Companies'; 'Cigna Companies' is defined on the last page as operating subsidiaries of The Cigna Group (Cigna Health and Life Insurance Company, Connecticut General Life Insurance Company, Evernorth Behavioral Health, Cigna Health Management, HMO/service company subsidiaries). The instructions also say certain Cigna Companies/lines of business only provide utilization review and do not make coverage determinations; that is not a plan the policy excludes, so excluded_plans is empty.",
+    "Effective date printed 4/15/2026; next review 4/15/2027. No separate 'reviewed' date is printed, so reviewed_date is null (Revision Details shows an annual review dated 4/15/2026).",
+    "Sinus pathways: the policy grants medical necessity 'in each of the sinuses being considered for dilation (i.e., maxillary, frontal or sphenoid)'. Both sinus pathways govern all four sinus codes (31295 maxillary, 31296 frontal, 31297 sphenoid, 31298 frontal and sphenoid); the per-sinus reading is in the CT criteria ('in each of the sinuses being considered for treatment') rather than a separate criterion.",
+    "CRS symptoms: 'two or more of the following signs/symptoms for more than three consecutive months' is modelled as any of the six pairs of the four symptoms, AND a separate duration criterion (crs_symptoms_3_months, gt 3 months) carrying the number, because the duration governs the pair rather than any single symptom. A reviewer could instead put the duration on each symptom leaf; the meaning is the same.",
+    "CRS CT: 'evidence of chronic rhinosinusitis on CT scan in each of the sinuses being considered for treatment including ANY of the following' is all(CT-in-each-sinus leaf, any(mucosal thickening, air fluid levels, opacification, nasal polyposis)). The per-sinus requirement lives on the CT leaf; the four finding leaves are the finding words only.",
+    "CRS medical management: 'failure, intolerance or contraindication of medical management when ALL the following have been tried, during at least eight (8) consecutive weeks' is all(failure-with-duration leaf, antibiotic, steroid spray, any(antihistamine nasal spray, decongestant), saline). 'antihistamine nasal spray and/or decongestant' is read as either suffices. Eight weeks is stored as 1.85 months (8 x 12/52, the app's own conversion). The sentence is ambiguous whether each agent must run eight weeks or the regimen as a whole; the duration leaf is read as the regimen as a whole. 'contraindication' means a contraindicated agent counts as satisfied for that agent; the agent questions say so.",
+    "RARS: 'CT scan evidence of ostial occlusion and mucosal thickening in each paranasal sinus being considered for treatment' holds two findings joined by 'and', so it is two criteria under an all. 'Four or more episodes per year' is a count threshold (gte 4 episodes per year), not a duration.",
+    "Adult ETBD: 'once per lifetime' is kept as a criterion (etbd_once_per_lifetime) because a chart can show a prior ETBD; the policy does not say whether once per lifetime is per ear or per patient (unilateral or bilateral is covered), so the question asks for no prior ETBD at all. 'chronic obstructive Eustachian tube dysfunction' (the indication) is also a criterion because it excludes patulous ETD, which a chart documents.",
+    "Adult ETBD: 'any of the following symptoms continuously for at least six months' is all(duration leaf gte 6 months, any(aural fullness, aural pressure, hearing loss, autophony)), the same pattern as the CRS symptoms.",
+    "Adult ETBD: 'history of chronic ear disease or intolerance to barometric changes greater than six months' is an any of two leaves; 'greater than six months' is read as modifying both alternatives (gt 6 months on each). A reviewer could read it as modifying only the barometric intolerance.",
+    "Adult ETBD: 'failure, intolerance or contraindication to appropriate medical management including at least four weeks of a nasal topical spray' is kept as one criterion (the document does not bullet it); four weeks is stored as 0.92 months (4 x 12/52). If the spray is contraindicated the four-week trial cannot exist; the question allows contraindication as the document does.",
+    "Adult ETBD: the conditional 'if patient has a history of tympanostomy tube placement, symptoms ... improved while tubes were patent' is any(not(history of tubes), improved while patent).",
+    "Pediatric ETBD: '8 to 17 years of age' has two bounds; the threshold holds the lower bound (gte 8 years) and the question states 8 to 17. Patients 18 and older fall under the adult pathway.",
+    "Pediatric ETBD: 'using a U.S. FDA-approved/cleared device' is kept answerable because the surgeon's plan or order can name the device (the background says a single device, Acclarent AERA, is cleared for ages 8-17). A reviewer could mark it not answerable from a chart.",
+    "Pediatric ETBD (hardest call): 'Objective signs of persistent ETD resulting in chronic otitis media with effusion as evidenced by' lists two sub-bullets (effusion >= 3 months; TM retraction with hearing loss) with no ANY/BOTH connector, unlike every other list in the policy. Read as ALL (both required) because the parent says ALL of the following and the policy writes 'any'/'EITHER' explicitly whenever alternatives are meant. A reasonable reviewer could read the two sub-bullets as alternatives (the Gurberg study the policy cites used 'or'). The parent sentence is kept as its own leaf (objective signs of persistent ETD resulting in chronic OME).",
+    "Pediatric ETBD: 'refractory to at least one surgical intervention' carries a count threshold (gte 1).",
+    "Exclusions: the three policy statements ('not medically necessary for all other indications' for sinuplasty and for ETBD; sinuplasty adjunctive to FESS in the same sinus cavity is integral and not separately reimbursable) have no codes attached because the listed codes are covered for the stated indications; the exclusions are indication-based, not code-based.",
+    "Left out: General Background statements that there is insufficient evidence for balloon sinuplasty for headaches unrelated to CRS, nasal obstruction and obstructive sleep apnea, and for ETBD for craniofacial syndromes, neoplasms, systemic mucosal/autoimmune disease and primary patulous ETD. These are background, already covered by the 'all other indications' exclusions, and not policy statements.",
+    "Left out: the AAO-HNSF consensus statements, FDA device tables, literature review and Health Equity sections are background, not coverage requirements. The background sentence 'Appropriate CRS surgical candidates have failed at least eight weeks of consecutive medical therapy including at least two antibiotics' is not used; the Coverage Policy says 'antibiotic therapy' without a count.",
+    "Left out: Coding Information notes 1 and 2 (list may not be all-inclusive; deleted codes may not be reimbursed) and the Instructions for Use (benefit plan document supersedes) are contract terms, not chart requirements.",
+    "Codes: all six CPT codes are tagged covered ('Considered Medically Necessary when criteria in the applicable policy statements listed above are met'). No ICD-10 codes are listed."
+  ],
+  "status": "ok"
+}

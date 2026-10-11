@@ -1,0 +1,110 @@
+{
+  "id": "bcbsfl-02-33000-31",
+  "payer": "Florida Blue",
+  "payer_aliases": ["Florida Blue", "BCBS FL", "BCBSFL", "Blue Cross Blue Shield of Florida", "Blue Cross and Blue Shield of Florida", "BCBS of Florida"],
+  "title": "Treatments for Varicose Veins/Venous Insufficiency",
+  "guideline_number": "02-33000-31",
+  "effective_date": "2026-01-01",
+  "reviewed_date": "2025-07-24",
+  "source_file": "fl_varicose_veins_guideline.pdf",
+  "scope": {
+    "cpt": {
+      "36465": "covered", "36466": "covered", "36468": "non_covered", "36470": "covered", "36471": "covered",
+      "36473": "investigational", "36474": "investigational", "36475": "covered", "36476": "covered",
+      "36478": "covered", "36479": "covered", "36482": "covered", "36483": "covered",
+      "37700": "covered", "37718": "covered", "37722": "covered", "37735": "covered",
+      "37760": "covered", "37761": "covered", "37765": "covered", "37766": "covered",
+      "37780": "covered", "37785": "covered", "0524T": "investigational", "S2202": "covered"
+    },
+    "icd10": ["I83.001-I83.899", "I87.2"]
+  },
+  "criteria": [
+    {"id": "saphenous_reflux", "text": "There is demonstrated saphenous reflux", "question": "Does imaging (typically duplex ultrasound) demonstrate reflux in the great or small saphenous vein?", "evidence_hint": "Duplex/venous ultrasound report: reflux, incompetence, reflux duration, GSV/SSV/SFJ/SPJ."},
+    {"id": "ceap_c2_or_greater", "text": "CEAP (Clinical-Etiology-Anatomy-Pathophysiology) class C2 or greater", "question": "Is the documented CEAP clinical class C2 or higher (varicose veins or worse: edema, skin changes, ulcer)?", "evidence_hint": "'CEAP', 'C2'...'C6' in assessment; or findings that define a class (varicose veins = C2, edema = C3, pigmentation/eczema = C4a, healed ulcer = C5, active ulcer = C6).", "threshold": {"kind": "enum", "op": "gte_enum", "value": "C2", "enum_values": ["C0", "C1", "C2", "C2r", "C3", "C4", "C4a", "C4b", "C4c", "C5", "C6", "C6r"]}},
+    {"id": "varicosities_3mm", "text": "The varicosities are at least 3 millimeters in size", "question": "Are the varicosities documented as at least 3 mm in diameter?", "evidence_hint": "Vein diameter on duplex or exam: 'GSV 6.2 mm', 'varicosities up to 5 mm'.", "threshold": {"kind": "number", "op": "gte", "value": 3, "unit": "mm"}},
+    {"id": "venous_stasis_ulcer", "text": "Ulceration secondary to venous stasis", "question": "Is there a venous stasis ulcer?", "evidence_hint": "'venous ulcer', 'stasis ulcer', CEAP C6."},
+    {"id": "recurrent_thrombophlebitis", "text": "Recurrent superficial thrombophlebitis", "question": "Is there documented recurrent superficial thrombophlebitis?"},
+    {"id": "variceal_hemorrhage", "text": "Hemorrhage or recurrent bleeding episodes from a ruptured superficial varicosity", "question": "Has a superficial varicosity ruptured and bled?"},
+    {"id": "persistent_symptoms", "text": "Persistent pain, swelling, itching, burning, or other symptoms are associated with saphenous reflux", "question": "Are there persistent symptoms (pain, swelling, itching, burning, heaviness, cramping) attributed to venous reflux?"},
+    {"id": "symptoms_interfere_adl", "text": "The symptoms significantly interfere with activities of daily living", "question": "Do the documented symptoms significantly interfere with the patient's daily activities, work, or function?", "evidence_hint": "Limits standing/walking, missed work, stopped activities, sick days."},
+    {"id": "compression_3_months", "text": "Conservative management including compression therapy for at least 3 months has not improved the symptoms", "question": "Has conservative management including compression stockings been tried for at least 3 months without symptom improvement?", "evidence_hint": "Compression stockings, 20-30 mmHg, start date and follow-up date, 'no improvement', 'symptoms persist'. Needs a duration, from dates or a stated number of months.", "threshold": {"kind": "duration_months", "op": "gte", "value": 3, "unit": "months"}},
+    {"id": "accessory_saphenous_reflux", "text": "There is demonstrated accessory saphenous reflux", "question": "Does imaging demonstrate reflux in an accessory saphenous vein?"},
+    {"id": "accessory_isolated_or_truncal_eliminated", "text": "Incompetence of the accessory saphenous vein is isolated, or the great or small saphenous veins had been previously eliminated (at least 3 months)", "question": "Is the accessory saphenous incompetence isolated, or were the great/small saphenous veins treated at least 3 months ago?"},
+    {"id": "tributaries_symptomatic", "text": "Symptomatic varicose tributaries", "question": "Are the varicose tributaries symptomatic?"},
+    {"id": "saphenous_treated_same_time_or_prior", "text": "Performed either at the same time or following prior treatment (surgical, radiofrequency, or laser) of the saphenous veins", "question": "Is the saphenous vein being treated concurrently, or was it previously treated by surgery, radiofrequency or laser?"},
+    {"id": "perforator_reflux", "text": "There is demonstrated perforator reflux", "question": "Does imaging demonstrate reflux in a perforator vein?"},
+    {"id": "superficial_veins_previously_eliminated", "text": "The superficial saphenous veins (great, small, or accessory saphenous and symptomatic varicose tributaries) have been previously eliminated", "question": "Have the superficial saphenous veins and symptomatic tributaries already been treated?"},
+    {"id": "ulcer_unresolved_3_months", "text": "Ulcers have not resolved following combined superficial vein treatment and compression therapy for at least 3 months", "question": "Have leg ulcers persisted for at least 3 months despite superficial vein treatment plus compression?", "threshold": {"kind": "duration_months", "op": "gte", "value": 3, "unit": "months"}},
+    {"id": "secondary_to_dvt", "text": "The venous insufficiency is secondary to deep venous thromboembolism", "question": "Is the venous insufficiency caused by prior deep vein thrombosis?", "evidence_hint": "History of DVT, post-thrombotic syndrome; or 'no history of DVT'."}
+  ],
+  "scenarios": [
+    {
+      "id": "great_small_saphenous",
+      "name": "Great or Small Saphenous Veins",
+      "applies_to_cpt": ["36465", "36466", "36475", "36476", "36478", "36479", "36482", "36483", "37700", "37718", "37722", "37735", "37780"],
+      "requires": {"type": "all", "label": "All of the following", "children": [
+        {"type": "leaf", "criterion": "saphenous_reflux"},
+        {"type": "leaf", "criterion": "ceap_c2_or_greater"},
+        {"type": "leaf", "criterion": "varicosities_3mm"},
+        {"type": "any", "label": "One or more of the following indications", "children": [
+          {"type": "leaf", "criterion": "venous_stasis_ulcer"},
+          {"type": "leaf", "criterion": "recurrent_thrombophlebitis"},
+          {"type": "leaf", "criterion": "variceal_hemorrhage"},
+          {"type": "all", "label": "Persistent symptoms despite conservative management", "children": [
+            {"type": "leaf", "criterion": "persistent_symptoms"},
+            {"type": "leaf", "criterion": "symptoms_interfere_adl"},
+            {"type": "leaf", "criterion": "compression_3_months"}
+          ]}
+        ]}
+      ]}
+    },
+    {
+      "id": "accessory_saphenous",
+      "name": "Accessory Saphenous Veins",
+      "applies_to_cpt": ["36465", "36466", "36475", "36476", "36478", "36479", "36482", "36483", "37700", "37718", "37722", "37735", "37780"],
+      "requires": {"type": "all", "label": "All of the following", "children": [
+        {"type": "leaf", "criterion": "accessory_isolated_or_truncal_eliminated"},
+        {"type": "leaf", "criterion": "accessory_saphenous_reflux"},
+        {"type": "leaf", "criterion": "varicosities_3mm"},
+        {"type": "any", "label": "One or more of the following indications", "children": [
+          {"type": "leaf", "criterion": "venous_stasis_ulcer"},
+          {"type": "leaf", "criterion": "recurrent_thrombophlebitis"},
+          {"type": "leaf", "criterion": "variceal_hemorrhage"},
+          {"type": "all", "label": "Persistent symptoms despite conservative management", "children": [
+            {"type": "leaf", "criterion": "persistent_symptoms"},
+            {"type": "leaf", "criterion": "symptoms_interfere_adl"},
+            {"type": "leaf", "criterion": "compression_3_months"}
+          ]}
+        ]}
+      ]}
+    },
+    {
+      "id": "varicose_tributaries",
+      "name": "Symptomatic Varicose Tributaries",
+      "applies_to_cpt": ["36470", "36471", "37765", "37766", "37785", "S2202"],
+      "requires": {"type": "all", "label": "All of the following", "children": [
+        {"type": "leaf", "criterion": "tributaries_symptomatic"},
+        {"type": "leaf", "criterion": "saphenous_treated_same_time_or_prior"}
+      ]},
+      "notes": ["Ultrasound guidance for sclerotherapy of tributaries does not meet medical necessity."]
+    },
+    {
+      "id": "perforator_veins",
+      "name": "Perforator Veins (leg ulcers with chronic venous insufficiency)",
+      "applies_to_cpt": ["37760", "37761"],
+      "requires": {"type": "all", "label": "All of the following", "children": [
+        {"type": "leaf", "criterion": "perforator_reflux"},
+        {"type": "leaf", "criterion": "varicosities_3mm"},
+        {"type": "leaf", "criterion": "superficial_veins_previously_eliminated"},
+        {"type": "leaf", "criterion": "ulcer_unresolved_3_months"},
+        {"type": "not", "label": "Not secondary to deep venous thromboembolism", "child": {"type": "leaf", "criterion": "secondary_to_dvt"}}
+      ]},
+      "notes": ["Ligation or ablation of perforator veins performed concurrently with superficial venous surgery does not meet medical necessity."]
+    }
+  ],
+  "notes": [
+    "Treatment of telangiectasia (spider veins, angiomata, hemangiomata) is cosmetic and does not meet medical necessity (CPT 36468 non-covered).",
+    "Mechanochemical ablation (36473/36474), cryoablation, CHIVA, and 0524T are investigational.",
+    "Medicare Advantage products follow LCD L38720 / Article A58250 (FCSO), not this guideline."
+  ]
+}

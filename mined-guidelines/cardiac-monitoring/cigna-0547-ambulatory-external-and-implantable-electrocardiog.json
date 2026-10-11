@@ -1,0 +1,19 @@
+{
+  "payer": "Cigna",
+  "payer_key": "cigna",
+  "treatment": "cardiac-monitoring",
+  "title": "Ambulatory External and Implantable Electrocardiographic Monitoring",
+  "policy_number": "0547",
+  "effective": "",
+  "url": "https://static.cigna.com/assets/chcp/pdf/coveragePolicies/medical/mm_0547_coveragepositioncriteria_implantable_electrocardiographic_event_monitors.pdf",
+  "final_url": "https://static.cigna.com/assets/chcp/pdf/coveragePolicies/medical/mm_0547_coveragepositioncriteria_implantable_electrocardiographic_event_monitors.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "cigna-0547-ambulatory-external-and-implantable-electrocardiog.pdf",
+  "sha256": "207e8eab887dc0e13ccc916c0fb656544884729018a728337488291d90380dbc",
+  "pages": 35,
+  "bytes": 497883,
+  "retrieved": "2026-10-09",
+  "printed_date": "Effective 9/15/2026; next review 11/15/2026"
+}

@@ -1,0 +1,183 @@
+{
+ "file": "bcbsfl-02-12000-11-reduction-mammaplasty.pdf",
+ "treatment": "reduction-mammaplasty",
+ "payer": "bcbsfl",
+ "doc_kind": "medical policy (Medical Coverage Guideline)",
+ "lines_of_business": [
+  "All lines of business unless noted in Program Exceptions; FEP and SAO follow own guidelines; Medicare Advantage references LCD L38914"
+ ],
+ "effective_or_revised": "Original 04/17/00; Reviewed 08/28/25; Revised 09/15/25",
+ "sections_in_order": [
+  "Description",
+  "Position Statement",
+  "Billing/Coding Information",
+  "Reimbursement Information (Required Documentation, LOINC, BSA/Mosteller, Schnur Sliding Scale table)",
+  "Program Exceptions",
+  "Definitions",
+  "Related Guidelines",
+  "Other",
+  "References",
+  "Updates"
+ ],
+ "criteria_location": "Position Statement (first page) holds the criteria; the Schnur table, BSA formula and required documentation live in the later Reimbursement Information section, so the numeric threshold is not in the criteria section.",
+ "procedures_covered": [
+  "Reduction mammaplasty CPT 19318 for symptomatic macromastia",
+  "Symmetry reduction on contralateral breast after mastectomy",
+  "Symmetry reduction after lumpectomy or radiation",
+  "Liposuction as adjunct (included) and as sole procedure (investigational)"
+ ],
+ "logic": {
+  "top_level": "all (A: symptom group AND B: Schnur) plus separate indications for post-cancer symmetry",
+  "max_nesting_depth": 3,
+  "k_of_n": [
+   {
+    "k": 2,
+    "n": 7,
+    "quote": "A minimum 6-week history of AT LEAST TWO OF THE FOLLOWING that are unresponsive to conservative therapy"
+   }
+  ],
+  "exclusions_or_contraindications": "Closing paragraph: not necessary 'when performed for cosmetic purposes or for the correction of deformities resulting from previous cosmetic surgery'; investigational for 'all other indications'; liposuction alone investigational.",
+  "initial_vs_repeat": "No repeat-procedure rule.",
+  "and_or_ambiguity": [
+   {
+    "quote": "A minimum 6-week history of AT LEAST TWO OF THE FOLLOWING that are unresponsive to conservative therapy",
+    "why_ambiguous": "Is the 6 weeks applied to each symptom, to the two together, or to conservative therapy? Does 'unresponsive' apply to each symptom?"
+   },
+   {
+    "quote": "Reduction mammaplasty performed to achieve symmetry following lumpectomy or radiation therapy for breast cancer may meet the definition of medical necessity",
+    "why_ambiguous": "'may meet' is not a criterion; no conditions given"
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "symptom",
+   "quote": "AT LEAST TWO OF THE FOLLOWING: Back pain, Neck pain, Shoulder pain, Paresthesias of hands or arms, Headache, Intertrigo, Shoulder grooving from brassiere (bra) straps",
+   "where": "Position Statement"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "unresponsive to conservative therapy (e.g., support bra, wide bra straps, analgesia, NSAIDs, physical therapy, exercises, heat treatment, cold treatment)",
+   "where": "Position Statement"
+  },
+  {
+   "kind": "duration",
+   "quote": "A minimum 6-week history",
+   "where": "Position Statement"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "at or above the 22nd percentile on the Schnur Sliding Scale, based on the individual's body surface area (BSA) using the Mosteller formula",
+   "where": "Position Statement"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "symmetry on a non-disease and contralateral breast following a mastectomy",
+   "where": "Position Statement"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "Photographs are not required with the initial review ... Florida Blue may request photos",
+   "where": "Reimbursement"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "Symptoms and duration; Height and weight; Statement of anticipated amount of breast tissue to be removed per breast",
+   "where": "Required Documentation"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "symptoms",
+   "value": ">=2 of 7",
+   "unit": "count",
+   "quote": "AT LEAST TWO OF THE FOLLOWING"
+  },
+  {
+   "quantity": "symptom/conservative duration",
+   "value": ">=6",
+   "unit": "weeks",
+   "quote": "A minimum 6-week history"
+  },
+  {
+   "quantity": "Schnur 22nd percentile minimum grams per breast",
+   "value": "BSA 1.35 m2 = 199 g ... 2.00 = 628 g ... 2.55 = 1662 g",
+   "unit": "g",
+   "quote": "22% Percentile Breast Tissue in Grams"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "symptom history",
+   "length": "6 weeks",
+   "quote": "A minimum 6-week history"
+  },
+  {
+   "what": "record recency (LOINC)",
+   "length": "<=6 months",
+   "quote": "observations made six months or fewer before starting date of service"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Only CPT 19318 listed; no diagnosis codes.",
+  "non_covered_code_lists": "None; liposuction named in text only"
+ },
+ "external_dependencies": [
+  {
+   "what": "Medicare Advantage LCD L38914",
+   "quote": "Reduction Mammaplasty, (L38914) located at cms.gov"
+  },
+  {
+   "what": "FEP, SAO",
+   "quote": "Follow FEP guidelines"
+  },
+  {
+   "what": "Prophylactic Mastectomy policy 02-12000-15",
+   "quote": "Prophylactic Mastectomy, 02-12000-15"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Schnur Sliding Scale",
+   "definition_quote": "a method used to determine breast tissue removal per gram relative to a woman's body surface area"
+  },
+  {
+   "term": "Intertrigo",
+   "definition_quote": "superficial dermatitis occurring on adjacent skin surfaces (e.g., breast fold)"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "unresponsive to conservative therapy",
+   "problem": "No required modality, number, or duration of therapy beyond the 6-week history; list is 'e.g.'"
+  },
+  {
+   "quote": "may be asked to provide a letter of explanation",
+   "problem": "Discretionary post-op review when tissue removed less than planned"
+  },
+  {
+   "quote": "may meet the definition of medical necessity to improve or restore function",
+   "problem": "Non-binding"
+  }
+ ],
+ "extraction_hazards": [
+  "Criterion A bullets use en-dash sub-bullets and an 'AND' on its own line before the Schnur criterion",
+  "Schnur table in a different section, two-column flattened",
+  "Formula appears twice (cm/kg divisor 3600; in/lb divisor 3131)",
+  "Typos ('het health outcome', 'Win-x')",
+  "Planned (pre-op) grams vs removed grams: the criterion is about planned removal, the note about actual"
+ ],
+ "interesting_structures": [
+  "Lookup table criterion: grams threshold depends on computed BSA (needs height, weight, Mosteller)",
+  "Prospective plan checked against retrospective actual removal",
+  "k-of-n symptom selection (2 of 7)",
+  "No age criterion"
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "scale": "1-5",
+  "why": "Clean all with a 2-of-7 leaf, but the Schnur leaf needs a computation and table lookup, and 'unresponsive' has no operational definition."
+ }
+}

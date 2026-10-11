@@ -1,0 +1,190 @@
+{
+ "file": "excellus-cardiac-event-monitors.pdf",
+ "treatment": "cardiac-monitoring",
+ "payer": "excellus",
+ "doc_kind": "medical policy",
+ "lines_of_business": [
+  "Commercial (incl. Essential Plan, Child Health Plus) where the service is covered",
+  "Medicaid where covered and no eMedNY criteria exist",
+  "Medicare (incl. HMO-DSNP) where covered and no national or local Medicare decision exists (all from the Product Disclaimer, p.16)"
+ ],
+ "effective_or_revised": "Current effective July 16, 2026; next review July 2027; committee dates back to 10/08/99; 07/17/25 off-cycle update added cryptogenic stroke criteria",
+ "sections_in_order": [
+  "Policy Statement(s) I-V",
+  "Related Policies",
+  "Policy Guideline(s) I-IV",
+  "Description (Holter, event monitors, ILR, intracardiac ischemia, types of strokes)",
+  "Supportive Literature",
+  "Regulatory Status",
+  "Coding (CPT, HCPCS, ICD10)",
+  "References",
+  "Search Terms",
+  "Product Disclaimer"
+ ],
+ "criteria_location": "Policy Statement pp.1-2 and Policy Guidelines pp.2-3 (stroke-evaluation definition lives in Guideline IV; repeat/replacement rules in Guidelines I-III).",
+ "procedures_covered": [
+  "External intermittent cardiac event monitors / AEMs",
+  "Implantable loop recorders",
+  "Mobile cardiac outpatient telemetry (not medically necessary)",
+  "Intracardiac ischemia monitoring (investigational)",
+  "Holter excluded"
+ ],
+ "logic": {
+  "top_level": "pathways (I external any-of; III ILR with three sub-pathways, each all-of)",
+  "max_nesting_depth": 3,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "II and V investigational lists; IV MCOT not medically necessary; Guideline II convenience items ineligible; external monitor 'contraindicated (i.e., severe skin conditions or obesity)' as substitute for the 28-day failed trial.",
+  "initial_vs_repeat": "Repeat studies within one year are 'subject to medical necessity review'; ILR or battery replacement needs malfunction and expired warranty and documentation it 'will significantly change the plan of care'.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Documentation supporting that the continuation of an ILR or battery replacement will significantly change the plan of care; a, or",
+    "why_ambiguous": "Guideline III A-D joined by 'and' ... 'a, or' (stray text) before D 'irreparable changes...'; whether D is an alternative is unclear"
+   },
+   {
+    "quote": "Failure of a 28-day external cardiac event monitor to establish a definitive diagnosis; or when an external cardiac event monitor is contraindicated",
+    "why_ambiguous": "The 'or' sits inside an item of an ALL-of list"
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "symptom",
+   "quote": "To assess signs or symptoms possibly related to rhythm disturbances (e.g., palpitations, serious or significant syncope, near syncope)",
+   "where": "Statement I.A"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "After an ablation procedure to assess the results for residual arrhythmias",
+   "where": "Statement I.B"
+  },
+  {
+   "kind": "other",
+   "quote": "After initiation of anti-arrhythmic drug therapy to assess the effectiveness",
+   "where": "Statement I.C"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "Failure of a 28-day external cardiac event monitor to establish a definitive diagnosis",
+   "where": "Statement III.A.2 and III.C.2"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "Documentation supporting that an ILR will significantly change the plan of care",
+   "where": "Statement III.A.1, III.B.3, III.C.1"
+  },
+  {
+   "kind": "provider/facility qualification",
+   "quote": "Received a thorough stroke evaluation by a neurologist or qualified provider from a certified stroke center",
+   "where": "Statement III.B.1"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "48-72 hours of electrocardiogram (EKG) monitoring with failure to demonstrate an arrhythmia",
+   "where": "Statement III.B.2"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "at a minimum, CT or MRI of brain, arterial imaging, CTA, MRA or ultrasound of carotid circulation, echocardiography, extended rhythm monitoring, and key laboratory studies such as a lipid profile and hemoglobin A1c",
+   "where": "Guideline IV (thorough stroke evaluation)"
+  },
+  {
+   "kind": "other",
+   "quote": "repeat studies within one (1) year of a previous study are subject to medical necessity review",
+   "where": "Guideline I"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "failed external monitor before ILR",
+   "value": "28",
+   "unit": "days",
+   "quote": "Failure of a 28-day external cardiac event monitor"
+  },
+  {
+   "quantity": "EKG monitoring before ILR in stroke",
+   "value": "48-72",
+   "unit": "hours",
+   "quote": "48-72 hours of electrocardiogram (EKG) monitoring"
+  },
+  {
+   "quantity": "repeat interval",
+   "value": "1",
+   "unit": "year",
+   "quote": "repeat studies within one (1) year"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "external monitor trial before ILR",
+   "length": "28 days",
+   "quote": "28-day external cardiac event monitor"
+  },
+  {
+   "what": "repeat study interval",
+   "length": "1 year",
+   "quote": "within one (1) year of a previous study"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": true,
+  "codes_tied_to_criteria": "Codes listed with (NMN) / (E/I) flags per code; not tied to criteria",
+  "non_covered_code_lists": "Inline tags: (NMN) not medically necessary e.g. 93229; (E/I) e.g. 0525T-0527T, C1833"
+ },
+ "external_dependencies": [
+  {
+   "what": "Experimental/Investigational definition policy",
+   "quote": "11.01.03 Experimental or Investigational Services"
+  },
+  {
+   "what": "2021 AHA/ASA secondary stroke prevention guideline defines thorough stroke evaluation",
+   "quote": "per 2021 AHA/ASA guidelines for the secondary prevention of ischemic stroke"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "thorough stroke evaluation",
+   "definition_quote": "at a minimum, CT or MRI of brain, arterial imaging, CTA, MRA or ultrasound of carotid circulation, echocardiography (ECG), extended rhythm monitoring, and key laboratory studies"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "serious or significant syncope",
+   "problem": "undefined"
+  },
+  {
+   "quote": "when the specific criteria are met",
+   "problem": "criteria for external monitors never given beyond indications"
+  },
+  {
+   "quote": "significantly change the plan of care",
+   "problem": "prediction"
+  },
+  {
+   "quote": "qualified provider from a certified stroke center",
+   "problem": "whose qualification, how certified"
+  },
+  {
+   "quote": "definitive diagnosis",
+   "problem": "undefined"
+  }
+ ],
+ "extraction_hazards": [
+  "Policy Statement continues across page break mid-list (item A.2 split)",
+  "Stray text 'a, or' in Guideline III.C",
+  "Guideline IV says 'echocardiography (ECG)' - mislabeled",
+  "Code tables with (NMN)/(E/I) suffixes inside the code cell",
+  "Product disclaimer repeated; 16 pages mostly literature",
+  "Policy Guideline defines a term used by Statement III.B (criteria split across two sections)"
+ ],
+ "interesting_structures": [
+  "MCOT categorically not medically necessary",
+  "Convenience-item exclusion (smart watches)",
+  "ILR replacement criteria with warranty status",
+  "Stroke workup enumerated as a required list"
+ ],
+ "fit_to_tree": {
+  "score": 2,
+  "why": "Clean roman/letter/number structure with explicit ALL/ANY; the stroke-evaluation definition and repeat rule are in Policy Guidelines and must be cross-linked."
+ }
+}

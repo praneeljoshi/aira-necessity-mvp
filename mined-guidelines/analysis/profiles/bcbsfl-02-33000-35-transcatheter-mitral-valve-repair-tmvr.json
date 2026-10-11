@@ -1,0 +1,203 @@
+{
+ "doc_kind": "medical policy (Florida Blue Medical Coverage Guideline)",
+ "lines_of_business": [
+  "All lines of business unless noted in Program Exceptions (disclaimer p.1)",
+  "Federal Employee Program (FEP): follow FEP guidelines",
+  "State Account Organization (SAO): follow SAO guidelines",
+  "Medicare Advantage: reviewed NCD/LCD listed in Program Exceptions"
+ ],
+ "effective_or_revised": "Original Effective Date 09/15/16; Reviewed 05/28/26; Revised 06/15/26 (9 pages)",
+ "sections_in_order": [
+  "Header block (policy number, Original Effective Date, Reviewed, Revised)",
+  "Subject",
+  "Disclaimer (all caps)",
+  "Navigation bar (Position Statement / Billing/Coding / ... hyperlinks)",
+  "DESCRIPTION",
+  "POSITION STATEMENT",
+  "BILLING/CODING INFORMATION",
+  "REIMBURSEMENT INFORMATION",
+  "PROGRAM EXCEPTIONS",
+  "DEFINITIONS",
+  "RELATED GUIDELINES",
+  "OTHER",
+  "REFERENCES",
+  "COMMITTEE APPROVAL",
+  "GUIDELINE UPDATE INFORMATION"
+ ],
+ "criteria_location": "Position Statement pp.2-3 (~55 lines): five device/indication paragraphs (TMVR primary MR, TMVR secondary MR, mitral valve-in-valve, tricuspid T-TEER, tricuspid replacement) with bracketed/asterisk footnotes that carry thresholds, then investigational catch-alls. Definitions add STS and EuroSCORE.",
+ "procedures_covered": [
+  "Transcatheter mitral valve repair (33418, 33419)",
+  "Transcatheter mitral valve-in-valve replacement (0483T, 0484T)",
+  "Transcatheter tricuspid edge-to-edge repair, TriClip (0569T, 0570T)",
+  "Transcatheter tricuspid valve replacement, EVOQUE (0646T)",
+  "Investigational: coronary sinus repair (0345T), annulus reconstruction (0544T)"
+ ],
+ "logic": {
+  "top_level": "pathways: five separate indication paragraphs, each device-specific; each ends in an investigational 'all other situations' sentence",
+  "max_nesting_depth": 3,
+  "k_of_n": [
+   {
+    "k": 1,
+    "n": 2,
+    "quote": "Society for Thoracic Surgeons predicted mortality risk of 12% or greater; and/or Logistic EuroSCORE of 20% or greater."
+   },
+   {
+    "k": 1,
+    "n": 4,
+    "quote": "One of the following (documented by 2 cardiovascular specialists, including a cardiac surgeon): Member is not an operable candidate ... OR ... increased surgical risk ... OR ... congenital vascular anomalies OR ... complex intrathoracic surgical history."
+   }
+  ],
+  "exclusions_or_contraindications": "None as a NOT list; 'experimental or investigational in all other situations' is the exclusion.",
+  "initial_vs_repeat": "Additional prosthesis codes (33419, 0570T) as add-ons; no repeat-procedure criteria.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Society for Thoracic Surgeons predicted mortality risk of 12% or greater; and/or Logistic EuroSCORE of 20% or greater.",
+    "why_ambiguous": "'and/or' with semicolon: either or both. Reads as any-of."
+   },
+   {
+    "quote": "Grade 3+ (moderate) or 4+ (severe) MR confirmed by echocardiography or New York Heart Association (NYHA) functional class II, III, or IVa (ambulatory) despite the use of stable maximal doses",
+    "why_ambiguous": "Footnote defines severity with echo grade OR NYHA class: mixes a valve finding with symptom class; unclear whether the second 'or' alternatives are also required to be 'despite GDMT'."
+   },
+   {
+    "quote": "Member is not an operable candidate for open surgery; OR Member is an operable candidate but is considered at increased surgical risk for open surgery**; OR Member is considered at increased surgical risk ... due to a history of congenital vascular anomalies OR Member has a complex intrathoracic surgical history.",
+    "why_ambiguous": "Third and fourth alternatives overlap the second; the OR lines are inconsistent (first two end with '; OR', third with ' OR')."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "diagnosis",
+   "quote": "members with symptomatic, primary mitral regurgitation",
+   "where": "TMVR para 1"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "Society for Thoracic Surgeons predicted mortality risk of 12% or greater",
+   "where": "TMVR para 1"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "despite the use of maximally tolerated guideline-directed medical therapy",
+   "where": "TMVR secondary MR, T-TEER, TTVR"
+  },
+  {
+   "kind": "functional impairment",
+   "quote": "New York Heart Association heart failure class II, III, or IV symptoms",
+   "where": "ViV"
+  },
+  {
+   "kind": "provider/facility qualification",
+   "quote": "documented by 2 cardiovascular specialists, including a cardiac surgeon",
+   "where": "ViV"
+  },
+  {
+   "kind": "provider/facility qualification",
+   "quote": "as assessed by a heart team",
+   "where": "T-TEER (footnote ** lists composition)"
+  },
+  {
+   "kind": "provider/facility qualification",
+   "quote": "with a device approved by the FDA",
+   "where": "each paragraph"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "Grade 3+ (moderate) or 4+ (severe) MR confirmed by echocardiography",
+   "where": "footnote *"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "STS predicted mortality (TMVR)",
+   "value": ">= 12",
+   "unit": "%",
+   "quote": "Society for Thoracic Surgeons predicted mortality risk of 12% or greater"
+  },
+  {
+   "quantity": "Logistic EuroSCORE",
+   "value": ">= 20",
+   "unit": "%",
+   "quote": "Logistic EuroSCORE of 20% or greater"
+  },
+  {
+   "quantity": "STS high risk (open surgery)",
+   "value": ">= 8; heart-team mortality >= 15",
+   "unit": "%",
+   "quote": "STS predicted operative risk score of 8% or higher"
+  },
+  {
+   "quantity": "STS intermediate risk",
+   "value": "3 to 7",
+   "unit": "%",
+   "quote": "Intermediate risk: STS predicted risk of mortality between 3% and 7%."
+  }
+ ],
+ "time_windows": [],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": true,
+  "codes_tied_to_criteria": "Two separate ICD-10 lists keyed to procedure groups ('for T-TEER and TTVR' vs 'for TMVR and TMViVR'); two codes marked '(Investigational)'. Not tied to individual criteria within a group.",
+  "non_covered_code_lists": "0345T and 0544T marked '(Investigational)'."
+ },
+ "external_dependencies": [
+  {
+   "what": "Medicare Advantage NCDs",
+   "quote": "Transcatheter Tricuspid Valve Replacement (TTVR) (20.37), ... (T-TEER) (20.38) and ... (TMVR) (20.33)"
+  },
+  {
+   "what": "Heart team composition",
+   "quote": "The composition of a heart care team should include, at minimum: cardiac surgeon, interventional cardiologist ..."
+  },
+  {
+   "what": "Risk calculators",
+   "quote": "An online STS risk calculator can be found at: http://riskcalc.sts.org"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Logistic EuroSCORE",
+   "definition_quote": "European System for Cardiac Operative Risk Evaluation is a risk model which allows the calculation and predicts mortality"
+  },
+  {
+   "term": "STS Predicted Mortality Risk",
+   "definition_quote": "a model that predicts the risk of operative mortality and morbidity after adult cardiac surgery"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "considered at risk for open surgery",
+   "problem": "'considered' by whom."
+  },
+  {
+   "quote": "maximally tolerated guideline-directed medical therapy",
+   "problem": "no drug list or duration."
+  },
+  {
+   "quote": "increased surgical risk",
+   "problem": "two different definitions of risk (STS 8% vs 12%)."
+  }
+ ],
+ "extraction_hazards": [
+  "Bullets are either the private-use character U+F0B7 or U+2022 depending on the document (the fusion guideline uses both), never '-' or '*'; nested bullets use other glyphs ('o') or only deeper indentation",
+  "Hyperlink navigation bar after the disclaimer is flattened into a 2-3 row text block that looks like headings",
+  "Form-feed (\\f) page breaks can fall mid-list or immediately before a section heading, so '^HEADING' regexes can miss; no running headers/footers or page numbers to strip",
+  "Criteria live in footnotes with bracketed text and asterisks that restart (*, **) and are placed after later paragraphs; * is used for two different footnotes",
+  "Bullet glyphs are '•' (U+2022) here instead of U+F0B7",
+  "STS cutoff conflict: 12% (TMVR) vs 8% (ViV high risk) vs 3-7 (intermediate tricuspid)",
+  "Square-bracketed text inside a footnote (e.g. '[Moderate to severe ... despite]')"
+ ],
+ "interesting_structures": [
+  "Risk-score thresholds (STS, EuroSCORE) requiring external calculators",
+  "Heart-team requirement as a process criterion",
+  "Footnote definitions that change what 'severe' means",
+  "Five device-specific rulings in one policy"
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "scale": "1 = all/any/not expresses it cleanly ... 5 = needs new constructs or human judgment",
+  "why": "Structure is any/all but footnotes must be inlined, risk scores may not be in the chart, and 'heart team' judgments are process facts."
+ },
+ "payer": "bcbsfl",
+ "treatment": "transcatheter-mitral-valve-repair-tmvr",
+ "file": "bcbsfl-02-33000-35-transcatheter-mitral-valve-repair-tmvr.pdf"
+}

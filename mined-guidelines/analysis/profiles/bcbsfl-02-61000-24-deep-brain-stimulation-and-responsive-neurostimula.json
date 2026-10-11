@@ -1,0 +1,228 @@
+{
+ "lines_of_business": [
+  "All lines of business unless noted in PROGRAM EXCEPTIONS (disclaimer: 'THIS MEDICAL COVERAGE GUIDELINE APPLIES TO ALL LINES OF BUSINESS UNLESS OTHERWISE NOTED IN THE PROGRAM EXCEPTIONS SECTION')",
+  "FEP: 'Follow FEP guidelines.'",
+  "SAO: 'Follow SAO guidelines.'",
+  "Medicare Advantage Products: NCDs Electrical Nerve Stimulators (160.7) and Deep Brain Stimulation for Essential Tremor and Parkinson's Disease (160.24) 'were reviewed' (no statement that they override)"
+ ],
+ "effective_or_revised": "Original Effective Date 01/01/02; Reviewed 06/25/26; Revised 07/15/26",
+ "sections_in_order": [
+  "Header block (MCG number, Original Effective Date, Reviewed, Revised)",
+  "Subject",
+  "Disclaimer (all caps)",
+  "Navigation bar (Position Statement / Billing/Coding / Reimbursement / Program Exceptions / Definitions / Related Guidelines / Other / References / Updates)",
+  "DESCRIPTION",
+  "POSITION STATEMENT",
+  "BILLING/CODING INFORMATION",
+  "REIMBURSEMENT INFORMATION",
+  "PROGRAM EXCEPTIONS",
+  "DEFINITIONS",
+  "RELATED GUIDELINES",
+  "OTHER",
+  "REFERENCES",
+  "COMMITTEE APPROVAL",
+  "GUIDELINE UPDATE INFORMATION"
+ ],
+ "criteria_location": "POSITION STATEMENT (about 55 lines) split under three sub-headings printed as plain lines: 'Deep Brain Stimulation', 'Responsive Neurostimulation', 'Revision/Replacement'. Key definition ('disabling, medically unresponsive tremor') is in DEFINITIONS, not the statement.",
+ "procedures_covered": [
+  "Unilateral DBS of thalamus",
+  "Bilateral DBS of thalamus",
+  "DBS of globus pallidus or subthalamic nucleus (Parkinson disease; primary dystonia age >=7)",
+  "Responsive neurostimulation (RNS) for focal epilepsy",
+  "Revision/replacement of implanted neurostimulator",
+  "DBS for tardive dyskinesia, cluster headache, Tourette, depression, OCD, Alzheimer, anorexia, alcohol addiction, MS tremor, chronic pain, epilepsy (all investigational)"
+ ],
+ "logic": {
+  "top_level": "pathways",
+  "max_nesting_depth": 3,
+  "k_of_n": [
+   {
+    "k": 1,
+    "n": 2,
+    "quote": "ONE of the following: a. A minimum score of 30 points on the motor portion of the Unified Parkinson Disease Rating Scale (UPDRS) ... OR b. Parkinson disease for at least 4 years."
+   }
+  ],
+  "exclusions_or_contraindications": "RNS has a contraindications clause inside the final ALL list: 'Do not have contraindications for RNS device placement (contradictions include 3 or more specific seizure foci, presence of primary generalized epilepsy, or presence of a rapidly progressive neurologic disorder).' Everything else is excluded by 'considered experimental or investigational'.",
+  "initial_vs_repeat": "Replacement pathway: 'Revision or replacement of an implanted neurostimulator meets the definition of medical necessity when all of the criteria above ... are met, the device is not functioning, and is no longer under warranty or cannot be repaired.' Also a NOTE: 'Pulse generator replacement can be expected and may be necessary 3 - 5 years following the initial placement'.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Members with Parkinson disease and ALL of the following: A good response to levodopa; AND Motor complications not controlled by pharmacologic therapy; AND ONE of the following:",
+    "why_ambiguous": "Capitalised ALL, per-bullet AND and a nested ONE: clear, but the AND at the end of each bullet is redundant with the lead-in and must be ignored not parsed as an operator."
+   },
+   {
+    "quote": "Unilateral or bilateral deep brain stimulation of the globus pallidus or subthalamic nucleus meets the definition of medical necessity for the following members: [Parkinson bullet] [dystonia bullet]",
+    "why_ambiguous": "Top-level bullets are alternatives but no OR is printed between them."
+   },
+   {
+    "quote": "all of the criteria above for deep brain stimulation or responsive neurostimulation are met",
+    "why_ambiguous": "'Above' is a positional reference spanning two separate pathways; which pathway applies depends on device type."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "diagnosis",
+   "quote": "disabling, medically unresponsive tremor due to essential tremor or Parkinson disease",
+   "where": "Position Statement DBS thalamus"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "A minimum score of 30 points on the motor portion of the Unified Parkinson Disease Rating Scale (UPDRS) when the member has been without medication for approximately 12 hours",
+   "where": "Position Statement DBS GPi/STN 1.c.a"
+  },
+  {
+   "kind": "age",
+   "quote": "Members seven (7) years of age or above with chronic, intractable (drug refractory) primary dystonia",
+   "where": "Position Statement DBS"
+  },
+  {
+   "kind": "age",
+   "quote": "Are 18 years or older;",
+   "where": "Position Statement RNS"
+  },
+  {
+   "kind": "symptom",
+   "quote": "Have an average of 3 or more disabling seizures ... per month over the prior 3 months;",
+   "where": "Position Statement RNS"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "Are refractory to medical therapy (have failed 2 or more appropriate antiepileptic medications at therapeutic doses);",
+   "where": "Position Statement RNS"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "Are not candidates for focal resective epilepsy surgery",
+   "where": "Position Statement RNS"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "Have a diagnosis of focal seizures with 1 or 2 well-localized seizure foci identified;",
+   "where": "Position Statement RNS"
+  },
+  {
+   "kind": "other",
+   "quote": "the device is not functioning, and is no longer under warranty or cannot be repaired",
+   "where": "Position Statement Revision/Replacement"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "UPDRS motor score off medication",
+   "value": ">= 30",
+   "unit": "points",
+   "quote": "A minimum score of 30 points on the motor portion of the Unified Parkinson Disease Rating Scale"
+  },
+  {
+   "quantity": "Parkinson disease duration",
+   "value": ">= 4",
+   "unit": "years",
+   "quote": "Parkinson disease for at least 4 years"
+  },
+  {
+   "quantity": "dystonia age",
+   "value": ">= 7",
+   "unit": "years",
+   "quote": "Members seven (7) years of age or above"
+  },
+  {
+   "quantity": "disabling seizures",
+   "value": ">= 3 per month",
+   "unit": "seizures/month",
+   "quote": "an average of 3 or more disabling seizures"
+  },
+  {
+   "quantity": "failed antiepileptic drugs",
+   "value": ">= 2",
+   "unit": "drugs",
+   "quote": "have failed 2 or more appropriate antiepileptic medications at therapeutic doses"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "off-medication interval for UPDRS",
+   "length": "approximately 12 hours",
+   "quote": "without medication for approximately 12 hours"
+  },
+  {
+   "what": "seizure-frequency look-back",
+   "length": "prior 3 months",
+   "quote": "per month over the prior 3 months"
+  },
+  {
+   "what": "medication trial for 'medically unresponsive' tremor (Definitions)",
+   "length": "at least 3 months before implant",
+   "quote": "inadequate control by maximal dosage of medication for at least 3 months before implant"
+  },
+  {
+   "what": "generator replacement interval (note)",
+   "length": "3-5 years",
+   "quote": "Pulse generator replacement can be expected and may be necessary 3 - 5 years"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": true,
+  "codes_tied_to_criteria": "ICD-10 list 'Diagnosis Codes That Support Medical Necessity' (G20, G21, G24, G25.0, G40.x) is a single list, not mapped to a specific CPT or pathway.",
+  "non_covered_code_lists": "None tagged inline."
+ },
+ "external_dependencies": [
+  {
+   "what": "CMS NCDs 160.7 and 160.24 reviewed for Medicare Advantage",
+   "quote": "The following National Coverage Determinations (NCDs) located at www.cms.gov were reviewed on the last guideline reviewed date"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Disabling, medically unresponsive tremor",
+   "definition_quote": "tremor causes significant limitation in daily activities and inadequate control by maximal dosage of medication for at least 3 months before implant."
+  },
+  {
+   "term": "UPDRS",
+   "definition_quote": "an overall assessment rating tool used to follow the longitudinal course of Parkinson's disease"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "A good response to levodopa",
+   "problem": "No threshold (percent improvement) given."
+  },
+  {
+   "quote": "Motor complications not controlled by pharmacologic therapy",
+   "problem": "Not defined; which complications, what 'controlled' means."
+  },
+  {
+   "quote": "well-localized seizure foci",
+   "problem": "Clinical judgment, no imaging/EEG standard."
+  },
+  {
+   "quote": "appropriate antiepileptic medications at therapeutic doses",
+   "problem": "'Appropriate' undefined; drug list absent."
+  },
+  {
+   "quote": "approximately 12 hours",
+   "problem": "Approximate window."
+  }
+ ],
+ "extraction_hazards": [
+  "Sub-headings 'Deep Brain Stimulation', 'Responsive Neurostimulation', 'Revision/Replacement' are plain lines without colon or numbering; only blank lines set them off.",
+  "Nested levels (bullet, nested bullet, a./b.) are distinguished only by indentation in the text.",
+  "'Revision/Replacement' refers to 'criteria above' with no anchor.",
+  "ICD-10 table has many G40.x rows whose long descriptions wrap onto a second line; HCPCS descriptions wrap similarly.",
+  "Definitions that carry a time window are 250 lines away from the criterion."
+ ],
+ "interesting_structures": [
+  "Two device technologies and a revision rule in one document, each with its own pathway; the same 'meets/experimental' lead-in recurs per pathway.",
+  "Scale-based threshold (UPDRS motor 30 off medication) combined with a duration alternative.",
+  "Position statement indicates replacement re-uses 'all of the criteria above': coverage chained to the original criteria.",
+  "'Medically unresponsive' defined only in DEFINITIONS."
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "why": "Pathways with all/any nesting map well, and leaves are mostly measurable. Strain: definitions that change thresholds, 'criteria above' reference, undefined clinical terms, and the need to know device type and hardware status (warranty)."
+ },
+ "file": "bcbsfl-02-61000-24-deep-brain-stimulation-and-responsive-neurostimula.pdf",
+ "treatment": "deep-brain-stimulation-and-responsive-ne",
+ "payer": "bcbsfl",
+ "doc_kind": "medical policy (Florida Blue Medical Coverage Guideline)"
+}

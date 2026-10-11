@@ -1,0 +1,166 @@
+{
+ "payer": "blueshield-ca-promise",
+ "doc_kind": "Medicaid policy (Medi-Cal managed care medical policy)",
+ "lines_of_business": [
+  "Blue Shield of California Promise Health Plan Medi-Cal (San Diego, Los Angeles Counties)"
+ ],
+ "effective_or_revised": "Original Policy Date December 1, 2025; Effective June 1, 2026",
+ "sections_in_order": [
+  "State Guidelines",
+  "Policy Statement",
+  "Policy Guidelines",
+  "Description",
+  "Regulatory Status",
+  "Rationale",
+  "Appendix 1 (clinical input)",
+  "References",
+  "Coding",
+  "Policy History",
+  "Definitions of Decision Determinations",
+  "Feedback",
+  "Appendix A"
+ ],
+ "criteria_location": "Policy Statement pp.1-3, with Medi-Cal state guidelines above it that 'supersede'. Policy Guidelines pp.3-6 are non-binding clinical input. 100 pages total.",
+ "procedures_covered": [
+  "Systemic HBOT",
+  "Topical HBOT (investigational)"
+ ],
+ "logic": {
+  "top_level": "pathways (16 covered indications; diabetic wounds and ISSHL have sub-criteria)",
+  "max_nesting_depth": 2,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "Investigational list 'in all other situations, including but not limited to'.",
+  "initial_vs_repeat": "None in criteria. Policy Guidelines recite UHMS regimens: 'reevaluation at 30-day intervals must show continued progress', 'Review is indicated after 10 treatments'.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Idiopathic sudden sensorineural hearing loss (SSNHL) and either of the following: 1. ... within 2 weeks ... 2. ... as salvage within 1 month",
+    "why_ambiguous": "Sub-items are an any-of, but the lead-in uses 'and'; conditions mix steroid co-therapy with timing"
+   },
+   {
+    "quote": "Any criteria that are not specifically addressed in the above Provider Manuals, please refer to the criteria below.",
+    "why_ambiguous": "Medi-Cal manual 'supersedes' but has 'no specific clinical guidelines', so the delegation resolves to the policy"
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "diagnosis",
+   "quote": "Acute carbon monoxide poisoning; Acute cyanide poisoning; Acute gas embolism ...",
+   "where": "Policy Statement II"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "no measurable signs of healing after 30 days of an adequate course of standard wound therapy",
+   "where": "II.K.2"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "wound classified as Wagner grade 3 or higher",
+   "where": "II.K.1"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "combined with steroid therapy within 2 weeks of onset of SSNHL",
+   "where": "II.J.1"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "combined with steroid therapy as salvage within 1 month of onset of SSNHL",
+   "where": "II.J.2"
+  },
+  {
+   "kind": "other",
+   "quote": "Profound anemia with exceptional blood loss and either of the following: transfusion impossible; must be delayed",
+   "where": "II.M"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "Wagner grade",
+   "value": ">= 3",
+   "unit": "grade",
+   "quote": "Wagner grade 3 or higher"
+  },
+  {
+   "quantity": "pressure",
+   "value": "> 1.4",
+   "unit": "ATA",
+   "quote": "HBOT refers to treatment at pressures greater than 1.4 atmospheres absolute"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "standard wound therapy",
+   "length": "30 days",
+   "quote": "after 30 days of an adequate course of standard wound therapy"
+  },
+  {
+   "what": "SSNHL steroid + HBOT",
+   "length": "within 2 weeks of onset; salvage within 1 month",
+   "quote": "within 2 weeks of onset of SSNHL"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Listed only; 'Inclusion or exclusion of a code(s) does not constitute or imply member coverage'. Medi-Cal manuals list the codes (TAR/non-standard benefits).",
+  "non_covered_code_lists": "none (A4575, E0446 listed)"
+ },
+ "external_dependencies": [
+  {
+   "what": "Medi-Cal Provider Manual and TAR lists supersede policy statement",
+   "quote": "this guideline supersedes the criteria in the Policy Statement section below"
+  },
+  {
+   "what": "EPSDT for under 21",
+   "quote": "For Members less than 21 years of age, a service is Medically Necessary if it meets the Early and Periodic Screening, Diagnostic, and Treatment (EPSDT) standard"
+  },
+  {
+   "what": "CCS experimental criteria",
+   "quote": "Criteria Determining Experimental/Investigational Status"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Medically Necessary",
+   "definition_quote": "reasonable and necessary services to protect life, to prevent significant illness or significant disability, or alleviate severe pain"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "Progressive necrotizing soft tissue infections",
+   "problem": "policy itself says 'No definition of \"progressive\" was identified'"
+  },
+  {
+   "quote": "adequate course of standard wound therapy",
+   "problem": "undefined"
+  },
+  {
+   "quote": "Chronic refractory osteomyelitis",
+   "problem": "undefined"
+  },
+  {
+   "quote": "Acute arterial peripheral insufficiency (outside of other listed medically necessary indications involving arterial insufficiency)",
+   "problem": "circular exclusion"
+  }
+ ],
+ "extraction_hazards": [
+  "100 pages; criteria p.1-3, Appendix A repeats the policy twice in side-by-side BEFORE/AFTER columns, creating duplicate text",
+  "Policy Statement preceded by supersession language",
+  "Appendix 1 contains stakeholder comments that read like criteria (e.g. UHMS 24-hour CRAO window)",
+  "Superscript reference numbers fused to text ('indication.1')"
+ ],
+ "interesting_structures": [
+  "Medicaid hierarchy: state guideline first, plan policy as fallback",
+  "Policy Guidelines say timing 'no broad statements ... can be provided' for CRAO despite 24-hour UHMS window",
+  "EPSDT age rule",
+  "Appendix A before/after diff"
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "scale": "1 = all/any/not expresses it cleanly ... 5 = needs new constructs",
+  "why": "Criteria are plain any/all, but the document defers to a state manual that may override them and contains non-binding guidance mixed in; Medicaid precedence is a meta-rule outside the tree."
+ },
+ "file": "bsca-promise-hyperbaric-oxygen-therapy.pdf",
+ "treatment": "hyperbaric-oxygen"
+}

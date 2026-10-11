@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "in-utero-intrauterine-fetal-surgery",
+  "title": "In Utero (Intrauterine) Fetal Surgery",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76F3FX62Y2JXKFMUOHT",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "03-59000-16",
+  "original_effective": "08/15/02",
+  "reviewed": "07/24/25",
+  "revised": "08/15/25",
+  "file": "bcbsfl-03-59000-16-in-utero-intrauterine-fetal-surgery.pdf",
+  "sha256": "9da210da12c31df38a714973a9e79bc2a76223632d8cfdef32f7cd5246657fd8",
+  "pages": 11,
+  "bytes": 641682,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original Effective Date 08/15/02; Reviewed 07/24/25; Revised 08/15/25 (11 pages)"
+}

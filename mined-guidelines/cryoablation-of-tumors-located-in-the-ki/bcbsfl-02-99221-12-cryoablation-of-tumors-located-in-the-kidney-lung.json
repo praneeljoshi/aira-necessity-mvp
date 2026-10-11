@@ -1,0 +1,19 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "cryoablation-of-tumors-located-in-the-ki",
+  "title": "Cryoablation of Tumors Located in the Kidney, Lung, Breast, Pancreas, or Bone",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76F6QZUGU882SOMM2HD",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-99221-12",
+  "original_effective": "02/15/04",
+  "reviewed": "09/25/25",
+  "revised": "10/15/25",
+  "file": "bcbsfl-02-99221-12-cryoablation-of-tumors-located-in-the-kidney-lung.pdf",
+  "sha256": "44590acdbe3230d84e2e87eda4ed06204ec024211fca1fe91a1f1101ab37130c",
+  "pages": 8,
+  "bytes": 630443,
+  "retrieved": "2026-10-09"
+}

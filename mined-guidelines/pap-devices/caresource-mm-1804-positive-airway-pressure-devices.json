@@ -1,0 +1,19 @@
+{
+  "payer": "CareSource",
+  "payer_key": "caresource",
+  "treatment": "pap-devices",
+  "title": "Positive Airway Pressure Devices",
+  "policy_number": "MM-1804",
+  "effective": "01/01/2026",
+  "url": "https://www.caresource.com/documents/marketplace-policy-medical-mm-1804-20260101.pdf",
+  "final_url": "https://www.caresource.com/documents/marketplace-policy-medical-mm-1804-20260101.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "caresource-mm-1804-positive-airway-pressure-devices.pdf",
+  "sha256": "e305a2f5698c84927d4c9f54078d9020ba0e43b6d00126eaba63c075d1a05f77",
+  "pages": 4,
+  "bytes": 183700,
+  "retrieved": "2026-10-09",
+  "printed_date": "Effective 01/01/2026; archived 09/30/2026 per history; issued 06/18/2025"
+}

@@ -1,0 +1,19 @@
+{
+  "payer": "Cigna",
+  "payer_key": "cigna",
+  "treatment": "blepharoplasty",
+  "title": "Blepharoplasty, Reconstructive Eyelid Surgery, and Brow Lift",
+  "policy_number": "0045",
+  "effective": "2026-04-15",
+  "url": "https://static.cigna.com/assets/chcp/pdf/coveragePolicies/medical/mm_0045_coveragepositioncriteria_blepharoplasty.pdf",
+  "final_url": "https://static.cigna.com/assets/chcp/pdf/coveragePolicies/medical/mm_0045_coveragepositioncriteria_blepharoplasty.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "cigna-0045-blepharoplasty-reconstructive-eyelid-surgery-and-b.pdf",
+  "sha256": "0ccb71bbe72977bd178395253d33c034bd96372c8770d00b0937cede574a71c7",
+  "pages": 13,
+  "bytes": 290707,
+  "retrieved": "2026-10-09",
+  "printed_date": "Effective 6/15/2026; next review 4/15/2027 (library metadata 2026-04-15 is the earlier annual-review date); focused review 6/15/2026 revised statements 'for clarity'"
+}

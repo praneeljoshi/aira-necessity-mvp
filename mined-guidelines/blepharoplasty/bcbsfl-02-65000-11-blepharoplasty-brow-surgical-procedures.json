@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "blepharoplasty",
+  "title": "Blepharoplasty/Brow Surgical Procedures",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76EYHS3TA2YW5F3DBHT",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-65000-11",
+  "original_effective": "04/27/00",
+  "reviewed": "04/24/25",
+  "revised": "05/15/25",
+  "file": "bcbsfl-02-65000-11-blepharoplasty-brow-surgical-procedures.pdf",
+  "sha256": "c86a4e0f043a789576a7895fe33c5e4512684dee9377aedca87e84aaac277225",
+  "pages": 8,
+  "bytes": 680901,
+  "retrieved": "2026-10-09",
+  "printed_date": "Policy 02-65000-11; original 04/27/00; reviewed 04/24/25; revised 05/15/25"
+}

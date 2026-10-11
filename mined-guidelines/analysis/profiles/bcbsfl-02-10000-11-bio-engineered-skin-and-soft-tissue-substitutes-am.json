@@ -1,0 +1,210 @@
+{
+ "lines_of_business": [
+  "All lines of business unless noted in PROGRAM EXCEPTIONS (disclaimer: \"THIS MEDICAL COVERAGE GUIDELINE APPLIES TO ALL LINES OF BUSINESS UNLESS OTHERWISE NOTED IN THE PROGRAM EXCEPTIONS SECTION\")",
+  "FEP: \"Follow FEP guidelines.\"",
+  "SAO: \"Follow SAO guidelines.\"",
+  "Medicare Advantage: NCD 270.5, LCD L36377/Article A57680 (DFU and VLU skin substitutes), LCD L33831/A54563 (surgical dressings) 'reviewed'",
+  "Step-therapy exemption paragraph (Florida law 627.42393) in Program Exceptions"
+ ],
+ "effective_or_revised": "Original Effective Date 01/01/01; Reviewed 04/23/26; Revised 10/01/26 (39 pages)",
+ "sections_in_order": [
+  "header block (guideline number, Original Effective Date, Reviewed, Revised, Subject)",
+  "disclaimer paragraph",
+  "navigation bar (Position Statement / Billing/Coding / Reimbursement / Program Exceptions / Definitions / Related Guidelines / Other / References / Updates)",
+  "DESCRIPTION",
+  "POSITION STATEMENT",
+  "BILLING/CODING INFORMATION",
+  "REIMBURSEMENT INFORMATION",
+  "PROGRAM EXCEPTIONS",
+  "DEFINITIONS",
+  "RELATED GUIDELINES",
+  "OTHER",
+  "REFERENCES",
+  "COMMITTEE APPROVAL",
+  "GUIDELINE UPDATE INFORMATION"
+ ],
+ "criteria_location": "POSITION STATEMENT, pp.3-12 (about 340 text lines). Real criteria are only a few lines at the top; the rest is a product-name list of ~257 bullets declared investigational. Application limits are in REIMBURSEMENT INFORMATION (p.28). Per-product codes in BILLING/CODING pp.13-27 carry '(Investigational)' tags (about 364 tags).",
+ "procedures_covered": [
+  "Breast reconstruction with allogeneic acellular dermal matrix (AlloDerm etc.)",
+  "Skin substitutes for diabetic lower-extremity ulcers (AlloPatch, Apligraf, Dermagraft, Integra, Kerecis Omega3, Primatrix, mVASC, TheraSkin)",
+  "Skin substitutes for venous-insufficiency ulcers (Apligraf, Oasis only)",
+  "Dystrophic epidermolysis bullosa (OrCel under HDE)",
+  "Second/third-degree burns (Epicel, Integra DRT, Primatrix)",
+  "Human amniotic membrane for non-healing diabetic LE ulcers (8 named products)",
+  "Amniotic fluid/micronized membrane injections (investigational)",
+  "Collagen dressings/wound fillers A6010, A6011, A6021-A6024",
+  "Skin cell suspension autograft 15011-15018 and 1044T-1049T (investigational)"
+ ],
+ "logic": {
+  "top_level": "pathways keyed by indication, and within each pathway the criterion is membership of a named product list; plus a very long 'all other products are investigational' denylist",
+  "max_nesting_depth": 2,
+  "k_of_n": [
+   {
+    "k": 1,
+    "n": 3,
+    "quote": "meets the definition of medical necessity for ONE of the following indications:"
+   }
+  ],
+  "exclusions_or_contraindications": "Collagen dressing: 'does not meet the definition of medical necessity for wounds with heavy exudate, third-degree burns, or when an active vasculitis is present.' Elsewhere 'All other uses ... do not meet' and 'All other indications not listed above are considered experimental or investigational'.",
+  "initial_vs_repeat": "No criteria for repeat use in the Position Statement; Reimbursement caps applications: 'Apligraf® is limited to five (5) applications per ulcer' and 're-treatment of a single wound using Apligraf®, Dermagraft® or OrCel™ ... is considered experimental or Investigational.'",
+  "and_or_ambiguity": [
+   {
+    "quote": "Treatment of chronic, noninfected, partial- or full-thickness lower extremity skin ulcers due to venous insufficiency, which have not adequately responded following a one-month period of conventional ulcer therapy, using the following ...",
+    "why_ambiguous": "'partial- or full-thickness' vs the DFU line 'full-thickness' only; 'adequately responded' and 'conventional ulcer therapy' undefined."
+   },
+   {
+    "quote": "Collagen-based dressing or wound filler meets the definition of medical necessity for full thickness wounds (e.g., stage 3 or 4 ulcers), wounds with light to moderate exudate, or wounds that have stalled or have not progressed toward a healing goal.",
+    "why_ambiguous": "Three coverage conditions joined by 'or', then exclusions in the next sentence; 'e.g.' makes stage 3/4 an example, not a rule."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "diagnosis",
+   "quote": "chronic, non-infected, full-thickness diabetic lower extremity ulcers",
+   "where": "Position Statement, DFU paragraph"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "which have not adequately responded following a one-month period of conventional ulcer therapy",
+   "where": "Position Statement, venous ulcer paragraph"
+  },
+  {
+   "kind": "other",
+   "quote": "AlloPatch®*  Apligraf®**  Dermagraft®** ... TheraSkin®.",
+   "where": "covered product list (product is the criterion)"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "Epicel® (for the treatment of deep dermal or full-thickness burns comprising a total body surface area of greater than or equal to 30% ...)",
+   "where": "burn paragraph"
+  },
+  {
+   "kind": "other",
+   "quote": "when provided in accordance with the Humanitarian Device Exemption (HDE) specifications of the FDA",
+   "where": "OrCel and Epicel"
+  },
+  {
+   "kind": "symptom",
+   "quote": "insufficient tissue expander or implant coverage by the pectoralis major muscle and additional coverage is required",
+   "where": "breast reconstruction bullets (one of three)"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "burn total body surface area (Epicel)",
+   "value": ">= 30",
+   "unit": "%",
+   "quote": "total body surface area of greater than or equal to 30%"
+  },
+  {
+   "quantity": "Apligraf applications",
+   "value": "<= 5",
+   "unit": "per ulcer",
+   "quote": "Apligraf® is limited to five (5) applications per ulcer."
+  },
+  {
+   "quantity": "Dermagraft applications",
+   "value": "<= 8",
+   "unit": "per site per 12 weeks",
+   "quote": "Dermagraft® is limited to eight (8) applications per treatment site over a twelve (12) week period."
+  },
+  {
+   "quantity": "collagen dressings",
+   "value": "<= 26",
+   "unit": "units per site per 6 months",
+   "quote": "Dressings are limited to 26 units per treatment site per 6-month period."
+  },
+  {
+   "quantity": "nonhealing ulcer definition",
+   "value": "< 20% decrease in area",
+   "unit": "% over 2 weeks",
+   "quote": "Nonhealing- less than a 20% decrease in wound area with standard wound care for at least 2 weeks."
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "conventional ulcer therapy before venous-ulcer substitute",
+   "length": "one month",
+   "quote": "following a one-month period of conventional ulcer therapy"
+  },
+  {
+   "what": "Dermagraft application window",
+   "length": "12 weeks",
+   "quote": "eight (8) applications per treatment site over a twelve (12) week period"
+  },
+  {
+   "what": "collagen dressing dwell",
+   "length": "7 days",
+   "quote": "can stay in place up to 7 days"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": true,
+  "codes_tied_to_criteria": "Partly. HCPCS Q-codes are one per product and each is tagged '(Investigational)' where the product is not covered, so the code list is itself a deny list. ICD-10 table (breast cancer C50.*, D05, E08-E13 foot ulcers, I83 varicose with ulcer, etc.) is a flat support list not mapped to the per-indication paragraphs. 'Application codes (15271-15278, G0681-G0684) must be submitted with product codes' and are denied with investigational products.",
+  "non_covered_code_lists": "15011-15018, 1044T-1049T, and many Q4xxx/A2xxx product codes labelled '(Investigational)'; the ICD ranges are sloppy (e.g. 'C50.411 – C50.519' spans categories)."
+ },
+ "external_dependencies": [
+  {
+   "what": "Medicare Advantage LCD L36377 / Article A57680 for DFU and VLU skin substitutes; LCD L33831 surgical dressings; NCD 270.5",
+   "quote": "The following were reviewed on the last guideline reviewed date: Local Coverage Determination (LCD) Application of Skin Substitute Grafts for Treatment of DFU and VLU of Lower Extremities (L36377)"
+  },
+  {
+   "what": "FDA status carried by footnote symbols",
+   "quote": "* Banked Human Tissue. ** FDA premarket approval. *** FDA 510(k) clearance. **** FDA-approved under an HDE."
+  },
+  {
+   "what": "Florida step-therapy exemption law",
+   "quote": "in compliance with Florida law 627.42393, members or providers may request a step therapy protocol exemption"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Nonhealing",
+   "definition_quote": "less than a 20% decrease in wound area with standard wound care for at least 2 weeks."
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "conventional ulcer therapy",
+   "problem": "no definition or components listed."
+  },
+  {
+   "quote": "adequately responded",
+   "problem": "no healing-rate threshold (unlike 'Nonhealing' definition)."
+  },
+  {
+   "quote": "including, but not limited to",
+   "problem": "investigational list is explicitly open-ended, so a product not in it is also investigational."
+  },
+  {
+   "quote": "wounds that have stalled or have not progressed toward a healing goal",
+   "problem": "'stalled' and 'healing goal' undefined."
+  }
+ ],
+ "extraction_hazards": [
+  "Position Statement is ~340 lines, ~257 of them are product names in a bullet list; 286 '•' characters in three layouts ('•  name' on one line, a lone '•' with the name on the next line, or a name with no bullet), and the list breaks across pages with indentation changes.",
+  "Footnote asterisks (*, **, ***, ****) after product names carry FDA status and are footnoted below the list; a parser that strips asterisks loses 'Banked Human Tissue' and HDE conditions.",
+  "Brand names with ®/™ symbols, line-wrapped names ('Amnio-maxx or Manio-maxx lite'), and typos ('Aongen', 'Amniorepair or AltiPly') make exact matching fragile.",
+  "Coding section is ~700 lines: 'Qxxxx name, per square centimeter (add-on, list separately ...)' with '(Investigational)' on the next, indented line; the tag detaches from its code on line wraps.",
+  "Page-break ('\\f') falls in the middle of the product list; no repeated header text but indentation shifts after the break.",
+  "Two criteria are only reachable through the Reimbursement section (application caps) while the Position Statement says nothing of limits."
+ ],
+ "interesting_structures": [
+  "Coverage is a lookup: indication x product list; whether a product is covered is data, not logic.",
+  "Denylist of ~257 named products and an explicit 'all other' catch-all, mirrored in billing codes tagged (Investigational).",
+  "Per-product quantity limits in the Reimbursement section (applications per ulcer, per site per 12 weeks).",
+  "Four different FDA-status footnote markers drive meaning on covered products.",
+  "Document title carries two topics ('Skin and Soft Tissue Substitutes; Amniotic Membrane and Amniotic Fluid') plus collagen dressings and skin cell suspension autografts."
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "scale": "1..5",
+  "why": "each indication is a small any-of/all-of, but the heart of the document is product-list membership, a 257-name denylist and per-product caps in another section; it needs a product lookup table beside the tree rather than more tree."
+ },
+ "file": "bcbsfl-02-10000-11-bio-engineered-skin-and-soft-tissue-substitutes-am.pdf",
+ "treatment": "bio-engineered-skin-and-soft-tissue-subs",
+ "payer": "bcbsfl",
+ "doc_kind": "medical policy (Florida Blue 'Medical Coverage Guideline', MCG)"
+}

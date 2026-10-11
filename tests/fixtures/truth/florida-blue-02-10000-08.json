@@ -1,0 +1,93 @@
+{
+  "id": "florida-blue-02-10000-08",
+  "payer": "Florida Blue",
+  "payer_aliases": ["Florida Blue", "BCBS FL", "BCBSFL", "Blue Cross Blue Shield of Florida", "Blue Cross and Blue Shield of Florida", "BCBS of Florida"],
+  "title": "Dermabrasion, Chemical Peels, Salabrasion, and Acne Surgery",
+  "guideline_number": "02-10000-08",
+  "effective_date": "2002-05-15",
+  "reviewed_date": "2026-01-22",
+  "source_file": "bcbsfl-02-10000-08-dermabrasion-chemical-peel-salabrasion-and-acne-su.pdf",
+  "plan_types": ["All lines of business unless otherwise noted in the Program Exceptions section"],
+  "excluded_plans": ["Federal Employee Program (FEP)", "State Account Organization (SAO)", "Medicare Advantage products"],
+  "scope": {
+    "cpt": {
+      "10040": "covered",
+      "15780": "covered", "15781": "covered", "15782": "covered", "15783": "covered",
+      "15788": "covered", "15789": "covered", "15792": "covered", "15793": "covered",
+      "17110": "non_covered", "17111": "non_covered",
+      "17340": "non_covered", "17360": "non_covered",
+      "96567": "non_covered", "96570": "non_covered", "96571": "non_covered", "96573": "non_covered", "96574": "non_covered",
+      "96900": "non_covered",
+      "E0691": "non_covered", "E0692": "non_covered", "E0693": "non_covered"
+    },
+    "icd10": ["D48.5", "L57.0", "L70.0-L70.9"]
+  },
+  "criteria": [
+    {"id": "ak_10_or_more_lesions", "text": "There are ≥10 actinic keratoses or other premalignant skin lesions present such that treatment of the individual lesions becomes impractical", "question": "Are 10 or more actinic keratoses or other premalignant skin lesions present, such that treating the individual lesions is impractical?", "threshold": {"kind": "number", "op": "gte", "value": 10, "unit": "lesions"}},
+    {"id": "ak_topical_5fu_imiquimod_failure", "text": "Documented treatment failure using topical 5-fluorouracil (5-FU) or topical imiquimod", "question": "Is treatment failure with topical 5-fluorouracil (5-FU) or topical imiquimod documented?"},
+    {"id": "ak_topical_contraindicated", "text": "unless contraindicated", "question": "Is topical 5-fluorouracil (5-FU) and topical imiquimod therapy contraindicated for this patient?"},
+    {"id": "active_acne", "text": "active acne", "question": "Does the patient have active acne (not acne scarring)?"},
+    {"id": "acne_failed_antibiotic_trial", "text": "failed a trial of topical or oral antibiotic acne therapy", "question": "Has the acne failed a trial of topical or oral antibiotic therapy?"},
+    {"id": "acne_surgery_initial_inflamed_cysts", "text": "As an initial treatment when the presence of inflamed cysts or pustules is documented", "question": "Is acne surgery the initial treatment, with the presence of inflamed cysts or pustules documented?"},
+    {"id": "acne_surgery_medication_failure", "text": "Documentation supports failure of initial medication treatments (e.g. oral contraceptive hormone therapy, antibiotics, retinoids)", "question": "Does documentation support failure of initial medication treatments (e.g., oral contraceptive hormone therapy, antibiotics, retinoids)?"},
+    {"id": "acne_surgery_medication_side_effects", "text": "Documentation supports development of side effects of initial medication treatments", "question": "Does documentation support development of side effects from initial medication treatments?"}
+  ],
+  "scenarios": [
+    {
+      "id": "actinic_keratosis_dermabrasion_dermal_peel",
+      "name": "Dermabrasion or dermal chemical peels for treatment of actinic keratosis",
+      "applies_to_cpt": ["15780", "15781", "15782", "15783", "15789", "15793"],
+      "requires": {"type": "all", "label": "ALL of the following", "children": [
+        {"type": "leaf", "criterion": "ak_10_or_more_lesions"},
+        {"type": "any", "label": "Documented treatment failure using topical 5-FU or topical imiquimod, unless contraindicated", "children": [
+          {"type": "leaf", "criterion": "ak_topical_5fu_imiquimod_failure"},
+          {"type": "leaf", "criterion": "ak_topical_contraindicated"}
+        ]}
+      ]}
+    },
+    {
+      "id": "epidermal_peel_active_acne",
+      "name": "Epidermal chemical peels for active acne that has failed antibiotic acne therapy",
+      "applies_to_cpt": ["15788", "15792"],
+      "requires": {"type": "all", "label": "Active acne that has failed a trial of topical or oral antibiotic acne therapy", "children": [
+        {"type": "leaf", "criterion": "active_acne"},
+        {"type": "leaf", "criterion": "acne_failed_antibiotic_trial"}
+      ]},
+      "notes": ["In this setting, superficial chemical peels with 40% to 70% alpha hydroxy acids are used as a comedolytic therapy (descriptive; not built as a criterion)."]
+    },
+    {
+      "id": "acne_surgery",
+      "name": "Acne surgery (marsupialization, opening or removal of multiple milia, comedones, cysts, pustules)",
+      "applies_to_cpt": ["10040"],
+      "requires": {"type": "any", "label": "ONE of the following situations", "children": [
+        {"type": "leaf", "criterion": "acne_surgery_initial_inflamed_cysts"},
+        {"type": "leaf", "criterion": "acne_surgery_medication_failure"},
+        {"type": "leaf", "criterion": "acne_surgery_medication_side_effects"}
+      ]}
+    }
+  ],
+  "exclusions": [
+    {"text": "The following therapies are considered experimental or investigational for the treatment of active acne:", "cpt": ["15780", "15781", "15782", "15783", "15789", "15793", "17110", "17111", "96567", "96570", "96571", "96573", "96574", "96900", "E0691", "E0692", "E0693"]},
+    {"text": "The following therapies are considered cosmetic and do not meet the definition of medical necessity for the treatment of acne scarring and other untoward cosmetic effects of acne, as the sole purpose is to improve appearance:", "cpt": ["15780", "15781", "15782", "15783", "15788", "15789", "15792", "15793", "17110", "17111", "96567", "96570", "96571", "96573", "96574", "96900", "E0691", "E0692", "E0693"]},
+    {"text": "Dermabrasion, chemical peels, salabrasion, photodynamic therapy, light, or lasers are considered cosmetic and do not meet the definition of medical necessity for any of the following indications, as the sole purpose is to improve appearance (the list is not all-inclusive):", "cpt": ["15780", "15781", "15782", "15783", "15788", "15789", "15792", "15793", "17110", "17111", "96567", "96570", "96571", "96573", "96574", "96900", "E0691", "E0692", "E0693"]},
+    {"text": "Cryotherapy (CO2 slush, liquid N2) for acne (non-covered)", "cpt": ["17340"]},
+    {"text": "Chemical exfoliation for acne (e.g., acne paste, acid) (non-covered)", "cpt": ["17360"]},
+    {"text": "Actinotherapy (ultraviolet light) (not covered for acne treatment)", "cpt": ["96900"]}
+  ],
+  "notes": [
+    "Built from the single clean copy in the PDF (no redline). Dates: Original Effective Date 05/15/02 (effective_date), Reviewed 01/22/26 (reviewed_date), Revised 02/15/26.",
+    "Code-to-pathway mapping follows the document's own ICD-10 section, which ties diagnosis codes to CPT groups: 'ICD-10 Diagnosis Codes That Support Medical Necessity for CPT codes 15780, 15781, 15782, 15783, 15789, & 15793: D48.5, L57.0' (actinic keratosis / neoplasm of uncertain behavior) -> actinic_keratosis_dermabrasion_dermal_peel (dermabrasion 15780-15783 and dermal peels 15789/15793). 'ICD-10 ... for CPT codes 10040, 15788 & 15792: L70.0 - L70.9 (Acne)' -> 15788/15792 (epidermal peels) to epidermal_peel_active_acne and 10040 to acne_surgery. 15783 (superficial dermabrasion, e.g. tattoo removal) is included in the AK pathway because the document lists it with the AK diagnosis codes, even though tattoo removal itself is a cosmetic exclusion.",
+    "Scope tags: 17340 and 17360 are marked '(non-covered)' in the code table and are the only codes for cryotherapy / chemical exfoliation for acne, so non_covered. 17110, 17111, 96567, 96570, 96571, 96573, 96574, 96900, E0691, E0692 and E0693 are each marked '(not covered for acne treatment)' in the code table; the position statement calls lasers, light and photodynamic therapy experimental/investigational for active acne and cosmetic for acne scarring and the cosmetic indications, and no pathway in this document covers them for anything, so they are tagged non_covered per the code table annotation (the table annotation is the document's statement about the code itself; 'investigational' would also be defensible for the laser/light/PDT codes from the position statement wording). Their coverage for indications outside this guideline (e.g., UV therapy for psoriasis, PDT for premalignant lesions under BCBSA 2.01.44) is not decided here.",
+    "Actinic keratosis pathway: '≥10 actinic keratoses or other premalignant skin lesions present such that treatment of the individual lesions becomes impractical' is one leaf with threshold >= 10 lesions; 'such that ... impractical' is the consequence of the count, not a separate documentable requirement. The second bullet 'Documented treatment failure using topical 5-fluorouracil (5-FU) or topical imiquimod, unless contraindicated' is any(treatment failure, contraindicated). Failure with either agent suffices ('or').",
+    "Epidermal chemical peels pathway: 'active acne that has failed a trial of topical or oral antibiotic acne therapy' split into 'active acne' and 'failed a trial of topical or oral antibiotic acne therapy' (either topical or oral suffices). The sentence 'In this setting, superficial chemical peels with 40% to 70% alpha hydroxy acids are used as a comedolytic therapy' is descriptive ('are used'), not a requirement, and is left out; a reviewer could read it as a required peel strength.",
+    "Acne surgery pathway: ONE of three situations; the first is read as initial treatment with documented inflamed cysts or pustules (one leaf, since 'as an initial treatment' and 'presence ... documented' describe one situation). The document does not separately require a diagnosis of acne for acne surgery; the situations imply it, and the ICD-10 section ties 10040 to L70.0-L70.9.",
+    "Exclusions: the three position-statement lists are each one exclusion with the stem sentence as verbatim text (the PDF's bullet glyph prevents a verbatim span across the stem and its bullets). List 1 (experimental/investigational for active acne): Dermabrasion, Dermal Chemical peels, Salabrasion, Lasers, Light, Photodynamic therapy -> dermabrasion 15780-15783, dermal peels 15789/15793, laser destruction 17110/17111, light 96900/E0691-E0693, PDT 96567-96574; salabrasion has no code. List 2 (cosmetic for acne scarring): Dermabrasion, Chemical peels (epidermal and dermal), Salabrasion, Lasers, Light, PDT -> same codes plus 15788/15792. List 3 (cosmetic for photoaged skin, skin rejuvenation, uneven epidermal pigmentation, wrinkles, hair removal, tattoo removal; 'not all-inclusive') -> same codes as list 2. These exclusions are indication-specific: dermabrasion and chemical peel codes remain covered under their pathways for actinic keratosis / active acne.",
+    "The code-table annotations '(non-covered)' on 17340 and 17360 and '(not covered for acne treatment)' on 96900 are recorded as exclusions with the code descriptor as verbatim text. The identical '(not covered for acne treatment)' annotation on 17110, 17111, 96567-96574 and E0691-E0693 is carried by their non_covered scope tags and by list 1's code list rather than as separate exclusions.",
+    "The Description's 'The treatment of acne scarring is considered cosmetic in nature and therefore is not a contract benefit' restates position-statement list 2 and is not duplicated as an exclusion. The Description's statements that medium-depth peel patients 'are advised to wait at least 3 months' and that repeat medium-depth peels 'should not be performed for at least 1 year', and the AAD recommendation 'for patients 18 years and older', are background / advisory and not built as criteria.",
+    "'The evidence is insufficient to determine the effects of the technology on health outcomes' is the rationale for list 1, not a separate exclusion.",
+    "Left out: the Description section, the Summary and Analysis of Evidence, Definitions, the step therapy protocol exemption paragraph, and the LOINC section (this document has none).",
+    "Program exceptions: FEP follows FEP guidelines, SAO follows SAO guidelines, Medicare Advantage products follow NCD 250.4 (Treatment of Actinic Keratosis) and LCD L38914 (Cosmetic and Reconstructive Surgery); all three listed as excluded_plans.",
+    "No criterion in the document carries a duration; the only numeric threshold is the >= 10 lesion count."
+  ],
+  "status": "ok"
+}

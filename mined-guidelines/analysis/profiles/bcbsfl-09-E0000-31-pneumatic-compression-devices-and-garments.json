@@ -1,0 +1,203 @@
+{
+ "file": "bcbsfl-09-E0000-31-pneumatic-compression-devices-and-garments.pdf",
+ "treatment": "pneumatic-compression",
+ "payer": "bcbsfl",
+ "doc_kind": "medical coverage guideline (payer medical policy)",
+ "lines_of_business": [
+  "All lines of business unless noted",
+  "FEP: follow FEP guidelines",
+  "SAO: follow SAO guidelines",
+  "Medicare Advantage: NCD 280.1, NCD 280.6, LCD L33831",
+  "WHCRA 1998 federal mandate takes precedence"
+ ],
+ "effective_or_revised": "Original 11/15/02; Reviewed 03/26/26; Revised 04/15/26",
+ "sections_in_order": [
+  "Description",
+  "Position Statement",
+  "Billing/Coding Information",
+  "Reimbursement Information",
+  "Program Exceptions",
+  "Definitions",
+  "Related Guidelines",
+  "Other",
+  "References",
+  "Updates"
+ ],
+ "criteria_location": "Position Statement (about 2 pages, after a long Description that is mostly evidence summary). Replacement rules, continued-use rules and DVT note are also in Position Statement. Documentation requirements are in the LOINC table in Billing/Coding.",
+ "procedures_covered": [
+  "Nonprogrammable single compartment (E0650) / multichamber (E0651) pumps for limb",
+  "Programmable pumps (E0652) for limb",
+  "Pumps with chest/trunk appliances (nonprogrammable and programmable)",
+  "Continued use",
+  "Gradient compression garments, wraps, bandages (A6xxx, S84xx) for lymphedema and other listed conditions",
+  "Replacement of garments within 6 months",
+  "Non-pneumatic compression (Dayspring, Koya, Venowave) - investigational",
+  "Head/neck, venous ulcers, PAD - investigational",
+  "Post-surgical DVT prophylaxis devices"
+ ],
+ "logic": {
+  "top_level": "pathways: one paragraph per device tier, each with its own all-of; tiers refer to each other ('otherwise eligible for nonprogrammable')",
+  "max_nesting_depth": 3,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "Anything not listed is 'experimental or investigational in all situations other than those specified above'; explicit investigational list (head/neck, venous ulcers, PAOD, non-pneumatic).",
+  "initial_vs_repeat": "'Continued use' block (adherence AND objective improvement AND safe home use); separate garment replacement rule within 6 months.",
+  "and_or_ambiguity": [
+   {
+    "quote": "The individual is otherwise eligible for nonprogrammable pneumatic pumps applied to the chest or trunk in addition to the limbs AND • There is documentation that the individual has unique characteristics ... OR • The individual has had an inadequate response to an initial course of treatment",
+    "why_ambiguous": "AND then OR at the same bullet level: could be A AND (B OR C) or (A AND B) OR C."
+   },
+   {
+    "quote": "meet the definition of medical necessity when used as a first-line therapy for lymphedema, and for the following conditions:",
+    "why_ambiguous": "Unclear whether garments are covered for lymphedema first-line AND for the listed conditions, or either."
+   },
+   {
+    "quote": "programmable lymphedema pumps (E0652) applied to the limb meet the definition of medical necessity for the treatment of lymphedema when",
+    "why_ambiguous": "'Lymphedema' diagnosis is a prerequisite but is only established by the ICD-10 code list."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "diagnosis",
+   "quote": "for the treatment of lymphedema that has failed to respond to conservative measures, such as elevation of the limb and use of compression garments",
+   "where": "Position Statement para 1"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "conservative measures, such as elevation of the limb and use of compression garments",
+   "where": "para 1 (no duration, no list completeness)"
+  },
+  {
+   "kind": "other",
+   "quote": "documentation that the individual has unique characteristics that prevent satisfactory pneumatic compression ... (eg, significant scarring, contractures)",
+   "where": "E0652 limb"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "lymphedema that has failed to adequately respond to both conservative measures and nonprogrammable pneumatic compression to the limbs only",
+   "where": "trunk/chest"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "clinical documentation confirms ongoing medical necessity, including objective evidence of improvement (e.g., reduction in limb volume, improved ulcer healing, or decreased edema)",
+   "where": "Continued use"
+  },
+  {
+   "kind": "patient commitment",
+   "quote": "The member demonstrates adherence to prescribed therapy",
+   "where": "Continued use"
+  },
+  {
+   "kind": "functional impairment",
+   "quote": "The member or caregiver can safely apply and operate the device in the home setting.",
+   "where": "Continued use"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "A written, signed, and dated physician order is obtained by the supplier before dispensing the replacement item",
+   "where": "Garment replacement"
+  },
+  {
+   "kind": "duration",
+   "quote": "Replacement of gradient compression garments, wraps, or bandages within a six (6)-month interval",
+   "where": "Garment replacement"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "I89.0 Lymphedema, not elsewhere classified [secondary]; I97.2 Postmastectomy lymphedema syndrome; Q82.0 Hereditary lymphedema [congenital]",
+   "where": "ICD-10 codes that support medical necessity"
+  },
+  {
+   "kind": "other",
+   "quote": "physician documentation of contraindication to pharmacological DVT prophylaxis following surgery",
+   "where": "DVT NOTE"
+  }
+ ],
+ "thresholds": [],
+ "time_windows": [
+  {
+   "what": "garment replacement interval",
+   "length": "6 months",
+   "quote": "Replacement of gradient compression garments, wraps, or bandages within a six (6)-month interval"
+  },
+  {
+   "what": "documentation recency (LOINC)",
+   "length": "6 months or fewer before service",
+   "quote": "observations made six months or fewer before starting date of service for the claim"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": true,
+  "codes_tied_to_criteria": "Position Statement cites E0650, E0651, E0652, A6566/A6567 and long garment code list; ICD-10 limited to I89.0, I97.2, Q82.0 as 'support medical necessity'.",
+  "non_covered_code_lists": "E0675, E0676, E0677-E0683 etc. marked '(investigational)' in HCPCS table."
+ },
+ "external_dependencies": [
+  {
+   "what": "CMS NCD 280.6 Pneumatic Compression Devices, NCD 280.1, LCD L33831 for Medicare Advantage",
+   "quote": "Pneumatic Compression Devices (280.6), located at cms.gov"
+  },
+  {
+   "what": "Federal mandate WHCRA 1998",
+   "quote": "The Federal Mandate on Women's Health and Cancer Rights Act (WHCRA) of 1998 ... will take precedence over this policy"
+  },
+  {
+   "what": "Florida step therapy exemption",
+   "quote": "in compliance with Florida law 627.42393"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Single chamber or multichamber programmable pumps",
+   "definition_quote": "it is possible to adjust the pressure manually in the individual compartments and/or the length and frequency of the inflation cycles"
+  },
+  {
+   "term": "Multichamber nonprogrammable pumps",
+   "definition_quote": "they do not include the ability to adjust the pressure manually in individual compartments"
+  },
+  {
+   "term": "Lymphedema",
+   "definition_quote": "the accumulation of fluid in soft tissue, often the result of surgery, radiation or the presence of a tumor"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "failed to respond to conservative measures, such as elevation of the limb and use of compression garments",
+   "problem": "No duration, no minimum components, no definition of 'failed'; 'such as' open list."
+  },
+  {
+   "quote": "unique characteristics that prevent satisfactory pneumatic compression",
+   "problem": "Examples only (scarring, contractures, recent surgery)."
+  },
+  {
+   "quote": "inadequate response to an initial course of treatment",
+   "problem": "Undefined course and response."
+  },
+  {
+   "quote": "adherence to prescribed therapy",
+   "problem": "No usage threshold."
+  },
+  {
+   "quote": "by individual case consideration",
+   "problem": "DVT exception is discretionary."
+  }
+ ],
+ "extraction_hazards": [
+  "Description is ~100 lines of evidence reviews placed BEFORE the Position Statement; reader must skip it.",
+  "Garment code list (A6515 ... S8429) is a wall of comma-separated codes inside a sentence of criteria.",
+  "HCPCS table includes '(investigational)' annotations on rows that wrap lines.",
+  "Position Statement runs several unrelated topics (pumps, garments, DVT, WHCRA) back to back without headings.",
+  "Footnoted reference to Women's Health and Cancer Rights Act overrides criteria."
+ ],
+ "interesting_structures": [
+  "Tiered device ladder: nonprogrammable limb -> programmable limb -> trunk nonprogrammable -> trunk programmable.",
+  "Garment replacement subpolicy with 6-month interval.",
+  "Statutory override (WHCRA).",
+  "Continued-use criteria separate from initial."
+ ],
+ "fit_to_tree": {
+  "score": 2,
+  "scale": "1 clean ... 5 judgment",
+  "why": "Short and mostly all/any, but 'failed conservative measures' has no definition and the tiering needs reference to other nodes."
+ }
+}

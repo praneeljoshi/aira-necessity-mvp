@@ -1,0 +1,213 @@
+{
+ "file": "blueshieldca-bsc7-16-knee-arthroscopy-in-knee-osteoarthritis.pdf",
+ "treatment": "knee-arthroscopy",
+ "payer": "blueshield-ca",
+ "doc_kind": "medical policy",
+ "lines_of_business": [
+  "Not stated on the document; Blue Shield of California members; contract language controls"
+ ],
+ "effective_or_revised": "Original 6/1/2018; page 1 header Effective December 1, 2025 (library metadata says 2024-12-01); policy history last row 12/01/2025",
+ "sections_in_order": [
+  "Policy Statement",
+  "Policy Guidelines",
+  "Description",
+  "Related Policies",
+  "Benefit Application",
+  "Regulatory Status",
+  "Rationale",
+  "Summary of Evidence",
+  "Supplemental Information (Practice Guidelines, Medicare National Coverage)",
+  "References",
+  "Documentation for Clinical Review",
+  "Coding",
+  "Policy History",
+  "Feedback",
+  "Appendix A"
+ ],
+ "criteria_location": "Policy Statement p.1 (I.A-F and II) but the definitions of 'conservative therapy', K&L and Outerbridge, relative contraindications and the acute-injury exception are in Policy Guidelines pp.1-2 behind asterisk footnotes (*, **, ***). Documentation list p.9-10. Scope is narrow: degenerative tears and chondroplasty in OA only; other knee arthroscopy explicitly not addressed.",
+ "procedures_covered": [
+  "Knee arthroscopy with arthroscopic partial meniscectomy/chondroplasty for degenerative tears in knee OA (CPT 29880, 29881)"
+ ],
+ "logic": {
+  "top_level": "all (I.A-F) plus a separate not-medically-necessary rule (II)",
+  "max_nesting_depth": 3,
+  "k_of_n": [
+   {
+    "k": 6,
+    "n": 6,
+    "quote": "Conservative Treatment ... should have non-surgical treatment documented ... including all of the following, unless contraindicated"
+   }
+  ],
+  "exclusions_or_contraindications": "II: severe OA Grade 3 or 4 is NMN. I.D repeats it as a negative leaf. I.F: not for lavage/debridement with knee pain only. Relative contraindications (BMI>40, age<50) in footnote; they do not exclude, they require exhausting non-surgical options.",
+  "initial_vs_repeat": "None.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Kellgren & Lawrence or Outerbridge Grade 3 greater than 1.5cm or Grade 4",
+    "why_ambiguous": "Reads as K&L OR Outerbridge; which scale governs if they disagree is not said. 'Grade 3 greater than 1.5cm' attaches size to Outerbridge only. II says grade 3 or 4 on either scale, which is stricter than I.D (grade 3 >1.5 cm)."
+   },
+   {
+    "quote": "Underlying knee osteoarthritis, including degenerative tears of the meniscus in the setting of osteoarthritis",
+    "why_ambiguous": "Requires OA as a condition for coverage, yet II denies severe OA; the covered window is mild/moderate OA that the policy never states positively."
+   },
+   {
+    "quote": "including all of the following, unless contraindicated: ... Weight reduction counseling as appropriate ... Therapeutic injections into the knee as appropriate",
+    "why_ambiguous": "'All of' plus 'as appropriate/optional' in the same list; an all-of that is partly optional."
+   },
+   {
+    "quote": "indicated without 6 weeks of conservative therapy in injuries caused by acute events, in the absence of osteoarthritis. These include non-degenerative meniscal tears leading to a locked knee, recurrent giving way, and/or amenable to repair",
+    "why_ambiguous": "'and/or'; and these contradict I.A (OA required), so the acute pathway is outside the policy's own scope."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "diagnosis",
+   "quote": "Underlying knee osteoarthritis, including degenerative tears of the meniscus in the setting of osteoarthritis",
+   "where": "Policy Statement I.A"
+  },
+  {
+   "kind": "symptom",
+   "quote": "Documentation of knee symptomatology, including history, physical exam (e.g., knee swelling/effusion and painful range of motion)",
+   "where": "I.B"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "MRI radiological report with results and interpretation indicating meniscal tear",
+   "where": "I.C"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "No evidence of severe osteoarthritis by radiographic imaging (weight-bearing plain films, MRI, and/or CT scan)",
+   "where": "I.D"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "Documentation of unsuccessful conservative therapy for at least six weeks",
+   "where": "I.E"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "Anti-inflammatory medications or analgesics; Activity modification; Supervised physical therapy ...; Weight reduction counseling as appropriate; Assistive device use; Therapeutic injections",
+   "where": "Policy Guidelines, Conservative Treatment"
+  },
+  {
+   "kind": "exclusion",
+   "quote": "The procedure is NOT for arthroscopic lavage and debridement for persons presenting with knee pain only",
+   "where": "I.F"
+  },
+  {
+   "kind": "BMI/comorbidity",
+   "quote": "morbid obesity (body mass index [BMI] greater than 40), or age less than 50 years unless there are no other treatment options",
+   "where": "Policy Guidelines ***, relative contraindications"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "Prior conservative treatments, duration, and response or reason conservative treatment is inappropriate",
+   "where": "Documentation for Clinical Review p.9"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "Modified Outerbridge scale Grade/K&L Scale Grade, as applicable",
+   "where": "Documentation for Clinical Review"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "conservative therapy duration",
+   "value": ">= 6",
+   "unit": "weeks",
+   "quote": "unsuccessful conservative therapy for at least six weeks"
+  },
+  {
+   "quantity": "K&L / Outerbridge exclusion",
+   "value": "Grade 3 (>1.5 cm) or 4",
+   "unit": "grade",
+   "quote": "Outerbridge Grade 3 greater than 1.5cm or Grade 4"
+  },
+  {
+   "quantity": "BMI relative contraindication",
+   "value": "> 40",
+   "unit": "kg/m2",
+   "quote": "morbid obesity (body mass index [BMI] greater than 40)"
+  },
+  {
+   "quantity": "age relative contraindication",
+   "value": "< 50",
+   "unit": "years",
+   "quote": "age less than 50 years unless there are no other treatment options"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "conservative therapy before meniscectomy/chondroplasty",
+   "length": "6 weeks",
+   "quote": "at least six weeks"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Only 29880 and 29881 listed; disclaimer says inclusion/exclusion of a code does not imply coverage.",
+  "non_covered_code_lists": "None"
+ },
+ "external_dependencies": [
+  {
+   "what": "Medicare NCD 150.9 reproduced in Supplemental Information for context",
+   "quote": "According to the national coverage determination (NCD) for Arthroscopic Lavage and Arthroscopic Debridement for the Osteoarthritic Knee (150.9)"
+  },
+  {
+   "what": "Member contract language overrides",
+   "quote": "To the extent there are conflicts between this Medical Policy and the member health services contract language, the contract language will control."
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Modified Outerbridge grade 3",
+   "definition_quote": "Fibrillation/fissuring with partial thickness cartilage loss or focal ulceration (>2mm or >50% cartilage depth without exposed bone). (MRI-partial thickness cartilage loss of >2mm ... >1.5cm)"
+  },
+  {
+   "term": "Relative contraindications",
+   "definition_quote": "Individuals with relative contraindications should exhaust all appropriate nonsurgical treatment options prior to surgical consideration."
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "as medically indicated",
+   "problem": "Conditions the whole conservative-treatment list."
+  },
+  {
+   "quote": "Weight reduction counseling as appropriate",
+   "problem": "Required-if-appropriate; who decides?"
+  },
+  {
+   "quote": "Supervised physical therapy which could include an instructed home exercise program",
+   "problem": "'Supervised' vs 'instructed home program' blurs; no visit count."
+  },
+  {
+   "quote": "unless there are no other treatment options for the individual",
+   "problem": "Judgement."
+  },
+  {
+   "quote": "may be considered medically necessary",
+   "problem": "'May be considered', not 'is'; softer language than FL."
+  }
+ ],
+ "extraction_hazards": [
+  "Footnote asterisks (*, **, ***) tie to text on pp.1-2, not beside the criteria",
+  "Page header/footer repeated on every page ('Reproduction without authorization...')",
+  "Appendix A is a before/after two-column redline table that duplicates the Policy Statement; a parser sees the criteria three times",
+  "Literature review on pp.4-9 contains numbers (WOMAC, BMI) that are not criteria",
+  "Library metadata effective date (2024-12-01) differs from the printed header (December 1, 2025)"
+ ],
+ "interesting_structures": [
+  "Narrow-scope policy: covers one indication, explicitly disclaims others",
+  "Relative contraindications that change workup requirements rather than exclude",
+  "Acute-injury exception that skips the 6-week requirement but is in a footnote",
+  "Appendix A before/after comparison table",
+  "Documentation checklist separate from criteria"
+ ],
+ "fit_to_tree": {
+  "score": 2,
+  "why": "Short all-of with a not-leaf, but the conservative therapy checklist is defined in a footnote, the grade rule has two scales, and the acute exception lives in a footnote that contradicts the OA precondition."
+ }
+}

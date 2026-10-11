@@ -1,0 +1,19 @@
+{
+  "payer": "Blue Cross Blue Shield of Michigan",
+  "payer_key": "bcbsm",
+  "treatment": "icd",
+  "title": "Implantable Cardioverter Defibrillators",
+  "policy_number": "",
+  "effective": "",
+  "url": "https://www.bcbsm.com/amslibs/content/dam/public/mpr/mprsearch/pdf/2197929.pdf",
+  "final_url": "https://www.bcbsm.com/amslibs/content/dam/public/mpr/mprsearch/pdf/2197929.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "bcbsm-implantable-cardioverter-defibrillators.pdf",
+  "sha256": "9241aa8b40f42402f3f5dba90585824a5af935c570f23751b7bccb935f16f214",
+  "pages": 67,
+  "bytes": 1455728,
+  "retrieved": "2026-10-09",
+  "printed_date": "Current Policy Effective Date: 5/1/26; policy history table from 2/6/02"
+}

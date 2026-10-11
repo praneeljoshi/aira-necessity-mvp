@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "subtalar-arthroereisis",
+  "title": "Subtalar Arthroereisis",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JLIL6IE3YK32YW3VT",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-99221-17",
+  "original_effective": "09/15/12",
+  "reviewed": "05/28/26",
+  "revised": "06/15/26",
+  "file": "bcbsfl-02-99221-17-subtalar-arthroereisis.pdf",
+  "sha256": "8eccd9f18e990352763a0371b653c77bd68de47b339663167a5d463060db3579",
+  "pages": 5,
+  "bytes": 118436,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original Effective Date 09/15/12; Reviewed 05/28/26; Revised 06/15/26 (committee approval 05/28/26)"
+}

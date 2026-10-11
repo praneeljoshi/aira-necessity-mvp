@@ -1,0 +1,146 @@
+{
+  "id": "florida-blue-02-12000-16",
+  "payer": "Florida Blue",
+  "payer_aliases": ["Florida Blue", "BCBS FL", "BCBSFL", "Blue Cross Blue Shield of Florida", "Blue Cross and Blue Shield of Florida", "BCBS of Florida"],
+  "title": "Panniculectomy and Abdominoplasty",
+  "guideline_number": "02-12000-16",
+  "effective_date": "2013-07-01",
+  "reviewed_date": "2026-02-26",
+  "source_file": "bcbsfl-02-12000-16-panniculectomy-and-abdominoplasty.pdf",
+  "plan_types": ["All lines of business unless otherwise noted in the Program Exceptions section"],
+  "excluded_plans": ["Federal Employee Program (FEP)", "State Account Organization (SAO)", "Medicare Advantage products"],
+  "scope": {
+    "cpt": {
+      "15830": "covered",
+      "15847": "non_covered"
+    },
+    "icd10": []
+  },
+  "criteria": [
+    {"id": "panniculus_grade_2_or_above", "text": "Panniculus at grade 2 or above", "question": "Is the panniculus documented at grade 2 or above (covers the genitals and upper thigh crease, or lower)?", "threshold": {"kind": "enum", "op": "gte_enum", "value": "Grade 2", "enum_values": ["Grade 1", "Grade 2", "Grade 3", "Grade 4", "Grade 5"]}},
+    {"id": "skin_condition_under_panniculus", "text": "Clinical documentation of recurrent chronic and persistent skin condition under panniculus (e.g., intertriginous dermatitis, panniculitis, cellulitis, non-healing skin ulceration, tissue necrosis, recurrent/persistent skin infection)", "question": "Is there clinical documentation of a recurrent, chronic and persistent skin condition under the panniculus (intertriginous dermatitis, panniculitis, cellulitis, non-healing ulceration, tissue necrosis, or recurrent/persistent skin infection)?"},
+    {"id": "skin_condition_unresponsive_3_months", "text": "unresponsive to 3 months of medical therapy (failed both oral and topical medications)", "question": "Has the skin condition been unresponsive to at least 3 months of medical therapy, with both oral and topical medications tried and failed?", "threshold": {"kind": "duration_months", "op": "gte", "value": 3, "unit": "months"}},
+    {"id": "chronic_maceration_skin_folds", "text": "Chronic maceration of overhanging skin folds", "question": "Is there chronic maceration of the overhanging skin folds?"},
+    {"id": "maceration_refractory_medical_therapy", "text": "refractory to medical therapy", "question": "Has the maceration been refractory to medical therapy?"},
+    {"id": "functional_impairment_ambulation", "text": "There is a functional impairment, such as documented difficulty with ambulation due to the abdominal pannus", "question": "Is there a functional impairment due to the abdominal pannus, such as documented difficulty with ambulation?"},
+    {"id": "functional_deficit_severe_deformity", "text": "There is a functional deficit due to a severe physical deformity or disfigurement resulting from the pannus", "question": "Is there a functional deficit due to a severe physical deformity or disfigurement resulting from the pannus?"},
+    {"id": "surgery_expected_restore_function", "text": "The surgery is expected to restore or improve the functional deficit", "question": "Is the surgery expected to restore or improve the functional deficit?"},
+    {"id": "pannus_interfering_adl", "text": "The pannus is interfering with activities of daily living", "question": "Is the pannus interfering with activities of daily living?"},
+    {"id": "with_abdominal_gyn_surgery", "text": "performed in conjunction with an abdominal and intra-abdominal gynecologic surgery", "question": "Is the panniculectomy being performed in conjunction with an abdominal or intra-abdominal gynecologic surgery?"},
+    {"id": "required_for_operative_exposure", "text": "required to improve operative exposure in extremely rare circumstances", "question": "Is the panniculectomy required to improve operative exposure for the concurrent surgery (an extremely rare circumstance)?"},
+    {"id": "symptoms_persist_despite_weight_loss", "text": "Symptoms (persistent skin condition under panniculus, chronic maceration of overhanging skin) or functional impairment persists despite *significant weight loss", "question": "Do the symptoms (persistent skin condition under the panniculus, chronic maceration of overhanging skin) or functional impairment persist despite significant weight loss?"},
+    {"id": "weight_loss_stable_3_months", "text": "significant weight loss which has been stable for at least 3 months", "question": "Has the weight loss been stable for at least 3 months?", "threshold": {"kind": "duration_months", "op": "gte", "value": 3, "unit": "months"}},
+    {"id": "swl_bmi_30_or_less", "text": "Reaches a body mass index (BMI) less than or equal to 30 kg/m2", "question": "Has the member reached a BMI of 30 kg/m2 or less?", "threshold": {"kind": "number", "op": "lte", "value": 30, "unit": "kg/m2"}},
+    {"id": "swl_100_pound_loss", "text": "Has documented at least a 100 pound weight loss", "question": "Is a weight loss of at least 100 pounds documented?", "threshold": {"kind": "number", "op": "gte", "value": 100, "unit": "pounds"}},
+    {"id": "swl_40_percent_excess_weight", "text": "Has achieved a weight loss which is 40% or greater of the excess body weight that was present prior to the member's weight loss or surgical intervention", "question": "Has the member lost 40% or more of the excess body weight present before the weight loss or surgical intervention?", "threshold": {"kind": "number", "op": "gte", "value": 40, "unit": "percent of excess body weight"}},
+    {"id": "weight_loss_attempts_unsuccessful", "text": "documented attempts at weight loss (medically supervised diet or bariatric surgery) have been unsuccessful", "question": "Are documented attempts at weight loss (medically supervised diet or bariatric surgery) recorded as unsuccessful?"},
+    {"id": "had_bariatric_surgery", "text": "the member has had bariatric surgery", "question": "Has the member had bariatric surgery?"},
+    {"id": "bariatric_18_months_postop", "text": "at least 18 months post-operative", "question": "Is the member at least 18 months post-operative from bariatric surgery?", "threshold": {"kind": "duration_months", "op": "gte", "value": 18, "unit": "months"}},
+    {"id": "bariatric_stable_weight_3_months", "text": "documented stable weight for at least 3 months", "question": "Is a stable weight documented for at least 3 months?", "threshold": {"kind": "duration_months", "op": "gte", "value": 3, "unit": "months"}}
+  ],
+  "scenarios": [
+    {
+      "id": "panniculectomy",
+      "name": "Panniculectomy",
+      "applies_to_cpt": ["15830"],
+      "requires": {"type": "all", "label": "ALL of the following", "children": [
+        {"type": "leaf", "criterion": "panniculus_grade_2_or_above"},
+        {"type": "any", "label": "One of the following", "children": [
+          {"type": "all", "label": "Recurrent chronic and persistent skin condition under panniculus unresponsive to 3 months of medical therapy", "children": [
+            {"type": "leaf", "criterion": "skin_condition_under_panniculus"},
+            {"type": "leaf", "criterion": "skin_condition_unresponsive_3_months"}
+          ]},
+          {"type": "all", "label": "Chronic maceration of overhanging skin folds refractory to medical therapy", "children": [
+            {"type": "leaf", "criterion": "chronic_maceration_skin_folds"},
+            {"type": "leaf", "criterion": "maceration_refractory_medical_therapy"}
+          ]},
+          {"type": "leaf", "criterion": "functional_impairment_ambulation"}
+        ]},
+        {"type": "all", "label": "When ALL of the following criteria are met", "children": [
+          {"type": "leaf", "criterion": "functional_deficit_severe_deformity"},
+          {"type": "leaf", "criterion": "surgery_expected_restore_function"},
+          {"type": "leaf", "criterion": "pannus_interfering_adl"}
+        ]}
+      ]}
+    },
+    {
+      "id": "abdominal_gynecologic_surgery",
+      "name": "Panniculectomy in conjunction with abdominal/gynecologic surgery",
+      "applies_to_cpt": ["15830"],
+      "requires": {"type": "all", "label": "In conjunction with an abdominal and intra-abdominal gynecologic surgery when required to improve operative exposure", "children": [
+        {"type": "leaf", "criterion": "with_abdominal_gyn_surgery"},
+        {"type": "leaf", "criterion": "required_for_operative_exposure"}
+      ]},
+      "notes": ["Panniculectomy for minimizing the risk of hernia formation or recurrence is experimental or investigational (exclusion)."]
+    },
+    {
+      "id": "significant_weight_loss_bariatric",
+      "name": "Panniculectomy following significant weight loss / bariatric surgery",
+      "applies_to_cpt": ["15830"],
+      "requires": {"type": "all", "label": "ALL of the following", "children": [
+        {"type": "all", "label": "Meets ALL of the criteria listed above under Panniculectomy heading", "children": [
+          {"type": "leaf", "criterion": "panniculus_grade_2_or_above"},
+          {"type": "any", "label": "One of the following", "children": [
+            {"type": "all", "label": "Recurrent chronic and persistent skin condition under panniculus unresponsive to 3 months of medical therapy", "children": [
+              {"type": "leaf", "criterion": "skin_condition_under_panniculus"},
+              {"type": "leaf", "criterion": "skin_condition_unresponsive_3_months"}
+            ]},
+            {"type": "all", "label": "Chronic maceration of overhanging skin folds refractory to medical therapy", "children": [
+              {"type": "leaf", "criterion": "chronic_maceration_skin_folds"},
+              {"type": "leaf", "criterion": "maceration_refractory_medical_therapy"}
+            ]},
+            {"type": "leaf", "criterion": "functional_impairment_ambulation"}
+          ]},
+          {"type": "all", "label": "When ALL of the following criteria are met", "children": [
+            {"type": "leaf", "criterion": "functional_deficit_severe_deformity"},
+            {"type": "leaf", "criterion": "surgery_expected_restore_function"},
+            {"type": "leaf", "criterion": "pannus_interfering_adl"}
+          ]}
+        ]},
+        {"type": "any", "label": "Symptoms persist despite stable significant weight loss, or documented weight loss attempts unsuccessful", "children": [
+          {"type": "all", "label": "Symptoms or functional impairment persists despite significant weight loss stable for at least 3 months", "children": [
+            {"type": "leaf", "criterion": "symptoms_persist_despite_weight_loss"},
+            {"type": "leaf", "criterion": "weight_loss_stable_3_months"},
+            {"type": "any", "label": "Significant weight loss may be documented when the member (Note)", "children": [
+              {"type": "leaf", "criterion": "swl_bmi_30_or_less"},
+              {"type": "leaf", "criterion": "swl_100_pound_loss"},
+              {"type": "leaf", "criterion": "swl_40_percent_excess_weight"}
+            ]}
+          ]},
+          {"type": "leaf", "criterion": "weight_loss_attempts_unsuccessful"}
+        ]},
+        {"type": "any", "label": "If the member has had bariatric surgery: at least 18 months post-operative or stable weight for at least 3 months", "children": [
+          {"type": "not", "label": "Member has not had bariatric surgery", "child": {"type": "leaf", "criterion": "had_bariatric_surgery"}},
+          {"type": "leaf", "criterion": "bariatric_18_months_postop"},
+          {"type": "leaf", "criterion": "bariatric_stable_weight_3_months"}
+        ]}
+      ]}
+    }
+  ],
+  "exclusions": [
+    {"text": "If a pannus (panniculus) results from a contract excluded procedure such as bariatric surgery, the panniculectomy and abdominoplasty will also be considered an excluded procedure.", "cpt": []},
+    {"text": "Panniculectomy is considered experimental or investigational for minimizing the risk of hernia formation or recurrence.", "cpt": []},
+    {"text": "Panniculectomy performed for cosmetic purposes (e.g., to improve, change, or enhance appearance in the absence of signs or symptoms of functional abnormalities, improve self-esteem, psychological symptomatology, psychological complaints) is considered cosmetic and not covered.", "cpt": []},
+    {"text": "Panniculectomy performed for the treatment of back or neck pain is non-covered.", "cpt": []},
+    {"text": "Abdominoplasty (including mini abdominoplasty or modified abdominoplasty) for all indications with or without repair of abdominal wall laxity or diastasis recti is considered cosmetic and non-covered.", "cpt": ["15847"]}
+  ],
+  "notes": [
+    "Built from the single clean copy in the PDF (no redline). Dates: Original Effective Date 07/01/13 (effective_date), Reviewed 02/26/26 (reviewed_date), Revised 03/15/26.",
+    "Code-to-pathway mapping: the code table lists only 15830 (infraumbilical panniculectomy) and 15847 (abdominoplasty, add-on). All three coverage pathways are panniculectomy pathways, so each applies to 15830. 15847 is tagged non_covered because the document says abdominoplasty 'for all indications ... is considered cosmetic and non-covered'; no pathway governs it. Mini/modified abdominoplasty has no specific code ('There is no specific code that describes mini abdominoplasty and modified abdominoplasty').",
+    "The two position-statement NOTEs on benefit terms ('Coverage for panniculectomy and abdominoplasty is subject to the member's benefit terms ...', 'Coverage for cosmetic surgery is subject to the member's benefit terms ...') and 'Refer to specific contract language' are contract terms, not chart criteria, and are left out of the tree. The sentence that a pannus resulting from a contract-excluded procedure (such as bariatric surgery) makes the panniculectomy an excluded procedure is recorded as an exclusion with no codes, since whether bariatric surgery is contract-excluded is a benefit question no chart can answer.",
+    "'Medical records, including photography and/or operative reports may be required to be submitted to the health plan for review' (repeated three times) and the LOINC 'may be required documentation' sentence and table are advisory submission notes, not criteria; left out.",
+    "Panniculectomy pathway nesting follows the document: ALL of [grade 2 or above] AND [One of: skin condition / maceration / functional impairment] AND [ALL of: functional deficit from severe deformity, surgery expected to restore or improve the deficit, pannus interfering with ADLs]. Note that the second block's 'functional impairment' bullet and the third block's three functional-deficit criteria overlap in substance; the document requires the third block in every case, so it is an all() sibling of the any(), not an alternative.",
+    "Panniculus grade: enum threshold gte Grade 2 on the ASPS scale printed in the document (Grade 1 hairline/mons pubis only; Grade 2 genitals and upper thigh crease; Grade 3 upper thigh; Grade 4 mid-thigh; Grade 5 knees and below).",
+    "Skin condition bullet split into the condition and 'unresponsive to 3 months of medical therapy (failed both oral and topical medications)' (duration >= 3 months; both oral and topical must have failed). Maceration bullet split into the maceration and 'refractory to medical therapy' (no duration stated). The functional impairment bullet is one leaf (difficulty with ambulation is an example, 'such as').",
+    "Abdominal/Gynecologic Surgery pathway: 'in conjunction with an abdominal and intra-abdominal gynecologic surgery' is read as abdominal OR intra-abdominal gynecologic surgery (the Description lists them as two families: 'Abdominal surgeries ... and gynecologic surgeries'); the criterion text keeps the document's 'and'. 'when required to improve operative exposure in extremely rare circumstances' is a second required leaf. The Description's 'There is insufficient evidence to support performance of abdominoplasty and panniculectomy at the time of abdominal and gynecologic surgeries' is background; the Position Statement grants the narrow exposure pathway, so it is not an exclusion.",
+    "Significant weight loss/bariatric pathway: the first bullet 'Meets ALL of the criteria listed above under Panniculectomy heading' is embedded as the full Panniculectomy subtree (same criterion ids). The second bullet is read as [symptoms or functional impairment persist despite significant weight loss stable for at least 3 months] OR [documented attempts at weight loss (medically supervised diet or bariatric surgery) have been unsuccessful]; a reviewer could instead attach 'or documented attempts ...' only to the stability clause, but the two alternatives are the natural reading (patients who lost weight vs. patients who could not).",
+    "The *Significant weight loss Note ('varies based on the member's clinical circumstances and may be documented when the member: BMI <= 30 kg/m2; OR at least a 100 pound weight loss; OR a weight loss which is 40% or greater of the excess body weight') is built as an any() of the three definitions, required inside the 'persists despite significant weight loss' branch. The wording 'may be documented when' is permissive and 'varies based on ... clinical circumstances', so a reviewer could treat the three as examples rather than a required test; they are the only concrete definition the document offers, so they are kept as the test. Thresholds: BMI lte 30; weight loss gte 100 pounds; gte 40% of excess body weight.",
+    "Third bullet 'If the member has had bariatric surgery, they are at least 18 months post-operative or has documented stable weight for at least 3 months' is a conditional add-on: any(not(had bariatric surgery), at least 18 months post-operative, documented stable weight for at least 3 months). Durations: 18 months and 3 months.",
+    "Stability of weight appears twice with different wording ('stable for at least 3 months' in the weight loss bullet; 'documented stable weight for at least 3 months' in the bariatric bullet); each has its own verbatim criterion with the same 3-month threshold.",
+    "Pathway overlap: a post-bariatric or post-weight-loss patient could satisfy the plain Panniculectomy pathway without the weight-loss pathway's extra requirements. The document does not say the plain pathway is unavailable to such patients, so no gating is invented; a reviewer would route a patient 'following significant weight loss' to the stricter pathway.",
+    "Exclusions: hernia-risk indication (experimental or investigational), cosmetic purposes, back or neck pain, and abdominoplasty for all indications. Only the abdominoplasty exclusion maps to a code (15847); the other three describe indications billed under 15830, which stays covered subject to the pathways, so their cpt lists are empty.",
+    "Left out: the DESCRIPTION section (background, ASPS practice parameter quotes including the 'stable weight for two to six months' and '12-18 months after surgery' statements, which are ASPS recommendations, not this guideline's criteria), the Kuruoglu and UpToDate evidence summaries, Definitions, the step therapy protocol exemption paragraph, and the 'Other names' section.",
+    "Program exceptions: FEP follows FEP guidelines, SAO follows SAO guidelines, Medicare Advantage products follow LCD L38914 (Cosmetic and Reconstructive Surgery); all three listed as excluded_plans."
+  ],
+  "status": "ok"
+}

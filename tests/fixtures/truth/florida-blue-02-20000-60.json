@@ -1,0 +1,191 @@
+{
+  "id": "florida-blue-02-20000-60",
+  "payer": "Florida Blue",
+  "payer_aliases": ["Florida Blue", "BCBS FL", "BCBSFL", "Blue Cross Blue Shield of Florida", "Blue Cross and Blue Shield of Florida", "BCBS of Florida"],
+  "title": "Knee Arthroplasty",
+  "guideline_number": "02-20000-60",
+  "effective_date": "2026-05-15",
+  "reviewed_date": "2026-04-23",
+  "source_file": "bcbsfl-02-20000-60-knee-arthroplasty.pdf",
+  "plan_types": ["All lines of business"],
+  "excluded_plans": ["Federal Employee Program (FEP)", "State Account Organization (SAO)", "Medicare Advantage products"],
+  "scope": {
+    "cpt": {
+      "27438": "covered",
+      "27446": "covered",
+      "27447": "covered",
+      "27486": "covered",
+      "27487": "covered"
+    },
+    "icd10": []
+  },
+  "criteria": [
+    {"id": "tka_failed_osteotomy", "text": "Failure of a previous osteotomy", "question": "Has a previous osteotomy of the knee failed?"},
+    {"id": "tka_distal_femur_fracture", "text": "Distal femur fracture", "question": "Is there a distal femur fracture?"},
+    {"id": "tka_malignancy", "text": "Malignancy of the distal femur, proximal tibia, knee joint or adjacent soft tissue", "question": "Is there a malignancy of the distal femur, proximal tibia, knee joint or adjacent soft tissue?"},
+    {"id": "tka_failed_uka", "text": "Failure of previous unicompartmental knee replacement", "question": "Has a previous unicompartmental (partial) knee replacement failed?"},
+    {"id": "tka_avascular_necrosis", "text": "Avascular necrosis of the knee", "question": "Is there avascular necrosis (osteonecrosis) of the knee?"},
+    {"id": "tka_proximal_tibia_fracture", "text": "Proximal tibia fracture", "question": "Is there a proximal tibia fracture?"},
+    {"id": "tka_advanced_joint_disease", "text": "Advanced joint disease demonstrated by radiographic or magnetic resonance imaging (MRI) evidence of subchondral cysts, subchondral sclerosis, periarticular osteophytes, joint subluxation, joint space narrowing, avascular necrosis)", "question": "Do radiographs or MRI show advanced joint disease (subchondral cysts, subchondral sclerosis, periarticular osteophytes, joint subluxation, joint space narrowing or avascular necrosis)?"},
+    {"id": "tka_pain_or_functional_disability", "text": "Pain or functional disability from injury due to trauma or arthritis of the joint", "question": "Does the patient have pain or functional disability from traumatic injury or arthritis of the knee?"},
+    {"id": "tka_conservative_3_months", "text": "Failure of at least 3 months of conservative non-surgical management that is clearly documented in the medical record", "question": "Has at least 3 months of conservative non-surgical management been tried and failed, with the trial clearly documented in the record?", "threshold": {"kind": "duration_months", "op": "gte", "value": 3, "unit": "months"}},
+    {"id": "cm_anti_inflammatory", "text": "Anti-inflammatory medications", "question": "Did conservative management include anti-inflammatory medications (NSAIDs)?"},
+    {"id": "cm_analgesics", "text": "Analgesics", "question": "Did conservative management include analgesics?"},
+    {"id": "cm_flexibility_strengthening", "text": "Flexibility and muscle strengthening exercises", "question": "Did conservative management include flexibility and muscle strengthening exercises?"},
+    {"id": "cm_supervised_pt", "text": "Supervised physical therapy", "question": "Did conservative management include supervised physical therapy?"},
+    {"id": "cm_activity_restrictions", "text": "Activity restrictions as is reasonable", "question": "Did conservative management include activity restrictions?"},
+    {"id": "cm_assistive_device", "text": "Assistive device use", "question": "Did conservative management include use of an assistive device (cane, walker, brace)?"},
+    {"id": "cm_weight_reduction", "text": "Weight reduction as appropriate", "question": "Did conservative management include weight reduction?"},
+    {"id": "cm_knee_injections_as_appropriate", "text": "Therapeutic injections into the knee as appropriate", "question": "Did conservative management include therapeutic injections into the knee (corticosteroid or viscosupplementation)?"},
+    {"id": "ci_active_systemic_bacteremia", "text": "Active systemic bacteremia", "question": "Does the patient have active systemic bacteremia?"},
+    {"id": "ci_active_skin_infection_surgical_site", "text": "Active skin infection or open wound within the planned surgical site of the knee", "question": "Is there an active skin infection or open wound at the planned surgical site of the knee?"},
+    {"id": "ci_neuropathic_arthritis", "text": "Neuropathic arthritis", "question": "Does the patient have neuropathic (Charcot) arthritis of the knee?"},
+    {"id": "ci_rapidly_progressive_neurological_disease", "text": "Rapidly progressive neurological disease", "question": "Does the patient have a rapidly progressive neurological disease?"},
+    {"id": "rev_disabling_pain_or_disability", "text": "Disabling pain or functional disability", "question": "Does the patient have disabling pain or functional disability related to the existing knee arthroplasty?"},
+    {"id": "rev_progressive_bone_loss", "text": "Progressive and substantial bone loss", "question": "Is there progressive and substantial bone loss around the existing knee arthroplasty?"},
+    {"id": "rev_patella_fracture_or_dislocation", "text": "Fracture or dislocation of the patella", "question": "Is there a fracture or dislocation of the patella?"},
+    {"id": "rev_infection", "text": "Infection", "question": "Is there infection of the existing knee arthroplasty (prosthetic joint infection)?"},
+    {"id": "rev_periprosthetic_fracture_or_aseptic_loosening", "text": "Periprosthetic fracture or aseptic loosening", "question": "Is there a periprosthetic fracture or aseptic loosening of a component?"},
+    {"id": "rev_component_failure_and_wear", "text": "Failure and wear of the prosthetic components", "question": "Is there failure and wear of the prosthetic components (e.g. polyethylene wear, component breakage)?"},
+    {"id": "rev_knee_dislocation", "text": "Dislocation of the knee joint", "question": "Is there dislocation of the replaced knee joint?"},
+    {"id": "rev_knee_instability", "text": "Instability of the knee joint", "question": "Is there instability of the replaced knee joint?"},
+    {"id": "uka_advanced_arthritis_single_compartment", "text": "Advanced osteoarthritis or posttraumatic arthritis (Kellgren-Lawrence Grade 3 or 4) affecting only a single compartment (medial, lateral or patellofemoral)", "question": "Is there advanced osteoarthritis or posttraumatic arthritis of Kellgren-Lawrence grade 3 or 4 confined to a single compartment (medial, lateral or patellofemoral)?", "threshold": {"kind": "number", "op": "gte", "value": 3, "unit": "Kellgren-Lawrence grade"}},
+    {"id": "uka_crepitus_effusion_swelling_limited_rom", "text": "Crepitus, effusion, or swelling with limited range of motion", "question": "Does the exam document crepitus, effusion, or swelling, with limited range of motion?"},
+    {"id": "uka_pain_disability_adl", "text": "Pain and functional disability that interferes with activities of daily living", "question": "Does the patient have pain and functional disability that interferes with activities of daily living?"},
+    {"id": "uka_arc_of_motion_gt_90", "text": "Total arc of motion by goniometer > 90 degrees", "question": "Is the total arc of knee motion, measured by goniometer, greater than 90 degrees?", "threshold": {"kind": "number", "op": "gt", "value": 90, "unit": "degrees"}},
+    {"id": "uka_acl_instability", "text": "anterior cruciate ligament instability", "question": "Is there anterior cruciate ligament (ACL) instability or deficiency of the knee?"},
+    {"id": "uka_conservative_3_months", "text": "Failure of at least of 3 months of conservative non-surgical medical management that is clearly documented in the medical record", "question": "Has at least 3 months of conservative non-surgical medical management been tried and failed, with the trial clearly documented in the record?", "threshold": {"kind": "duration_months", "op": "gte", "value": 3, "unit": "months"}},
+    {"id": "cm_activity_modification", "text": "Activity modification", "question": "Did conservative management include activity modification?"},
+    {"id": "cm_anti_inflammatory_or_analgesics", "text": "Anti-inflammatory medications or analgesics", "question": "Did conservative management include anti-inflammatory medications or analgesics?"},
+    {"id": "cm_anti_inflammatory_or_analgesics_contraindicated", "text": "unless contraindicated", "question": "Are anti-inflammatory medications and analgesics documented as contraindicated for this patient?"},
+    {"id": "cm_knee_injections", "text": "Therapeutic injections into the knee", "question": "Did conservative management include therapeutic injections into the knee (corticosteroid or viscosupplementation)?"},
+    {"id": "cm_knee_injections_contraindicated", "text": "unless contraindicated", "question": "Are therapeutic knee injections documented as contraindicated for this patient?"},
+    {"id": "ci_tibial_or_femoral_shaft_deformity", "text": "Tibial or femoral shaft deformity", "question": "Is there a tibial or femoral shaft deformity?"},
+    {"id": "ci_radiographic_subluxation", "text": "Radiographic evidence of medial or lateral subluxation", "question": "Do radiographs show medial or lateral subluxation of the knee?"},
+    {"id": "ci_flexion_contracture_gt_15", "text": "Flexion contracture > 15 degrees", "question": "Is there a flexion contracture greater than 15 degrees?", "threshold": {"kind": "number", "op": "gt", "value": 15, "unit": "degrees"}},
+    {"id": "ci_varus_gt_15_medial_uka", "text": "Varus deformity > 15 degrees for medial unicompartmental knee arthroplasty", "question": "For a planned medial unicompartmental arthroplasty, is there a varus deformity greater than 15 degrees?", "threshold": {"kind": "number", "op": "gt", "value": 15, "unit": "degrees"}},
+    {"id": "ci_valgus_gt_20_lateral_uka", "text": "Valgus deformity > 20 degrees for lateral unicompartmental knee arthroplasty", "question": "For a planned lateral unicompartmental arthroplasty, is there a valgus deformity greater than 20 degrees?", "threshold": {"kind": "number", "op": "gt", "value": 20, "unit": "degrees"}},
+    {"id": "ci_inflammatory_or_neuropathic_arthritis", "text": "Inflammatory or neuropathic arthritis", "question": "Does the patient have inflammatory arthritis (e.g. rheumatoid) or neuropathic arthritis of the knee?"},
+    {"id": "ci_subchondral_bone_exposure_or_loss", "text": "Subchondral bone exposure or loss due to subchondral cysts or osteonecrosis", "question": "Is there subchondral bone exposure or bone loss due to subchondral cysts or osteonecrosis?"}
+  ],
+  "scenarios": [
+    {
+      "id": "total_knee_arthroplasty",
+      "name": "Total knee arthroplasty",
+      "applies_to_cpt": ["27447"],
+      "requires": {"type": "all", "label": "Total knee arthroplasty", "children": [
+        {"type": "any", "label": "One or more of the following criteria are met", "children": [
+          {"type": "leaf", "criterion": "tka_failed_osteotomy"},
+          {"type": "leaf", "criterion": "tka_distal_femur_fracture"},
+          {"type": "leaf", "criterion": "tka_malignancy"},
+          {"type": "leaf", "criterion": "tka_failed_uka"},
+          {"type": "leaf", "criterion": "tka_avascular_necrosis"},
+          {"type": "leaf", "criterion": "tka_proximal_tibia_fracture"},
+          {"type": "all", "label": "Advanced joint disease with pain or disability and failed conservative management", "children": [
+            {"type": "leaf", "criterion": "tka_advanced_joint_disease"},
+            {"type": "leaf", "criterion": "tka_pain_or_functional_disability"},
+            {"type": "all", "label": "Failure of at least 3 months of conservative non-surgical management", "children": [
+              {"type": "leaf", "criterion": "tka_conservative_3_months"},
+              {"type": "any", "label": "Includes 1 or more of the following", "children": [
+                {"type": "leaf", "criterion": "cm_anti_inflammatory"},
+                {"type": "leaf", "criterion": "cm_analgesics"},
+                {"type": "leaf", "criterion": "cm_flexibility_strengthening"},
+                {"type": "leaf", "criterion": "cm_supervised_pt"},
+                {"type": "leaf", "criterion": "cm_activity_restrictions"},
+                {"type": "leaf", "criterion": "cm_assistive_device"},
+                {"type": "leaf", "criterion": "cm_weight_reduction"},
+                {"type": "leaf", "criterion": "cm_knee_injections_as_appropriate"}
+              ]}
+            ]}
+          ]}
+        ]},
+        {"type": "not", "label": "There are no contraindications to total knee arthroplasty for any indication above", "child": {"type": "any", "label": "Contraindications for total and revision knee arthroplasty", "children": [
+          {"type": "leaf", "criterion": "ci_active_systemic_bacteremia"},
+          {"type": "leaf", "criterion": "ci_active_skin_infection_surgical_site"},
+          {"type": "leaf", "criterion": "ci_neuropathic_arthritis"},
+          {"type": "leaf", "criterion": "ci_rapidly_progressive_neurological_disease"}
+        ]}}
+      ]}
+    },
+    {
+      "id": "revision_arthroplasty",
+      "name": "Revision arthroplasty",
+      "applies_to_cpt": ["27486", "27487"],
+      "requires": {"type": "all", "label": "Revision arthroplasty", "children": [
+        {"type": "any", "label": "1 or more of the following conditions exist", "children": [
+          {"type": "leaf", "criterion": "rev_disabling_pain_or_disability"},
+          {"type": "leaf", "criterion": "rev_progressive_bone_loss"},
+          {"type": "leaf", "criterion": "rev_patella_fracture_or_dislocation"},
+          {"type": "leaf", "criterion": "rev_infection"},
+          {"type": "leaf", "criterion": "rev_periprosthetic_fracture_or_aseptic_loosening"},
+          {"type": "leaf", "criterion": "rev_component_failure_and_wear"},
+          {"type": "leaf", "criterion": "rev_knee_dislocation"},
+          {"type": "leaf", "criterion": "rev_knee_instability"}
+        ]},
+        {"type": "not", "label": "There are no contraindications to revision arthroplasty for any indication above", "child": {"type": "any", "label": "Contraindications for total and revision knee arthroplasty", "children": [
+          {"type": "leaf", "criterion": "ci_active_systemic_bacteremia"},
+          {"type": "leaf", "criterion": "ci_active_skin_infection_surgical_site"},
+          {"type": "leaf", "criterion": "ci_neuropathic_arthritis"},
+          {"type": "leaf", "criterion": "ci_rapidly_progressive_neurological_disease"}
+        ]}}
+      ]}
+    },
+    {
+      "id": "unicompartmental_knee_arthroplasty",
+      "name": "Unicompartmental knee arthroplasty",
+      "applies_to_cpt": ["27446", "27438"],
+      "requires": {"type": "all", "label": "Unicompartmental knee arthroplasty: the following criteria are met", "children": [
+        {"type": "leaf", "criterion": "uka_advanced_arthritis_single_compartment"},
+        {"type": "leaf", "criterion": "uka_crepitus_effusion_swelling_limited_rom"},
+        {"type": "leaf", "criterion": "uka_pain_disability_adl"},
+        {"type": "leaf", "criterion": "uka_arc_of_motion_gt_90"},
+        {"type": "not", "label": "No anterior cruciate ligament instability", "child": {"type": "leaf", "criterion": "uka_acl_instability"}},
+        {"type": "all", "label": "Failure of at least 3 months of conservative non-surgical medical management, including all of the following", "children": [
+          {"type": "leaf", "criterion": "uka_conservative_3_months"},
+          {"type": "leaf", "criterion": "cm_activity_modification"},
+          {"type": "any", "label": "Anti-inflammatory medications or analgesics (unless contraindicated)", "children": [
+            {"type": "leaf", "criterion": "cm_anti_inflammatory_or_analgesics"},
+            {"type": "leaf", "criterion": "cm_anti_inflammatory_or_analgesics_contraindicated"}
+          ]},
+          {"type": "leaf", "criterion": "cm_supervised_pt"},
+          {"type": "leaf", "criterion": "cm_assistive_device"},
+          {"type": "any", "label": "Therapeutic injections into the knee (unless contraindicated)", "children": [
+            {"type": "leaf", "criterion": "cm_knee_injections"},
+            {"type": "leaf", "criterion": "cm_knee_injections_contraindicated"}
+          ]}
+        ]},
+        {"type": "not", "label": "None of the following contraindications for unicompartmental arthroplasty are present", "child": {"type": "any", "label": "Contraindications for unicompartmental arthroplasty", "children": [
+          {"type": "leaf", "criterion": "ci_active_systemic_bacteremia"},
+          {"type": "leaf", "criterion": "ci_tibial_or_femoral_shaft_deformity"},
+          {"type": "leaf", "criterion": "ci_active_skin_infection_surgical_site"},
+          {"type": "leaf", "criterion": "ci_radiographic_subluxation"},
+          {"type": "leaf", "criterion": "ci_flexion_contracture_gt_15"},
+          {"type": "leaf", "criterion": "ci_rapidly_progressive_neurological_disease"},
+          {"type": "leaf", "criterion": "ci_varus_gt_15_medial_uka"},
+          {"type": "leaf", "criterion": "ci_valgus_gt_20_lateral_uka"},
+          {"type": "leaf", "criterion": "ci_inflammatory_or_neuropathic_arthritis"},
+          {"type": "leaf", "criterion": "ci_subchondral_bone_exposure_or_loss"}
+        ]}}
+      ]}
+    }
+  ],
+  "exclusions": [],
+  "notes": [
+    "Built from the PDF only (02-20000-60, Reviewed 04/23/26, Revised 05/15/26). The download holds a single clean copy; there is no redline. effective_date is the printed Revised date of this version (the Original Effective Date 10/15/16 is the first version); reviewed_date is the printed Reviewed date.",
+    "TKA list structure (hardest call): 'one or more of the following criteria are met' is a list of six single-bullet indications joined by OR, followed by a seventh compound indication 'Advanced joint disease ... AND Pain or functional disability ... AND Failure of at least 3 months of conservative non-surgical management'. The AND connectors attach Pain/disability and the conservative-management trial to the advanced-joint-disease alternative only, not to the fracture, malignancy, osteotomy-failure, failed-UKA or AVN alternatives (a distal femur fracture cannot sensibly require 3 months of conservative care). A reviewer could read Pain and Conservative management as applying to every alternative; we did not, and the tree is any(6 single indications, all(advanced disease, pain/disability, conservative trial)).",
+    "The bullet 'There are no contraindications* to total knee arthroplasty for any indication above' carries no connector but 'for any indication above' makes it a general requirement for every TKA alternative; modelled as not(any(the four starred contraindications)) inside the TKA pathway's all. The same bullet under Revision arthroplasty is modelled the same way. The sentence itself is not a criterion; the four contraindication items are.",
+    "The starred list '*Contraindications for total and revision knee arthroplasty' (bacteremia, active skin infection/open wound at the site, neuropathic arthritis, rapidly progressive neurological disease) is shared by the TKA and Revision pathways; the same criterion ids are reused. 'Active systemic bacteremia', 'Active skin infection or open wound within the planned surgical site of the knee' and 'Rapidly progressive neurological disease' also appear verbatim in the UKA contraindication list and reuse the same ids; 'Neuropathic arthritis' (TKA/revision) and 'Inflammatory or neuropathic arthritis' (UKA) are different requirements and separate criteria.",
+    "Conservative management for TKA: the criterion is the 3-month documented trial (duration_months >= 3) and the eight modalities are an any() beneath it ('includes 1 or more of the following'). Modalities are each their own criterion so a chart can show which one was tried. 'as is reasonable' / 'as appropriate' qualifiers are kept in the text; they are not modelled as waivers because the modalities are already alternatives.",
+    "Conservative management for UKA: 'includes all of the following' is an all() of the modalities. The two '(unless contraindicated)' waivers are modelled as any(modality tried, modality contraindicated) at the requirement. The two waiver criteria have the identical verbatim text 'unless contraindicated' (the PDF's exact words at both bullets) and are told apart by id and question. The PDF reads 'Failure of at least of 3 months' (sic); the text is copied with the typo.",
+    "UKA: 'None of the following contraindications for unicompartmental arthroplasty are present' is indented in the PDF as the last sub-bullet of the conservative-management list. We placed it at the pathway's top level as not(any(10 contraindications)) because it is a contraindication screen, not a component of conservative management; all(all(a,b),c) and all(a,b,c) evaluate identically so no logic is changed by that placement.",
+    "UKA 'No anterior cruciate ligament instability' is modelled as not(leaf 'anterior cruciate ligament instability') so a chart stating the ACL is intact (NOT_MET on instability) satisfies it and a silent chart stays INSUFFICIENT; the leaf text is the verbatim substring.",
+    "UKA Kellgren-Lawrence 'Grade 3 or 4' is a number threshold >= 3 (the grading scale 0-4 is printed under the position statement; the scale itself is a definition, not a requirement, and is not in the tree). 'Total arc of motion by goniometer > 90 degrees' is number > 90 degrees. 'Flexion contracture > 15 degrees', 'Varus deformity > 15 degrees', 'Valgus deformity > 20 degrees' are number thresholds on contraindication criteria.",
+    "The varus (medial UKA) and valgus (lateral UKA) contraindications are compartment-specific but 27446 covers either compartment; both stay in the UKA not(any()) and each question states which compartment it applies to. A reviewer could instead split medial and lateral UKA into two pathways.",
+    "Bullets that list alternatives with 'or' inside an OR list ('Periprosthetic fracture or aseptic loosening', 'Fracture or dislocation of the patella', 'Disabling pain or functional disability', 'Dislocation of the knee joint'/'Instability of the knee joint' kept separate as printed) are kept as one criterion per bullet, since splitting them inside an any() changes nothing. 'Crepitus, effusion, or swelling with limited range of motion' is one criterion; whether 'with limited range of motion' attaches to all three findings or only to swelling is ambiguous and left to the question.",
+    "TKA 'Advanced joint disease demonstrated by radiographic or magnetic resonance imaging (MRI) evidence of subchondral cysts, ... avascular necrosis)' is copied with the PDF's stray closing parenthesis. The list of imaging findings is read as any one finding sufficing; 'avascular necrosis' appears both here and as its own indication 'Avascular necrosis of the knee'.",
+    "Code-to-pathway mapping: the coding table does not tie codes to sections. 27447 (medial AND lateral compartments, total knee arthroplasty) -> Total knee arthroplasty; 27486 and 27487 (revision of total knee arthroplasty) -> Revision arthroplasty; 27446 (medial OR lateral compartment) -> Unicompartmental knee arthroplasty; 27438 (arthroplasty, patella; with prosthesis) -> Unicompartmental knee arthroplasty because the UKA criterion names the patellofemoral compartment as a single compartment. Conversion of a failed UKA to a TKA is billed 27447 and is covered by the TKA indication 'Failure of previous unicompartmental knee replacement'. All five codes are covered; the document names no non-covered or investigational code and has no exclusion statements.",
+    "Program exceptions: FEP and SAO follow their own guidelines; Medicare Advantage products: the LCD Major Joint Replacement (Hip and Knee) L33618 'was reviewed on the last guideline review date', which we read (as the hand-built varicose vein fixture does) as Medicare Advantage following the LCD rather than this guideline. The step-therapy protocol exemption paragraph (Florida law 627.42393) is a process note, not a requirement, and is not in the tree.",
+    "Left out of the tree: the DESCRIPTION section (UpToDate summaries, including their list of TKA contraindications and the historical UKA candidate profile such as age > 60, weight < 82 kg, deformity < 15 degrees) because it is background evidence, not the position statement; the Kellgren-Lawrence grading definitions; the guideline update history."
+  ],
+  "status": "ok"
+}

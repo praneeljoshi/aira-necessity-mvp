@@ -1,0 +1,2610 @@
+{
+  "id": "excellus-2-01-07",
+  "payer": "Excellus BlueCross BlueShield",
+  "payer_aliases": [
+    "Excellus BlueCross BlueShield",
+    "Excellus BCBS",
+    "Excellus",
+    "Excellus Blue Cross Blue Shield",
+    "Excellus Health Plan",
+    "BCBS Excellus"
+  ],
+  "title": "Hyperbaric Oxygen Therapy (HBOT)",
+  "guideline_number": "2.01.07",
+  "effective_date": "2026-07-16",
+  "reviewed_date": "2026-07-16",
+  "source_file": "excellus-2-01-07-hyperbaric-oxygen-therapy.pdf",
+  "scope": {
+    "cpt": {
+      "99183": "covered",
+      "G0277": "covered",
+      "A4575": "investigational",
+      "E0446": "investigational"
+    },
+    "icd10": [
+      "A18.01",
+      "A18.03",
+      "A42.0-A42.2",
+      "A42.81-A42.89",
+      "A42.9",
+      "A43.0-A43.9",
+      "A48.0",
+      "A50.01-A50.09",
+      "A52.77",
+      "B36.0-B36.9",
+      "B47.1",
+      "B47.9",
+      "B48.3",
+      "B48.8",
+      "B49",
+      "D62",
+      "E08.52",
+      "E09.52",
+      "E10.52",
+      "E10.618-E10.69",
+      "E11.52",
+      "E11.618-E11.69",
+      "E13.52-E13.69",
+      "G93.6",
+      "H05.021-H05.029",
+      "H90.3",
+      "H90.5",
+      "H90.A2-H90.A22",
+      "H91.2-H91.23",
+      "H34.1-H34.13",
+      "I70.361-I70.369",
+      "I70.461-I70.469",
+      "I73.01",
+      "I96",
+      "K12.2",
+      "L02.01-L02.93",
+      "L03.111-L03.119",
+      "L03.121-L03.129",
+      "L03.211-L03.91",
+      "L08.1",
+      "L59.9",
+      "L98.3",
+      "M27.2",
+      "M27.8",
+      "M46.20-M46.28",
+      "M46.30-M46.39",
+      "M86.00-M86.09",
+      "M86.10-M86.19",
+      "M86.20-M86.29",
+      "M86.30-M86.69",
+      "M86.8x0-M86.9",
+      "M90.80-M90.89",
+      "P11.0",
+      "S06.1x0A-S06.1x9A",
+      "S07.0xxA",
+      "S17.9xxA",
+      "T57.3x1A-T57.3x4A",
+      "T58.01xA-T58.94xA",
+      "T65.0x1A-T65.0x4A",
+      "T66.xxxA-T66.xxxS",
+      "T70.3xxA-T70.3xxS",
+      "T79.0xxA-T79.0xxS",
+      "T86.820-T86.822",
+      "T86.828-T86.829"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "gen_not_replacement_for_standard_therapy",
+      "text": "HBOT should not be a replacement for successful standard therapeutic measures.",
+      "question": "Is HBOT being used alongside or after standard therapeutic measures for this condition, rather than in place of standard therapy that is working?",
+      "refs": []
+    },
+    {
+      "id": "gen_initial_assessment_history_exam",
+      "text": "Initial assessment and medical history detailing the condition requiring HBOT, and a physical exam.",
+      "question": "Does the chart hold an initial assessment and medical history detailing the condition for which HBOT is requested, and a physical exam?",
+      "refs": []
+    },
+    {
+      "id": "gen_history_lists_prior_treatments",
+      "text": "The history should list prior treatments, including antibiotic therapy and surgical interventions.",
+      "question": "Does the history list the prior treatments given for the condition, including any antibiotic therapy and surgical interventions?",
+      "refs": []
+    },
+    {
+      "id": "gen_current_adjunctive_treatment",
+      "text": "Current adjunctive treatment that includes type of treatment and its effectiveness.",
+      "question": "Is the current adjunctive (non-HBOT) treatment documented, with the type of treatment and how effective it has been?",
+      "refs": []
+    },
+    {
+      "id": "gen_established_hbot_goals",
+      "text": "Established HBOT goals.",
+      "question": "Are the goals of HBOT for this patient stated in the chart?",
+      "refs": []
+    },
+    {
+      "id": "gen_hbot_session_records",
+      "text": "HBOT session records describing physical findings and treatment rendered (including ascent time, descent time, total compression time, oxygen dose, pressurization level, documentation of attendance, and a recording of events).",
+      "question": "Where treatments have already been given, are there HBOT session records with physical findings and the treatment rendered (ascent time, descent time, total compression time, oxygen dose, pressurization level, attendance, and a record of events)?",
+      "refs": []
+    },
+    {
+      "id": "gen_effect_of_treatment_on_goals",
+      "text": "Effect of treatment upon established HBOT goals.",
+      "question": "Where treatments have already been given, does the chart record the effect of treatment on the established HBOT goals?",
+      "refs": []
+    },
+    {
+      "id": "prac_physician_certified_hyperbaric",
+      "text": "Physicians supervising HBOT should be certified in Undersea and Hyperbaric Medicine",
+      "question": "Is the supervising physician certified in Undersea and Hyperbaric Medicine (ABEM, ABPM or AOCUHM), or has the physician completed a minimum 40-hour training program such as one approved by the American College of Hyperbaric Medicine or the Undersea and Hyperbaric Medical Society?",
+      "answerable": false,
+      "refs": []
+    },
+    {
+      "id": "prac_acls_certification",
+      "text": "Advanced Cardiac Life Support (ACLS) training and certification of supervising physicians (and NPPs) is required, for provision of HBOT services in physician offices and off-campus hospital sites; and in on-campus, provider-based departments for which provider-response time to the chamber can be expected to exceed five minutes.",
+      "question": "Does the supervising physician (or NPP) hold ACLS training and certification, when HBOT is given in a physician office, an off-campus hospital site, or an on-campus provider-based department whose response time to the chamber may exceed five minutes?",
+      "answerable": false,
+      "refs": []
+    },
+    {
+      "id": "prac_physician_present_ascent_descent",
+      "text": "in all instances, it is required that the physician be present during the ascent and descent portions of each treatment.",
+      "question": "Is the physician present during the ascent and descent portions of each treatment?",
+      "answerable": false,
+      "refs": []
+    },
+    {
+      "id": "prac_physician_immediately_available",
+      "text": "the physician (or qualified NPP) must be present in the office suite or at a location with a maximum of a",
+      "question": "Is the physician (or qualified NPP) present in the office suite, or at a location within a five-minute response time to the chamber for on-campus outpatient hospital or off-campus provider-based settings (in the office suite itself for a physician office)?",
+      "answerable": false,
+      "refs": []
+    },
+    {
+      "id": "ind_a_acute_traumatic_peripheral_ischemia",
+      "text": "Acute traumatic peripheral ischemia/insufficiency (e.g., crush injury, compartment syndrome, reperfusion injury, and suturing of severed limbs)",
+      "question": "Does the patient have acute traumatic peripheral ischemia or insufficiency, such as a crush injury, compartment syndrome, reperfusion injury, or reattachment (suturing) of a severed limb?",
+      "refs": []
+    },
+    {
+      "id": "a_loss_of_function_limb_or_life_threatened",
+      "text": "function, limb or life is",
+      "question": "Is loss of function, of the limb, or of life threatened by the injury?",
+      "refs": []
+    },
+    {
+      "id": "a_tissue_oxygen_tension_below_30_mmhg",
+      "text": "oxygen tension is below 30 mmHg.",
+      "question": "Is the measured tissue oxygen tension (transcutaneous oximetry) in the injured area below 30 mmHg?",
+      "threshold": {
+        "kind": "number",
+        "op": "lt",
+        "value": 30,
+        "unit": "mmHg"
+      },
+      "refs": []
+    },
+    {
+      "id": "ind_b_air_or_gas_embolism_acute",
+      "text": "Air or gas embolism, acute",
+      "question": "Does the patient have an acute air or gas embolism?",
+      "refs": []
+    },
+    {
+      "id": "b_gases_interfere_with_organ_function_ischemia",
+      "text": "and results in ischemia",
+      "question": "Are gases in the vasculature sufficient to interfere with the function of an organ and resulting in ischemia to the affected areas?",
+      "refs": []
+    },
+    {
+      "id": "c_lower_extremity_wound_due_to_diabetes",
+      "text": "A lower extremity wound due to diabetes",
+      "question": "Is the wound on a lower extremity and due to diabetes?",
+      "refs": []
+    },
+    {
+      "id": "c_wagner_grade_3_or_higher",
+      "text": "A wound classified as Wagner grade 3 or higher",
+      "question": "Is the wound classified as Wagner grade 3 or higher (grade 3: penetrates deeper than tendon/bone/joint with abscess, osteomyelitis, pyarthrosis, plantar space abscess or tendon sheath infection; grade 4: gangrene of the forefoot)?",
+      "threshold": {
+        "kind": "number",
+        "op": "gte",
+        "value": 3,
+        "unit": "Wagner grade"
+      },
+      "refs": []
+    },
+    {
+      "id": "c_no_healing_after_30_days_standard_wound_therapy",
+      "text": "No measurable signs of healing after 30 days of an adequate course of standard wound therapy",
+      "question": "Has the wound shown no measurable signs of healing after at least 30 days of an adequate course of standard wound therapy (the table specifies 30 consecutive days)?",
+      "threshold": {
+        "kind": "duration_months",
+        "op": "gte",
+        "value": 1,
+        "unit": "months"
+      },
+      "refs": []
+    },
+    {
+      "id": "c_std_vascular_assessment_correction",
+      "text": "assessment of vascular status and correction of any vascular problems in the affected limb if possible",
+      "question": "Was vascular status assessed and any vascular problem in the affected limb corrected where possible?",
+      "refs": []
+    },
+    {
+      "id": "c_std_nutrition_optimized",
+      "text": "optimization of nutritional status",
+      "question": "Was nutritional status optimized as part of standard wound therapy?",
+      "refs": []
+    },
+    {
+      "id": "c_std_glucose_optimized",
+      "text": "optimization of glucose control",
+      "question": "Was glucose control optimized as part of standard wound therapy?",
+      "refs": []
+    },
+    {
+      "id": "c_std_debridement",
+      "text": "debridement by any means to remove devitalized tissue",
+      "question": "Was the wound debrided (by any means) to remove devitalized tissue?",
+      "refs": []
+    },
+    {
+      "id": "c_std_moist_dressings",
+      "text": "maintenance of clean, moist bed of granulation tissue with appropriate moist dressings",
+      "question": "Was a clean, moist bed of granulation tissue maintained with appropriate moist dressings?",
+      "refs": []
+    },
+    {
+      "id": "c_std_off_loading",
+      "text": "appropriate off-loading",
+      "question": "Was appropriate off-loading of the wound provided?",
+      "refs": []
+    },
+    {
+      "id": "c_std_infection_treated",
+      "text": "necessary treatment to resolve any infection that might be present",
+      "question": "Was any infection present treated as necessary?",
+      "refs": []
+    },
+    {
+      "id": "c_doc_wound_healing_progress_assessment",
+      "text": "assessment of wound healing progress",
+      "question": "Does the documentation include an assessment of wound healing progress?",
+      "refs": []
+    },
+    {
+      "id": "c_doc_wound_length_width_depth",
+      "text": "changes in the wound condition, including the precise wound length, width, and depth measurements",
+      "question": "Are changes in the wound condition documented with precise wound length, width and depth measurements?",
+      "refs": []
+    },
+    {
+      "id": "c_doc_granulation_necrotic_tissue",
+      "text": "presence of granulation and necrotic tissue",
+      "question": "Is the presence of granulation tissue and necrotic tissue in the wound documented?",
+      "refs": []
+    },
+    {
+      "id": "c_doc_concurrent_wound_measures",
+      "text": "concurrent measures being addressed relative to wound therapy",
+      "question": "Are the concurrent wound-care measures being addressed documented?",
+      "refs": []
+    },
+    {
+      "id": "c_doc_weekly_wound_measurements",
+      "text": "Weekly wound measurements should be performed to document progress in wound healing.",
+      "question": "Are wound measurements taken weekly to document progress in wound healing?",
+      "refs": []
+    },
+    {
+      "id": "c_steady_decrease_in_wound_volume",
+      "text": "A steady decrease in wound volume should be noted from week to week.",
+      "question": "Under HBOT, is a steady week-to-week decrease in wound volume documented?",
+      "refs": []
+    },
+    {
+      "id": "c_discontinue_patient_heals",
+      "text": "patient heals",
+      "question": "Has the wound healed (treatment should then be discontinued)?",
+      "refs": []
+    },
+    {
+      "id": "c_discontinue_unable_to_tolerate",
+      "text": "is unable to tolerate treatment",
+      "question": "Is the patient unable to tolerate HBOT?",
+      "refs": []
+    },
+    {
+      "id": "c_discontinue_fails_to_improve",
+      "text": "fails to improve",
+      "question": "Has the wound failed to improve under HBOT?",
+      "refs": []
+    },
+    {
+      "id": "c_no_measurable_healing_within_30_day_period",
+      "text": "measurable signs of healing have not been demonstrated within any 30-day period of treatment",
+      "question": "Is there any 30-day period of HBOT treatment in which measurable signs of healing were not demonstrated?",
+      "threshold": {
+        "kind": "duration_months",
+        "op": "lte",
+        "value": 1,
+        "unit": "months"
+      },
+      "refs": []
+    },
+    {
+      "id": "ind_d_carbon_monoxide_poisoning_acute",
+      "text": "Carbon monoxide poisoning, acute",
+      "question": "Does the patient have acute carbon monoxide poisoning?",
+      "refs": []
+    },
+    {
+      "id": "d_within_six_hours_of_removal",
+      "text": "Within six hours of",
+      "question": "Is HBOT started within six hours of the patient's removal from the carbon monoxide-contaminated environment?",
+      "threshold": {
+        "kind": "number",
+        "op": "lte",
+        "value": 6,
+        "unit": "hours"
+      },
+      "refs": []
+    },
+    {
+      "id": "ind_e_central_retinal_artery_occlusion",
+      "text": "Central retinal artery occlusion (CRAO)",
+      "question": "Does the patient have a central retinal artery occlusion (CRAO), typically diagnosed on fundoscopic exam?",
+      "refs": []
+    },
+    {
+      "id": "ind_f_cerebral_edema_acute",
+      "text": "Cerebral edema, acute",
+      "question": "Does the patient have acute cerebral edema?",
+      "refs": []
+    },
+    {
+      "id": "ind_g_compromised_grafts_and_flaps",
+      "text": "Compromised grafts and flaps (not for primary management of these wounds)",
+      "question": "Is the graft or flap compromised (tissue compromised by irradiation, decreased perfusion/vascular compromise, or hypoxia), with HBOT used for salvage rather than primary management of the wound or preparation of the site for a graft?",
+      "refs": []
+    },
+    {
+      "id": "ind_h_cyanide_poisoning_acute",
+      "text": "Cyanide poisoning, acute",
+      "question": "Does the patient have acute cyanide poisoning?",
+      "refs": []
+    },
+    {
+      "id": "h_adjunct_to_sodium_nitrite",
+      "text": "As an adjunct to",
+      "question": "Is HBOT given as an adjunct to infusion of sodium nitrite?",
+      "refs": []
+    },
+    {
+      "id": "ind_i_decompression_sickness",
+      "text": "Decompression sickness",
+      "question": "Does the patient have decompression sickness?",
+      "refs": []
+    },
+    {
+      "id": "i_gas_bubbles_interfere_organ_or_sensation",
+      "text": "Gas bubbles in the",
+      "question": "Are gas bubbles present in the tissue or blood in volumes sufficient to interfere with the function of an organ or to cause alteration in sensation?",
+      "refs": []
+    },
+    {
+      "id": "ind_j_gas_wet_gangrene",
+      "text": "Gas/wet gangrene (e.g., clostridial myonecrosis)",
+      "question": "Does the patient have gas or wet gangrene (for example clostridial myonecrosis)?",
+      "refs": []
+    },
+    {
+      "id": "j_positive_gram_stain_or_culture",
+      "text": "Positive gram-stained",
+      "question": "Is there a positive gram-stained smear or culture from tissue fluids?",
+      "refs": []
+    },
+    {
+      "id": "j_tissue_gas_on_xray",
+      "text": "visualization on x-ray,",
+      "question": "Is tissue gas visualized on x-ray?",
+      "refs": []
+    },
+    {
+      "id": "j_severe_sudden_pain_skin_changes_edema",
+      "text": "pain, skin changes, and edema.",
+      "question": "Are severe and sudden pain, skin changes and edema documented?",
+      "refs": []
+    },
+    {
+      "id": "ind_k_idiopathic_sudden_sensorineural_hearing_loss",
+      "text": "Idiopathic sudden sensorineural hearing loss (ISSHL)",
+      "question": "Does the patient have idiopathic sudden sensorineural hearing loss (ISSHL)?",
+      "refs": []
+    },
+    {
+      "id": "k_hearing_loss_30_db_3_frequencies",
+      "text": "as a loss of 30 decibels",
+      "question": "Does the audiogram show a loss of 30 decibels or more across 3 contiguous frequencies?",
+      "threshold": {
+        "kind": "number",
+        "op": "gte",
+        "value": 30,
+        "unit": "dB"
+      },
+      "refs": []
+    },
+    {
+      "id": "k_steroids_within_2_weeks_of_onset",
+      "text": "combined with steroid therapy within 2 weeks of onset",
+      "question": "Is HBOT combined with steroid therapy and started within 2 weeks of onset of the hearing loss?",
+      "threshold": {
+        "kind": "duration_months",
+        "op": "lte",
+        "value": 0.5,
+        "unit": "months"
+      },
+      "refs": []
+    },
+    {
+      "id": "k_salvage_with_steroids_within_1_month_of_onset",
+      "text": "combined with steroid therapy as salvage within 1 month of onset",
+      "question": "Is HBOT combined with steroid therapy as salvage treatment and started within 1 month of onset of the hearing loss?",
+      "threshold": {
+        "kind": "duration_months",
+        "op": "lte",
+        "value": 1,
+        "unit": "months"
+      },
+      "refs": []
+    },
+    {
+      "id": "ind_l_necrotizing_soft_tissue_infection",
+      "text": "Necrotizing soft tissue infections, based on location and/or organism type and/or particular host immunologic and vascular risk factors causing hypoxia resulting in necrosis",
+      "question": "Does the patient have a necrotizing soft tissue infection, supported by its location, organism type, or host immunologic and vascular risk factors causing hypoxia and necrosis?",
+      "refs": []
+    },
+    {
+      "id": "l_high_morbidity_mortality_despite_standard_treatment",
+      "text": "are expected to be high despite aggressive standard treatment.",
+      "question": "Are morbidity and mortality expected to be high despite aggressive standard treatment, with HBOT used only as adjunctive therapy?",
+      "refs": []
+    },
+    {
+      "id": "ind_m_osteomyelitis_acute_refractory",
+      "text": "Osteomyelitis, acute, refractory",
+      "question": "Does the patient have acute refractory osteomyelitis?",
+      "refs": []
+    },
+    {
+      "id": "m_not_responded_to_standard_medical_surgical_management",
+      "text": "has not responded to standard medical and surgical management techniques",
+      "question": "Has the acute osteomyelitis failed to respond to standard medical and surgical management?",
+      "refs": []
+    },
+    {
+      "id": "ind_n_osteomyelitis_chronic_refractory",
+      "text": "Osteomyelitis, chronic, refractory",
+      "question": "Does the patient have chronic refractory osteomyelitis?",
+      "refs": []
+    },
+    {
+      "id": "n_persisted_at_least_six_weeks",
+      "text": "has persisted for at least six (6) weeks",
+      "question": "Has the osteomyelitis persisted for at least six weeks?",
+      "threshold": {
+        "kind": "duration_months",
+        "op": "gte",
+        "value": 1.5,
+        "unit": "months"
+      },
+      "refs": []
+    },
+    {
+      "id": "n_recurred_after_appropriate_interventions",
+      "text": "has recurred after appropriate interventions",
+      "question": "Has the osteomyelitis recurred after appropriate interventions?",
+      "refs": []
+    },
+    {
+      "id": "n_surgical_debridement_performed",
+      "text": "surgical debridement",
+      "question": "Has surgical debridement been performed for the osteomyelitis?",
+      "refs": []
+    },
+    {
+      "id": "n_parenteral_antibiotic_course_performed",
+      "text": "at least one appropriate course of parenteral antibiotics",
+      "question": "Has at least one appropriate course of parenteral antibiotics been completed (the Policy Guideline table specifies a six-week course)?",
+      "threshold": {
+        "kind": "number",
+        "op": "gte",
+        "value": 1,
+        "unit": "courses"
+      },
+      "refs": []
+    },
+    {
+      "id": "ind_o_dental_surgery_irradiated_jaw",
+      "text": "Pre- and post-treatment for patients undergoing dental surgery (non-implant related) of an irradiated jaw",
+      "question": "Is HBOT requested as pre- and post-treatment for non-implant dental surgery (for example tooth extraction) of a previously irradiated jaw?",
+      "refs": []
+    },
+    {
+      "id": "p_profound_anemia_exceptional_blood_loss",
+      "text": "Profound anemia with exceptional blood loss",
+      "question": "Does the patient have profound anemia from exceptional blood loss?",
+      "refs": []
+    },
+    {
+      "id": "p_blood_transfusion_impossible",
+      "text": "blood transfusion is impossible",
+      "question": "Is blood transfusion impossible for this patient (for example refusal or incompatibility)?",
+      "refs": []
+    },
+    {
+      "id": "p_blood_transfusion_must_be_delayed",
+      "text": "must be delayed",
+      "question": "Must blood transfusion be delayed for this patient?",
+      "refs": []
+    },
+    {
+      "id": "q_osteoradionecrosis_bony_necrosis",
+      "text": "Radiation necrosis osteoradionecrosis (ORN)/bony necrosis",
+      "question": "Does the patient have osteoradionecrosis or other radiation-induced bony necrosis?",
+      "refs": []
+    },
+    {
+      "id": "q_orn_adjunctive_perioperative",
+      "text": "As adjunctive treatment",
+      "question": "Is HBOT for osteoradionecrosis used as adjunctive treatment in the preoperative and postoperative management of the patient (around surgical debridement or resection)?",
+      "refs": []
+    },
+    {
+      "id": "q_soft_tissue_radiation_necrosis",
+      "text": "soft tissue radiation necrosis, (e.g., radiation enteritis, cystitis, proctitis)",
+      "question": "Does the patient have soft tissue radiation necrosis such as radiation enteritis, cystitis or proctitis?",
+      "refs": []
+    },
+    {
+      "id": "ind_r_refractory_mycosis",
+      "text": "Refractory mycosis (mucormycosis, actinomycosis, or canidiobolus coronato)",
+      "question": "Does the patient have a refractory mycosis (mucormycosis, actinomycosis, or Conidiobolus coronatus infection)?",
+      "refs": []
+    },
+    {
+      "id": "r_refractory_to_antibiotics_and_surgery",
+      "text": "process is refractory to",
+      "question": "Is the disease process refractory to antibiotics and surgical treatment, with HBOT given in conjunction with standard treatment?",
+      "refs": []
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "a_acute_traumatic_peripheral_ischemia",
+      "name": "II.A Acute traumatic peripheral ischemia/insufficiency (crush injury)",
+      "applies_to_cpt": [
+        "99183",
+        "G0277"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "II.A Acute traumatic peripheral ischemia/insufficiency (crush injury)",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "ind_a_acute_traumatic_peripheral_ischemia"
+          },
+          {
+            "type": "all",
+            "label": "Crush injury patient selection (Policy Guideline IV): in conjunction with standard therapeutic measures, when loss of function, limb or life is threatened, and tissue oxygen tension is below 30 mmHg",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "a_loss_of_function_limb_or_life_threatened"
+              },
+              {
+                "type": "leaf",
+                "criterion": "a_tissue_oxygen_tension_below_30_mmhg"
+              }
+            ]
+          },
+          {
+            "type": "all",
+            "label": "Documentation required for every indication (Policy Guideline I)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "gen_not_replacement_for_standard_therapy"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_initial_assessment_history_exam"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_history_lists_prior_treatments"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_current_adjunctive_treatment"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_established_hbot_goals"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_hbot_session_records"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_effect_of_treatment_on_goals"
+              }
+            ]
+          },
+          {
+            "type": "all",
+            "label": "Practitioner requirements (Policy Guideline V; not answerable from a chart)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_certified_hyperbaric"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_acls_certification"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_present_ascent_descent"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_immediately_available"
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "Policy Guideline IV table row 'Crush injury', 2.0-2.4 ATA: three 1.5-hour treatments per day for two to three days, then twice a day for two days, then once daily for two days; utilization review after 20 treatments.",
+        "'In conjunction with standard therapeutic measures' is carried by the general criterion that HBOT is not a replacement for standard therapeutic measures."
+      ]
+    },
+    {
+      "id": "b_air_gas_embolism",
+      "name": "II.B Air or gas embolism, acute",
+      "applies_to_cpt": [
+        "99183",
+        "G0277"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "II.B Air or gas embolism, acute",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "ind_b_air_or_gas_embolism_acute"
+          },
+          {
+            "type": "leaf",
+            "criterion": "b_gases_interfere_with_organ_function_ischemia"
+          },
+          {
+            "type": "all",
+            "label": "Documentation required for every indication (Policy Guideline I)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "gen_not_replacement_for_standard_therapy"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_initial_assessment_history_exam"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_history_lists_prior_treatments"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_current_adjunctive_treatment"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_established_hbot_goals"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_hbot_session_records"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_effect_of_treatment_on_goals"
+              }
+            ]
+          },
+          {
+            "type": "all",
+            "label": "Practitioner requirements (Policy Guideline V; not answerable from a chart)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_certified_hyperbaric"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_acls_certification"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_present_ascent_descent"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_immediately_available"
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "Policy Guideline IV table row 'Air or Gas embolism, acute': high to low pressure mixed gases; typically one to two treatments, occasionally five to 10; treatment continues until no additional improvement is seen; utilization review after 10 treatments."
+      ]
+    },
+    {
+      "id": "c_diabetic_wound_initial",
+      "name": "II.C Arterial inefficiencies: non-healing diabetic lower extremity wound, initial course",
+      "applies_to_cpt": [
+        "99183",
+        "G0277"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "II.C Arterial inefficiencies: non-healing diabetic lower extremity wound, initial course",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "c_lower_extremity_wound_due_to_diabetes"
+          },
+          {
+            "type": "leaf",
+            "criterion": "c_wagner_grade_3_or_higher"
+          },
+          {
+            "type": "all",
+            "label": "No measurable signs of healing after 30 days of an adequate course of standard wound therapy; which may include ANY of the following",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "c_no_healing_after_30_days_standard_wound_therapy"
+              },
+              {
+                "type": "any",
+                "label": "Standard wound therapy may include ANY of the following",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "c_std_vascular_assessment_correction"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "c_std_nutrition_optimized"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "c_std_glucose_optimized"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "c_std_debridement"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "c_std_moist_dressings"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "c_std_off_loading"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "c_std_infection_treated"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "all",
+            "label": "Diabetic wound documentation (Policy Guideline II)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "c_doc_wound_healing_progress_assessment"
+              },
+              {
+                "type": "leaf",
+                "criterion": "c_doc_wound_length_width_depth"
+              },
+              {
+                "type": "leaf",
+                "criterion": "c_doc_granulation_necrotic_tissue"
+              },
+              {
+                "type": "leaf",
+                "criterion": "c_doc_concurrent_wound_measures"
+              },
+              {
+                "type": "leaf",
+                "criterion": "c_doc_weekly_wound_measurements"
+              }
+            ]
+          },
+          {
+            "type": "all",
+            "label": "Documentation required for every indication (Policy Guideline I)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "gen_not_replacement_for_standard_therapy"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_initial_assessment_history_exam"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_history_lists_prior_treatments"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_current_adjunctive_treatment"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_established_hbot_goals"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_hbot_session_records"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_effect_of_treatment_on_goals"
+              }
+            ]
+          },
+          {
+            "type": "all",
+            "label": "Practitioner requirements (Policy Guideline V; not answerable from a chart)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_certified_hyperbaric"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_acls_certification"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_present_ascent_descent"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_immediately_available"
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "Policy Guideline IV table row 'Arterial Inefficiencies: non-healing diabetic wounds of the lower extremities', 2.0-3.0 ATA: 90-minute treatments five days per week with continuing standard wound care, may last 30-40 treatments; utilization review after 40 treatments.",
+        "Policy Guideline I.F: advanced diabetic foot ulcers may require photos to avoid overuse when the foot is not salvageable; a Wagner 5 (Grade D) foot with complete gangrene whose heel is necrotic will likely not respond. Phrased as 'may require' / 'will likely', so recorded here rather than as a criterion."
+      ]
+    },
+    {
+      "id": "c_diabetic_wound_continued",
+      "name": "II.C Arterial inefficiencies: non-healing diabetic lower extremity wound, continued treatment",
+      "applies_to_cpt": [
+        "99183",
+        "G0277"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "II.C Arterial inefficiencies: non-healing diabetic lower extremity wound, continued treatment",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "c_lower_extremity_wound_due_to_diabetes"
+          },
+          {
+            "type": "leaf",
+            "criterion": "c_wagner_grade_3_or_higher"
+          },
+          {
+            "type": "all",
+            "label": "No measurable signs of healing after 30 days of an adequate course of standard wound therapy; which may include ANY of the following",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "c_no_healing_after_30_days_standard_wound_therapy"
+              },
+              {
+                "type": "any",
+                "label": "Standard wound therapy may include ANY of the following",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "c_std_vascular_assessment_correction"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "c_std_nutrition_optimized"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "c_std_glucose_optimized"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "c_std_debridement"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "c_std_moist_dressings"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "c_std_off_loading"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "c_std_infection_treated"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "all",
+            "label": "Diabetic wound documentation (Policy Guideline II)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "c_doc_wound_healing_progress_assessment"
+              },
+              {
+                "type": "leaf",
+                "criterion": "c_doc_wound_length_width_depth"
+              },
+              {
+                "type": "leaf",
+                "criterion": "c_doc_granulation_necrotic_tissue"
+              },
+              {
+                "type": "leaf",
+                "criterion": "c_doc_concurrent_wound_measures"
+              },
+              {
+                "type": "leaf",
+                "criterion": "c_doc_weekly_wound_measurements"
+              },
+              {
+                "type": "leaf",
+                "criterion": "c_steady_decrease_in_wound_volume"
+              }
+            ]
+          },
+          {
+            "type": "not",
+            "label": "Treatment has not reached a discontinuation point: the patient heals, is unable to tolerate treatment, or fails to improve",
+            "child": {
+              "type": "any",
+              "label": "Discontinue when",
+              "children": [
+                {
+                  "type": "leaf",
+                  "criterion": "c_discontinue_patient_heals"
+                },
+                {
+                  "type": "leaf",
+                  "criterion": "c_discontinue_unable_to_tolerate"
+                },
+                {
+                  "type": "leaf",
+                  "criterion": "c_discontinue_fails_to_improve"
+                }
+              ]
+            }
+          },
+          {
+            "type": "not",
+            "label": "Continued treatment is not covered if measurable signs of healing have not been demonstrated within any 30-day period of treatment",
+            "child": {
+              "type": "leaf",
+              "criterion": "c_no_measurable_healing_within_30_day_period"
+            }
+          },
+          {
+            "type": "all",
+            "label": "Documentation required for every indication (Policy Guideline I)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "gen_not_replacement_for_standard_therapy"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_initial_assessment_history_exam"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_history_lists_prior_treatments"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_current_adjunctive_treatment"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_established_hbot_goals"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_hbot_session_records"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_effect_of_treatment_on_goals"
+              }
+            ]
+          },
+          {
+            "type": "all",
+            "label": "Practitioner requirements (Policy Guideline V; not answerable from a chart)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_certified_hyperbaric"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_acls_certification"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_present_ascent_descent"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_immediately_available"
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "Policy Guideline III: most patients should NOT require more than 40 treatments; patients who do not respond to 40 treatments will likely not respond to 60, 80 or 120. Stated as expectation, not a hard cap, so recorded here rather than as a criterion."
+      ]
+    },
+    {
+      "id": "d_carbon_monoxide_poisoning",
+      "name": "II.D Carbon monoxide poisoning, acute",
+      "applies_to_cpt": [
+        "99183",
+        "G0277"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "II.D Carbon monoxide poisoning, acute",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "ind_d_carbon_monoxide_poisoning_acute"
+          },
+          {
+            "type": "leaf",
+            "criterion": "d_within_six_hours_of_removal"
+          },
+          {
+            "type": "all",
+            "label": "Documentation required for every indication (Policy Guideline I)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "gen_not_replacement_for_standard_therapy"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_initial_assessment_history_exam"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_history_lists_prior_treatments"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_current_adjunctive_treatment"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_established_hbot_goals"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_hbot_session_records"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_effect_of_treatment_on_goals"
+              }
+            ]
+          },
+          {
+            "type": "all",
+            "label": "Practitioner requirements (Policy Guideline V; not answerable from a chart)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_certified_hyperbaric"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_acls_certification"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_present_ascent_descent"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_immediately_available"
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "Policy Guideline IV table row 'Carbon monoxide poisoning, acute', 2.5-3.0 ATA: one treatment; with persistent neurologic dysfunction after the initial treatment, further treatment within six to eight hours, continued once or twice daily until no additional improvement in cognitive function; utilization review after 5 treatments."
+      ]
+    },
+    {
+      "id": "e_central_retinal_artery_occlusion",
+      "name": "II.E Central retinal artery occlusion (CRAO)",
+      "applies_to_cpt": [
+        "99183",
+        "G0277"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "II.E Central retinal artery occlusion (CRAO)",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "ind_e_central_retinal_artery_occlusion"
+          },
+          {
+            "type": "all",
+            "label": "Documentation required for every indication (Policy Guideline I)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "gen_not_replacement_for_standard_therapy"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_initial_assessment_history_exam"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_history_lists_prior_treatments"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_current_adjunctive_treatment"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_established_hbot_goals"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_hbot_session_records"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_effect_of_treatment_on_goals"
+              }
+            ]
+          },
+          {
+            "type": "all",
+            "label": "Practitioner requirements (Policy Guideline V; not answerable from a chart)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_certified_hyperbaric"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_acls_certification"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_present_ascent_descent"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_immediately_available"
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "Policy Guideline IV table row 'Central Retinal Artery Occlusion', 2-2.8 ATA: factors that influence outcome include the length of time of occlusion, the anatomical site of the occlusion and the presence of a patent cilioretinal artery; the diagnosis is typically and reliably made with a fundoscopic exam. Treat twice daily until clinical plateau plus three days (usually up to 10 days); utilization review after 20 treatments. The 'factors' sentence describes prognosis, not a requirement, so no criterion."
+      ]
+    },
+    {
+      "id": "f_cerebral_edema",
+      "name": "II.F Cerebral edema, acute",
+      "applies_to_cpt": [
+        "99183",
+        "G0277"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "II.F Cerebral edema, acute",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "ind_f_cerebral_edema_acute"
+          },
+          {
+            "type": "all",
+            "label": "Documentation required for every indication (Policy Guideline I)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "gen_not_replacement_for_standard_therapy"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_initial_assessment_history_exam"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_history_lists_prior_treatments"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_current_adjunctive_treatment"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_established_hbot_goals"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_hbot_session_records"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_effect_of_treatment_on_goals"
+              }
+            ]
+          },
+          {
+            "type": "all",
+            "label": "Practitioner requirements (Policy Guideline V; not answerable from a chart)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_certified_hyperbaric"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_acls_certification"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_present_ascent_descent"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_immediately_available"
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "No Policy Guideline IV table row for cerebral edema."
+      ]
+    },
+    {
+      "id": "g_compromised_grafts_flaps",
+      "name": "II.G Compromised grafts and flaps",
+      "applies_to_cpt": [
+        "99183",
+        "G0277"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "II.G Compromised grafts and flaps",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "ind_g_compromised_grafts_and_flaps"
+          },
+          {
+            "type": "all",
+            "label": "Documentation required for every indication (Policy Guideline I)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "gen_not_replacement_for_standard_therapy"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_initial_assessment_history_exam"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_history_lists_prior_treatments"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_current_adjunctive_treatment"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_established_hbot_goals"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_hbot_session_records"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_effect_of_treatment_on_goals"
+              }
+            ]
+          },
+          {
+            "type": "all",
+            "label": "Practitioner requirements (Policy Guideline V; not answerable from a chart)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_certified_hyperbaric"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_acls_certification"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_present_ascent_descent"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_immediately_available"
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "Policy Guideline IV table row 'Compromised Grafts and Flaps', 2.0-2.5 ATA: in tissue compromised by irradiation or where there is decreased perfusion or hypoxia; not for primary management of wounds for normal, uncompromised grafts or flaps; 90-120 minute treatments, often twice a day, reduced to once daily when stable; after a failed graft HBOT may prepare the already-compromised recipient site for a new graft, but not the initial preparation of the body site; utilization review after 40 treatments."
+      ]
+    },
+    {
+      "id": "h_cyanide_poisoning",
+      "name": "II.H Cyanide poisoning, acute",
+      "applies_to_cpt": [
+        "99183",
+        "G0277"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "II.H Cyanide poisoning, acute",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "ind_h_cyanide_poisoning_acute"
+          },
+          {
+            "type": "leaf",
+            "criterion": "h_adjunct_to_sodium_nitrite"
+          },
+          {
+            "type": "all",
+            "label": "Documentation required for every indication (Policy Guideline I)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "gen_not_replacement_for_standard_therapy"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_initial_assessment_history_exam"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_history_lists_prior_treatments"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_current_adjunctive_treatment"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_established_hbot_goals"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_hbot_session_records"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_effect_of_treatment_on_goals"
+              }
+            ]
+          },
+          {
+            "type": "all",
+            "label": "Practitioner requirements (Policy Guideline V; not answerable from a chart)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_certified_hyperbaric"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_acls_certification"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_present_ascent_descent"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_immediately_available"
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "Policy Guideline IV table row 'Cyanide poisoning, acute', 2.5-3.0 ATA: one treatment of 120 minutes; no utilization review point given."
+      ]
+    },
+    {
+      "id": "i_decompression_sickness",
+      "name": "II.I Decompression sickness",
+      "applies_to_cpt": [
+        "99183",
+        "G0277"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "II.I Decompression sickness",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "ind_i_decompression_sickness"
+          },
+          {
+            "type": "leaf",
+            "criterion": "i_gas_bubbles_interfere_organ_or_sensation"
+          },
+          {
+            "type": "all",
+            "label": "Documentation required for every indication (Policy Guideline I)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "gen_not_replacement_for_standard_therapy"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_initial_assessment_history_exam"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_history_lists_prior_treatments"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_current_adjunctive_treatment"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_established_hbot_goals"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_hbot_session_records"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_effect_of_treatment_on_goals"
+              }
+            ]
+          },
+          {
+            "type": "all",
+            "label": "Practitioner requirements (Policy Guideline V; not answerable from a chart)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_certified_hyperbaric"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_acls_certification"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_present_ascent_descent"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_immediately_available"
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "Policy Guideline IV table row 'Decompression sickness', 2.0-5.0 ATA: one treatment of 1.5 to 14 hours; residual defects after the initial treatment warrant additional treatments until clinical stability, generally no more than five to 10; utilization review after 10 treatments."
+      ]
+    },
+    {
+      "id": "j_gas_gangrene",
+      "name": "II.J Gas/wet gangrene (e.g., clostridial myonecrosis)",
+      "applies_to_cpt": [
+        "99183",
+        "G0277"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "II.J Gas/wet gangrene (e.g., clostridial myonecrosis)",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "ind_j_gas_wet_gangrene"
+          },
+          {
+            "type": "all",
+            "label": "Gas gangrene patient selection (Policy Guideline IV): positive gram-stained smear or culture from tissue fluids, tissue gas visualization on x-ray, severe and sudden pain, skin changes, and edema",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "j_positive_gram_stain_or_culture"
+              },
+              {
+                "type": "leaf",
+                "criterion": "j_tissue_gas_on_xray"
+              },
+              {
+                "type": "leaf",
+                "criterion": "j_severe_sudden_pain_skin_changes_edema"
+              }
+            ]
+          },
+          {
+            "type": "all",
+            "label": "Documentation required for every indication (Policy Guideline I)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "gen_not_replacement_for_standard_therapy"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_initial_assessment_history_exam"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_history_lists_prior_treatments"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_current_adjunctive_treatment"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_established_hbot_goals"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_hbot_session_records"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_effect_of_treatment_on_goals"
+              }
+            ]
+          },
+          {
+            "type": "all",
+            "label": "Practitioner requirements (Policy Guideline V; not answerable from a chart)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_certified_hyperbaric"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_acls_certification"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_present_ascent_descent"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_immediately_available"
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "Policy Guideline IV table row 'Gas gangrene', 3.0 ATA: three 90-minute treatments during the first 24 hours, then two treatments per day for the next two to five days; utilization review after 10 treatments."
+      ]
+    },
+    {
+      "id": "k_isshl",
+      "name": "II.K Idiopathic sudden sensorineural hearing loss (ISSHL)",
+      "applies_to_cpt": [
+        "99183",
+        "G0277"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "II.K Idiopathic sudden sensorineural hearing loss (ISSHL)",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "ind_k_idiopathic_sudden_sensorineural_hearing_loss"
+          },
+          {
+            "type": "leaf",
+            "criterion": "k_hearing_loss_30_db_3_frequencies"
+          },
+          {
+            "type": "any",
+            "label": "Treatment is recommended either",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "k_steroids_within_2_weeks_of_onset"
+              },
+              {
+                "type": "leaf",
+                "criterion": "k_salvage_with_steroids_within_1_month_of_onset"
+              }
+            ]
+          },
+          {
+            "type": "all",
+            "label": "Documentation required for every indication (Policy Guideline I)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "gen_not_replacement_for_standard_therapy"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_initial_assessment_history_exam"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_history_lists_prior_treatments"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_current_adjunctive_treatment"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_established_hbot_goals"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_hbot_session_records"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_effect_of_treatment_on_goals"
+              }
+            ]
+          },
+          {
+            "type": "all",
+            "label": "Practitioner requirements (Policy Guideline V; not answerable from a chart)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_certified_hyperbaric"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_acls_certification"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_present_ascent_descent"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_immediately_available"
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "Policy Guideline IV table row 'Idiopathic Sudden Sensorineural Hearing Loss', 2-2.5 ATA: recommend 10-20 sessions; utilization review after 20 treatments."
+      ]
+    },
+    {
+      "id": "l_necrotizing_soft_tissue_infections",
+      "name": "II.L Necrotizing soft tissue infections",
+      "applies_to_cpt": [
+        "99183",
+        "G0277"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "II.L Necrotizing soft tissue infections",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "ind_l_necrotizing_soft_tissue_infection"
+          },
+          {
+            "type": "leaf",
+            "criterion": "l_high_morbidity_mortality_despite_standard_treatment"
+          },
+          {
+            "type": "all",
+            "label": "Documentation required for every indication (Policy Guideline I)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "gen_not_replacement_for_standard_therapy"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_initial_assessment_history_exam"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_history_lists_prior_treatments"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_current_adjunctive_treatment"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_established_hbot_goals"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_hbot_session_records"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_effect_of_treatment_on_goals"
+              }
+            ]
+          },
+          {
+            "type": "all",
+            "label": "Practitioner requirements (Policy Guideline V; not answerable from a chart)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_certified_hyperbaric"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_acls_certification"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_present_ascent_descent"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_immediately_available"
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "Policy Guideline IV table row 'Necrotizing Soft Tissue Infections', 2.0-2.5 ATA: twice daily for 90 to 120 minutes until the condition is stabilized, then once daily; utilization review after 30 treatments."
+      ]
+    },
+    {
+      "id": "m_osteomyelitis_acute_refractory",
+      "name": "II.M Osteomyelitis, acute, refractory",
+      "applies_to_cpt": [
+        "99183",
+        "G0277"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "II.M Osteomyelitis, acute, refractory",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "ind_m_osteomyelitis_acute_refractory"
+          },
+          {
+            "type": "leaf",
+            "criterion": "m_not_responded_to_standard_medical_surgical_management"
+          },
+          {
+            "type": "all",
+            "label": "Documentation required for every indication (Policy Guideline I)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "gen_not_replacement_for_standard_therapy"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_initial_assessment_history_exam"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_history_lists_prior_treatments"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_current_adjunctive_treatment"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_established_hbot_goals"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_hbot_session_records"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_effect_of_treatment_on_goals"
+              }
+            ]
+          },
+          {
+            "type": "all",
+            "label": "Practitioner requirements (Policy Guideline V; not answerable from a chart)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_certified_hyperbaric"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_acls_certification"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_present_ascent_descent"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_immediately_available"
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "No separate Policy Guideline IV table row for acute osteomyelitis; the table row 'Osteomyelitis, chronic, refractory' says HBOT should not be used as a primary treatment for osteomyelitis."
+      ]
+    },
+    {
+      "id": "n_osteomyelitis_chronic_refractory",
+      "name": "II.N Osteomyelitis, chronic, refractory",
+      "applies_to_cpt": [
+        "99183",
+        "G0277"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "II.N Osteomyelitis, chronic, refractory",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "ind_n_osteomyelitis_chronic_refractory"
+          },
+          {
+            "type": "any",
+            "label": "has persisted for at least six (6) weeks or has recurred",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "n_persisted_at_least_six_weeks"
+              },
+              {
+                "type": "leaf",
+                "criterion": "n_recurred_after_appropriate_interventions"
+              }
+            ]
+          },
+          {
+            "type": "all",
+            "label": "after appropriate interventions, i.e., surgical debridement and at least one appropriate course of parenteral antibiotics, have been performed",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "n_surgical_debridement_performed"
+              },
+              {
+                "type": "leaf",
+                "criterion": "n_parenteral_antibiotic_course_performed"
+              }
+            ]
+          },
+          {
+            "type": "all",
+            "label": "Documentation required for every indication (Policy Guideline I)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "gen_not_replacement_for_standard_therapy"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_initial_assessment_history_exam"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_history_lists_prior_treatments"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_current_adjunctive_treatment"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_established_hbot_goals"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_hbot_session_records"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_effect_of_treatment_on_goals"
+              }
+            ]
+          },
+          {
+            "type": "all",
+            "label": "Practitioner requirements (Policy Guideline V; not answerable from a chart)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_certified_hyperbaric"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_acls_certification"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_present_ascent_descent"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_immediately_available"
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "Policy Guideline IV table row 'Osteomyelitis, chronic, refractory', 2.0-2.5 ATA: HBOT should not be a primary treatment and should be considered only after surgical debridement and at least one six-week appropriate course of parenteral antibiotics; daily treatment for 90-120 minutes, continued four to six weeks for responders; utilization review after 30-40 sessions."
+      ]
+    },
+    {
+      "id": "o_dental_surgery_irradiated_jaw",
+      "name": "II.O Pre- and post-treatment for dental surgery of an irradiated jaw",
+      "applies_to_cpt": [
+        "99183",
+        "G0277"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "II.O Pre- and post-treatment for dental surgery of an irradiated jaw",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "ind_o_dental_surgery_irradiated_jaw"
+          },
+          {
+            "type": "all",
+            "label": "Documentation required for every indication (Policy Guideline I)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "gen_not_replacement_for_standard_therapy"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_initial_assessment_history_exam"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_history_lists_prior_treatments"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_current_adjunctive_treatment"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_established_hbot_goals"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_hbot_session_records"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_effect_of_treatment_on_goals"
+              }
+            ]
+          },
+          {
+            "type": "all",
+            "label": "Practitioner requirements (Policy Guideline V; not answerable from a chart)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_certified_hyperbaric"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_acls_certification"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_present_ascent_descent"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_immediately_available"
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "Policy Guideline IV table row 'Osteoradionecrosis, mandibular (i.e., Marx Protocol for ORN and Tooth Extraction)', 2.0-2.5 ATA: Marx Protocol pre- and post-treatment for non-implant dental surgery of an irradiated jaw; stage I 30 treatments plus 10 if response adequate; non-responders (stage II) more extensive debridement then 10 more; stage III up to 30 treatments, mandibular segmental resection, then 10 more; utilization review after 10-30 treatments.",
+        "Implant-related dental surgery is outside this indication by the parenthetical '(non-implant related)'; the document states no separate exclusion for it."
+      ]
+    },
+    {
+      "id": "p_profound_anemia",
+      "name": "II.P Profound anemia with exceptional blood loss",
+      "applies_to_cpt": [
+        "99183",
+        "G0277"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "II.P Profound anemia with exceptional blood loss",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "p_profound_anemia_exceptional_blood_loss"
+          },
+          {
+            "type": "any",
+            "label": "but only when blood transfusion is impossible or must be delayed",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "p_blood_transfusion_impossible"
+              },
+              {
+                "type": "leaf",
+                "criterion": "p_blood_transfusion_must_be_delayed"
+              }
+            ]
+          },
+          {
+            "type": "all",
+            "label": "Documentation required for every indication (Policy Guideline I)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "gen_not_replacement_for_standard_therapy"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_initial_assessment_history_exam"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_history_lists_prior_treatments"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_current_adjunctive_treatment"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_established_hbot_goals"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_hbot_session_records"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_effect_of_treatment_on_goals"
+              }
+            ]
+          },
+          {
+            "type": "all",
+            "label": "Practitioner requirements (Policy Guideline V; not answerable from a chart)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_certified_hyperbaric"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_acls_certification"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_present_ascent_descent"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_immediately_available"
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "Policy Guideline IV table row 'Anemia, severe', 2.0-3.0 ATA: treatments of up to three or four hours, three to four times a day, tapered until red blood cells are replaced by regeneration or the patient can undergo transfusion; utilization review daily."
+      ]
+    },
+    {
+      "id": "q_radiation_necrosis",
+      "name": "II.Q Radiation necrosis: osteoradionecrosis/bony necrosis and soft tissue radiation necrosis",
+      "applies_to_cpt": [
+        "99183",
+        "G0277"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "II.Q Radiation necrosis: osteoradionecrosis/bony necrosis and soft tissue radiation necrosis",
+        "children": [
+          {
+            "type": "any",
+            "label": "Osteoradionecrosis (ORN)/bony necrosis, or soft tissue radiation necrosis",
+            "children": [
+              {
+                "type": "all",
+                "label": "Osteoradionecrosis as adjunctive treatment in the preoperative and postoperative management of the patient",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "q_osteoradionecrosis_bony_necrosis"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "q_orn_adjunctive_perioperative"
+                  }
+                ]
+              },
+              {
+                "type": "leaf",
+                "criterion": "q_soft_tissue_radiation_necrosis"
+              }
+            ]
+          },
+          {
+            "type": "all",
+            "label": "Documentation required for every indication (Policy Guideline I)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "gen_not_replacement_for_standard_therapy"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_initial_assessment_history_exam"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_history_lists_prior_treatments"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_current_adjunctive_treatment"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_established_hbot_goals"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_hbot_session_records"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_effect_of_treatment_on_goals"
+              }
+            ]
+          },
+          {
+            "type": "all",
+            "label": "Practitioner requirements (Policy Guideline V; not answerable from a chart)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_certified_hyperbaric"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_acls_certification"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_present_ascent_descent"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_immediately_available"
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "Policy Guideline IV table row 'Osteoradionecrosis', 2.0-2.5 ATA: 30 treatments followed by only minor bony debridement; 10 more if response adequate; non-responders (stage II) receive more extensive surgical debridement then 10 more; stage III 30 treatments, mandibular segmental resection, then 10 more; utilization review after 10-30 treatments.",
+        "Table row 'Osteoradionecrosis, mandibular' lists 'Evidence of overt fracture or bony resorption' as patient selection for the Marx protocol. It is specific to the mandibular/Marx row and is not required of ORN elsewhere or of soft tissue necrosis, so it is recorded here rather than as a criterion on this pathway.",
+        "Soft tissue radiation necrosis has no table row; its only requirement is the diagnosis plus the general documentation block."
+      ]
+    },
+    {
+      "id": "r_refractory_mycosis",
+      "name": "II.R Refractory mycosis",
+      "applies_to_cpt": [
+        "99183",
+        "G0277"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "II.R Refractory mycosis",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "ind_r_refractory_mycosis"
+          },
+          {
+            "type": "leaf",
+            "criterion": "r_refractory_to_antibiotics_and_surgery"
+          },
+          {
+            "type": "all",
+            "label": "Documentation required for every indication (Policy Guideline I)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "gen_not_replacement_for_standard_therapy"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_initial_assessment_history_exam"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_history_lists_prior_treatments"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_current_adjunctive_treatment"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_established_hbot_goals"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_hbot_session_records"
+              },
+              {
+                "type": "leaf",
+                "criterion": "gen_effect_of_treatment_on_goals"
+              }
+            ]
+          },
+          {
+            "type": "all",
+            "label": "Practitioner requirements (Policy Guideline V; not answerable from a chart)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_certified_hyperbaric"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_acls_certification"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_present_ascent_descent"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prac_physician_immediately_available"
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "Policy Guideline IV table row 'Refractory mycosis', 2.0-2.5 ATA: one to two times daily for 90-120 minutes, up to 40-80 treatments; utilization review after 10-30 treatments."
+      ]
+    }
+  ],
+  "notes": [
+    "Source: Excellus BlueCross BlueShield Medical Policy 2.01.07 Hyperbaric Oxygen Therapy (HBOT), current effective date July 16, 2026, next review July 2027; 27 pages. Built from the PDF only.",
+    "Structure: one pathway per Policy Statement II indication A-R (18 indications; II.C diabetic wounds is split into an initial course and a continued-treatment pathway because Policy Guidelines II and III add continuation rules for that indication). Every pathway's 'all' carries the Policy Guideline I documentation block (I.A-E) and the Policy Guideline V practitioner block.",
+    "Policy Guideline I says the listed information 'must be documented, as applicable to the specific medical condition'. I.A-E are included in every pathway as written. I.D (session records) and I.E (effect of treatment on goals) can only exist once treatment has begun; for a request before the first session a reviewer would treat them as not applicable. There is no way to encode 'as applicable' in the tree, so they are present everywhere and their questions say 'where treatments have already been given'. A reasonable reviewer could drop I.D/I.E from initial-request pathways.",
+    "Policy Guideline I's opening sentence 'HBOT should not be a replacement for successful standard therapeutic measures' is encoded as a criterion in every pathway (the chart should show standard therapy continuing or having failed). The table rows' 'in conjunction with standard therapeutic measures' / 'adjunctive therapy only' are read as the same requirement, except where the row names a specific companion treatment (cyanide: sodium nitrite infusion).",
+    "Policy Guideline V is prefaced 'It is recommended that the CMS criteria ... be utilized in determining appropriate practitioners'. Its items B (certification), C (ACLS), D (physician present during ascent and descent) and E (immediately available) are encoded as answerable:false criteria because they are practitioner credentials and facility practice, not chart facts. V.A (NPPs may supervise if within scope of practice, with a collaborative agreement and the educational requirements) is permissive, not a requirement, and is left out. The V.B text stops at 'Undersea and Hyperbaric Medicine' because the sentence crosses a page break in the PDF; the alternative 40-hour training route is in the question.",
+    "Policy Guideline IV table: the 'Patient Selection Criteria' column is treated as condition-specific criteria (the policy statement says 'refer to Policy Guidelines for condition-specific recommendations'). The PDF text layer interleaves the table's columns line by line, so for a multi-line cell the criterion text holds the longest contiguous verbatim run and the question carries the full cell: crush injury 'function, limb or life is' (full: in conjunction with standard therapeutic measures, when loss of function, limb or life is threatened) and 'oxygen tension is below 30 mmHg.'; air/gas embolism 'and results in ischemia' (full: gases in the vasculature sufficient enough to interfere with the function of an organ and results in ischemia to the affected areas); CO 'Within six hours of' (full: within six hours of patient removal from the carbon monoxide-contaminated environment); cyanide 'As an adjunct to' (full: as an adjunct to infusion of sodium nitrite); decompression 'Gas bubbles in the' (full: gas bubbles in the tissue or blood in volumes sufficient enough to interfere with the function of an organ or cause alteration in sensation); gas gangrene three fragments; ISSHL 'as a loss of 30 decibels' (full: a loss of 30 decibels or more across 3 contiguous frequencies on audiogram); mycosis 'process is refractory to' (full: in conjunction with standard treatment when the disease process is refractory to antibiotics and surgical treatment); ORN 'As adjunctive treatment' (full: as adjunctive treatment in the preoperative and postoperative management of the patient).",
+    "The table's Pressure (ATA), Duration/Frequency/Number of Treatments and Utilization review columns are treatment-plan recommendations, not chart requirements; they are recorded in each pathway's notes. The utilization review points (after 5, 10, 20, 30, 30-40 or 40 treatments) mark when continued treatment is re-reviewed.",
+    "Gas gangrene: the table cell 'Positive gram-stained smear or culture from tissue fluids, tissue gas visualization on x-ray, severe and sudden pain, skin changes, and edema' is a comma list joined by 'and', so it is encoded as all of three findings (smear/culture; gas on x-ray; pain, skin changes and edema). A reviewer could read the list as the typical clinical picture rather than a strict conjunction.",
+    "ISSHL: the table says the degree of hearing loss 'is typically defined as' a loss of 30 decibels or more across 3 contiguous frequencies on audiogram. 'Typically defined' is a definition, but it is the only measurable selection standard in the document, so it is a criterion. The two treatment-timing options are an 'any' (steroids within 2 weeks of onset, or salvage with steroids within 1 month of onset), both requiring steroid therapy. 2 weeks is encoded as 0.5 months, 1 month as 1 month.",
+    "Chronic osteomyelitis (II.N): read as (persisted at least six weeks OR recurred) AND (surgical debridement AND at least one course of parenteral antibiotics performed). The policy statement's 'after appropriate interventions ... have been performed' grammatically attaches to 'recurred', but the table row makes debridement plus antibiotics a precondition in every case ('HBOT should be considered only after ...'), so the interventions are required on both branches. The table specifies a six-week antibiotic course; the criterion keeps the policy statement wording and the question mentions six weeks. The table's 'HBOT should not be used as a primary treatment for osteomyelitis' is carried by these requirements and by the general not-a-replacement criterion; its text is column-interleaved and is not a separate exclusion.",
+    "Diabetic wounds (II.C): 'No measurable signs of healing after 30 days of an adequate course of standard wound therapy; which may include ANY of the following a-g' is encoded as the 30-day failure criterion plus an 'any' of the seven components, because the document says ANY. 'May include' is permissive, so a reviewer could treat a-g as descriptive and require only the 30-day failure. 30 days is encoded as 1 month; the table says 30 consecutive days. Wagner grade 3 or higher is a number threshold (gte 3).",
+    "Diabetic wounds: Policy Guideline II's documentation sentence (wound healing progress; precise length, width and depth; granulation and necrotic tissue; concurrent measures) and the weekly-measurement sentence are required on both the initial and the continued pathway, since wound measurements during the 30 days of standard therapy are how failure to heal is shown. 'A steady decrease in wound volume should be noted from week to week' describes response under HBOT and is required only on the continued pathway, where it would otherwise contradict the initial no-healing requirement.",
+    "Diabetic wounds, continued treatment: the discontinuation triggers (patient heals, unable to tolerate, fails to improve) are not(any(...)); Policy Guideline III's 30-day rule is not(no measurable signs of healing within any 30-day period). III is written generally ('Continued treatment with HBOT is not covered if measurable signs of healing have not been demonstrated within any 30-day period of treatment'); it is also listed as an exclusion so it reaches other indications. 'Most patients should NOT require more than 40 treatments' is an expectation, not a cap, and is a note only.",
+    "Profound anemia (II.P): 'but only when blood transfusion is impossible or must be delayed' is an 'any' of two leaves. The table row 'Anemia, severe' repeats the same condition.",
+    "Radiation necrosis (II.Q) is one policy-statement item covering ORN/bony necrosis and soft tissue necrosis. Encoded as any(all(ORN, adjunctive perioperative management), soft tissue necrosis): the table's ORN row requires HBOT as adjunctive treatment in preoperative and postoperative management; soft tissue necrosis has no row. II.O (dental surgery of an irradiated jaw) is kept as its own pathway because it is its own lettered indication and its own table row (Marx protocol).",
+    "CRAO (II.E), cerebral edema (II.F) and compromised grafts/flaps (II.G) have only a diagnosis leaf plus the general block. The CRAO row's 'factors which influence outcome' and 'typically ... made with a fundoscopic exam' are prognosis and diagnostic-method descriptions, not requirements; they are in the question and notes. The grafts/flaps row's definition of compromise (irradiation, decreased perfusion, hypoxia) and its exclusions (not primary wound management; not initial preparation of a site for a graft) are in the question; the policy statement's own parenthetical '(not for primary management of these wounds)' is part of the criterion text, and III.P 'Uncompromised skin grafts or flaps' is an exclusion.",
+    "Acute traumatic peripheral ischemia (II.A) lists crush injury, compartment syndrome, reperfusion injury and suturing of severed limbs; the table has a row only for crush injury. Its selection criteria (threat to function, limb or life; tissue oxygen tension below 30 mmHg) are applied to the whole indication as the document's only condition-specific recommendation for it; a reviewer could confine them to crush injuries.",
+    "Policy Statement III lists 44 investigational indications (A-RR); each is an exclusion with no codes, because 99183 and G0277 are covered for the Statement II indications and no code is specific to an excluded indication. The III header sentence is also an exclusion so that any indication outside II.A-R is caught ('ALL other indications, including, but not limited to').",
+    "Codes: CPT 99183 and HCPCS G0277 (systemic chamber) are covered; A4575 and E0446 are marked (E/I) in the table and are topical HBOT, which Statement I calls investigational. The code section says codes may not be covered under all circumstances and the list may not be all inclusive; the (NMN) legend is defined but applied to no code. Every pathway governs 99183 and G0277.",
+    "ICD-10 codes are copied from the document's code table as ranges and single codes; the table also carries T86.820-T86.822 and T86.828-T86.829 (skin graft complications) and radiation sickness T66, supporting II.G and II.Q.",
+    "Plan applicability is from the Product Disclaimer: medical policy criteria apply to commercial (including Essential Plan and Child Health Plus), Medicaid when no eMedNY criteria exist, and Medicare (including DSNP) when no national or local Medicare coverage decision exists. The CMS section cites NCD 20.29 Hyperbaric Oxygen Therapy, so Medicare products follow that NCD rather than this policy. A DSNP product that does not cover a service follows the Medicaid line. The disclaimer sentence 'Services are contract dependent; if a product does not cover a service, medical policy criteria do not apply' is a benefit term (not a coverage exclusion) and crosses a page break, so it is not an exclusion.",
+    "Left out as background, not requirements: Description, Supportive Literature, Professional Guidelines (UHMS, AAO-HNS, AAO, ACC/AHA, AHA/ASA, SVS), Regulatory Status (FDA-cleared indications and the FDA warning list), Search Terms, References, Policy History. The professional-guideline text for ISSHL repeats the policy's own wording and happens to be where 'combined with steroid therapy within 2 weeks of onset' is contiguous in the text layer; the requirement itself is Policy Guideline IV's ISSHL row.",
+    "Related policy 11.01.03 Experimental or Investigational Services governs the investigational determinations; it is referenced, not reproduced.",
+    "Policy Guideline I's umbrella sentence 'Documentation in the medical record should support the specific condition being treated with HBOT and the medical necessity of such treatment' is not a separate criterion: it is satisfied by each pathway's indication leaves plus the I.A-E documentation block. The page-1 preamble (policies are guides; federal and state law, regulatory mandates and the subscriber contract are considered first) is boilerplate.",
+    "Policy history: ISSHL and CRAO were moved from the investigational list (Statement III) to the medically necessary list (Statement II) on 06/26/25; the 07/16/26 annual review left policy intent unchanged. The tree follows the current Statement II/III lists."
+  ],
+  "plan_types": [
+    "Commercial products (including an Essential Plan or Child Health Plus product)",
+    "Medicaid products, when there are no New York State Medicaid guidelines (eMedNY) criteria",
+    "Medicare products (including Medicare HMO-Dual Special Needs Program (DSNP) product), when there is no national or local Medicare coverage decision for the service"
+  ],
+  "excluded_plans": [
+    "Medicare products where a national or local Medicare coverage decision exists (CMS NCD 20.29 Hyperbaric Oxygen Therapy)",
+    "Medicaid products where New York State Medicaid guidelines (eMedNY) criteria exist",
+    "Any product that does not cover the service (services are contract dependent; medical policy criteria do not apply)"
+  ],
+  "exclusions": [
+    {
+      "text": "Topical hyperbaric oxygen therapy (HBOT) is considered investigational.",
+      "cpt": [
+        "A4575",
+        "E0446"
+      ]
+    },
+    {
+      "text": "Systemic HBOT in a pressurized chamber is considered investigational for ALL other indications, including, but not limited to, the following:",
+      "cpt": []
+    },
+    {
+      "text": "Acute ischemic stroke",
+      "cpt": []
+    },
+    {
+      "text": "Amyotrophic Lateral Sclerosis",
+      "cpt": []
+    },
+    {
+      "text": "Arterial peripheral insufficiency, acute; (outside of the other listed medically necessary indications involving arterial insufficiency)",
+      "cpt": []
+    },
+    {
+      "text": "Autism spectrum disorders",
+      "cpt": []
+    },
+    {
+      "text": "Bell's palsy",
+      "cpt": []
+    },
+    {
+      "text": "Bone grafts",
+      "cpt": []
+    },
+    {
+      "text": "Breast cancer, locally advanced, as pretreatment for patients undergoing chemotherapy",
+      "cpt": []
+    },
+    {
+      "text": "Brown recluse spider bites",
+      "cpt": []
+    },
+    {
+      "text": "Carbon tetrachloride poisoning, acute",
+      "cpt": []
+    },
+    {
+      "text": "Cardiopulmonary bypass, as pretreatment",
+      "cpt": []
+    },
+    {
+      "text": "Cerebral palsy",
+      "cpt": []
+    },
+    {
+      "text": "Cerebrovascular disease, acute (thrombotic or embolic) or chronic",
+      "cpt": []
+    },
+    {
+      "text": "Chronic, non-healing wounds",
+      "cpt": []
+    },
+    {
+      "text": "Complex regional pain syndrome",
+      "cpt": []
+    },
+    {
+      "text": "COVID-19",
+      "cpt": []
+    },
+    {
+      "text": "Uncompromised skin grafts or flaps",
+      "cpt": []
+    },
+    {
+      "text": "Fibromyalgia syndrome",
+      "cpt": []
+    },
+    {
+      "text": "Fracture healing",
+      "cpt": []
+    },
+    {
+      "text": "Frostbite",
+      "cpt": []
+    },
+    {
+      "text": "Head injury, traumatic (including traumatic brain injury)",
+      "cpt": []
+    },
+    {
+      "text": "Tinnitus",
+      "cpt": []
+    },
+    {
+      "text": "Hydrogen sulfide poisoning",
+      "cpt": []
+    },
+    {
+      "text": "Inflammatory bowel disease (Crohn's disease, ulcerative colitis)",
+      "cpt": []
+    },
+    {
+      "text": "Interstitial cystitis",
+      "cpt": []
+    },
+    {
+      "text": "Intra-abdominal and intracranial abscesses",
+      "cpt": []
+    },
+    {
+      "text": "In vitro fertilization",
+      "cpt": []
+    },
+    {
+      "text": "Lepromatous leprosy",
+      "cpt": []
+    },
+    {
+      "text": "Malignant otitis externa",
+      "cpt": []
+    },
+    {
+      "text": "Meningitis",
+      "cpt": []
+    },
+    {
+      "text": "Migraine",
+      "cpt": []
+    },
+    {
+      "text": "Myocardial infarction and acute coronary syndrome (acute myocardial infarction and unstable angina)",
+      "cpt": []
+    },
+    {
+      "text": "Multiple sclerosis",
+      "cpt": []
+    },
+    {
+      "text": "Muscle soreness, delayed onset",
+      "cpt": []
+    },
+    {
+      "text": "Prevention of coronary restenosis",
+      "cpt": []
+    },
+    {
+      "text": "Pseudomembranous colitis (antimicrobial agent-induced colitis)",
+      "cpt": []
+    },
+    {
+      "text": "Pyoderma gangrenosum",
+      "cpt": []
+    },
+    {
+      "text": "Radiation myelitis",
+      "cpt": []
+    },
+    {
+      "text": "Radiation therapy, for the purpose of tumor sensitization",
+      "cpt": []
+    },
+    {
+      "text": "Retinal detachment",
+      "cpt": []
+    },
+    {
+      "text": "Retinopathy, adjunct to scleral buckling procedures in patients with sickle cell peripheral retinopathy",
+      "cpt": []
+    },
+    {
+      "text": "Sickle cell crisis and/or hematuria",
+      "cpt": []
+    },
+    {
+      "text": "Soft tissue injury",
+      "cpt": []
+    },
+    {
+      "text": "Spinal cord injury",
+      "cpt": []
+    },
+    {
+      "text": "Thermal burns, acute",
+      "cpt": []
+    },
+    {
+      "text": "Continued treatment with HBOT is not covered if measurable signs of healing have not been demonstrated within any 30-day period of treatment.",
+      "cpt": []
+    },
+    {
+      "text": "HBOT treatments of diabetic wounds of the lower extremities should be discontinued when the patient heals, is unable to tolerate treatment, or fails to improve.",
+      "cpt": []
+    }
+  ],
+  "status": "ok"
+}

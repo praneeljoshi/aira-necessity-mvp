@@ -1,0 +1,219 @@
+{
+ "lines_of_business": [
+  "All lines of business unless noted in PROGRAM EXCEPTIONS (disclaimer: \"THIS MEDICAL COVERAGE GUIDELINE APPLIES TO ALL LINES OF BUSINESS UNLESS OTHERWISE NOTED IN THE PROGRAM EXCEPTIONS SECTION\")",
+  "FEP: \"Follow FEP guidelines.\"",
+  "SAO: \"Follow SAO guidelines.\"",
+  "Medicare Advantage: LCD Peripheral Nerve Blocks (L33933) 'reviewed'"
+ ],
+ "effective_or_revised": "Original Effective Date 11/15/00; Reviewed 01/22/26; Revised 10/01/26 (16 pages)",
+ "sections_in_order": [
+  "header block (guideline number, Original Effective Date, Reviewed, Revised, Subject)",
+  "disclaimer paragraph",
+  "navigation bar (Position Statement / Billing/Coding / Reimbursement / Program Exceptions / Definitions / Related Guidelines / Other / References / Updates)",
+  "DESCRIPTION",
+  "POSITION STATEMENT",
+  "BILLING/CODING INFORMATION",
+  "REIMBURSEMENT INFORMATION",
+  "PROGRAM EXCEPTIONS",
+  "DEFINITIONS",
+  "RELATED GUIDELINES",
+  "OTHER",
+  "REFERENCES",
+  "COMMITTEE APPROVAL",
+  "GUIDELINE UPDATE INFORMATION"
+ ],
+ "criteria_location": "POSITION STATEMENT, pp.4-5: seven indication paragraphs with nested bullets, then a not-covered block, an imaging-guidance statement and a closing NOTE. Frequency caps are in REIMBURSEMENT INFORMATION (p.7), not the Position Statement.",
+ "procedures_covered": [
+  "Nerve block injections for CRPS",
+  "Ischemic limb pain",
+  "Pancreatic cancer pain",
+  "Chronic pancreatitis pain",
+  "Morton's neuroma",
+  "Plantar fasciitis and other foot neuritis",
+  "Meralgia paresthetica (lateral femoral cutaneous nerve block)",
+  "Imaging guidance with nerve blocks (covered)",
+  "Investigational: ganglion impar, sphenopalatine, genicular, pedicle-screw/hardware blocks, any block for chronic pelvic/perineal pain, occipital/cranial blocks for headache, any block for diabetic neuropathy"
+ ],
+ "logic": {
+  "top_level": "pathways: seven indications, each an all-of (or any-of) of symptom/failed-therapy leaves; plus a denylist",
+  "max_nesting_depth": 3,
+  "k_of_n": [
+   {
+    "k": 1,
+    "n": 3,
+    "quote": "including at least ONE of the following: Activity modification, OR Orthotics/splints/taping, OR Anti-inflammatory medications (e.g., NSAIDS)"
+   }
+  ],
+  "exclusions_or_contraindications": "A denylist ('The following nerve blocks are considered experimental or investigational') and an effectiveness exclusion: 'Nerve block injections do not meet the definition of medical necessity when medical documentation indicates the injection procedures are not effective.'",
+  "initial_vs_repeat": "Position Statement has none; Reimbursement caps: '64400: Total number of injections is limited to four (4) injections in six (6) months' with excess 'subject to medical review'.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Ischemic limb pain: Intractable pain at rest, OR Non-healing ulcers; AND Severe peripheral artery disease, AND Patient is not a candidate for revascularization, OR Previous revascularization has failed",
+    "why_ambiguous": "Mixed AND/OR at the same bullet level with only a semicolon; likely (pain OR ulcers) AND PAD AND (not candidate OR failed) but precedence is not stated."
+   },
+   {
+    "quote": "Failed conservative treatment with ALL of the following treatments: Antidepressant OR anticonvulsant, AND Physical therapy (PT), occupational therapy (OT), or home exercise program >4 weeks",
+    "why_ambiguous": "'ALL of the following' with an OR inside item one; the >4 weeks may modify only the home exercise program, or all three."
+   },
+   {
+    "quote": "Continued symptoms after conservative management for 3 weeks or more, including at least ONE of the following",
+    "why_ambiguous": "'including' suggests other conservative measures may count; 'at least ONE' of the listed three is required."
+   },
+   {
+    "quote": "Meralgia paresthetica: Lateral femoral cutaneous nerve block for meralgia paresthetica ... when symptoms continue after 4 or more weeks of conservative management (e.g., non-opioid analgesics or anticonvulsants).",
+    "why_ambiguous": "'e.g.' examples are not required items."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "symptom",
+   "quote": "Continued pain > 4 weeks duration",
+   "where": "CRPS"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "Antidepressant OR anticonvulsant, AND Physical therapy (PT), occupational therapy (OT), or home exercise program >4 weeks",
+   "where": "CRPS"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "Morton’s neuroma suspected by exam and history",
+   "where": "Morton's neuroma"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "Continued symptoms after conservative management for 3 weeks or more",
+   "where": "plantar fasciitis"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "Previous revascularization has failed",
+   "where": "ischemic limb pain"
+  },
+  {
+   "kind": "duration",
+   "quote": "Continued pain after parenteral narcotics for more than 1 week",
+   "where": "chronic pancreatitis"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "Fluoroscopic or ultrasound imaging guidance performed in conjunction with nerve block injections to isolate the target anatomic site meets the definition of medical necessity.",
+   "where": "imaging guidance statement"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "CRPS pain duration",
+   "value": "> 4",
+   "unit": "weeks",
+   "quote": "Continued pain > 4 weeks duration"
+  },
+  {
+   "quantity": "injections per 6 months (64400, 64408-64451, 64461-64462)",
+   "value": "<= 4",
+   "unit": "per 6 months",
+   "quote": "Total number of injections is limited to four (4) injections in six (6) months."
+  },
+  {
+   "quantity": "injections per 12 months (64455 per neuroma; 64510-64530)",
+   "value": "<= 3",
+   "unit": "per 12 months",
+   "quote": "limited to three (3) injections in twelve (12) months, per neuroma."
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "CRPS conservative treatment",
+   "length": "> 4 weeks",
+   "quote": "physical therapy (PT), occupational therapy (OT), or home exercise program >4 weeks"
+  },
+  {
+   "what": "plantar fasciitis conservative management",
+   "length": "3 weeks or more",
+   "quote": "Continued symptoms after conservative management for 3 weeks or more"
+  },
+  {
+   "what": "meralgia paresthetica conservative management",
+   "length": "4 or more weeks",
+   "quote": "when symptoms continue after 4 or more weeks of conservative management"
+  },
+  {
+   "what": "narcotics for chronic pancreatitis",
+   "length": "> 1 week",
+   "quote": "Continued pain after parenteral narcotics for more than 1 week"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": true,
+  "codes_tied_to_criteria": "Partly: some CPT codes carry '(investigational)' or '(investigational if performed for treatment of chronic pelvic/perineal pain)' (64405, 64425, 64430, 64435, 64454, 64505). The ICD-10 table (pain in joints, radiculopathy, M54.x, plantar fascial fibromatosis, Q85 etc.) is not mapped to the seven indications.",
+  "non_covered_code_lists": "64405, 64454, 64505 and conditional pelvic-pain codes flagged '(investigational)' inside the CPT list."
+ },
+ "external_dependencies": [
+  {
+   "what": "Medicare Advantage LCD L33933 Peripheral Nerve Blocks",
+   "quote": "Local Coverage Determination (LCD) was reviewed on the last guideline reviewed date: Peripheral Nerve Blocks (L33933)"
+  },
+  {
+   "what": "Related guideline for facet radiofrequency",
+   "quote": "Neurolysis/Ablation, 02-61000-34"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Meralgia paresthetica",
+   "definition_quote": "compression of the lateral femoral cutaneous nerve."
+  },
+  {
+   "term": "Morton’s neuroma",
+   "definition_quote": "a swelling of the nerve present in the space between the third and fourth toes."
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "Failed conservative treatment",
+   "problem": "'failed' not defined as to degree of pain relief."
+  },
+  {
+   "quote": "suspected by exam and history",
+   "problem": "allows a clinical suspicion rather than a confirmed diagnosis."
+  },
+  {
+   "quote": "Severe peripheral artery disease",
+   "problem": "no ABI/imaging threshold."
+  },
+  {
+   "quote": "medical documentation indicates the injection procedures are not effective",
+   "problem": "no effectiveness threshold (percent relief, duration)."
+  },
+  {
+   "quote": "It is not expected that epidural injection, facet joint injection, or sacroiliac joint injection would be administered to the same individual on the same day.",
+   "problem": "'not expected' is a soft rule, not a requirement."
+  }
+ ],
+ "extraction_hazards": [
+  "Nested bullets in pdftotext have only '•' at two indent levels; the semantic nesting (an OR inside an AND bullet) is only visible through indent width and trailing AND/OR tokens, which are inconsistently placed ('; AND' after a bullet that closes the pair).",
+  "Indication names ('Complex regional pain syndrome (CRPS):') are plain lines ending with a colon, not styled headings; 'Pancreatic cancer:' etc. look like ordinary sentences.",
+  "Quantity limits are in Reimbursement with '**' prefix lines and a '**NOTE:' - not in the Position Statement; code ranges ('64408-64451', '64510-64530') are ranges with different limits.",
+  "The Description holds a long 'Summary and Analysis of Evidence' with case-study narrative (about 150 lines), easily mistaken for criteria language.",
+  "LOINC table at end of Reimbursement flattens 4 columns; same six-month sentence per row.",
+  "Update log (36 dated entries) contains 'E/I' abbreviation for experimental/investigational and a code history for each year."
+ ],
+ "interesting_structures": [
+  "Per-indication pathways with differing conservative-therapy durations (3, 4 weeks, >1 week).",
+  "Denylist of specific nerve blocks by target and condition (e.g., genicular for chronic knee pain; any block for diabetic neuropathy).",
+  "Frequency caps by CPT range in Reimbursement with 'subject to medical review' for excess.",
+  "Imaging guidance is a separately covered add-on statement.",
+  "Policy revision history shows indications added and removed over time (e.g., 'delete criteria subsection titled all other nerve blocks')."
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "scale": "1..5",
+  "why": "each indication is an all-of with local any-of; mixed AND/OR without parentheses needs human disambiguation, and quantity limits plus conservative-therapy durations sit in different sections."
+ },
+ "file": "bcbsfl-02-61000-29-nerve-block-injections.pdf",
+ "treatment": "nerve-block-injections",
+ "payer": "bcbsfl",
+ "doc_kind": "medical policy (Florida Blue 'Medical Coverage Guideline', MCG)"
+}

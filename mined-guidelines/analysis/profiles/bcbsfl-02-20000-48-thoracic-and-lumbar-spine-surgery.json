@@ -1,0 +1,375 @@
+{
+ "file": "bcbsfl-02-20000-48-thoracic-and-lumbar-spine-surgery.pdf",
+ "treatment": "lumbar-spine-surgery",
+ "payer": "bcbsfl",
+ "doc_kind": "medical coverage guideline (payer-written policy, evidence summary + position statement)",
+ "lines_of_business": [
+  "All lines of business unless noted in Program Exceptions",
+  "FEP: follow FEP guidelines",
+  "SAO: follow SAO guidelines",
+  "Medicare Advantage: NCD 150.10 Lumbar Artificial Disc Replacement reviewed"
+ ],
+ "effective_or_revised": "Original 07/01/15; Reviewed 05/28/26; Revised 06/15/26; policy 02-20000-48",
+ "sections_in_order": [
+  "Description",
+  "Summary and Analysis of Evidence",
+  "Position Statement (Surgery for Spinal Deformity; Lumbar Discectomy/Microdiscectomy; Lumbar Laminectomy; Lumbar Spinal Fusion; Lumbar Total Disc Arthroplasty)",
+  "Billing/Coding Information",
+  "Reimbursement Information",
+  "Program Exceptions",
+  "Definitions",
+  "Related Guidelines",
+  "Other",
+  "References",
+  "Updates"
+ ],
+ "criteria_location": "Position Statement, pp.3-8 of 16: five stacked procedure blocks (deformity fusion, discectomy, laminectomy, lumbar fusion by diagnosis, total disc arthroplasty). The shared conservative-therapy definition is repeated inline in each block; deformity has its own '*Non-operative care' footnote and fusion has a '++' footnote. Evidence summary (pp.1-3) and 65 references are not criteria.",
+ "procedures_covered": [
+  "Thoracic/lumbar deformity fusion (adults)",
+  "Lumbar discectomy/microdiscectomy",
+  "Lumbar laminectomy/laminotomy/facetectomy/foraminotomy",
+  "Lumbar spinal fusion (single or multi-level) for 10 diagnosis pathways",
+  "Lumbar total disc arthroplasty",
+  "Codes also list removal/revision of artificial disc (0164T, 0165T) with no criteria"
+ ],
+ "logic": {
+  "top_level": "pathways (separate criteria per procedure, and inside fusion one OR-list of ten diagnosis pathways, each with its own ALL/ANY)",
+  "max_nesting_depth": 4,
+  "k_of_n": [
+   {
+    "k": 2,
+    "n": 6,
+    "quote": "Signs and symptoms of radiculopathy on history and physical exam, including at least 2 of the following",
+    "pointer": "Lumbar Discectomy, p.4"
+   },
+   {
+    "k": 2,
+    "n": 4,
+    "quote": "Documented failure of at least twelve (12) consecutive weeks in the past year of any 2 of the following physician-directed conservative treatments",
+    "pointer": "*Non-operative care footnote, p.4"
+   }
+  ],
+  "exclusions_or_contraindications": "Fusion: closing list 'considered experimental or investigational if the sole indication for fusion is any one of the following' (disc herniation, chronic nonspecific LBP, DDD, initial discectomy/laminectomy, facet syndrome). Disc arthroplasty: inline 'no contraindications ... including but not limited to' list of 9 items (open-ended).",
+  "initial_vs_repeat": "No general repeat rule. Repeat situations are separate fusion pathways: 'Recurrent, same-level disc herniation, at least 3 months after previous disc surgery'; 'Pseudarthrosis ... No less than 6 months after initial fusion'; 'Adjacent-level disease ... previous fusion resulted in significant relief for at least 6 months'.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Spinal stenosis with one of the following: Associated spondylolisthesis ..., OR Spinal instability ..., OR Spinal instability is anticipated ..., AND Either of the following, a or b",
+    "why_ambiguous": "The AND after the third OR bullet is at the same indent as the three OR bullets; scope of AND (all of the first block AND (a or b)) is only inferable."
+   },
+   {
+    "quote": "Severe, progressive idiopathic scoliosis with either of the following: Cobb angle greater than 40; Spinal cord compression with neurogenic claudication or radicular pain ... who has failed at least 3 months",
+    "why_ambiguous": "Second bullet looks like it should be a different severity of the same condition, but 'severe, progressive' is not defined and the first bullet has no function or conservative-care condition."
+   },
+   {
+    "quote": "Congenital (Wiltse type I) or acquired pars defect (Wiltse type II), documented on x-ray, and, AND",
+    "why_ambiguous": "Typographical doubled conjunction; also third bullet mixes 'Unresponsive to at least 3 months ... OR with severe or rapidly progressive symptoms' inside an ALL list."
+   },
+   {
+    "quote": "Persistent debilitating back or leg pain (defined as daily pain with a visual analog scale score of 4 or greater and affects ADLs), that is refractory to at least 6 weeks of conservative nonsurgical therapy that included the following",
+    "why_ambiguous": "OR between 'Rapidly progressing neurologic deficits' and the pain branch; the three inner ANDs apply only to the pain branch."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "conservative therapy",
+   "quote": "Participation in at least 6 weeks of physical therapy (including active exercise) or documentation of why the candidate could not tolerate physical therapy",
+   "where": "Discectomy/Laminectomy/Fusion/TDA blocks"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "Use of prescription-strength analgesics for several weeks at a dose sufficient to induce a therapeutic response",
+   "where": "same blocks"
+  },
+  {
+   "kind": "psych/behavioral evaluation",
+   "quote": "Evaluation and appropriate management of associated cognitive, behavioral, or addiction issues, if any",
+   "where": "same blocks"
+  },
+  {
+   "kind": "duration",
+   "quote": "Failure of ... at least 12 weeks of focused non-operative care* in the past year",
+   "where": "Deformity, p.3-4"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "Documentation of nerve root compression and lumbar spine abnormality based on a magnetic resonance image or computerized tomography scan with myelogram of the lumbar spine, within the past 6 months",
+   "where": "Discectomy, p.4"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "Spinal curvature > 50 degrees (scoliosis) / > 75 degrees (kyphosis) / chin-brow vertical angle greater than 35 degrees",
+   "where": "Thoracic deformity"
+  },
+  {
+   "kind": "symptom",
+   "quote": "daily pain with a visual analog scale score of 4 or greater and affects ADLs",
+   "where": "Discectomy/Laminectomy"
+  },
+  {
+   "kind": "symptom",
+   "quote": "Progressive neurological deficit (motor deficit, bowel or bladder dysfunction) or lower extremity weakness (0-3/5 on the strength scale) or paralysis",
+   "where": "Deformity; immediate surgical evaluation"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "Spinal stenosis; severe progressive idiopathic scoliosis; severe degenerative scoliosis; isthmic spondylolisthesis; recurrent same-level herniation; pseudarthrosis; instability; flatback; adjacent-level disease",
+   "where": "Fusion pathways"
+  },
+  {
+   "kind": "age",
+   "quote": "Candidate is age 18 to 60",
+   "where": "TDA"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "Recurrent, same-level disc herniation, at least 3 months after previous disc surgery",
+   "where": "Fusion"
+  },
+  {
+   "kind": "device/FDA",
+   "quote": "The lumbar total disc is FDA approved for lumbar disc arthroplasty and used in accordance with FDA labeling",
+   "where": "TDA"
+  },
+  {
+   "kind": "site/approach",
+   "quote": "Total disc arthroplasty will be performed at one or two consecutive levels from L3-S1 using an anterior retroperitoneal approach",
+   "where": "TDA"
+  },
+  {
+   "kind": "per-level rule",
+   "quote": "For multi-level fusion, criteria must be met for each level intended for fusion.",
+   "where": "Fusion note"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "VAS pain (discectomy/laminectomy)",
+   "value": ">= 4",
+   "unit": "VAS",
+   "quote": "daily pain with a visual analog scale score of 4 or greater and affects ADLs"
+  },
+  {
+   "quantity": "VAS pain (TDA)",
+   "value": ">= 5",
+   "unit": "VAS",
+   "quote": "Significant pain with visual analog score of 5 or greater"
+  },
+  {
+   "quantity": "Scoliosis curve, thoracic deformity",
+   "value": "> 50",
+   "unit": "degrees",
+   "quote": "Spinal curvature > 50 degrees (scoliosis)"
+  },
+  {
+   "quantity": "Kyphosis curve",
+   "value": "> 75",
+   "unit": "degrees",
+   "quote": "Spinal curvature > 75 degrees (kyphosis)"
+  },
+  {
+   "quantity": "Chin-brow vertical angle",
+   "value": "> 35",
+   "unit": "degrees",
+   "quote": "Severe kyphosis (chin-brow vertical angle greater than 35 degrees)"
+  },
+  {
+   "quantity": "Sagittal/coronal imbalance (lumbar deformity)",
+   "value": ">= 5",
+   "unit": "cm",
+   "quote": "Sagittal or coronal imbalance of at least 5 cm measured on long plate standing x-rays"
+  },
+  {
+   "quantity": "Coronal progression",
+   "value": ">= 10 in 1 year",
+   "unit": "degrees",
+   "quote": "Documented progression of 10 degrees in one year in the coronal plane"
+  },
+  {
+   "quantity": "Fixed scoliosis (lumbar deformity)",
+   "value": ">= 40",
+   "unit": "degrees",
+   "quote": "A fixed scoliosis of at least 40 degrees"
+  },
+  {
+   "quantity": "Cobb angle idiopathic scoliosis",
+   "value": "> 40",
+   "unit": "degrees",
+   "quote": "Cobb angle greater than 40"
+  },
+  {
+   "quantity": "Cobb angle degenerative scoliosis",
+   "value": ">= 30 (or SVA > 5 cm)",
+   "unit": "degrees",
+   "quote": "minimum Cobb angle of 30, or significant sagittal imbalance (eg, sagittal vertical axis >5 cm)"
+  },
+  {
+   "quantity": "Motor strength",
+   "value": "0-3/5",
+   "unit": "strength scale",
+   "quote": "lower extremity weakness (0-3/5 on the strength scale)"
+  },
+  {
+   "quantity": "TDA age",
+   "value": "18-60",
+   "unit": "years",
+   "quote": "Candidate is age 18 to 60"
+  },
+  {
+   "quantity": "TDA bone density contraindication",
+   "value": "T-score <= -1.0",
+   "unit": "T-score",
+   "quote": "Osteoporosis or osteopenia (T-score less than or equal to -1.0)"
+  },
+  {
+   "quantity": "TDA lumbar scoliosis contraindication",
+   "value": "> 11",
+   "unit": "degrees sagittal plane",
+   "quote": "Lumbar scoliosis (> 11 degrees of sagittal plane deformity)"
+  },
+  {
+   "quantity": "TDA spondylolisthesis contraindication",
+   "value": "> 3",
+   "unit": "mm",
+   "quote": "Degenerative or lytic spondylolisthesis > 3mm"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "Conservative therapy before discectomy / laminectomy / fusion pathways",
+   "length": "at least 6 weeks (PT)",
+   "quote": "refractory to at least 6 weeks of conservative nonsurgical therapy"
+  },
+  {
+   "what": "Conservative therapy for stenosis fusion branch a, idiopathic scoliosis, isthmic, recurrent herniation, adjacent level",
+   "length": "at least 3 months",
+   "quote": "who has failed at least 3 months of conservative nonsurgical therapy"
+  },
+  {
+   "what": "Conservative therapy degenerative scoliosis",
+   "length": "at least 1 year",
+   "quote": "unresponsive to at least 1 year of conservative nonsurgical therapy"
+  },
+  {
+   "what": "Conservative therapy for TDA",
+   "length": "at least 6 months",
+   "quote": "Failure of at least six months of conservative nonsurgical therapy"
+  },
+  {
+   "what": "Deformity: symptom duration and care window",
+   "length": ">6 months symptoms; 12 consecutive weeks within past year",
+   "quote": "Significant pain or symptoms that impair daily activities for > 6 months"
+  },
+  {
+   "what": "MRI/CT recency, discectomy and laminectomy",
+   "length": "within past 6 months",
+   "quote": "within the past 6 months"
+  },
+  {
+   "what": "Pseudarthrosis timing",
+   "length": "no less than 6 months after initial fusion",
+   "quote": "No less than 6 months after initial fusion"
+  },
+  {
+   "what": "Recurrent herniation timing",
+   "length": "at least 3 months after previous disc surgery",
+   "quote": "at least 3 months after previous disc surgery"
+  },
+  {
+   "what": "Adjacent level: relief from previous fusion",
+   "length": "at least 6 months",
+   "quote": "The previous fusion resulted in significant relief for at least 6 months"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "No. One flat CPT list (arthrodesis 22533-22634, decompression 63xxx, 0164T/0165T disc codes); nothing maps a code to a criteria block.",
+  "non_covered_code_lists": "None; investigational conditions are named, not coded."
+ },
+ "external_dependencies": [
+  {
+   "what": "CMS NCD 150.10 (Lumbar Artificial Disc Replacement) for Medicare Advantage",
+   "quote": "Medicare Advantage products: The following National Coverage Determination (NCD) was reviewed ... Lumbar ARTIFICIAL DISC Replacement (LADR) (150.10)"
+  },
+  {
+   "what": "FEP and SAO follow their own guidelines",
+   "quote": "Federal Employee Program (FEP): Follow FEP guidelines."
+  },
+  {
+   "what": "FDA labeling for the disc device",
+   "quote": "used in accordance with FDA labeling"
+  },
+  {
+   "what": "Florida step-therapy exemption statute",
+   "quote": "in compliance with Florida law 627.42393, members or providers may request a step therapy protocol exemption"
+  },
+  {
+   "what": "Related guideline for cervical",
+   "quote": "02-20000-45, Cervical Spine Surgery"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Definitions section",
+   "definition_quote": "No guideline specific definitions apply."
+  },
+  {
+   "term": "persistent debilitating pain",
+   "definition_quote": "defined as daily pain with a visual analog scale score of 4 or greater and affects ADLs"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "focused non-operative care",
+   "problem": "Undefined except by the footnote list; 'physician-directed' and 'structured' not defined."
+  },
+  {
+   "quote": "significant functional impairment",
+   "problem": "No ADL count or instrument (contrast Carelon: at least 2 ADLs/IADLs, pain >=3/10)."
+  },
+  {
+   "quote": "Impairment or loss of function",
+   "problem": "No measure; appears in nearly every fusion pathway."
+  },
+  {
+   "quote": "a dose sufficient to induce a therapeutic response",
+   "problem": "Needs clinician judgment; chart rarely states response."
+  },
+  {
+   "quote": "Evaluation and appropriate management of associated cognitive, behavioral, or addiction issues, if any",
+   "problem": "'if any' makes it vacuous when nothing is charted; absence of a note cannot distinguish 'none' from 'not evaluated'."
+  },
+  {
+   "quote": "severe or rapidly progressive symptoms",
+   "problem": "No rate or severity scale."
+  },
+  {
+   "quote": "Severe, progressive idiopathic scoliosis",
+   "problem": "'Severe' and 'progressive' undefined beyond Cobb >40."
+  },
+  {
+   "quote": "including but not limited to",
+   "problem": "TDA contraindication list is open-ended."
+  }
+ ],
+ "extraction_hazards": [
+  "Bullet glyphs and nested o / squares flatten in pdftotext; nesting must be inferred from indentation",
+  "The conservative-therapy block is pasted verbatim 5 times (discectomy, laminectomy, fusion '++', TDA, deformity '*') so a parser creates duplicate leaves",
+  "'*' and '++' footnote markers are separated from the place they apply; '++' definition is never cited by a marker in the criteria body",
+  "Section nav bar (Position Statement, Billing/Coding, ...) appears as text at top of pages 1 and 10",
+  "Evidence summary contains numbers (Cobb 30, 70-75 degrees, 50% facet) that look like thresholds but are not criteria",
+  "Code table descriptions wrap across lines and drop their code numbers in text extraction"
+ ],
+ "interesting_structures": [
+  "Fusion is a list of ten diagnosis pathways joined by trailing OR, each with its own timing and conservative-care length",
+  "Per-level rule: 'criteria must be met for each level intended for fusion' turns one request into N evaluations",
+  "'Experimental or investigational if the SOLE indication is ...' is a negative rule that depends on whether another indication exists",
+  "Immediate-evaluation red-flag pathway (neuro deficit) bypasses conservative care entirely"
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "scale": "1 clean ... 5 human judgment",
+  "why": "Mostly all/any with numeric leaves, but the stenosis-fusion AND/OR scope, per-level repetition, 'sole indication' negation and open-ended contraindications need extra structure or judgment."
+ }
+}

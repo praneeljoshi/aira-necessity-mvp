@@ -1,0 +1,151 @@
+{
+  "id": "centers-for-medicare-medicaid-services-ncd-20-8-3",
+  "payer": "Centers for Medicare & Medicaid Services",
+  "payer_aliases": [
+    "CMS",
+    "Medicare",
+    "NCD 20.8.3",
+    "Centers for Medicare & Medicaid Services",
+    "Centers for Medicare and Medicaid Services",
+    "Medicare Advantage",
+    "UnitedHealthcare Medicare Advantage"
+  ],
+  "title": "Single Chamber and Dual Chamber Permanent Cardiac Pacemakers",
+  "guideline_number": "NCD 20.8.3",
+  "effective_date": "2013-08-13",
+  "source_file": "cms_ncd_20_8_3_pacemakers.pdf",
+  "scope": {
+    "cpt": {
+      "33206": "covered",
+      "33207": "covered",
+      "33208": "covered",
+      "C1785": "covered",
+      "C1786": "covered",
+      "C2619": "covered",
+      "C2620": "covered",
+      "33227": "covered",
+      "33228": "covered",
+      "33229": "covered",
+      "33233": "covered"
+    },
+    "icd10": []
+  },
+  "criteria": [
+    {
+      "id": "documented_bradycardia",
+      "text": "The patient has documented bradycardia",
+      "question": "Does the chart document that the patient has bradycardia?",
+      "evidence_hint": "ECG, rhythm strip, telemetry, Holter/event monitor report, electrophysiology/cardiology note documenting bradycardia."
+    },
+    {
+      "id": "reversible_cause",
+      "text": "The bradycardia is due to a transient or correctable cause",
+      "question": "Is the bradycardia due to a transient or correctable cause?",
+      "evidence_hint": "Cardiology assessment or pre-procedure documentation addressing reversible causes such as electrolyte abnormalities, medications or drugs, hypothermia, rate-slowing medications, or metabolic workup."
+    },
+    {
+      "id": "symptoms_directly_attributable_to_bradycardia",
+      "text": "The bradycardia is symptomatic, with documented symptoms directly attributable to the bradycardia (for example syncope, near-syncope, dizziness, confusion, exercise intolerance, heart failure symptoms)",
+      "question": "Does the chart document symptoms directly attributable to the bradycardia?",
+      "evidence_hint": "History and physical, cardiology/electrophysiology note, monitoring correlation, or assessment linking symptoms such as syncope, near-syncope, dizziness, confusion, exercise intolerance, or heart failure symptoms to bradycardia."
+    },
+    {
+      "id": "sinus_node_dysfunction",
+      "text": "Sinus node dysfunction (sick sinus syndrome, sinus bradycardia, sinus arrest, sinoatrial block, chronotropic incompetence)",
+      "question": "Is the bradycardia due to sinus node dysfunction?",
+      "evidence_hint": "Cardiology/electrophysiology diagnosis, ECG, rhythm monitoring report, stress testing for chronotropic incompetence, or problem list documenting sick sinus syndrome, sinus bradycardia, sinus arrest, sinoatrial block, or chronotropic incompetence."
+    },
+    {
+      "id": "second_or_third_degree_av_block",
+      "text": "Second-degree and/or third-degree atrioventricular (AV) block",
+      "question": "Is the bradycardia due to second-degree or third-degree AV block?",
+      "evidence_hint": "ECG, telemetry, Holter/event monitor report, electrophysiology report, or cardiology note documenting second-degree AV block or third-degree AV block.",
+      "threshold": {
+        "kind": "enum",
+        "op": "gte_enum",
+        "value": "second-degree",
+        "enum_values": [
+          "first-degree",
+          "second-degree",
+          "third-degree"
+        ]
+      }
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "single_or_dual_chamber_permanent_cardiac_pacemakers",
+      "name": "Single-chamber or dual-chamber permanent cardiac pacemakers",
+      "applies_to_cpt": [
+        "33206",
+        "33207",
+        "33208",
+        "C1785",
+        "C1786",
+        "C2619",
+        "C2620"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "CMS covers single-chamber or dual-chamber permanent cardiac pacemakers when ALL of the following are met",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "documented_bradycardia"
+          },
+          {
+            "type": "not",
+            "label": "The bradycardia is non-reversible (not due to a transient or correctable cause)",
+            "child": {
+              "type": "leaf",
+              "criterion": "reversible_cause"
+            }
+          },
+          {
+            "type": "leaf",
+            "criterion": "symptoms_directly_attributable_to_bradycardia"
+          },
+          {
+            "type": "any",
+            "label": "The bradycardia is due to ONE of the following",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "sinus_node_dysfunction"
+              },
+              {
+                "type": "leaf",
+                "criterion": "second_or_third_degree_av_block"
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "Effective for claims with dates of service on and after August 13, 2013, CMS covers single-chamber or dual-chamber permanent cardiac pacemakers when ALL of the following are met.",
+        "Billing table lists these codes as Covered when criteria met."
+      ]
+    }
+  ],
+  "notes": [
+    "Applies to Medicare Advantage plans, including UnitedHealthcare Medicare Advantage, which follow CMS National Coverage Determinations for cardiac pacemakers.",
+    "Reproduced for software testing from the published NCD and the UF Health Jacksonville compliance checklist of NCD 20.8.3 (10/22/2018); wording reconstructed, verify against cms.gov before clinical use.",
+    "This section addresses single-chamber and dual-chamber permanent cardiac pacemakers. It does not address biventricular pacemakers, devices that stimulate more than two chambers, devices intended to treat tachyarrhythmias or cardiac dyssynchrony, cardiac resynchronization therapy, or self-contained pacemaker monitors.",
+    "Single-chamber and dual-chamber permanent cardiac pacemakers are not covered for: Bradycardia due to reversible causes, such as electrolyte abnormalities, medications or drugs, and hypothermia.",
+    "Single-chamber and dual-chamber permanent cardiac pacemakers are not covered for: Asymptomatic first-degree AV block.",
+    "Single-chamber and dual-chamber permanent cardiac pacemakers are not covered for: Asymptomatic sinus bradycardia.",
+    "Single-chamber and dual-chamber permanent cardiac pacemakers are not covered for: Asymptomatic sinoatrial block or sinus arrest.",
+    "Single-chamber and dual-chamber permanent cardiac pacemakers are not covered for: Ineffective atrial contractions (such as chronic atrial fibrillation or flutter, or giant left atrium) without symptomatic bradycardia.",
+    "Single-chamber and dual-chamber permanent cardiac pacemakers are not covered for: Asymptomatic second-degree AV block of Mobitz Type I, unless the QRS complexes are prolonged or electrophysiological studies demonstrate that the block is at or beyond the level of the His bundle.",
+    "Single-chamber and dual-chamber permanent cardiac pacemakers are not covered for: Syncope of undetermined cause.",
+    "Single-chamber and dual-chamber permanent cardiac pacemakers are not covered for: Bradycardia during sleep.",
+    "Single-chamber and dual-chamber permanent cardiac pacemakers are not covered for: Right bundle branch block with left axis deviation (and other forms of fascicular or bundle branch blocks) without syncope or other symptoms of intermittent AV block.",
+    "Single-chamber and dual-chamber permanent cardiac pacemakers are not covered for: Asymptomatic bradycardia in post-myocardial infarction patients about to initiate long-term beta-blocker drug therapy.",
+    "Single-chamber and dual-chamber permanent cardiac pacemakers are not covered for: Frequent or persistent supraventricular tachycardias, except where the pacemaker is specifically for the control of the tachycardia.",
+    "Single-chamber and dual-chamber permanent cardiac pacemakers are not covered for: A clinical condition in which pacing takes place only intermittently and briefly, and which is not associated with a reasonable likelihood that pacing needs will become prolonged.",
+    "All other indications for single-chamber or dual-chamber permanent cardiac pacemakers not otherwise indicated as covered or non-covered above remain at local Medicare Administrative Contractor discretion.",
+    "Billing table lists 33227–33229 and 33233, Pulse generator removal/replacement, as MAC discretion. The scope status enum has no MAC-discretion value; these codes are therefore listed as covered in scope only to retain every billing code, and they are not included in the national coverage scenario.",
+    "Diagnosis codes and modifier requirements are specified in Local Coverage Article A54926.",
+    "Documentation should include the rhythm diagnosis, the symptoms attributed to the bradycardia and their correlation with the rhythm, and the exclusion of reversible causes (including review of rate-slowing medications and metabolic workup)."
+  ]
+}

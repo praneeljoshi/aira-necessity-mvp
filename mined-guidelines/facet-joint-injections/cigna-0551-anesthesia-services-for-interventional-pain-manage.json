@@ -1,0 +1,19 @@
+{
+  "payer": "Cigna",
+  "payer_key": "cigna",
+  "treatment": "facet-joint-injections",
+  "title": "Anesthesia Services for Interventional Pain Management",
+  "policy_number": "0551",
+  "effective": "",
+  "url": "https://static.cigna.com/assets/chcp/pdf/coveragePolicies/medical/mm_0551_coveragepositioncriteria_anesthesia_services_for_interventional_pain_management.pdf",
+  "final_url": "https://static.cigna.com/assets/chcp/pdf/coveragePolicies/medical/mm_0551_coveragepositioncriteria_anesthesia_services_for_interventional_pain_management.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "cigna-0551-anesthesia-services-for-interventional-pain-manage.pdf",
+  "sha256": "4719c5280db80d98db22f41accfb8df8647d4a7ccf4650f14915dbc6a8bdfbca",
+  "pages": 29,
+  "bytes": 476948,
+  "retrieved": "2026-10-09",
+  "printed_date": "Effective Date 9/15/2026; Next Review Date 2/15/2027; Coverage Policy Number 0551"
+}

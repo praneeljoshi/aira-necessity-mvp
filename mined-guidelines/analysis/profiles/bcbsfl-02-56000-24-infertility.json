@@ -1,0 +1,170 @@
+{
+ "lines_of_business": [
+  "All lines of business unless noted in PROGRAM EXCEPTIONS (disclaimer: 'THIS MEDICAL COVERAGE GUIDELINE APPLIES TO ALL LINES OF BUSINESS UNLESS OTHERWISE NOTED IN THE PROGRAM EXCEPTIONS SECTION')",
+  "FEP: 'Follow FEP guidelines.'",
+  "SAO: 'Follow SAO guidelines.'",
+  "Medicare Advantage products: No NCD/LCD found; Medicare Benefit Policy Manual Ch.15 s.20.1 (Treatment for Infertility) reviewed",
+  "Benefit-dependent: 'If the benefit for coverage for infertility treatment is available...'; 'Refer to member's contract benefits.'"
+ ],
+ "effective_or_revised": "Original Effective Date 11/15/00; Reviewed 05/28/26; Revised 10/01/26 ('Quarterly CPT/HCPCS update. Added 1062T'); committee approval 05/28/26 (worded 'approved by the BCBSF Medical Policy and Coverage Committee', older brand name)",
+ "sections_in_order": [
+  "Header block (MCG number, Original Effective Date, Reviewed, Revised)",
+  "Subject",
+  "Disclaimer (all caps)",
+  "Navigation bar (Position Statement / Billing/Coding / Reimbursement / Program Exceptions / Definitions / Related Guidelines / Other / References / Updates)",
+  "DESCRIPTION",
+  "POSITION STATEMENT",
+  "BILLING/CODING INFORMATION",
+  "REIMBURSEMENT INFORMATION",
+  "PROGRAM EXCEPTIONS",
+  "DEFINITIONS",
+  "RELATED GUIDELINES",
+  "OTHER",
+  "REFERENCES",
+  "COMMITTEE APPROVAL",
+  "GUIDELINE UPDATE INFORMATION"
+ ],
+ "criteria_location": "POSITION STATEMENT (about 45 lines, pp.2-3): a benefit-conditional lead-in, a bullet list of covered services (with a 4-cycle limit), a second list of 'meet the definition of medically necessity' techniques, then a run of single-sentence 'experimental or investigational' paragraphs per technique.",
+ "procedures_covered": [
+  "Infertility diagnostic tests",
+  "Artificial/intrauterine insemination",
+  "IVF, ZIFT, GIFT (four cycles)",
+  "ICSI for male factor infertility; testicular sperm cryopreservation in azoospermia; blastocyst transfer",
+  "Investigational: assisted hatching, embryo co-culture, ovarian tissue / oocyte cryopreservation, prepubertal testicular tissue cryopreservation, ICSI without male factor",
+  "Not eligible: family balancing"
+ ],
+ "logic": {
+  "top_level": "all",
+  "max_nesting_depth": 2,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "Named exclusions in notes: 'Family balancing is not eligible for coverage.'; six techniques 'considered experimental or investigational'.",
+  "initial_vs_repeat": "Cycle limit with exception: 'Four (4) cycles for any Assisted Reproductive Technologies (ARTs): - IVF, ZIFT, GIFT, AI ... NOTE: If medical circumstances warrant consideration of more than four (4) cycles, additional cycles will be reviewed for medical appropriateness (e.g., a new cause of infertility is discovered and treated during covered therapy)'.",
+  "and_or_ambiguity": [
+   {
+    "quote": "If the benefit for coverage for infertility treatment is available and there is documentation of infertility for at least one year's duration, the following indications meet the definition of medical necessity:",
+    "why_ambiguous": "Two preconditions joined by 'and' gate every following bullet; the benefit condition is a contract fact, not a chart fact."
+   },
+   {
+    "quote": "Four (4) cycles for any Assisted Reproductive Technologies (ARTs): - IVF, ZIFT, GIFT, AI",
+    "why_ambiguous": "AI is called an ART here but is a separate bullet above; the four-cycle count is shared across techniques or per technique?"
+   },
+   {
+    "quote": "For AI, during one ovulatory cycle, sperm may be inseminated twice ... This is considered to be two attempts during one cycle",
+    "why_ambiguous": "Defines a counting rule inside a NOTE: a cycle counts as one even with two attempts, but 'two attempts' language conflicts."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "diagnosis",
+   "quote": "documentation of infertility for at least one year's duration",
+   "where": "Position Statement lead-in"
+  },
+  {
+   "kind": "duration",
+   "quote": "at least one year's duration",
+   "where": "Position Statement lead-in"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "Intracytoplasmic sperm injection (ICSI) for male factor infertility",
+   "where": "Position Statement"
+  },
+  {
+   "kind": "other",
+   "quote": "Four (4) cycles for any Assisted Reproductive Technologies",
+   "where": "Position Statement"
+  },
+  {
+   "kind": "other",
+   "quote": "Cryopreservation of testicular tissue/sperm in adult men with azoospermia as part of an intracytoplasmic sperm injection (ICSI) procedure",
+   "where": "Position Statement"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "ART cycles",
+   "value": "<= 4 (more on review)",
+   "unit": "cycles",
+   "quote": "Four (4) cycles for any Assisted Reproductive Technologies"
+  },
+  {
+   "quantity": "infertility duration",
+   "value": ">= 1",
+   "unit": "year",
+   "quote": "documentation of infertility for at least one year's duration"
+  },
+  {
+   "quantity": "AI inseminations per ovulatory cycle",
+   "value": "2",
+   "unit": "attempts",
+   "quote": "sperm may be inseminated twice (once before human chorionic gonadotropin (hCG) and once after hCG)"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "duration of infertility",
+   "length": "at least 1 year",
+   "quote": "infertility for at least one year's duration"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "'The following codes may be used to report services associated with infertility ... (not all inclusive)': CPT and HCPCS S-codes (S4011-S4042) are listed with inline tags; not tied to specific criteria.",
+  "non_covered_code_lists": "Inline '(investigational)': 89251, 89253, 89337, 89344, 89346, 89354, 89356; '(non-covered)': 89291."
+ },
+ "external_dependencies": [
+  {
+   "what": "Member benefit contract controls whether anything is covered",
+   "quote": "NOTE: Coverage for infertility is subject to the member's benefit terms, limitations and maximums. Refer to contract language regarding infertility."
+  },
+  {
+   "what": "Medicare Benefit Policy Manual",
+   "quote": "20.1 Treatment for Infertility, located at cms.gov."
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "IVF cycle",
+   "definition_quote": "One \"cycle\" of IVF includes using medicines to stimulate the ovaries to ovulate, \"harvesting\" the eggs with an instrument, attempting to fertilize the eggs with sperm in the lab, and placing any embryos into the uterus."
+  },
+  {
+   "term": "Family balancing",
+   "definition_quote": "a measured approach to a non-medically indicated use of preconception gender selection"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "reviewed for medical appropriateness",
+   "problem": "No criteria for cycles 5+."
+  },
+  {
+   "quote": "Services associated with the diagnosis and treatment of infertility.",
+   "problem": "Open-ended."
+  },
+  {
+   "quote": "documentation of infertility",
+   "problem": "No required tests or age-adjusted time frame."
+  }
+ ],
+ "extraction_hazards": [
+  "Bullet text uses hyphen/en-dash lists inside bullets ('- IVF, ZIFT, GIFT, AI').",
+  "Coding header sentence says codes are 'not all inclusive'.",
+  "The Definitions section is ~45 entries and OTHER lists synonyms of procedure names; neither is criteria.",
+  "Revision date 10/01/26 is a quarterly code update, later than the 05/28/26 review and committee date, so 'Revised' is not always a criteria change."
+ ],
+ "interesting_structures": [
+  "Benefit-conditional coverage: the guideline's rules apply only 'if the benefit ... is available'.",
+  "Cycle limit with escape hatch.",
+  "Technique-by-technique investigational paragraphs (6 of them), each repeating 'The evidence is insufficient to determine ...'."
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "why": "The tree itself is small (duration >= 1 year, technique listed, cycles <= 4), but the root condition is a contract benefit outside the chart, cycle counts need claims history, and 'additional cycles reviewed' is judgment."
+ },
+ "file": "bcbsfl-02-56000-24-infertility.pdf",
+ "treatment": "infertility",
+ "payer": "bcbsfl",
+ "doc_kind": "medical policy (Florida Blue Medical Coverage Guideline)"
+}

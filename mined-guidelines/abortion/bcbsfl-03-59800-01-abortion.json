@@ -1,0 +1,19 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "abortion",
+  "title": "Abortion",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JGJZ4DN4XZOUQ4RQH",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "03-59800-01",
+  "original_effective": "11/15/01",
+  "reviewed": "02/26/26",
+  "revised": "03/15/26",
+  "file": "bcbsfl-03-59800-01-abortion.pdf",
+  "sha256": "756b7f765253a3baf795594d556026179e5412e039eecae7e9ddec27885c00b1",
+  "pages": 4,
+  "bytes": 494614,
+  "retrieved": "2026-10-09"
+}

@@ -1,0 +1,193 @@
+{
+ "lines_of_business": [
+  "All lines of business unless noted in PROGRAM EXCEPTIONS (disclaimer: 'THIS MEDICAL COVERAGE GUIDELINE APPLIES TO ALL LINES OF BUSINESS UNLESS OTHERWISE NOTED IN THE PROGRAM EXCEPTIONS SECTION')",
+  "FEP: 'Follow FEP guidelines.'",
+  "SAO: 'Follow SAO guidelines.'",
+  "Medicare Advantage Products: NCD Plastic Surgery to Correct Moon Face (140.4) reviewed; no LCD",
+  "Benefit-dependent: 'Coverage for reconstructive surgery and cosmetic surgery is subject to the member's benefit terms, limitations and maximums.'"
+ ],
+ "effective_or_revised": "Original Effective Date 02/15/02; Reviewed 12/04/25; Revised 12/15/25",
+ "sections_in_order": [
+  "Header block (MCG number, Original Effective Date, Reviewed, Revised)",
+  "Subject",
+  "Disclaimer (all caps)",
+  "Navigation bar (Position Statement / Billing/Coding / Reimbursement / Program Exceptions / Definitions / Related Guidelines / Other / References / Updates)",
+  "DESCRIPTION",
+  "POSITION STATEMENT",
+  "BILLING/CODING INFORMATION",
+  "REIMBURSEMENT INFORMATION",
+  "PROGRAM EXCEPTIONS",
+  "DEFINITIONS",
+  "RELATED GUIDELINES",
+  "OTHER",
+  "REFERENCES",
+  "COMMITTEE APPROVAL",
+  "GUIDELINE UPDATE INFORMATION"
+ ],
+ "criteria_location": "POSITION STATEMENT is 320 lines (pp.2-12): a general rule, a documentation rule, a 'cosmetic' list, a 'Summary of Evidence' (4 paragraphs), 'Examples of Reconstructive Procedures (Not all inclusive)', nerve-allograft pathways I/II/III, 'Examples of Cosmetic Procedures (Not all inclusive)', and a non-covered code list. Many entries just 'Refer to' other policies.",
+ "procedures_covered": [
+  "Reconstructive surgery generally (dozens of example procedures: brachioplasty, lifts, keloid, otoplasty, rhinoplasty, scar surgery, vascular birthmarks...)",
+  "Nerve repair with allograft",
+  "Allograft in breast reconstruction",
+  "Cosmetic examples (not covered; dozens of entries)",
+  "Non-covered CPT/HCPCS: 15828, 15829, 17380, 69090, 69300, Q2026; J0591 may be cosmetic"
+ ],
+ "logic": {
+  "top_level": "other",
+  "max_nesting_depth": 4,
+  "k_of_n": [
+   {
+    "k": 1,
+    "n": 3,
+    "quote": "when the criteria in one of the following categories I, II, or III are met"
+   }
+  ],
+  "exclusions_or_contraindications": "Cosmetic list as exclusion: 'Surgery and related services are considered cosmetic in nature and is generally a contract exclusion for the following indications'; 'Brachioplasty (arm lift) do not meet the definition of medical necessity when done for aesthetic improvement'.",
+  "initial_vs_repeat": "Revision of cosmetic procedure is itself cosmetic: 'Revision of a condition, for which the primary procedure was considered cosmetic'. Nerve injury >1 year goes to medical director.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Brachioplasty (arm lift) meets the definition of medical necessity when done in the presence of a functional impairment cause directly by the excess skin (...) and the functional impairment is refractory to 3 months of continuous medical therapy (...) and the procedure is expected to restore or improve the functional impairment.",
+    "why_ambiguous": "Three conjuncts joined by lower-case 'and' in a run-on sentence with nested parentheses."
+   },
+   {
+    "quote": "III. There is a history of a known reasonable mechanism of injury ... and the nerve injury occurred within the last year (Medical necessity for nerve injuries greater than one year require review by a medical director ...) for the following: Sensory nerves: ... OR Motor nerves: ... OR Motor or sensory nerves: Nerve lesion ... ALL of the following",
+    "why_ambiguous": "Category III's trailing OR groups sit at a different indent than the I/II/III numerals; the ALL at the end could bind to the last OR branch only."
+   },
+   {
+    "quote": "Loss of function determined by one of the following: Abnormal 2-point discrimination ... Patient self-report symptoms",
+    "why_ambiguous": "Self-reported symptoms count as a qualifying test; no AND/OR printed."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "functional impairment",
+   "quote": "excess skin is interfering with activities of daily living or causing persistent dermatitis, cellulitis, skin ulcerations",
+   "where": "Position Statement brachioplasty / lifts"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "refractory to 3 months of continuous medical therapy (e.g., topical or systemic treatments for infection)",
+   "where": "Position Statement"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "physician history and physical, physician operative report, pathology report, and attending physician visit notes that include documentation of medical indication. Photos are not required with the initial review.",
+   "where": "Position Statement"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "Primary nerve tumor of the nerve or nerve resection is required for oncologic treatment",
+   "where": "Position Statement nerve allograft I"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "Nerve transfer is not an option (such as anterior interosseous nerve transfer).",
+   "where": "Position Statement nerve allograft"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "Nerve lesion such as neuroma, documented by magnetic resonance imaging (MRI)",
+   "where": "Position Statement nerve allograft III"
+  },
+  {
+   "kind": "other",
+   "quote": "Medical necessity for nerve injuries greater than one year require review by a medical director",
+   "where": "Position Statement nerve allograft III"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "BMI preferred for brachioplasty (inside a Summary of Evidence paragraph, not a criterion)",
+   "value": "< 30",
+   "unit": "kg/m2",
+   "quote": "in patient with the lower achievable BMI (preferably <30kg/m2)"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "medical therapy before lift/brachioplasty",
+   "length": "3 months continuous",
+   "quote": "refractory to 3 months of continuous medical therapy"
+  },
+  {
+   "what": "nerve injury recency",
+   "length": "within the last year",
+   "quote": "the nerve injury occurred within the last year"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Very long CPT list (about 190 lines) not mapped to indications; two LOINC documentation tables; 'Non-Covered Procedures' list inside the Position Statement ('The following codes are considered cosmetic services and are non-covered').",
+  "non_covered_code_lists": "15828, 15829, 17380, 69090, 69300, Q2026; J0591 'may be cosmetic; medical review is required'."
+ },
+ "external_dependencies": [
+  {
+   "what": "Sibling policies carry the real criteria",
+   "quote": "Refer to Reduction Mammaplasty 02-12000-11"
+  },
+  {
+   "what": "Federal law on post-mastectomy reconstruction",
+   "quote": "Federal Law-SEC 713 Required Coverage for Reconstructive Surgery following Mastectomies"
+  },
+  {
+   "what": "Certificate of Medical Necessity form",
+   "quote": "Septoplasty documentation is required for medical review. Refer to Septoplasty - Certificate of Medical Necessity."
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Congenital disorder",
+   "definition_quote": "known to result in significant impairment of health or intellect"
+  },
+  {
+   "term": "Keloid",
+   "definition_quote": "also known as hypertrophic scar: a type of raised scar"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "reviewed for individual consideration",
+   "problem": "Congenital deformities and anomalies have no criteria."
+  },
+  {
+   "quote": "Medical Director review",
+   "problem": "Discretionary escalation without criteria."
+  },
+  {
+   "quote": "generally a contract exclusion",
+   "problem": "Benefit-dependent."
+  },
+  {
+   "quote": "when there is a functional impairment caused directly by the excess skin",
+   "problem": "Impairment threshold unspecified."
+  },
+  {
+   "quote": "aesthetic (improving appearance) or cosmetic reasons",
+   "problem": "Intent test."
+  }
+ ],
+ "extraction_hazards": [
+  "320-line Position Statement mixing criteria, evidence summary (4 paragraphs of study text), 'Refer to' redirects and example lists.",
+  "Entries are bold-name run-ins in a bulleted list ('Breast bilateral reconstruction ...', 'Blepharoplasty eye lid ...'): the term and the rule are in one line without a delimiter.",
+  "Page-break mid-list: indentation changes (one-space margin) from a certain page onward.",
+  "Cross-reference IDs are inconsistent (Dermabrasion is cited as 02-12000-08 while its own number is 02-10000-08; Orthognathic Surgery and Prophylactic Mastectomy are both given as 02-12000-15 in Related Guidelines).",
+  "Nested pathways I./II./III. with 'OR' at the margin.",
+  "Mastectomy for GynecomastiaRefer ... (missing space) and other typos hinder matching.",
+  "Two LOINC tables with 4-column rows spanning many lines."
+ ],
+ "interesting_structures": [
+  "A hybrid document: a router and exclusion list for many procedures, with only a few real criteria sets (brachioplasty/lifts, keloid, nerve allograft).",
+  "Documentation rule: 'Photos are not required with the initial review ... Florida Blue may request photos'.",
+  "Individual-consideration categories (congenital anomalies; strabismus >= 18 years) where no criteria exist."
+ ],
+ "fit_to_tree": {
+  "score": 5,
+  "why": "Not one criteria tree but a catalogue; cosmetic vs reconstructive intent, 'individual consideration', and cross-policy redirects need human judgment. Only brachioplasty/lift and nerve-allograft entries are tree-shaped."
+ },
+ "file": "bcbsfl-02-12000-01-reconstructive-surgery-cosmetic-surgery.pdf",
+ "treatment": "reconstructive-surgery-cosmetic-surgery",
+ "payer": "bcbsfl",
+ "doc_kind": "medical policy (Florida Blue Medical Coverage Guideline)"
+}

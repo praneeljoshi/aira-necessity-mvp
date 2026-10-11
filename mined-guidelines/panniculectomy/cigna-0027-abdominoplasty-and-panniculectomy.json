@@ -1,0 +1,19 @@
+{
+  "payer": "Cigna",
+  "payer_key": "cigna",
+  "treatment": "panniculectomy",
+  "title": "Abdominoplasty and Panniculectomy",
+  "policy_number": "0027",
+  "effective": "",
+  "url": "https://chk.static.cigna.com/assets/chcp/pdf/coveragePolicies/medical/mm_0027_coveragepositioncriteria_abdominoplasty_and_panniculectomy.pdf",
+  "final_url": "https://chk.static.cigna.com/assets/chcp/pdf/coveragePolicies/medical/mm_0027_coveragepositioncriteria_abdominoplasty_and_panniculectomy.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "cigna-0027-abdominoplasty-and-panniculectomy.pdf",
+  "sha256": "84496abb62ed4b765cf94d310aad3987985c244d2a2ecb9e5954a04cd3d77cd7",
+  "pages": 10,
+  "bytes": 244087,
+  "retrieved": "2026-10-09",
+  "printed_date": "Effective 6/15/2026; Next Review 3/15/2027"
+}

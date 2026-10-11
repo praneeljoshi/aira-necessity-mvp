@@ -1,0 +1,238 @@
+{
+ "file": "uhc-2026t0616n-epidural-steroid-injections-for-spinal-pain.pdf",
+ "treatment": "epidural-injections",
+ "payer": "uhc",
+ "doc_kind": "medical policy (UnitedHealthcare Commercial and Individual Exchange)",
+ "lines_of_business": [
+  "UnitedHealthcare Commercial",
+  "UnitedHealthcare Individual Exchange"
+ ],
+ "effective_or_revised": "Policy number printed 2026T0616O (file/library number 2026T0616N); Effective Date September 10, 2026 on the PDF (library metadata says 2026-06-01)",
+ "sections_in_order": [
+  "Application",
+  "Coverage Rationale",
+  "Medical Records Documentation Used for Reviews",
+  "Definitions",
+  "Applicable Codes",
+  "Description of Services",
+  "Clinical Evidence",
+  "U.S. Food and Drug Administration",
+  "References",
+  "Policy History/Revision Information",
+  "Instructions for Use"
+ ],
+ "criteria_location": "Coverage Rationale, pp.1-2 (one short block): all-of criteria, contraindications, unproven list, and ESI limitations with subsequent-injection rules. Definitions p.2 carry the meaning of Radicular Back Pain and Conservative Therapy. Everything after p.4 is evidence review and references (about 10 pages), skippable.",
+ "procedures_covered": [
+  "ESI: interlaminar and caudal 62320-62323; transforaminal 64479, 64480, 64483, 64484",
+  "Ultrasound-guided ESI as unproven",
+  "ESIs for other spinal indications as unproven"
+ ],
+ "logic": {
+  "top_level": "all (four criteria) with a separate limits block for repeats",
+  "max_nesting_depth": 4,
+  "k_of_n": [
+   {
+    "k": 1,
+    "n": 3,
+    "quote": "unresponsive to the following conservative treatment for ≥ 4 weeks: Pharmacotherapy ...; or Activity modification ...; or Physical therapy or home exercise"
+   }
+  ],
+  "exclusions_or_contraindications": "'Conditions that would contraindicate ESIs include but are not limited to: Spinal neoplasm; Rapidly progressing neurological deficit; Epidural abscess' (open list) and a 'unproven' list: ultrasound guidance and 'ESIs for all other indications of the spine not included above'.",
+  "initial_vs_repeat": "Yes, under 'ESI limitations': max four sessions per region per year; subsequent ESIs only if radicular pain has returned/function deteriorated AND one of: previous injection <= 50% relief or functional improvement for less than 3 months with reassessment of individual, site and technique; OR >= 50% relief or functional improvement for 3 or more months.",
+  "and_or_ambiguity": [
+   {
+    "quote": "The previous injection resulted in ≤ 50% pain relief or functional improvement for less than 3 months ... or The previous injection resulted in ≥ 50% pain relief or functional improvement for 3 or more months",
+    "why_ambiguous": "Both branches include exactly 50%, so 50% relief is in both; the first branch (poor response) still permits another injection after a reassessment, so 'poor response' unlocks a repeat. 'or' inside 'pain relief or functional improvement' is unclear on whether the 3 months applies to both."
+   },
+   {
+    "quote": "unresponsive to the following conservative treatment for ≥ 4 weeks: Pharmacotherapy such as nonsteroidal anti-inflammatory drugs or acetaminophen; or Activity modification ...; or Physical therapy or home exercise",
+    "why_ambiguous": "Any one modality suffices (so ibuprofen for 4 weeks alone qualifies), yet the Definition of Conservative Therapy says 'an appropriate combination of medication ... in addition to physical therapy, spinal manipulation ...'. The Definition conflicts with the criterion if read as binding."
+   },
+   {
+    "quote": "There is evidence of structural and/or functional nerve root involvement by imaging or electrodiagnostic studies",
+    "why_ambiguous": "'and/or' and 'or' stacked; imaging not named (X-ray qualifies?), and no recency."
+   },
+   {
+    "quote": "The injection is performed under fluoroscopic or computed tomography guidance",
+    "why_ambiguous": "A procedural fact known only at/after the procedure; for prior auth it is an intent."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "symptom",
+   "quote": "The injection is intended for the management of Radicular Back Pain, as evidenced by history and physical examination",
+   "where": "Coverage Rationale bullet 1"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "Radicular Back Pain is unresponsive to the following conservative treatment for ≥ 4 weeks",
+   "where": "bullet 2 (any one of three)"
+  },
+  {
+   "kind": "imaging or electrodiagnostic",
+   "quote": "evidence of structural and/or functional nerve root involvement by imaging or electrodiagnostic studies",
+   "where": "bullet 3"
+  },
+  {
+   "kind": "technique",
+   "quote": "performed under fluoroscopic or computed tomography guidance",
+   "where": "bullet 4"
+  },
+  {
+   "kind": "contraindication",
+   "quote": "Spinal neoplasm; Rapidly progressing neurological deficit; Epidural abscess",
+   "where": "Contraindications"
+  },
+  {
+   "kind": "investigational",
+   "quote": "The use of ultrasound guidance for ESIs",
+   "where": "Unproven list"
+  },
+  {
+   "kind": "repeat-procedure cap",
+   "quote": "A maximum of four ESI sessions (per region, regardless of level, location, or side) per year",
+   "where": "ESI limitations"
+  },
+  {
+   "kind": "repeat-procedure",
+   "quote": "Radicular Back Pain has returned and/or deterioration in function has occurred",
+   "where": "Subsequent ESIs, a"
+  },
+  {
+   "kind": "response to prior injection",
+   "quote": "The previous injection resulted in ≥ 50% pain relief or functional improvement for 3 or more months, as measured by validated measurement tools",
+   "where": "Subsequent ESIs, b"
+  },
+  {
+   "kind": "documentation",
+   "quote": "Diagnosis codes; imaging reports; symptoms and function measured using standardized tools; nicotine history; prior therapies with dates and duration (Policy History 09/10/2026 entry)",
+   "where": "Medical Records Documentation Used for Reviews"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "ICD-10 list by region (All Regions, Cervical/Thoracic, Lumbar/Sacral)",
+   "where": "Applicable Codes (reference only)"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "conservative therapy duration",
+   "value": ">= 4",
+   "unit": "weeks",
+   "quote": "unresponsive to the following conservative treatment for ≥ 4 weeks"
+  },
+  {
+   "quantity": "ESI sessions per region",
+   "value": "<= 4",
+   "unit": "per year (12 months from first approved injection)",
+   "quote": "A maximum of four ESI sessions (per region, regardless of level, location, or side) per year"
+  },
+  {
+   "quantity": "relief of previous injection (good)",
+   "value": ">= 50 for >= 3",
+   "unit": "% , months",
+   "quote": "≥ 50% pain relief or functional improvement for 3 or more months"
+  },
+  {
+   "quantity": "relief of previous injection (poor)",
+   "value": "<= 50 for < 3",
+   "unit": "% , months",
+   "quote": "≤ 50% pain relief or functional improvement for less than 3 months"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "conservative therapy",
+   "length": "4 weeks",
+   "quote": "for ≥ 4 weeks"
+  },
+  {
+   "what": "year for session cap",
+   "length": "12 months from the first approved injection",
+   "quote": "A year is defined as the 12-month period starting from the date of service of the first approved injection"
+  },
+  {
+   "what": "durable response",
+   "length": "3 months",
+   "quote": "for 3 or more months"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": true,
+  "codes_tied_to_criteria": "Not tied; the ICD-10 table is grouped by region. The policy says listing 'does not imply that the service ... is a covered or non-covered health service'.",
+  "non_covered_code_lists": "None as codes; ultrasound-guided and 'other indications' are non-covered in prose."
+ },
+ "external_dependencies": [
+  {
+   "what": "Related policies that may also apply",
+   "quote": "Other policies and guidelines may apply."
+  },
+  {
+   "what": "Medical Records Documentation Used for Reviews (separate UHC document)",
+   "quote": "refer to the guidelines titled Medical Records Documentation Used for Reviews"
+  },
+  {
+   "what": "Separate Community Plan and Medicare Advantage policies",
+   "quote": "Community Plan Policy ... Medicare Advantage Policy"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Radicular Back Pain",
+   "definition_quote": "Pain that radiates from the spine into the extremity along the course of the spinal nerve root. The pain should follow the pattern of a dermatome"
+  },
+  {
+   "term": "Session",
+   "definition_quote": "A session is defined as one date of service in which ESIs are performed"
+  },
+  {
+   "term": "Region",
+   "definition_quote": "A region is defined by either the region of the cervical, thoracic, or lumbosacral"
+  },
+  {
+   "term": "Conservative Therapy",
+   "definition_quote": "Consists of an appropriate combination of medication ... in addition to physical therapy, spinal manipulation therapy, cognitive behavior therapy, or other interventions"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "as measured by validated measurement tools",
+   "problem": "No tool named."
+  },
+  {
+   "quote": "include but are not limited to",
+   "problem": "Open contraindication list."
+  },
+  {
+   "quote": "ESIs for all other indications of the spine not included above",
+   "problem": "Catch-all exclusion; the policy has no list of covered diagnoses in prose, only 'radicular back pain'."
+  },
+  {
+   "quote": "there has been a reassessment of the individual and the injection site and technique",
+   "problem": "Undefined content of 'reassessment'."
+  },
+  {
+   "quote": "Epidural Steroid Injections ... proven and medically necessary",
+   "problem": "'Radicular Back Pain' includes lumbar and cervical radicular pain? 'Back' pain term used for neck too."
+  }
+ ],
+ "extraction_hazards": [
+  "Policy number on the PDF (2026T0616O) differs from the file/library number (N); effective date on page 1 (09/10/2026) differs from library metadata (2026-06-01).",
+  "Nested criteria use 'o' and square-bullet glyphs; 'and'/'or' float on their own lines between bullets.",
+  "Inequality symbols ≥ ≤ appear; the poor-response and good-response branches both contain 50%.",
+  "Header block 'See Benefit Considerations' etc. repeated; ICD table has 'All Regions' / 'Cervical/Thoracic' / 'Lumbar/Sacral' subheads in rows.",
+  "Policy History (p.13) contains a 'Medical Records Documentation Used for Reviews' list that reads like requirements but sits at the back."
+ ],
+ "interesting_structures": [
+  "Whole criteria set fits on about one and a half pages.",
+  "'Subsequent ESIs' stated as a separate conditional (returned pain AND one of two prior-response branches) rather than a repeat criteria list.",
+  "Year is rolling from first approved injection, not calendar year.",
+  "Poor-response branch explicitly requires a reassessment of technique before another injection."
+ ],
+ "fit_to_tree": {
+  "score": 2,
+  "why": "Short all-of with one any-of; clean. Strain: repeat rules need prior-injection history and a response measurement, and the 50% boundary appears in both branches."
+ }
+}

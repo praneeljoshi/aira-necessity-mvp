@@ -1,0 +1,87 @@
+/* The shared theme: the tokens both front ends draw with, so a change of colour, type or the switch lands here once.
+   Loaded by static/review.html (before the style files; Plain reads these, the other styles bring their own tokens)
+   and by static/index.html (the / flow, which is always Plain: <html data-style="plain">).
+   Plain's look: the cream desk, paper, ink, a light-blue pen for documented and a warm pen for missing /
+   contradicted; Public Sans on five steps (12 / 13.5 / 15 / 16.5 / 22, weights 400 / 600).
+   Three themes on html[data-theme]: Soft (a dimmed light, the default whatever the system says), Light and Dark;
+   the #themeBtn at the top of the rail steps Soft -> Light -> Dark, remembered in localStorage review.theme, the
+   same key in both flows. */
+
+/* ---------------------------------------------------------------- tokens: light, then dark */
+html[data-style="plain"] {
+  /* desk, sheet, ink */
+  --desk:#F3F0E9; --paper:#FFFEFB; --edge:#E4DED2; --edge-2:#D6CFC1;
+  --bg:#F3F0E9; --bg-rgb:243 240 233; --panel:#FFFEFB; --ink:#1D232B; --sec:#5D6570; --dim:#99A0A9; --line:#E4DED2; --soft:#ECE8DF; --rail:#F3F0E9;
+  --act:#2A5B8C; --act-h:#21496F; --act-soft:#E3EDF7;
+  --ready:#2B6A4E; --needs:#9A6316; --no:#9A3F33; --wait:#5D6570;
+  --ready-bg:#E9F2EC; --needs-bg:#F8EEDC; --no-bg:#F7E7E2; --wait-bg:#ECE8DF; --sel:#FBEBC4; --sel-line:#C99A3A;
+  --pen-doc:209 228 247; --pen-doc-a:1;  --pen-acc:184 210 240; --pen-acc-a:1;
+  --pen-miss:248 229 199; --pen-miss-a:1; --pen-bad:246 219 209; --pen-bad-a:1;
+  --pen-alt:230 235 242; --pen-alt-a:.85; --pen-human:253 228 168; --pen-human-a:1;
+  --marks-over:1;
+  --f-ui:"Public Sans", "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-doc:"Source Serif 4", "Source Serif Pro", Georgia, "Times New Roman", serif;
+  --sheet-shadow:0 1px 1px rgba(70,56,30,.04), 0 6px 22px -6px rgba(70,56,30,.10);
+  --slip-shadow:0 1px 1px rgba(70,56,30,.04), 0 10px 30px -10px rgba(70,56,30,.16);
+  color-scheme:light;
+}
+
+  html[data-style="plain"][data-theme="dark"] {
+    --desk:#15171A; --paper:#1C1F23; --edge:#2B2F35; --edge-2:#363B42;
+    --bg:#15171A; --bg-rgb:21 23 26; --panel:#1C1F23; --ink:#E7E4DD; --sec:#A6A9AF; --dim:#71757C; --line:#2B2F35; --soft:#22252A; --rail:#15171A;
+    --act:#93B8DE; --act-h:#AFCAE8; --act-soft:#1F2C3A;
+    --ready:#8FC4A7; --needs:#DCA95F; --no:#E09887; --wait:#A6A9AF;
+    --ready-bg:#1C2A23; --needs-bg:#2B2418; --no-bg:#2D201C; --wait-bg:#22252A; --sel:#3A3020; --sel-line:#B88A3A;
+    --pen-doc:30 52 78; --pen-doc-a:1;  --pen-acc:46 76 112; --pen-acc-a:1;
+    --pen-miss:66 50 26; --pen-miss-a:1; --pen-bad:68 38 32; --pen-bad-a:1;
+    --pen-alt:32 38 46; --pen-alt-a:.8; --pen-human:88 66 28; --pen-human-a:1;
+    --sheet-shadow:0 0 0 1px rgba(0,0,0,.2), 0 8px 24px -8px rgba(0,0,0,.5);
+    --slip-shadow:0 0 0 1px rgba(0,0,0,.2), 0 12px 30px -10px rgba(0,0,0,.55);
+    color-scheme:dark;
+  }
+
+/* ---------------------------------------------------------------- Plain's scale and ink (over the desk tokens above) */
+html[data-style="plain"] {
+  --f-doc:var(--f-ui);
+  --t-xs:12px; --t-s:13.5px; --t-m:15px; --t-l:16.5px; --t-xl:22px;
+  /* the policy's reading room: line height and the gap between paragraphs / list items; the highlighter's wash hugs the
+     words as it always did (2px either side, 1px inside the line box) */
+  --read-lh:1.8; --read-gap:.8em; --mark-pad-x:2px; --mark-pad-y:-1px;
+  /* the packet: a soft-blue box under the requirements list, dark ink (AA on the box) */
+  --packet-bg:#D2E1F1; --packet-ink:#1B3754; --packet-dim:#425F80; --packet-cur:rgba(255,255,255,.55);
+  /* ink where attention is needed */
+  --pen-doc:226 237 249; --pen-doc-a:.9; --pen-acc:255 255 255; --pen-acc-a:0;
+  --pen-miss:250 226 190; --pen-miss-a:1; --pen-bad:248 214 202; --pen-bad-a:1; --pen-alt:255 255 255; --pen-alt-a:0;
+}
+
+  html[data-style="plain"][data-theme="dark"] { --pen-doc:24 38 56; --pen-doc-a:.9; --pen-acc:0 0 0; --pen-acc-a:0; --pen-alt:0 0 0; --pen-alt-a:0;
+    --pen-miss:78 58 26; --pen-bad:80 42 34;
+    --packet-bg:#33577D; --packet-ink:#F1F5F9; --packet-dim:#C9D7E6; --packet-cur:rgba(255,255,255,.14) }
+
+/* nothing that rests casts a shadow (v1.1-ui: the policy sits on the page, no sheet); floating things keep their lift */
+html[data-style="plain"], html[data-style="plain"][data-theme="dark"] { --sheet-shadow:0 0 #0000; --slip-shadow:0 0 #0000 }
+
+/* Soft: the default theme. Light with the glare taken off: a warm grey-cream desk, paper a step lighter, ink a
+   touch softer (still WCAG AA on every surface and wash); pens re-tuned so the washes read on the darker paper */
+html[data-style="plain"][data-theme="soft"], html[data-style="clinic"][data-theme="soft"] {
+  --desk:#E6E2D8; --paper:#EFEBE1; --edge:#D6CFC1; --edge-2:#C8C0AF;
+  --bg:#E6E2D8; --bg-rgb:230 226 216; --panel:#EFEBE1; --ink:#23282F; --sec:#525963; --dim:#878D96; --line:#D6CFC1; --soft:#DDD8CC; --rail:#E6E2D8;
+  --act:#295886; --act-h:#20476C; --act-soft:#D9E3EE;
+  --ready:#2A6549; --needs:#8E5A12; --no:#8F3A2F; --wait:#525963;
+  --ready-bg:#DCE7DF; --needs-bg:#F0E2C8; --no-bg:#EDDAD3; --wait-bg:#DDD8CC; --sel:#F1DFB2; --sel-line:#B88A33;
+  --sheet-shadow:0 1px 1px rgba(60,48,26,.05), 0 6px 20px -8px rgba(60,48,26,.12);
+  --slip-shadow:0 1px 1px rgba(60,48,26,.05), 0 10px 28px -10px rgba(60,48,26,.18);
+}
+html[data-style="plain"][data-theme="soft"] {
+  --packet-bg:#C6D7EA; --packet-ink:#1B3754; --packet-dim:#3F5C7C; --packet-cur:rgba(255,255,255,.5);
+  --pen-doc:224 233 244; --pen-doc-a:.9; --pen-miss:246 221 183; --pen-miss-a:1; --pen-bad:243 209 196; --pen-bad-a:1; --pen-human:250 220 156; --pen-human-a:1;
+}
+html[data-style="clinic"][data-theme="soft"] {
+  --pen-doc:214 229 246; --pen-acc:190 213 240; --pen-miss:246 225 192; --pen-bad:244 214 203; --pen-alt:226 232 240; --pen-human:250 220 156;
+}
+
+/* ---------------------------------------------------------------- the theme switch: a quiet text button at the top of the rail */
+html[data-style="plain"] .theme-btn, html[data-style="clinic"] .theme-btn { display:block; position:absolute; top:22px; right:18px; padding:2px 9px; font-size:11px; font-weight:600; letter-spacing:.04em; border-radius:999px; color:var(--sec); background:transparent; border:1px solid var(--edge-2); box-shadow:none }
+html[data-style="plain"] .theme-btn:hover, html[data-style="clinic"] .theme-btn:hover { color:var(--ink); border-color:var(--sec) }
+html[data-style="plain"] .rail, html[data-style="clinic"] .rail { position:relative }
+.theme-btn { display:none }

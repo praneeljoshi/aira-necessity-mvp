@@ -1,0 +1,19 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "excimer-laser-therapy-for-treatment-of-d",
+  "title": "Excimer Laser Therapy for Treatment of Dermatologic Conditions",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JJV1UTY3MCM0VH315",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-10000-13",
+  "original_effective": "07/15/02",
+  "reviewed": "04/23/26",
+  "revised": "05/15/26",
+  "file": "bcbsfl-02-10000-13-excimer-laser-therapy-for-treatment-of-dermatologi.pdf",
+  "sha256": "1cd98f57d1790110cca7fc1ed5fd9403cb1aee53c639de5c1bb2a7eb886b7faa",
+  "pages": 5,
+  "bytes": 125628,
+  "retrieved": "2026-10-09"
+}

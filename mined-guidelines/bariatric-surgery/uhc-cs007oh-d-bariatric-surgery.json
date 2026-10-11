@@ -1,0 +1,19 @@
+{
+  "payer": "UnitedHealthcare Community Plan",
+  "payer_key": "uhc",
+  "treatment": "bariatric-surgery",
+  "title": "Bariatric Surgery",
+  "policy_number": "CS007OH.D",
+  "effective": "05/01/2025",
+  "url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan/oh/bariatric-surgery-oh-cs.pdf",
+  "final_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan/oh/bariatric-surgery-oh-cs.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "uhc-cs007oh-d-bariatric-surgery.pdf",
+  "sha256": "8c6528b8e9298d825673c1ca4ddeb2cceb2d4fb7d146c46833b26d76c5f9d290",
+  "pages": 43,
+  "bytes": 827779,
+  "retrieved": "2026-10-09",
+  "printed_date": "Text shows Policy CS007OH.E effective July 1, 2026 (library metadata labels the file CS007OH.D / 05/01/2025; the PDF says it archived version D)"
+}

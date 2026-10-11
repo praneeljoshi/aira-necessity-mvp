@@ -1,0 +1,145 @@
+{
+ "doc_kind": "medical policy (Florida Blue Medical Coverage Guideline)",
+ "lines_of_business": [
+  "All lines of business unless noted in Program Exceptions (disclaimer p.1)",
+  "Federal Employee Program (FEP): follow FEP guidelines",
+  "State Account Organization (SAO): follow SAO guidelines",
+  "Medicare Advantage: reviewed NCD/LCD listed in Program Exceptions"
+ ],
+ "effective_or_revised": "Original Effective Date 09/15/08; Reviewed 07/23/26; Revised 08/15/26; Next Review 07/22/27 (14 pages)",
+ "sections_in_order": [
+  "Header block (policy number, Original Effective Date, Reviewed, Revised)",
+  "Subject",
+  "Disclaimer (all caps)",
+  "Navigation bar (Position Statement / Billing/Coding / ... hyperlinks)",
+  "DESCRIPTION",
+  "POSITION STATEMENT",
+  "BILLING/CODING INFORMATION",
+  "REIMBURSEMENT INFORMATION",
+  "PROGRAM EXCEPTIONS",
+  "DEFINITIONS",
+  "RELATED GUIDELINES",
+  "OTHER",
+  "REFERENCES",
+  "COMMITTEE APPROVAL",
+  "GUIDELINE UPDATE INFORMATION",
+  "(Next Review line added in header block)"
+ ],
+ "criteria_location": "Position Statement (~35 lines, p.2): two bulleted indication lists. List 1 gives 8 covered indications with a few qualifiers; List 2 gives 13 cancer sites for SBRT 'to treat a previously irradiated field'. No criteria beyond qualifiers in parentheses.",
+ "procedures_covered": [
+  "Stereotactic body radiotherapy, delivery and management (77373, 77435, G0339, G0340)",
+  "Planning and target delineation (32701, 77301, 77338)",
+  "Spinal SRS codes (63620, 63621)"
+ ],
+ "logic": {
+  "top_level": "any (a list of covered indications, each a short phrase with optional qualifiers)",
+  "max_nesting_depth": 1,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "None stated. Implicit exclusion of all unlisted indications (no catch-all investigational sentence in the Position Statement).",
+  "initial_vs_repeat": "Second list is the re-irradiation pathway: 'Stereotactic body radiotherapy to treat a previously irradiated field meets the definition of medical necessity for the following indications:'.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Oligometastases involving the lung, adrenal glands, and bone (other than spine or vertebral body)",
+    "why_ambiguous": "'and' means any of the sites, not all."
+   },
+   {
+    "quote": "Primary renal cell carcinoma in members who are not good surgical candidates or who have metastatic renal cell carcinoma",
+    "why_ambiguous": "Two OR'd populations in one sentence; 'not good surgical candidates' undefined."
+   },
+   {
+    "quote": "Lymphoma (Hodgkin and Non-Hodgkin)",
+    "why_ambiguous": "'and' means either type."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "diagnosis",
+   "quote": "Members with stage T1 or T2a non-small cell lung cancer (not >5 cm) showing no nodal or distant disease",
+   "where": "list 1, bullet 2"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "who are not candidates for surgical resection",
+   "where": "list 1"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "in members who have received prior spinal radiotherapy",
+   "where": "list 1, spinal"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "Pancreatic cancer (locally advanced or recurrent disease without distant metastasis)",
+   "where": "list 1"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "Prostate cancer (low, intermediate and high risk of recurrence, post-prostatectomy)",
+   "where": "list 2"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "NSCLC tumor size",
+   "value": "<= 5",
+   "unit": "cm",
+   "quote": "stage T1 or T2a non-small cell lung cancer (not >5 cm)"
+  }
+ ],
+ "time_windows": [],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Intro says 'Codes may not be all inclusive'. Codes cover delivery and planning; none mapped to an indication. Note 77373 and 77435 cap 'entire course not to exceed 5 fractions'.",
+  "non_covered_code_lists": "None."
+ },
+ "external_dependencies": [
+  {
+   "what": "Related guideline for intracranial",
+   "quote": "For stereotactic radiosurgery, refer to Stereotactic Radiosurgery (Intracranial), 02-77371-01."
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Oligometastasis",
+   "definition_quote": "a small number of new tumors (metastatic tumors (oligometastatic)) in one or two other parts of the body."
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "alternative locoregional treatment for members with inoperable primary or metastatic lesions",
+   "problem": "'inoperable' is a surgeon call."
+  },
+  {
+   "quote": "not good surgical candidates",
+   "problem": "undefined."
+  },
+  {
+   "quote": "previously irradiated field",
+   "problem": "no dose or interval."
+  }
+ ],
+ "extraction_hazards": [
+  "Bullets are either the private-use character U+F0B7 or U+2022 depending on the document (the fusion guideline uses both), never '-' or '*'; nested bullets use other glyphs ('o') or only deeper indentation",
+  "Hyperlink navigation bar after the disclaimer is flattened into a 2-3 row text block that looks like headings",
+  "Form-feed (\\f) page breaks can fall mid-list or immediately before a section heading, so '^HEADING' regexes can miss; no running headers/footers or page numbers to strip",
+  "POSITION STATEMENT heading is preceded by a form feed, so '^POSITION STATEMENT' misses it in this file (page 2 starts with it)",
+  "Typos in the lists ('cholangiocarcioma', 'mestatic lung lesions', 'Reonstructive')",
+  "Header has a 'Next Review:' line absent in most documents",
+  "Documents with identical LOINC documentation tables repeated"
+ ],
+ "interesting_structures": [
+  "Policy is almost entirely a whitelist of cancer types, not clinical criteria",
+  "Two lists by treatment context (first-line vs previously irradiated)",
+  "Page-14 References dominate the file (350 of 578 lines)"
+ ],
+ "fit_to_tree": {
+  "score": 2,
+  "scale": "1 = all/any/not expresses it cleanly ... 5 = needs new constructs or human judgment",
+  "why": "Flat any-of of indications with few qualifiers; easy to represent but the chart needs a diagnosis/stage match, and 'not candidates for surgical resection' needs judgment."
+ },
+ "payer": "bcbsfl",
+ "treatment": "stereotactic-body-radiotherapy",
+ "file": "bcbsfl-02-77371-02-stereotactic-body-radiotherapy.pdf"
+}

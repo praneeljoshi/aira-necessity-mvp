@@ -1,0 +1,171 @@
+{
+ "file": "bcbstx-sur716-012-reduction-mammaplasty.pdf",
+ "treatment": "reduction-mammaplasty",
+ "payer": "bcbstx",
+ "doc_kind": "medical policy",
+ "lines_of_business": [
+  "Not stated explicitly; 'Carefully check state regulations and/or the member contract'"
+ ],
+ "effective_or_revised": "Effective 12/01/2024; Policy End Date 12/31/2025",
+ "sections_in_order": [
+  "Coverage",
+  "Policy Guidelines",
+  "Description",
+  "Rationale",
+  "Coding",
+  "References",
+  "Policy History",
+  "Disclaimer"
+ ],
+ "criteria_location": "Coverage section pp.1-3; Schnur table and BSA formula in Description pp.4-5. Rationale (evidence review) is long and irrelevant to criteria.",
+ "procedures_covered": [
+  "Reduction mammaplasty CPT 19318",
+  "Staged reduction before nipple-sparing mastectomy or lumpectomy",
+  "Liposuction-based reduction (investigational)"
+ ],
+ "logic": {
+  "top_level": "all",
+  "max_nesting_depth": 3,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "Not necessary when treating psychosocial symptoms; liposuction experimental; gender reassignment excluded (other policy).",
+  "initial_vs_repeat": "None.",
+  "and_or_ambiguity": [
+   {
+    "quote": "1. ... a) Pain ... OR b) ... intertrigo ... OR c) Ulnar nerve paresthesia or compression ... ; AND 2. ... a) ... AND b) ... AND c) ... AND d) ... AND e)",
+    "why_ambiguous": "Clean but long; item 2.d offers three alternatives with 'or' yet 'Failure of at least 6-weeks of conservative measures including:' reads like all"
+   },
+   {
+    "quote": "Failure of at least 6-weeks of conservative measures including: Physical therapy ... or, Appropriate support bra ... or, Appropriate local hygiene",
+    "why_ambiguous": "'including' vs 'or'; is one measure enough?"
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "age",
+   "quote": "individuals who are 18 years of age or older",
+   "where": "Coverage"
+  },
+  {
+   "kind": "symptom",
+   "quote": "Pain in the upper back, neck, and shoulders which is long-standing in duration and increasing in intensity and is not related to other musculoskeletal causes",
+   "where": "1.a"
+  },
+  {
+   "kind": "symptom",
+   "quote": "Persistent, clinical, and nonseasonal submammary intertrigo which is refractory and unresponsive to comprehensive local hygiene and topical anti-infective therapy",
+   "where": "1.b"
+  },
+  {
+   "kind": "symptom",
+   "quote": "Ulnar nerve paresthesia or compression",
+   "where": "1.c"
+  },
+  {
+   "kind": "functional impairment",
+   "quote": "significant symptoms ... that interfere with activities of daily living",
+   "where": "1"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "Significant shoulder grooving or ulceration of the skin of the shoulder",
+   "where": "2.a"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "Failure of at least 6-weeks of conservative measures",
+   "where": "2.d"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "breast weight (per breast) is estimated at greater than the 22nd percentile line",
+   "where": "2.e"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "Photo documentation that is consistent with the physical exam findings of breast hypertrophy and shoulder grooving",
+   "where": "Coverage"
+  },
+  {
+   "kind": "other",
+   "quote": "post-operative pathology report confirming the amount and type of breast tissue resected",
+   "where": "NOTE 2"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "age",
+   "value": ">=18",
+   "unit": "years",
+   "quote": "18 years of age or older"
+  },
+  {
+   "quantity": "conservative duration",
+   "value": ">=6",
+   "unit": "weeks",
+   "quote": "at least 6-weeks"
+  },
+  {
+   "quantity": "Schnur",
+   "value": "> 22nd percentile (BSA 1.35 = 199 g to 2.55 = 1662 g)",
+   "unit": "g",
+   "quote": "greater than the 22nd percentile line"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "conservative measures",
+   "length": "6 weeks",
+   "quote": "at least 6-weeks of conservative measures"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Only CPT 19318",
+  "non_covered_code_lists": ""
+ },
+ "external_dependencies": [
+  {
+   "what": "SUR716.001 Cosmetic and Reconstructive Procedures; SUR717.001 gender surgery",
+   "quote": "Refer to SUR717.001"
+  }
+ ],
+ "definitions_that_change_meaning": [],
+ "vague_terms": [
+  {
+   "quote": "significant symptoms",
+   "problem": "Undefined"
+  },
+  {
+   "quote": "long-standing in duration and increasing in intensity",
+   "problem": "No duration beyond 6 weeks conservative; no intensity scale"
+  },
+  {
+   "quote": "Tissue removed that plots between the 5th and 22nd percentile ... may be either cosmetic or reconstructive",
+   "problem": "Gray zone left to review"
+  },
+  {
+   "quote": "Obvious breast hypertrophy",
+   "problem": "Not measured"
+  }
+ ],
+ "extraction_hazards": [
+  "Policy end date 12/31/2025 means document likely superseded",
+  "NOTE 2/NOTE 3 carry criteria and are out of order (after criteria 2.e)",
+  "Long RCT evidence tables follow",
+  "Numbered 1/2 with lettered sub-items and bullets",
+  "Schnur table breaks across page"
+ ],
+ "interesting_structures": [
+  "Post-hoc check: final determination may rest on post-operative pathology",
+  "Gray zone between 5th and 22nd percentile",
+  "Requires photo documentation as a mandatory item (not optional)",
+  "Requires symptoms to interfere with ADLs"
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "scale": "1-5",
+  "why": "All/any structure is clean, but retrospective pathology review and gray-zone adjudication are not chart-checkable at prior auth."
+ }
+}

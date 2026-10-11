@@ -1,0 +1,186 @@
+{
+ "lines_of_business": [
+  "All lines of business unless noted in PROGRAM EXCEPTIONS (disclaimer: \"THIS MEDICAL COVERAGE GUIDELINE APPLIES TO ALL LINES OF BUSINESS UNLESS OTHERWISE NOTED IN THE PROGRAM EXCEPTIONS SECTION\")",
+  "FEP: \"Follow FEP guidelines.\"",
+  "SAO: \"Follow SAO guidelines.\"",
+  "Medicare Advantage: none found"
+ ],
+ "effective_or_revised": "Original Effective Date 08/15/02; Reviewed 07/24/25; Revised 08/15/25 (11 pages)",
+ "sections_in_order": [
+  "header block (guideline number, Original Effective Date, Reviewed, Revised, Subject)",
+  "disclaimer paragraph",
+  "navigation bar (Position Statement / Billing/Coding / Reimbursement / Program Exceptions / Definitions / Related Guidelines / Other / References / Updates)",
+  "DESCRIPTION",
+  "POSITION STATEMENT",
+  "BILLING/CODING INFORMATION",
+  "REIMBURSEMENT INFORMATION",
+  "PROGRAM EXCEPTIONS",
+  "DEFINITIONS",
+  "RELATED GUIDELINES",
+  "OTHER",
+  "REFERENCES",
+  "COMMITTEE APPROVAL",
+  "GUIDELINE UPDATE INFORMATION"
+ ],
+ "criteria_location": "POSITION STATEMENT, pp.5-6: four coverage paragraphs (urinary tract obstruction shunt, CCAM/sequestration resection or shunt, sacrococcygeal teratoma, myelomeningocele) each an ALL-of list with gestational-age thresholds; then investigational conditions.",
+ "procedures_covered": [
+  "Vesico-amniotic shunting for fetal urinary tract obstruction",
+  "Open in utero resection of malformed pulmonary tissue or thoracoamniotic shunt (CCAM, bronchopulmonary sequestration)",
+  "In utero removal of sacrococcygeal teratoma",
+  "In utero repair of myelomeningocele",
+  "Not covered: temporary tracheal occlusion for congenital diaphragmatic hernia; congenital heart defects; all others"
+ ],
+ "logic": {
+  "top_level": "pathways: four procedures, each 'under the following conditions' as an all-of list with AND tokens",
+  "max_nesting_depth": 2,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "Myelomeningocele repair has a separate 'considered experimental or investigational in the following' list: fetal anomaly unrelated to MMC, severe fetal kyphosis, risk of preterm birth (short cervix, prior preterm birth), maternal BMI of 35 kg/m2 or more.",
+  "initial_vs_repeat": "",
+  "and_or_ambiguity": [
+   {
+    "quote": "There is evidence of fetal hydrops, placentomegaly, and/or the beginnings of severe pre-eclampsia (i.e., the maternal mirror syndrome) in the mother.",
+    "why_ambiguous": "'and/or' makes it an any-of of three findings; 'evidence of ... in the mother' also applies to fetal hydrops, which is a fetal finding."
+   },
+   {
+    "quote": "In utero repair of myelomeningocele may be considered meets the definition of medical necessity under the following conditions:",
+    "why_ambiguous": "Garbled grammar ('may be considered meets'); the verb softens the rule."
+   },
+   {
+    "quote": "Individuals who meet the conditions for in utero repair of myelomeningocele should be counseled in a nondirective fashion regarding all management options",
+    "why_ambiguous": "Sits as the last bullet of the AND list but is a recommendation, not a condition; indistinguishable by format."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "imaging finding",
+   "quote": "Evidence of hydronephrosis due to bilateral urinary tract obstruction",
+   "where": "vesico-amniotic shunting, bullet 1"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "Congenital cystic adenomatoid malformation or bronchopulmonary sequestration is identified",
+   "where": "pulmonary"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "The fetus is at 32 weeks’ gestation or less",
+   "where": "pulmonary and teratoma"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "The fetus is at less than 26 weeks of gestation",
+   "where": "myelomeningocele"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "upper boundary located between T1 and S1 with evidence of hindbrain herniation on fetal magnetic resonance imaging",
+   "where": "myelomeningocele"
+  },
+  {
+   "kind": "lab value",
+   "quote": "Normal karyotype",
+   "where": "myelomeningocele"
+  },
+  {
+   "kind": "other",
+   "quote": "Singleton pregnancy",
+   "where": "myelomeningocele"
+  },
+  {
+   "kind": "BMI/comorbidity",
+   "quote": "Maternal body mass index of 35 kg/m2 or more",
+   "where": "MMC exclusion list"
+  },
+  {
+   "kind": "provider/facility qualification",
+   "quote": "Refer coverage requests for in utero fetal surgery to the Medical Director for approval.",
+   "where": "Position Statement NOTE (process rule, not criterion)"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "gestational age (CCAM/sequestration, SCT)",
+   "value": "<= 32",
+   "unit": "weeks",
+   "quote": "The fetus is at 32 weeks’ gestation or less"
+  },
+  {
+   "quantity": "gestational age (myelomeningocele)",
+   "value": "< 26",
+   "unit": "weeks",
+   "quote": "The fetus is at less than 26 weeks of gestation"
+  },
+  {
+   "quantity": "maternal BMI (exclusion)",
+   "value": ">= 35",
+   "unit": "kg/m2",
+   "quote": "Maternal body mass index of 35 kg/m2 or more"
+  },
+  {
+   "quantity": "MMC lesion level",
+   "value": "T1 to S1",
+   "unit": "spinal level",
+   "quote": "upper boundary located between T1 and S1"
+  }
+ ],
+ "time_windows": [],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "One HCPCS code per procedure (S2401 urinary tract obstruction, S2402 CCAM, S2403 extralobar sequestration, S2404 myelomeningocele, S2405 SCT) which maps one-to-one to the paragraphs; S2400 (tracheal occlusion for CDH) is tagged '(investigational)'. No ICD-10 list.",
+  "non_covered_code_lists": "S2400 (investigational)"
+ },
+ "external_dependencies": [
+  {
+   "what": "Medical Director approval route",
+   "quote": "Refer coverage requests for in utero fetal surgery to the Medical Director for approval."
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Oligohydramnios",
+   "definition_quote": "an abnormal small amount of amniotic fluid; the presence of less than 300ml of amniotic fluid at term."
+  },
+  {
+   "term": "Fetal hydrops",
+   "definition_quote": "the clinical condition in infants or cardiac decompensation with hepatosplenomegaly, of the fetus before birth."
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "Adequate renal function",
+   "problem": "no lab values or fetal urine criteria."
+  },
+  {
+   "quote": "Progressive oligohydramnios",
+   "problem": "definition is at term only, 'progressive' undefined."
+  },
+  {
+   "quote": "No other lethal abnormalities or chromosomal defects.",
+   "problem": "requires a negative; evidence is absence of findings."
+  }
+ ],
+ "extraction_hazards": [
+  "Bullets are U+F0B7 private-use glyphs (25); list items wrap with hanging indent and the 'AND' at line end is the only connector.",
+  "A page break falls inside the myelomeningocele list ('Myelomeningocele is present with ... fetal magnetic resonance imaging; AND' then blank line then 'Normal karyotype; AND').",
+  "Description is a long literature review (~180 lines) before the Position Statement; the Position Statement heading therefore starts at about line 205.",
+  "LOINC table printed under BILLING/CODING with a three-line wrapped header cell.",
+  "Update log row 05/15/06 says the Medical Director statement was deleted, yet the current NOTE has it (no later log entry records it being restored)."
+ ],
+ "interesting_structures": [
+  "Gestational-age cutoffs and maternal findings: conditions on mother and fetus.",
+  "Procedure-to-HCPCS one-to-one code map, unusual among BCBSFL policies.",
+  "Medical Director pre-approval requirement.",
+  "Exclusion list for one pathway (MMC) only."
+ ],
+ "fit_to_tree": {
+  "score": 2,
+  "scale": "1..5",
+  "why": "four all-of lists with numeric thresholds and an exclusion list, a good fit; chart evidence may be fetal imaging reports, and 'adequate renal function' needs judgment."
+ },
+ "file": "bcbsfl-03-59000-16-in-utero-intrauterine-fetal-surgery.pdf",
+ "treatment": "in-utero-intrauterine-fetal-surgery",
+ "payer": "bcbsfl",
+ "doc_kind": "medical policy (Florida Blue 'Medical Coverage Guideline', MCG)"
+}

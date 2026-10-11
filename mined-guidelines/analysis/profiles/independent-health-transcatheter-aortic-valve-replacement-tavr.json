@@ -1,0 +1,215 @@
+{
+ "file": "independent-health-transcatheter-aortic-valve-replacement-tavr.pdf",
+ "treatment": "tavr",
+ "payer": "independent-health",
+ "doc_kind": "medical policy (regional health plan template with line-of-business checkboxes)",
+ "lines_of_business": [
+  "State products: MediSource, MediSource Connect, Essential Plan",
+  "Medicare: MAPD, ISNP, CSNP (but 'Medicare Advantage: Managed by Evolent')",
+  "Commercial: Large Group, Small Group, Individual",
+  "Self-funded (SPD supersedes policy)"
+ ],
+ "effective_or_revised": "Policy M20121214042; effective 1/1/2013; latest revision 11/1/2025 (version control table)",
+ "sections_in_order": [
+  "Header with line-of-business checkboxes",
+  "Purpose and Applicability",
+  "Policy (Self-Funded; Medical Necessity; Contraindications; Service Requirements; Medicare Advantage; MediSource; Investigational)",
+  "Background",
+  "Pre-Authorization Required?",
+  "Definitions",
+  "References",
+  "Version Control"
+ ],
+ "criteria_location": "'Policy' section on pp.2-3: a Self-Funded severe-AS definition block, then 'Medical Necessity' bullets, Contraindications, Service Requirements. About 1 of 6 pages.",
+ "procedures_covered": [
+  "TAVR (percutaneous) for aortic stenosis; no valve-in-valve, no other valves, no codes listed"
+ ],
+ "logic": {
+  "top_level": "all",
+  "max_nesting_depth": 3,
+  "k_of_n": [
+   {
+    "k": 1,
+    "n": 4,
+    "quote": "Severe aortic stenosis is defined by one or more of the following criteria",
+    "pointer": "Policy, p.2"
+   }
+  ],
+  "exclusions_or_contraindications": "Separate 'Contraindications' paragraph: 'cannot tolerate an anticoagulation/antiplatelet regimen or who have active bacterial endocarditis or other active infections'; also 'without severe aortic insufficiency' written as a positive criterion.",
+  "initial_vs_repeat": "None.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Members with an ejection fraction >20% who have been examined by a heart team ... who find the member: 1. inoperable and in whom existing co-morbidities would not preclude the expected benefit ...; or",
+    "why_ambiguous": "A numbered list with only item 1 followed by 'or' and then a bullet about the FDA PMA device; the intended items 2+ (e.g., high-risk) are missing, so the logic is broken."
+   },
+   {
+    "quote": "TAVR is considered medically necessary when all the following conditions are present: Severe aortic stenosis; and NYHA ... symptoms; Members with severe symptomatic calcified native aortic valve stenosis without severe aortic insufficiency; and ...",
+    "why_ambiguous": "Mixes 'and' at line ends inconsistently; the first two bullets lack the second 'and'."
+   },
+   {
+    "quote": "An aortic valve area of less than <= 1.0 cm2",
+    "why_ambiguous": "Typographical: 'less than' plus '<='; strict vs inclusive unclear."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "measurement threshold",
+   "quote": "aortic valve area ... <=1.0 cm2; AVA index <= 0.6 cm2/m2; mean gradient > 40 mmHg; Doppler jet velocity > 4.0 m/sec",
+   "where": "Policy, severe AS block"
+  },
+  {
+   "kind": "symptom",
+   "quote": "New York Heart Association (NYHA) Heart Failure Class II, III or IV symptoms",
+   "where": "Medical Necessity"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "severe symptomatic calcified native aortic valve stenosis without severe aortic insufficiency",
+   "where": "Medical Necessity"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "Members with an ejection fraction >20%",
+   "where": "Medical Necessity"
+  },
+  {
+   "kind": "provider/team",
+   "quote": "examined by a heart team including both an experienced cardiac surgeon and a cardiologist who find the member: inoperable",
+   "where": "Medical Necessity"
+  },
+  {
+   "kind": "device/FDA",
+   "quote": "complete aortic valve and implantation system that has received FDA premarket approval (PMA) for that system's FDA approved indication",
+   "where": "Medical Necessity"
+  },
+  {
+   "kind": "contraindication",
+   "quote": "cannot tolerate an anticoagulation/antiplatelet regimen or who have active bacterial endocarditis or other active infections",
+   "where": "Contraindications"
+  },
+  {
+   "kind": "facility/provider",
+   "quote": "performed in a facility and by physicians that meets the institutional requirements set forth in the CMS NCD for TAVR",
+   "where": "Service Requirements"
+  },
+  {
+   "kind": "authorization process",
+   "quote": "Pre-authorization not required. Criteria utilized upon retro-review.",
+   "where": "Pre-Authorization section"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "Aortic valve area",
+   "value": "<= 1.0",
+   "unit": "cm2",
+   "quote": "An aortic valve area of less than <=1.0 cm2"
+  },
+  {
+   "quantity": "AVA index",
+   "value": "<= 0.6",
+   "unit": "cm2/m2",
+   "quote": "An aortic valve area index of less than or equal to 0.6 cm2/m2"
+  },
+  {
+   "quantity": "Mean gradient",
+   "value": "> 40",
+   "unit": "mm Hg",
+   "quote": "A mean aortic valve gradient greater than 40mmHg"
+  },
+  {
+   "quantity": "Jet velocity",
+   "value": "> 4.0",
+   "unit": "m/sec",
+   "quote": "An echocardiographic Doppler jet velocity greater than 4.0 m/sec"
+  },
+  {
+   "quantity": "Ejection fraction",
+   "value": "> 20",
+   "unit": "percent",
+   "quote": "Members with an ejection fraction >20%"
+  },
+  {
+   "quantity": "NYHA class",
+   "value": ">= II",
+   "unit": "class",
+   "quote": "NYHA Heart Failure Class II, III or IV symptoms"
+  }
+ ],
+ "time_windows": [],
+ "codes": {
+  "cpt_hcpcs_listed": false,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "No codes at all (references the NY State Medicaid procedure code manual by link only).",
+  "non_covered_code_lists": "None."
+ },
+ "external_dependencies": [
+  {
+   "what": "CMS NCD 20.32 institutional/operator requirements",
+   "quote": "institutional requirements set forth in the Centers for Medicare and Medicaid Service National Coverage Determination (NCD) for Transcatheter Aortic Valve Replacement (TAVR)"
+  },
+  {
+   "what": "Medicare Advantage managed by vendor Evolent",
+   "quote": "Medicare Advantage: Managed by Evolent"
+  },
+  {
+   "what": "Medicaid / Essential Plan use commercial criteria",
+   "quote": "cover TAVR utilizing the Commercial criteria above"
+  },
+  {
+   "what": "Self-funded SPD overrides",
+   "quote": "In the event of any conflict between this policy and the SPD of a Self-Funded Plan, the SPD shall supersede the policy."
+  },
+  {
+   "what": "FDA PMA",
+   "quote": "has received FDA premarket approval (PMA) for that system's FDA approved indication"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Heart Team",
+   "definition_quote": "a cohesive, multi-disciplinary team of medical professionals that embodies collaboration and dedication across medical specialties to offer optimal patient-centered care"
+  },
+  {
+   "term": "Native valve",
+   "definition_quote": "relating or belonging to a person or thing by conditions existing at the time of birth"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "inoperable and in whom existing co-morbidities would not preclude the expected benefit",
+   "problem": "Judgment of the heart team; no STS threshold; chart may not state 'inoperable'."
+  },
+  {
+   "quote": "Heart Team ... experienced cardiac surgeon",
+   "problem": "'Experienced' unquantified here; defers to NCD."
+  },
+  {
+   "quote": "Investigational and Not Medically Necessary ... when all the criteria specified above are not met",
+   "problem": "'when all the criteria ... are not met' is ambiguous: none met vs any unmet."
+  },
+  {
+   "quote": "Self-Funded:",
+   "problem": "Heading says Self-Funded but the criteria apply to commercial and Medicaid too."
+  }
+ ],
+ "extraction_hazards": [
+  "Heading 'Self-Funded:' sits above a definition and then 'Medical Necessity', suggesting the criteria are only for self-funded plans",
+  "Broken numbered list (item 1 with no item 2; trailing 'or')",
+  "Checkbox glyphs (box characters) for lines of business",
+  "Footer 'Restricted' on every page",
+  "Typographical 'less than <=1.0'",
+  "No codes; match must come from procedure name"
+ ],
+ "interesting_structures": [
+  "Prior authorization is NOT required; criteria used on retrospective review only",
+  "Different handling per line of business: Medicare Advantage delegated to Evolent; Medicaid products use commercial",
+  "EF > 20% and severe aortic insufficiency conditions appear only here"
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "scale": "1 clean ... 5 human judgment",
+  "why": "Short and mostly all-of, but the truncated 'inoperable ... or' branch and line-of-business scoping make the intended tree uncertain."
+ }
+}

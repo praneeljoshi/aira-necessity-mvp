@@ -1,0 +1,202 @@
+{
+ "lines_of_business": [
+  "All lines of business unless noted in PROGRAM EXCEPTIONS (disclaimer: \"THIS MEDICAL COVERAGE GUIDELINE APPLIES TO ALL LINES OF BUSINESS UNLESS OTHERWISE NOTED IN THE PROGRAM EXCEPTIONS SECTION\")",
+  "FEP: \"Follow FEP guidelines.\"",
+  "SAO: \"Follow SAO guidelines.\"",
+  "Medicare Advantage: 'No National Coverage Determination (NCD) and/or Local Coverage Determination (LCD) were found'"
+ ],
+ "effective_or_revised": "Original Effective Date 10/15/07; Reviewed 06/25/26; Revised 07/15/26 (7 pages)",
+ "sections_in_order": [
+  "header block (guideline number, Original Effective Date, Reviewed, Revised, Subject)",
+  "disclaimer paragraph",
+  "navigation bar (Position Statement / Billing/Coding / Reimbursement / Program Exceptions / Definitions / Related Guidelines / Other / References / Updates)",
+  "DESCRIPTION",
+  "POSITION STATEMENT",
+  "BILLING/CODING INFORMATION",
+  "REIMBURSEMENT INFORMATION",
+  "PROGRAM EXCEPTIONS",
+  "DEFINITIONS",
+  "RELATED GUIDELINES",
+  "OTHER",
+  "REFERENCES",
+  "COMMITTEE APPROVAL",
+  "GUIDELINE UPDATE INFORMATION"
+ ],
+ "criteria_location": "POSITION STATEMENT, pp.2-3: four covered indications (shoulder adhesive capsulitis with nested ALL-of, knee arthrofibrosis, other joint arthrofibrosis, dislocations) then five not-covered statements; LOINC documentation table closes the section before BILLING/CODING.",
+ "procedures_covered": [
+  "Manipulation under anesthesia for adhesive capsulitis of the shoulder",
+  "Post-surgical/post-trauma arthrofibrosis of the knee",
+  "Post-surgical arthrofibrosis of other joints",
+  "Radiographically confirmed joint dislocations (any joint)",
+  "Spinal manipulation under anesthesia (22505): investigational",
+  "Serial or multi-joint MUA for chronic pain: investigational"
+ ],
+ "logic": {
+  "top_level": "pathways: four indications, one of which (shoulder) has nested ALL-of criteria with a further nested ALL-of for conservative management",
+  "max_nesting_depth": 3,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "Not-covered statements: spinal MUA; MUA for other joint disorders; serial treatment sessions; multi-joint MUA for chronic pain. Contraindications are not listed.",
+  "initial_vs_repeat": "'serial treatment sessions' are investigational; no criteria otherwise for repeat MUA.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Adhesive capsulitis of the shoulder (e.g., frozen shoulder), defined by ALL of the following: Refractory/progressive shoulder pain with functional limitations for at least 6 weeks, AND Persistent limited (at least 50% reduction) active and passive glenohumeral motion, AND Failure of at least 6 weeks of conservative medical management that included the following: Analgesics and/or corticosteroids, unless contraindicated, AND At least 4 weeks of physical therapy",
+    "why_ambiguous": "Third item has a nested two-line AND list; it reads as 'analgesics and/or corticosteroids (unless contraindicated) AND >=4 weeks PT', and the 4-week PT is a subset of the 6-week management window; 'and/or' lets either drug class count."
+   },
+   {
+    "quote": "As a treatment modality for radiographically-confirmed joint dislocations at any joint",
+    "why_ambiguous": "No further criteria; the CPT list includes closed-treatment-of-dislocation codes that are routine."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "symptom",
+   "quote": "Refractory/progressive shoulder pain with functional limitations for at least 6 weeks",
+   "where": "shoulder, first criterion"
+  },
+  {
+   "kind": "functional impairment",
+   "quote": "Persistent limited (at least 50% reduction) active and passive glenohumeral motion",
+   "where": "shoulder"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "At least 4 weeks of physical therapy",
+   "where": "shoulder (nested under Failure of at least 6 weeks of conservative medical management)"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "Post-surgical or post-trauma arthrofibrosis of the knee",
+   "where": "knee (no further criteria)"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "unresponsive to conservative therapy, which included at least 6 weeks of physical therapy and appropriate splinting",
+   "where": "other joints"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "radiographically-confirmed joint dislocations at any joint",
+   "where": "dislocations"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "physician history and physical, physician treatment notes including documentation of failure conservative medical management, treatment plan, radiology and surgical reports, physical therapy notes (if applicable)",
+   "where": "documentation sentence before LOINC table"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "active and passive glenohumeral motion reduction",
+   "value": ">= 50",
+   "unit": "%",
+   "quote": "(at least 50% reduction)"
+  },
+  {
+   "quantity": "shoulder pain duration",
+   "value": ">= 6",
+   "unit": "weeks",
+   "quote": "for at least 6 weeks"
+  },
+  {
+   "quantity": "conservative management",
+   "value": ">= 6",
+   "unit": "weeks",
+   "quote": "Failure of at least 6 weeks of conservative medical management"
+  },
+  {
+   "quantity": "physical therapy within that",
+   "value": ">= 4",
+   "unit": "weeks",
+   "quote": "At least 4 weeks of physical therapy"
+  },
+  {
+   "quantity": "other joints PT + splinting",
+   "value": ">= 6",
+   "unit": "weeks",
+   "quote": "at least 6 weeks of physical therapy and appropriate splinting"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "shoulder pain with functional limitation",
+   "length": "at least 6 weeks",
+   "quote": "Refractory/progressive shoulder pain with functional limitations for at least 6 weeks"
+  },
+  {
+   "what": "conservative management",
+   "length": "at least 6 weeks (4 weeks PT within)",
+   "quote": "Failure of at least 6 weeks of conservative medical management"
+  },
+  {
+   "what": "LOINC look-back for submitted records",
+   "length": "six months before date of service",
+   "quote": "observations made six months or fewer before starting date of service for the claim"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "No. 13 CPT codes by joint (shoulder 23700, 23655; elbow 24300; wrist 25259; fingers 26340...; hip 27275; knee 27570; ankle 27860; spine 22505 tagged '(Investigational)'). No ICD-10 list, so diagnosis must be taken from the criteria text.",
+  "non_covered_code_lists": "22505 '(Investigational)'"
+ },
+ "external_dependencies": [
+  {
+   "what": "Medicare Advantage none",
+   "quote": "No National Coverage Determination (NCD) and/or Local Coverage Determination (LCD) were found at the time of the last guideline review date."
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Arthrofibrosis",
+   "definition_quote": "internal scarring of the joint, with consequent stiffness."
+  },
+  {
+   "term": "Adhesive capsulitis",
+   "definition_quote": "Constant severe limitation of the range of motion of the shoulder due to scarring around the shoulder joint."
+  },
+  {
+   "term": "Dislocation",
+   "definition_quote": "a disturbance or disarrangement of the normal relation of the bones entering into the formation of a joint; incomplete dislocation may also be referred to as subluxation."
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "significant decreased range of motion (ROM) unresponsive to conservative therapy",
+   "problem": "'significant' has no degrees (shoulder gets 50%, others do not)."
+  },
+  {
+   "quote": "Refractory/progressive",
+   "problem": "slash joins two different states."
+  },
+  {
+   "quote": "appropriate splinting",
+   "problem": "no duration or type."
+  },
+  {
+   "quote": "Post-surgical or post-trauma arthrofibrosis of the knee",
+   "problem": "no ROM or time-since-surgery criteria for the knee though the log says criteria 'for MUA of the knee' were revised in 2018 and 2023."
+  }
+ ],
+ "extraction_hazards": [
+  "Three levels of bullets: '•' (4), 'o' (3) and the minus sign U+2212 '−' (2) for the third level; a parser keyed on '•' misses nesting.",
+  "LOINC table (4 columns, 6 rows) lives at the end of the Position Statement, introduced by 'LOINC Codes:' and a documentation sentence, then BILLING/CODING; section splitting by heading must account for it.",
+  "Description contains a long 'Summary and Analysis of Evidence' with study results (~70 lines).",
+  "Typo: 'documentation of failure conservative medical management'."
+ ],
+ "interesting_structures": [
+  "Joint-specific criteria with different minimum conservative durations (6 weeks shoulder, 6 weeks PT + splinting other joints).",
+  "A definition-style construction 'defined by ALL of the following' for the shoulder indication.",
+  "A documentation checklist expressed as a LOINC table with a six-month look-back.",
+  "Not-covered statements for combinations (serial, multi-joint, spinal)."
+ ],
+ "fit_to_tree": {
+  "score": 2,
+  "scale": "1..5",
+  "why": "nested all-of fits well with numeric time thresholds; weaker spots are the open 'other joints' branch and undefined 'significant' ROM loss."
+ },
+ "file": "bcbsfl-02-20000-34-manipulation-under-anesthesia.pdf",
+ "treatment": "manipulation-under-anesthesia",
+ "payer": "bcbsfl",
+ "doc_kind": "medical policy (Florida Blue 'Medical Coverage Guideline', MCG)"
+}

@@ -1,0 +1,19 @@
+{
+  "payer": "Cigna",
+  "payer_key": "cigna",
+  "treatment": "pneumatic-compression",
+  "title": "Lymphedema Pumps and Sleeves",
+  "policy_number": "0354",
+  "effective": "",
+  "url": "https://a.static.cigna.com/assets/chcp/pdf/coveragePolicies/medical/mm_0354_coveragepositioncriteria_lymphedema_pumps_and_sleeves.pdf",
+  "final_url": "https://a.static.cigna.com/assets/chcp/pdf/coveragePolicies/medical/mm_0354_coveragepositioncriteria_lymphedema_pumps_and_sleeves.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "cigna-0354-lymphedema-pumps-and-sleeves.pdf",
+  "sha256": "18641fcd0ababe67cd2f29c2c64161a31bb742fbe2964f356d31a05474dcf610",
+  "pages": 25,
+  "bytes": 379791,
+  "retrieved": "2026-10-09",
+  "printed_date": "Effective Date 5/15/2026; Next Review Date 4/15/2027 (Coverage Policy 0354, titled 'Compression Devices')"
+}

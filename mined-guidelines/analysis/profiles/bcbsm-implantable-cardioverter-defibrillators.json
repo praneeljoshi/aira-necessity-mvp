@@ -1,0 +1,111 @@
+{
+  "file": "bcbsm-implantable-cardioverter-defibrillators.pdf",
+  "treatment": "icd",
+  "payer": "bcbsm",
+  "doc_kind": "medical policy (Joint BCBSM/BCN Medical Policy; also usable by Medicare Advantage plans)",
+  "lines_of_business": ["BCBSM and BCN (Blue Care Network) commercial; 'may be used by BCBSM or BCN Medicare Advantage plans' where CMS rules are not fully developed", "Grid of BCBSM/BCN products near the end (BCNA, BCN65 Medicare)"],
+  "effective_or_revised": "Current Policy Effective Date: 5/1/26; policy history table from 2/6/02",
+  "sections_in_order": ["Title/Description", "Medical Policy Statement", "Inclusionary and Exclusionary Guidelines (Transvenous: Adults, Pediatrics; Subcutaneous; Substernal)", "CPT/HCPCS codes", "Background", "Rationale (very long)", "Regulatory Status", "Government Regulations (National: NCD 20.4)", "References (115+)", "Joint BCBSM/BCN Medical Policy History", "Benefit considerations grid"],
+  "criteria_location": "Inclusionary and Exclusionary Guidelines, pp. 2-6 of 67. Rationale (about p.7-51) and References occupy the rest; the Government Regulations section on p.52-54 restates NCD 20.4 criteria that are not part of the policy statement.",
+  "procedures_covered": ["Transvenous ICD (adult, pediatric)", "Subcutaneous ICD", "Substernal (extravascular) ICD", "Device replacement"],
+  "logic": {
+    "top_level": "pathways (adults: any of ~20 inclusion bullets gated by a survival condition; pediatrics any of 10; S-ICD and substernal each an ALL list over the transvenous pathways)",
+    "max_nesting_depth": 4,
+    "k_of_n": [
+      {"k": 1, "n": 20, "quote": "individuals who meet ONE of the following criteria when survival with good functional status for more than one year is anticipated", "pointer": "Adults Inclusions"},
+      {"k": 1, "n": 3, "quote": "Ischemic cardiomyopathy when ANY of the following apply", "pointer": "Adults"},
+      {"k": 1, "n": 9, "quote": "Established diagnosis of hypertrophic cardiomyopathy when ANY of the following apply", "pointer": "Adults"},
+      {"k": 2, "n": 3, "quote": "Lamin A/C cardiomyopathy ... At least 2 of the following apply: LVEF < 45%; Non-sustained ventricular tachycardia; Male sex", "pointer": "Adults"},
+      {"k": 1, "n": 5, "quote": "At least ONE of the following applies: Inability to secure venous access; Immunocompromised individual; recurrent transvenous lead-related ... infections; endocarditis; younger age", "pointer": "S-ICD and substernal"}
+    ],
+    "exclusions_or_contraindications": "Each pathway has an 'Exclusions:' paragraph. Primary prevention: NYHA IV unless CRT-D eligible, and 'Do not meet above criteria'. Substernal has a real exclusion list (unipolar pacemaker or dual/triple chamber pacing; incessant VT/VF; reversible causes; prior or planned sternotomy; adhesion-prone history).",
+    "initial_vs_repeat": "Device replacement: generator end-of-life criteria present, OR pocket opened for another reason AND device within 3 years of end-of-life criteria.",
+    "and_or_ambiguity": [
+      {"quote": "Nonischemic dilated cardiomyopathy in an individual <= 70 years of age or otherwise supported by clinical scenario, when, following 90 days which would typically allow an adequate response to optimal medical therapy of Guideline Directed Medical Therapy (GDMT)*, BOTH of the following are still present", "why_ambiguous": "'or otherwise supported by clinical scenario' voids the 70-year limit; 'which would typically allow' makes 90 days a typical, not a firm, duration."},
+      {"quote": "Primary Prevention Inclusions: Following cardiac arrest due to ventricular fibrillation or tachycardia ...", "why_ambiguous": "The heading 'Primary Prevention' covers items that are secondary-prevention (cardiac arrest, sustained VT); a separate 'Secondary Prevention' heading follows with one bullet. Heading cannot be trusted to select the pathway."},
+      {"quote": "Syncope within the preceding 6 months or other reasonable time frame, suspected by clinical history to be arrhythmic", "why_ambiguous": "'or other reasonable time frame' makes the 6-month window soft."},
+      {"quote": "LVEF > 35% with history of syncope OR evidence of extensive myocardial scar by cardiac MRI or PET scan OR Inducible sustained ventricular arrhythmias (>30 seconds of monomorphic VT or polymorphic VT) or clinically relevant ventricular fibrillation.", "why_ambiguous": "Capital OR and lowercase or in one bullet; 'clinically relevant' undefined."},
+      {"quote": "Established diagnosis of long QT syndrome in an individual with syncope or ventricular tachycardia despite beta blocker therapy (or in whom beta blockers are contraindicated) OR Individuals with a diagnosis of LQTS who are survivors of cardiac arrest", "why_ambiguous": "Two alternatives in one bullet with an unbracketed OR."},
+      {"quote": "Do not meet above criteria.", "why_ambiguous": "An exclusion that merely restates the inclusion list; circular for a checker (exclusion true iff inclusions false)."}
+    ]
+  },
+  "requirement_kinds": [
+    {"kind": "other", "quote": "survival with good functional status for more than one year is anticipated", "where": "Adults, applies to all inclusions"},
+    {"kind": "diagnosis", "quote": "Established diagnosis of hypertrophic cardiomyopathy / arrhythmogenic right ventricular dysplasia / long QT / short QT / Brugada / CPVT / cardiac sarcoidosis / Phospholamban / FLNC / Lamin A/C cardiomyopathy", "where": "Adults"},
+    {"kind": "measurement threshold", "quote": "LVEF is <30% due to myocardial infarction >40 days previously in an individual with NYHA functional class I despite GDMT", "where": "Adults, ischemic"},
+    {"kind": "conservative therapy", "quote": "following 90 days ... of Guideline Directed Medical Therapy (GDMT)", "where": "Adults, NICM"},
+    {"kind": "age", "quote": "in an individual <= 70 years of age", "where": "Adults, NICM"},
+    {"kind": "imaging finding", "quote": "Late gadolinium enhancement (LGE) comprising 15% of LV mass in a patient aged 19 years or older", "where": "Adults, HCM"},
+    {"kind": "documentation/photos", "quote": "Non-sustained ventricular tachycardia (NSVT) defined as 3 or more brief episodes of consecutive ventricular beats and/or 1 prolonged burst of 10 beats, at a rate of >130/min, over 24 to 48 hours of continuous ambulatory ECG monitoring", "where": "Adults, HCM"},
+    {"kind": "prior procedure", "quote": "at least 90 days post revascularization (if revascularization has been performed)", "where": "Adults, ischemic"},
+    {"kind": "prior procedure", "quote": "positive electrophysiology study performed >96 hours following myocardial infarction", "where": "Adults, ischemic"},
+    {"kind": "other", "quote": "An outpatient who has met criteria for, and is awaiting, heart transplant or ventricular assist device and who is NYHA functional class IV", "where": "Adults"},
+    {"kind": "other", "quote": "does not require pacing for bradycardia, overdrive pacing for termination of ventricular tachycardia, or cardiac resynchronization", "where": "S-ICD"},
+    {"kind": "other", "quote": "Prior or planned sternotomy", "where": "Substernal exclusion"}
+  ],
+  "thresholds": [
+    {"quantity": "LVEF (ischemic NYHA I)", "value": "< 30", "unit": "%", "quote": "LVEF is <30% due to myocardial infarction >40 days previously"},
+    {"quantity": "LVEF (ischemic NYHA II-III)", "value": "< 35", "unit": "%", "quote": "LVEF is <35% due to myocardial infarction >40 days previously"},
+    {"quantity": "LVEF (NSVT + EP study)", "value": "< 40", "unit": "%", "quote": "LVEF is <40% due to prior myocardial infarction"},
+    {"quantity": "LVEF (NICM)", "value": "< 35", "unit": "%", "quote": "Left ventricular ejection fraction (LVEF) <35%"},
+    {"quantity": "time since MI", "value": "> 40", "unit": "days", "quote": "myocardial infarction >40 days previously"},
+    {"quantity": "GDMT duration", "value": "90", "unit": "days", "quote": "following 90 days"},
+    {"quantity": "post-revascularization", "value": ">= 90", "unit": "days", "quote": "at least 90 days post revascularization"},
+    {"quantity": "EP study timing", "value": "> 96", "unit": "hours after MI", "quote": "performed >96 hours following myocardial infarction"},
+    {"quantity": "LV wall thickness (HCM)", "value": "> 30", "unit": "mm", "quote": "Maximum LV wall thickness >30 mm"},
+    {"quantity": "LGE (HCM)", "value": "15", "unit": "% of LV mass, age 19+", "quote": "comprising 15% of LV mass in a patient aged 19 years or older"},
+    {"quantity": "NSVT rate (HCM)", "value": "> 130", "unit": "per min", "quote": "at a rate of >130/min"},
+    {"quantity": "NICM age", "value": "<= 70", "unit": "years", "quote": "<= 70 years of age or otherwise supported by clinical scenario"},
+    {"quantity": "LVEF (ARVD, sarcoid)", "value": "<= 35 / < 35", "unit": "%", "quote": "ejection fraction <35% in an individual who is on GDMT (ARVD); LVEF <= 35% (sarcoid)"},
+    {"quantity": "QTc (note)", "value": "> 550", "unit": "ms", "quote": "profound QT prolongation (>550 ms)"},
+    {"quantity": "survival", "value": "> 1", "unit": "year", "quote": "survival with good functional status for more than one year"}
+  ],
+  "time_windows": [
+    {"what": "GDMT trial NICM", "length": "90 days", "quote": "following 90 days which would typically allow an adequate response"},
+    {"what": "since MI", "length": "more than 40 days", "quote": "myocardial infarction >40 days previously"},
+    {"what": "after revascularization", "length": "at least 90 days", "quote": "at least 90 days post revascularization"},
+    {"what": "syncope", "length": "preceding 6 months or other reasonable time frame", "quote": "Syncope within the preceding 6 months or other reasonable time frame"},
+    {"what": "replacement near end of life", "length": "within 3 years of end-of-life criteria", "quote": "the device is within 3 years of reaching end-of-life criteria"},
+    {"what": "expected survival", "length": "more than one year", "quote": "survival with good functional status for more than one year is anticipated"}
+  ],
+  "codes": {"cpt_hcpcs_listed": true, "icd10_listed": false, "codes_tied_to_criteria": "One flat list of 'Established codes' (33215-33273, 93260-93297, 0571T-0578T, 0614T); 0577T, 0578T and 0614T are printed twice. 'Other codes (investigational, not medically necessary, etc.): N/A'. Note says a code on the list is no guarantee of coverage.", "non_covered_code_lists": "none"},
+  "external_dependencies": [
+    {"what": "CMS NCD 20.4 restated in Government Regulations", "quote": "There is a National Coverage Determination for ICDs. Publication 100-3, manual section 20.4 (effective 07/31/2023)"},
+    {"what": "Medicare Advantage use", "quote": "When Centers for Medicare and Medicaid (CMS) coverage rules are not fully developed, this medical policy may be used by BCBSM or BCN Medicare Advantage plans"},
+    {"what": "Certificate governs", "quote": "These documents are not to be used to determine benefits or reimbursement. Please refer to the appropriate certificate or contract for benefit information."},
+    {"what": "Specialty society input", "quote": "The policy was sent for review to ... academic medical centers ... for a total of 9 responses (Rationale)"},
+    {"what": "Footnote content", "quote": "*Guideline-directed medical therapy (GDMT): Maximum tolerated doses of appropriately titrated medication (to include beta blockers, ACE inhibitors or ARBs, aldosterone antagonists and diuretics ...)"}
+  ],
+  "definitions_that_change_meaning": [
+    {"term": "Structural heart disease", "definition_quote": "structural heart disease-left ventricular dysfunction (LVEF < 50%), prior myocardial infarction, moderate or severe valvular heart disease or complex congenital heart disease"},
+    {"term": "GDMT", "definition_quote": "Maximum tolerated doses of appropriately titrated medication ... When a particular medication class is contraindicated, GDMT definition can exclude that class."},
+    {"term": "LQTS note", "definition_quote": "These factors should be evaluated on an individualized basis by a clinician with expertise in LQTS"}
+  ],
+  "vague_terms": [
+    {"quote": "otherwise supported by clinical scenario", "problem": "overrides the 70-year age limit"},
+    {"quote": "or other reasonable time frame", "problem": "undefined window for syncope"},
+    {"quote": "clinically relevant ventricular fibrillation", "problem": "undefined"},
+    {"quote": "survival with good functional status for more than one year is anticipated", "problem": "a prognosis; no tool or threshold; cannot be shown by a chart other than a physician statement"},
+    {"quote": "Ventricular tachyarrhythmias with transient or reversible causes exist", "problem": "'reversible' undefined"},
+    {"quote": "Any prior medical condition or procedure that potentially leads to adhesions in the anterior mediastinal space", "problem": "open-ended"}
+  ],
+  "extraction_hazards": [
+    "Strict comparison symbols are inconsistent with sibling policies: BCBSM prints < and > (LVEF <35%, >40 days) where Carelon prints <= and >= (LVEF <= 35%, >= 40 days): a conversion error would move the threshold by one unit.",
+    "The word 'Inclusions' and 'Exclusions' repeats under each of Primary Prevention, Secondary Prevention, Pediatrics, S-ICD and Substernal; 'Primary Prevention' heading is applied to arrest/VT survivors.",
+    "Footnote for GDMT is printed after the Lamin A/C bullet and before 'Device replacement', which sits outside the bullet list at a different indent.",
+    "Page numbers are single digits centered between sections; no running header.",
+    "67 pages: Rationale contains large evidence tables (study tables with columns for design, population, outcomes) that flatten into thousands of lines; guideline recommendation tables (class I / LOE) also appear in the Rationale.",
+    "Government Regulations restates NCD 20.4 including different thresholds (LVEF <= 30% post-MI; <= 35%) that are not the policy criteria.",
+    "Duplicate code entries (0577T, 0578T, 0614T repeated)."
+  ],
+  "interesting_structures": [
+    "Joint BCBSM/BCN policy with full literature rationale and a policy history table.",
+    "Almost word-for-word the same adult inclusion list as Carelon's guideline (BCBSM adds survival/age softeners, substernal criteria and LQTS/CPVT survivor wording).",
+    "Substernal ICD has its own inclusion plus a real exclusion list.",
+    "NICM age limit with a clinical-scenario escape hatch.",
+    "Heart-transplant/VAD outpatient with NYHA IV as an explicit inclusion (inverse of the Florida Blue NYHA IV exclusion).",
+    "Device-replacement rule with a 'within 3 years of end-of-life' branch.",
+    "Benefit-grid for BCN products with coinsurance notes at the end."
+  ],
+  "fit_to_tree": {"score": 3, "scale": "1 = clean, 5 = needs new constructs or human judgment", "why": "Large but regular any-of list with numeric leaves, nested ANY/BOTH/EITHER, and clear exclusions. Strain comes from the global 'survival more than one year' gate, soft escape phrases ('otherwise supported by clinical scenario', 'other reasonable time frame'), and mislabeled primary/secondary headings."}
+}

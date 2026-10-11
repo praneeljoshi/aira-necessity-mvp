@@ -1,0 +1,521 @@
+{
+  "id": "florida-blue-02-12000-11",
+  "payer": "Florida Blue",
+  "payer_aliases": [
+    "Florida Blue",
+    "BCBS FL",
+    "BCBSFL",
+    "Blue Cross Blue Shield of Florida",
+    "Blue Cross and Blue Shield of Florida",
+    "BCBS of Florida"
+  ],
+  "title": "Reduction Mammaplasty",
+  "guideline_number": "02-12000-11",
+  "effective_date": "2025-09-15",
+  "reviewed_date": "2025-08-28",
+  "source_file": "bcbsfl-02-12000-11-reduction-mammaplasty.pdf",
+  "plan_types": [
+    "All lines of business"
+  ],
+  "excluded_plans": [
+    "Federal Employee Program (FEP)",
+    "State Account Organization (SAO)",
+    "Medicare Advantage products"
+  ],
+  "scope": {
+    "cpt": {
+      "19318": "covered"
+    },
+    "icd10": []
+  },
+  "criteria": [
+    {
+      "id": "six_week_history",
+      "text": "A minimum 6-week history",
+      "question": "Have the qualifying symptoms been present for at least 6 weeks, shown by dated notes?",
+      "threshold": {
+        "kind": "duration_months",
+        "op": "gte",
+        "value": 1.38,
+        "unit": "months"
+      }
+    },
+    {
+      "id": "unresponsive_conservative_therapy",
+      "text": "unresponsive to conservative therapy (e.g., support bra, wide bra straps, analgesia, non-steroidal anti-inflammatory drugs (NSAIDs), physical therapy, exercises, heat treatment, cold treatment)",
+      "question": "Has conservative therapy (support bra, wide bra straps, analgesics or NSAIDs, physical therapy, exercises, heat or cold treatment) been tried and the symptoms persisted?"
+    },
+    {
+      "id": "back_pain",
+      "text": "Back pain",
+      "question": "Does the chart document back pain attributed to breast size?"
+    },
+    {
+      "id": "neck_pain",
+      "text": "Neck pain",
+      "question": "Does the chart document neck pain attributed to breast size?"
+    },
+    {
+      "id": "shoulder_pain",
+      "text": "Shoulder pain",
+      "question": "Does the chart document shoulder pain attributed to breast size?"
+    },
+    {
+      "id": "paresthesias_hands_arms",
+      "text": "Paresthesias of hands or arms",
+      "question": "Does the chart document paresthesias (numbness, tingling, burning) of the hands or arms?"
+    },
+    {
+      "id": "headache",
+      "text": "Headache",
+      "question": "Does the chart document headaches attributed to breast size?"
+    },
+    {
+      "id": "intertrigo",
+      "text": "Intertrigo",
+      "question": "Does the chart document intertrigo (dermatitis in the inframammary fold)?"
+    },
+    {
+      "id": "shoulder_grooving",
+      "text": "Shoulder grooving from brassiere (bra) straps",
+      "question": "Does the chart document shoulder grooving from bra straps?"
+    },
+    {
+      "id": "schnur_22nd_percentile",
+      "text": "Grams of breast tissue planned to be removed from each breast is at or above the 22nd percentile on the Schnur Sliding Scale, based on the individual's body surface area (BSA) using the Mosteller formula",
+      "question": "Is the planned tissue removal per breast (grams) at or above the 22nd-percentile Schnur Sliding Scale value for the patient's body surface area (Mosteller formula)?",
+      "threshold": {
+        "kind": "number",
+        "op": "gte",
+        "value": 22,
+        "unit": "percentile (Schnur Sliding Scale, grams per breast vs BSA)"
+      }
+    },
+    {
+      "id": "height_and_weight",
+      "text": "Height and weight",
+      "question": "Are the patient's height and weight documented (needed to compute body surface area)?"
+    },
+    {
+      "id": "symmetry_after_mastectomy",
+      "text": "Reduction mammaplasty performed to achieve symmetry on a non-disease and contralateral breast following a mastectomy",
+      "question": "Is the reduction being performed on the non-diseased contralateral breast to achieve symmetry after a mastectomy?"
+    },
+    {
+      "id": "symmetry_after_lumpectomy_radiation",
+      "text": "Reduction mammaplasty performed to achieve symmetry following lumpectomy or radiation therapy for breast cancer",
+      "question": "Is the reduction being performed to achieve symmetry after a lumpectomy or radiation therapy for breast cancer?"
+    },
+    {
+      "id": "restore_function_or_correct_deformity",
+      "text": "to improve or restore function or correct a deformity that resulted from these treatments",
+      "question": "Is the purpose to improve or restore function or to correct a deformity that resulted from the lumpectomy or radiation therapy?"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "symptomatic_macromastia",
+      "name": "Reduction mammaplasty for symptomatic breast hypertrophy (macromastia)",
+      "applies_to_cpt": [
+        "19318"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "ALL of the following criteria are met",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "six_week_history"
+          },
+          {
+            "type": "leaf",
+            "criterion": "unresponsive_conservative_therapy"
+          },
+          {
+            "type": "any",
+            "label": "AT LEAST TWO OF THE FOLLOWING",
+            "children": [
+              {
+                "type": "all",
+                "label": "Back pain and Neck pain",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "back_pain"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "neck_pain"
+                  }
+                ]
+              },
+              {
+                "type": "all",
+                "label": "Back pain and Shoulder pain",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "back_pain"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "shoulder_pain"
+                  }
+                ]
+              },
+              {
+                "type": "all",
+                "label": "Back pain and Paresthesias of hands or arms",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "back_pain"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "paresthesias_hands_arms"
+                  }
+                ]
+              },
+              {
+                "type": "all",
+                "label": "Back pain and Headache",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "back_pain"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "headache"
+                  }
+                ]
+              },
+              {
+                "type": "all",
+                "label": "Back pain and Intertrigo",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "back_pain"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "intertrigo"
+                  }
+                ]
+              },
+              {
+                "type": "all",
+                "label": "Back pain and Shoulder grooving from brassiere (bra) straps",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "back_pain"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "shoulder_grooving"
+                  }
+                ]
+              },
+              {
+                "type": "all",
+                "label": "Neck pain and Shoulder pain",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "neck_pain"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "shoulder_pain"
+                  }
+                ]
+              },
+              {
+                "type": "all",
+                "label": "Neck pain and Paresthesias of hands or arms",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "neck_pain"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "paresthesias_hands_arms"
+                  }
+                ]
+              },
+              {
+                "type": "all",
+                "label": "Neck pain and Headache",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "neck_pain"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "headache"
+                  }
+                ]
+              },
+              {
+                "type": "all",
+                "label": "Neck pain and Intertrigo",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "neck_pain"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "intertrigo"
+                  }
+                ]
+              },
+              {
+                "type": "all",
+                "label": "Neck pain and Shoulder grooving from brassiere (bra) straps",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "neck_pain"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "shoulder_grooving"
+                  }
+                ]
+              },
+              {
+                "type": "all",
+                "label": "Shoulder pain and Paresthesias of hands or arms",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "shoulder_pain"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "paresthesias_hands_arms"
+                  }
+                ]
+              },
+              {
+                "type": "all",
+                "label": "Shoulder pain and Headache",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "shoulder_pain"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "headache"
+                  }
+                ]
+              },
+              {
+                "type": "all",
+                "label": "Shoulder pain and Intertrigo",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "shoulder_pain"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "intertrigo"
+                  }
+                ]
+              },
+              {
+                "type": "all",
+                "label": "Shoulder pain and Shoulder grooving from brassiere (bra) straps",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "shoulder_pain"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "shoulder_grooving"
+                  }
+                ]
+              },
+              {
+                "type": "all",
+                "label": "Paresthesias of hands or arms and Headache",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "paresthesias_hands_arms"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "headache"
+                  }
+                ]
+              },
+              {
+                "type": "all",
+                "label": "Paresthesias of hands or arms and Intertrigo",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "paresthesias_hands_arms"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "intertrigo"
+                  }
+                ]
+              },
+              {
+                "type": "all",
+                "label": "Paresthesias of hands or arms and Shoulder grooving from brassiere (bra) straps",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "paresthesias_hands_arms"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "shoulder_grooving"
+                  }
+                ]
+              },
+              {
+                "type": "all",
+                "label": "Headache and Intertrigo",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "headache"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "intertrigo"
+                  }
+                ]
+              },
+              {
+                "type": "all",
+                "label": "Headache and Shoulder grooving from brassiere (bra) straps",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "headache"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "shoulder_grooving"
+                  }
+                ]
+              },
+              {
+                "type": "all",
+                "label": "Intertrigo and Shoulder grooving from brassiere (bra) straps",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "intertrigo"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "shoulder_grooving"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "leaf",
+            "criterion": "schnur_22nd_percentile"
+          },
+          {
+            "type": "leaf",
+            "criterion": "height_and_weight"
+          }
+        ]
+      },
+      "notes": [
+        "If breast tissue removed was less than planned, the physician may be asked to provide a letter of explanation reviewed by the Medical Director (post-service note; not a pre-service requirement).",
+        "Liposuction (lipectomy) as an adjunct for breast reduction is included in the primary surgical procedure (reduction mammaplasty)."
+      ]
+    },
+    {
+      "id": "symmetry_after_mastectomy",
+      "name": "Symmetry on the non-disease contralateral breast following a mastectomy",
+      "applies_to_cpt": [
+        "19318"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "Meets the definition of medical necessity",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "symmetry_after_mastectomy"
+          }
+        ]
+      }
+    },
+    {
+      "id": "symmetry_after_lumpectomy_radiation",
+      "name": "Symmetry following lumpectomy or radiation therapy for breast cancer",
+      "applies_to_cpt": [
+        "19318"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "May meet the definition of medical necessity",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "symmetry_after_lumpectomy_radiation"
+          },
+          {
+            "type": "leaf",
+            "criterion": "restore_function_or_correct_deformity"
+          }
+        ]
+      },
+      "notes": [
+        "The document says this pathway 'may meet' the definition of medical necessity, so a MET result here is still subject to reviewer judgment."
+      ]
+    }
+  ],
+  "exclusions": [
+    {
+      "text": "Reduction mammaplasty does not meet the definition of medical necessity when the above criteria are not met, when performed for cosmetic purposes or for the correction of deformities resulting from previous cosmetic surgery",
+      "cpt": []
+    },
+    {
+      "text": "Liposuction as the sole procedure for reduction mammaplasty or breast reduction is considered experimental or investigational",
+      "cpt": []
+    },
+    {
+      "text": "Reduction mammaplasty is considered experimental or investigational for all other indications",
+      "cpt": []
+    }
+  ],
+  "notes": [
+    "Dates: 'Original Effective Date: 04/17/00', 'Reviewed: 08/28/25', 'Revised: 09/15/25'. Following the hand-built example, effective_date carries the Revised date and reviewed_date the Reviewed date.",
+    "'A minimum 6-week history of AT LEAST TWO OF THE FOLLOWING that are unresponsive to conservative therapy' holds three requirements: the 6-week duration, the at-least-two symptoms, and the failed conservative therapy. They are three sibling leaves in the pathway's all; the duration and the non-response qualify the symptoms, which the questions say. 6 weeks is 1.38 months at the app's 12/52 weeks-to-months conversion.",
+    "'AT LEAST TWO OF THE FOLLOWING' seven symptoms is modelled as an any over the 21 pairs, per the brief.",
+    "The Schnur criterion compares planned grams per breast with the 22nd-percentile table value for the patient's BSA (Mosteller). The threshold records the percentile (gte 22); the grams cut-off itself depends on BSA, so the judge must read the table (BSA 1.35 -> 199 g ... 2.55 -> 1662 g) against the planned grams.",
+    "'Height and weight' from the Required Documentation list is a leaf of the macromastia pathway: it is a distinct fact a chart documents and the BSA calculation needs it. The other three Required Documentation items ('Symptoms and duration', 'Statement of anticipated amount of breast tissue to be removed per breast based upon body surface area', 'Documentation of conservative therapy and response') restate requirements already present as criteria and were not duplicated. The documentation list is written for the macromastia pathway (symptoms, conservative therapy, tissue estimate), so none of it is attached to the symmetry pathways. A reviewer could instead treat the whole list as documentation-only and drop 'Height and weight'.",
+    "The symmetry-after-mastectomy sentence has no further conditions; its pathway is a single leaf.",
+    "The lumpectomy/radiation sentence holds two parts: the symmetry indication and the purpose ('to improve or restore function or correct a deformity that resulted from these treatments'); both are leaves under all. The document says this pathway 'may meet' medical necessity (discretionary), recorded on the scenario.",
+    "The note 'If breast tissue removed was less than planned, the physician may be asked to provide a letter of explanation' is a post-service review step, not a pre-service criterion; recorded on the scenario.",
+    "'Liposuction (lipectomy) as an adjunct for breast reduction is included in the primary surgical procedure' is a bundling statement, not a requirement or an exclusion; recorded on the scenario.",
+    "The exclusions name no code: 19318 is the only code and the document covers it when criteria are met, so no exclusion is 'exactly that code'. Liposuction as the sole procedure has no code in the coding table.",
+    "LOINC codes, the BSA formulas, the mdcalc link, the photograph note ('Photographs are not required with the initial review') and the Schnur table are reference material for the criteria, not requirements.",
+    "Program exceptions: FEP and SAO follow their own guidelines; Medicare Advantage products follow LCD L38914 (Reduction Mammaplasty), so all three are excluded_plans. The Florida step-therapy exemption paragraph is procedural and not modelled.",
+    "No ICD-10 codes are listed; scope.icd10 is empty."
+  ],
+  "status": "ok"
+}

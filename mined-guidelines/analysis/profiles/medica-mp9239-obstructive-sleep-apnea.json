@@ -1,0 +1,154 @@
+{
+ "file": "medica-mp9239-obstructive-sleep-apnea.pdf",
+ "treatment": "pap-devices",
+ "payer": "medica",
+ "doc_kind": "medical policy (Medica Central)",
+ "lines_of_business": [
+  "Medica Central plans; 'may or may not be covered by all'; Medicare/Medicaid follow program rules if different"
+ ],
+ "effective_or_revised": "Effective 06/01/2024; administrative update 05/15/2024",
+ "sections_in_order": [
+  "Coverage Policy (Rental, Purchase, Replacement, Accessories, Supplies, Convenience Items)",
+  "Description",
+  "FDA Approval",
+  "Prior Authorization",
+  "Coding Considerations",
+  "History"
+ ],
+ "criteria_location": "Coverage Policy (p.1-2) for rental/purchase logic; OSAHS diagnostic thresholds are in the Description (p.2-3), not in the criteria section; compliance definition also in Description.",
+ "procedures_covered": [
+  "CPAP/APAP/BiPAP home rental, purchase, replacement",
+  "Humidifiers",
+  "Supplies",
+  "Convenience items (not covered)"
+ ],
+ "logic": {
+  "top_level": "all",
+  "max_nesting_depth": 3,
+  "k_of_n": [
+   {
+    "k": 1,
+    "n": 7,
+    "quote": "Between five and 14 events per hour and is accompanied by documentation of at least one of the following: a. Excessive daytime sleepiness ... g. History of stroke."
+   }
+  ],
+  "exclusions_or_contraindications": "Convenience items 'generally considered NOT COVERED' (duplicate travel device, battery backup, travel plug adapter).",
+  "initial_vs_repeat": "3-month initial rental, then purchase or return in month four; replacement covered when made necessary by normal wear.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Purchased ... <OR> Returned to the supplier",
+    "why_ambiguous": "Literal <OR> markup; not a criterion about the patient"
+   },
+   {
+    "quote": "Usage compliance is routinely defined as greater than four hours ... although some individuals are able to displays adequate clinical benefit",
+    "why_ambiguous": "Compliance 'routinely' defined with an exception; strict >4 vs the >=4 elsewhere"
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "diagnosis",
+   "quote": "ordered by a physician following documented sleep study analysis verifying a diagnosis of obstructive sleep apnea/hypopnea syndrome",
+   "where": "Rental 1"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "Greater than or equal to 15 events per hour, OR Between five and 14 events per hour",
+   "where": "Description"
+  },
+  {
+   "kind": "symptom",
+   "quote": "Excessive daytime sleepiness; Impaired cognition; Mood disorder; Insomnia; Hypertension; Ischemic heart disease or coronary artery disease; History of stroke",
+   "where": "Description"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "written verification of: Diagnosis of OSAHS, and/or Usage compliance",
+   "where": "Rental 3"
+  },
+  {
+   "kind": "other",
+   "quote": "Prior authorization is not required. However ... may be reviewed retrospectively",
+   "where": "Prior Authorization"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "AHI/RDI",
+   "value": ">=15",
+   "unit": "events/hr",
+   "quote": "Greater than or equal to 15 events per hour"
+  },
+  {
+   "quantity": "AHI/RDI with symptom",
+   "value": "5-14",
+   "unit": "events/hr",
+   "quote": "Between five and 14 events per hour"
+  },
+  {
+   "quantity": "compliance",
+   "value": ">4 h/night and 70% nights",
+   "unit": "30 days",
+   "quote": "greater than four hours of usage per night and 70% usage within a 30 day period"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "initial rental",
+   "length": "max 3 months",
+   "quote": "maximum rental period of three months"
+  },
+  {
+   "what": "purchase/return decision",
+   "length": "month 4",
+   "quote": "In month four it is required"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Listed for information only: E0601, E0470, E0471; 'Inclusion or exclusion of a code does not constitute or imply member coverage'",
+  "non_covered_code_lists": ""
+ },
+ "external_dependencies": [
+  {
+   "what": "Related policies on BiPAP for non-OSA conditions and sleep studies",
+   "quote": "Home Use of Bilevel Positive Airway Pressure (BiPAP) for Conditions Other Than Obstructive Sleep Apnea (OSA) and Sleep Studies for Initial Diagnosis"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "OSAHS confirmed",
+   "definition_quote": "OSAHS is confirmed when a sleep study validates the presence of OSAHS as indicated by an AHI or RDI that is: 1. Greater than or equal to 15 ..., OR 2. Between five and 14"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "generally considered NOT COVERED",
+   "problem": "'generally' leaves exceptions open"
+  },
+  {
+   "quote": "Examples might include",
+   "problem": "Non-exhaustive"
+  },
+  {
+   "quote": "Impaired cognition; Mood disorder",
+   "problem": "No definitions or instrument"
+  }
+ ],
+ "extraction_hazards": [
+  "Diagnostic thresholds sit in Description and span a page break (list a-f on p.2, g on p.3)",
+  "Compliance paragraph in Description, not Coverage Policy",
+  "Page header/footers repeated",
+  "Long re-review date list in footer"
+ ],
+ "interesting_structures": [
+  "Prior authorization not required; criteria applied retrospectively",
+  "Rental then forced buy-or-return decision at month 4 (no adherence gate in coverage text)"
+ ],
+ "fit_to_tree": {
+  "score": 2,
+  "scale": "1-5",
+  "why": "Small, clean all/any tree once the Description thresholds are pulled into the criteria; retrospective rental logic is simple."
+ }
+}

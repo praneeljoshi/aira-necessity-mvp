@@ -1,0 +1,757 @@
+{
+  "id": "florida-blue-02-69000-03",
+  "payer": "Florida Blue",
+  "payer_aliases": [
+    "Florida Blue",
+    "BCBS FL",
+    "BCBSFL",
+    "Blue Cross Blue Shield of Florida",
+    "Blue Cross and Blue Shield of Florida",
+    "BCBS of Florida"
+  ],
+  "title": "Cochlear Implants",
+  "guideline_number": "02-69000-03",
+  "effective_date": "08/15/25",
+  "reviewed_date": "07/24/25",
+  "source_file": "bcbsfl-02-69000-03-cochlear-implants.pdf",
+  "scope": {
+    "cpt": {
+      "69930": "covered",
+      "92601": "covered",
+      "92602": "covered",
+      "92603": "covered",
+      "92604": "covered",
+      "L7510": "covered",
+      "L8614": "covered",
+      "L8615": "covered",
+      "L8616": "covered",
+      "L8617": "covered",
+      "L8618": "covered",
+      "L8619": "covered",
+      "L8621": "covered",
+      "L8622": "covered",
+      "L8623": "covered",
+      "L8624": "covered",
+      "L8625": "covered",
+      "L8627": "covered",
+      "L8628": "covered",
+      "L8629": "covered",
+      "V5273": "covered"
+    },
+    "icd10": []
+  },
+  "criteria": [
+    {
+      "id": "fda_approved_cochlear_implant",
+      "text": "U.S. Food and Drug Administration (FDA) approved cochlear implant",
+      "question": "Is the device to be implanted an FDA-approved cochlear implant (e.g., Cochlear Nucleus, Advanced Bionics HiResolution, Med-El)?"
+    },
+    {
+      "id": "severe_profound_snhl_pta_70",
+      "text": "Unilateral or bilateral severe-to-profound prelingual or postlingual (sensorineural) hearing loss (in the ear(s) to be implanted), defined as a hearing threshold pure-tone average of 70 dB hearing loss or greater at 500, 1000, and 2000 Hz",
+      "question": "Does audiometry show severe-to-profound sensorineural hearing loss in the ear(s) to be implanted, with a pure-tone average at 500, 1000 and 2000 Hz of 70 dB HL or greater?",
+      "threshold": {
+        "kind": "number",
+        "op": "gte",
+        "value": 70,
+        "unit": "dB"
+      }
+    },
+    {
+      "id": "hearing_aid_limited_benefit_adult_50pct",
+      "text": "Limited or no benefit from appropriately fit conventional hearing aids (defined in adults as scores of 50% correct or less in the ear to be implanted on tape-recorded sets of open-set sentence recognition",
+      "question": "With appropriately fit conventional hearing aids, does the adult score 50% correct or less in the ear to be implanted on recorded open-set sentence recognition testing (e.g., AzBio, HINT, CUNY)?",
+      "threshold": {
+        "kind": "number",
+        "op": "lte",
+        "value": 50,
+        "unit": "%"
+      }
+    },
+    {
+      "id": "hearing_aid_limited_benefit",
+      "text": "Limited or no benefit from appropriately fit conventional hearing aids",
+      "question": "Has the child had a trial of appropriately fit conventional hearing aids with limited or no benefit?"
+    },
+    {
+      "id": "child_failure_basic_auditory_skills",
+      "text": "defined in children as failure to develop basic auditory skills",
+      "question": "Despite appropriately fit hearing aids, has the child failed to develop basic auditory skills (e.g., lack of progress on auditory-skills measures such as IT-MAIS/MAIS)?"
+    },
+    {
+      "id": "older_child_open_set_30pct",
+      "text": "in older children, 30% or less correct on open-set tests",
+      "question": "For an older child able to be tested, is the aided score 30% or less correct on open-set word or sentence tests (e.g., MLNT/LNT)?",
+      "threshold": {
+        "kind": "number",
+        "op": "lte",
+        "value": 30,
+        "unit": "%"
+      }
+    },
+    {
+      "id": "able_to_participate_rehab",
+      "text": "The individual is able to participate in a post-implant rehabilitation program in order to achieve benefit from the implant",
+      "question": "Is the individual (and family, for a child) documented as able and willing to participate in post-implant aural rehabilitation / audiologic follow-up?"
+    },
+    {
+      "id": "no_contraindications_to_surgery",
+      "text": "No contraindications to surgery (e.g., deafness due to lesions of the eighth cranial (acoustic) nerve, central auditory pathway, or brainstem; active or chronic infections of the external or middle ear; mastoid cavity or tympanic membrane perforation, cochlear ossification which prevents electrode insertion, the absence of cochlear development as demonstrated on computed tomography scan)",
+      "question": "Does the chart document no contraindication to cochlear implant surgery: no eighth-nerve, central auditory pathway or brainstem lesion causing the deafness; no active or chronic external/middle ear infection; no mastoid cavity or tympanic membrane perforation; no cochlear ossification preventing electrode insertion; cochlear development present on CT?"
+    },
+    {
+      "id": "fda_approved_hybrid_device",
+      "text": "U.S. Food and Drug Administration (FDA) approved hybrid cochlear implant/hearing aid device",
+      "question": "Is the device an FDA-approved hybrid cochlear implant/hearing aid system (e.g., Nucleus Hybrid L24, Med-El EAS)?"
+    },
+    {
+      "id": "hybrid_age_18",
+      "text": "Age 18 years or older",
+      "question": "Is the individual 18 years of age or older?",
+      "threshold": {
+        "kind": "number",
+        "op": "gte",
+        "value": 18,
+        "unit": "years"
+      }
+    },
+    {
+      "id": "hybrid_bilateral_hf_snhl_residual_lf",
+      "text": "Bilateral severe to profound high frequency sensorineural hearing loss with residual low-\nfrequency hearing sensitivity",
+      "question": "Does audiometry show bilateral severe-to-profound high-frequency sensorineural hearing loss with preserved (residual) low-frequency hearing?"
+    },
+    {
+      "id": "hybrid_limited_benefit_bilateral_aids",
+      "text": "Receive limited benefit from appropriately fit conventional bilateral hearing aids",
+      "question": "Has the individual received only limited benefit from appropriately fit conventional bilateral hearing aids?"
+    },
+    {
+      "id": "hybrid_low_freq_threshold_60",
+      "text": "Low-frequency hearing thresholds no poorer than 60 dB hearing level up to and including 500 Hz (averaged over 125, 250, and 500 Hz) in the ear selected for implantation",
+      "question": "In the ear to be implanted, is the low-frequency threshold average (125, 250 and 500 Hz) 60 dB HL or better (no poorer than 60 dB)?",
+      "threshold": {
+        "kind": "number",
+        "op": "lte",
+        "value": 60,
+        "unit": "dB"
+      }
+    },
+    {
+      "id": "hybrid_mid_high_implant_ear_75",
+      "text": "Severe to profound mid-to-high frequency hearing loss (threshold average of 2000, 3000, and 4000 Hz ≥75 dB hearing level) in the ear to be implanted",
+      "question": "In the ear to be implanted, is the threshold average at 2000, 3000 and 4000 Hz 75 dB HL or greater?",
+      "threshold": {
+        "kind": "number",
+        "op": "gte",
+        "value": 75,
+        "unit": "dB"
+      }
+    },
+    {
+      "id": "hybrid_mid_high_contralateral_60",
+      "text": "Moderately severe to profound mid-to-high frequency hearing loss (threshold average of 2000, 3000, and 4000 Hz ≤ 60 dB hearing level) in the contralateral ear",
+      "question": "In the contralateral ear, is there moderately severe to profound mid-to-high frequency hearing loss with a threshold average at 2000, 3000 and 4000 Hz of 60 dB HL as the guideline states (printed as ≤ 60 dB)?",
+      "threshold": {
+        "kind": "number",
+        "op": "lte",
+        "value": 60,
+        "unit": "dB"
+      }
+    },
+    {
+      "id": "hybrid_cnc_implant_ear_10_60",
+      "text": "Aided consonant-nucleus-consonant word recognition score from 10% to 60% in the ear to be implanted in the preoperative aided condition",
+      "question": "Is the preoperative aided CNC word recognition score in the ear to be implanted between 10% and 60% (inclusive)?",
+      "threshold": {
+        "kind": "number",
+        "op": "lte",
+        "value": 60,
+        "unit": "%"
+      }
+    },
+    {
+      "id": "hybrid_cnc_contralateral_80",
+      "text": "in the contralateral ear will be equal to or better than that of the ear to be implanted but not more than 80% correct",
+      "question": "Is the aided CNC word score in the contralateral ear equal to or better than the ear to be implanted, and not more than 80% correct?",
+      "threshold": {
+        "kind": "number",
+        "op": "lte",
+        "value": 80,
+        "unit": "%"
+      }
+    },
+    {
+      "id": "replacement_inadequate_response_adl",
+      "text": "inadequate response to existing component(s) to the point of interfering with the individual’s activities of daily living",
+      "question": "Does the chart document an inadequate response to the existing component(s) that interferes with the individual's activities of daily living?"
+    },
+    {
+      "id": "replacement_no_longer_functional",
+      "text": "the component(s) is/are no longer functional",
+      "question": "Is the existing component (or components) documented as no longer functional?"
+    },
+    {
+      "id": "replacement_cannot_be_repaired",
+      "text": "cannot be repaired",
+      "question": "Is the non-functional component documented as not repairable (e.g., manufacturer/audiologist statement that repair is not possible)?"
+    },
+    {
+      "id": "replacement_existing_device_cannot_be_repaired",
+      "text": "When the existing device cannot be repaired",
+      "question": "Does the chart document that the existing cochlear implant device cannot be repaired?"
+    },
+    {
+      "id": "replacement_change_in_condition_nonfunctional",
+      "text": "When replacement is required because a change in condition makes the present unit non-\nfunctional",
+      "question": "Has a change in the individual's condition made the present unit non-functional for them?"
+    },
+    {
+      "id": "replacement_improvement_expected",
+      "text": "improvement is expected with a replacement unit",
+      "question": "Is improvement expected with a replacement unit?"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "cochlear_implant_adult",
+      "name": "Unilateral or bilateral cochlear implantation — adults",
+      "applies_to_cpt": [
+        "69930",
+        "L8614",
+        "V5273"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "ALL of the following criteria are met (adult)",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "fda_approved_cochlear_implant"
+          },
+          {
+            "type": "leaf",
+            "criterion": "severe_profound_snhl_pta_70"
+          },
+          {
+            "type": "leaf",
+            "criterion": "hearing_aid_limited_benefit_adult_50pct"
+          },
+          {
+            "type": "leaf",
+            "criterion": "able_to_participate_rehab"
+          },
+          {
+            "type": "leaf",
+            "criterion": "no_contraindications_to_surgery"
+          }
+        ]
+      },
+      "notes": [
+        "Implantation may be unilateral, bilateral-simultaneous (same operative session) or bilateral-sequential (different sessions); the same criteria apply to each.",
+        "If implantation is bilateral-sequential, it is not required that hearing tests be repeated between implantation procedures: the pre-first-implant audiometry satisfies the hearing-loss and hearing-aid-benefit criteria for the second ear."
+      ]
+    },
+    {
+      "id": "cochlear_implant_child",
+      "name": "Unilateral or bilateral cochlear implantation — children",
+      "applies_to_cpt": [
+        "69930",
+        "L8614",
+        "V5273"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "ALL of the following criteria are met (child)",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "fda_approved_cochlear_implant"
+          },
+          {
+            "type": "leaf",
+            "criterion": "severe_profound_snhl_pta_70"
+          },
+          {
+            "type": "all",
+            "label": "Limited or no benefit from appropriately fit conventional hearing aids, as defined in children",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "hearing_aid_limited_benefit"
+              },
+              {
+                "type": "any",
+                "label": "Defined in children as failure to develop basic auditory skills, and in older children, 30% or less correct on open-set tests",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "child_failure_basic_auditory_skills"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "older_child_open_set_30pct"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "leaf",
+            "criterion": "able_to_participate_rehab"
+          },
+          {
+            "type": "leaf",
+            "criterion": "no_contraindications_to_surgery"
+          }
+        ]
+      },
+      "notes": [
+        "Same four bullets as the adult pathway; only the definition of 'limited or no benefit from hearing aids' differs (failure to develop basic auditory skills, or in older children 30% or less correct on open-set tests).",
+        "If implantation is bilateral-sequential, it is not required that hearing tests be repeated between implantation procedures."
+      ]
+    },
+    {
+      "id": "hybrid_cochlear_implant",
+      "name": "Hybrid cochlear implant/hearing aid device (e.g., Nucleus Hybrid L24)",
+      "applies_to_cpt": [
+        "69930",
+        "L8614",
+        "V5273"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "ALL of the following are met (hybrid cochlear implant/hearing aid device)",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "fda_approved_hybrid_device"
+          },
+          {
+            "type": "leaf",
+            "criterion": "hybrid_age_18"
+          },
+          {
+            "type": "leaf",
+            "criterion": "hybrid_bilateral_hf_snhl_residual_lf"
+          },
+          {
+            "type": "leaf",
+            "criterion": "hybrid_limited_benefit_bilateral_aids"
+          },
+          {
+            "type": "all",
+            "label": "Have the following hearing thresholds",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "hybrid_low_freq_threshold_60"
+              },
+              {
+                "type": "leaf",
+                "criterion": "hybrid_mid_high_implant_ear_75"
+              },
+              {
+                "type": "leaf",
+                "criterion": "hybrid_mid_high_contralateral_60"
+              },
+              {
+                "type": "leaf",
+                "criterion": "hybrid_cnc_implant_ear_10_60"
+              },
+              {
+                "type": "leaf",
+                "criterion": "hybrid_cnc_contralateral_80"
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "Adults only (age 18 or older is the first bullet). The four audiometric sub-bullets under 'Have the following hearing thresholds' are joined by AND."
+      ]
+    },
+    {
+      "id": "diagnostic_analysis_programming",
+      "name": "Diagnostic analysis and programming of cochlear implants",
+      "applies_to_cpt": [
+        "92601",
+        "92602",
+        "92603",
+        "92604"
+      ],
+      "requires": {
+        "type": "any",
+        "label": "Criteria for the cochlear implant device are met",
+        "children": [
+          {
+            "type": "all",
+            "label": "ALL of the following criteria are met (adult)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "fda_approved_cochlear_implant"
+              },
+              {
+                "type": "leaf",
+                "criterion": "severe_profound_snhl_pta_70"
+              },
+              {
+                "type": "leaf",
+                "criterion": "hearing_aid_limited_benefit_adult_50pct"
+              },
+              {
+                "type": "leaf",
+                "criterion": "able_to_participate_rehab"
+              },
+              {
+                "type": "leaf",
+                "criterion": "no_contraindications_to_surgery"
+              }
+            ]
+          },
+          {
+            "type": "all",
+            "label": "ALL of the following criteria are met (child)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "fda_approved_cochlear_implant"
+              },
+              {
+                "type": "leaf",
+                "criterion": "severe_profound_snhl_pta_70"
+              },
+              {
+                "type": "all",
+                "label": "Limited or no benefit from appropriately fit conventional hearing aids, as defined in children",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "hearing_aid_limited_benefit"
+                  },
+                  {
+                    "type": "any",
+                    "label": "Defined in children as failure to develop basic auditory skills, and in older children, 30% or less correct on open-set tests",
+                    "children": [
+                      {
+                        "type": "leaf",
+                        "criterion": "child_failure_basic_auditory_skills"
+                      },
+                      {
+                        "type": "leaf",
+                        "criterion": "older_child_open_set_30pct"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "leaf",
+                "criterion": "able_to_participate_rehab"
+              },
+              {
+                "type": "leaf",
+                "criterion": "no_contraindications_to_surgery"
+              }
+            ]
+          },
+          {
+            "type": "all",
+            "label": "ALL of the following are met (hybrid cochlear implant/hearing aid device)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "fda_approved_hybrid_device"
+              },
+              {
+                "type": "leaf",
+                "criterion": "hybrid_age_18"
+              },
+              {
+                "type": "leaf",
+                "criterion": "hybrid_bilateral_hf_snhl_residual_lf"
+              },
+              {
+                "type": "leaf",
+                "criterion": "hybrid_limited_benefit_bilateral_aids"
+              },
+              {
+                "type": "all",
+                "label": "Have the following hearing thresholds",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "hybrid_low_freq_threshold_60"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "hybrid_mid_high_implant_ear_75"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "hybrid_mid_high_contralateral_60"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "hybrid_cnc_implant_ear_10_60"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "hybrid_cnc_contralateral_80"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "'Diagnostic analysis and programming of cochlear implants meets the definition of medical necessity when criteria for the implant device are met.' The implant-device criteria (adult, child or hybrid) are nested here as the requirement."
+      ]
+    },
+    {
+      "id": "batteries",
+      "name": "Batteries and replacement batteries for cochlear implant devices",
+      "applies_to_cpt": [
+        "L8621",
+        "L8622",
+        "L8623",
+        "L8624"
+      ],
+      "requires": {
+        "type": "any",
+        "label": "Criteria for the cochlear implant device are met",
+        "children": [
+          {
+            "type": "all",
+            "label": "ALL of the following criteria are met (adult)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "fda_approved_cochlear_implant"
+              },
+              {
+                "type": "leaf",
+                "criterion": "severe_profound_snhl_pta_70"
+              },
+              {
+                "type": "leaf",
+                "criterion": "hearing_aid_limited_benefit_adult_50pct"
+              },
+              {
+                "type": "leaf",
+                "criterion": "able_to_participate_rehab"
+              },
+              {
+                "type": "leaf",
+                "criterion": "no_contraindications_to_surgery"
+              }
+            ]
+          },
+          {
+            "type": "all",
+            "label": "ALL of the following criteria are met (child)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "fda_approved_cochlear_implant"
+              },
+              {
+                "type": "leaf",
+                "criterion": "severe_profound_snhl_pta_70"
+              },
+              {
+                "type": "all",
+                "label": "Limited or no benefit from appropriately fit conventional hearing aids, as defined in children",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "hearing_aid_limited_benefit"
+                  },
+                  {
+                    "type": "any",
+                    "label": "Defined in children as failure to develop basic auditory skills, and in older children, 30% or less correct on open-set tests",
+                    "children": [
+                      {
+                        "type": "leaf",
+                        "criterion": "child_failure_basic_auditory_skills"
+                      },
+                      {
+                        "type": "leaf",
+                        "criterion": "older_child_open_set_30pct"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "leaf",
+                "criterion": "able_to_participate_rehab"
+              },
+              {
+                "type": "leaf",
+                "criterion": "no_contraindications_to_surgery"
+              }
+            ]
+          },
+          {
+            "type": "all",
+            "label": "ALL of the following are met (hybrid cochlear implant/hearing aid device)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "fda_approved_hybrid_device"
+              },
+              {
+                "type": "leaf",
+                "criterion": "hybrid_age_18"
+              },
+              {
+                "type": "leaf",
+                "criterion": "hybrid_bilateral_hf_snhl_residual_lf"
+              },
+              {
+                "type": "leaf",
+                "criterion": "hybrid_limited_benefit_bilateral_aids"
+              },
+              {
+                "type": "all",
+                "label": "Have the following hearing thresholds",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "hybrid_low_freq_threshold_60"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "hybrid_mid_high_implant_ear_75"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "hybrid_mid_high_contralateral_60"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "hybrid_cnc_implant_ear_10_60"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "hybrid_cnc_contralateral_80"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "'Reimbursement for batteries and replacement batteries for cochlear implant devices are covered when criteria for the cochlear implant device are met.' The implant-device criteria (adult, child or hybrid) are nested here as the requirement."
+      ]
+    },
+    {
+      "id": "replacement_of_components",
+      "name": "Replacement of internal and/or external components",
+      "applies_to_cpt": [
+        "L7510",
+        "L8614",
+        "L8615",
+        "L8616",
+        "L8617",
+        "L8618",
+        "L8619",
+        "L8625",
+        "L8627",
+        "L8628",
+        "L8629"
+      ],
+      "requires": {
+        "type": "any",
+        "label": "Replacement: any one of the following",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "replacement_inadequate_response_adl"
+          },
+          {
+            "type": "all",
+            "label": "The component(s) is/are no longer functional and cannot be repaired",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "replacement_no_longer_functional"
+              },
+              {
+                "type": "leaf",
+                "criterion": "replacement_cannot_be_repaired"
+              }
+            ]
+          },
+          {
+            "type": "leaf",
+            "criterion": "replacement_existing_device_cannot_be_repaired"
+          },
+          {
+            "type": "all",
+            "label": "A change in condition makes the present unit non-functional and improvement is expected with a replacement unit",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "replacement_change_in_condition_nonfunctional"
+              },
+              {
+                "type": "leaf",
+                "criterion": "replacement_improvement_expected"
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "Position statement: replacement meets medical necessity 'only in those who have' inadequate response interfering with ADLs, or component(s) no longer functional and cannot be repaired. Reimbursement Information adds 'any one of': the existing device cannot be repaired; or a change in condition makes the present unit non-functional and improvement is expected. All four routes are alternatives under one 'any'.",
+        "Replacement solely to upgrade to advanced technology / a next-generation device, and cosmetic upgrades of a functioning external system (e.g., smaller profile components), do not meet medical necessity (see exclusions)."
+      ]
+    }
+  ],
+  "notes": [
+    "Built from the single clean copy in the PDF (02-69000-03, Reviewed 07/24/25, Revised 08/15/25); the download holds no redline.",
+    "effective_date is the 'Revised: 08/15/25' date of this version; the Original Effective Date printed is 08/15/03; reviewed_date is 'Reviewed: 07/24/25'.",
+    "Adult vs child: the position statement gives one bullet list 'in adults and children' but defines 'limited or no benefit from hearing aids' separately for adults (<=50% open-set sentences) and for children (failure to develop basic auditory skills; older children <=30% open-set). Modelled as two pathways sharing the other three bullets. A reasonable reviewer could instead build one pathway with an 'any' over the three definitions; the two are logically equivalent.",
+    "Child definition: 'defined in children as failure to develop basic auditory skills, and in older children, 30% or less correct on open-set tests' is read as age-dependent alternatives (young child: auditory-skills failure; older child: open-set score), hence 'any'. The 'and' joins the two definitions, not two requirements of one child.",
+    "The document gives no age boundary between 'adults' and 'children' for the standard implant (the hybrid pathway alone states 18 or older); no age criterion is placed on the adult/child pathways.",
+    "'No contraindications to surgery (e.g., ...)' is one leaf with the verbatim bullet (the parenthetical list is illustrative, 'e.g.'); it could equally be modelled as not(any(each listed contraindication)).",
+    "The governing sentence's 'U.S. Food and Drug Administration (FDA) approved cochlear implant' (and the hybrid 'FDA approved hybrid cochlear implant/hearing aid device') is kept as an answerable leaf: the chart names the device.",
+    "'Implantation may be unilateral, bilateral-simultaneous ... or bilateral-sequential' and 'If implantation is bilateral-sequential, it is not required that hearing tests be repeated' are evidence-timing statements, not requirements: kept as pathway notes rather than tree nodes.",
+    "Hybrid contralateral ear: the PDF prints 'Moderately severe to profound ... (threshold average of 2000, 3000, and 4000 Hz ≤ 60 dB hearing level) in the contralateral ear'. '≤ 60 dB' conflicts with 'moderately severe to profound' (the FDA labeling reads ≥ 60 dB) and is probably a typo; the criterion text and threshold (lte 60) follow the document as printed.",
+    "Hybrid CNC bullet holds two requirements and is split: ear to be implanted 10%–60% (threshold recorded as lte 60; the 10% lower bound is in the question since the schema holds one bound) and contralateral ear >= implanted ear but <= 80%.",
+    "Replacement: the position statement's 'no longer functional and cannot be repaired' is split into two leaves under an 'all'. The Reimbursement Information bullet 'When the existing device cannot be repaired' largely restates it and is kept as its own alternative; 'change in condition makes the present unit non-functional and improvement is expected' is split into two leaves under an 'all'.",
+    "The upgrade and cosmetic-upgrade statements are recorded as exclusions, not as 'not' nodes inside the replacement pathway, because the document states them as separate statements rather than inside the replacement criteria.",
+    "Programming (92601–92604) and batteries (L8621–L8624) are covered 'when criteria for the [cochlear] implant device are met'; the device criteria (adult, child, hybrid) are nested as an 'any' inside those pathways rather than represented by an unanswerable leaf.",
+    "Code mapping: the document does not tie codes to sections. 69930 and L8614 (the device/system) -> the three implantation pathways; L8614 also -> replacement (Reimbursement: 'replacement of a cochlear implant AND its external components'). 92601–92604 -> diagnostic analysis and programming. L8621–L8624 (batteries) -> batteries. L7510 (repair or replace minor parts), L8615–L8619, L8627, L8628, L8629 (external components, mostly labelled 'replacement') and L8625 (external recharging system, 'replacement only'; a charger, not a battery) -> replacement. V5273 (assistive listening device for use with a cochlear implant) is tied to nothing; mapped to the three implantation pathways on the same logic the document applies to programming and batteries (covered when the device criteria are met).",
+    "Programming codes split by patient age (92601/92602 under 7; 92603/92604 7 or older) but the document gives one programming rule, so one pathway governs all four.",
+    "All codes are tagged covered: the billing section lists them as codes that 'may be used to describe services related to cochlear implantation and diagnostic analysis'; no code is called non-covered or investigational.",
+    "Program exceptions: FEP follows FEP guidelines; SAO follows SAO guidelines; Medicare Advantage products follow NCD 50.3 Cochlear Implantation (the NCD 'was reviewed on the last guideline reviewed date').",
+    "The step-therapy protocol exemption paragraph (Florida law 627.42393) is boilerplate; this guideline contains no step-therapy requirement.",
+    "Definitions (severe = bilateral 70–90 dB; profound = 90 dB and above; CNC test; hybrid implant) and the product list under OTHER are context, not criteria.",
+    "No ICD-10 codes are listed in this guideline.",
+    "Two criterion texts keep the PDF line break inside a hyphenated word ('low-\\nfrequency', 'non-\\nfunctional') so the verbatim check de-hyphenates them exactly as it does the PDF."
+  ],
+  "plan_types": [
+    "All lines of business unless otherwise noted in the Program Exceptions section"
+  ],
+  "excluded_plans": [
+    "Federal Employee Program (FEP): Follow FEP guidelines",
+    "State Account Organization (SAO): Follow SAO guidelines",
+    "Medicare Advantage products: National Coverage Determination (NCD) Cochlear Implantation (50.3)"
+  ],
+  "exclusions": [
+    {
+      "text": "Replacement of internal and/or external components solely for the purpose of upgrading to a system with advanced technology or to a next-generation device does not meet the definition of medical necessity.",
+      "cpt": []
+    },
+    {
+      "text": "Upgrades of an existing, functioning external system to achieve a cosmetic improvement, such as smaller profile components, are considered cosmetic in nature and do not meet the definition of medical necessity.",
+      "cpt": []
+    }
+  ],
+  "status": "ok"
+}

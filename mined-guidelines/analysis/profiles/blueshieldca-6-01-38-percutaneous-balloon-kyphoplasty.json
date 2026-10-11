@@ -1,0 +1,121 @@
+{
+ "file": "blueshieldca-6-01-38-percutaneous-balloon-kyphoplasty.pdf",
+ "treatment": "vertebroplasty-kyphoplasty",
+ "payer": "blueshieldca",
+ "doc_kind": "medical policy",
+ "lines_of_business": [
+  "Not stated; mandates (e.g., FEP) may require medical-necessity-only review of FDA-approved technologies"
+ ],
+ "effective_or_revised": "Original 02/14/2001; Effective June 1, 2023",
+ "sections_in_order": [
+  "Policy Statement",
+  "Policy Guidelines (Coding)",
+  "Description",
+  "Related Policies",
+  "Benefit Application",
+  "Regulatory Status",
+  "Rationale",
+  "Appendix A"
+ ],
+ "criteria_location": "Policy Statement I-VII on page 1; coding in Policy Guidelines. Vertebroplasty is a separate policy (Related Policies).",
+ "procedures_covered": [
+  "Balloon kyphoplasty 22513-22515",
+  "Mechanical vertebral augmentation with FDA-cleared device",
+  "RF kyphoplasty (investigational)"
+ ],
+ "logic": {
+  "top_level": "any",
+  "max_nesting_depth": 1,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "Investigational for all other indications, acute fractures from osteoporosis or trauma, RFK, other mechanical devices.",
+  "initial_vs_repeat": "None.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Balloon kyphoplasty or mechanical vertebral augmentation with an FDA-cleared device is considered investigational for all other indications, including use in acute vertebral fractures due to osteoporosis or trauma",
+    "why_ambiguous": "Duplicates numbered statements split by device (I-IV)"
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "diagnosis",
+   "quote": "symptomatic thoracolumbar osteoporotic vertebral compression fractures",
+   "where": "Policy I"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "failed to respond to conservative treatment (e.g., analgesics, physical therapy, rest) for at least 6 weeks",
+   "where": "Policy I"
+  },
+  {
+   "kind": "symptom",
+   "quote": "severe pain due to osteolytic lesions of the spine related to multiple myeloma or metastatic malignancies",
+   "where": "Policy III"
+  },
+  {
+   "kind": "provider/facility qualification",
+   "quote": "Mechanical vertebral augmentation with an FDA-cleared device",
+   "where": "Policy II"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "conservative care",
+   "value": ">=6",
+   "unit": "weeks",
+   "quote": "for at least 6 weeks"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "conservative care",
+   "length": "6 weeks",
+   "quote": "for at least 6 weeks"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "22513-22515 listed in Policy Guidelines",
+  "non_covered_code_lists": ""
+ },
+ "external_dependencies": [
+  {
+   "what": "Separate vertebroplasty/sacroplasty policy",
+   "quote": "Percutaneous Vertebroplasty and Sacroplasty"
+  },
+  {
+   "what": "Contract language and FEP mandate",
+   "quote": "Benefit determinations should be based in all cases on the applicable contract language"
+  }
+ ],
+ "definitions_that_change_meaning": [],
+ "vague_terms": [
+  {
+   "quote": "may be considered medically necessary",
+   "problem": "Permissive wording"
+  },
+  {
+   "quote": "severe pain",
+   "problem": "No scale"
+  },
+  {
+   "quote": "conservative treatment (e.g., ...)",
+   "problem": "No required modality"
+  }
+ ],
+ "extraction_hazards": [
+  "27 pages of rationale and device tables after a one-page policy",
+  "Appendix A tracks policy changes",
+  "Policy Statement items split by device, doubling the list"
+ ],
+ "interesting_structures": [
+  "Criteria duplicated per device in statements I-IV",
+  "Mandate note that FDA-cleared devices cannot be denied as investigational for some plans"
+ ],
+ "fit_to_tree": {
+  "score": 1,
+  "scale": "1-5",
+  "why": "Four simple statements; same condition repeated for two device types."
+ }
+}

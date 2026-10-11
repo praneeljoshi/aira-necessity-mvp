@@ -1,0 +1,294 @@
+{
+ "file": "bcbsfl-02-20000-45-cervical-spine-surgery.pdf",
+ "treatment": "cervical-spine-surgery",
+ "payer": "Florida Blue (BCBSFL)",
+ "doc_kind": "medical policy (Medical Coverage Guideline 02-20000-45)",
+ "lines_of_business": [
+  "All lines of business unless noted in Program Exceptions",
+  "FEP: follow FEP guidelines",
+  "SAO: follow SAO guidelines",
+  "Medicare Advantage: LCD Cervical Fusion L39799 reviewed"
+ ],
+ "effective_or_revised": "Original 07/01/15; Reviewed 03/26/26; Revised 04/15/26 (10 pages)",
+ "sections_in_order": [
+  "Description (with Summary and Analysis of Evidence)",
+  "Position Statement",
+  "Billing/Coding Information",
+  "Reimbursement Information",
+  "Program Exceptions",
+  "Definitions",
+  "Related Guidelines",
+  "Other",
+  "References",
+  "Committee Approval",
+  "Guideline Update Information"
+ ],
+ "criteria_location": "Position Statement only (about pp.3-5): four sub-policies, each its own bullet block: Cervical Spinal Fusion; Cervical Discectomy (with or without fusion); Cervical Laminectomy (with or without fusion); Cervical Disc Arthroplasty (plus two-level and subsequent-level). Description holds no criteria.",
+ "procedures_covered": [
+  "Cervical fusion (ACDF, PCDF, single or multiple levels)",
+  "Cervical discectomy +/- fusion",
+  "Cervical laminectomy +/- fusion (laminoplasty codes listed)",
+  "Cervical disc arthroplasty: single level, simultaneous 2nd level, subsequent adjacent level",
+  "Removal/revision of artificial disc (codes only)"
+ ],
+ "logic": {
+  "top_level": "pathways: four procedure sections, each with its own criteria. Fusion is itself pathways (deformity OR instability OR radiculopathy/myelopathy-with-pain-and-imaging OR axial neck pain)",
+  "max_nesting_depth": 4,
+  "k_of_n": [
+   {
+    "k": 2,
+    "n": 4,
+    "quote": "Pain that is unresponsive to at least 6 weeks of conservative nonsurgical therapy that included at least 2 of the following: activity modification, exercise, analgesics, or physical therapy"
+   }
+  ],
+  "exclusions_or_contraindications": "Arthroplasty only: an inline bulleted contraindication list under 'Candidate is free from contraindications' (prior surgery at level, prior fusion at another level, translational instability, deformity, RA/autoimmune, facet arthritis, infection, metabolic bone disease, malignancy). Plus an 'experimental/investigational for all other indications' list (more than 2 levels, disc + fusion). Fusion/discectomy/laminectomy have no exclusion list. A smoking/nicotine criterion appears in the update history (07/15/19) but not in the current Position Statement.",
+  "initial_vs_repeat": "Arthroplasty has 'Subsequent cervical disc arthroplasty at an adjacent level ... when criteria above are met, AND device FDA-approved for 2 level, AND different cervical level, AND documentation ... initial ... is fully healed'. Codes for removal/revision (22861, 22864, 0095T, 0098T) are listed but no criteria are given for them. No repeat-fusion rules.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Cervical radiculopathy or myelopathy that included at least 1 of the following: ... Bowel and bladder incontinence, AND Pain that is unresponsive to at least 6 weeks ... AND Failure of epidural steroid injections ... AND Imaging studies demonstrate ... OR Treatment of axial neck pain when ...",
+    "why_ambiguous": "A flat bullet list mixes 'OR' at the end of the deformity and instability bullets with trailing 'AND's on the radiculopathy sub-bullets. The visual nesting does not make clear whether pain failure, injection failure and imaging are required for deformity/instability too, or only for the radiculopathy pathway. Intended reading is probably: (deformity) OR (instability) OR (radiculopathy/myelopathy AND pain AND injections AND imaging) OR (axial neck pain pathway)."
+   },
+   {
+    "quote": "Rapidly progressing neurologic deficits, OR Persistent debilitating neck, back, or arm pain [...] refractory to ... AND ... AND ... OR Symptoms of radiculopathy or myelopathy are refractory to ...",
+    "why_ambiguous": "Discectomy: nested AND lists inside an OR list inside an AND list; the trailing ', AND' on the last bullet of each inner list is easy to misattach."
+   },
+   {
+    "quote": "Failure of epidural steroid injections or facet joint injections (if appropriate and not contraindicated)",
+    "why_ambiguous": "'if appropriate' is a judgment hidden in a requirement; who decides appropriate?"
+   },
+   {
+    "quote": "Physical therapy, or documentation of inability to perform physical therapy",
+    "why_ambiguous": "Arthroplasty conservative-therapy bullet is a list of three with 'AND' but the last item lacks a trailing AND/OR, and 'unless contraindicated or not tolerated' is attached only to the pharmacotherapy item."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "diagnosis / deformity",
+   "quote": "Clinically significant deformity of the spine (eg, kyphosis; head drop syndrome), if any of the following are present: Severe neck pain; Difficulty walking; Inability to perform ADLs; Deformity affects forward gaze",
+   "where": "Fusion, p.3"
+  },
+  {
+   "kind": "diagnosis / instability",
+   "quote": "Cervical instability associated with skeletal dysplasia or connective tissue disorders (eg, rheumatoid arthritis, lupus, scleroderma...)",
+   "where": "Fusion, p.3"
+  },
+  {
+   "kind": "symptom / exam finding",
+   "quote": "Difficulty with fine movements of the hand ... Inability to perform tandem walk; Bowel and bladder incontinence (at least 1)",
+   "where": "Fusion, laminectomy, arthroplasty"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "at least 6 weeks of conservative nonsurgical therapy that included at least 2 of the following: activity modification, exercise, analgesics, or physical therapy",
+   "where": "Fusion (radiculopathy/myelopathy)"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "at least 6 months of conservative nonsurgical therapy that included both of the following: Physical therapy, AND Prescription strength analgesics for several weeks",
+   "where": "Fusion (axial neck pain)"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "Participation in at least 6 weeks of physical therapy (including active exercise) or documentation of why the candidate could not tolerate physical therapy",
+   "where": "Discectomy, laminectomy"
+  },
+  {
+   "kind": "prior treatment (injections)",
+   "quote": "Failure of epidural steroid injections or facet joint injections (if appropriate and not contraindicated)",
+   "where": "Fusion"
+  },
+  {
+   "kind": "psych/behavioral evaluation",
+   "quote": "Evaluation and appropriate management of associated cognitive, behavioral, or addiction issues, if any",
+   "where": "Discectomy, laminectomy"
+  },
+  {
+   "kind": "measurement threshold / functional impairment",
+   "quote": "daily pain with a visual analog scale score of 4 or higher, that affects ADLs",
+   "where": "Discectomy, laminectomy (bracketed definition)"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "Documentation of nerve root compression on imaging (magnetic resonance imaging or computed tomography with myelogram of the cervical spine within the past 6 months) at a level that corresponds with symptoms",
+   "where": "Discectomy"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "Imaging studies demonstrate herniated nucleus pulposus or spondylosis at the level that corresponds with symptoms",
+   "where": "Fusion"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "Degeneration is documented by magnetic resonance imaging, computed tomography, or myelography; Cervical degenerative disc disease is from C3 through C7",
+   "where": "Arthroplasty"
+  },
+  {
+   "kind": "device / regulatory",
+   "quote": "The device is approved by the U.S. Food and Drug Administration (FDA); skeletally mature; FDA-approved for 2 levels (eg, Mobi-C, Prestige LP)",
+   "where": "Arthroplasty"
+  },
+  {
+   "kind": "contraindication list",
+   "quote": "Prior surgery at the treated level; Previous fusion at another cervical level; Translational instability; ... Metabolic bone disease; Malignancy",
+   "where": "Arthroplasty"
+  },
+  {
+   "kind": "prior procedure / healing",
+   "quote": "documentation in the medical record that the initial cervical artificial intervertebral disc implantation is fully healed",
+   "where": "Subsequent adjacent-level arthroplasty"
+  },
+  {
+   "kind": "diagnosis (compression cause)",
+   "quote": "Spinal stenosis (with or without spondylolisthesis), OR Ossification of the posterior longitudinal ligament or the yellow ligament, OR Hypertrophy of the ligamentum flavum",
+   "where": "Laminectomy"
+  },
+  {
+   "kind": "level restriction",
+   "quote": "Spine pathology is limited to one or two levels",
+   "where": "Fusion (axial neck pain)"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "VAS pain score",
+   "value": ">= 4, daily",
+   "unit": "0-10 VAS",
+   "quote": "daily pain with a visual analog scale score of 4 or higher, that affects ADLs"
+  },
+  {
+   "quantity": "imaging recency (discectomy)",
+   "value": "within past 6 months",
+   "unit": "months",
+   "quote": "myelogram of the cervical spine within the past 6 months"
+  },
+  {
+   "quantity": "levels of axial neck pain pathology",
+   "value": "1 or 2",
+   "unit": "levels",
+   "quote": "Spine pathology is limited to one or two levels"
+  },
+  {
+   "quantity": "arthroplasty level range",
+   "value": "C3 through C7",
+   "unit": "",
+   "quote": "Cervical degenerative disc disease is from C3 through C7"
+  },
+  {
+   "quantity": "arthroplasty max levels",
+   "value": "2",
+   "unit": "levels",
+   "quote": "Disc implantation at more than 2 levels"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "conservative therapy for radiculopathy/myelopathy fusion",
+   "length": "6 weeks",
+   "quote": "at least 6 weeks of conservative nonsurgical therapy"
+  },
+  {
+   "what": "conservative therapy for axial neck pain fusion",
+   "length": "6 months",
+   "quote": "at least 6 months of conservative nonsurgical therapy"
+  },
+  {
+   "what": "discectomy / laminectomy conservative therapy and PT",
+   "length": "6 weeks",
+   "quote": "refractory to at least 6 weeks of conservative nonsurgical therapy"
+  },
+  {
+   "what": "arthroplasty conservative therapy",
+   "length": "6 weeks",
+   "quote": "Has failed at least 6 weeks of conservative nonsurgical therapy under the direction of a physician"
+  },
+  {
+   "what": "imaging recency for discectomy",
+   "length": "6 months",
+   "quote": "within the past 6 months"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Listed in one block, not mapped to individual sub-policies (22551/22554 fusion, 63075 discectomy, 63001/63015/63045/63050 laminectomy/laminoplasty, 22856/22858 arthroplasty). Laminotomy/foraminotomy codes 63020, 63035, 63040, 63043 have no stated criteria section.",
+  "non_covered_code_lists": "0375T flagged '(investigational)' inline (3+ level arthroplasty)."
+ },
+ "external_dependencies": [
+  {
+   "what": "Medicare Advantage: CMS LCD Cervical Fusion L39799",
+   "quote": "Local Coverage Determination (LCD) Cervical Fusion (L39799), located at cms.gov"
+  },
+  {
+   "what": "FEP and SAO accounts follow their own guidelines",
+   "quote": "Federal Employee Program (FEP): Follow FEP guidelines. State Account Organization (SAO): Follow SAO guidelines."
+  },
+  {
+   "what": "Florida step-therapy exemption statute",
+   "quote": "in compliance with Florida law 627.42393, members or providers may request a step therapy protocol exemption"
+  },
+  {
+   "what": "Related policy for thoracic/lumbar",
+   "quote": "02-20000-48, Thoracic and Lumbar Spine Surgery"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Persistent debilitating pain",
+   "definition_quote": "defined as daily pain with a visual analog scale score of 4 or higher, that affects ADLs"
+  },
+  {
+   "term": "(Definitions section)",
+   "definition_quote": "No guideline specific definitions apply."
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "Clinically significant deformity of the spine",
+   "problem": "no angle or measurement given"
+  },
+  {
+   "quote": "Severe neck pain",
+   "problem": "no scale or threshold in the fusion deformity pathway (VAS >= 4 defined only for discectomy/laminectomy)"
+  },
+  {
+   "quote": "Evaluation and appropriate management of associated cognitive, behavioral, or addiction issues, if any",
+   "problem": "'appropriate', 'if any'; chart may be silent because there are no such issues; absence of evidence is not proof"
+  },
+  {
+   "quote": "prescription-strength analgesics for several weeks at a dose sufficient to induce a therapeutic response",
+   "problem": "'several weeks' and 'therapeutic response' undefined"
+  },
+  {
+   "quote": "Failure of epidural steroid injections or facet joint injections (if appropriate and not contraindicated)",
+   "problem": "'if appropriate'; counts of injections not stated"
+  },
+  {
+   "quote": "Improvement in symptoms has failed or plateaued",
+   "problem": "'plateaued' not defined"
+  },
+  {
+   "quote": "at the level that corresponds with symptoms",
+   "problem": "requires clinical-radiographic correlation judgment"
+  }
+ ],
+ "extraction_hazards": [
+  "Bullet glyphs (bullet, o, black square) encode nesting depth; pdftotext keeps them but trailing ', AND' / ', OR' on last bullets is the only logic marker",
+  "Long Description with evidence summary precedes criteria; ~25 references and an 80-row-style CPT table follow",
+  "Header navigation table (Position Statement | Billing/Coding ...) repeated at top",
+  "The update history mentions criteria that no longer exist (nicotine cessation, 'and/or clonus', home exercise program) and could be mistaken for current criteria",
+  "Bracketed definition '[defined as daily pain with a VAS ...]' is inline inside a criterion",
+  "Page breaks fall inside bullet lists"
+ ],
+ "interesting_structures": [
+  "Same 6-week conservative-therapy block restated verbatim in three sub-policies",
+  "Axial neck pain pathway has a 6-month (not 6-week) trial and a 1-2 level cap",
+  "Rapidly progressing neurologic deficit is an OR that bypasses conservative therapy in discectomy/laminectomy",
+  "Arthroplasty contraindications are a NOT-list; healing documentation for sequential 2-level"
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "scale": "1 = all/any/not expresses it cleanly ... 5 = needs new constructs or human judgment",
+  "why": "Mostly all/any/not, with one k-of-n (2 of 4 conservative modalities). The fusion block's mixed AND/OR bullets need a human to fix the intended grouping. Many leaves are vague ('appropriate', 'if any', 'several weeks')."
+ }
+}

@@ -1,0 +1,19 @@
+{
+  "payer": "Blue Cross Blue Shield of Massachusetts",
+  "payer_key": "bcbsma",
+  "treatment": "reduction-mammaplasty",
+  "title": "Reduction Mammaplasty for Breast-Related Symptoms",
+  "policy_number": "703",
+  "effective": "",
+  "url": "https://www.bluecrossma.com/common/en_US/medical_policies/703%20Reduction%20Mammaplasty%20for%20Breast-Related%20Symptoms%20prn.pdf",
+  "final_url": "https://www.bluecrossma.com/common/en_US/medical_policies/703%20Reduction%20Mammaplasty%20for%20Breast-Related%20Symptoms%20prn.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "bcbsma-703-reduction-mammaplasty-for-breast-related-symptoms.pdf",
+  "sha256": "adcae8a543f516e2169926a5453c14f1964b2507e36ca857ca6d2d33ef514d64",
+  "pages": 6,
+  "bytes": 199652,
+  "retrieved": "2026-10-09",
+  "printed_date": "Policy history table shows entries through 4/2020 (current effective date not located in text)"
+}

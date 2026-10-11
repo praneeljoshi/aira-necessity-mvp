@@ -1,0 +1,139 @@
+{
+ "file": "cigna-0469-nonpharmacological-treatments-for-atrial-fibrillat.pdf",
+ "treatment": "laa-closure",
+ "payer": "cigna",
+ "doc_kind": "coverage policy",
+ "lines_of_business": [
+  "Health benefit plans administered by Cigna Companies; delegated vendor guidelines may be used in certain markets"
+ ],
+ "effective_or_revised": "Effective 11/15/2025; Next Review 10/15/2026",
+ "sections_in_order": [
+  "Overview",
+  "Coverage Policy (Catheter Ablation; Percutaneous approaches to occlude LAA; Cardiac Surgery-LAA Exclusion/Excision; Surgical Ablation)",
+  "Coding Information",
+  "General Background",
+  "Health Equity Considerations",
+  "Medicare Coverage Determinations",
+  "Appendix",
+  "References",
+  "Revision Details"
+ ],
+ "criteria_location": "Coverage Policy pp.2-3: LAA closure paragraph is about 12 lines in a 4-procedure policy; scoring footnote under it. Codes in Coding Information pp.3-5. 25 pages of background.",
+ "procedures_covered": [
+  "Catheter ablation for AF (93656, 93657), repeat ablation, VOM ablation, esophageal cooling",
+  "Percutaneous LAA closure (33340)",
+  "Surgical LAA exclusion not with open cardiac surgery (33267, 33269) not MN",
+  "Peridevice leak closure (33999) EIU",
+  "Surgical Maze (33258, 33254, 33255, 33265, 33266)"
+ ],
+ "logic": {
+  "top_level": "pathways (one policy, several procedures; LAAC block is all-of)",
+  "max_nesting_depth": 2,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "Closing sentence: any other indication including hypertrophic cardiomyopathy is NOT medically necessary.",
+  "initial_vs_repeat": "Repeat ablation rule exists for catheter ablation ('recurrent symptomatic atrial fibrillation'); none for LAAC.",
+  "and_or_ambiguity": [
+   {
+    "quote": "a contraindication to long-term oral anticoagulation due to a nonreversible cause (e.g., arteriovenous malformation (AVM) in intestine or brain that is not treatable, recurrent duodenal ulcer, recurrent falls when cause of falls is not felt to be treatable)",
+    "why_ambiguous": "Examples list; 'nonreversible' and 'not felt to be treatable' are judgements; no statement that other causes qualify."
+   },
+   {
+    "quote": "a moderate to high risk of stroke (CHA2DS2-VASc score \u22652*)",
+    "why_ambiguous": "Footnote lists components as 'age greater than or equal to 65' with no weights (2 points at 75), so the score is not computable from the policy text alone; it names the score but not the formula."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "diagnosis",
+   "quote": "non-valvular atrial fibrillation",
+   "where": "LAAC paragraph"
+  },
+  {
+   "kind": "provider/facility qualification",
+   "quote": "using a U.S. Food and Drug Administration (FDA) approved device",
+   "where": "LAAC"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "a moderate to high risk of stroke (CHA2DS2-VASc score \u22652*)",
+   "where": "LAAC bullet 1"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "a contraindication to long-term oral anticoagulation due to a nonreversible cause",
+   "where": "LAAC bullet 2"
+  },
+  {
+   "kind": "exclusion",
+   "quote": "Percutaneous transcatheter closure of the left atrial appendage for ANY other indication including hypertrophic cardiomyopathy is considered NOT medically necessary",
+   "where": "LAAC"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "CHA2DS2-VASc",
+   "value": ">= 2",
+   "unit": "points",
+   "quote": "CHA2DS2-VASc score \u22652*"
+  }
+ ],
+ "time_windows": [],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Each code group is headed 'Considered Medically Necessary when criteria in the applicable policy statements listed above are met' / NMN / EIU; 33340 maps to the LAAC statement. Dagger notes on 93656/93657.",
+  "non_covered_code_lists": "33267, 33269 NMN; 33999 EIU; 33254, 33255, 33265, 33266 EIU; 93799 NMN (VOM); C1889 EIU"
+ },
+ "external_dependencies": [
+  {
+   "what": "Medicare NCD 20.34",
+   "quote": "Percutaneous Left Atrial Appendage Closure (LAAC) (20.34)"
+  },
+  {
+   "what": "Related coverage resources and delegated vendors",
+   "quote": "In certain markets, delegated vendor guidelines may be used to support medical necessity and other coverage determinations."
+  },
+  {
+   "what": "ACC/AHA 2024 and SCAI/HRS 2025 guidelines in background",
+   "quote": "The Society for Cardiovascular Angiography & Interventions and Heart Rhythm Society (SCAI/HRS, Goldsweig, et al., 2025) developed 8 evidence-based recommendations"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "CHA2DS2-VASc",
+   "definition_quote": "Congestive heart failure, hypertension, age greater than or equal to 65, diabetes, stroke/transient ischemia attack/thromboembolism, vascular disease, sex category."
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "moderate to high risk of stroke",
+   "problem": "Mapped to >=2 in parentheses."
+  },
+  {
+   "quote": "not felt to be treatable",
+   "problem": "Judgement."
+  },
+  {
+   "quote": "nonreversible cause",
+   "problem": "Undefined."
+  }
+ ],
+ "extraction_hazards": [
+  "One policy with four procedure families; LAAC criteria sit between catheter ablation and surgical ablation",
+  "Instructions for Use boilerplate pp.1-2",
+  "Code tables with dagger footnotes",
+  "Background tables of studies (SCAI/HRS recommendations table) look like criteria",
+  "Coverage Policy page break splits the LAA heading from its body",
+  "Revision details table"
+ ],
+ "interesting_structures": [
+  "Contraindication-to-anticoagulation requirement phrased with clinical examples",
+  "Explicit statement that hypertrophic cardiomyopathy indication is NMN",
+  "Codes grouped by coverage status"
+ ],
+ "fit_to_tree": {
+  "score": 2,
+  "why": "Two-leaf all-of with one score threshold; leaf two is a judgement with examples, and the score footnote lacks weights."
+ }
+}

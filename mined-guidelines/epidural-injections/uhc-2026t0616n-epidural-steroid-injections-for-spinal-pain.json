@@ -1,0 +1,19 @@
+{
+  "payer": "UnitedHealthcare",
+  "payer_key": "uhc",
+  "treatment": "epidural-injections",
+  "title": "Epidural Steroid Injections for Spinal Pain",
+  "policy_number": "2026T0616N",
+  "effective": "2026-06-01",
+  "url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-medical-drug/epidural-steroid-injections-spinal-pain.pdf",
+  "final_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-medical-drug/epidural-steroid-injections-spinal-pain.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "uhc-2026t0616n-epidural-steroid-injections-for-spinal-pain.pdf",
+  "sha256": "641b7592e7f1b82614c94bd8cb426522c78d722f9c9538930a1ad1cf912a403f",
+  "pages": 14,
+  "bytes": 490449,
+  "retrieved": "2026-10-09",
+  "printed_date": "Policy number printed 2026T0616O (file/library number 2026T0616N); Effective Date September 10, 2026 on the PDF (library metadata says 2026-06-01)"
+}

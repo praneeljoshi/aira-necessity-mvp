@@ -1,0 +1,19 @@
+{
+  "payer": "Providence Health Plan",
+  "payer_key": "providence",
+  "treatment": "pap-devices",
+  "title": "MP53 CPAP",
+  "policy_number": "MP53",
+  "effective": "",
+  "url": "https://www.providencehealthplan.com/-/media/providence/website/pdfs/providers/medical-policy-and-provider-information/medical-policies/mp53.pdf",
+  "final_url": "https://www.providencehealthplan.com/-/media/providence/website/pdfs/providers/medical-policy-and-provider-information/medical-policies/mp53.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "providence-mp53-mp53-cpap.pdf",
+  "sha256": "34c40bd0160ccf837ca9e6a014f0d3d77a31a10f961fb51d1a537e35452f11f8",
+  "pages": 9,
+  "bytes": 446176,
+  "retrieved": "2026-10-09",
+  "printed_date": "Effective 6/1/2026; Last Review 5/2026; Next 5/2027"
+}

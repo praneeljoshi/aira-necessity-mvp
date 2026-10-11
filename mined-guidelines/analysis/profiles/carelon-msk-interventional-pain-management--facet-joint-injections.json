@@ -1,0 +1,111 @@
+{
+  "file": "carelon-msk-interventional-pain-management.pdf",
+  "treatment": "facet-joint-injections",
+  "payer": "carelon",
+  "doc_kind": "clinical guideline (vendor); Appropriate Use Criteria; this copy is a redline posted by Louisiana Medicaid",
+  "lines_of_business": ["Not stated in the guideline: 'Approval and implementation dates for specific health plans may vary.' Source URL is Louisiana Department of Health Medicaid managed care plan materials, so read as health-plan delegated criteria, not a Carelon-wide line of business statement."],
+  "effective_or_revised": "Cover: 'Effective Date: 04/14/2024 04/09/2023', 'Last Review Date: 07/18/2023 05/09/2022' (old and new dates both printed because of redline); Doc ID MSK01-04240423.1",
+  "sections_in_order": ["Description and Application of the Guidelines", "General Clinical Guideline (Clinical Appropriateness Framework; Simultaneous Ordering; Repeat Diagnostic Intervention; Repeat Therapeutic Intervention)", "Epidural Injection Procedures and Diagnostic Selective Nerve Root Blocks", "Paravertebral Facet Injection/Medial Branch Nerve Block/Neurolysis (Description; Clinical Indications: General Information, Patient Requirements, Procedural Requirements, Diagnostic MBB, Therapeutic IA Facet Injections, Thermal Medial Branch RFN, Basivertebral Nerve Ablation; Exclusions; Selected References; Codes)", "Regional Sympathetic Nerve Block", "Sacroiliac Joint Injection", "Spinal Cord and Dorsal Root Ganglion Stimulators", "History"],
+  "criteria_location": "Facet section is pp.13-18 of 34. Definitions (conservative management, failure, severity, imaging) are in 'General Information' at the top of the facet section and are referenced by the criteria; 'The specific requirements take precedence over any stated general requirement.' Exclusions are a separate list on pp.16-17. Rules about repeat interventions are in the doc-wide General Clinical Guideline (pp.4-5) and again inside each procedure.",
+  "procedures_covered": ["Diagnostic medial branch block (local anesthetic only)", "Therapeutic intra-articular facet injection (only under exceptions)", "Thermal medial branch radiofrequency neurotomy", "Intraosseous basivertebral nerve ablation (not medically necessary)", "Explicitly excluded: diagnostic intra-articular facet injection, therapeutic MBB with steroid, ultrasound-guided, prolotherapy/PRP, thoracic (except C7-T1, T12-L1), C0-C2, chemical/laser/cryo/pulsed RF neurolysis"],
+  "logic": {
+    "top_level": "pathways: patient requirements (all of 6) AND a procedure-specific block; therapeutic IA injection has 4 alternative exception pathways, one of which (nerve root compression by cyst) has its own all-of",
+    "max_nesting_depth": 4,
+    "k_of_n": [],
+    "exclusions_or_contraindications": "Separate 'Exclusions' list (22 bullets, pp.16-17) introduced with 'Indications other than those addressed in this guideline are considered not medically necessary including, but not limited to the following'. Inline negatives in Patient Requirements ('Absence of prior surgical fusion at the proposed level').",
+    "initial_vs_repeat": "Explicit and the most detailed of the four documents. Dual MBB: 'injections performed in the same location(s) on two separate occasions at least one week apart'; max 4 diagnostic sessions per region per rolling 12 months; max 2 diagnostic sessions per level per year for RFA candidacy. Therapeutic IA (exceptions only): repeat if prior gave 'at least 50% reduction in pain with functional improvement of at least 3 months', max 4 sessions per region per rolling 12 months. RFN: 'no more than twice annually', repeat without new MBB if >=50% relief for >=6 months.",
+    "and_or_ambiguity": [
+      {"quote": "an exception for therapeutic intraarticular facet injections may be considered medically necessary when ALL Patient Requirements for facet injections are met AND ANY of the following conditions (1-4) are documented", "why_ambiguous": "Condition 4 carries its own 'ALL of the following' sub-criteria and a different clinical picture (radicular pain) that conflicts with the Patient Requirement of axial pain not due to radiculopathy (excepted only for cysts)."},
+      {"quote": "For the exceptions listed above only: Therapeutic facet joint injection at the same anatomic site for recurrent pain may be repeated if...", "why_ambiguous": "The three bullets of repeat rules sit between items 3 and 4 of the numbered list, so it is unclear whether they apply to 1-3 only or 1-4."},
+      {"quote": "Conservative management should include a combination of strategies ... including physical therapy AND at least one complementary conservative treatment strategy.", "why_ambiguous": "'should include' vs 'requires'; PT has three ANY-alternatives, one an exception for intractable pain."},
+      {"quote": "Moderate-to-severe pain with functional impairment of at least 3 months' duration", "why_ambiguous": "Duration attaches to pain, impairment or both; elsewhere conservative care only needs 6 weeks."},
+      {"quote": "A maximum of only 2 diagnostic sessions per level given on separate occasions are appropriate ... in a given year (cervical or lumbar)", "why_ambiguous": "Conflicts with the 4 sessions per region cap in the line above (4 per region vs 2 per level); both can be true only if the 4 are split across levels."}
+    ]
+  },
+  "requirement_kinds": [
+    {"kind": "symptom + functional impairment", "quote": "Moderate-to-severe pain with functional impairment of at least 3 months' duration", "where": "Patient Requirements bullet 1"},
+    {"kind": "measurement threshold", "quote": "significant pain and functional impairment refer to pain that is at least 3 out of 10 in intensity and is associated with inability to perform at least two (2) ADLs and/or IADLs", "where": "General Information, Reporting of symptom severity"},
+    {"kind": "diagnosis", "quote": "Predominant axial pain that is not attributable to radiculopathy (with the exception of facet joint synovial cysts), myelopathy, or neurogenic claudication", "where": "Patient Requirements bullet 2"},
+    {"kind": "diagnosis", "quote": "Physical exam findings which are consistent with the facet joint as the presumed source of pain", "where": "Patient Requirements bullet 3"},
+    {"kind": "diagnosis", "quote": "Absence of non-facet pathology that could explain the source of the patient's pain, such as fracture, tumor, or infection", "where": "Patient Requirements bullet 4"},
+    {"kind": "prior procedure", "quote": "Absence of prior surgical fusion at the proposed level", "where": "Patient Requirements bullet 5"},
+    {"kind": "conservative therapy", "quote": "Lack of improvement or resolution after completing at least 6 weeks of conservative management for the current condition or episode of pain", "where": "Patient Requirements bullet 6"},
+    {"kind": "conservative therapy", "quote": "Conservative management should include ... physical therapy AND at least one complementary conservative treatment strategy.", "where": "General Information"},
+    {"kind": "conservative therapy", "quote": "Failure of conservative management requires ALL of the following: ... completed a full course ... Worsening of or no significant improvement ... More invasive forms of therapy are being considered", "where": "General Information"},
+    {"kind": "provider/facility qualification", "quote": "Procedures must be performed with image guidance, either fluoroscopy or CT.", "where": "Procedural Requirements"},
+    {"kind": "imaging finding", "quote": "Evidence of nerve root compression due to a facet synovial cyst/large effusion when seen on an advanced imaging study (MRI or CT) performed within the previous 12 months", "where": "Therapeutic IA exception 4"},
+    {"kind": "imaging finding", "quote": "All imaging must be performed and read by an independent radiologist. If discrepancies should arise in the interpretation of the imaging, the radiology report will supersede.", "where": "General Information"},
+    {"kind": "diagnosis", "quote": "suspected inflammatory facetogenic pain due to systemic inflammatory arthropathies clearly documented in the patient's history and assessment (e.g., rheumatoid arthritis)", "where": "Therapeutic IA exception 1"},
+    {"kind": "diagnosis", "quote": "Denervation is contraindicated (e.g., young person in whom denervation may result in muscle atrophy ...)", "where": "Therapeutic IA exception 2"},
+    {"kind": "diagnosis", "quote": "Individuals at risk for complications with radiofrequency neurotomy (RFN) treatment (e.g., pacemaker-dependent patients ... older individuals on anticoagulation therapy, presence of surgical hardware)", "where": "Therapeutic IA exception 3"},
+    {"kind": "documentation/photos", "quote": "Provocative maneuvers or positions which normally exacerbate index pain should also be assessed and documented before and after the procedure.", "where": "Diagnostic MBB note"},
+    {"kind": "documentation/photos", "quote": "Documentation of planned surgery or surgical consultation is required.", "where": "Pars defect MBB"}
+  ],
+  "thresholds": [
+    {"quantity": "pain intensity for 'significant'", "value": ">= 3", "unit": "0-10", "quote": "at least 3 out of 10 in intensity"},
+    {"quantity": "ADL/IADL inability", "value": ">= 2", "unit": "ADLs/IADLs", "quote": "inability to perform at least two (2) ADLs and/or IADLs"},
+    {"quantity": "positive MBB response", "value": ">= 80", "unit": "percent relief", "quote": "at least 80% relief of the primary (index) pain"},
+    {"quantity": "interval between dual MBB", "value": ">= 1", "unit": "week", "quote": "at least one week apart"},
+    {"quantity": "repeat therapeutic IA", "value": ">= 50% for >= 3 months", "unit": "percent / months", "quote": "at least 50% reduction in pain with functional improvement of at least 3 months duration"},
+    {"quantity": "RFN repeat", "value": ">= 50% for >= 6 months", "unit": "percent / months", "quote": "at least 50% reduction for at least 6 months"},
+    {"quantity": "diagnostic sessions per region", "value": "<= 4 per rolling 12 months", "unit": "sessions", "quote": "a maximum of four (4) diagnostic joint sessions"},
+    {"quantity": "levels per session", "value": "<= 2", "unit": "levels", "quote": "maximum of two (2) levels, either unilateral or bilateral, per session"},
+    {"quantity": "cyst imaging recency", "value": "<= 12", "unit": "months", "quote": "performed within the previous 12 months"},
+    {"quantity": "spondylolisthesis", "value": "grade >= 3 excluded", "unit": "grade", "quote": "moderate-to-severe spondylolisthesis (grade 3 or higher)"},
+    {"quantity": "time since last RFA to repeat diagnostic block", "value": ">= 2", "unit": "years", "quote": "extended time (2 years or more) since the last RFA"}
+  ],
+  "time_windows": [
+    {"what": "pain/functional impairment duration", "length": "3 months", "quote": "functional impairment of at least 3 months' duration"},
+    {"what": "completed conservative management", "length": "6 weeks", "quote": "at least 6 weeks of conservative management"},
+    {"what": "dual MBB spacing", "length": "1 week", "quote": "at least one week apart"},
+    {"what": "dual MBB must be recent before RFN", "length": "6 months", "quote": "performed within the last 6 months"},
+    {"what": "frequency caps", "length": "rolling 12 months", "quote": "per rolling 12 months"},
+    {"what": "advanced imaging for synovial cyst", "length": "12 months", "quote": "performed within the previous 12 months"}
+  ],
+  "codes": {
+    "cpt_hcpcs_listed": true,
+    "icd10_listed": false,
+    "codes_tied_to_criteria": "Only region definition: 'cervical (CPT codes 64490, 64491, 64492) or lumbar (CPT codes 64493, 64494, 64495)'. Code tables (pp.18-19) list 64490-64495, 0213T-0218T, 64633-64636, 64625, 64640 flat; not mapped to the diagnostic/therapeutic distinction.",
+    "non_covered_code_lists": "Ultrasound-guided codes 0213T-0218T are covered by the exclusion 'Any facet joint interventions performed under ultrasound guidance'; no tag in the code table."
+  },
+  "external_dependencies": [
+    {"what": "Health plan medical policy may replace the Carelon guideline", "quote": "If requested by a health plan, Carelon will review requests based on health plan medical policy/guidelines in lieu of the Carelon Guidelines."},
+    {"what": "Federal and state mandates take precedence", "quote": "Applicable federal and state coverage mandates take precedence over these clinical guidelines."},
+    {"what": "Peer-to-peer when general framework is not met", "quote": "the determination of appropriateness will most likely require a peer-to-peer conversation"},
+    {"what": "FDA approval of agents", "quote": "must be FDA approved or conditionally approved for the intended use"}
+  ],
+  "definitions_that_change_meaning": [
+    {"term": "Anatomic spinal region", "definition_quote": "cervical (CPT codes 64490, 64491, 64492) or lumbar (CPT codes 64493, 64494, 64495)"},
+    {"term": "Significant pain and functional impairment", "definition_quote": "pain that is at least 3 out of 10 in intensity and is associated with inability to perform at least two (2) ADLs and/or IADLs"},
+    {"term": "Failure of conservative management", "definition_quote": "Patient has completed a full course of conservative management ... Worsening of or no significant improvement ... More invasive forms of therapy are being considered"},
+    {"term": "Positive response", "definition_quote": "at least 80% relief of the primary (index) pain, with the onset and duration of relief being consistent with the agent employed"},
+    {"term": "Dual medial branch blocks", "definition_quote": "injections performed in the same location(s) on two separate occasions at least one week apart"},
+    {"term": "Physical therapy requirement", "definition_quote": "Supervised home treatment program that includes ALL of the following: Participation in a patient specific or tailored program; Initial active instruction by MD/DO/PT with redemonstration ...; Compliance"}
+  ],
+  "vague_terms": [
+    {"quote": "Moderate-to-severe pain", "problem": "Not defined as such; the only definition is 'significant' = at least 3/10 with two ADLs."},
+    {"quote": "Physical exam findings which are consistent with the facet joint as the presumed source of pain", "problem": "No named exam signs."},
+    {"quote": "Generally considered not medically necessary", "problem": "'generally' softens an exclusion that is then reopened by exceptions."},
+    {"quote": "In most cases, reevaluation should include a physical examination.", "problem": "'most cases'; telephone allowed 'when circumstances preclude an office visit'."},
+    {"quote": "older individuals on anticoagulation therapy", "problem": "'older' undefined."},
+    {"quote": "young person in whom denervation may result in muscle atrophy", "problem": "'young' undefined."},
+    {"quote": "significant and prolonged relief of pain", "problem": "Qualified in parentheses (at least 50% for at least 6 months) but not used in the exclusion."}
+  ],
+  "extraction_hazards": [
+    "This copy is a redline ('Blue underline = Insertion; Red strikethrough = Deletion'). pdftotext keeps both inserted and deleted text with no marking, e.g. '© 20243' (2024 and struck 3), 'rootneural elements', 'glucocorticoidscorticosteroids', 'Effective Date: 04/14/2024 04/09/2023'. Any number in the facet section may be a deleted old value; the plain text cannot tell which.",
+    "Numbered exception list 1-4 interrupted by the page break and by an unnumbered 'For the exceptions listed above only:' list sitting between items 3 and 4.",
+    "Footnote markers 1 and 2 on 'Conservative management1' and 'analgesics2' with footnote text after the bullet list.",
+    "Repeated running header 'Interventional Pain Management' and footer copyright on every page.",
+    "Procedure-specific rules also appear in the General Clinical Guideline (pp.4-5) and in the epidural section, which uses the same defined terms with different thresholds.",
+    "Bullets render as private-use glyphs; sub-bullets (o) show as 'o' with variable indentation."
+  ],
+  "interesting_structures": [
+    "General requirements with override: 'The specific requirements take precedence over any stated general requirement.'",
+    "Stepwise diagnostic-to-therapeutic design: dual MBB (80% relief each, 1 week apart) then RFN is preferred; therapeutic IA is the exception, available only under 4 enumerated conditions.",
+    "Diagnostic intra-articular facet injection is outright excluded; the only diagnostic route is MBB with local anesthetic only.",
+    "Per-level, per-region, per-session and per-year caps all appear (2 levels per session, 4 sessions per region, 2 diagnostic sessions per level).",
+    "Thoracic region excluded except C7-T1 and T12-L1 (the rest of the document's region definition mentions only cervical and lumbar).",
+    "Redline artifacts mean the document itself is a diff, which is hazardous for any parser."
+  ],
+  "fit_to_tree": {"score": 4, "scale": "1 = all/any/not expresses it cleanly ... 5 = needs new constructs or human judgment", "why": "Logic is expressible (all/any/not) but inheritance with override, exception pathways with sub-criteria, per-level/region/year counters, a document-wide framework that sits outside the section, and redline text that mixes deleted and inserted values all strain a tree. Several leaves need injection history that a single-visit chart rarely carries."}
+}

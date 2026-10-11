@@ -1,0 +1,161 @@
+{
+ "file": "uhc-surest-srst2026t0639j-spinal-fusion-and-decompression.pdf",
+ "treatment": "lumbar-spine-surgery",
+ "payer": "uhc-surest",
+ "doc_kind": "medical policy (benefit-plan specific; criteria delegated to InterQual)",
+ "lines_of_business": [
+  "UnitedHealthcare Surest plans"
+ ],
+ "effective_or_revised": "SRST2026T0639J; effective September 1, 2026 (supersedes 2026T0639I)",
+ "sections_in_order": [
+  "Coverage Rationale",
+  "Definitions",
+  "Applicable Codes",
+  "Description of Services",
+  "Clinical Evidence",
+  "U.S. Food and Drug Administration",
+  "References",
+  "Policy History/Revision Information",
+  "Instructions for Use"
+ ],
+ "criteria_location": "Coverage Rationale (p.1) contains only a pointer list to InterQual subsets plus a short list of unproven procedures. Real medical-necessity criteria are in InterQual (not in the PDF). Definitions (pp.1-2) are the only in-document quantified content: instability >= 3 mm, anticipated instability, unstable Grade I spondylolisthesis, Meyerding grades, radiographic dynamic instability, staged multiple sessions.",
+ "procedures_covered": [
+  "Cervical, thoracic and lumbar fusion and decompression (InterQual)",
+  "Scoliosis or kyphosis surgery (InterQual)",
+  "Dynamic stabilization, facet joint replacement, isolated facet fusion, MOTUS-type implants (unproven)",
+  "Staged multiple sessions (unproven)"
+ ],
+ "logic": {
+  "top_level": "other (pointer to external criteria set plus a NOT list of unproven procedures)",
+  "max_nesting_depth": 1,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "Bulleted list of procedures 'unproven and not medically necessary due to insufficient evidence of efficacy'.",
+  "initial_vs_repeat": "Staged multiple sessions rule only: 'Dividing treatment ... into serial or Staged Multiple Sessions when one session can address all sites is unproven and not medically necessary'.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Radiographic Dynamic Instability: Translational motion of 3 mm of movement on flexion-extension radiographs or Meyerding Classification System of Spondylolisthesis grade of >= II.",
+    "why_ambiguous": "'3 mm' stated without 'at least'; compare Instability definition '>= 3 mm'. Defined terms are never used in any criterion visible in this document."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "other",
+   "quote": "For medical necessity clinical coverage criteria, refer to the: InterQual CP: Procedures: Fusion, Lumbar Spine ... InterQual Client Defined, CP: Procedures, Decompression +/- Fusion, Lumbar (Custom) - UHG",
+   "where": "Coverage Rationale, p.1"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "Instability: ... difference in translational alignment between lumbar vertebrae greater than or equal to 3 mm between views",
+   "where": "Definitions"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "Anticipated Instability Due to Procedure: ... excision of greater than 50% of bilateral facet joints; removal of greater than 75% of one facet joint or 50% or more of the vertebral body",
+   "where": "Definitions"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "Unstable Grade I Degenerative Spondylolisthesis: ... Sagittal translation >= 3 mm; Angular change of >= 15 degrees between flexion and extension",
+   "where": "Definitions"
+  },
+  {
+   "kind": "staging",
+   "quote": "Staged Multiple Sessions: Includes procedures that are performed on different days or those that require an additional anesthesia session.",
+   "where": "Definitions"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "Instability translation",
+   "value": ">= 3",
+   "unit": "mm",
+   "quote": "greater than or equal to 3 mm between views"
+  },
+  {
+   "quantity": "Angular change flexion-extension",
+   "value": ">= 15",
+   "unit": "degrees",
+   "quote": "Angular change of >= 15 degrees between flexion and extension"
+  },
+  {
+   "quantity": "Meyerding grade for dynamic instability",
+   "value": ">= II",
+   "unit": "grade",
+   "quote": "Meyerding Classification System of Spondylolisthesis grade of >= II"
+  },
+  {
+   "quantity": "Bilateral facet excision",
+   "value": "> 50",
+   "unit": "percent",
+   "quote": "excision of greater than 50% of bilateral facet joints"
+  },
+  {
+   "quantity": "Unilateral facet removal",
+   "value": "> 75",
+   "unit": "percent",
+   "quote": "removal of greater than 75% of one facet joint"
+  }
+ ],
+ "time_windows": [],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "One long CPT table (pp.2-8) with no mapping to InterQual subsets or to the unproven list, apart from 0202T, 0219T-0222T, 0719T (facet/dynamic devices) that match the unproven list by description.",
+  "non_covered_code_lists": "Not explicit; the 'unproven' procedures can be matched to 0202T, 0219T-0222T, 0719T only by reading descriptions."
+ },
+ "external_dependencies": [
+  {
+   "what": "InterQual CP: Procedures subsets for fusion/decompression/scoliosis",
+   "quote": "For medical necessity clinical coverage criteria, refer to the: InterQual CP: Procedures"
+  },
+  {
+   "what": "Client-defined (custom) InterQual subset for lumbar decompression +/- fusion",
+   "quote": "InterQual Client Defined, CP: Procedures, Decompression +/- Fusion, Lumbar (Custom) - UHG"
+  },
+  {
+   "what": "Plan document governs",
+   "quote": "UnitedHealthcare may also use tools developed by third parties, such as the InterQual criteria, to assist us in administering health benefits."
+  },
+  {
+   "what": "Related UHC policies",
+   "quote": "Related Policies: Discogenic Pain Treatment; Epidural Steroid Injections for Spinal Pain; Interspinous Fusion and Decompression Devices; Total Artificial Disc Replacement for the Spine"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Instability",
+   "definition_quote": "A loss of structural support of the spine that leads to abnormal and increased movement between vertebrae outside of normal physiological limits, measured by the difference in translational alignment ... greater than or equal to 3 mm"
+  },
+  {
+   "term": "Staged Multiple Sessions",
+   "definition_quote": "procedures that are performed on different days or those that require an additional anesthesia session"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "Spinal procedures for the treatment of spine pain are proven and medically necessary in certain circumstances.",
+   "problem": "No circumstances given in-document."
+  },
+  {
+   "quote": "when one session can address all sites",
+   "problem": "Surgeon judgment, not chartable."
+  }
+ ],
+ "extraction_hazards": [
+  "Criteria are in a licensed external product; the PDF shows only link text 'Click here to view the InterQual criteria'",
+  "Definitions are not referenced by any criterion in the PDF (orphan definitions added 09/01/2026)",
+  "Long CPT table and ~6 pages of clinical evidence dominate the text and contain numbers that are not criteria",
+  "Policy history says 'Removed Medical Records Documentation Used for Reviews section' so older copies differ"
+ ],
+ "interesting_structures": [
+  "Criteria version drift: 09/01/2026 swapped a standard InterQual lumbar subset for a UHG custom client-defined subset (hidden from the reader)",
+  "Negative list of unproven procedures is the only self-contained rule set",
+  "Definitions section built from NASS 2014/2021 with explicit mm and degree values"
+ ],
+ "fit_to_tree": {
+  "score": 5,
+  "scale": "1 clean ... 5 human judgment",
+  "why": "Actual criteria are in InterQual and not in the PDF; only definitions and a NOT list can be extracted."
+ }
+}

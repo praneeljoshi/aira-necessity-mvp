@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "hyperbaric-oxygen",
+  "title": "Hyperbaric Oxygen Therapy (Systemic & Topical)",
+  "category": "Medicine",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JEWFS1J1YYH8LD1Q1",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "01-99180-01",
+  "original_effective": "01/01/01",
+  "reviewed": "01/22/26",
+  "revised": "02/15/26",
+  "file": "bcbsfl-01-99180-01-hyperbaric-oxygen-therapy-systemic-topical.pdf",
+  "sha256": "9af8797f98ccca3a80111ee6b242c2e5628df4ee3834a062703c15edb3815539",
+  "pages": 10,
+  "bytes": 638560,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original 01/01/01; Reviewed 01/22/26; Revised 02/15/26"
+}

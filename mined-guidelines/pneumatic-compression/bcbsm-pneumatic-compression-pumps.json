@@ -1,0 +1,19 @@
+{
+  "payer": "Blue Cross Blue Shield of Michigan",
+  "payer_key": "bcbsm",
+  "treatment": "pneumatic-compression",
+  "title": "Pneumatic Compression Pumps",
+  "policy_number": "",
+  "effective": "11/1/2022",
+  "url": "https://www.bcbsm.com/amslibs/content/dam/public/mpr/mprsearch/pdf/2097718.pdf",
+  "final_url": "https://www.bcbsm.com/amslibs/content/dam/public/mpr/mprsearch/pdf/2097718.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "bcbsm-pneumatic-compression-pumps.pdf",
+  "sha256": "a125cfaaa0ef90b726225e21bc7e5fefc12dd95ca78b25203b16cd01b78401e0",
+  "pages": 24,
+  "bytes": 538497,
+  "retrieved": "2026-10-09",
+  "printed_date": "Current Policy Effective Date: 11/1/25 (library metadata lists 11/1/2022)"
+}

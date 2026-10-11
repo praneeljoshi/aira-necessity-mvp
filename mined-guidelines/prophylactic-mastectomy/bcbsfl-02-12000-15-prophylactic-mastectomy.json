@@ -1,0 +1,19 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "prophylactic-mastectomy",
+  "title": "Prophylactic Mastectomy",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JGJZ4DW2VOWL7M1YH",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-12000-15",
+  "original_effective": "01/01/01",
+  "reviewed": "02/26/26",
+  "revised": "03/15/26",
+  "file": "bcbsfl-02-12000-15-prophylactic-mastectomy.pdf",
+  "sha256": "c8c206f284beb8e904e87c347bc48aaca249d726184d2a5f09b2a33dcff3e98f",
+  "pages": 6,
+  "bytes": 507263,
+  "retrieved": "2026-10-09"
+}

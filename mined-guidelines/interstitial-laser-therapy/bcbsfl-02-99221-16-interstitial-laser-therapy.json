@@ -1,0 +1,18 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "interstitial-laser-therapy",
+  "title": "Interstitial Laser Therapy",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JGJZ4DP00QUU8IE7D",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-99221-16",
+  "reviewed": "02/26/26",
+  "revised": "03/15/26",
+  "file": "bcbsfl-02-99221-16-interstitial-laser-therapy.pdf",
+  "sha256": "f2ced2c4ecd23d8962a5bedde681a2b68eba135609d0b5b72d1f74468dc7b350",
+  "pages": 10,
+  "bytes": 689999,
+  "retrieved": "2026-10-09"
+}

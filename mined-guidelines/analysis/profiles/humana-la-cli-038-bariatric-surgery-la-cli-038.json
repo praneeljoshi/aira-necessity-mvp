@@ -1,0 +1,214 @@
+{
+ "file": "humana-la-cli-038-bariatric-surgery-la-cli-038.pdf",
+ "treatment": "bariatric-surgery",
+ "payer": "humana",
+ "doc_kind": "Medicaid policy (Humana Healthy Horizons in Louisiana)",
+ "lines_of_business": [
+  "Medicaid; State: LA"
+ ],
+ "effective_or_revised": "Original 08/08/2022; Effective 05/18/2026; Review 09/02/2025",
+ "sections_in_order": [
+  "Description",
+  "Coverage Determination (Adults 18+, Pediatric 13-17, Revision, Panniculectomy After Bariatric Surgery)",
+  "Coverage Limitations",
+  "Coding Information",
+  "References",
+  "Change Summary"
+ ],
+ "criteria_location": "Coverage Determination, pp.2-5: a shared preoperative-evaluation gate, then age-banded BMI/comorbidity criteria, revision, and a panniculectomy sub-policy.",
+ "procedures_covered": [
+  "Bariatric surgery (procedures not enumerated; descriptions mention sleeve gastrectomy, RYGB, long-limb RYGB)",
+  "Revision/conversion",
+  "Panniculectomy after bariatric surgery"
+ ],
+ "logic": {
+  "top_level": "all (shared gate) then pathways by age band",
+  "max_nesting_depth": 4,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "No exclusions list; 'Coverage Limitations: may NOT be eligible ... for any indication other than those above.' Pregnancy counseling is a requirement not exclusion.",
+  "initial_vs_repeat": "Revision: 'Initial bariatric surgery requirements are met; OR Major surgical complication ... or its mechanical failure' with example list.",
+  "and_or_ambiguity": [
+   {
+    "quote": "BMI equal to or greater than 40 kg/m2, or more than 100 lbs overweight; OR BMI of greater or equal to 35 kg/m2 with one or more of the following comorbidities",
+    "why_ambiguous": "An inline 'or' inside a bullet that is itself an OR branch; and 'poorly controlled hypertension (systolic ... greater than 140 mm Hg or diastolic blood pressure 90 mm Hg or greater' has an unclosed parenthesis."
+   },
+   {
+    "quote": "Any other comorbidity related to obesity that is determined by the preoperative evaluation to be improved by weight loss",
+    "why_ambiguous": "Catch-all makes the comorbidity list open and delegates judgment to the evaluator."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "psych/nutrition evaluation",
+   "quote": "Conducted by a multidisciplinary team including, at a minimum; A physician; AND Nutritionist OR dietician; AND A licensed qualified mental health professional",
+   "where": "p.2"
+  },
+  {
+   "kind": "time window",
+   "quote": "preoperative evaluation within the previous 12 months of the scheduled surgery",
+   "where": "p.2"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "A determination that previous attempt(s) at weight loss have been unsuccessful and that future attempts, other than bariatric surgery, are not likely to be successful",
+   "where": "p.2"
+  },
+  {
+   "kind": "patient commitment",
+   "quote": "A determination that the individual is capable of adhering to the post-surgery diet and follow-up care",
+   "where": "p.2"
+  },
+  {
+   "kind": "other",
+   "quote": "counseling to avoid pregnancy preoperatively and for at least 12 months postoperatively",
+   "where": "p.2"
+  },
+  {
+   "kind": "BMI/comorbidity",
+   "quote": "BMI of 30 to 34.9 kg/m2 with type 2 diabetes mellitus if hyperglycemia inadequately controlled despite optimal medical control",
+   "where": "Adults p.3"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "Obstructive sleep apnea confirmed on polysomnography with an AHI or RDI greater than or equal to 30",
+   "where": "Adults comorbidity"
+  },
+  {
+   "kind": "age",
+   "quote": "Individuals age 13 through 17 years old; under 13 case-by-case",
+   "where": "Pediatric p.3-4"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "The individual had bariatric surgery at least 18 months prior and the individual's weight has been stable for at least 6 months",
+   "where": "Panniculectomy p.5"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "BMI adult",
+   "value": "≥40 or >100 lbs overweight",
+   "unit": "kg/m2",
+   "quote": "BMI equal to or greater than 40 kg/m2, or more than 100 lbs overweight"
+  },
+  {
+   "quantity": "BMI adult with comorbidity",
+   "value": "≥35",
+   "unit": "kg/m2",
+   "quote": "BMI of greater or equal to 35 kg/m2 with one or more"
+  },
+  {
+   "quantity": "BMI adult T2DM",
+   "value": "30-34.9",
+   "unit": "kg/m2",
+   "quote": "BMI of 30 to 34.9 kg/m2 with type 2 diabetes"
+  },
+  {
+   "quantity": "BP",
+   "value": "SBP >140 / DBP ≥90",
+   "unit": "mm Hg",
+   "quote": "blood pressure greater than 140 mm Hg or diastolic blood pressure 90 mm Hg or greater"
+  },
+  {
+   "quantity": "OSA AHI adult",
+   "value": "≥30",
+   "unit": "events/h",
+   "quote": "AHI or RDI greater than or equal to 30"
+  },
+  {
+   "quantity": "OSA AHI pediatric",
+   "value": "> 5",
+   "unit": "events/h",
+   "quote": "AHI greater than 5"
+  },
+  {
+   "quantity": "Pediatric BMI",
+   "value": "≥40 or 140% of 95th pct (lower)",
+   "unit": "kg/m2",
+   "quote": "40 kg/m2 or 140% of the 95th percentile for age and sex, whichever is lower"
+  },
+  {
+   "quantity": "Pediatric BMI with comorbidity",
+   "value": "35-39.9 or 120% (lower)",
+   "unit": "kg/m2",
+   "quote": "35 to 39.9 kg/m2 or 120%"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "Preoperative evaluation",
+   "length": "12 months before surgery",
+   "quote": "within the previous 12 months of the scheduled surgery"
+  },
+  {
+   "what": "Pregnancy avoidance",
+   "length": "12 months post-op",
+   "quote": "at least 12 months postoperatively and until weight has stabilized"
+  },
+  {
+   "what": "Panniculectomy after bariatric surgery",
+   "length": "18 months post-op, weight stable 6 months",
+   "quote": "at least 18 months prior ... stable for at least 6 months"
+  },
+  {
+   "what": "Nonsurgical treatment for panniculectomy skin problems",
+   "length": "3 months",
+   "quote": "failed to respond to at least 3 months of nonsurgical treatment"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Listed only, with disclaimer 'Do not rely on the accuracy and inclusion of specific codes'; comments column empty.",
+  "non_covered_code_lists": "None"
+ },
+ "external_dependencies": [
+  {
+   "what": "Louisiana Medicaid Services Manual Chapter 5",
+   "quote": "Louisiana Department of Health. Medicaid Services Manual. Chapter 5: Professional Services"
+  },
+  {
+   "what": "Member coverage document can modify",
+   "quote": "Policies in this document may be modified by a member's coverage document."
+  }
+ ],
+ "definitions_that_change_meaning": [],
+ "vague_terms": [
+  {
+   "quote": "previous attempt(s) at weight loss have been unsuccessful",
+   "problem": "no program type or duration; a 'determination' by the team, not an evidence item"
+  },
+  {
+   "quote": "more than 100 lbs overweight",
+   "problem": "reference weight not defined (ideal body weight table?)"
+  },
+  {
+   "quote": "optimal medical control",
+   "problem": "undefined"
+  },
+  {
+   "quote": "Major surgical complication",
+   "problem": "example list says 'not limited to'"
+  }
+ ],
+ "extraction_hazards": [
+  "Page headers 'Bariatric Surgery Page: N of 7' interrupt bullet lists",
+  "Triangular and 'o' sub-bullets 4 levels deep",
+  "CPT table has blank Comments column and splits across a page",
+  "Unbalanced parenthesis in hypertension bullet",
+  "Panniculectomy criteria embedded inside a bariatric policy"
+ ],
+ "interesting_structures": [
+  "Determinations by a team ('A determination that...') rather than raw clinical facts",
+  "Pregnancy counseling requirement",
+  "Pediatric floor at age 13; under 13 case by case",
+  "Panniculectomy-after-bariatric-surgery section inside the bariatric policy",
+  "Revision: any initial-criteria OR complication"
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "scale": "1-5",
+  "why": "Structure maps well but several leaves are team 'determinations' and counseling attestations that charts rarely contain verbatim; embedded panniculectomy pathway."
+ }
+}

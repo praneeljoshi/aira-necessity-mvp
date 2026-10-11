@@ -1,0 +1,304 @@
+{
+ "file": "bcbsfl-02-40000-16-medical-and-surgical-management-of-sleep-apnea-sno.pdf",
+ "treatment": "sleep-apnea-surgery",
+ "payer": "Florida Blue (BCBSFL)",
+ "doc_kind": "medical policy (Medical Coverage Guideline 02-40000-16)",
+ "lines_of_business": [
+  "All lines of business unless noted in Program Exceptions",
+  "FEP / SAO follow their own guidelines",
+  "Medicare Advantage: NCD 160.19 Phrenic Nerve Stimulator; LCDs L38398 (HGNS) and L33611 (oral appliances) reviewed"
+ ],
+ "effective_or_revised": "Original 07/15/01; Reviewed 08/27/26; Revised 09/15/26",
+ "sections_in_order": [
+  "Description (with evidence summary)",
+  "Position Statement",
+  "Billing/Coding Information (CPT, HCPCS, ICD-10)",
+  "Reimbursement Information",
+  "LOINC documentation table",
+  "Program Exceptions",
+  "Definitions",
+  "Related Guidelines",
+  "Other",
+  "References",
+  "Updates"
+ ],
+ "criteria_location": "Position Statement (about pp.3-5) plus the Definitions section, which carries the AHI thresholds the criteria depend on. Hypoglossal nerve stimulation criteria are a separate block after the conventional-surgery bullets.",
+ "procedures_covered": [
+  "Intraoral appliances (oral appliances)",
+  "Palatopharyngoplasty / UPPP and variants",
+  "Hyoid suspension, tongue modification, maxillofacial surgery incl. MMA",
+  "Adenotonsillectomy (pediatric)",
+  "Hypoglossal nerve stimulation (adult; Down syndrome 13-18; revision/replacement)",
+  "Investigational: LAUP, tongue base suspension, RF, palatal stiffening, atrial overdrive pacing, expansion devices, eXciteOSA, phrenic nerve stimulation (CSA)"
+ ],
+ "logic": {
+  "top_level": "pathways: one block per procedure, plus a catch-all 'surgical treatment ... that does not meet the criteria above does not meet the definition of medical necessity'",
+  "max_nesting_depth": 3,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "No contraindication list. Exclusions are an 'experimental or investigational' list of procedures; 'snoring alone is not considered a medical condition'.",
+  "initial_vs_repeat": "HGNS 'Revision/Replacement ... meets the definition of medical necessity when all of the criteria above are met, the device is not functioning and is no longer under warranty.' Oral appliances limited to one per 12 months (Reimbursement).",
+  "and_or_ambiguity": [
+   {
+    "quote": "For members with mild to moderate obstructive sleep apnea; OR For members with severe obstructive sleep apnea who have failed a trial of continuous positive airway pressure (CPAP) or is contraindicated AND The device is prescribed by a treating physician, the device is custom-fitted ... AND there is absence of temporomandibular dysfunction or periodontal disease",
+    "why_ambiguous": "Layout puts 'AND' on its own line before the device bullet; reading is (mild-moderate OR (severe AND CPAP failed/contraindicated)) AND device conditions, but the structure is only implied by indentation."
+   },
+   {
+    "quote": "in appropriately select members who have failed an adequate trial of CPAP OR failed an adequate trial of an oral appliance",
+    "why_ambiguous": "UPPP needs only ONE of CPAP or oral appliance failure; hyoid/MMA similarly 'have not responded to or do not tolerate CPAP OR failed an adequate trial of an oral appliance'. Cigna requires both PAP and consideration of an appliance."
+   },
+   {
+    "quote": "Mild to Moderate ... AHI, REI, or RDI of 15 or more events per hour, OR ... 5 or more events per hour in a member with one or more signs or symptoms",
+    "why_ambiguous": "'Mild to moderate' is defined with a floor of 15 and no ceiling, so it overlaps 'Severe' (> 30). A patient with AHI 45 satisfies both definitions. Also, 'mild' (AHI 5-14) without symptoms is not covered by the definition."
+   },
+   {
+    "quote": "CPAP failure (residual AHI >= 15 or failure to use CPAP >= 4 hr per night for >= 5 nights per week) or inability to tolerate CPAP",
+    "why_ambiguous": "Nested or inside an item that sits inside an ALL list; also 'residual AHI >= 15' is measured on-treatment, a different measurement from the baseline AHI in the previous bullet."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "severity threshold",
+   "quote": "Clinically significant obstructive sleep apnea is defined as those members who have: AHI, REI, or RDI of 15 or more events per hour, OR AHI, REI, or RDI of 5 or more events per hour in a member with one or more signs or symptoms associated with OSA",
+   "where": "Definitions"
+  },
+  {
+   "kind": "prior therapy (PAP)",
+   "quote": "in appropriately select members who have failed an adequate trial of CPAP OR failed an adequate trial of an oral appliance",
+   "where": "UPPP"
+  },
+  {
+   "kind": "imaging/diagnostic",
+   "quote": "objective documentation of hypopharyngeal obstruction",
+   "where": "Hyoid/MMA"
+  },
+  {
+   "kind": "age",
+   "quote": "Age 18 years or older",
+   "where": "HGNS adult"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "AHI >= 15 and <= 100 with <= 25% central apneas",
+   "where": "HGNS adult"
+  },
+  {
+   "kind": "prior therapy (PAP)",
+   "quote": "CPAP failure (residual AHI >= 15 or failure to use CPAP >= 4 hr per night for >= 5 nights per week) or inability to tolerate CPAP",
+   "where": "HGNS adult"
+  },
+  {
+   "kind": "BMI",
+   "quote": "Body mass index <= 35 kg/m2",
+   "where": "HGNS adult"
+  },
+  {
+   "kind": "diagnostic test",
+   "quote": "Absence of complete concentric collapse at the soft palate level on drug-induced sleep endoscopy (DISE)",
+   "where": "HGNS"
+  },
+  {
+   "kind": "pediatric",
+   "quote": "13 to 18 years of age; AHI >10 and <50; Contraindicated for or not effectively treated by adenotonsillectomy; BMI <= 95th percentile",
+   "where": "HGNS Down syndrome"
+  },
+  {
+   "kind": "provider/device",
+   "quote": "The device is prescribed by a treating physician, the device is custom-fitted by qualified dental personnel, AND there is absence of temporomandibular dysfunction or periodontal disease",
+   "where": "Oral appliance"
+  },
+  {
+   "kind": "device status",
+   "quote": "An FDA-approved hypoglossal nerve stimulation device",
+   "where": "HGNS"
+  },
+  {
+   "kind": "replacement",
+   "quote": "the device is not functioning and is no longer under warranty",
+   "where": "HGNS revision"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "ICD-10 G47.30 - G47.39 Sleep apnea",
+   "where": "Coding"
+  },
+  {
+   "kind": "documentation",
+   "quote": "Physician history and physical ... observations made six months or fewer before starting date of service",
+   "where": "LOINC table"
+  },
+  {
+   "kind": "pediatric",
+   "quote": "Adenotonsillectomy- in pediatric members with clinically significant obstructive sleep apnea ... and hypertrophic tonsils",
+   "where": "Position"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "AHI/REI/RDI clinically significant",
+   "value": ">= 15 (or >= 5 with symptoms)",
+   "unit": "events/hr",
+   "quote": "15 or more events per hour"
+  },
+  {
+   "quantity": "Severe OSA",
+   "value": "> 30",
+   "unit": "events/hr",
+   "quote": "AHI, REI, or RDI greater than 30 events per hour"
+  },
+  {
+   "quantity": "pediatric clinically significant",
+   "value": ">= 5 (or >= 1.5 with symptoms)",
+   "unit": "events/hr",
+   "quote": "AHI or RDI of at least 5 per hour, OR ... at least 1.5 per hour"
+  },
+  {
+   "quantity": "HGNS AHI",
+   "value": ">= 15 and <= 100",
+   "unit": "events/hr",
+   "quote": "AHI >= 15 and <= 100 with <= 25% central apneas"
+  },
+  {
+   "quantity": "central apneas",
+   "value": "<= 25",
+   "unit": "% of AHI",
+   "quote": "<= 25% central apneas"
+  },
+  {
+   "quantity": "HGNS BMI",
+   "value": "<= 35",
+   "unit": "kg/m2",
+   "quote": "Body mass index <= 35 kg/m2"
+  },
+  {
+   "quantity": "CPAP adherence",
+   "value": ">= 4 hr/night on >= 5 nights/week",
+   "unit": "",
+   "quote": "failure to use CPAP >= 4 hr per night for >= 5 nights per week"
+  },
+  {
+   "quantity": "Down syndrome HGNS AHI",
+   "value": "> 10 and < 50",
+   "unit": "events/hr",
+   "quote": "AHI >10 and <50"
+  },
+  {
+   "quantity": "Down syndrome age",
+   "value": "13-18",
+   "unit": "years",
+   "quote": "13 to 18 years of age"
+  },
+  {
+   "quantity": "oral appliance frequency",
+   "value": "1 per 12 months",
+   "unit": "",
+   "quote": "limited to one (1) in a 12-month period"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "oral appliance reimbursement",
+   "length": "12 months",
+   "quote": "limited to one (1) in a 12-month period"
+  },
+  {
+   "what": "documentation recency (LOINC)",
+   "length": "6 months",
+   "quote": "observations made six months or fewer before starting date of service"
+  },
+  {
+   "what": "CPAP use",
+   "length": "5 nights per week",
+   "quote": ">= 4 hr per night for >= 5 nights per week"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": true,
+  "codes_tied_to_criteria": "One flat CPT/HCPCS list, only some codes marked '(Investigational)'; ICD-10 G47.30-G47.39 'support medical necessity'; not mapped per procedure.",
+  "non_covered_code_lists": "Phrenic nerve codes 33276-33288, 93150-93153, 41530, C1823, E0490-E0493, S2080 marked Investigational inline"
+ },
+ "external_dependencies": [
+  {
+   "what": "PAP policy and sleep testing policy",
+   "quote": "CPAP, APAP, BiPAP, and Sleep Testing are addressed in separate policies."
+  },
+  {
+   "what": "Related guidelines",
+   "quote": "Positive Airway Pressure Devices, 09-E0000-21; Sleep Testing, 01-95828-01"
+  },
+  {
+   "what": "Medicare Advantage NCD/LCDs",
+   "quote": "Phrenic Nerve Stimulator (160.19) ... Hypoglossal Nerve Stimulation for the Treatment of Obstructive Sleep Apnea (L38398) ... Oral Appliances for Obstructive Sleep Apnea (L33611)"
+  },
+  {
+   "what": "CDC BMI percentile calculator",
+   "quote": "BMI Percentile Calculator for Child and Teen located at: https://www.cdc.gov/..."
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Mild to Moderate Obstructive Sleep Apnea",
+   "definition_quote": "AHI, REI, or RDI of 15 or more events per hour, OR AHI, REI, or RDI of 5 or more events per hour in a member with one or more signs or symptoms"
+  },
+  {
+   "term": "Severe Obstructive Sleep Apnea",
+   "definition_quote": "AHI, REI, or RDI greater than 30 events per hour."
+  },
+  {
+   "term": "Clinically significant obstructive sleep apnea",
+   "definition_quote": "AHI, REI, or RDI of 15 or more events per hour, OR ... 5 or more events per hour in a member with one or more signs or symptoms"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "appropriately selected members",
+   "problem": "no definition"
+  },
+  {
+   "quote": "failed an adequate trial of CPAP",
+   "problem": "'adequate' undefined (HGNS block defines failure numerically, UPPP block does not)"
+  },
+  {
+   "quote": "have not responded to or do not tolerate CPAP",
+   "problem": "'not responded' undefined"
+  },
+  {
+   "quote": "objective documentation of hypopharyngeal obstruction",
+   "problem": "method not specified (DISE, cephalometry, other?)"
+  },
+  {
+   "quote": "or is contraindicated",
+   "problem": "grammar broken; contraindicated by whom/what"
+  },
+  {
+   "quote": "with one or more signs or symptoms associated with OSA (eg, excessive daytime sleepiness, hypertension...)",
+   "problem": "eg list, open-ended"
+  },
+  {
+   "quote": "Contraindicated for or not effectively treated by adenotonsillectomy",
+   "problem": "no definition of effectiveness"
+  }
+ ],
+ "extraction_hazards": [
+  "Definitions are far from the criteria that use them and must be joined",
+  "Descriptive prose in Description mentions procedures and statements (e.g. 'insufficient evidence') that look like coverage language",
+  "Investigational and medically-necessary procedures interleaved in one CPT list with the word '(Investigational)' inline on some rows",
+  "Special characters >= and <= (and unicode) in HGNS block",
+  "LOINC table at end is documentation guidance in table form",
+  "Unmarked word-wrap inside nested bullets (o markers)",
+  "Long CPT table splits across a page without repeated headers"
+ ],
+ "interesting_structures": [
+  "Two-population HGNS (adult; Down syndrome adolescent) with separate AHI and BMI rules (percentile BMI)",
+  "Severity definitions embedded in a Definitions section; pediatric severity differs",
+  "Procedure-level OR between 'CPAP failed' and 'oral appliance failed' rather than requiring both",
+  "Replacement conditioned on warranty status",
+  "Reimbursement frequency limit; documentation recency via LOINC time frames"
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "scale": "1 = all/any/not expresses it cleanly ... 5 = needs new constructs or human judgment",
+  "why": "Each HGNS block is a clean all-of with numeric leaves, but conventional surgery relies on loose terms ('adequate trial', 'appropriately selected') and a definition with overlapping ranges. Population branching (adult/pediatric) is pathway-style."
+ }
+}

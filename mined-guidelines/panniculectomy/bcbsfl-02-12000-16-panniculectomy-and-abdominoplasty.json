@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "panniculectomy",
+  "title": "Panniculectomy and Abdominoplasty",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JGJZ4DW8KML70Q3XL",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-12000-16",
+  "original_effective": "07/01/13",
+  "reviewed": "02/26/26",
+  "revised": "03/15/26",
+  "file": "bcbsfl-02-12000-16-panniculectomy-and-abdominoplasty.pdf",
+  "sha256": "18ee2f47005d2465496e11afa391b3edbef2a104bc3a297e6a9be4e14ef740df",
+  "pages": 8,
+  "bytes": 712057,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original 07/01/13; Reviewed 02/26/26; Revised 03/15/26"
+}

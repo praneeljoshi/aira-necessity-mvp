@@ -1,0 +1,345 @@
+/* Clinic: the payer's policy as a printed sheet on a coordinator's desk. A warm off-white desk; the guideline set
+   on a paper sheet in a book face (Source Serif 4) so the policy reads as a document, everything around it in a
+   plain public-service sans (Public Sans) so the tool reads as a tool. The check's marks are a light-blue
+   highlighter laid OVER the sheet like real ink (static/review-marks.js in overlay mode: the canvas sits above the
+   page and multiplies in light mode, screens in dark), so the sheet, the side slip and the text keep their own
+   surfaces. Status is quiet: a dot in the gutter, a warm tint for what's missing, a deeper blue once accepted.
+   Motion only in answer to an action. Structure below the first block is Marker's (paragraph flow, gutter marks),
+   restated for this style; Clinic's own look follows it. */
+html[data-style="clinic"] {
+  /* desk, sheet, ink */
+  --desk:#F3F0E9; --paper:#FFFEFB; --edge:#E4DED2; --edge-2:#D6CFC1;
+  --bg:#F3F0E9; --bg-rgb:243 240 233; --panel:#FFFEFB; --ink:#1D232B; --sec:#5D6570; --dim:#99A0A9; --line:#E4DED2; --soft:#ECE8DF; --rail:#F3F0E9;
+  --act:#2A5B8C; --act-h:#21496F; --act-soft:#E3EDF7;
+  --ready:#2B6A4E; --needs:#9A6316; --no:#9A3F33; --wait:#5D6570;
+  --ready-bg:#E9F2EC; --needs-bg:#F8EEDC; --no-bg:#F7E7E2; --wait-bg:#ECE8DF; --sel:#FBEBC4; --sel-line:#C99A3A;
+  --pen-doc:209 228 247; --pen-doc-a:1;  --pen-acc:184 210 240; --pen-acc-a:1;
+  --pen-miss:248 229 199; --pen-miss-a:1; --pen-bad:246 219 209; --pen-bad-a:1;
+  --pen-alt:230 235 242; --pen-alt-a:.85; --pen-human:253 228 168; --pen-human-a:1;
+  --marks-over:1;
+  --f-ui:"Public Sans", "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-doc:"Source Serif 4", "Source Serif Pro", Georgia, "Times New Roman", serif;
+  --sheet-shadow:0 1px 1px rgba(70,56,30,.04), 0 6px 22px -6px rgba(70,56,30,.10);
+  --slip-shadow:0 1px 1px rgba(70,56,30,.04), 0 10px 30px -10px rgba(70,56,30,.16);
+  color-scheme:light;
+}
+
+  html[data-style="clinic"][data-theme="dark"] {
+    --desk:#15171A; --paper:#1C1F23; --edge:#2B2F35; --edge-2:#363B42;
+    --bg:#15171A; --bg-rgb:21 23 26; --panel:#1C1F23; --ink:#E7E4DD; --sec:#A6A9AF; --dim:#71757C; --line:#2B2F35; --soft:#22252A; --rail:#15171A;
+    --act:#93B8DE; --act-h:#AFCAE8; --act-soft:#1F2C3A;
+    --ready:#8FC4A7; --needs:#DCA95F; --no:#E09887; --wait:#A6A9AF;
+    --ready-bg:#1C2A23; --needs-bg:#2B2418; --no-bg:#2D201C; --wait-bg:#22252A; --sel:#3A3020; --sel-line:#B88A3A;
+    --pen-doc:30 52 78; --pen-doc-a:1;  --pen-acc:46 76 112; --pen-acc-a:1;
+    --pen-miss:66 50 26; --pen-miss-a:1; --pen-bad:68 38 32; --pen-bad-a:1;
+    --pen-alt:32 38 46; --pen-alt-a:.8; --pen-human:88 66 28; --pen-human-a:1;
+    --sheet-shadow:0 0 0 1px rgba(0,0,0,.2), 0 8px 24px -8px rgba(0,0,0,.5);
+    --slip-shadow:0 0 0 1px rgba(0,0,0,.2), 0 12px 30px -10px rgba(0,0,0,.55);
+    color-scheme:dark;
+  }
+
+
+/* ---------------------------------------------------------------- structure (as Marker) */
+html[data-style="clinic"], html[data-style="clinic"] body { background:var(--bg); color:var(--ink) }
+html[data-style="clinic"] body { font:15px/1.55 "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif }
+html[data-style="clinic"] #marks { position:fixed; inset:0; width:100vw; height:100vh; z-index:0; pointer-events:none }
+html[data-style="clinic"] .app { position:relative; z-index:1; background:transparent }
+/* motion only in answer to an action, and only for colour: layout (padding, sizes, the highlighter canvas) never animates,
+   or text would slide on load and the washes would lag the words they sit under */
+html[data-style="clinic"] *, html[data-style="clinic"] *::before, html[data-style="clinic"] *::after { transition-property:color, background-color, border-color, box-shadow, opacity, text-decoration-color !important; transition-duration:.12s !important; animation:none !important }
+@media (prefers-reduced-motion: reduce) { html[data-style="clinic"] *, html[data-style="clinic"] *::before, html[data-style="clinic"] *::after { transition:none !important } }
+
+/* chrome: quiet */
+html[data-style="clinic"] .rail { background:var(--rail); border-right:1px solid var(--line) }
+html[data-style="clinic"] .row:hover { background:var(--soft) }
+html[data-style="clinic"] .row[aria-current="true"] { background:var(--panel); border-left-color:var(--act); box-shadow:none }
+html[data-style="clinic"] button { background:var(--panel); color:var(--ink); border:1px solid var(--line); border-radius:7px }
+html[data-style="clinic"] button:hover { background:var(--soft); border-color:var(--dim) }
+html[data-style="clinic"] button.primary { background:var(--act); color:var(--panel); border-color:var(--act) }
+html[data-style="clinic"] button.primary:hover { background:var(--act-h); border-color:var(--act-h) }
+html[data-style="clinic"] textarea, html[data-style="clinic"] input[type=text], html[data-style="clinic"] select { background:var(--panel); color:var(--ink); border-color:var(--line) }
+html[data-style="clinic"] a { color:var(--act) }
+html[data-style="clinic"] .dlg-card, html[data-style="clinic"] .card, html[data-style="clinic"] .fb-bar, html[data-style="clinic"] .stg { background:var(--panel); box-shadow:none }
+html[data-style="clinic"] .fb-bar { box-shadow:0 2px 10px rgba(0,0,0,.08) }
+
+/* the case: typography carries the hierarchy */
+html[data-style="clinic"] .who { font-size:13.5px }
+html[data-style="clinic"] .who b { font-size:15px; font-weight:600 }
+html[data-style="clinic"] .verdict { font-size:22px; font-weight:600; letter-spacing:-.01em; margin:10px 0 4px; color:var(--ink) }
+html[data-style="clinic"] .verdict::before { content:""; display:inline-block; width:8px; height:8px; border-radius:50%; margin:0 10px 3px 0; background:var(--dim) }
+html[data-style="clinic"] .verdict.v-ready::before { background:var(--ready) } html[data-style="clinic"] .verdict.v-needs::before { background:var(--needs) }
+html[data-style="clinic"] .verdict.v-no::before { background:var(--no) }
+html[data-style="clinic"] .why, html[data-style="clinic"] .rule, html[data-style="clinic"] .confirmed { font-size:13.5px; margin:2px 0 }
+html[data-style="clinic"] .flag { background:none; padding:0; color:var(--needs); font-size:13.5px }
+html[data-style="clinic"] .prog { border-color:var(--line) }
+html[data-style="clinic"] #side { background:var(--panel); border-color:var(--line); border-radius:8px }
+html[data-style="clinic"] .nv[aria-current] { background:var(--panel) }
+html[data-style="clinic"] kbd { background:var(--panel) }
+html[data-style="clinic"] .sp-act button kbd { background:transparent; color:inherit; border-color:currentColor; opacity:.7 }
+html[data-style="clinic"] #side .none { background:none; padding:0; color:var(--needs); font-weight:500 }
+html[data-style="clinic"] #side .none::before { content:""; display:inline-block; width:6px; height:6px; border-radius:50%; background:var(--needs); margin:0 7px 2px 0 }
+html[data-style="clinic"] .evq .side, html[data-style="clinic"] .legend .side-l { background:none; padding:0; font-weight:600; letter-spacing:.03em }
+html[data-style="clinic"] .evq:hover { background:var(--soft); border-color:transparent }
+html[data-style="clinic"] .evq.against q { color:var(--ink) }
+html[data-style="clinic"] .evq.against .side { color:var(--no) }
+html[data-style="clinic"] .draft { background:var(--panel); border-color:var(--line) }
+html[data-style="clinic"] .fb-chip { background:transparent; border:0; border-left:2px solid var(--line); border-radius:0; color:var(--sec) }
+html[data-style="clinic"] .fb-list .it { background:var(--panel); border-color:var(--line) }
+html[data-style="clinic"] #side .ac-where { color:var(--sec) }
+html[data-style="clinic"] #side .pk a { color:var(--ink) }
+
+/* the guideline: clean flowing text on the page, no frame */
+html[data-style="clinic"] .gl .doc { background:transparent; border:0; border-radius:0; overflow:visible }
+html[data-style="clinic"] .gl .doc-head { background:transparent; border:0; border-bottom:1px solid var(--line); padding:0 0 10px 42px; font-size:13px }
+html[data-style="clinic"] .tv .sec + .sec { border-top:0 }
+html[data-style="clinic"] .tv .sec-label { color:var(--sec); font-weight:600; letter-spacing:.05em; padding-left:42px }
+html[data-style="clinic"] .tv .pg { padding-left:42px; color:var(--dim) } html[data-style="clinic"] .tv .pg::after { border-color:var(--line) }
+html[data-style="clinic"] .tv .ln { font-size:15.5px; line-height:1.7; padding:0 8px 0 4px; grid-template-columns:30px 1fr; border-left:2px solid transparent; background:transparent !important }
+html[data-style="clinic"] .gl .ln.first { grid-template-columns:30px 1fr; margin-top:0 }
+/* a paragraph's lines flow as one text; the status dot / accepted check sits in the gutter on a block's first line */
+html[data-style="clinic"] .gl .para { display:block; position:relative; padding:0 10px 0 calc(34px + var(--ind, 0) * .45em); margin:0 0 .45em; font-size:15.5px; line-height:1.72 }
+html[data-style="clinic"] .gl .para > .ln { display:inline; position:static; padding:0; border:0; font-size:inherit; line-height:inherit }
+html[data-style="clinic"] .gl .para > .ln .tx { white-space:normal }
+html[data-style="clinic"] .gl .para > .ln .mk { position:absolute; left:10px; width:16px; padding:0; margin-top:.62em }
+html[data-style="clinic"] .gl .para > .ln:not(.first) .mk { display:none }
+/* a page break sits in the left gutter at the line where the page starts; the sentence flows on uninterrupted */
+html[data-style="clinic"] .gl .para > .pg { position:absolute; left:-2px; width:30px; padding:0; margin-top:.42em; display:block; font-size:10.5px; line-height:1.2; color:var(--dim); text-align:right; white-space:nowrap }
+html[data-style="clinic"] .gl .para > .pg::after { display:none }
+html[data-style="clinic"] .gl .para > .pg { font-size:0 }
+html[data-style="clinic"] .gl .para > .pg::before { content:attr(data-p); font-size:10.5px }
+html[data-style="clinic"] .gl .para > .ln.probed::after { display:none }
+/* asked about: a short hairline in the far margin, unlike the status dots */
+html[data-style="clinic"] .gl .para:has(.ln.probed)::before { content:""; position:absolute; left:1px; top:.45em; width:2px; height:1.1em; border-radius:1px; background:var(--sel-line); opacity:.4 }
+html[data-style="clinic"] .gl .para:has(.ln.sel) { box-shadow:inset 2px 0 0 var(--act) }
+html[data-style="clinic"] .gl .para:has(.ln.fb-sel) { box-shadow:inset 2px 0 0 var(--sel-line) }
+html[data-style="clinic"] .gl .para > .fb-chip { margin:4px 0 2px }
+html[data-style="clinic"] .rq-nav .nv { border:0; background:none; border-radius:6px }
+html[data-style="clinic"] .rq-nav .nv:hover { background:var(--soft) }
+html[data-style="clinic"] .rq-nav .nv[aria-current] { background:var(--panel); box-shadow:inset 2px 0 0 var(--act) }
+html[data-style="clinic"] .rq-nav .nv:focus-visible { outline:2px solid var(--act); outline-offset:1px }
+html[data-style="clinic"] .tv .ln.heading .tx { font-size:17px; font-weight:600; margin:10px 0 4px }
+html[data-style="clinic"] .tv .ln.other .tx, html[data-style="clinic"] .tv .ln.gap .tx, html[data-style="clinic"] .tv .ln.context .tx { color:var(--sec) }
+html[data-style="clinic"] .tv .ln.req .tx { color:var(--ink) }
+html[data-style="clinic"] .gl .ln .say { display:none }
+html[data-style="clinic"] .gl .ln .mk { font-size:0; display:flex; justify-content:center }
+html[data-style="clinic"] .gl .ln.first .mk::before { content:""; width:6px; height:6px; border-radius:50% }
+html[data-style="clinic"] .gl .ln.first .mk.m-q::before { background:var(--needs) }
+html[data-style="clinic"] .gl .ln.first .mk.m-n::before { background:var(--no) }
+html[data-style="clinic"] .gl .ln.first .mk.m-acc { font-size:12px; margin-top:0; color:var(--act); font-weight:700 }
+html[data-style="clinic"] .gl .ln.first .mk.m-acc::before { display:none }
+html[data-style="clinic"] .gl .ln.sel { border-left-color:var(--act) }
+html[data-style="clinic"] .gl .ln.fb-sel { outline:0; border-left-color:var(--sel-line) }
+html[data-style="clinic"] .gl .ln.probe { border-left-color:var(--sel-line) }
+html[data-style="clinic"] .gl .ln.probed::after { background:var(--dim); opacity:.6 }
+html[data-style="clinic"] mark.q { background:transparent; border:0; color:inherit; border-radius:2px }
+html[data-style="clinic"] .gl mark.q.struck { text-decoration-color:var(--dim) }
+html[data-style="clinic"] .ask-pill { background:var(--panel); border-color:var(--line); box-shadow:none }
+html[data-style="clinic"] .gl .rest-fold > summary { padding-left:42px }
+html[data-style="clinic"] .gl .rest-hint { padding-left:42px }
+html[data-style="clinic"] .tv .row-tbl { background:transparent }
+html[data-style="clinic"] .gl .ev { background:transparent; border-left:2px solid var(--line) }
+/* the selection is the browser's own, in the warm pen */
+html[data-style="clinic"] #glDoc ::selection { background:rgb(var(--pen-human)) }
+
+/* no WebGL, and print: the same washes as plain backgrounds */
+html[data-style="clinic"] mark.q { background:rgb(var(--pen-doc)) }
+html[data-style="clinic"] mark.q.t-miss { background:rgb(var(--pen-miss)) }
+html[data-style="clinic"] mark.q.t-bad { background:rgb(var(--pen-bad)) }
+html[data-style="clinic"] mark.q.t-alt { background:rgb(var(--pen-alt)) }
+html[data-style="clinic"] mark.q.acc { background:rgb(var(--pen-acc)) }
+html[data-style="clinic"] mark.q.struck { background:none }
+html[data-style="clinic"] .gl .ln.probe .tx { background:rgb(var(--pen-human)) }
+@media print {
+  html[data-style="clinic"] #marks { display:none }
+  html[data-style="clinic"] mark.q { background:rgb(212 230 248) !important; -webkit-print-color-adjust:exact; print-color-adjust:exact }
+  html[data-style="clinic"] mark.q.t-miss { background:rgb(246 228 200) !important }
+  html[data-style="clinic"] mark.q.t-bad { background:rgb(244 218 208) !important }
+  html[data-style="clinic"] mark.q.acc { background:rgb(184 210 240) !important }
+  html[data-style="clinic"] #side, html[data-style="clinic"] .rq-nav, html[data-style="clinic"] .rail { display:none }
+}
+
+/* notes on a paragraph: one quiet link after it, opening them in the side panel */
+html[data-style="clinic"] .gl .fb-notes { display:block; margin:-2px 0 8px calc(34px + var(--ind, 0) * .45em); font-size:12px; color:var(--sec); text-decoration:none }
+html[data-style="clinic"] .gl .fb-notes::before { content:""; display:inline-block; width:5px; height:5px; border-radius:50%; background:var(--sel-line); opacity:.7; margin:0 6px 1px 0 }
+html[data-style="clinic"] .gl .fb-notes:hover { color:var(--act) }
+html[data-style="clinic"] .gl .ln.first .mk.m-inask { font-size:12px; margin-top:0; color:var(--needs); font-weight:700 }
+html[data-style="clinic"] .gl .ln.first .mk.m-inask::before { display:none }
+
+/* ================================================================ Clinic's own look */
+html[data-style="clinic"], html[data-style="clinic"] body { background:var(--desk); color:var(--ink) }
+html[data-style="clinic"] body { font:14.5px/1.55 var(--f-ui); font-feature-settings:"tnum" 0; letter-spacing:-.003em }
+/* the highlighter is ink on top of the page, not a backdrop under it */
+html[data-style="clinic"] #marks { z-index:4; mix-blend-mode:multiply }
+ html[data-style="clinic"][data-theme="dark"] #marks { mix-blend-mode:screen } 
+html[data-style="clinic"] .app { z-index:auto }
+html[data-style="clinic"] button, html[data-style="clinic"] input, html[data-style="clinic"] textarea, html[data-style="clinic"] select { font-family:var(--f-ui) }
+
+/* rail: part of the desk, a quiet index */
+html[data-style="clinic"] .rail { background:var(--desk); border-right:1px solid var(--edge); padding:22px 0 22px 18px }
+html[data-style="clinic"] .rail h1 { font-size:13px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--sec); margin:2px 0 18px }
+html[data-style="clinic"] .add { padding-right:18px }
+html[data-style="clinic"] .add button { border-radius:8px; padding:9px 14px; font-weight:600 }
+html[data-style="clinic"] .me { padding-right:18px }
+html[data-style="clinic"] .me label, html[data-style="clinic"] .group h2 { font-size:11px; font-weight:600; letter-spacing:.07em; text-transform:uppercase }
+html[data-style="clinic"] .group h2 { margin:0 0 4px; padding-left:0 }
+html[data-style="clinic"] .me input { background:var(--paper); border:1px solid var(--edge); border-radius:7px }
+html[data-style="clinic"] .row { border-radius:8px 0 0 8px; border-left:0; padding:8px 18px 8px 10px; margin:1px 0 }
+html[data-style="clinic"] .row b { font-weight:600; font-size:13.5px }
+html[data-style="clinic"] .row span { font-size:12px; line-height:1.4; display:block; display:-webkit-box; -webkit-line-clamp:1; -webkit-box-orient:vertical; overflow:hidden }
+html[data-style="clinic"] .row:hover { background:var(--soft) }
+html[data-style="clinic"] .row[aria-current="true"] { background:var(--paper); box-shadow:inset 2px 0 0 var(--act), var(--sheet-shadow) }
+html[data-style="clinic"] .glrow { padding-left:10px } html[data-style="clinic"] .glrow b { font-weight:600; font-size:13px }
+html[data-style="clinic"] .glrow span { font-size:12px }
+
+/* controls */
+html[data-style="clinic"] button { background:var(--paper); color:var(--ink); border:1px solid var(--edge-2); border-radius:8px; font-weight:500; box-shadow:0 1px 0 rgba(70,56,30,.04) }
+html[data-style="clinic"] button:hover { background:var(--paper); border-color:var(--sec) }
+html[data-style="clinic"] button:active { transform:translateY(.5px) }
+html[data-style="clinic"] button.primary { background:var(--act); border-color:var(--act); color:#fff; box-shadow:0 1px 0 rgba(20,40,70,.18), inset 0 1px 0 rgba(255,255,255,.12) }
+html[data-style="clinic"] button.primary:hover { background:var(--act-h); border-color:var(--act-h) }
+html[data-style="clinic"] button:focus-visible, html[data-style="clinic"] a:focus-visible, html[data-style="clinic"] .nv:focus-visible { outline:2px solid var(--act); outline-offset:2px }
+ html[data-style="clinic"][data-theme="dark"] button.primary { color:#0F1A26 } 
+html[data-style="clinic"] kbd { font-family:var(--f-ui); font-size:10.5px; background:var(--paper); border-color:var(--edge-2); color:var(--sec) }
+
+/* the case header: one clear sentence, then quiet facts */
+html[data-style="clinic"] .main:has(.case-grid) { padding:22px 28px 120px }
+html[data-style="clinic"] .who { font-size:13px; color:var(--sec); align-items:baseline }
+html[data-style="clinic"] .who b { font-size:14.5px; font-weight:700; color:var(--ink); letter-spacing:-.005em }
+html[data-style="clinic"] .verdict { font-size:25px; line-height:1.2; font-weight:700; letter-spacing:-.018em; margin:12px 0 6px; color:var(--ink) }
+html[data-style="clinic"] .verdict::before { width:9px; height:9px; margin:0 11px 4px 1px }
+html[data-style="clinic"] .why { font-size:14px; color:var(--sec); max-width:70ch }
+html[data-style="clinic"] .rule, html[data-style="clinic"] .confirmed { font-size:12.5px; color:var(--dim); margin:1px 0 }
+html[data-style="clinic"] .confirmed b { color:var(--sec); font-weight:600 }
+/* the review reasons: two quiet lines, the rest on hover or focus */
+html[data-style="clinic"] .flag { display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; max-width:96ch; margin:8px 0 0;
+  padding:0 0 0 14px; position:relative; color:var(--sec); font-size:12.5px; line-height:1.55; cursor:default }
+html[data-style="clinic"] .flag::before { content:""; position:absolute; left:0; top:.55em; width:6px; height:6px; border-radius:50%; background:var(--needs) }
+html[data-style="clinic"] .flag:hover, html[data-style="clinic"] .flag:focus { -webkit-line-clamp:unset }
+html[data-style="clinic"] .prog { border:0; margin:14px 0 0; padding:0; gap:12px }
+html[data-style="clinic"] .prog .ticks { gap:3px }
+html[data-style="clinic"] .prog .ticks i { width:22px; height:3px; border-radius:3px; background:var(--edge-2) }
+html[data-style="clinic"] .prog .ticks i.ok { background:var(--act) } html[data-style="clinic"] .prog .ticks i.ask, html[data-style="clinic"] .prog .ticks i.inask { background:var(--needs); opacity:1 }
+html[data-style="clinic"] .prog .n { font-size:13px; font-variant-numeric:tabular-nums } html[data-style="clinic"] .prog .n b { font-weight:700 }
+html[data-style="clinic"] #progSign { border-radius:8px; padding:7px 18px; font-weight:600 }
+
+/* three columns: index · the sheet · the slip */
+html[data-style="clinic"] .case-grid { grid-template-columns:190px minmax(0, 1fr) 356px; gap:24px; margin-top:20px }
+html[data-style="clinic"] .nv-h { font-size:11px; letter-spacing:.07em; text-transform:uppercase; color:var(--dim); margin:6px 0 8px 10px }
+html[data-style="clinic"] .rq-nav .nv { font-size:12.5px; line-height:1.38; padding:6px 8px 6px 10px; border-radius:7px; color:var(--sec) }
+html[data-style="clinic"] .rq-nav .nv:hover { background:var(--soft); color:var(--ink) }
+html[data-style="clinic"] .rq-nav .nv[aria-current] { background:var(--paper); color:var(--ink); box-shadow:inset 2px 0 0 var(--act), var(--sheet-shadow) }
+html[data-style="clinic"] .nv .ck { color:var(--act) }
+
+/* the sheet */
+html[data-style="clinic"] .gl .doc { background:var(--paper); border:1px solid var(--edge); border-radius:3px; box-shadow:var(--sheet-shadow); padding:30px 0 40px; overflow:visible }
+html[data-style="clinic"] .gl .doc-head { border-bottom:1px solid var(--edge); margin:0 44px 18px 52px; padding:0 0 14px; font-size:12px; color:var(--dim) }
+html[data-style="clinic"] .gl .doc-head b { font-family:var(--f-doc); font-size:17px; font-weight:600; color:var(--ink); letter-spacing:-.005em }
+html[data-style="clinic"] .tv .sec-label { font-family:var(--f-ui); font-size:10.5px; font-weight:700; letter-spacing:.12em; color:var(--dim); padding-left:52px; margin-top:6px }
+html[data-style="clinic"] .gl .para { font-family:var(--f-doc); font-size:16.5px; line-height:1.72; padding:0 44px 0 calc(52px + var(--ind, 0) * .45em); margin:0 0 .55em; color:var(--ink); font-optical-sizing:auto; text-wrap:pretty; hanging-punctuation:first }
+html[data-style="clinic"] .gl .para > .ln .mk { left:24px }
+html[data-style="clinic"] .gl .para > .pg { left:4px }
+html[data-style="clinic"] .gl .para > .pg::before { font-family:var(--f-ui) }
+html[data-style="clinic"] .tv .ln.heading .tx { font-family:var(--f-doc); font-size:20px; font-weight:600; letter-spacing:-.01em; margin:14px 0 6px }
+html[data-style="clinic"] .tv .ln.other .tx, html[data-style="clinic"] .tv .ln.gap .tx, html[data-style="clinic"] .tv .ln.context .tx { color:var(--sec) }
+html[data-style="clinic"] .tv .ln.req .tx { color:var(--ink) }
+html[data-style="clinic"] .gl .ln.first .mk::before { width:6px; height:6px }
+html[data-style="clinic"] .gl .ln.first .mk.m-acc { color:var(--act); font-family:var(--f-ui) }
+html[data-style="clinic"] .gl .rest-fold > summary, html[data-style="clinic"] .gl .rest-hint { padding-left:52px; font-family:var(--f-ui); font-size:13px; color:var(--sec) }
+html[data-style="clinic"] .gl .fb-notes { margin-left:calc(52px + var(--ind, 0) * .45em); font-family:var(--f-ui) }
+html[data-style="clinic"] .gl .para:has(.ln.sel) { box-shadow:inset 2px 0 0 var(--act) }
+html[data-style="clinic"] .ask-pill { font-family:var(--f-ui); background:var(--paper); border-color:var(--edge-2); box-shadow:var(--slip-shadow) }
+
+/* the slip: evidence beside the sheet */
+html[data-style="clinic"] #side { background:var(--paper); border:1px solid var(--edge); border-radius:10px; box-shadow:var(--slip-shadow); padding:16px 18px 18px }
+html[data-style="clinic"] .sp-head { font-size:11.5px; color:var(--dim); letter-spacing:.01em }
+html[data-style="clinic"] .sp-words { font-family:var(--f-doc); font-size:16px; line-height:1.55; margin:4px 0 12px }
+html[data-style="clinic"] .sp-ruling { font-size:14px; font-weight:700 }
+html[data-style="clinic"] #side .evq { padding:8px 10px; margin:10px -10px 0; border-radius:8px }
+html[data-style="clinic"] #side .evq:hover { background:var(--soft) }
+html[data-style="clinic"] #side .evq q { font-family:var(--f-doc); font-size:15px; line-height:1.55 }
+html[data-style="clinic"] #side .evq small { font-size:11.5px; color:var(--dim); margin-top:4px }
+html[data-style="clinic"] .evq .side { font-size:10px; letter-spacing:.09em }
+html[data-style="clinic"] .sp-act button { padding:8px 16px; font-weight:600 }
+html[data-style="clinic"] .sp-acc { font-size:13px }
+html[data-style="clinic"] .sp-nav { border-top-color:var(--edge) }
+html[data-style="clinic"] #side h2 { font-size:15px; font-weight:700; letter-spacing:-.005em }
+html[data-style="clinic"] .pk a:hover { background:var(--soft) }
+html[data-style="clinic"] .pk-w { font-size:13px }
+html[data-style="clinic"] .draft { font-family:var(--f-doc) }
+html[data-style="clinic"] .style-switch { color:var(--dim) }
+
+/* the gate and the other states: cards on the desk */
+html[data-style="clinic"] .card, html[data-style="clinic"] .stopped, html[data-style="clinic"] .cmp-view { background:var(--paper); border:1px solid var(--edge); border-radius:10px; box-shadow:var(--sheet-shadow) }
+html[data-style="clinic"] .gcard.on, html[data-style="clinic"] .pw.on { border-color:var(--act); box-shadow:inset 3px 0 0 var(--act), var(--slip-shadow) }
+html[data-style="clinic"] .gcard h3, html[data-style="clinic"] .card h3 { font-family:var(--f-doc); font-size:18px; font-weight:600; letter-spacing:-.005em }
+html[data-style="clinic"] .gc-q q { font-family:var(--f-doc) }
+html[data-style="clinic"] .stages, html[data-style="clinic"] .stg { background:var(--paper); border-color:var(--edge) }
+html[data-style="clinic"] .dlg { background:rgba(29,35,43,.28); backdrop-filter:blur(2px) }
+html[data-style="clinic"] .dlg-card { background:var(--paper); border-color:var(--edge); box-shadow:0 24px 60px -12px rgba(29,35,43,.35) }
+
+@media (max-width:820px){
+  html[data-style="clinic"] .gl .para { padding:0 18px 0 calc(34px + var(--ind, 0) * .45em); font-size:16px }
+  html[data-style="clinic"] .gl .doc-head, html[data-style="clinic"] .tv .sec-label { margin-left:34px; padding-left:0 }
+  html[data-style="clinic"] .gl .para > .ln .mk { left:12px }
+  html[data-style="clinic"] .gl .doc { padding:20px 0 28px }
+}
+@media print {
+  html[data-style="clinic"] .gl .doc { box-shadow:none; border:0 }
+}
+
+/* proportions: the sheet leads; the index and the slip step back */
+@media (min-width:901px){ html[data-style="clinic"] .app { grid-template-columns:244px 1fr } }
+html[data-style="clinic"] .case-grid { grid-template-columns:172px minmax(0, 1fr) 336px; gap:22px }
+@media (max-width:1180px){ html[data-style="clinic"] .case-grid { grid-template-columns:minmax(0, 1fr) 320px } }
+@media (max-width:820px){ html[data-style="clinic"] .case-grid { grid-template-columns:minmax(0, 1fr) } }
+html[data-style="clinic"] .row, html[data-style="clinic"] .row:hover { border:0; box-shadow:none }
+html[data-style="clinic"] .row[aria-current="true"] { box-shadow:inset 2px 0 0 var(--act), var(--sheet-shadow) }
+html[data-style="clinic"] .group > div > .row, html[data-style="clinic"] #groups .row { background:transparent }
+html[data-style="clinic"] #groups .row[aria-current="true"] { background:var(--paper) }
+html[data-style="clinic"] .rq-nav .nv { border:0 !important; margin:0 0 2px }
+html[data-style="clinic"] .rq-nav .nv .nv-w { display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden }
+html[data-style="clinic"] .gl .doc-head span, html[data-style="clinic"] .gl .doc-head small { color:var(--dim) }
+html[data-style="clinic"] button.row, html[data-style="clinic"] button.nv { background:transparent; border:0; box-shadow:none; border-radius:8px; transform:none }
+html[data-style="clinic"] button.row:hover, html[data-style="clinic"] button.nv:hover { background:var(--soft) }
+html[data-style="clinic"] button.row[aria-current="true"], html[data-style="clinic"] button.nv[aria-current] { background:var(--paper); box-shadow:inset 2px 0 0 var(--act), var(--sheet-shadow) }
+html[data-style="clinic"] button.row { margin-right:14px; width:calc(100% - 14px) }
+@media (min-width:821px){ html[data-style="clinic"] #side { top:16px } }
+@media (max-width:820px){
+  html[data-style="clinic"] #side { border-radius:16px 16px 0 0; border-bottom:0; box-shadow:0 -10px 30px -8px rgba(70,56,30,.22); padding:10px 18px 18px }
+  html[data-style="clinic"] #side::before { content:""; display:block; width:36px; height:4px; border-radius:4px; background:var(--edge-2); margin:0 auto 10px }
+  html[data-style="clinic"] .gl .doc { border-radius:2px; margin:0 -4px }
+}
+/* phone, any screen but the landing (.app.slim): the rail folds to a slim bar (the queue is a desk task) */
+@media (max-width:820px){
+  html[data-style="clinic"] .app.slim .rail { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:12px 16px; border-right:0; border-bottom:1px solid var(--edge) }
+  html[data-style="clinic"] .app.slim .rail h1 { margin:0 }
+  html[data-style="clinic"] .app.slim .rail .add { margin:0; padding:0 } html[data-style="clinic"] .app.slim .rail .add button { width:auto; padding:6px 12px; font-size:13px }
+  html[data-style="clinic"] .app.slim .rail .me, html[data-style="clinic"] .app.slim .rail .group, html[data-style="clinic"] .app.slim .rail #groups { display:none }
+}
+
+/* accepted: a settled, deeper ink and a fine rule under it, so "locked in" reads at a glance */
+
+/* the index: the current item is enough; no heavy focus box */
+html[data-style="clinic"] button.nv:focus-visible { outline:0 }
+html[data-style="clinic"] button.nv[aria-current]:focus-visible { box-shadow:inset 2px 0 0 var(--act), 0 0 0 1.5px color-mix(in srgb, var(--act) 35%, transparent), var(--sheet-shadow) }
+/* the key hint inside a primary button */
+html[data-style="clinic"] button.primary kbd, html[data-style="clinic"] .sp-act button.primary kbd { background:transparent; color:inherit; border-color:color-mix(in srgb, currentColor 45%, transparent); opacity:.85; margin-left:8px }
+/* evidence: the label sits above the quote; the quote gets the full width with a fine rule */
+html[data-style="clinic"] #side .evq { display:block; padding:8px 10px 8px 14px; margin:12px -4px 0; border-left:2px solid var(--edge-2); border-radius:0 8px 8px 0 }
+html[data-style="clinic"] #side .evq .side { display:block; background:none; padding:0; margin:0 0 4px; font-size:10px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--ready) }
+html[data-style="clinic"] #side .evq.against { border-left-color:var(--no) } html[data-style="clinic"] #side .evq.against .side { color:var(--no) }
+html[data-style="clinic"] #side .evq:not(.against) { border-left-color:color-mix(in srgb, var(--ready) 55%, transparent) }
+html[data-style="clinic"] .rq-nav button.nv:focus-visible { outline:0 }
+html[data-style="clinic"] .rq-nav button.nv:not([aria-current]):focus-visible { box-shadow:0 0 0 1.5px color-mix(in srgb, var(--act) 40%, transparent) }
+
+/* the signature block on the sheet: typeset like a stamp on a form */
+html[data-style="clinic"] .sigblock { font-family:var(--f-ui); border:0.5px solid var(--edge-2); border-radius:2px; background:transparent; padding:5px 12px; color:var(--sec) }
+html[data-style="clinic"] .sigblock .sig-l { font-family:var(--f-doc); font-variant:all-small-caps; letter-spacing:.08em; font-size:13px; color:var(--ink) }
+
+/* review reasons are already short whole sentences with "N more": never clamp them mid-word */
+html[data-style="clinic"] .flag.reasons { display:block; -webkit-line-clamp:unset; overflow:visible }
+
+/* the policy without a frame (v1.1-ui): no edge and no shadow around the guideline, only the faintest paper tone
+   so Clinic keeps a trace of its sheet; the side slip and the gate's cards keep their own look */
+html[data-style="clinic"] .gl .doc { background:color-mix(in srgb, var(--paper) 55%, var(--desk)); border:0; border-radius:6px; box-shadow:none; max-width:780px }
+@media (max-width:820px){ html[data-style="clinic"] .gl .doc { margin:0; border-radius:0; background:transparent } }

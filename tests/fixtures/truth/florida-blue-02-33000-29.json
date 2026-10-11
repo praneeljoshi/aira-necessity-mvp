@@ -1,0 +1,136 @@
+{
+  "id": "florida-blue-02-33000-29",
+  "payer": "Florida Blue",
+  "payer_aliases": ["Florida Blue", "BCBS FL", "BCBSFL", "Blue Cross Blue Shield of Florida", "Blue Cross and Blue Shield of Florida", "BCBS of Florida"],
+  "title": "Endovascular Stent Grafts for Disorders of the Thoracic Aorta",
+  "guideline_number": "02-33000-29",
+  "effective_date": "2026-01-01",
+  "reviewed_date": "2025-09-25",
+  "source_file": "bcbsfl-02-33000-29-endovascular-stent-grafts-for-disorders-of-the-tho.pdf",
+  "plan_types": ["All lines of business unless otherwise noted in the Program Exceptions section"],
+  "excluded_plans": ["Federal Employee Program (FEP): Follow FEP guidelines", "State Account Organization (SAO): Follow SAO guidelines"],
+  "scope": {
+    "cpt": {
+      "33880": "covered",
+      "33881": "covered",
+      "33882": "covered",
+      "33883": "covered",
+      "33886": "covered"
+    },
+    "icd10": []
+  },
+  "criteria": [
+    {
+      "id": "fda_approved_device",
+      "text": "Endovascular stent grafts using FDA-approved devices",
+      "question": "Is the planned thoracic endovascular stent graft an FDA-approved device (a named, commercially approved thoracic endograft rather than an investigational or off-label device)?",
+      "refs": []
+    },
+    {
+      "id": "descending_thoracic_aneurysm",
+      "text": "Descending thoracic aortic aneurysms",
+      "question": "Does imaging (CT angiography, MR angiography or angiography) document an aneurysm of the descending thoracic aorta (not the ascending aorta or aortic arch)?",
+      "refs": []
+    },
+    {
+      "id": "fda_approved_specifications",
+      "text": "according to FDA-approved specifications",
+      "question": "Does the aneurysm and the patient's anatomy fall within the FDA-approved specifications (instructions for use) of the chosen device, for example aneurysm size, proximal and distal landing zone length and diameter, and access vessel size?",
+      "refs": [],
+      "answerable": false
+    },
+    {
+      "id": "type_b_dissection",
+      "text": "type B (descending) thoracic aortic dissection",
+      "question": "Does imaging document a type B aortic dissection, that is one confined to the descending thoracic aorta without involvement of the ascending aorta?",
+      "refs": []
+    },
+    {
+      "id": "acute_dissection",
+      "text": "Acute",
+      "question": "Is the type B dissection acute (recent onset, newly diagnosed) rather than chronic or stable?",
+      "refs": []
+    },
+    {
+      "id": "organ_or_limb_ischemia",
+      "text": "organ or limb ischemia",
+      "question": "Is there documented organ ischemia (visceral, renal, spinal cord or other end-organ malperfusion) or limb ischemia caused by the dissection?",
+      "refs": []
+    },
+    {
+      "id": "dissection_rupture",
+      "text": "rupture",
+      "question": "Has the dissected aorta ruptured (contained or free rupture, for example hemothorax or mediastinal hemorrhage)?",
+      "refs": []
+    },
+    {
+      "id": "traumatic_descending_aortic_injury",
+      "text": "Traumatic descending aortic tears or rupture",
+      "question": "Is there a traumatic (for example blunt deceleration) tear or rupture of the descending thoracic aorta documented on imaging?",
+      "refs": []
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "descending_thoracic_aneurysm",
+      "name": "Descending thoracic aortic aneurysm according to FDA-approved specifications",
+      "applies_to_cpt": ["33880", "33881", "33882", "33883", "33886"],
+      "requires": {"type": "all", "label": "All of the following", "children": [
+        {"type": "leaf", "criterion": "fda_approved_device"},
+        {"type": "leaf", "criterion": "descending_thoracic_aneurysm"},
+        {"type": "leaf", "criterion": "fda_approved_specifications"}
+      ]},
+      "notes": ["The guideline states no size or anatomic threshold of its own; the thresholds are the device's FDA-approved specifications, so that leaf is marked not answerable from a chart."]
+    },
+    {
+      "id": "acute_complicated_type_b_dissection",
+      "name": "Acute, complicated type B (descending) thoracic aortic dissection",
+      "applies_to_cpt": ["33880", "33881", "33882", "33883", "33886"],
+      "requires": {"type": "all", "label": "All of the following", "children": [
+        {"type": "leaf", "criterion": "fda_approved_device"},
+        {"type": "leaf", "criterion": "type_b_dissection"},
+        {"type": "leaf", "criterion": "acute_dissection"},
+        {"type": "any", "label": "Complicated: one of the following", "children": [
+          {"type": "leaf", "criterion": "organ_or_limb_ischemia"},
+          {"type": "leaf", "criterion": "dissection_rupture"}
+        ]}
+      ]},
+      "notes": ["Uncomplicated type B dissection is named as experimental or investigational; a dissection with neither ischemia nor rupture fails the 'Complicated' any-node."]
+    },
+    {
+      "id": "traumatic_descending_aortic_injury",
+      "name": "Traumatic descending aortic tears or rupture",
+      "applies_to_cpt": ["33880", "33881", "33882", "33883", "33886"],
+      "requires": {"type": "all", "label": "All of the following", "children": [
+        {"type": "leaf", "criterion": "fda_approved_device"},
+        {"type": "leaf", "criterion": "traumatic_descending_aortic_injury"}
+      ]}
+    }
+  ],
+  "exclusions": [
+    {
+      "text": "Endovascular stent grafts are considered experimental or investigational for the treatment of descending aortic disorders that do not meet the above criteria, including but not limited to uncomplicated aortic dissection.",
+      "cpt": []
+    },
+    {
+      "text": "Endovascular stent grafts are considered experimental or investigational for the treatment of ascending aortic disorders, including but not limited to thoracic aortic arch aneurysms.",
+      "cpt": []
+    }
+  ],
+  "notes": [
+    "Source: a single clean copy of the guideline (no redline or duplicate copies in the PDF). Header dates: Original Effective Date 04/15/03, Reviewed 09/25/25, Revised 01/01/26. effective_date is the Revised date (the version in force) and reviewed_date the Reviewed date, following the hand-built 02-33000-31 example.",
+    "Pathways: one per bullet of the position statement. (1) Descending thoracic aortic aneurysms according to FDA-approved specifications; (2) Acute, complicated (organ or limb ischemia or rupture) type B (descending) thoracic aortic dissection; (3) Traumatic descending aortic tears or rupture. The document grants no other indication (no penetrating ulcer, intramural hematoma, chronic dissection, pseudoaneurysm or arch pathway), so none is built; a disorder outside the three bullets falls under the first exclusion.",
+    "General requirement: 'Endovascular stent grafts using FDA-approved devices' governs every bullet, so fda_approved_device sits inside each pathway's all-node rather than as its own pathway. It is marked answerable because a chart or order names the device and a reviewer can tell an approved commercial thoracic endograft from an investigational one; a reasonable reviewer could instead treat FDA approval as a look-up outside the chart and mark it not answerable.",
+    "Aneurysm bullet split into two criteria: the diagnosis ('Descending thoracic aortic aneurysms') and the device-labeling condition ('according to FDA-approved specifications'). The guideline itself states no aneurysm diameter, growth rate, symptom or landing-zone threshold; those live in each device's FDA labeling (instructions for use), i.e. another document, so fda_approved_specifications is answerable: false. A reviewer could instead accept an explicit surgeon statement that the anatomy is within the device IFU as chart evidence; that is the alternative reading.",
+    "Dissection bullet split into three requirements: type B (descending) thoracic aortic dissection; acute; complicated. 'Complicated' is defined by the parenthetical '(organ or limb ischemia or rupture)' and is modelled as an any-node over two leaves, 'organ or limb ischemia' and 'rupture'. Organ ischemia and limb ischemia were kept as one leaf (both are malperfusion, one chart question); a reviewer could split them into two leaves under the same any-node with no change in meaning.",
+    "'Acute' is a criterion of its own (verbatim text 'Acute') because the bullet grants coverage only for acute dissection; the description section says chronic, stable type B dissections are managed medically. The guideline does not define acute (no day count), so no threshold is set and the question asks for recent onset rather than chronic.",
+    "Traumatic bullet kept as one leaf ('Traumatic descending aortic tears or rupture'): a tear and a rupture are both blunt/penetrating traumatic aortic injury, and the question covers either. A reviewer could split it into an any-node of 'tears' and 'rupture'.",
+    "The two exclusions are not repeated as not-nodes inside the pathways: ascending aortic and arch disorders fail the 'descending' / 'type B (descending)' leaves, and uncomplicated dissection fails the 'Complicated' any-node. Both exclusions carry an empty cpt list: no code in the billing table is exclusively an ascending-aorta or uncomplicated-dissection procedure (33880 may extend proximally into the arch and ascending aorta as a landing zone, but it describes repair of the descending thoracic aorta, not treatment of an ascending disorder).",
+    "Code-to-pathway mapping: the document ties no CPT code to any bullet. All five codes (33880, 33881, 33882 primary TEVAR variants; 33883 delayed proximal extension; 33886 delayed distal extension) describe endovascular repair of the descending thoracic aorta, and the governing question for each is the underlying disorder, so every pathway lists all five explicitly. Explicit lists were chosen over an empty list so the mapping does not depend on the app's rule that an empty list governs only codes no other pathway names. For a delayed extension (33883/33886) the pathway is the indication of the original repair; the guideline gives no separate reintervention criteria.",
+    "All five codes are tagged covered: the billing section lists them without comment and the position statement grants medical necessity for the three conditions. None is tagged investigational because the investigational statements are about disorders (ascending, uncomplicated dissection), not about any code.",
+    "Left out, with reasons: the DESCRIPTION and 'Summary and Analysis of Evidence' paragraphs (background and evidence review, not requirements; the sentence 'Type A dissections (involving the ascending aorta) are treated surgically' is descriptive and is already reflected by the ascending exclusion); the two sentences 'The evidence is insufficient to determine the effects of the technology on health outcomes.' (rationale for the exclusions); REIMBURSEMENT INFORMATION ('Refer to section entitled POSITION STATEMENT', no new rule); the step-therapy exemption paragraph (this guideline has no step-therapy requirement); DEFINITIONS, RELATED GUIDELINES (02-33000-22 abdominal aortic aneurysm is a separate document), REFERENCES, COMMITTEE APPROVAL and GUIDELINE UPDATE INFORMATION.",
+    "Program exceptions: FEP and SAO follow their own guidelines (excluded_plans). Medicare Advantage: 'No National Coverage Determination (NCD) and/or Local Coverage Determination (LCD) were found', so Medicare Advantage products are not excluded and this guideline applies to them.",
+    "No ICD-10 codes appear in the document; scope.icd10 is empty. No numeric threshold appears anywhere in the position statement, so no criterion carries a threshold."
+  ],
+  "status": "ok"
+}

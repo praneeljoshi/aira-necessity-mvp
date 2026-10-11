@@ -1,0 +1,19 @@
+{
+  "payer": "Louisiana Healthcare Connections (Centene)",
+  "payer_key": "centene",
+  "treatment": "laa-closure",
+  "title": "Percutaneous Left Atrial Appendage Closure",
+  "policy_number": "LA.CP.MP.147",
+  "effective": "",
+  "url": "https://www.ldh.la.gov/assets/medicaid/MCPP/8.6.24/1387_LHCC_LA.CP.MP.147_Percutaneous_Left_Atrial_Appendage.pdf",
+  "final_url": "https://www.ldh.la.gov/assets/medicaid/MCPP/8.6.24/1387_LHCC_LA.CP.MP.147_Percutaneous_Left_Atrial_Appendage.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "lhcc-la-cp-mp-147-percutaneous-left-atrial-appendage-closure.pdf",
+  "sha256": "19a8e857ac4c7d32ffdb63bbf7a4eabb9c7bf05a08dac08b3056f06086b6a928",
+  "pages": 8,
+  "bytes": 432382,
+  "retrieved": "2026-10-09",
+  "printed_date": "Date of Last Revision 06/2307/24 (redline merged: 06/23 and 07/24); annual review 07/24"
+}

@@ -1,0 +1,19 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "dermabrasion-chemical-peel-salabrasion-a",
+  "title": "Dermabrasion, Chemical Peel, Salabrasion, and Acne Surgery",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JEWFSJ597UYOK7NMP",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-10000-08",
+  "original_effective": "05/15/02",
+  "reviewed": "01/22/26",
+  "revised": "02/15/26",
+  "file": "bcbsfl-02-10000-08-dermabrasion-chemical-peel-salabrasion-and-acne-su.pdf",
+  "sha256": "ae21dea0e6444c65badc98a8274ea6e9a91ece2445d2a43f540a940d87e46964",
+  "pages": 7,
+  "bytes": 622295,
+  "retrieved": "2026-10-09"
+}

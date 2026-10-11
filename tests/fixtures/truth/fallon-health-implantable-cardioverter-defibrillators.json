@@ -1,0 +1,366 @@
+{
+  "id": "fallon-health-implantable-cardioverter-defibrillators",
+  "payer": "Fallon Health",
+  "payer_aliases": [
+    "Fallon Health",
+    "Fallon",
+    "Fallon Community Health Plan",
+    "FCHP",
+    "Fallon Medicare Plus",
+    "NaviCare",
+    "NaviCare HMO SNP",
+    "Summit Eldercare PACE",
+    "Fallon Health Weinberg PACE",
+    "Fallon Health Community Care",
+    "Fallon Health MassHealth ACO"
+  ],
+  "title": "Implantable Cardioverter Defibrillators",
+  "guideline_number": null,
+  "effective_date": "2026-09-01",
+  "reviewed_date": "2026-07-21",
+  "source_file": "fallon-implantable-cardioverter-defibrillators.pdf",
+  "plan_types": [
+    "Fallon Medicare Plus",
+    "MassHealth ACO",
+    "NaviCare HMO SNP (Dual Eligible Medicare Advantage and MassHealth)",
+    "PACE (Summit Eldercare PACE, Fallon Health Weinberg PACE)",
+    "Community Care"
+  ],
+  "excluded_plans": [],
+  "scope": {
+    "cpt": {
+      "33202": "covered",
+      "33203": "covered",
+      "33215": "covered",
+      "33216": "covered",
+      "33217": "covered",
+      "33218": "covered",
+      "33220": "covered",
+      "33223": "covered",
+      "33224": "covered",
+      "33225": "covered",
+      "33230": "covered",
+      "33231": "covered",
+      "33240": "covered",
+      "33241": "covered",
+      "33243": "covered",
+      "33244": "covered",
+      "33249": "covered",
+      "33262": "covered",
+      "33263": "covered",
+      "33264": "covered",
+      "33270": "covered",
+      "33271": "covered",
+      "33272": "covered",
+      "33273": "covered",
+      "C7537": "covered",
+      "C7538": "covered",
+      "C7539": "covered",
+      "C7540": "covered",
+      "G0448": "non_covered",
+      "C1721": "non_covered",
+      "C1722": "non_covered",
+      "C1777": "non_covered",
+      "C1779": "non_covered",
+      "C1882": "non_covered",
+      "C1895": "non_covered",
+      "C1896": "non_covered",
+      "C1898": "non_covered",
+      "C1899": "non_covered",
+      "0571T": "covered",
+      "0572T": "covered",
+      "0573T": "covered",
+      "0574T": "covered",
+      "0575T": "covered",
+      "0576T": "covered",
+      "0577T": "covered",
+      "0578T": "covered",
+      "0579T": "covered",
+      "0580T": "covered",
+      "0614T": "covered"
+    },
+    "icd10": []
+  },
+  "criteria": [
+    {
+      "id": "member_18_years_or_older",
+      "text": "members 18 years of age and older",
+      "question": "Is the member 18 years of age or older on the date of service?",
+      "threshold": {"kind": "number", "op": "gte", "value": 18, "unit": "years"},
+      "refs": [],
+      "answerable": true
+    },
+    {
+      "id": "interqual_biventricular_pacemaker_icd_insertion",
+      "text": "InterQual® CP:Procedures, Pacemaker Insertion, Biventricular + Implantable Cardioverter Defibrillator (ICD) Insertion",
+      "question": "Does the chart meet the InterQual CP: Procedures, Pacemaker Insertion, Biventricular + Implantable Cardioverter Defibrillator (ICD) Insertion criteria in effect on the date of service, for both the biventricular pacemaker and the ICD insertion (or the biventricular ICD pulse generator replacement)? (The criteria are held in InterQual, not in this policy.)",
+      "threshold": null,
+      "refs": [],
+      "answerable": false
+    },
+    {
+      "id": "interqual_icd_insertion",
+      "text": "InterQual® CP:Procedures, Implantable Cardioverter Defibrillator (ICD) Insertion",
+      "question": "Does the chart meet the InterQual CP: Procedures, Implantable Cardioverter Defibrillator (ICD) Insertion criteria in effect on the date of service (ICD insertion, pulse generator replacement, or subcutaneous ICD insertion subset as applicable)? (The criteria are held in InterQual, not in this policy.)",
+      "threshold": null,
+      "refs": [],
+      "answerable": false
+    },
+    {
+      "id": "dual_chamber_icd_planned",
+      "text": "When a dual-chamber ICD insertion is planned",
+      "question": "Is the planned device a dual-chamber ICD (an atrial pacing lead in addition to the ventricular lead)?",
+      "threshold": null,
+      "refs": [],
+      "answerable": true
+    },
+    {
+      "id": "interqual_pacemaker_insertion_atrial_lead",
+      "text": "criteria must also be met for the insertion of an atrial pacing lead. For approval of the atrial pacing lead, see the “Pacemaker Insertion” criteria subset.",
+      "question": "Does the chart meet the InterQual CP: Procedures, Pacemaker Insertion criteria for the atrial pacing lead? (The criteria are held in InterQual, not in this policy.)",
+      "threshold": null,
+      "refs": [],
+      "answerable": false
+    },
+    {
+      "id": "ncd_20_4_nationally_covered_indications",
+      "text": "Coverage criteria for implantable cardioverter defibrillators are fully established by Medicare for beneficiaries who meet coverage criteria in section B. Nationally Covered Indications, under Indications and Limitations of Coverage.",
+      "question": "Does the member meet one of the Nationally Covered Indications in section B of NCD 20.4 Implantable Cardioverter Defibrillators (Version 5, effective 07/31/2023)? (The criteria are held in the NCD, not in this policy.)",
+      "threshold": null,
+      "refs": [],
+      "answerable": false
+    },
+    {
+      "id": "unos_heart_transplant_candidate",
+      "text": "candidates for heart transplantation on the United Network for Organ Sharing (UNOS) transplant list awaiting a donor heart",
+      "question": "Is the member listed on the UNOS heart transplant waiting list as a candidate awaiting a donor heart?",
+      "threshold": null,
+      "refs": [],
+      "answerable": true
+    },
+    {
+      "id": "bridge_to_transplant_determined_by_plan",
+      "text": "coverage of implantable cardioverter defibrillators, as with cardiac resynchronization therapy, as a bridge-to-transplant to prolong survival until a donor becomes available will be determined by the Plan",
+      "question": "Has the Plan made a case-by-case determination that the ICD is covered as a bridge-to-transplant? (This is a Plan decision, not something a chart can show.)",
+      "threshold": null,
+      "refs": [],
+      "answerable": false
+    },
+    {
+      "id": "category_b_ide_trial",
+      "text": "All other indications for ICDs not currently covered in accordance with this decision may be covered under Category B Investigational Device Exemption (IDE) trials (42 CFR 405.201).",
+      "question": "Is the ICD being implanted within a Category B IDE trial such that coverage follows 42 CFR 405.201? (Coverage under the IDE regulation is a determination outside this policy; 'may be covered' is permissive.)",
+      "threshold": null,
+      "refs": [],
+      "answerable": false
+    },
+    {
+      "id": "ev_icd_ncd_20_4_criteria",
+      "text": "Refer to NCD 20.4 for coverage criteria.",
+      "question": "Does the member meet the NCD 20.4 Implantable Cardiac Defibrillators (ICDs) coverage criteria for the extravascular (substernal) ICD? (The criteria are held in the NCD, not in this policy.)",
+      "threshold": null,
+      "refs": [],
+      "answerable": false
+    },
+    {
+      "id": "ev_icd_diagnosis_code_specified_in_ncd",
+      "text": "an ICD-10-CM diagnosis code or code combination specified in the NCD (Source: CMS Transmittal R13483CP) or in Medicare Claims Processing Manual, Chapter 32, Section 270",
+      "question": "Is the claim billed with an ICD-10-CM diagnosis code or code combination from the list specified in NCD 20.4 / CMS Transmittal R13483CP / Claims Processing Manual Chapter 32 Section 270? (The code list is held in those documents, not in this policy.)",
+      "threshold": null,
+      "refs": [],
+      "answerable": false
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "masshealth_cc_biventricular_icd_insertion",
+      "name": "MassHealth ACO / Community Care: biventricular pacemaker + ICD insertion (InterQual)",
+      "applies_to_cpt": ["33224", "33225", "33249"],
+      "requires": {
+        "type": "all",
+        "label": "InterQual criteria for MassHealth ACO and Community Care members 18 years of age and older",
+        "children": [
+          {"type": "leaf", "criterion": "member_18_years_or_older"},
+          {"type": "leaf", "criterion": "interqual_biventricular_pacemaker_icd_insertion"}
+        ]
+      },
+      "notes": [
+        "Document code list for this subset: 33214, 33224, 33225, 33249. 33214 is a pacemaker code that does not appear in this document's Coding section, so it is not in applies_to_cpt.",
+        "Note in the document: these criteria cover biventricular pacemaker insertion with an ICD; criteria must be met for both the pacemaker and ICD insertion.",
+        "33225 is listed in the Coding section as not requiring prior authorization (add-on code)."
+      ]
+    },
+    {
+      "id": "masshealth_cc_biventricular_icd_generator_replacement",
+      "name": "MassHealth ACO / Community Care: biventricular ICD pulse generator replacement (InterQual)",
+      "applies_to_cpt": ["33262", "33263", "33264"],
+      "requires": {
+        "type": "all",
+        "label": "InterQual criteria for MassHealth ACO and Community Care members 18 years of age and older",
+        "children": [
+          {"type": "leaf", "criterion": "member_18_years_or_older"},
+          {"type": "leaf", "criterion": "interqual_biventricular_pacemaker_icd_insertion"}
+        ]
+      },
+      "notes": [
+        "Document code list for this subset: 33212, 33213, 33221, 33262, 33263, 33264. 33212, 33213 and 33221 are pacemaker generator codes that do not appear in this document's Coding section, so they are not in applies_to_cpt.",
+        "Same InterQual subset as biventricular insertion (Pacemaker Insertion, Biventricular + ICD Insertion), pulse generator replacement criteria."
+      ]
+    },
+    {
+      "id": "masshealth_cc_icd_insertion",
+      "name": "MassHealth ACO / Community Care: ICD insertion, single or dual chamber (InterQual)",
+      "applies_to_cpt": ["33202", "33203", "33230", "33231", "33240", "33249"],
+      "requires": {
+        "type": "all",
+        "label": "InterQual criteria for MassHealth ACO and Community Care members 18 years of age and older",
+        "children": [
+          {"type": "leaf", "criterion": "member_18_years_or_older"},
+          {"type": "leaf", "criterion": "interqual_icd_insertion"},
+          {
+            "type": "any",
+            "label": "When a dual-chamber ICD insertion is planned, criteria must also be met for the insertion of an atrial pacing lead",
+            "children": [
+              {"type": "not", "label": "Not a dual-chamber ICD", "child": {"type": "leaf", "criterion": "dual_chamber_icd_planned"}},
+              {"type": "leaf", "criterion": "interqual_pacemaker_insertion_atrial_lead"}
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "Document code list for this subset: 33202, 33203, 33230, 33231, 33240, 33249.",
+        "The dual-chamber note is a conditional requirement, modelled as any(not dual-chamber, Pacemaker Insertion criteria for the atrial lead): a single-chamber ICD needs only the ICD Insertion subset; a dual-chamber ICD needs both."
+      ]
+    },
+    {
+      "id": "masshealth_cc_icd_generator_replacement",
+      "name": "MassHealth ACO / Community Care: ICD pulse generator replacement (InterQual)",
+      "applies_to_cpt": ["33216", "33217", "33262", "33263", "33264"],
+      "requires": {
+        "type": "all",
+        "label": "InterQual criteria for MassHealth ACO and Community Care members 18 years of age and older",
+        "children": [
+          {"type": "leaf", "criterion": "member_18_years_or_older"},
+          {"type": "leaf", "criterion": "interqual_icd_insertion"}
+        ]
+      },
+      "notes": [
+        "Document code list for this subset: 33216, 33217, 33262, 33263, 33264 (Pulse Generator Replacement under InterQual CP: Procedures, Implantable Cardioverter Defibrillator (ICD) Insertion)."
+      ]
+    },
+    {
+      "id": "masshealth_cc_subcutaneous_icd_insertion",
+      "name": "MassHealth ACO / Community Care: subcutaneous ICD (S-ICD) insertion (InterQual)",
+      "applies_to_cpt": ["33270", "33271"],
+      "requires": {
+        "type": "all",
+        "label": "InterQual criteria for MassHealth ACO and Community Care members 18 years of age and older",
+        "children": [
+          {"type": "leaf", "criterion": "member_18_years_or_older"},
+          {"type": "leaf", "criterion": "interqual_icd_insertion"}
+        ]
+      },
+      "notes": [
+        "Document code list for this subset: 33270, 33271 (Subcutaneous Implantable Cardioverter Defibrillator (SICD) Insertion under InterQual CP: Procedures, Implantable Cardioverter Defibrillator (ICD) Insertion)."
+      ]
+    },
+    {
+      "id": "medicare_ncd_20_4",
+      "name": "Fallon Medicare Plus / NaviCare / PACE: ICD and S-ICD per NCD 20.4 Nationally Covered Indications",
+      "applies_to_cpt": ["33202", "33203", "33216", "33217", "33224", "33225", "33230", "33231", "33240", "33249", "33262", "33263", "33264", "33270", "33271"],
+      "requires": {"type": "leaf", "criterion": "ncd_20_4_nationally_covered_indications"},
+      "notes": [
+        "Medicare Variation: Medicare statutes and regulations do not have coverage criteria for ICDs; Medicare has NCD 20.4 (Version 5, effective 07/31/2023); the MAC (Wellpoint Federal) has no LCD. Coverage criteria are fully established by Medicare in NCD 20.4 section B.",
+        "The document notes that the coverage indications in NCD 20.4 apply to subcutaneous ICDs (S-ICDs), so 33270/33271 are included.",
+        "Codes listed are the ICD procedure codes from the Coding section that require prior authorization, plus 33225 (named by the document in the biventricular + ICD list)."
+      ]
+    },
+    {
+      "id": "medicare_bridge_to_transplant",
+      "name": "Fallon Medicare Plus / NaviCare / PACE: ICD as a bridge-to-transplant for UNOS-listed heart transplant candidates (Plan determination)",
+      "applies_to_cpt": ["33202", "33203", "33216", "33217", "33224", "33225", "33230", "33231", "33240", "33249", "33262", "33263", "33264", "33270", "33271"],
+      "requires": {
+        "type": "all",
+        "label": "UNOS-listed transplant candidate; coverage determined by the Plan",
+        "children": [
+          {"type": "leaf", "criterion": "unos_heart_transplant_candidate"},
+          {"type": "leaf", "criterion": "bridge_to_transplant_determined_by_plan"}
+        ]
+      },
+      "notes": [
+        "The document grants no criteria for this population: coverage 'will be determined by the Plan'. The chart can show UNOS listing; the determination itself is unanswerable."
+      ]
+    },
+    {
+      "id": "medicare_category_b_ide_trial",
+      "name": "Fallon Medicare Plus / NaviCare / PACE: other indications under a Category B IDE trial",
+      "applies_to_cpt": ["33202", "33203", "33216", "33217", "33224", "33225", "33230", "33231", "33240", "33249", "33262", "33263", "33264", "33270", "33271"],
+      "requires": {"type": "leaf", "criterion": "category_b_ide_trial"},
+      "notes": [
+        "Sentence copied from NCD 20.4: 'may be covered under Category B IDE trials (42 CFR 405.201)'. Permissive, with the terms in the regulation, so the criterion is unanswerable."
+      ]
+    },
+    {
+      "id": "medicare_extravascular_icd",
+      "name": "Fallon Medicare Plus / NaviCare / PACE: extravascular (substernal) ICD, Aurora EV-ICD, per NCD 20.4",
+      "applies_to_cpt": ["0571T", "0572T", "0573T", "0574T", "0575T", "0576T", "0577T", "0578T", "0579T", "0580T", "0614T"],
+      "requires": {
+        "type": "all",
+        "label": "Covered in accordance with NCD 20.4 when billed with an EV-ICD CPT code and an NCD-specified diagnosis code",
+        "children": [
+          {"type": "leaf", "criterion": "ev_icd_ncd_20_4_criteria"},
+          {"type": "leaf", "criterion": "ev_icd_diagnosis_code_specified_in_ncd"}
+        ]
+      },
+      "notes": [
+        "Covered effective October 20, 2023 for Fallon Medicare Plus, NaviCare and PACE plan members only. For MassHealth ACO and Community Care members the EV-ICD is experimental/investigational and not medically necessary (see exclusions).",
+        "Only 0571T and 0572T require prior authorization (effective 12/1/2026); 0573T-0580T and 0614T are listed as not requiring prior authorization."
+      ]
+    }
+  ],
+  "exclusions": [
+    {
+      "text": "Any use of implantable cardioverter defibrillators other than outlined above.",
+      "cpt": [],
+      "refs": []
+    },
+    {
+      "text": "Extravascular implantable cardioverter defibrillator (EV-ICD) (CPT codes 0571T-0580T and 0614T), also known as substernal implantable cardioverter-defibrillators, are experimental/investigational and not medically necessary for MassHealth ACO and Community Care members.",
+      "cpt": ["0571T", "0572T", "0573T", "0574T", "0575T", "0576T", "0577T", "0578T", "0579T", "0580T", "0614T"],
+      "refs": []
+    },
+    {
+      "text": "The pass-through payment status for all of the following codes has expired. As such, no payment will be made for any of the following codes.",
+      "cpt": ["C1721", "C1722", "C1777", "C1779", "C1882", "C1895", "C1896", "C1898", "C1899"],
+      "refs": []
+    }
+  ],
+  "notes": [
+    "Status needs_review: this document holds no clinical coverage criteria of its own. For MassHealth ACO and Community Care members it defers entirely to three InterQual CP: Procedures subsets (effective 09/01/2024); for Fallon Medicare Plus, NaviCare and PACE it defers entirely to NCD 20.4 section B (and to NCD 20.4 for the EV-ICD). Every pathway is built so the structure, codes and plan split are recorded, and every deferred criterion is answerable: false. The only chart-answerable criteria are the age scope (18 and older), whether a dual-chamber ICD is planned, and UNOS listing, none of which alone grants coverage.",
+    "Judgment call — plan split: the schema has no per-pathway plan field, so the plan each pathway serves is in its name and notes. Five pathways are InterQual (MassHealth ACO and Community Care); four are Medicare (Fallon Medicare Plus, NaviCare HMO SNP, PACE). All five products are listed as plan_types because the document says the Policy applies to all of them; excluded_plans is empty because no product is sent to a different Fallon document. A reviewer could instead list the Medicare products as excluded_plans on the ground that their criteria are NCD 20.4.",
+    "Judgment call — '18 years of age and older' is modelled as an answerable criterion (number gte 18 years) inside each InterQual pathway. The sentence scopes when InterQual is used ('for MassHealth ACO and Community Care members 18 years of age and older'); the document says nothing about members under 18, so a minor does not meet any pathway and goes to review rather than being denied.",
+    "Judgment call — InterQual criteria are one criterion per InterQual subset (three subsets), not one per sub-item: the sub-item lines (e.g., 'Pulse Generator Replacement (33216, 33217, 33262, 33263, 33264)') are code lists, and the requirement sentence is 'refer to the InterQual Criteria in effect on the date of service'. The sub-items become pathways with their code lists. The note 'Criteria must be met for both the pacemaker and ICD insertion' is folded into the biventricular criterion's question rather than made a separate leaf, because both halves live in the same InterQual subset.",
+    "Judgment call — dual-chamber ICD: 'When a dual-chamber ICD insertion is planned, criteria must also be met for the insertion of an atrial pacing lead' is a conditional, modelled as any(not(dual-chamber planned), Pacemaker Insertion criteria for the atrial lead) inside the ICD insertion pathway, rather than a second pathway with the same codes. The standalone bullet 'InterQual CP:Procedures, Pacemaker Insertion' (33206, 33207, 33208; generator replacement 33212, 33213, 33221, 33227, 33228, 33229) is used only in this role: none of those pacemaker codes appear in this document's Coding section, so no pacemaker-only pathway is built and those codes are not in scope.cpt (left to the pacemaker policy).",
+    "Judgment call — codes in pathways: applies_to_cpt holds only codes from the document's Coding section. The InterQual bullets also name pacemaker codes 33214, 33212, 33213, 33221 for the biventricular subset; those are recorded in the pathway notes but omitted from applies_to_cpt and scope.cpt. Codes listed as not requiring prior authorization (33215, 33218, 33220, 33223, 33241, 33243, 33244, 33272, 33273, 0573T-0580T, 0614T, C7537-C7540) are tagged covered; only the EV-ICD ones are placed in a pathway (the EV-ICD coverage sentence names all eleven codes).",
+    "Judgment call — EV-ICD tag (0571T-0580T, 0614T): the document says both 'covered ... for Fallon Medicare Plus, NaviCare and PACE plan members in accordance with NCD 20.4' and 'experimental/investigational and not medically necessary for MassHealth ACO and Community Care members'. One tag per code is possible, so they are tagged covered (the Coding section lists them under the heading stating coverage, with prior authorization 'Yes effective 12/1/2026' for 0571T/0572T) and the MassHealth ACO / Community Care exclusion carries all eleven codes. A reviewer could tag them investigational on the strength of the Exclusions section; the plan of the member decides.",
+    "Judgment call — G0448 is tagged non_covered because the document's only statement about it is 'Not payable'. No exclusion is listed for it because 'Not payable' is a table cell, not a sentence.",
+    "Judgment call — device C-codes C1721, C1722, C1777, C1779, C1882, C1895, C1896, C1898, C1899: tagged non_covered because the document says 'no payment will be made for any of the following codes' (pass-through status expired). The document also says the codes remain active and hospitals are advised to report them on OPPS claims (packaged); the ICD device itself is part of the covered procedure. A reviewer could tag these covered as packaged device codes; the tag follows the document's words about payment for the code.",
+    "Judgment call — C7537-C7540: 'payable in ASC setting for providers reimbursed under Medicare ASC payment methodology', prior authorization 'No effective 9/1/2026'. Tagged covered. Their descriptors are pacemaker-with-LV-lead procedures; the document gives them no pathway and none is built.",
+    "Judgment call — bridge-to-transplant: 'coverage ... will be determined by the Plan' is modelled as a pathway (UNOS listing, answerable; Plan determination, unanswerable) so a UNOS-listed candidate routes to review rather than to the NCD pathway's NOT MET. A reviewer could treat this sentence as a note only.",
+    "Judgment call — Category B IDE trials: 'may be covered' is permissive and the terms are in 42 CFR 405.201, so the pathway's single criterion is unanswerable. A reviewer could drop this pathway or treat trial enrollment as answerable.",
+    "Left out: 'Prior authorization is required for insertion and/or replacement of implantable cardioverter defibrillators. This prior authorization is separate from any prior authorization that may be required for the member's inpatient hospital encounter.' Administrative, not a criterion. The Coding section's Prior Authorization Required column is recorded in pathway notes.",
+    "Left out: 'Medical necessity determination requires review of medical records. Specific elements ... commonly required ... include recent clinical evaluation which includes a detailed history and physical examination; laboratory and imaging studies, procedure reports, and reports from other providers' — a documentation expectation ('commonly required'), not a coverage criterion.",
+    "Left out: 'Fallon Health makes InterQual criteria available through the Transparency Tool on our website, effective January 1, 2024.' Administrative.",
+    "Left out: MassHealth Variation ('MassHealth does not have Guidelines for Medical Necessity Determination for implantable cardioverter defibrillators ... therefore, the Plan's coverage criteria are applicable') and Instructions for Use (NaviCare: NCD/LCD first, then MassHealth guidelines if the member does not meet Medicare criteria; PACE: all services authorized by the Interdisciplinary Team; benefit plan governs). These say which document governs, which is already reflected in the pathway split; they add no criterion. For a NaviCare member who fails NCD 20.4, the Plan's criteria (InterQual) would apply next per Instructions for Use; the tree does not encode this fallback because pathways carry no plan field.",
+    "Left out: Overview, Summary of Evidence, Analysis of Evidence, References and Policy history: background only. The HCPCS C-codes paragraph (Section 1833(t)(6)(B)) is statutory background for the pass-through statement.",
+    "No ICD-10 codes are listed; the EV-ICD diagnosis codes are 'specified in the NCD' (CMS Transmittal R13483CP; Claims Processing Manual Chapter 32, Section 270).",
+    "Effective date is the footer 'Effective 09/01/2026'; reviewed_date is the last Utilization Management Committee review, 07/21/2026. The document prints no policy number."
+  ],
+  "status": "needs_review",
+  "review": {
+    "problems": [],
+    "skipped": [],
+    "not_used": [],
+    "no_criteria_reason": "The document holds no clinical coverage criteria of its own: MassHealth ACO and Community Care members (18 and older) are judged by InterQual CP: Procedures subsets (Pacemaker Insertion, Biventricular + ICD Insertion; ICD Insertion; Pacemaker Insertion), and Fallon Medicare Plus, NaviCare and PACE members by NCD 20.4 section B (and NCD 20.4 for the Aurora EV-ICD). Bridge-to-transplant coverage is determined by the Plan case by case."
+  }
+}

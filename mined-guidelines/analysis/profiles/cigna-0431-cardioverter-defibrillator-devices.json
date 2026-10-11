@@ -1,0 +1,107 @@
+{
+  "file": "cigna-0431-cardioverter-defibrillator-devices.pdf",
+  "treatment": "icd",
+  "payer": "cigna",
+  "doc_kind": "coverage policy (Cigna Medical Coverage Policy 0431)",
+  "lines_of_business": ["Health benefit plans administered by Cigna Companies; some lines provide utilization review only", "'Coverage for cardioverter-defibrillator devices varies across plans. Refer to the customer's benefit plan document'"],
+  "effective_or_revised": "Effective 7/15/2026; Next Review 7/15/2027; annual review 7/15/2026 removed the wearable defibrillator statement; combined with CP 0181 on 8/15/2024",
+  "sections_in_order": ["Instructions for Use", "Overview", "Coverage Policy (Transvenous ICD: Secondary Prevention, Primary Prevention, Children, Replacement; S-ICD; Substernal; AED)", "Coding Information", "General Background", "Health Equity Considerations", "References", "Revision Details"],
+  "criteria_location": "Coverage Policy, pp. 2-5 of 42. General Background (pp. 6-35) holds evidence and guideline summaries.",
+  "procedures_covered": ["Transvenous ICD (secondary prevention, primary prevention, children)", "ICD pulse generator/lead replacement", "Subcutaneous ICD (33270)", "Substernal ICD (experimental)", "Home automatic external defibrillator (E0617)", "Wearable defibrillators named in Overview but the statement was removed 7/15/2026"],
+  "logic": {
+    "top_level": "pathways (secondary prevention any-of 6 groups; primary prevention any-of 6 groups; children any-of 4; S-ICD an ALL/NONE-of list)",
+    "max_nesting_depth": 4,
+    "k_of_n": [
+      {"k": 1, "n": 6, "quote": "considered medically necessary for the secondary prevention of sudden cardiac death for ANY of the following indications", "pointer": "Secondary Prevention"},
+      {"k": 1, "n": 6, "quote": "considered medically necessary for the primary prevention of sudden cardiac death for ANY of the following indications", "pointer": "Primary Prevention"},
+      {"k": 1, "n": 3, "quote": "In an individual that is post-MI (>= 40 days) with ischemic cardiomyopathy ... ANY of the following: LVEF <= 30% NYHA class I; LVEF <= 35% NYHA class II or III; LVEF <= 40% NSVT with EPS showing inducible sustained VT/VF", "pointer": "Primary Prevention"},
+      {"k": 1, "n": 8, "quote": "Hypertrophic cardiomyopathy (HCM) with 1 or more risk factors", "pointer": "Primary Prevention genetic"},
+      {"k": 0, "n": 3, "quote": "has NONE of the following: symptomatic bradycardia; incessant ventricular tachycardia (VT); spontaneous frequent recurring VT reliably terminated with anti-tachycardia pacing", "pointer": "S-ICD (NOT any of three)"},
+      {"k": 2, "n": 4, "quote": "Nonischemic cardiomyopathy (NICM) due to a Lamin A/C mutation with 2 or more risk factors (e.g., NSVT, LVEF <45%, non-missense mutation, male sex)", "pointer": "Primary Prevention genetic"}
+    ],
+    "exclusions_or_contraindications": "No exclusion list. Closing sentences: 'A transvenous ICD is considered not medically necessary for ANY other indication', and a closed S-ICD rule. S-ICD uses 'NONE of the following' (3 items). Substernal ICD is blanket experimental. No survival-more-than-one-year gate.",
+    "initial_vs_repeat": "'Replacement of a transvenous ICD pulse generator and/or leads is considered medically necessary.' No conditions, no end-of-life test.",
+    "and_or_ambiguity": [
+      {"quote": "In an individual that is post-acute myocardial infarction (MI) (> 48 hours and < 40 days) and/or revascularization (< 90 days), with LVEF <= 40% and BOTH of the following: Nonsustained ventricular tachycardia (NSVT); Inducible sustained VT at electrophysiological (EP) study", "why_ambiguous": "'and/or' between MI window and revascularization window; this early post-MI ICD pathway contradicts Florida Blue's investigational statement for MI less than 40 days."},
+      {"quote": "Individual with unexplained syncope due to ANY of the following: Cardiac sarcoidosis with documented spontaneous sustained ventricular tachycardia; Ischemic heart disease with inducible sustained monomorphic VT on electrophysiological study; ... Structural heart disease (e.g. prior MI) with LVEF <= 35%", "why_ambiguous": "'due to ANY of the following' makes the listed conditions the causes of syncope; elsewhere they act as diagnoses. Also 'Nonischemic dilated cardiomyopathy, LVEF <= 49%' sets a threshold far above other payers' 35%."},
+      {"quote": "Individual without structural heart disease (left ventricular ejection fraction [LVEF] > 50%) or known genetic causes of sustained VT/VF and EITHER of the following", "why_ambiguous": "'without structural heart disease ... or known genetic causes': is the 'or' a second excluded thing or a second condition to be satisfied? And LVEF > 50% leaves exactly 50 uncovered, while elsewhere structural disease is defined as LVEF < 50%."},
+      {"quote": "Individual with syncope of suspected arrhythmic cause and ANY of the following: ... Long QT Syndrome (LQTS) and EITHER of the following: syncope while receiving beta-blockers; beta-blockers are contraindicated", "why_ambiguous": "A three-level nested list inside an ANY list; the EITHER binds only to LQTS."},
+      {"quote": "A transvenous ICD is considered medically necessary in a child with ANY of the following", "why_ambiguous": "'child' not defined by age; adult/child split is by population label."},
+      {"quote": "Replacement of a transvenous ICD pulse generator and/or leads is considered medically necessary.", "why_ambiguous": "Unconditional; replacement of a device that was never medically necessary (outside these criteria) or after a covered explant is not distinguished."}
+    ]
+  },
+  "requirement_kinds": [
+    {"kind": "diagnosis", "quote": "Individual with cardiac arrest due to ventricular fibrillation (VF) or hemodynamically unstable sustained ventricular tachycardia (VT) after reversable causes ... have been excluded", "where": "Secondary Prevention"},
+    {"kind": "measurement threshold", "quote": "post-MI (>= 40 days) with ischemic cardiomyopathy ... LVEF <= 30% NYHA class I ... LVEF <= 35% NYHA class II or III (despite guideline-directed medical therapy)", "where": "Primary Prevention"},
+    {"kind": "conservative therapy", "quote": "Individual with nonischemic cardiomyopathy, at least 3 months on guideline-directed medical therapy, with LVEF <= 35%, NYHA Class II-III", "where": "Primary Prevention"},
+    {"kind": "prior procedure", "quote": "no recent percutaneous coronary intervention (PCI) or coronary artery bypass graft (CABG) (>= 90 days)", "where": "Primary Prevention"},
+    {"kind": "diagnosis", "quote": "Myotonic dystrophy; Chagas disease; Acute lymphocytic myocarditis, newly diagnosed (< 3 months); Giant cell myocarditis; Peripartum cardiomyopathy, persists > 3 months postpartum, LVEF <= 35%", "where": "Primary Prevention"},
+    {"kind": "imaging finding", "quote": "LV thickness >= 30 mm by echocardiography or cardiovascular magnetic resonance (CMR) imaging; Extensive late gadolinium enhancement (LGE) on CMR", "where": "Primary Prevention, HCM"},
+    {"kind": "age", "quote": "A transvenous ICD is considered medically necessary in a child with ANY of the following", "where": "Children (no age stated)"},
+    {"kind": "other", "quote": "has met the criteria for a transvenous ICD and has NONE of the following: symptomatic bradycardia; incessant VT; spontaneous frequent recurring VT reliably terminated with ATP", "where": "S-ICD"},
+    {"kind": "other", "quote": "AED ... considered medically necessary for an individual who meets criteria for an ICD but is not currently a candidate", "where": "AED"}
+  ],
+  "thresholds": [
+    {"quantity": "LVEF (ischemic NYHA I)", "value": "<= 30", "unit": "%", "quote": "LVEF <= 30% NYHA class I"},
+    {"quantity": "LVEF (ischemic NYHA II-III)", "value": "<= 35", "unit": "%", "quote": "LVEF <= 35% NYHA class II or III"},
+    {"quantity": "LVEF (post-MI early, ischemic NSVT/EP)", "value": "<= 40", "unit": "%", "quote": "LVEF <= 40% NSVT with EPS showing inducible sustained VT/VF"},
+    {"quantity": "LVEF (NICM)", "value": "<= 35", "unit": "%", "quote": "LVEF <= 35%, NYHA Class II-III"},
+    {"quantity": "LVEF (NICM with syncope)", "value": "<= 49", "unit": "%", "quote": "Nonischemic dilated cardiomyopathy, LVEF <= 49%"},
+    {"quantity": "LVEF (syncope, structural disease)", "value": "<= 35 (36-49 with inducible VT)", "unit": "%", "quote": "Structural heart disease (e.g. prior MI) with LVEF 36%-49% and inducible sustained VT/VF"},
+    {"quantity": "GDMT duration (NICM)", "value": ">= 3", "unit": "months", "quote": "at least 3 months on guideline-directed medical therapy"},
+    {"quantity": "post-MI window (early pathway)", "value": "> 48 h and < 40", "unit": "hours/days", "quote": "post-acute myocardial infarction (MI) (> 48 hours and < 40 days)"},
+    {"quantity": "revascularization (early pathway)", "value": "< 90", "unit": "days", "quote": "revascularization (< 90 days)"},
+    {"quantity": "time since PCI/CABG (late pathway)", "value": ">= 90", "unit": "days", "quote": "no recent PCI or CABG (>= 90 days)"},
+    {"quantity": "LV thickness", "value": ">= 30", "unit": "mm", "quote": "LV thickness >= 30 mm"},
+    {"quantity": "LVEF (HCM dysfunction)", "value": "< 50", "unit": "%", "quote": "LV systolic dysfunction (EF < 50%)"},
+    {"quantity": "pediatric LVH", "value": "z-score >= 20 (or > 10 with other risk factors)", "unit": "z-score", "quote": "maximal wall thickness that corresponds to a z-score of >=20 (and >10 in conjunction with other risk factors)"},
+    {"quantity": "myocarditis", "value": "< 3", "unit": "months since diagnosis", "quote": "Acute lymphocytic myocarditis, newly diagnosed (< 3 months)"},
+    {"quantity": "peripartum cardiomyopathy", "value": "> 3 months, LVEF <= 35", "unit": "months / %", "quote": "persists > 3 months postpartum, LVEF <= 35%"}
+  ],
+  "time_windows": [
+    {"what": "NICM guideline-directed medical therapy", "length": "at least 3 months", "quote": "at least 3 months on guideline-directed medical therapy"},
+    {"what": "post-MI (late pathway)", "length": "40 days or more", "quote": "post-MI (>= 40 days)"},
+    {"what": "post-MI (early pathway)", "length": "more than 48 hours, less than 40 days", "quote": "(> 48 hours and < 40 days)"},
+    {"what": "revascularization", "length": "<90 days (early) / >=90 days (late)", "quote": "revascularization (< 90 days)"},
+    {"what": "myocarditis", "length": "newly diagnosed, less than 3 months", "quote": "newly diagnosed (< 3 months)"},
+    {"what": "peripartum", "length": "persists more than 3 months postpartum", "quote": "persists > 3 months postpartum"}
+  ],
+  "codes": {"cpt_hcpcs_listed": true, "icd10_listed": false, "codes_tied_to_criteria": "Four short tables, each headed 'Considered Medically Necessary when criteria in the applicable policy statements listed above are met' (33224, 33225, 33249; C1883; S-ICD 33270; AED E0617) or 'Experimental/Investigational/Unproven' (0571T). Generator-only codes (33230, 33231, 33240, 33262-33264) and lead codes are not listed even though replacement is covered in the text.", "non_covered_code_lists": "0571T substernal ICD"},
+  "external_dependencies": [
+    {"what": "Related Cigna coverage policies", "quote": "Related Coverage Resources: Biventricular Pacing/Cardiac Resynchronization Therapy (CRT); Cardiac Electrophysiological (EP) Studies"},
+    {"what": "Plan document governs", "quote": "Coverage for cardioverter-defibrillator devices varies across plans. Refer to the customer's benefit plan document for coverage details."},
+    {"what": "Delegated vendor guidelines", "quote": "In certain markets, delegated vendor guidelines may be used to support medical necessity and other coverage determinations."},
+    {"what": "Reference to professional societies", "quote": "2025 Appropriate Use Criteria for Implantable Cardioverter-Defibrillators, Cardiac Resynchronization Therapy, and Pacing (reference 33)"}
+  ],
+  "definitions_that_change_meaning": [
+    {"term": "(no definitions section)", "definition_quote": "'guideline-directed medical therapy', 'structural heart disease', 'sustained VT', NYHA classes are used but never defined in the coverage policy"},
+    {"term": "Scope", "definition_quote": "This Coverage Policy addresses the use of transvenous implantable cardioverter defibrillators, subcutaneous implantable cardioverter defibrillators, substernal implantable cardioverter-defibrillators, wearable cardioverter-defibrillators, and automatic external defibrillators in the home setting."}
+  ],
+  "vague_terms": [
+    {"quote": "(despite guideline-directed medical therapy)", "problem": "GDMT not defined, no duration for the ischemic pathway"},
+    {"quote": "Individual with structural heart disease (e.g., prior MI, cardiomyopathy, valvular heart disease, adult congenital heart disease)", "problem": "'e.g.' list is not a definition"},
+    {"quote": "syncope of suspected arrhythmic cause", "problem": "'suspected' is a judgment"},
+    {"quote": "risk factors (e.g., sudden cardiac arrest, family history of SCD, compliance/intolerance to drugs is a concern)", "problem": "open list; 'is a concern' subjective"},
+    {"quote": "Bradycardia dependent VT/VF; Idiopathic VF/VT with normal ventricular function", "problem": "diagnosis labels without criteria"},
+    {"quote": "Replacement of a transvenous ICD pulse generator and/or leads is considered medically necessary.", "problem": "no conditions at all"}
+  ],
+  "extraction_hazards": [
+    "Roughly 30 of 42 pages are Background; the Overview names wearable defibrillators as covered topics though the statement was removed 7/15/2026; a keyword search for 'wearable' finds only the Overview and the revision log.",
+    "Bullet glyphs and nesting up to four levels (o, square) lose indentation.",
+    "Overview/coverage statement mixes adults and children under one heading; 'child' not defined by age.",
+    "Misspellings in criteria ('reversable').",
+    "Page footer 'Medical Coverage Policy: 0431 / Page n of 42' splits lists across pages (pages 2-4).",
+    "Codes list does not cover the procedures the text covers (e.g., 33230-33231 generator insertion absent).",
+    "Related Coverage Resources sidebar and two-column table of contents on page 1."
+  ],
+  "interesting_structures": [
+    "Largest number of distinct patient groups of the five payers; groups unique to Cigna: myotonic dystrophy, Chagas disease, giant cell myocarditis, newly diagnosed lymphocytic myocarditis, peripartum cardiomyopathy, cardiac amyloidosis, LV non-compaction, tetralogy of Fallot, familial dilated NICM.",
+    "Early post-MI primary prevention (more than 48 hours, under 40 days) allowed when NSVT and inducible VT, and for MI patients needing pacing.",
+    "Unexplained syncope pathway with LVEF <= 49% in nonischemic dilated cardiomyopathy.",
+    "S-ICD defined by NONE-of three exclusions; no vascular access justification needed.",
+    "Replacement unconditionally necessary.",
+    "AED at home covered when the person meets ICD criteria but is not currently a candidate (device-substitute logic).",
+    "Policy was merged from CP 0181 in 2024; wearable defibrillator statement removed 2026."
+  ],
+  "fit_to_tree": {"score": 3, "scale": "1 = clean, 5 = needs new constructs or human judgment", "why": "Pure any-of pathways with numeric leaves, expressible. Strain: many pathways with subtle overlaps and contradictions in thresholds, 'and/or' in the early post-MI window, 'due to ANY' syncope wording, undefined GDMT/structural heart disease, and 'NONE of' for S-ICD (a NOT over any)."}
+}

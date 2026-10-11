@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "hip-arthroplasty",
+  "title": "Hip Arthroplasty",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76ETIP2HZ60BKA89IMH",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-20000-50",
+  "original_effective": "10/15/16",
+  "reviewed": "01/23/25",
+  "revised": "02/15/25",
+  "file": "bcbsfl-02-20000-50-hip-arthroplasty.pdf",
+  "sha256": "24ddf91e09141c3544bb4ca7d54f41532ab8671b712eec9cb75b977e1192882b",
+  "pages": 7,
+  "bytes": 667280,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original 10/15/16; Reviewed 01/23/25; Revised 02/15/25"
+}

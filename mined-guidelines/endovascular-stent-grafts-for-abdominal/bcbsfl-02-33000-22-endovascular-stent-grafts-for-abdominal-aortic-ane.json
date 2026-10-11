@@ -1,0 +1,19 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "endovascular-stent-grafts-for-abdominal",
+  "title": "Endovascular Stent Grafts for Abdominal Aortic Aneurysms",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JOUTOL73EFYQRGGTL",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-33000-22",
+  "original_effective": "08/15/00",
+  "reviewed": "07/23/26",
+  "revised": "08/15/26",
+  "file": "bcbsfl-02-33000-22-endovascular-stent-grafts-for-abdominal-aortic-ane.pdf",
+  "sha256": "7c7b730b3105fc0b0f4797e1acb6bcf8f79b337af8570c5a16b28f30eecdb59a",
+  "pages": 9,
+  "bytes": 136624,
+  "retrieved": "2026-10-09"
+}

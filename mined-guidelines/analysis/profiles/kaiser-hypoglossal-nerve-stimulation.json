@@ -1,0 +1,262 @@
+{
+ "file": "kaiser-hypoglossal-nerve-stimulation.pdf",
+ "treatment": "sleep-apnea-surgery",
+ "payer": "Kaiser Permanente Mid-Atlantic States",
+ "doc_kind": "medical coverage policy (referral/authorization criteria)",
+ "lines_of_business": [
+  "Kaiser Foundation Health Plan of the Mid-Atlantic States; 'For Medicare members, please consult the Medicare Coverage Database' (NCD/LCD first)"
+ ],
+ "effective_or_revised": "RUMC approved and implemented 09/27/2023 (6 pages)",
+ "sections_in_order": [
+  "Utilization Alert",
+  "I. Procedure",
+  "II. Specialties",
+  "III. Clinical Guidelines (A. Clinical Indications for Referral; B. Documentation)",
+  "IV. Limitation and Contraindication (A. Limitations; B. Contraindications)",
+  "V. Replacement of HNS device",
+  "Definition",
+  "References",
+  "Approval History"
+ ],
+ "criteria_location": "Section III.A (11 numbered criteria), III.B documentation, IV.A/B limitations and 18 contraindications, V replacement; pp.1-3.",
+ "procedures_covered": [
+  "Hypoglossal nerve stimulator implantation for OSA",
+  "HNS replacement"
+ ],
+ "logic": {
+  "top_level": "all (11 numbered criteria joined by 'and;'), with an 11th item that opens a case-by-case door for under-18",
+  "max_nesting_depth": 2,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "Separate section IV.B with 18 contraindications ('any of the following'), several of which duplicate positive criteria (BMI >= 35; central + mixed > one-quarter of AHI), plus a pointer from criterion 8 to 'section IV-B'. IV.A says not medically necessary for other indications / if not all criteria met / non-FDA device.",
+  "initial_vs_repeat": "V: 'Replacement of HNS is medically necessary when there is documentation that the stimulator and/or generator is malfunctioning, cannot be repaired, or no longer under warranty.'",
+  "and_or_ambiguity": [
+   {
+    "quote": "malfunctioning, cannot be repaired, or no longer under warranty",
+    "why_ambiguous": "Three conditions joined by 'or'; unlike BCBSFL (not functioning AND out of warranty) any one suffices, and 'malfunctioning, cannot be repaired' may be one condition or two."
+   },
+   {
+    "quote": "Patients under age 18 will be considered on a case-by-case basis e.g., Down's syndrome",
+    "why_ambiguous": "Criterion 1 requires age 18 or older and criterion 11 admits under-18; no numbers. Sits in an ALL list but contradicts item 1."
+   },
+   {
+    "quote": "Shared Decision-Making (SDM) between the patient, sleep physician, and qualified otolaryngologist ... who determines that the patient demonstrates CPAP failure ... or CPAP intolerance",
+    "why_ambiguous": "Criterion fuses a process (SDM) with a clinical finding; who must document?"
+   },
+   {
+    "quote": "BMI is less than 35 kg/m2 ... BMI 35 kg/m2 or greater",
+    "why_ambiguous": "Consistent here, but criterion and contraindication say the same thing twice."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "age",
+   "quote": "Patient is 18 years of age or older",
+   "where": "III.A.1"
+  },
+  {
+   "kind": "BMI",
+   "quote": "Body Mass Index (BMI) is less than 35 kg/m2",
+   "where": "III.A.2"
+  },
+  {
+   "kind": "sleep study",
+   "quote": "A sleep study ... PSG or a home sleep study in the last 12 months. ... apnea-hypopnea index (AHI) of 15-65 events per hour within 24 months of initial consultation",
+   "where": "III.A.3"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "central and mixed apneas less than 25% of the total AHI",
+   "where": "III.A.4"
+  },
+  {
+   "kind": "PAP failure/intolerance",
+   "quote": "CPAP failure (defined as AHI greater than 15 despite CPAP usage) or CPAP intolerance (... usage less than 4 hours a night for at least 70% of the nights in 1 month, or the CPAP has been returned) despite CPAP interface and/or setting optimizations",
+   "where": "III.A.5"
+  },
+  {
+   "kind": "diagnostic test",
+   "quote": "Confirmed absence of complete concentric collapse at the soft palate level by a drug-induced sleep endoscopy (DISE) procedure",
+   "where": "III.A.6"
+  },
+  {
+   "kind": "anatomy",
+   "quote": "Absence of anatomical findings that would compromise performance of device (such as tonsil size 3 or 4 ...)",
+   "where": "III.A.7"
+  },
+  {
+   "kind": "comorbidity exclusion",
+   "quote": "Absence of any HNS contraindicated condition such as severe obstructive or restrictive lung disease and significant cardiovascular disease including CHF ...",
+   "where": "III.A.8"
+  },
+  {
+   "kind": "device status",
+   "quote": "The HNS device ... has Food and Drug Administration (FDA) approval",
+   "where": "III.A.9"
+  },
+  {
+   "kind": "site of service",
+   "quote": "HNS must be furnished ... in a setting (either inpatient or outpatient setting) appropriate to the patient's medical needs",
+   "where": "III.A.10"
+  },
+  {
+   "kind": "shared decision making",
+   "quote": "Shared Decision-Making (SDM) between the patient, sleep physician, and qualified otolaryngologist",
+   "where": "III.A.5"
+  },
+  {
+   "kind": "documentation",
+   "quote": "Medical history and physical examination notes; Conservative treatment of OSA has failed; CPAP trial result; Sleep Study result in the last 12 months ...; DISE result",
+   "where": "III.B"
+  },
+  {
+   "kind": "contraindications",
+   "quote": "Patient who is or who plans to become pregnant; ... New York Heart Association class III or IV heart failure; Recent myocardial infarction or severe cardiac arrhythmias (within the past 6 months)",
+   "where": "IV.B"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "BMI",
+   "value": "< 35",
+   "unit": "kg/m2",
+   "quote": "BMI is less than 35 kg/m2"
+  },
+  {
+   "quantity": "AHI",
+   "value": "15-65",
+   "unit": "events/hr",
+   "quote": "AHI of 15-65 events per hour"
+  },
+  {
+   "quantity": "central+mixed apneas",
+   "value": "< 25",
+   "unit": "% of AHI",
+   "quote": "central and mixed apneas less than 25% of the total AHI"
+  },
+  {
+   "quantity": "CPAP failure AHI",
+   "value": "> 15 despite CPAP",
+   "unit": "events/hr",
+   "quote": "AHI greater than 15 despite CPAP usage"
+  },
+  {
+   "quantity": "CPAP intolerance",
+   "value": "< 4 h/night on >= 70% of nights in 1 month",
+   "unit": "",
+   "quote": "usage less than 4 hours a night for at least 70% of the nights in 1 month"
+  },
+  {
+   "quantity": "tonsil size",
+   "value": "3 or 4 excludes",
+   "unit": "grade",
+   "quote": "tonsil size 3 or 4 per standardized tonsillar hypertrophy grading scale"
+  },
+  {
+   "quantity": "MI/arrhythmia",
+   "value": "within 6 months",
+   "unit": "months",
+   "quote": "within the past 6 months"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "sleep study recency",
+   "length": "12 months (and AHI within 24 months of initial consultation)",
+   "quote": "in the last 12 months ... within 24 months of initial consultation"
+  },
+  {
+   "what": "CPAP use window",
+   "length": "1 month",
+   "quote": "at least 70% of the nights in 1 month"
+  },
+  {
+   "what": "MI/arrhythmia",
+   "length": "6 months",
+   "quote": "within the past 6 months"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": false,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "No codes at all.",
+  "non_covered_code_lists": ""
+ },
+ "external_dependencies": [
+  {
+   "what": "Medicare Coverage Database first for Medicare members",
+   "quote": "For Medicare members, please consult the Medicare Coverage Database."
+  },
+  {
+   "what": "Benefit coverage verified in EOC",
+   "quote": "benefit coverage MUST be verified in the member's EOC or benefit document"
+  },
+  {
+   "what": "MCG and LCD cited in references",
+   "quote": "MCG 27th edition ... Hypoglossal Nerve Stimulation, Implantable ACG: A-0973 (AC)"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "CPAP failure",
+   "definition_quote": "defined as AHI greater than 15 despite CPAP usage"
+  },
+  {
+   "term": "CPAP intolerance",
+   "definition_quote": "CPAP machine-derived compliance reporting with usage less than 4 hours a night for at least 70% of the nights in 1 month, or the CPAP has been returned"
+  },
+  {
+   "term": "predominantly obstructive",
+   "definition_quote": "central and mixed apneas less than 25% of the total AHI"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "Absence of anatomical findings that would compromise performance of device",
+   "problem": "only one example (tonsil 3/4)"
+  },
+  {
+   "quote": "Absence of any HNS contraindicated condition such as ...",
+   "problem": "'such as' open list; 'significant cardiovascular disease'"
+  },
+  {
+   "quote": "Severe co-morbid condition",
+   "problem": "IV.B.15 undefined"
+  },
+  {
+   "quote": "Acute psychiatric disorder or unstable psychological status",
+   "problem": "undefined"
+  },
+  {
+   "quote": "in a setting ... appropriate to the patient's medical needs",
+   "problem": "not checkable"
+  },
+  {
+   "quote": "considered on a case-by-case basis",
+   "problem": "no criteria"
+  },
+  {
+   "quote": "Severe insomnia",
+   "problem": "undefined"
+  }
+ ],
+ "extraction_hazards": [
+  "Running header repeated mid-list splits item 8 across a page ('Please refer to section IV-B ... HNS contraindicated condition' continues after header)",
+  "Section III.A criteria separated by 'and;' tails",
+  "Contraindication list stray comma line; inconsistent 'within 24 months' vs 'in the last 12 months'",
+  "Criterion 5 packs two definitions in parentheses",
+  "Contraindication (BMI >= 35, central > 25%) duplicates positive criteria - risk of double counting",
+  "References include MCG citation with no content"
+ ],
+ "interesting_structures": [
+  "Positive criteria + separate contraindication list with cross-reference",
+  "Shared decision making as a required process",
+  "Two timing windows on the sleep study (12 months vs 24 months)",
+  "Compliance defined by machine-derived data"
+ ],
+ "fit_to_tree": {
+  "score": 2,
+  "scale": "1 = all/any/not expresses it cleanly ... 5 = needs new constructs or human judgment",
+  "why": "A single numbered all-of with a NOT list; numeric leaves are crisp. The case-by-case under-18 item, open-ended contraindications, and the SDM process criterion are the only strain."
+ }
+}

@@ -1,0 +1,254 @@
+{
+ "file": "uhc-transcatheter-heart-valve-procedures.pdf",
+ "treatment": "tavr",
+ "payer": "uhc",
+ "doc_kind": "medical policy (commercial and individual exchange)",
+ "lines_of_business": [
+  "UnitedHealthcare Commercial",
+  "UnitedHealthcare Individual Exchange",
+  "Community Plan and Medicare Advantage have separate policies (listed on cover)"
+ ],
+ "effective_or_revised": "Policy 2026T0557FF; effective July 1, 2026 (history entry 07/17/2026 code update)",
+ "sections_in_order": [
+  "Application",
+  "Coverage Rationale (Aortic; Mitral; Pulmonary; Tricuspid; Other Devices and Procedures)",
+  "Medical Records Documentation Used for Reviews",
+  "Definitions",
+  "Applicable Codes",
+  "Description of Services",
+  "Benefit Considerations",
+  "Clinical Evidence",
+  "U.S. Food and Drug Administration",
+  "References",
+  "Policy History/Revision Information",
+  "Instructions for Use"
+ ],
+ "criteria_location": "Coverage Rationale, pp.1-3 of 40. Aortic criteria are an ALL list of 5 items on p.1 with a valve-in-valve paragraph and a low-flow/low-gradient note on p.2. Center requirements are partly inline (3 bullets) and partly in Definitions ('CMS Volume Requirements', p.3). Roughly 24 pages are clinical evidence and ~9 pages are references.",
+ "procedures_covered": [
+  "Transcatheter aortic valve replacement (native and valve-in-valve)",
+  "Mitral edge-to-edge repair (primary and secondary MR); mitral replacement/annuloplasty unproven",
+  "Pulmonary valve replacement",
+  "Tricuspid edge-to-edge repair; tricuspid replacement unproven",
+  "Cerebral protection devices and caval valves (unproven)"
+ ],
+ "logic": {
+  "top_level": "pathways (per valve; native aortic ALL list; valve-in-valve; case-by-case note for LFLG)",
+  "max_nesting_depth": 3,
+  "k_of_n": [
+   {
+    "k": 1,
+    "n": 3,
+    "quote": "Diagnosis of severe calcific native aortic valve stenosis, as indicated by one of the following: Mean aortic valve gradient of >= 40 mm Hg; or Peak aortic jet velocity of >= 4.0 m/s; or Aortic valve area of <= 1.0 cm2",
+    "pointer": "Aortic, p.1"
+   }
+  ],
+  "exclusions_or_contraindications": "Not a separate list; 'when performed according to FDA-labeled indications, contraindications, warnings, and precautions' imports the label. Unproven items list for other devices.",
+  "initial_vs_repeat": "Valve-in-valve addressed as its own paragraph; mitral valve-in-valve 'case-by-case'.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Procedure is performed in a center that meets all the following criteria: On-site heart valve surgery and interventional cardiology programs; and Postprocedure intensive care unit ...; and Volume requirements consistent with the Centers for Medicare and Medicaid Services",
+    "why_ambiguous": "'and' chain crosses a page break; volume requirements resolved only via Definitions and external NCD/TVT registry."
+   },
+   {
+    "quote": "Requests for transcatheter aortic heart valve replacement for low-flow/low-gradient aortic stenosis in individuals who do not meet the peak velocity, mean gradient, and valve area criteria listed above will be considered on a case-by-case basis",
+    "why_ambiguous": "A discretionary escape hatch around the numeric criteria; 'peak velocity, mean gradient, and valve area criteria' implies all, while the criteria are one-of."
+   },
+   {
+    "quote": "Individual is symptomatic [NYHA class II or greater] and symptoms are due to aortic valve stenosis",
+    "why_ambiguous": "Causal attribution requirement within a single leaf."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "diagnosis",
+   "quote": "Diagnosis of severe calcific native aortic valve stenosis",
+   "where": "Aortic"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "Mean aortic valve gradient of >= 40 mm Hg; or Peak aortic jet velocity of >= 4.0 m/s; or Aortic valve area of <= 1.0 cm2",
+   "where": "Aortic"
+  },
+  {
+   "kind": "symptom",
+   "quote": "Individual is symptomatic [NYHA class II or greater] and symptoms are due to aortic valve stenosis",
+   "where": "Aortic"
+  },
+  {
+   "kind": "provider/team",
+   "quote": "An interventional cardiologist and an experienced cardiothoracic surgeon have determined that the procedure is appropriate",
+   "where": "Aortic"
+  },
+  {
+   "kind": "patient commitment",
+   "quote": "Individual has engaged in a Shared Decision-Making conversation with an interventional cardiologist and an experienced cardiothoracic surgeon",
+   "where": "Aortic"
+  },
+  {
+   "kind": "site of service",
+   "quote": "Procedure is performed in a center that meets all ...: on-site heart valve surgery and interventional cardiology programs; postprocedure ICU; volume requirements consistent with CMS",
+   "where": "Aortic"
+  },
+  {
+   "kind": "risk",
+   "quote": "valve-in-valve ... individuals at high or prohibitive surgical risk [Predicted Risk of Mortality (PROM) score of >= 8%]",
+   "where": "Valve-in-valve"
+  },
+  {
+   "kind": "device/FDA",
+   "quote": "when performed according to U.S. FDA-labeled indications, contraindications, warnings, and precautions",
+   "where": "All"
+  },
+  {
+   "kind": "documentation",
+   "quote": "Medical Records Documentation Used for Reviews: refer to the guidelines titled Medical Records Documentation Used for Reviews",
+   "where": "p.3"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "Mean gradient",
+   "value": ">= 40",
+   "unit": "mm Hg",
+   "quote": "Mean aortic valve gradient of >= 40 mm Hg"
+  },
+  {
+   "quantity": "Peak velocity",
+   "value": ">= 4.0",
+   "unit": "m/s",
+   "quote": "Peak aortic jet velocity of >= 4.0 m/s"
+  },
+  {
+   "quantity": "Aortic valve area",
+   "value": "<= 1.0",
+   "unit": "cm2",
+   "quote": "Aortic valve area of <= 1.0 cm2"
+  },
+  {
+   "quantity": "NYHA class",
+   "value": ">= II",
+   "unit": "class",
+   "quote": "NYHA class II or greater"
+  },
+  {
+   "quantity": "PROM for valve-in-valve",
+   "value": ">= 8",
+   "unit": "percent",
+   "quote": "Predicted Risk of Mortality (PROM) score of >= 8%"
+  },
+  {
+   "quantity": "Mitral primary MR: PROM prohibitive",
+   "value": ">= 8% (replacement) or >= 6% (repair) or >50% death/morbidity at 1 year",
+   "unit": "percent",
+   "quote": "PROM score of >= 8% for individuals deemed likely to undergo mitral valve replacement"
+  },
+  {
+   "quantity": "CMS TAVR volume (existing program)",
+   "value": ">= 50 AVR/yr incl >= 20 TAVR; or >= 100 per 2 yrs incl >= 40 TAVR; >= 300 PCI/yr",
+   "unit": "procedures",
+   "quote": "At least two physicians with cardiac surgery privileges; and ... >= 300 percutaneous coronary interventions per year"
+  },
+  {
+   "quantity": "Tricuspid GDMT stability",
+   "value": ">= 30",
+   "unit": "days",
+   "quote": "Receiving stable (>= 30 days) guideline-directed medical therapy"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "Tricuspid TEER: stable GDMT",
+   "length": ">= 30 days",
+   "quote": "Receiving stable (>= 30 days) guideline-directed medical therapy for heart failure"
+  },
+  {
+   "what": "CMS volume look-back",
+   "length": "prior year / prior 2 years",
+   "quote": "including >= 20 TAVR procedures in the prior year"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "One flat CPT table (0345T-0806T, 33361-33370, 33418-33419, 33477 ...) without mapping to the valve sections.",
+  "non_covered_code_lists": "Header says language may indicate non-covered; none marked by code."
+ },
+ "external_dependencies": [
+  {
+   "what": "FDA labeling for each device",
+   "quote": "proven and medically necessary when performed according to U.S. Food and Drug Administration (FDA)-labeled indications, contraindications, warnings, and precautions"
+  },
+  {
+   "what": "CMS NCD for TAVR and STS/ACC TVT Registry for volume requirements",
+   "quote": "for additional information, refer to the corresponding CMS National Coverage Determination and the Society of Thoracic Surgeons/American College of Cardiology Transcatheter Valve Therapy (TVT) Registry"
+  },
+  {
+   "what": "ACC/AHA 2021 valvular heart disease guideline for low-flow/low-gradient cases",
+   "quote": "evaluated using recommendations from the American College of Cardiology/American Heart Association Guideline for the Management of Patients With Valvular Heart Disease (Otto et al., 2021)"
+  },
+  {
+   "what": "Separate UHC records-documentation guideline",
+   "quote": "refer to the guidelines titled Medical Records Documentation Used for Reviews"
+  },
+  {
+   "what": "Benefit plan may cover investigational services",
+   "quote": "Some benefit documents allow coverage of experimental/investigational/unproven treatments for life-threatening illnesses when certain conditions are met."
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "CMS Volume Requirements for Transcatheter Aortic Heart Valve Replacement",
+   "definition_quote": "\u2265 50 open heart surgeries in the previous year prior to TAVR program initiation; and \u2265 20 aortic valve-related procedures in the 2 years prior ..."
+  },
+  {
+   "term": "Shared Decision-Making",
+   "definition_quote": "a process by which physicians and individuals work together to choose the treatment option that best reflects the clinical evidence and the individual's values and preferences"
+  },
+  {
+   "term": "Predicted Risk of Mortality",
+   "definition_quote": "The Society of Thoracic Surgeons Predicted Risk of Mortality score is a predictor of 30-day mortality after cardiac procedures"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "experienced cardiothoracic surgeon",
+   "problem": "Experience unspecified (links to CMS definition of heart team only for program start)."
+  },
+  {
+   "quote": "Volume requirements consistent with the Centers for Medicare and Medicaid Services",
+   "problem": "Facility attribute; not in a patient chart."
+  },
+  {
+   "quote": "considered on a case-by-case basis",
+   "problem": "No criteria for the exception path."
+  },
+  {
+   "quote": "Individual has engaged in a Shared Decision-Making conversation",
+   "problem": "Needs a documented SDM note; SDM tool not specified."
+  },
+  {
+   "quote": "high or prohibitive surgical risk",
+   "problem": "Only PROM >= 8% given for high; prohibitive not separately defined."
+  }
+ ],
+ "extraction_hazards": [
+  "Header footers show inconsistent 'Page 1 of 2', 'Page 2 of 3', ... 'Page 39 of 40' (page counter changes while document grows)",
+  "Multi-valve document: aortic, mitral, pulmonary, tricuspid share 'symptomatic', 'NYHA' and 'PROM' tokens, so keyword search crosses valves",
+  "Bullet glyphs are lost: nested o items rely on indentation",
+  "About 21 pages (pp.7-28) of clinical evidence include Siontis, PARTNER numbers that look like thresholds",
+  "Cover table of contents lists 'Medical Records Documentation Used for Reviews' but no content follows"
+ ],
+ "interesting_structures": [
+  "Facility attributes (center with ICU, volume per CMS) as eligibility criteria sitting beside patient criteria",
+  "Definitions block reproduces the CMS NCD volume requirements in detail, effectively embedding a second policy",
+  "Shared decision-making as a required conversation (patient-process criterion)",
+  "Case-by-case exception path for low-flow/low-gradient AS",
+  "Policy history lists the exact edit-by-edit changes (useful for versioning)"
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "scale": "1 clean ... 5 human judgment",
+  "why": "Native aortic criteria are a clean ALL with one 1-of-3; facility, SDM and the case-by-case exception are not chart-checkable; multi-valve layout needs section scoping."
+ }
+}

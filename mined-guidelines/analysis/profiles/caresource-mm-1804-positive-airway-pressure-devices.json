@@ -1,0 +1,142 @@
+{
+ "file": "caresource-mm-1804-positive-airway-pressure-devices.pdf",
+ "treatment": "pap-devices",
+ "payer": "caresource",
+ "doc_kind": "Medicaid/Marketplace medical policy statement (Nevada Marketplace) delegating to MCG",
+ "lines_of_business": [
+  "Nevada Marketplace"
+ ],
+ "effective_or_revised": "Effective 01/01/2026; archived 09/30/2026 per history; issued 06/18/2025",
+ "sections_in_order": [
+  "Subject",
+  "Background",
+  "Definitions",
+  "Policy",
+  "Conditions of Coverage",
+  "Related Policies/Rules",
+  "Review/Revision History",
+  "References"
+ ],
+ "criteria_location": "Policy section D.II-III (p.2-3). It contains no clinical criteria itself; only rental-period structure and an adherence definition (Definitions). Clinical criteria are inside MCG ACG A-0431 and A-0994, not in the PDF.",
+ "procedures_covered": [
+  "E0601 CPAP",
+  "E0470 BiPAP without backup",
+  "E0471 BiPAP with backup (non-invasive)",
+  "E0472 BiPAP with backup (tracheostomy)"
+ ],
+ "logic": {
+  "top_level": "all (device-specific rental phases, each 'MCG met' and/or 'adherence submitted')",
+  "max_nesting_depth": 2,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "None stated.",
+  "initial_vs_repeat": "Yes: months 1-3 vs 4-13 for E0601/E0470; months 1-6 vs 7-12 for E0471/E0472, adherence resubmitted annually. Quote: 'For months 4-13 rental, CareSource considers the device medically necessary when documentation confirming adherence ... is submitted.'",
+  "and_or_ambiguity": [
+   {
+    "quote": "CareSource uses MCG Health and/or OAC clinical criteria",
+    "why_ambiguous": "and/or: unclear whether MCG or OAC applies to which request"
+   },
+   {
+    "quote": "Documentation confirming adherence must be submitted annually with the prior authorization request. ... when BOTH the following are met",
+    "why_ambiguous": "Conflicts in shape with the month 7-12 rule above it; 'annually' vs 'months 7-12'"
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "other",
+   "quote": "CareSource considers the device medically necessary when the MCG Health clinical criteria are met",
+   "where": "D.II.A"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "Adherence – Use of the PAP device as prescribed ... 4 or more hours per night for 70% of the nights during the most recent consecutive 30-day period during the first initial usage",
+   "where": "Definitions"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "adherence",
+   "value": ">=4 h/night on 70% of nights",
+   "unit": "30 consecutive days",
+   "quote": "4 or more hours per night for 70% of the nights"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "initial rental E0601/E0470",
+   "length": "3 months",
+   "quote": "During the first 3 months rental"
+  },
+  {
+   "what": "continued rental E0601/E0470",
+   "length": "months 4-13",
+   "quote": "For months 4-13 rental"
+  },
+  {
+   "what": "initial rental E0471/E0472",
+   "length": "6 months",
+   "quote": "During the first 6 months rental"
+  },
+  {
+   "what": "continued E0471/E0472",
+   "length": "months 7-12",
+   "quote": "For months 7-12 rental"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "HCPCS listed in Policy I and tied to rental phases.",
+  "non_covered_code_lists": ""
+ },
+ "external_dependencies": [
+  {
+   "what": "All clinical criteria delegated to MCG Health (ACG A-0431 CPAP, A-0994 BPAP) and OAC",
+   "quote": "CareSource uses MCG Health clinical criteria to determine medical necessity"
+  },
+  {
+   "what": "CMS LCD L33718 referenced",
+   "quote": "LCD Positive Airway Pressure (PAP) Devices ... (L33718)"
+  },
+  {
+   "what": "May follow CMS/State/NCCI without a formal policy",
+   "quote": "CareSource reserves the right to follow CMS/State/NCCI guidelines without a formal documented Policy"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Adherence",
+   "definition_quote": "utilization for 4 or more hours per night for 70% of the nights during the most recent consecutive 30-day period during the first initial usage"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "during the first initial usage",
+   "problem": "Unclear which 30 days; 'most recent' and 'first initial' conflict"
+  },
+  {
+   "quote": "MCG Health and/or OAC clinical criteria",
+   "problem": "OAC not defined; and/or"
+  },
+  {
+   "quote": "Conditions of Coverage NA",
+   "problem": "Section empty"
+  }
+ ],
+ "extraction_hazards": [
+  "Repeated header/footer on every page",
+  "Policy is a shell: no diagnostic criteria exist in the text",
+  "Final page notes custom content modified from MCG and not reviewed by MCG",
+  "Title says 'for Pulmonary Disorders Continued Rental' though body covers OSA devices",
+  "Policy archived date 09/30/2026 inside revision table"
+ ],
+ "interesting_structures": [
+  "Pure delegation: policy states only phases and adherence; criteria live in proprietary MCG",
+  "Different phase lengths by device code (3/13 months vs 6/12 months)"
+ ],
+ "fit_to_tree": {
+  "score": 5,
+  "scale": "1-5",
+  "why": "The substantive criteria are not in the document; a checker could only encode adherence and rental phase, and must treat 'MCG criteria met' as an opaque leaf."
+ }
+}

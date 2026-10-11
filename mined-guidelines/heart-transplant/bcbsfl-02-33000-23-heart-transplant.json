@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "heart-transplant",
+  "title": "Heart Transplant",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76EYHS3SY1DMTB6M8A9",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-33000-23",
+  "original_effective": "01/01/01",
+  "reviewed": "04/24/25",
+  "revised": "05/15/25",
+  "file": "bcbsfl-02-33000-23-heart-transplant.pdf",
+  "sha256": "568664c154fbbdb63637b0e91820a2f1363688bcfb317f504dbaa4f34b35e931",
+  "pages": 7,
+  "bytes": 614559,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original Effective Date 01/01/01; Reviewed 04/24/25; Revised 05/15/25 (8 pages)"
+}

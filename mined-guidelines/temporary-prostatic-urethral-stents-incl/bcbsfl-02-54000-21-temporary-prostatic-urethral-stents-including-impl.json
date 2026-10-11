@@ -1,0 +1,19 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "temporary-prostatic-urethral-stents-incl",
+  "title": "Temporary Prostatic Urethral Stents (Including Implantable Nitinol Devices) and Prostatic Urethral Lift",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76F6QZVGY6CTEX5YKC1",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-54000-21",
+  "original_effective": "03/15/05",
+  "reviewed": "09/25/25",
+  "revised": "10/15/25",
+  "file": "bcbsfl-02-54000-21-temporary-prostatic-urethral-stents-including-impl.pdf",
+  "sha256": "c9b6082fccbdba9048ab6db31b5ed8e2318757298dd372b3475f543a8d4fd46f",
+  "pages": 8,
+  "bytes": 724871,
+  "retrieved": "2026-10-09"
+}

@@ -1,0 +1,19 @@
+{
+  "payer": "Kaiser Permanente",
+  "payer_key": "kaiser",
+  "treatment": "knee-arthroplasty",
+  "title": "Total and Partial Knee Arthroplasty",
+  "policy_number": "",
+  "effective": "2/4/2026",
+  "url": "https://healthy.kaiserpermanente.org/content/dam/kporg/final/documents/health-plan-documents/coverage-information/total-and-partial-knee-arthroplasty-policy-nw-en-forms.pdf",
+  "final_url": "https://healthy.kaiserpermanente.org/content/dam/kporg/final/documents/health-plan-documents/coverage-information/total-and-partial-knee-arthroplasty-policy-nw-en-forms.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "kaiser-total-and-partial-knee-arthroplasty.pdf",
+  "sha256": "7861cd9faeea79bbdc66381899deca25f79c4bda456649519fe4244c6f4087d8",
+  "pages": 6,
+  "bytes": 166794,
+  "retrieved": "2026-10-09",
+  "printed_date": "Effective 2/4/2026; Last Reviewed 6/24/26; policy # NCP 114 (was NCP 14 until 8/4/26)"
+}

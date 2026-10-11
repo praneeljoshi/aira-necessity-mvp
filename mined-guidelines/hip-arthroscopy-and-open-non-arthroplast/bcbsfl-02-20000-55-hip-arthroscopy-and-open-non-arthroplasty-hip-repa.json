@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "hip-arthroscopy-and-open-non-arthroplast",
+  "title": "Hip Arthroscopy and Open, Non-Arthroplasty Hip Repair",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JEWFS1G24H5RNO455",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-20000-55",
+  "original_effective": "10/15/16",
+  "reviewed": "01/22/26",
+  "revised": "02/15/26",
+  "file": "bcbsfl-02-20000-55-hip-arthroscopy-and-open-non-arthroplasty-hip-repa.pdf",
+  "sha256": "71973eb0ae626412ddf4d067a6e6e872e97ec375a3555087cd001f4f651540b9",
+  "pages": 7,
+  "bytes": 608713,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original Effective Date 10/15/16; Reviewed 01/22/26; Revised 02/15/26 (8 pages)"
+}

@@ -1,0 +1,19 @@
+{
+  "payer": "Blue Cross Blue Shield of Michigan",
+  "payer_key": "bcbsm",
+  "treatment": "sleep-testing",
+  "title": "Diagnosis of Sleep Disorders",
+  "policy_number": "",
+  "effective": "",
+  "url": "https://www.bcbsm.com/amslibs/content/dam/public/mpr/mprsearch/pdf/2212443.pdf",
+  "final_url": "https://www.bcbsm.com/amslibs/content/dam/public/mpr/mprsearch/pdf/2212443.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "bcbsm-diagnosis-of-sleep-disorders.pdf",
+  "sha256": "d900fb7d6907020c51f06735e11126bc58eb125c75998752de44ff46885df1c8",
+  "pages": 40,
+  "bytes": 520207,
+  "retrieved": "2026-10-09",
+  "printed_date": "Current Policy Effective Date: 11/1/26"
+}

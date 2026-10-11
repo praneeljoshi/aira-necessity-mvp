@@ -1,0 +1,101 @@
+{
+ "payer": "medica",
+ "doc_kind": "coverage policy",
+ "lines_of_business": [
+  "Medica Central plans; Medicare/Medicaid unless programs require different coverage"
+ ],
+ "effective_or_revised": "Effective 10/01/2025; re-review 05/15/2025",
+ "sections_in_order": [
+  "Coverage Policy",
+  "Description",
+  "FDA Approval",
+  "Prior Authorization",
+  "Coding Considerations",
+  "Committee/Source dates"
+ ],
+ "criteria_location": "Coverage Policy (p.1) defers to the UHMS committee list in the Description section (p.2).",
+ "procedures_covered": [
+  "Hyperbaric oxygen therapy",
+  "Topical oxygen (HTOT, CTOT) not covered"
+ ],
+ "logic": {
+  "top_level": "any (delegated list from UHMS committee)",
+  "max_nesting_depth": 2,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "'NOT COVERED for all other indications including but not limited to traumatic or chronic brain injury, cerebral palsy, multiple sclerosis, stroke, and autism'.",
+  "initial_vs_repeat": "None.",
+  "and_or_ambiguity": []
+ },
+ "requirement_kinds": [
+  {
+   "kind": "diagnosis",
+   "quote": "Hyperbaric oxygen therapy is COVERED for those indications approved by the Hyperbaric Oxygen Therapy Committee of the Undersea and Hyperbaric Medicine Society listed in the Description Section",
+   "where": "Coverage Policy"
+  },
+  {
+   "kind": "duration",
+   "quote": "Idiopathic Sudden Sensorineural Hearing Loss (when used within two weeks of symptom onset)",
+   "where": "Description list item 14"
+  },
+  {
+   "kind": "other",
+   "quote": "Prior authorization is not required. However, services with specific coverage criteria may be reviewed retrospectively",
+   "where": "Prior Authorization"
+  }
+ ],
+ "thresholds": [],
+ "time_windows": [
+  {
+   "what": "ISSHL from symptom onset",
+   "length": "two weeks",
+   "quote": "within two weeks of symptom onset"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Informational only; 'does not constitute or imply member coverage'. Revenue code 0413 listed.",
+  "non_covered_code_lists": "none explicit (A4575, E0446 listed)"
+ },
+ "external_dependencies": [
+  {
+   "what": "UHMS Hyperbaric Oxygen Therapy Committee list",
+   "quote": "approved by the Hyperbaric Oxygen Therapy Committee of the Undersea and Hyperbaric Medicine Society"
+  }
+ ],
+ "definitions_that_change_meaning": [],
+ "vague_terms": [
+  {
+   "quote": "Enhancement of healing in select problem wounds",
+   "problem": "no criteria at all; UHMS wording used verbatim"
+  },
+  {
+   "quote": "Osteomyelitis (refractory)",
+   "problem": "undefined"
+  },
+  {
+   "quote": "Severe anemia",
+   "problem": "no threshold"
+  },
+  {
+   "quote": "Avascular Necrosis",
+   "problem": "no stage"
+  }
+ ],
+ "extraction_hazards": [
+  "Criteria are a descriptive section: the covered list is under Description, not Coverage Policy",
+  "Numbered list with sub-letters",
+  "Coverage defers by reference to an external body's list that may change (UHMS)"
+ ],
+ "interesting_structures": [
+  "Whole coverage determination is delegated to the UHMS list by reference",
+  "Prior auth not required; retrospective review"
+ ],
+ "fit_to_tree": {
+  "score": 2,
+  "scale": "1 = all/any/not expresses it cleanly ... 5 = needs new constructs",
+  "why": "A flat any-of, but the list is located in Description and the policy tells the reader to follow an external, changing list."
+ },
+ "file": "medica-9055-hyperbaric-oxygen-therapy.pdf",
+ "treatment": "hyperbaric-oxygen"
+}

@@ -1,0 +1,19 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "frenectomy-or-frenotomy-for-ankyloglossi",
+  "title": "Frenectomy or Frenotomy for Ankyloglossia (Tongue-Tie) in Newborns, Children, & Adolescents",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76EV68F2S0LPWPBERPL",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-40000-25",
+  "original_effective": "03/15/15",
+  "reviewed": "02/27/25",
+  "revised": "03/15/24",
+  "file": "bcbsfl-02-40000-25-frenectomy-or-frenotomy-for-ankyloglossia-tongue-t.pdf",
+  "sha256": "cd1af53eb8663b26fbc64c6a51c8f2ac9955e683876d03a5ea23c92eb1fc95c3",
+  "pages": 4,
+  "bytes": 574512,
+  "retrieved": "2026-10-09"
+}

@@ -1,0 +1,90 @@
+{
+  "file": "bcbsri-varicose-vein-treatment.pdf",
+  "treatment": "varicose-veins",
+  "payer": "bcbsri",
+  "doc_kind": "medical policy (Medical Coverage Policy)",
+  "lines_of_business": ["Medicare Advantage Plans (criteria apply only to CPT 37500, 37785, S2202; all other codes follow CMS NCD/LCD)", "Commercial Products"],
+  "effective_or_revised": "Effective 05|01|2019; Policy last updated 07|07|2021 (library metadata says 2021 posting)",
+  "sections_in_order": ["Overview", "Medical Criteria (Medicare Advantage Plans; Commercial Products)", "Prior Authorization", "Policy Statement", "Background (saphenous veins, types of treatment, perforators, MOCA, FDA devices)", "Coverage", "Coding", "Related Policies", "Published / Policy history"],
+  "criteria_location": "Medical Criteria, pp.1-3, written twice (Medicare Advantage block and Commercial block with minor differences). Policy Statement p.3 adds exclusions (MOCA, telangiectasia, concurrent perforator). Coding pp.7-8 adds not-medically-necessary code lists. Background is narrative only.",
+  "procedures_covered": ["Ligation and stripping by RF/thermal ablation or EVLT", "Sclerotherapy (liquid)", "Echosclerotherapy with duplex", "Transilluminated powered phlebectomy and ambulatory phlebectomy", "SEPS / RF / laser / Linton perforator ligation", "Mechanochemical ablation (not medically necessary)", "Telangiectasia sclerotherapy (contract exclusion)"],
+  "logic": {
+    "top_level": "all: a general treatment gate (duplex + 6 weeks conservative + one of six indications) AND a method-specific criterion",
+    "max_nesting_depth": 3,
+    "k_of_n": [{"k": 1, "n": 6, "quote": "meets one of the listed criteria below: stasis ulcer of the lower leg, significant pain and significant edema that interferes with activities of daily living, bleeding ..., recurrent episodes of superficial phlebitis, stasis dermatitis, or refractory dependent edema"}],
+    "exclusions_or_contraindications": "Policy Statement sentences: MOCA 'not medically necessary'; telangiectasia sclerotherapy 'contract exclusion'; concurrent perforator ligation not medically necessary. No contraindication list.",
+    "initial_vs_repeat": "Only a utilization note on sclerotherapy: 'Requests for greater than 3 sclerotherapy sessions in a 12-month period will be reviewed to determine the need for additional treatment'. That is a review trigger, not a denial rule.",
+    "and_or_ambiguity": [
+      {"quote": "significant pain and significant edema that interferes with activities of daily living", "why_ambiguous": "Pain AND edema are both required in that item, unlike the other five single-finding items; 'that interferes' attaches to edema grammatically."},
+      {"quote": "The greater saphenous and/or lesser saphenous and/or accessory saphenous vein is competent; removed, ablated, or EVLT/RFA/EVLA is planned.", "why_ambiguous": "'and/or' stacks; the semicolon splits competent / removed / ablated / planned in a way that mixes patient state with a plan; read as any-of."},
+      {"quote": "The greater saphenous and/or lesser saphenous and/or accessory saphenous vein is competent; or removed or ablated.", "why_ambiguous": "Echosclerotherapy says 'and/or' for which vein, so one competent vein or all?"},
+      {"quote": "Ligation and Stripping by either Radiofrequency/Thermal ablation (RFA/EVLA) or endovenous laser therapy (EVLT®)", "why_ambiguous": "One heading covers ligation and stripping (surgery) and endovenous ablation; the only criterion is that the saphenous vein is incompetent."},
+      {"quote": "chronic venous insufficiency (greater, lesser, or accessory saphenous and symptomatic varicose tributaries) has been eliminated", "why_ambiguous": "Reads that CVI itself is eliminated; meant that the superficial veins listed have been eliminated."}
+    ]
+  },
+  "requirement_kinds": [
+    {"kind": "imaging finding", "quote": "if the member has had a duplex ultrasound", "where": "Medical Criteria, both LOBs"},
+    {"kind": "conservative therapy", "quote": "remains symptomatic after 6 weeks of conservative therapy*", "where": "Medical Criteria"},
+    {"kind": "conservative therapy", "quote": "The components of the conservative therapy include, but are not limited to: weight reduction, a daily exercise plan, periodic leg elevation, and use of graduated stockings", "where": "Medical Criteria footnote"},
+    {"kind": "documentation/photos", "quote": "Conservative therapy must be documented in the medical record. Inability to tolerate compressive bandages or stockings and the reason for such intolerance must be documented", "where": "Medical Criteria footnote"},
+    {"kind": "diagnosis", "quote": "stasis ulcer of the lower leg ... bleeding associated with the diseased vessels ... recurrent episodes of superficial phlebitis, stasis dermatitis, or refractory dependent edema", "where": "Medical Criteria bullets"},
+    {"kind": "functional impairment", "quote": "significant pain and significant edema that interferes with activities of daily living", "where": "Medical Criteria bullet 2"},
+    {"kind": "measurement threshold", "quote": "The veins must be >2 mm and <6 mm", "where": "Commercial, Sclerotherapy"},
+    {"kind": "measurement threshold", "quote": "The perforator veins greater than 3.5 mm in size", "where": "Echosclerotherapy"},
+    {"kind": "prior procedure", "quote": "chronic venous insufficiency (greater, lesser, or accessory saphenous and symptomatic varicose tributaries) has been eliminated", "where": "Perforator ligation"},
+    {"kind": "conservative therapy", "quote": "Leg ulcers have not resolved following combined superficial vein treatment and compression therapy for at least 3 months", "where": "Perforator ligation"},
+    {"kind": "diagnosis", "quote": "The venous insufficiency is not secondary to deep venous thromboembolism.", "where": "Perforator ligation"},
+    {"kind": "other", "quote": "Prior authorization is required for Medicare Advantage Plans and recommended for Commercial Products", "where": "Prior Authorization"},
+    {"kind": "other", "quote": "*only the primary procedure needs preauthorization", "where": "Coding, commercial code list"}
+  ],
+  "thresholds": [
+    {"quantity": "sclerotherapy vein diameter", "value": ">2 and <6", "unit": "mm", "quote": "The veins must be >2 mm and <6 mm"},
+    {"quantity": "perforator vein diameter (echosclerotherapy)", "value": ">3.5", "unit": "mm", "quote": "The perforator veins greater than 3.5 mm in size"},
+    {"quantity": "sclerotherapy sessions triggering review", "value": ">3 per 12 months", "unit": "sessions", "quote": "Requests for greater than 3 sclerotherapy sessions in a 12-month period will be reviewed"},
+    {"quantity": "conservative therapy", "value": "6", "unit": "weeks", "quote": "remains symptomatic after 6 weeks of conservative therapy"}
+  ],
+  "time_windows": [
+    {"what": "conservative therapy before any treatment", "length": "6 weeks", "quote": "remains symptomatic after 6 weeks of conservative therapy*"},
+    {"what": "ulcer non-resolution after superficial treatment plus compression", "length": "3 months", "quote": "combined superficial vein treatment and compression therapy for at least 3 months"},
+    {"what": "sclerotherapy sessions", "length": "12 months", "quote": "greater than 3 sclerotherapy sessions in a 12-month period"}
+  ],
+  "codes": {
+    "cpt_hcpcs_listed": true,
+    "icd10_listed": false,
+    "codes_tied_to_criteria": "Partly. Medicare Advantage criteria apply only to 37500, 37785 and S2202; commercial lists many CPT codes as 'medically necessary when the medical criteria above are met' but the method criteria are by modality name, not by code, and sclerotherapy and phlebectomy codes are not mapped to a block. 37500 is a deleted code (deleted 2026 per BCBSFL) but is still in this 2021 policy.",
+    "non_covered_code_lists": "36468 not covered (cosmetic); 36473 not medically necessary (commercial); Medicare Advantage list includes 36473 as medically necessary via online tool."
+  },
+  "external_dependencies": [
+    {"what": "Medicare Advantage: all codes other than 37500/37785/S2202 follow CMS NCD/LCD via the online authorization tool", "quote": "For all other codes, Blue Cross & Blue Shield of Rhode Island (BCBSRI) follows the medical necessity criteria from Centers for Medicare and Medicaid Services (CMS) National and Local Coverage Determinations (NCD/LCD)."},
+    {"what": "Prior authorization via web tool, criteria not in this document", "quote": "Prior Authorization via Web-Based Tool for Procedures"},
+    {"what": "Benefit contract language", "quote": "Benefits may vary between groups/contracts."}
+  ],
+  "definitions_that_change_meaning": [
+    {"term": "Conservative therapy components", "definition_quote": "include, but are not limited to: weight reduction, a daily exercise plan, periodic leg elevation, and use of graduated stockings"},
+    {"term": "CEAP (Background)", "definition_quote": "ranging from class 0 (no visible sign of disease) to class 6 (active ulceration)"}
+  ],
+  "vague_terms": [
+    {"quote": "significant pain and significant edema", "problem": "'significant' undefined; no scale."},
+    {"quote": "refractory dependent edema", "problem": "'refractory' undefined, no duration."},
+    {"quote": "recurrent episodes of superficial phlebitis", "problem": "Count and interval missing."},
+    {"quote": "remains symptomatic after 6 weeks of conservative therapy", "problem": "Does 'conservative therapy' require all four components or any? 'include, but are not limited to'."},
+    {"quote": "will be reviewed to determine the need for additional treatment", "problem": "Soft limit, not a rule; no standard given."},
+    {"quote": "when the medical criteria is met for both treatment and the method", "problem": "Two-layer rule stated only in Policy Statement; a parser reading the Medical Criteria section might miss that both layers are required."}
+  ],
+  "extraction_hazards": [
+    "Medical Criteria appear twice (Medicare Advantage and Commercial) with different content (commercial adds Sclerotherapy 2-6 mm and phlebectomy; MA omits them) and inconsistent indentation; text order interleaves page footers ('500 EXCHANGE STREET ... MEDICAL COVERAGE POLICY | 1').",
+    "Page break splits the method list: the heading 'Ligation and Stripping ...' is at the bottom of page 1 and its only bullet at the top of page 2.",
+    "Bullets with hanging footnote asterisks; the footnote text sits between list and next paragraph.",
+    "Echosclerotherapy and Sclerotherapy bullets look like one list; thresholds (>2 mm and <6 mm vs >3.5 mm) are easily misattached.",
+    "Background paragraph about FDA devices is truncated mid-sentence ('treatment of incompetent great saphenous veins, accessory saphenous veins and visible varicosities of the great') and a heading 'PUBLISHED' / 'Determinations' at the end are residue from the web page.",
+    "Coding lists use different descriptor wording from AMA (e.g. 'sclerosing solution'), and a '*only the primary procedure needs preauthorization' footnote floats under 37780."
+  ],
+  "interesting_structures": [
+    "Two-layer rule: general treatment gate plus a method-specific gate, stated as 'both treatment and the method' in the Policy Statement.",
+    "Duplicated criteria blocks by line of business with the Medicare Advantage block scoped by CPT code list.",
+    "Delegation by code: for most MA codes the document says 'follow CMS' and has no criteria at all.",
+    "Prior auth required for MA, merely 'recommended' for commercial.",
+    "Session-count review trigger (>3 per 12 months) rather than a hard cap."
+  ],
+  "fit_to_tree": {"score": 3, "scale": "1 = all/any/not expresses it cleanly ... 5 = needs new constructs or human judgment", "why": "The shape is an all-of with a 1-of-6 list and a per-method leaf, which a tree handles. Strain comes from two lines of business in one file, duplicated and slightly different blocks, delegation to CMS for most codes, and method criteria that depend on whether other veins are competent/removed/planned (state plus plan)."}
+}

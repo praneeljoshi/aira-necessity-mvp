@@ -1,0 +1,181 @@
+{
+ "payer": "priority-health",
+ "doc_kind": "medical policy",
+ "lines_of_business": [
+  "HMO/EPO",
+  "POS",
+  "PPO",
+  "ASO",
+  "Individual",
+  "Medicare (CMS governs)",
+  "Medicaid/Healthy Michigan Plan"
+ ],
+ "effective_or_revised": "Effective September 1, 2024 (No. 91151-R8)",
+ "sections_in_order": [
+  "Policy/Criteria",
+  "Medical Necessity Review",
+  "Application to Products",
+  "Description",
+  "Coding Information",
+  "References"
+ ],
+ "criteria_location": "Section I (page 1-2): A non-wound indications, B wound therapy (initial and adjunctive), C topical. Section IV description includes technical chamber requirements (>= 2.0 ATA, ASME PVHO-1).",
+ "procedures_covered": [
+  "Systemic HBOT",
+  "Topical HBOT (experimental)",
+  "Mild hyperbaric (unproven, in description)"
+ ],
+ "logic": {
+  "top_level": "pathways (non-wound list; wound initial list; wound adjunctive with sub-criteria)",
+  "max_nesting_depth": 3,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "Topical HBOT experimental; HBOT 'should not be a replacement for other standard successful therapeutic measures'.",
+  "initial_vs_repeat": "B.1 'Initial therapy' vs B.2 'Adjunctive therapy' (not repeat; they are indication groups with different prerequisites).",
+  "and_or_ambiguity": [
+   {
+    "quote": "Preparation and preservation of compromised skin grafts (not for primary management of wounds) i. Acute traumatic peripheral ischemia ii. Crush injuries ... iii. Gas gangrene iv. Progressive necrotizing infections",
+    "why_ambiguous": "Sub-items i-iv are indented under item a (skin grafts) in text, although they are separate indications; a parser would nest them wrongly"
+   },
+   {
+    "quote": "only medically necessary after there are no measurable signs of healing for at least 30-days ... iii. Patient has failed an adequate course of standard wound therapy",
+    "why_ambiguous": "30-day rule stated in the lead-in, 'failed' in the leaf; do they overlap?"
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "diagnosis",
+   "quote": "Actinomycosis, only as an adjunct to conventional therapy when the disease process is refractory to antibiotics and surgical treatment",
+   "where": "I.A.1.a"
+  },
+  {
+   "kind": "duration",
+   "quote": "no measurable signs of healing for at least 30-days of treatment with standard wound therapy and must be used with standard wound therapy",
+   "where": "I.B.2"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "Patient has a wound classified as Wagner grade III or higher",
+   "where": "I.B.2.a.ii"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "Patient has failed an adequate course of standard wound therapy",
+   "where": "I.B.2.a.iii"
+  },
+  {
+   "kind": "other",
+   "quote": "at a pressure of not less than 2.0 ATA (202.65 KPa)",
+   "where": "Description, IV"
+  },
+  {
+   "kind": "provider/facility qualification",
+   "quote": "hard sided hyperbaric chamber that meets the American Society of Mechanical Engineers and Pressure Vessels for Human Occupancy (ASME-PVHO-1) code and the National Fire Protection Agency (NFPA 99)",
+   "where": "Description"
+  },
+  {
+   "kind": "other",
+   "quote": "Prior authorization for certain drug, services, and procedures may be required.",
+   "where": "II"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "chamber pressure",
+   "value": ">= 2.0",
+   "unit": "ATA",
+   "quote": "not less than 2.0 ATA"
+  },
+  {
+   "quantity": "Wagner grade",
+   "value": ">= III",
+   "unit": "grade",
+   "quote": "Wagner grade III or higher"
+  },
+  {
+   "quantity": "no healing",
+   "value": ">= 30",
+   "unit": "days",
+   "quote": "for at least 30-days"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "standard wound therapy without healing",
+   "length": "30 days",
+   "quote": "no measurable signs of healing for at least 30-days of treatment with standard wound therapy"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": true,
+  "codes_tied_to_criteria": "ICD-10 groups bulleted under the indication they support ('covered for these procedures when criteria are met'), but groupings include odd extras (M87.00-M87.9 under necrotizing fasciitis; L88 pyoderma gangrenosum under diabetic wounds).",
+  "non_covered_code_lists": "A4575, E0446 'Not Covered'"
+ },
+ "external_dependencies": [
+  {
+   "what": "CMS NCD for Medicare",
+   "quote": "MEDICARE: Coverage is determined by the Centers for Medicare and Medicaid Services (CMS) and/or the Evidence of Coverage (EOC)"
+  },
+  {
+   "what": "Michigan Medicaid manual and fee schedule",
+   "quote": "the Michigan Medicaid Provider Manual will govern"
+  },
+  {
+   "what": "Provider Manual for prior auth",
+   "quote": "please refer to the Priority Health Provider Manual"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "HBOT",
+   "definition_quote": "All patients must have their entire body placed within a hard sided hyperbaric chamber ... at a pressure of not less than 2.0 ATA"
+  },
+  {
+   "term": "mild hyperbaric",
+   "definition_quote": "exposures delivered at pressures lower than 1.5 ATA"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "adjunct to conventional treatment",
+   "problem": "undefined"
+  },
+  {
+   "quote": "failed an adequate course",
+   "problem": "undefined"
+  },
+  {
+   "quote": "unresponsive to conventional medical and surgical management",
+   "problem": "undefined"
+  },
+  {
+   "quote": "Progressive necrotizing infections",
+   "problem": "'progressive' undefined"
+  },
+  {
+   "quote": "Acute peripheral artery insufficiency",
+   "problem": "no definition"
+  }
+ ],
+ "extraction_hazards": [
+  "Numbering a/i/ii nesting mis-indented (skin graft list)",
+  "Review-dates list in header",
+  "ICD-10 groups with bullets and sub-headings; code ranges with missing dashes (T70.29XA T70.29XS)",
+  "Description section contains criteria-like text (2.0 ATA)",
+  "Page header/footer repeats"
+ ],
+ "interesting_structures": [
+  "Technical standard for the chamber itself in the description",
+  "Initial vs adjunctive indication groups",
+  "Indication-keyed ICD-10 mapping",
+  "Per-payer-product application section"
+ ],
+ "fit_to_tree": {
+  "score": 2,
+  "scale": "1 = all/any/not expresses it cleanly ... 5 = needs new constructs",
+  "why": "Any-of list with one all-of block for diabetic wounds; main risk is a mis-nested list and criteria in Description."
+ },
+ "file": "priority-health-91151-hyperbaric-oxygen-therapy.pdf",
+ "treatment": "hyperbaric-oxygen"
+}

@@ -1,0 +1,86 @@
+{
+  "file": "cigna-0480-balloon-sinuplasty.pdf",
+  "treatment": "balloon-sinuplasty",
+  "payer": "cigna",
+  "doc_kind": "coverage policy (Cigna Medical Coverage Policy 0480)",
+  "lines_of_business": ["Health benefit plans administered by Cigna Companies; some lines provide utilization review only", "Benefit plan document supersedes"],
+  "effective_or_revised": "Effective 4/15/2026; Next Review 4/15/2027; annual reviews 5/15/2025, 4/15/2024",
+  "sections_in_order": ["Instructions for Use", "Overview", "Coverage Policy (Balloon Sinus Ostial Dilation; Eustachian Tube Dilation: Adults, Pediatrics)", "Coding Information", "General Background", "Health Equity Considerations", "References", "Revision Details"],
+  "criteria_location": "Coverage Policy, pp. 2-3 of 28. Roughly 17 pages of General Background (evidence review, CT scoring, professional society positions) and ~6 pages of references follow.",
+  "procedures_covered": ["Balloon sinus ostial dilation (31295-31298)", "Eustachian tube balloon dilation, adults and children 8-17 (69705, 69706); outside the sinus comparison, noted only"],
+  "logic": {
+    "top_level": "any (CRS or RARS, each an ALL list)",
+    "max_nesting_depth": 3,
+    "k_of_n": [
+      {"k": 2, "n": 4, "quote": "presence of two or more of the following signs/symptoms for more than three consecutive months: nasal obstruction; anterior or posterior mucopurulent (foul) drainage; facial pain, pressure and/or fullness over the affected sinus; decreased sense of smell", "pointer": "CRS"},
+      {"k": 1, "n": 4, "quote": "evidence of chronic rhinosinusitis on ... CT ... including ANY of the following: mucosal thickening; air fluid levels; opacification; nasal polyposis", "pointer": "CRS"},
+      {"k": 4, "n": 4, "quote": "failure, intolerance or contraindication of medical management when ALL the following have been tried, during at least eight (8) consecutive weeks: antibiotic therapy; steroid spray; antihistamine nasal spray and/or decongestant; nasal saline irrigation", "pointer": "CRS"}
+    ],
+    "exclusions_or_contraindications": "Closing sentence: 'considered not medically necessary for all other indications.' Adjunct-to-FESS dilation in the same sinus is bundled: 'integral part of the primary procedure and not separately reimbursable.' No contraindication list.",
+    "initial_vs_repeat": "Sinus dilation: none. Eustachian tube dilation adult: 'once per lifetime'.",
+    "and_or_ambiguity": [
+      {"quote": "failure, intolerance or contraindication of medical management when ALL the following have been tried, during at least eight (8) consecutive weeks", "why_ambiguous": "'Failure, intolerance or contraindication' is an OR across the whole block, but 'ALL ... have been tried' implies every item was tried. If a patient has a contraindication to one item (e.g., steroid spray), the text does not say whether the others still need to be tried. Also unclear whether the 8 weeks apply to each drug or to the combined regimen."},
+      {"quote": "antihistamine nasal spray and/or decongestant", "why_ambiguous": "'and/or' inside an ALL list; so antihistamine alone, decongestant alone, or both."},
+      {"quote": "Appropriate CRS surgical candidates have failed at least eight weeks of consecutive medical therapy including at least two antibiotics", "why_ambiguous": "Background says at least two antibiotics; the Coverage Policy criteria just say 'antibiotic therapy'. The 5/15/2025 revision log notes 'Revised policy statements for sinuplasty regarding mucosal thickening and antibiotics', so the Background may be stale."},
+      {"quote": "evidence of chronic rhinosinusitis on computerized tomography (CT) scan in each of the sinuses being considered for treatment", "why_ambiguous": "Per-sinus, so each sinus requested needs its own CT evidence; the policy statement also says 'in each of the sinuses'."},
+      {"quote": "Nasal endoscopy findings suggestive of significant disease (i.e., abnormal mucosal status, fluid, or infection)", "why_ambiguous": "'i.e.' defines 'significant' by listing very common findings; 'suggestive of' is soft."}
+    ]
+  },
+  "requirement_kinds": [
+    {"kind": "symptom", "quote": "presence of two or more of the following signs/symptoms for more than three consecutive months", "where": "CRS"},
+    {"kind": "imaging finding", "quote": "evidence of chronic rhinosinusitis on computerized tomography (CT) scan in each of the sinuses being considered for treatment including ANY of the following: mucosal thickening, air fluid levels, opacification, nasal polyposis", "where": "CRS"},
+    {"kind": "conservative therapy", "quote": "failure, intolerance or contraindication of medical management when ALL the following have been tried, during at least eight (8) consecutive weeks", "where": "CRS"},
+    {"kind": "diagnosis", "quote": "Four or more episodes per year of acute rhinosinusitis", "where": "RARS"},
+    {"kind": "imaging finding", "quote": "Nasal endoscopy findings suggestive of significant disease (i.e., abnormal mucosal status, fluid, or infection)", "where": "RARS"},
+    {"kind": "imaging finding", "quote": "CT scan evidence of ostial occlusion and mucosal thickening in each paranasal sinus being considered for treatment", "where": "RARS"},
+    {"kind": "symptom", "quote": "Sinonasal symptoms (e.g., pain, pressure, drainage, reduced sense of smell)", "where": "RARS"},
+    {"kind": "age", "quote": "When performed alone, balloon sinuplasty is an accepted procedure for ... adult patients, age 18 years and older", "where": "General Background (not in criteria)"},
+    {"kind": "prior procedure", "quote": "considered to be an integral part of the primary procedure and not separately reimbursable", "where": "Coverage Policy, adjunct to FESS"}
+  ],
+  "thresholds": [
+    {"quantity": "CRS symptoms", "value": ">= 2 of 4", "unit": "symptoms", "quote": "two or more of the following signs/symptoms"},
+    {"quantity": "symptom duration", "value": "> 3", "unit": "consecutive months", "quote": "for more than three consecutive months"},
+    {"quantity": "medical management duration", "value": ">= 8", "unit": "consecutive weeks", "quote": "during at least eight (8) consecutive weeks"},
+    {"quantity": "RARS episodes", "value": ">= 4 per year", "unit": "episodes", "quote": "Four or more episodes per year of acute rhinosinusitis"},
+    {"quantity": "mucosal thickening (background)", "value": "> 3", "unit": "mm", "quote": "mucosal thickening greater than three millimeters"}
+  ],
+  "time_windows": [
+    {"what": "CRS symptoms", "length": "more than three consecutive months", "quote": "for more than three consecutive months"},
+    {"what": "medical management", "length": "at least 8 consecutive weeks", "quote": "during at least eight (8) consecutive weeks"},
+    {"what": "RARS", "length": "per year", "quote": "Four or more episodes per year"}
+  ],
+  "codes": {"cpt_hcpcs_listed": true, "icd10_listed": false, "codes_tied_to_criteria": "CPT 31295-31298 'Considered Medically Necessary when criteria in the applicable policy statements listed above are met'. ETBD codes 69705/69706 in a separate table. Instructions state claims without covered codes are denied.", "non_covered_code_lists": "none"},
+  "external_dependencies": [
+    {"what": "Related Cigna coverage policies", "quote": "Related Coverage Resources: Diagnostic Nasal/Sinus Endoscopy, Functional Endoscopic Sinus Surgery (FESS) and Turbinectomy; Drug-Eluting Devices for Use Following Endoscopic Sinus Surgery"},
+    {"what": "Delegated vendor guidelines", "quote": "In certain markets, delegated vendor guidelines may be used to support medical necessity and other coverage determinations."},
+    {"what": "Plan document supersedes; medical director discretion", "quote": "Medical directors are expected to exercise clinical judgment where appropriate and have discretion in making individual coverage determinations."}
+  ],
+  "definitions_that_change_meaning": [
+    {"term": "CRS / RARS (Background)", "definition_quote": "chronic rhinosinusitis (CRS) lasts for more than 12 weeks ... Recurrent acute rhinosinusitis (RARS) is diagnosed when four or more episodes of acute rhinosinusitis occur in the past 12 months without signs or symptoms of rhinosinusitis between episodes"}
+  ],
+  "vague_terms": [
+    {"quote": "failure, intolerance or contraindication", "problem": "'failure' has no outcome measure"},
+    {"quote": "appropriate medical management including at least four weeks of a nasal topical spray", "problem": "(ETBD) 'appropriate' undefined"},
+    {"quote": "significant disease (i.e., abnormal mucosal status, fluid, or infection)", "problem": "'significant' defined by common findings"},
+    {"quote": "anterior or posterior mucopurulent (foul) drainage", "problem": "'foul' is subjective"},
+    {"quote": "Four or more episodes per year", "problem": "no statement of what documents an episode or the look-back date"},
+    {"quote": "when used as an adjunctive procedure during functional endoscopic sinus surgery (FESS) in the same sinus cavity", "problem": "payment bundling rule inside the coverage section; same sinus cavity vs another sinus not defined"}
+  ],
+  "extraction_hazards": [
+    "Roughly 20 of 28 pages are background and references; strongly worded statements there ('Appropriate CRS surgical candidates have failed at least eight weeks ... at least two antibiotics') are not in the criteria.",
+    "The same policy covers two procedures (sinus dilation and Eustachian tube dilation); a parser must split by heading.",
+    "Two-column table of contents and 'Related Coverage Resources' sidebar at the top of page 1.",
+    "Header 'Medical Coverage Policy: 0480' and 'Page n of 28' repeat in the middle of lists.",
+    "Bullets glyphs and 'o' sub-bullets; a bullet has no 'AND' between the first sub-list and the next, only the lead-in 'ALL'.",
+    "Page 2 ends mid-policy and the adjunct-to-FESS paragraph begins page 3."
+  ],
+  "interesting_structures": [
+    "Two diagnosis branches with different CT language (any of 4 findings for CRS; ostial occlusion AND mucosal thickening for RARS).",
+    "RARS adds a nasal endoscopy requirement; CRS does not.",
+    "Failure / intolerance / contraindication escape in the medical-management bullet.",
+    "Bundling statement for adjunctive use during FESS placed in the coverage section (compare Florida Blue, where it is the whole position).",
+    "Once-per-lifetime limit on Eustachian tube dilation (adult).",
+    "Revision Details table documents the 5/15/2025 change to mucosal thickening and antibiotics."
+  ],
+  "fit_to_tree": {"score": 2, "scale": "1 = clean, 5 = needs new constructs or human judgment", "why": "Compact all/any/k-of-n structure with numeric thresholds. Strain: the failure/intolerance/contraindication escape wrapped around an ALL-tried list, the per-sinus CT requirement (a criterion repeated per sinus requested), and Background text that contradicts or extends the criteria."}
+}

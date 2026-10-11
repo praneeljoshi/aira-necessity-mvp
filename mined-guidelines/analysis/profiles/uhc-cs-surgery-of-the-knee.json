@@ -1,0 +1,152 @@
+{
+ "file": "uhc-cs-surgery-of-the-knee.pdf",
+ "treatment": "knee-arthroscopy",
+ "payer": "uhc",
+ "doc_kind": "Medicaid policy",
+ "lines_of_business": [
+  "UnitedHealthcare Community Plan (Medicaid/community plans), excluding ID, IN, KS, KY, NE, NJ, NM, NC, OH, PA, TN which have state-specific policies"
+ ],
+ "effective_or_revised": "Effective June 1, 2026; policy CS068.AD",
+ "sections_in_order": [
+  "Application",
+  "Coverage Rationale",
+  "Medical Records Documentation Used for Reviews",
+  "Definitions",
+  "Applicable Codes",
+  "Description of Services",
+  "Clinical Evidence",
+  "U.S. Food and Drug Administration",
+  "References",
+  "Policy History/Revision Information",
+  "Instructions for Use"
+ ],
+ "criteria_location": "There are no criteria in the document. Coverage Rationale (p.1) says 'For medical necessity clinical coverage criteria, refer to the InterQual CP: Procedures' for eight named subsets; the only text rule is a list of unproven articular-cartilage products. Definitions of 'Disabling Pain', 'Functional Disability' and 'Radiographic Findings of Osteoarthritis' are present but not attached to any criterion in this document (they presumably support InterQual use or other CS policies).",
+ "procedures_covered": [
+  "Arthroscopy or arthroscopically assisted knee surgery (adult and pediatric)",
+  "Diagnostic arthroscopy +/- synovial biopsy",
+  "Arthrotomy, knee",
+  "Total/unicondylar/patellofemoral replacement and revision",
+  "Articular cartilage repair products (unproven)"
+ ],
+ "logic": {
+  "top_level": "other (delegation to InterQual plus a flat exclusion list)",
+  "max_nesting_depth": 1,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "One list of unproven products (minced cartilage, CMI, Chondrofix, Cartiform/ProChondrix, synthetic polymers, xenograft).",
+  "initial_vs_repeat": "None in document.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Surgery of the knee is proven and medically necessary in certain circumstances.",
+    "why_ambiguous": "No circumstances given; all content is in a licensed external product."
+   },
+   {
+    "quote": "UHC will accept three or more moderate to severe radiographic findings to be sufficient to support the diagnosis of severe osteoarthritis.",
+    "why_ambiguous": "Defines severe OA but nothing here says what to do with that diagnosis."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "other",
+   "quote": "For medical necessity clinical coverage criteria, refer to the InterQual CP: Procedures",
+   "where": "Coverage Rationale p.1"
+  },
+  {
+   "kind": "exclusion",
+   "quote": "Articular cartilage repair is unproven and not medically necessary for treating individuals with any of the following due to insufficient evidence of efficacy",
+   "where": "Coverage Rationale p.2"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "Disabling Pain: ... WOMAC pain domain of > 40",
+   "where": "Definitions p.2"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "Functional Disability: WOMAC functional limitation domain of > 40",
+   "where": "Definitions p.2"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "UHC will accept three or more moderate to severe radiographic findings to be sufficient to support the diagnosis of severe osteoarthritis",
+   "where": "Definitions p.3"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "WOMAC pain",
+   "value": "> 40",
+   "unit": "points",
+   "quote": "WOMAC pain domain of > 40"
+  },
+  {
+   "quantity": "WOMAC function",
+   "value": "> 40",
+   "unit": "points",
+   "quote": "WOMAC functional limitation domain of > 40"
+  },
+  {
+   "quantity": "radiographic findings",
+   "value": ">= 3 moderate-severe",
+   "unit": "findings",
+   "quote": "three or more moderate to severe radiographic findings"
+  }
+ ],
+ "time_windows": [],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Applicable Codes table (about 50 CPT and 3 HCPCS) is for reference only, includes arthroplasty codes, and is not mapped to anything.",
+  "non_covered_code_lists": "No code-level split; 0737T, G0428, J7330, S2112 appear in the list while the unproven list is by product."
+ },
+ "external_dependencies": [
+  {
+   "what": "InterQual CP: Procedures subsets (licensed, not reproduced)",
+   "quote": "refer to the InterQual\u00ae CP: Procedures: Arthroscopy or Arthroscopically Assisted Surgery, Knee"
+  },
+  {
+   "what": "Medical Records Documentation Used for Reviews guideline",
+   "quote": "refer to the guidelines titled Medical Records Documentation Used for Reviews"
+  },
+  {
+   "what": "State-specific policies",
+   "quote": "This Medical Policy does not apply to the states listed below"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Disabling Pain",
+   "definition_quote": "Western Ontario and McMaster Universities Arthritis Index (WOMAC) pain domain of > 40"
+  },
+  {
+   "term": "Outerbridge Grade III",
+   "definition_quote": "Fissuring to the level of subchondral bone in an area with a diameter of more than 1.5 cm"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "proven and medically necessary in certain circumstances",
+   "problem": "Circumstances are external."
+  },
+  {
+   "quote": "Disabling Pain / Functional Disability",
+   "problem": "Defined by WOMAC but no criterion in the document uses them; a chart rarely holds a WOMAC score."
+  }
+ ],
+ "extraction_hazards": [
+  "Whole 'Click here to view the InterQual criteria' link: criteria not in the PDF",
+  "Clinical Evidence (4 pages) reads like criteria but is rationale",
+  "Code table broken across pages with repeated header",
+  "Page header/footer on every page",
+  "Definitions ordered alphabetically, mixing product definitions with clinical thresholds"
+ ],
+ "interesting_structures": [
+  "Pure delegation to a licensed third-party criteria set",
+  "State-by-state carve-out table in Application",
+  "Definitions section that contains numeric thresholds with no consumer"
+ ],
+ "fit_to_tree": {
+  "score": 5,
+  "why": "The actual criteria are in InterQual; the PDF supports only an exclusion list and orphaned definitions, so a checker cannot build a tree from this document."
+ }
+}

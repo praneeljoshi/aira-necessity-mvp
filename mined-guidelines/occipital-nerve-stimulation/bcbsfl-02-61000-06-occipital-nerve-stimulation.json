@@ -1,0 +1,19 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "occipital-nerve-stimulation",
+  "title": "Occipital Nerve Stimulation",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76F8EJ7NU58UZFAS7AX",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-61000-06",
+  "original_effective": "02/15/10",
+  "reviewed": "10/23/25",
+  "revised": "11/15/25",
+  "file": "bcbsfl-02-61000-06-occipital-nerve-stimulation.pdf",
+  "sha256": "608626efb1bca05f4f07477f21c999500f30dc33b8038db2abde728a8b9c2a97",
+  "pages": 9,
+  "bytes": 726540,
+  "retrieved": "2026-10-09"
+}

@@ -1,0 +1,177 @@
+{
+  "id": "florida-blue-02-33000-28",
+  "payer": "Florida Blue",
+  "payer_aliases": ["Florida Blue", "BCBS FL", "BCBSFL", "Blue Cross Blue Shield of Florida", "Blue Cross and Blue Shield of Florida", "BCBS of Florida"],
+  "title": "Extracranial Carotid Angioplasty/Stenting",
+  "guideline_number": "02-33000-28",
+  "effective_date": "2026-03-15",
+  "reviewed_date": "2026-02-26",
+  "source_file": "bcbsfl-02-33000-28-extracranial-carotid-angioplasty-stenting.pdf",
+  "plan_types": ["All lines of business unless otherwise noted in the Program Exceptions section"],
+  "excluded_plans": ["Federal Employee Program (FEP)", "State Account Organization (SAO)", "Medicare Advantage products"],
+  "scope": {
+    "cpt": {
+      "37215": "covered",
+      "37216": "covered",
+      "37217": "covered"
+    },
+    "icd10": ["I65.21-I65.29"]
+  },
+  "criteria": [
+    {
+      "id": "stenting_with_embolic_protection",
+      "text": "Carotid angioplasty with associated stenting and embolic protection",
+      "question": "Is the planned procedure carotid angioplasty with stent placement and use of an embolic protection device (distal filter or proximal flow reversal)?",
+      "evidence_hint": "Procedure plan / consent / operative plan: 'carotid artery stenting', 'CAS', 'TCAR', 'embolic protection device', 'filter', 'flow reversal'. A plan for angioplasty alone, or stenting with no embolic protection, does not meet this."
+    },
+    {
+      "id": "stenosis_50_to_99_percent",
+      "text": "50% to 99% stenosis",
+      "question": "Is the degree of carotid stenosis documented as between 50% and 99% (a high-grade stenosis, not a complete occlusion)?",
+      "evidence_hint": "Carotid duplex, CTA or MRA report: percent stenosis of the target internal/common carotid artery, e.g. '70-99% stenosis', 'NASCET 80%'. A 100% occlusion is outside the range.",
+      "threshold": {"kind": "number", "op": "gte", "value": 50, "unit": "%"}
+    },
+    {
+      "id": "symptoms_within_120_days",
+      "text": "in previous 120 days",
+      "question": "Did the qualifying ischemic symptoms (transient ischemic attack, monocular blindness or nondisabling stroke) occur within the previous 120 days?",
+      "evidence_hint": "Dated history: onset date of the TIA / amaurosis fugax / stroke relative to the current evaluation; 'TIA 3 weeks ago', ED visit date, neurology consult date.",
+      "threshold": {"kind": "duration_months", "op": "lte", "value": 3.95, "unit": "months"}
+    },
+    {
+      "id": "transient_ischemic_attack",
+      "text": "transient ischemic attack",
+      "question": "Did the patient have a transient ischemic attack (focal cerebral ischemic symptoms, e.g. hemispheric weakness, numbness or speech disturbance) referable to the target carotid artery?",
+      "evidence_hint": "'TIA', 'transient ischemic attack', transient hemiparesis / aphasia / dysarthria attributed to the ipsilateral carotid."
+    },
+    {
+      "id": "monocular_blindness",
+      "text": "monocular blindness",
+      "question": "Did the patient have transient monocular blindness (amaurosis fugax) in the eye on the side of the target carotid artery?",
+      "evidence_hint": "'amaurosis fugax', 'transient monocular vision loss', 'curtain over the eye'."
+    },
+    {
+      "id": "symptom_duration_under_24_hours",
+      "text": "symptom duration less than 24 hours",
+      "question": "Did the transient ischemic symptoms (TIA or monocular blindness) resolve in less than 24 hours?",
+      "evidence_hint": "Duration of the episode: 'resolved within 20 minutes', 'symptoms lasted about an hour', 'fully resolved by the next morning'.",
+      "threshold": {"kind": "number", "op": "lt", "value": 24, "unit": "hours"}
+    },
+    {
+      "id": "nondisabling_stroke",
+      "text": "nondisabling stroke",
+      "question": "Did the patient have a nondisabling (minor) ischemic stroke referable to the target carotid artery?",
+      "evidence_hint": "'minor stroke', 'nondisabling stroke', 'mRS 0-2', 'small ischemic infarct on MRI with residual mild deficit'; a disabling stroke does not meet this."
+    },
+    {
+      "id": "anatomic_contraindication_cea",
+      "text": "Anatomic contraindication for carotid endarterectomy",
+      "question": "Does the chart document an anatomic reason the patient cannot undergo carotid endarterectomy?",
+      "evidence_hint": "Surgeon's assessment: 'not a candidate for CEA because of ...', 'hostile neck', 'high lesion above C2', 'contralateral vocal cord paralysis'. The named examples (prior radiotherapy, neck surgery, surgically inaccessible lesion, spinal immobility, tracheostomy) are each their own criterion; use this one for any other documented anatomic contraindication."
+    },
+    {
+      "id": "prior_neck_radiotherapy",
+      "text": "prior radiotherapy",
+      "question": "Has the patient had prior radiotherapy to the neck?",
+      "evidence_hint": "History of head and neck cancer treated with radiation, 'radiation-induced carotid stenosis', 'prior XRT to the neck'."
+    },
+    {
+      "id": "prior_neck_surgery",
+      "text": "neck surgery",
+      "question": "Has the patient had prior neck surgery (including prior carotid endarterectomy or radical neck dissection)?",
+      "evidence_hint": "'prior CEA', 'restenosis after endarterectomy', 'radical neck dissection', 'laryngectomy', 'prior cervical surgery'."
+    },
+    {
+      "id": "lesion_surgically_inaccessible",
+      "text": "lesions surgically inaccessible",
+      "question": "Is the carotid lesion surgically inaccessible (for example a lesion above the level of C2 / the mandible, or an intrathoracic common carotid lesion)?",
+      "evidence_hint": "'high lesion', 'above the angle of the mandible', 'distal ICA lesion not surgically accessible', 'proximal common carotid / innominate lesion'."
+    },
+    {
+      "id": "spinal_immobility",
+      "text": "spinal immobility",
+      "question": "Does the patient have spinal (cervical) immobility that prevents positioning for endarterectomy?",
+      "evidence_hint": "'cervical spine immobility', 'unable to extend the neck', 'cervical fusion', 'severe cervical arthritis'."
+    },
+    {
+      "id": "tracheostomy",
+      "text": "tracheostomy",
+      "question": "Does the patient have a tracheostomy?",
+      "evidence_hint": "'tracheostomy', 'trach in place', 'tracheal stoma'."
+    },
+    {
+      "id": "carotid_artery_dissection",
+      "text": "members with carotid artery dissection",
+      "question": "Is the carotid lesion a carotid artery dissection (rather than atherosclerotic stenosis)?",
+      "evidence_hint": "'carotid dissection', 'intimal flap', 'dissection flap', 'spontaneous or traumatic dissection'. A chart that describes atherosclerotic plaque with no mention of dissection answers no."
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "carotid_stenting_with_embolic_protection",
+      "name": "Carotid angioplasty with associated stenting and embolic protection",
+      "applies_to_cpt": ["37215", "37216", "37217"],
+      "requires": {"type": "all", "label": "ALL of the following criteria are met", "children": [
+        {"type": "leaf", "criterion": "stenting_with_embolic_protection"},
+        {"type": "leaf", "criterion": "stenosis_50_to_99_percent"},
+        {"type": "all", "label": "Symptoms of focal cerebral ischemia in previous 120 days", "children": [
+          {"type": "leaf", "criterion": "symptoms_within_120_days"},
+          {"type": "any", "label": "Transient symptoms lasting less than 24 hours, or nondisabling stroke", "children": [
+            {"type": "all", "label": "Transient ischemic attack or monocular blindness, symptom duration less than 24 hours", "children": [
+              {"type": "any", "label": "Transient ischemic attack or monocular blindness", "children": [
+                {"type": "leaf", "criterion": "transient_ischemic_attack"},
+                {"type": "leaf", "criterion": "monocular_blindness"}
+              ]},
+              {"type": "leaf", "criterion": "symptom_duration_under_24_hours"}
+            ]},
+            {"type": "leaf", "criterion": "nondisabling_stroke"}
+          ]}
+        ]},
+        {"type": "any", "label": "Anatomic contraindication for carotid endarterectomy (such as)", "children": [
+          {"type": "leaf", "criterion": "anatomic_contraindication_cea"},
+          {"type": "leaf", "criterion": "prior_neck_radiotherapy"},
+          {"type": "leaf", "criterion": "prior_neck_surgery"},
+          {"type": "leaf", "criterion": "lesion_surgically_inaccessible"},
+          {"type": "leaf", "criterion": "spinal_immobility"},
+          {"type": "leaf", "criterion": "tracheostomy"}
+        ]},
+        {"type": "not", "label": "Not a member with carotid artery dissection", "child": {"type": "leaf", "criterion": "carotid_artery_dissection"}}
+      ]},
+      "notes": [
+        "The only pathway the document grants. Stenting with embolic protection for any other indication, including members with carotid stenosis who are suitable candidates for carotid endarterectomy and members with carotid artery dissection, is experimental or investigational.",
+        "CPT 37217 (retrograde / transcervical approach) is governed by this pathway because the Reimbursement Information section says it 'is considered carotid stenting'."
+      ]
+    }
+  ],
+  "exclusions": [
+    {
+      "text": "Carotid angioplasty with associated stenting and embolic protection is considered experimental or investigational for all other indications, including but not limited to, members with carotid stenosis who are suitable candidates for carotid endarterectomy or members with carotid artery dissection.",
+      "cpt": []
+    },
+    {
+      "text": "Carotid angioplasty without associated stenting and embolic protection is considered experimental or investigational for all indications, including but not limited to, members with carotid stenosis who are suitable candidates for carotid endarterectomy or members with carotid artery dissection.",
+      "cpt": []
+    }
+  ],
+  "notes": [
+    "Source: the PDF holds a single clean copy of the guideline (no redline / tracked-changes copy); built from it. Printed dates: Original Effective Date 03/15/03, Reviewed 02/26/26, Revised 03/15/26. effective_date is the Revised date of this version (2026-03-15) in ISO form, following the hand-built 02-33000-31 example; reviewed_date is the Reviewed date (2026-02-26).",
+    "Structure: the Position Statement grants exactly one indication (one pathway). 'Carotid angioplasty with associated stenting and embolic protection meets the definition of medical necessity when ALL of the following criteria are met' with three bullets joined by AND: (1) 50% to 99% stenosis; (2) symptomatic; (3) anatomic contraindication for carotid endarterectomy. There is no asymptomatic pathway, no medical (non-anatomic) high-surgical-risk pathway, no repeat/restenosis pathway, and no separate pathway per CPT code.",
+    "Judgment call, procedure definition: 'Carotid angioplasty with associated stenting and embolic protection' is modelled as a leaf (stenting_with_embolic_protection) inside the pathway's ALL, because the coverage attaches to that procedure and a chart can show it (the procedure plan names stent + embolic protection device). It is the deciding question for CPT 37216 ('without distal embolic protection'): a chart documenting proximal (flow-reversal) protection meets it; a plan with no embolic protection fails it. The Description section says embolic protection can be proximal or distal, so the leaf is not limited to distal filters.",
+    "Judgment call, stenosis range: '50% to 99% stenosis' is one criterion (one number a chart documents). The schema holds one threshold, so the lower bound (>= 50%) is the threshold and the upper bound (<= 99%, i.e. not a complete occlusion) is carried in the criterion text and question. A reviewer who wants both bounds machine-checked would split it into two criteria with the same verbatim text.",
+    "Judgment call, the symptomatic bullet (the hardest sentence): 'Symptoms of focal cerebral ischemia (transient ischemic attack or monocular blindness) in previous 120 days, symptom duration less than 24 hours, or nondisabling stroke'. Read as the NASCET-style definition of a symptomatic patient: qualifying symptoms within the previous 120 days, where the symptoms are either transient (TIA or monocular blindness, lasting less than 24 hours) or a nondisabling stroke. Modelled as all(symptoms_within_120_days, any(all(any(transient_ischemic_attack, monocular_blindness), symptom_duration_under_24_hours), nondisabling_stroke)). The 120-day window is therefore applied to a nondisabling stroke as well as to a TIA / monocular blindness. The alternative, strictly literal parse attaches 'in previous 120 days' only to the TIA / monocular-blindness arm and lets a nondisabling stroke of any age qualify: any(all(TIA-or-monocular-blindness within 120 days, duration < 24 h), nondisabling stroke). That reading would approve a patient whose only event was a stroke years ago, whom no carotid guideline treats as symptomatic, so it was not used. A third parse (three parallel alternatives with 'symptom duration less than 24 hours' standing alone) is incoherent and was rejected. The criterion text for the window is the exact substring 'in previous 120 days' so that it reads correctly for both arms.",
+    "Judgment call, 120 days: typed as duration_months, op lte, value 3.95 (120 days x 12/365, the app's own conversion), unit months. It is a 'within' recency window, not an 'at least' duration, so it is not a note-date duration check; the dated history of the event is the evidence.",
+    "Judgment call, 24 hours: 'symptom duration less than 24 hours' is typed as number, op lt, value 24, unit hours (a duration of hours expressed in months would be meaningless). It applies to the transient arm only (TIA or monocular blindness); by definition a stroke's symptoms last 24 hours or more, so the duration leaf is not required on the nondisabling-stroke arm.",
+    "Judgment call, 'transient ischemic attack or monocular blindness': the parenthetical names the two transient symptom types; modelled as any(transient_ischemic_attack, monocular_blindness) because each is a distinct chart finding. 'Symptoms of focal cerebral ischemia' is not its own leaf: the parenthetical defines it rather than giving examples.",
+    "Judgment call, anatomic contraindication: 'Anatomic contraindication for carotid endarterectomy (such as prior radiotherapy or neck surgery, lesions surgically inaccessible, spinal immobility, or tracheostomy)' is an any() of six leaves: the umbrella criterion (anatomic_contraindication_cea) plus the five named examples. The umbrella is kept because the list is introduced by 'such as' (non-exhaustive): a documented anatomic contraindication not on the list (e.g. contralateral vocal cord paralysis, lesion above C2) still satisfies the bullet. 'prior' is read as qualifying both radiotherapy and neck surgery ('prior radiotherapy or neck surgery'); the neck-surgery leaf's verbatim text is 'neck surgery' and its question says prior neck surgery. Only anatomic contraindications count: medical high-surgical-risk factors (severe cardiac or pulmonary disease, age) are not mentioned anywhere in this document and do not satisfy the bullet.",
+    "Judgment call, carotid artery dissection: the experimental/investigational statement names 'members with carotid artery dissection' as excluded even when stenting and embolic protection are used, so the pathway carries not(carotid_artery_dissection). A dissection patient could otherwise satisfy all three bullets (dissection causes stenosis, is symptomatic, and may coexist with prior neck surgery). As with the hand-built example's not(secondary_to_dvt) leaf, the not() is satisfied only by an explicit NOT_MET: a chart that describes atherosclerotic plaque (no dissection) is the evidence; silence stays INSUFFICIENT.",
+    "Deliberately not a separate leaf: 'members with carotid stenosis who are suitable candidates for carotid endarterectomy'. Being a suitable CEA candidate is the inverse of bullet 3 (anatomic contraindication for CEA); a not(suitable_for_cea) leaf would duplicate that requirement and add a second verdict on the same fact. It is recorded in the exclusions instead.",
+    "Code-to-pathway mapping: the document ties no CPT code to a section. All three codes in the Billing/Coding table describe carotid artery stenting and the single pathway governs all three, so applies_to_cpt lists them explicitly: 37215 (stenting with distal embolic protection), 37216 (stenting without distal embolic protection), 37217 (intrathoracic common carotid / innominate stent by retrograde treatment through open cervical carotid exposure; the Reimbursement Information section says 37217 'is considered carotid stenting').",
+    "Code tagging: all three codes are 'covered' (medically necessary when the pathway is met). 37216 is not tagged non_covered: the only investigational-by-procedure statement is about 'Carotid angioplasty WITHOUT associated stenting and embolic protection' (angioplasty alone), which is not the procedure 37216 describes (37216 includes the stent). Whether embolic protection was used is judged on the chart through the stenting_with_embolic_protection leaf. No code in the table describes angioplasty without stenting, so that exclusion's cpt list is empty.",
+    "Exclusions carry no CPT codes: both experimental/investigational statements are indication-based (all other indications; or angioplasty alone), not code-based. Tagging 37215-37217 on the first exclusion would stop every order at the code gate, including the covered indication.",
+    "ICD-10 'Codes That Support Medical Necessity': I65.21 - I65.29 (Occlusion and stenosis of carotid artery) recorded as the range 'I65.21-I65.29' in scope.icd10.",
+    "Plan types: the header states the guideline applies to all lines of business unless otherwise noted in the Program Exceptions section. Excluded plans per Program Exceptions: Federal Employee Program (FEP) follows FEP guidelines; State Account Organization (SAO) follows SAO guidelines; Medicare Advantage products follow CMS NCD 20.7 (Percutaneous Transluminal Angioplasty) and NCA Decision Memo CAG-00085R8 (PTA of the Carotid Artery Concurrent with Stenting).",
+    "Left out, not requirements: the Description section (procedure description, proposed advantages of CAS over CEA, FDA approval of devices). Two Description sentences could be misread as requirements and were deliberately left out: 'Combined with optimal medical management, carotid angioplasty with or without stenting has been evaluated as an alternative to carotid endarterectomy' describes the evidence base, and the Position Statement does not require a trial of or concurrent optimal medical therapy; 'Interventionalists almost uniformly use an embolic protection device' is descriptive, while the actual embolic-protection requirement comes from the Position Statement's procedure definition and is the stenting_with_embolic_protection leaf. Also left out: the header disclaimer (benefits are determined by the contract / benefit booklet; a contract term no chart can show); the two 'insufficient evidence' sentences that follow the experimental/investigational statements (rationale, not criteria); the Reimbursement Information sentence that 37215 and 37216 include ipsilateral selective carotid catheterization, diagnostic imaging and radiological supervision and interpretation (bundling rule, not a coverage criterion); the step-therapy protocol-exemption paragraph (Florida law 627.42393; this guideline contains no step-therapy requirement); Definitions ('No guideline specific definitions apply'); Related Guideline 02-61000-35 (intracranial and extracranial vertebral artery disease, a different document); References; Committee Approval; Guideline Update history.",
+    "Answerability: every criterion is answerable from a chart (imaging report, dated event history, surgeon's assessment of CEA candidacy, procedure plan). The document names no provider-credential, facility or registry requirement."
+  ],
+  "status": "ok"
+}

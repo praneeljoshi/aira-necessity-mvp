@@ -1,0 +1,19 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "vagus-nerve-stimulation",
+  "title": "Vagus Nerve Stimulation",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JEWFS1V8SGC5B9BEH",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-61000-22",
+  "original_effective": "06/15/00",
+  "reviewed": "01/22/26",
+  "revised": "02/15/26",
+  "file": "bcbsfl-02-61000-22-vagus-nerve-stimulation.pdf",
+  "sha256": "fbec32327e9373ee2e30cd04d21bea891cddc4c7306eea1b24b263ff0eb29b38",
+  "pages": 14,
+  "bytes": 669147,
+  "retrieved": "2026-10-09"
+}

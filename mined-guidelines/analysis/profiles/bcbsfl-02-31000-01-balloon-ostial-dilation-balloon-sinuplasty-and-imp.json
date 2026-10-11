@@ -1,0 +1,62 @@
+{
+  "file": "bcbsfl-02-31000-01-balloon-ostial-dilation-balloon-sinuplasty-and-imp.pdf",
+  "treatment": "balloon-sinuplasty",
+  "payer": "bcbsfl",
+  "doc_kind": "medical policy (Medical Coverage Guideline)",
+  "lines_of_business": ["All lines of business unless noted in Program Exceptions", "FEP: follow FEP guidelines", "SAO: follow SAO guidelines", "Medicare Advantage: no NCD/LCD found"],
+  "effective_or_revised": "Original 03/15/17; Reviewed 07/23/26; Revised 08/15/26",
+  "sections_in_order": ["Description (with Summary and Analysis of Evidence)", "Position Statement", "Billing/Coding Information (CPT, LOINC documentation table)", "Reimbursement Information", "Program Exceptions", "Definitions", "Related Guidelines", "Other (alternate names)", "References"],
+  "criteria_location": "There are NO clinical medical-necessity criteria. The Position Statement (p.3-4 of 10) has two sentences: balloon dilation is integral to FESS when done at the same time and not separately reimbursable; implantable sinus devices are experimental or investigational. The only 'requirements' are a documentation list and LOINC table in Billing/Coding.",
+  "procedures_covered": ["Balloon sinus ostial dilation (31295, 31296, 31297, 31298)", "Implantable sinus devices / steroid-eluting stents (Propel, MicroFlow Spacer): investigational", "Sinuva: redirected to a drugs policy (09-J0000-38)"],
+  "logic": {
+    "top_level": "other (bundling rule plus investigational list; no criteria tree)",
+    "max_nesting_depth": 1,
+    "k_of_n": [],
+    "exclusions_or_contraindications": "None; one blanket investigational statement for implantable devices: 'considered experimental or investigational for all indications'.",
+    "initial_vs_repeat": "none",
+    "and_or_ambiguity": [
+      {"quote": "The use of an FDA approved catheter-based inflatable device ... in the treatment of sinusitis is considered integral to the traditional nasal/sinus endoscopic surgery or functional endoscopic sinus surgery (FESS) when performed at the same time and is not separately reimbursable.", "why_ambiguous": "States a payment rule only. It does not say whether stand-alone balloon dilation is medically necessary, not necessary, or covered under other criteria. Silence is not a coverage decision; a checker cannot tell if stand-alone dilation is approvable."},
+      {"quote": "Balloon sinuplasty is proposed as an alternative to endoscopic sinus surgery for individuals with chronic sinusitis who fail medical management (e.g., mucolytic, decongestant (oral and topical), antibiotic therapy).", "why_ambiguous": "A descriptive sentence naming medical management examples that looks like a criterion; it is in the Description, not the Position Statement."}
+    ]
+  },
+  "requirement_kinds": [
+    {"kind": "documentation/photos", "quote": "physician history and physical, physician progress notes, plan of treatment and reason for catheter-based inflatable device", "where": "Billing/Coding, LOINC section"},
+    {"kind": "documentation/photos", "quote": "Include all data of the selected type that represents observations made six months or fewer before starting date of service for the claim", "where": "LOINC documentation table"},
+    {"kind": "other", "quote": "considered integral to the traditional nasal/sinus endoscopic surgery or functional endoscopic sinus surgery (FESS) when performed at the same time and is not separately reimbursable", "where": "Position Statement"},
+    {"kind": "other", "quote": "implantable sinus devices ... considered experimental or investigational for all indications", "where": "Position Statement"}
+  ],
+  "thresholds": [
+    {"quantity": "documentation recency", "value": "<= 6", "unit": "months before date of service", "quote": "observations made six months or fewer before starting date of service"}
+  ],
+  "time_windows": [
+    {"what": "documentation look-back", "length": "6 months or fewer before date of service", "quote": "observations made six months or fewer before starting date of service for the claim"}
+  ],
+  "codes": {"cpt_hcpcs_listed": true, "icd10_listed": false, "codes_tied_to_criteria": "4 CPT codes (31295-31298) listed; LOINC codes (28626-0, 18741-9, 18776-5, time frame 18805-2) tied to the documentation list. No coverage mapping.", "non_covered_code_lists": "none listed; implantable devices are declared investigational without codes"},
+  "external_dependencies": [
+    {"what": "Sinuva sinus implant: another Florida Blue guideline", "quote": "For Sinuva (mometasone furoate) sinus implant, refer to Drugs and Biologics without a Medical Coverage Guideline ... 09-J0000-38"},
+    {"what": "FEP and SAO", "quote": "Federal Employee Program (FEP): Follow FEP guidelines. State Account Organization (SAO): Follow SAO guidelines."},
+    {"what": "Medicare Advantage", "quote": "No National Coverage Determination (NCD) and/or Local Coverage Determination (LCD) were found at the time of the last guideline reviewed date."},
+    {"what": "Florida step therapy law", "quote": "in compliance with Florida law 627.42393, members or providers may request a step therapy protocol exemption"}
+  ],
+  "definitions_that_change_meaning": [
+    {"term": "(none)", "definition_quote": "No guideline specific definitions apply."}
+  ],
+  "vague_terms": [
+    {"quote": "when performed at the same time", "problem": "same operative session? same sinus? Cigna says 'in the same sinus cavity'; Florida Blue does not"},
+    {"quote": "plan of treatment and reason for catheter-based inflatable device", "problem": "'reason' not defined; no clinical criteria to compare it to"},
+    {"quote": "The evidence is insufficient to determine the effects of the technology on health outcomes.", "problem": "rationale, not a rule"}
+  ],
+  "extraction_hazards": [
+    "Long evidence summary (Castro 2021, Kutluhan 2020, Han and Kern 2019) mentions chronic rhinosinusitis, failed medical management and CT scores, none of which are criteria.",
+    "LOINC documentation table is flattened into columns; the 'Physician history and physical' row appears twice (duplicate).",
+    "Description sentence 'fail medical management (e.g., mucolytic, decongestant ...)' reads like a criterion.",
+    "Reference list is 60+ items with a missing item 20 merge (two references fused)."
+  ],
+  "interesting_structures": [
+    "A coverage guideline whose position statement is a reimbursement/bundling rule rather than medical-necessity criteria.",
+    "Documentation requirements expressed as LOINC codes with time-frame modifier codes: machine-oriented, aimed at electronic attachments.",
+    "Implantable steroid-eluting devices declared investigational in the same document; Sinuva routed to a drug policy.",
+    "Policy title says 'and Implantable Devices'; the file stem is truncated."
+  ],
+  "fit_to_tree": {"score": 5, "scale": "1 = clean, 5 = needs new constructs or human judgment", "why": "There is no criteria tree to build. The checker would need to treat the policy as: stand-alone dilation has no stated criteria (so it cannot be evaluated), concurrent-with-FESS dilation is bundled, devices are investigational. A claims-bundling rule is not a chart-testable criterion."}
+}

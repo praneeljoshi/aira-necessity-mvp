@@ -1,0 +1,240 @@
+{
+ "file": "louisiana-carelon-transcatheter-heart-valve-procedures-surg-00121.pdf",
+ "treatment": "tavr",
+ "payer": "carelon",
+ "doc_kind": "Medicaid medical policy (Healthy Blue Louisiana; SURG.00121 draft with redline marks; library labels it Carelon)",
+ "lines_of_business": [
+  "Healthy Blue Louisiana Medicaid ('Healthy Blue's standard Medicaid benefit plan')"
+ ],
+ "effective_or_revised": "SURG.00121; draft shows 'Publish Date 12/29/202108/18/2022' and 'Last Review Date 08/112/20221' (overstruck dates; latest revision history 08/11/2022)",
+ "sections_in_order": [
+  "Description/Scope",
+  "Position Statement (Medically Necessary; Not Medically Necessary; Investigational)",
+  "Rationale",
+  "Background/Overview (FDA approved device table)",
+  "Definitions",
+  "Coding (CPT, ICD-10 procedure, ICD-10 diagnosis)",
+  "References",
+  "Websites",
+  "Index",
+  "Revision history"
+ ],
+ "criteria_location": "Position Statement, pp.1-4 (of 42): TAVR (native), valve-in-valve, transcatheter mitral edge-to-edge repair, transcatheter pulmonary valve, then not-medically-necessary and investigational lists. The remaining ~38 pages are rationale, trial tables, device tables, codes and references.",
+ "procedures_covered": [
+  "TAVR native (33361-33369)",
+  "Valve-in-valve TAVR",
+  "Transcatheter mitral edge-to-edge repair",
+  "Transcatheter pulmonary valve",
+  "Transcatheter tricuspid repair/replacement (investigational)",
+  "Cerebral embolic protection (33370) appears only in the code list, as potentially medically necessary; no criterion addresses it"
+ ],
+ "logic": {
+  "top_level": "pathways (TAVR native has 2 age-based risk pathways; valve-in-valve; mitral; pulmonary)",
+  "max_nesting_depth": 3,
+  "k_of_n": [
+   {
+    "k": 1,
+    "n": 4,
+    "quote": "The individual has severe degenerative, native valve aortic stenosis demonstrated by one of the following",
+    "pointer": "TAVR A.1-4"
+   },
+   {
+    "k": 1,
+    "n": 2,
+    "quote": "The individual is in one of the following categories: 1. Age 65 years or older ... or 2. Age younger than 65 with intermediate or greater open surgical risk",
+    "pointer": "TAVR C"
+   }
+  ],
+  "exclusions_or_contraindications": "No contraindication list; 'Not Medically Necessary' statement when criteria not met; investigational for tricuspid and for mitral annuloplasty and mitral ViV.",
+  "initial_vs_repeat": "Valve-in-valve for failed prior open surgical bioprosthesis is the only follow-on case.",
+  "and_or_ambiguity": [
+   {
+    "quote": "1. Age 65 years or older with Lowany open surgical risk and 65 years of age or older; or",
+    "why_ambiguous": "Redline text: 'Low' struck and 'any' inserted plus a duplicated '65 years of age or older'; History says 08/12/2021 'Revised MN criteria for TAVR in low open surgical risk to include individuals 65 years of age or older', so the intent is 'any open surgical risk and age >= 65'."
+   },
+   {
+    "quote": "2. Age younger than 65 with Iintermediate or greater open surgical risk (predicted risk of surgical mortality at 30 days greater than or equal to 3%) as determined by at least two physicians.",
+    "why_ambiguous": "'as determined by at least two physicians' could apply only to this branch or to all of C; capital 'I' is a redline fragment."
+   },
+   {
+    "quote": "either a mean aortic valve gradient of more than 40 mm Hg; or 4. a peak aortic-jet velocity of more than 4.0 m/sec; and",
+    "why_ambiguous": "'either' appears on item 3 only but the list is 4 items; item 3 and 4 are strict >, items 1,2 are <=."
+   },
+   {
+    "quote": "at high or greater risk for open surgical therapy (that is, Society of Thoracic Surgeons operative risk score greater than or equal to 8% or at a 15% or greater risk of operative mortality at 30 days)",
+    "why_ambiguous": "'or' between STS score and mortality estimate; who chooses is 'at least two physicians'."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "measurement threshold",
+   "quote": "the aortic valve area (AVA) is equal to or less than 0.8 cm2; AVA index equal to or less than 0.5 cm2/m2; mean gradient more than 40 mm Hg; peak velocity more than 4.0 m/sec",
+   "where": "TAVR A"
+  },
+  {
+   "kind": "symptom",
+   "quote": "Heart failure symptoms of New York Heart Association (NYHA) class II or greater",
+   "where": "TAVR B"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "severe degenerative, native valve aortic stenosis",
+   "where": "TAVR A"
+  },
+  {
+   "kind": "age and risk",
+   "quote": "Age 65 years or older with any open surgical risk; Age younger than 65 with intermediate or greater open surgical risk (>= 3% 30-day mortality) as determined by at least two physicians",
+   "where": "TAVR C"
+  },
+  {
+   "kind": "prior procedure / risk",
+   "quote": "failure of previous open surgical bioprosthetic aortic valve; high or greater risk (STS >= 8% or >= 15% 30-day mortality) as determined by at least two physicians",
+   "where": "Valve-in-valve"
+  },
+  {
+   "kind": "device/FDA",
+   "quote": "TAVR using a U.S Food and Drug Administration (FDA) approved device*",
+   "where": "All"
+  },
+  {
+   "kind": "imaging finding (mitral)",
+   "quote": "Echocardiogram demonstrates that the primary regurgitant jet results from malcoaptation of the A2 and P2 scallops",
+   "where": "Mitral"
+  },
+  {
+   "kind": "anatomy (pulmonary)",
+   "quote": "Existence of a full (circumferential) right ventricular outflow tract (RVOT) conduit that was equal to or greater than 16 mm in diameter when originally implanted",
+   "where": "Pulmonary"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "Aortic valve area",
+   "value": "<= 0.8",
+   "unit": "cm2",
+   "quote": "the aortic valve area (AVA) is equal to or less than 0.8 cm2"
+  },
+  {
+   "quantity": "AVA index",
+   "value": "<= 0.5",
+   "unit": "cm2/m2",
+   "quote": "the AVA index is equal to or less than 0.5 cm2/m2"
+  },
+  {
+   "quantity": "Mean gradient",
+   "value": "> 40",
+   "unit": "mm Hg",
+   "quote": "a mean aortic valve gradient of more than 40 mm Hg"
+  },
+  {
+   "quantity": "Peak velocity",
+   "value": "> 4.0",
+   "unit": "m/sec",
+   "quote": "a peak aortic-jet velocity of more than 4.0 m/sec"
+  },
+  {
+   "quantity": "Age",
+   "value": ">= 65",
+   "unit": "years",
+   "quote": "Age 65 years or older"
+  },
+  {
+   "quantity": "Predicted 30-day surgical mortality (age < 65)",
+   "value": ">= 3",
+   "unit": "percent",
+   "quote": "predicted risk of surgical mortality at 30 days greater than or equal to 3%"
+  },
+  {
+   "quantity": "STS score for valve-in-valve",
+   "value": ">= 8 (or >= 15% mortality)",
+   "unit": "percent",
+   "quote": "Society of Thoracic Surgeons operative risk score greater than or equal to 8% or at a 15% or greater risk of operative mortality at 30 days"
+  },
+  {
+   "quantity": "Mitral prohibitive risk",
+   "value": ">= 8",
+   "unit": "percent",
+   "quote": "predicted risk of surgical mortality greater than or equal to 8% at 30 days"
+  },
+  {
+   "quantity": "RVOT conduit",
+   "value": ">= 16",
+   "unit": "mm",
+   "quote": "equal to or greater than 16 mm in diameter"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "Surgical mortality horizon",
+   "length": "30 days",
+   "quote": "predicted risk of surgical mortality at 30 days"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": true,
+  "codes_tied_to_criteria": "Codes grouped under 'When services may be Medically Necessary when criteria are met' and a not-covered group; ICD-10 procedure 02RF3JH/02RF3JZ/02RF4JZ listed; ICD-10 diagnosis 'All diagnoses'.",
+  "non_covered_code_lists": "Separate groups 'When services are Not Medically Necessary' and 'Investigational and Not Medically Necessary' (33418, 33419, 33999 when specified as transcatheter replacement, 0345T, 0483T, 0484T, 0544T, 0545T, 0569T, 0570T, 0646T). Note 33370 (cerebral embolic protection) sits in the 'may be Medically Necessary when criteria are met' list although the position statement never mentions cerebral protection."
+ },
+ "external_dependencies": [
+  {
+   "what": "Background section for FDA-approved device list",
+   "quote": "Please refer to background section of document for list of FDA approved transcatheter heart valve (THV) devices used for TAVR"
+  },
+  {
+   "what": "Federal/state law and contract take precedence",
+   "quote": "Federal and State law, as well as contract language, including definitions and specific contract provisions/exclusions, take precedence over Medical Policy"
+  },
+  {
+   "what": "Third-party criteria tools",
+   "quote": "Healthy Blue may also use tools and criteria developed by third parties"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Humanitarian Device Exemption / PMA",
+   "definition_quote": "The use of the device is limited to 4000 or less individuals per year."
+  },
+  {
+   "term": "high or greater risk",
+   "definition_quote": "Society of Thoracic Surgeons operative risk score greater than or equal to 8% or at a 15% or greater risk of operative mortality at 30 days"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "as determined by at least two physicians",
+   "problem": "Which specialties not stated here (contrast FL 'cardiac surgeon' required, UHC interventional cardiologist + surgeon)."
+  },
+  {
+   "quote": "intermediate or greater open surgical risk",
+   "problem": "Defined only by the parenthetical 3% mortality."
+  },
+  {
+   "quote": "severe degenerative, native valve aortic stenosis",
+   "problem": "'degenerative' not defined; bicuspid or rheumatic aetiology?"
+  },
+  {
+   "quote": "Not Medically Necessary ... when the criteria above are not met",
+   "problem": "Residual rule, not independent criteria."
+  }
+ ],
+ "extraction_hazards": [
+  "Redline artifacts in the criteria text: 'Lowany', 'Iintermediate', '12/29/202108/18/20 22', '08/112/20221'",
+  "Boilerplate legal paragraph (about 12 lines) repeats on every one of 42 pages and splits the position statement mid-list (criterion C ends page 1, items 1-2 start page 2)",
+  "Trial comparison table with merged columns (pp.5-6) contains percentages that are not criteria",
+  "Device approval table lists indications with risk thresholds (e.g., 'predicted risk of surgical mortality >= 3%') that differ from the policy criteria",
+  "Five policy families in one document (aortic, ViV, mitral, pulmonary, tricuspid)"
+ ],
+ "interesting_structures": [
+  "Age-gated risk rule: age >= 65 any risk; age < 65 needs intermediate or greater risk (age-banded pathways)",
+  "Policy revised in 2021 to move from 'high risk' to 'any risk' for age >= 65, reflecting FDA label expansion",
+  "Device approval table in Background acts as an implicit appendix of eligible devices",
+  "Cerebral embolic protection code 33370 is listed as potentially covered, the opposite of Florida Blue and UHC (investigational/unproven)"
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "scale": "1 clean ... 5 human judgment",
+  "why": "Nested any/all with numeric leaves fits well, but redline corruption in the key age/risk clause and 'determined by at least two physicians' need human reading."
+ }
+}

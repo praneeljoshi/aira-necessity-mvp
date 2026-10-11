@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "surgical-treatments-for-lymphedema-and-l",
+  "title": "Surgical Treatments for Lymphedema and Lipedema",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JJV1UTV5B17YTVYXL",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-12000-18",
+  "original_effective": "01/01/22",
+  "reviewed": "04/23/26",
+  "revised": "05/15/26",
+  "file": "bcbsfl-02-12000-18-surgical-treatments-for-lymphedema-and-lipedema.pdf",
+  "sha256": "d789be0d097aa97f39cabfa6b5c9e1f03e6f38db36f5d43165476ce9bbc5dcd6",
+  "pages": 15,
+  "bytes": 267300,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original Effective Date 01/01/22; Reviewed 04/23/26; Revised 05/15/26 (16 pages)"
+}

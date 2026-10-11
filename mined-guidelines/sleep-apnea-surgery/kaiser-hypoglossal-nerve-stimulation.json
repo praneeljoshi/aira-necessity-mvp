@@ -1,0 +1,19 @@
+{
+  "payer": "Kaiser Permanente",
+  "payer_key": "kaiser",
+  "treatment": "sleep-apnea-surgery",
+  "title": "Hypoglossal Nerve Stimulation",
+  "policy_number": "",
+  "effective": "",
+  "url": "https://healthy.kaiserpermanente.org/content/dam/kporg/final/documents/health-plan-documents/notice/utilization-management/hypoglossal-nerve-stimulation-mas-en.pdf",
+  "final_url": "https://healthy.kaiserpermanente.org/content/dam/kporg/final/documents/health-plan-documents/notice/utilization-management/hypoglossal-nerve-stimulation-mas-en.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "kaiser-hypoglossal-nerve-stimulation.pdf",
+  "sha256": "4ce334e0d311412aa7a3fed2a18d90ae645d557bf593cfedaf4c3fe0a8d976ce",
+  "pages": 6,
+  "bytes": 196827,
+  "retrieved": "2026-10-09",
+  "printed_date": "RUMC approved and implemented 09/27/2023 (6 pages)"
+}

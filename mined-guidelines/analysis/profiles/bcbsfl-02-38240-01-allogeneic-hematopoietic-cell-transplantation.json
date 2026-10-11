@@ -1,0 +1,218 @@
+{
+ "lines_of_business": [
+  "All lines of business unless noted in PROGRAM EXCEPTIONS (disclaimer: \"THIS MEDICAL COVERAGE GUIDELINE APPLIES TO ALL LINES OF BUSINESS UNLESS OTHERWISE NOTED IN THE PROGRAM EXCEPTIONS SECTION\")",
+  "FEP: \"Follow FEP guidelines.\"",
+  "SAO: \"Follow SAO guidelines.\"",
+  "Medicare Advantage: NCD 110.23 Stem Cell Transplantation 'reviewed'",
+  "Fully insured Florida plans: statute-driven (Florida Statute 627.4236 excerpt in OTHER)"
+ ],
+ "effective_or_revised": "Original Effective Date 08/15/02; Reviewed 01/22/26; Revised 02/15/26 (20 pages)",
+ "sections_in_order": [
+  "header block (guideline number, Original Effective Date, Reviewed, Revised, Subject)",
+  "disclaimer paragraph",
+  "navigation bar (Position Statement / Billing/Coding / Reimbursement / Program Exceptions / Definitions / Related Guidelines / Other / References / Updates)",
+  "DESCRIPTION",
+  "POSITION STATEMENT",
+  "BILLING/CODING INFORMATION",
+  "REIMBURSEMENT INFORMATION",
+  "PROGRAM EXCEPTIONS",
+  "DEFINITIONS",
+  "RELATED GUIDELINES",
+  "OTHER",
+  "REFERENCES",
+  "COMMITTEE APPROVAL",
+  "GUIDELINE UPDATE INFORMATION"
+ ],
+ "criteria_location": "POSITION STATEMENT, pp.2-5, in four layers: (a) numbered subsections (1)-(6) paraphrasing Florida Administrative Code Chapter 59-B; (b) 'also meets the definition of medical necessity' additional indications (small lymphocytic lymphoma, Hodgkin, myeloma tandem, MPN); (c) a case-by-case paragraph with open examples; (d) an investigational list. Cord-blood and cord-blood banking statements close the section. Reimbursement says only 'Refer to section entitled POSITION STATEMENT'.",
+ "procedures_covered": [
+  "Allogeneic hematopoietic cell transplantation (bone marrow / peripheral blood / cord blood) by disease",
+  "Reduced-intensity conditioning allo-HCT for selected diseases",
+  "Tandem autologous-then-allogeneic for newly diagnosed multiple myeloma",
+  "Cord blood transplantation; cord blood collection and storage (covered only if transplant imminent in an identified recipient)",
+  "Transplants from living related donors incompatible at HLA-A, -B, -DRB1"
+ ],
+ "logic": {
+  "top_level": "pathways: a disease list (item (1)), a trial-only list (2), a rare-disease list (3), a donor-type rule (4), an outside-trial route (5) and further indications, each a separate route to coverage",
+  "max_nesting_depth": 3,
+  "k_of_n": [
+   {
+    "k": 1,
+    "n": 12,
+    "quote": "Allogeneic hematopoietic cell transplantation is covered when performed for one of the following indications:"
+   }
+  ],
+  "exclusions_or_contraindications": "Separate 'experimental or investigational for the following indications' list (advanced epithelial ovarian cancer, autoimmune diseases, adult and pediatric solid tumors, ependymoma, germ cell tumors, CNS embryonal tumors, etc.). No patient-level contraindication list. Some diseases appear in both covered and investigational lists with qualifiers (multiple myeloma, POEMS).",
+  "initial_vs_repeat": "Not addressed except tandem transplantation for myeloma and Hodgkin 'after autologous stem cell collection failure or relapsed after autologous transplant'. No re-transplant criteria.",
+  "and_or_ambiguity": [
+   {
+    "quote": "5. Any bone marrow transplant performed outside of a clinical trial will be covered when all the following criteria are met: The plan of care follows a clinical trial protocol that meets the requirements of subsection (5);",
+    "why_ambiguous": "Item 5 refers to 'subsection (5)', which is itself; the trial definition is item 6, so the cross-reference looks mis-numbered."
+   },
+   {
+    "quote": "Sickle cell anemia, thalassemia, and other severe red cell disorders",
+    "why_ambiguous": "Appears under item (1) (covered outright) and again under item (2) (covered only in a clinical trial); it is unclear which route applies."
+   },
+   {
+    "quote": "Multiple myeloma, as initial therapy for newly diagnosed multiple myeloma, or as salvage therapy [except as noted in subsection (2) above]",
+    "why_ambiguous": "Listed as investigational, with a carve-out by cross-reference to (2) and a covered tandem route later; the net answer requires combining three places."
+   },
+   {
+    "quote": "there are generally accepted and appropriate indications for bone marrow transplantation in these cases ... may be determined on a case by case basis",
+    "why_ambiguous": "Open-ended indications with no criteria: reviewer judgment."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "diagnosis",
+   "quote": "Acute myelogenous leukemia / Myeloid sarcoma / Chronic myelogenous leukemia / Acute lymphoblastic leukemia ...",
+   "where": "Position Statement (1)"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "Hodgkin’s lymphoma after autologous stem cell collection failure or relapsed after autologous transplant, but not progressing on salvage chemotherapy",
+   "where": "(1)"
+  },
+  {
+   "kind": "provider/facility qualification",
+   "quote": "Treatment center is part of the Blood and Marrow Transplant Clinical Trials Network (BMT CNT) as a core or non-core center.",
+   "where": "(5)"
+  },
+  {
+   "kind": "other",
+   "quote": "Patient cannot be enrolled in the proposed clinical trial;",
+   "where": "(5) clinical trial availability"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "A well-designed and conducted clinical treatment trial is one which includes an IRB-approved written protocol.",
+   "where": "(6) definition of an acceptable trial"
+  },
+  {
+   "kind": "lab value",
+   "quote": "DNA sequencing with mutated TP53 or ≤2% immunoglobulin heavy-chain variable (IGHV) mutation; interphase cytogenetics with del17p or deletion of 11q",
+   "where": "small lymphocytic lymphoma poor-risk markers"
+  },
+  {
+   "kind": "age",
+   "quote": "increasing blast percentage over 5%, or age 60-65 years",
+   "where": "RIC for MPN (examples of high risk of intolerance to myeloablative conditioning)"
+  },
+  {
+   "kind": "patient commitment",
+   "quote": "Patient is an appropriate candidate for bone marrow transplant",
+   "where": "(5), unspecified"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "IGHV mutation",
+   "value": "<= 2",
+   "unit": "%",
+   "quote": "≤2% immunoglobulin heavy-chain variable (IGHV) mutation"
+  },
+  {
+   "quantity": "complex karyotype",
+   "value": ">= 3",
+   "unit": "unrelated chromosome abnormalities in more than 1 cell",
+   "quote": "complex karyotype (≥3 unrelated chromosome abnormalities in more than 1 cell on karyotype]"
+  },
+  {
+   "quantity": "blast percentage",
+   "value": "> 5",
+   "unit": "%",
+   "quote": "increasing blast percentage over 5%"
+  },
+  {
+   "quantity": "age (example of RIC intolerance)",
+   "value": "60-65",
+   "unit": "years",
+   "quote": "or age 60-65 years"
+  }
+ ],
+ "time_windows": [],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "No. CPT 38204-38243 (donor search, harvest, cell preparation, 38240 allogeneic transplantation per donor, 38242, 38243) and HCPCS S2140, S2142, S2150 are listed (p.6 on); no ICD-10 table appears even though the update log says ICD-10 codes were added in 2010. A LOINC list names ~12 record types a reviewer may request (transplant risk factors, tobacco/alcohol/drug history, cardiac screen, pulmonary consult, psychosocial well-being).",
+  "non_covered_code_lists": "S2150 (bundled global transplant code) is tagged '(non-covered)'"
+ },
+ "external_dependencies": [
+  {
+   "what": "Florida Administrative Code Chapter 59-B (Bone Marrow Transplant Panel) defines subsections (1)-(6)",
+   "quote": "In accordance with Chapter 59-B of the Florida Administrative Code [(1) – (6)]:multiple"
+  },
+  {
+   "what": "Florida Statute 627.4236 excerpt and organ-transplant non-discrimination statutes (627.64197, 627.65736, 641.31075) reproduced in OTHER",
+   "quote": "may not exclude coverage for bone marrow transplant procedures recommended by the referring physician and the treating physician"
+  },
+  {
+   "what": "NCCN guidelines define poor-risk markers",
+   "quote": "or as defined by NCCN guidelines: DNA sequencing with mutated TP53"
+  },
+  {
+   "what": "Medicare Advantage NCD 110.23",
+   "quote": "Stem Cell Transplantation (110.23) located at cms.gov"
+  },
+  {
+   "what": "Related policy for autologous HCT",
+   "quote": "Autologous Hematopoietic Cell Transplantation, 02-38241-01"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Tandem transplant",
+   "definition_quote": "Two courses of high dose chemotherapy are given, opposed to the typical one course."
+  },
+  {
+   "term": "High-risk neuroblastoma",
+   "definition_quote": "stage 4; aggressive tumors with a high likelihood of recurrence."
+  },
+  {
+   "term": "Myeloproliferative neoplasm",
+   "definition_quote": "formerly known as chronic myeloproliferative disorder (CMPD); a subdivision of myeloid neoplasms that includes 4 classic disorders"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "each of the following procedures meets a minimum level of evidence ... and is considered accepted within the appropriate oncological specialty",
+   "problem": "statutory standard stated in prose; not a patient-level test."
+  },
+  {
+   "quote": "may be determined on a case by case basis",
+   "problem": "explicit delegation to reviewer judgment for non-malignant and rare malignant disease."
+  },
+  {
+   "quote": "Patient is an appropriate candidate for bone marrow transplant",
+   "problem": "no criteria for 'appropriate'."
+  },
+  {
+   "quote": "high risk of intolerance to a myeloablative conditioning regimen (e.g., cytopenias, transfusion dependence ...)",
+   "problem": "'e.g.' list, thresholds only partly given."
+  }
+ ],
+ "extraction_hazards": [
+  "Stray word from conversion: '[(1) – (6)]:multiple' in the lead sentence.",
+  "Sub-items use U+F0B7 private-use bullets (49) that vanish in many viewers; indentation under numbered items shifts between pages.",
+  "Items are numbered '1.' to '6.' in the text but the document cross-refers to them as '(1)'-'(6)' and 'subsections'; item numbers also appear as inline subsection refs inside other bullets.",
+  "Page-break inside the numbered list; the Certificate of Medical Necessity instruction block (with its own '1. 2. 3.' numbered steps) sits at the start of the Position Statement and could be mistaken for criteria.",
+  "References run 146 entries (pp.10-19), ~360 lines; Update Information is also a long dated log.",
+  "Statutory excerpts under OTHER are legal text, not criteria, but contain 'shall'/'may not' language."
+ ],
+ "interesting_structures": [
+  "Criteria are layered by legal source: state-mandated floor (59-B subsections) then Florida Blue's additional indications 'in addition to any mandated coverage in subsections 1-6 above'.",
+  "Clinical-trial gating: some indications covered only inside an NCI-consistent IRB protocol, with a route for patients who cannot enroll.",
+  "Facility network requirement (BMT CTN core/non-core center).",
+  "Blanket 'case by case' acknowledgement for diseases not enumerated.",
+  "Same disease can be covered, trial-only and investigational in three different lists."
+ ],
+ "fit_to_tree": {
+  "score": 4,
+  "scale": "1..5",
+  "why": "it is a disease-indexed table plus gating conditions (trial, facility, donor match) with cross-references and a reviewer-discretion clause; needs a disease lookup and a notion of 'covered via route X', and some leaves ('appropriate candidate') are pure judgment."
+ },
+ "file": "bcbsfl-02-38240-01-allogeneic-hematopoietic-cell-transplantation.pdf",
+ "treatment": "allogeneic-hematopoietic-cell-transplant",
+ "payer": "bcbsfl",
+ "doc_kind": "medical policy (Florida Blue 'Medical Coverage Guideline', MCG)"
+}

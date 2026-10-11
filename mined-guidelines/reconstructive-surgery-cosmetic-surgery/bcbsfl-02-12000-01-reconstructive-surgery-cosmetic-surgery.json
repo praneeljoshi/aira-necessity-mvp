@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "reconstructive-surgery-cosmetic-surgery",
+  "title": "Reconstructive Surgery/ Cosmetic Surgery",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76FA22J2S0X2BGJG5FT",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-12000-01",
+  "original_effective": "02/15/02",
+  "reviewed": "12/04/25",
+  "revised": "12/15/25",
+  "file": "bcbsfl-02-12000-01-reconstructive-surgery-cosmetic-surgery.pdf",
+  "sha256": "b968e7643f76ae8643f7f79aec016c71d87f16e59a6569c39b68ff81d2be0145",
+  "pages": 21,
+  "bytes": 774898,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original Effective Date 02/15/02; Reviewed 12/04/25; Revised 12/15/25"
+}

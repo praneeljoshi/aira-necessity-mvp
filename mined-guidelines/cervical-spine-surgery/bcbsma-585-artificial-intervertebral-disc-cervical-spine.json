@@ -1,0 +1,19 @@
+{
+  "payer": "Blue Cross Blue Shield of Massachusetts",
+  "payer_key": "bcbsma",
+  "treatment": "cervical-spine-surgery",
+  "title": "Artificial Intervertebral Disc - Cervical Spine",
+  "policy_number": "585",
+  "effective": "",
+  "url": "https://www.bluecrossma.com/common/en_US/medical_policies/585%20Artificial%20Intervertebral%20Disc%20-%20Cervical%20Spine%20prn.pdf",
+  "final_url": "https://www.bluecrossma.com/common/en_US/medical_policies/585%20Artificial%20Intervertebral%20Disc%20-%20Cervical%20Spine%20prn.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "bcbsma-585-artificial-intervertebral-disc-cervical-spine.pdf",
+  "sha256": "43bf733eb64f9423a5a3689131b31d9a89b3f5a01eb47de5bb92eeff236c3d29",
+  "pages": 8,
+  "bytes": 250142,
+  "retrieved": "2026-10-09",
+  "printed_date": "Effective date blank in the policy; history runs to 6/2020 (7 pages)"
+}

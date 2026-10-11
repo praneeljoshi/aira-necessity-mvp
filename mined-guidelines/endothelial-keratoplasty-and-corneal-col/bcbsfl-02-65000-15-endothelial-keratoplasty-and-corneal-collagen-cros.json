@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "endothelial-keratoplasty-and-corneal-col",
+  "title": "Endothelial Keratoplasty and Corneal Collagen Cross-Linking",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JGJZ3UY85QXWZSO41",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-65000-15",
+  "original_effective": "08/15/03",
+  "reviewed": "02/26/26",
+  "revised": "03/15/26",
+  "file": "bcbsfl-02-65000-15-endothelial-keratoplasty-and-corneal-collagen-cros.pdf",
+  "sha256": "a8adc253bd95e4ba574cc5aa6ac97547a40718d9c0f07516ab01f1e0cfb75888",
+  "pages": 11,
+  "bytes": 827555,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original Effective Date 08/15/03; Reviewed 02/26/26; Revised 03/15/26 (11 pages)."
+}

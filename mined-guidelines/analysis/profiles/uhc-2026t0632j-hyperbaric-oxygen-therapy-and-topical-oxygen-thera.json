@@ -1,0 +1,140 @@
+{
+ "payer": "uhc",
+ "doc_kind": "medical policy",
+ "lines_of_business": [
+  "UnitedHealthcare Commercial",
+  "UnitedHealthcare Individual Exchange",
+  "may also be applied to Medicare Advantage in absence of NCD/LCD"
+ ],
+ "effective_or_revised": "Effective May 1, 2026",
+ "sections_in_order": [
+  "Application",
+  "Coverage Rationale",
+  "Definitions",
+  "Applicable Codes",
+  "Description of Services",
+  "Clinical Evidence",
+  "U.S. Food and Drug Administration",
+  "References",
+  "Policy History/Revision Information",
+  "Instructions for Use"
+ ],
+ "criteria_location": "Coverage Rationale, p.1-2 (about 20 lines). Pages 3-20 are clinical evidence; 21-23 references.",
+ "procedures_covered": [
+  "Hyperbaric oxygen therapy",
+  "Mild hyperbaric oxygen (not medically necessary)",
+  "Topical oxygen therapy (unproven)"
+ ],
+ "logic": {
+  "top_level": "any (flat list of 17 conditions)",
+  "max_nesting_depth": 1,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "Default-deny sentence: 'unproven and not medically necessary ... all other indications not listed'. Mild HBOT and topical oxygen excluded by name.",
+  "initial_vs_repeat": "None.",
+  "and_or_ambiguity": []
+ },
+ "requirement_kinds": [
+  {
+   "kind": "diagnosis",
+   "quote": "Diabetic lower extremity wounds",
+   "where": "Coverage Rationale p.1"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "Anemia, severe, when transfusion is refused, delayed, or unavailable",
+   "where": "p.1"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "Cyanide poisoning, associated with carbon monoxide poisoning",
+   "where": "p.1"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "Thermal burns, second or third degree",
+   "where": "p.1"
+  },
+  {
+   "kind": "other",
+   "quote": "For clinical purposes, the pressure must equal or exceed 1.4 ATA while breathing near 100% oxygen.",
+   "where": "Definitions p.2"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "Chronic osteomyelitis, refractory to medical and surgical management",
+   "where": "p.1"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "chamber pressure",
+   "value": ">= 1.4",
+   "unit": "ATA",
+   "quote": "the pressure must equal or exceed 1.4 ATA"
+  }
+ ],
+ "time_windows": [],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Diagnosis codes only by reference to a separate list: 'Hyperbaric Oxygen Therapy and Topical Oxygen Therapy: Diagnosis Code List'. Codes explicitly do not imply coverage.",
+  "non_covered_code_lists": "A4575 and E0446 listed, covered status governed by the topical oxygen statement"
+ },
+ "external_dependencies": [
+  {
+   "what": "separate diagnosis code list",
+   "quote": "Hyperbaric Oxygen Therapy and Topical Oxygen Therapy: Diagnosis Code List"
+  },
+  {
+   "what": "member benefit plan, InterQual",
+   "quote": "UnitedHealthcare may also use tools developed by third parties, such as the InterQual criteria"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Hyperbaric Oxygen Therapy",
+   "definition_quote": "For clinical purposes, the pressure must equal or exceed 1.4 ATA while breathing near 100% oxygen."
+  },
+  {
+   "term": "Mild Hyperbaric Oxygen Therapy",
+   "definition_quote": "deliver oxygen at pressures lower than 1.4 ATA"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "Diabetic lower extremity wounds",
+   "problem": "no Wagner grade, no duration, no standard-care step: entirely unconstrained"
+  },
+  {
+   "quote": "Delayed radiation injuries (soft tissue and bony necrosis)",
+   "problem": "'delayed' undefined"
+  },
+  {
+   "quote": "refractory to medical and surgical management",
+   "problem": "undefined"
+  },
+  {
+   "quote": "Compromised skin grafts/flaps",
+   "problem": "no signs defined"
+  }
+ ],
+ "extraction_hazards": [
+  "Pdf has page header/footer repeated each page",
+  "Criteria bullets with no glyphs",
+  "Diagnosis code list is not in the document",
+  "TOC dotted leaders"
+ ],
+ "interesting_structures": [
+  "Shortest criteria of all: a list of 17 conditions",
+  "Pressure definition used to exclude home 'mild' chambers",
+  "No documentation, session, or site rules",
+  "Diagnosis list incomplete in PDF (external)"
+ ],
+ "fit_to_tree": {
+  "score": 1,
+  "scale": "1 = all/any/not expresses it cleanly ... 5 = needs new constructs",
+  "why": "A flat any over 17 diagnosis leaves plus a not for others. Almost nothing a chart must prove beyond the diagnosis."
+ },
+ "file": "uhc-2026t0632j-hyperbaric-oxygen-therapy-and-topical-oxygen-thera.pdf",
+ "treatment": "hyperbaric-oxygen"
+}

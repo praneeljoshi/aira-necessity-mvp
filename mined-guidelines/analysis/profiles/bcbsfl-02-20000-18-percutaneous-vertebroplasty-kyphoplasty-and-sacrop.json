@@ -1,0 +1,173 @@
+{
+ "file": "bcbsfl-02-20000-18-percutaneous-vertebroplasty-kyphoplasty-and-sacrop.pdf",
+ "treatment": "vertebroplasty-kyphoplasty",
+ "payer": "bcbsfl",
+ "doc_kind": "medical policy (Medical Coverage Guideline)",
+ "lines_of_business": [
+  "All lines unless noted; FEP and SAO follow own guidelines; Medicare Advantage references LCD L34976"
+ ],
+ "effective_or_revised": "Original 02/15/01; Reviewed 01/22/26; Revised 02/15/26",
+ "sections_in_order": [
+  "Description (with long Summary and Analysis of Evidence)",
+  "Position Statement",
+  "Billing/Coding Information",
+  "Reimbursement Information",
+  "Program Exceptions",
+  "Definitions",
+  "Related Guidelines",
+  "Other (device list)",
+  "References",
+  "Updates"
+ ],
+ "criteria_location": "Position Statement, one page: three sub-blocks (vertebroplasty; balloon kyphoplasty and mechanical augmentation; RFK; sacroplasty). ICD-10 list in Billing/Coding.",
+ "procedures_covered": [
+  "Percutaneous vertebroplasty 22510-22512",
+  "Balloon kyphoplasty / mechanical vertebral augmentation 22513-22515",
+  "Radiofrequency kyphoplasty (investigational)",
+  "Sacroplasty 0200T/0201T (investigational)"
+ ],
+ "logic": {
+  "top_level": "pathways (each procedure has a list of alternative indications joined by OR, each indication a small all)",
+  "max_nesting_depth": 2,
+  "k_of_n": [
+   {
+    "k": 1,
+    "n": 4,
+    "quote": "meets the definition of medical necessity for the following indications: ... OR ... OR ... OR"
+   }
+  ],
+  "exclusions_or_contraindications": "No contraindication list. Only investigational statements (RFK, sacroplasty).",
+  "initial_vs_repeat": "None; no multi-level or repeat rule.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Treatment of acute vertebral fractures due to trauma, when at least 2 weeks of conservative treatment (eg, analgesics, physical therapy, rest) has failed",
+    "why_ambiguous": "Trauma indication differs from osteoporotic; 'acute' yet needs 2 weeks failure; osteoporotic fractures <6 weeks go via the hospitalization route"
+   },
+   {
+    "quote": "that have led to hospitalization or persist at a level that prevents ambulation",
+    "why_ambiguous": "'or' inside indication two; 'persist' at a level has no scale"
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "diagnosis",
+   "quote": "symptomatic osteoporotic vertebral fractures",
+   "where": "Vertebroplasty 1"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "failed to respond to conservative treatment (eg, analgesics, physical therapy, rest) for at least 6 weeks",
+   "where": "Vertebroplasty 1"
+  },
+  {
+   "kind": "functional impairment",
+   "quote": "persist at a level that prevents ambulation",
+   "where": "Vertebroplasty 2"
+  },
+  {
+   "kind": "symptom",
+   "quote": "severe pain due to osteolytic lesions of the spine related to multiple myeloma or metastatic malignancies",
+   "where": "Vertebroplasty 3"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "acute vertebral fractures due to trauma, when at least 2 weeks of conservative treatment ... has failed",
+   "where": "Vertebroplasty 4"
+  },
+  {
+   "kind": "site of service",
+   "quote": "symptomatic thoracolumbar osteoporotic vertebral compression fractures",
+   "where": "Kyphoplasty 1"
+  },
+  {
+   "kind": "provider/facility qualification",
+   "quote": "using an FDA cleared device",
+   "where": "Kyphoplasty"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "conservative therapy osteoporotic",
+   "value": ">=6",
+   "unit": "weeks",
+   "quote": "for at least 6 weeks"
+  },
+  {
+   "quantity": "conservative therapy trauma",
+   "value": ">=2",
+   "unit": "weeks",
+   "quote": "at least 2 weeks of conservative treatment"
+  },
+  {
+   "quantity": "fracture age for hospitalization route",
+   "value": "<6",
+   "unit": "weeks",
+   "quote": "less than 6 weeks in duration"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "osteoporotic conservative care",
+   "length": "6 weeks",
+   "quote": "for at least 6 weeks"
+  },
+  {
+   "what": "traumatic conservative care",
+   "length": "2 weeks",
+   "quote": "at least 2 weeks of conservative treatment"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": true,
+  "codes_tied_to_criteria": "ICD-10 list 'support medical necessity' (C41.2, C79.51-52, C90.00-02, D18.09, M48.50-58, M80.08, M84.48/58/68) but not mapped to individual indications; sacral codes marked investigational.",
+  "non_covered_code_lists": "0200T, 0201T (investigational); RFK has no listed code"
+ },
+ "external_dependencies": [
+  {
+   "what": "Medicare Advantage LCD L34976",
+   "quote": "Percutaneous Vertebral Augmentation (PVA) for Vertebral Compression Fracture (VCF) (L34976)"
+  },
+  {
+   "what": "FEP/SAO",
+   "quote": "Follow FEP guidelines"
+  }
+ ],
+ "definitions_that_change_meaning": [],
+ "vague_terms": [
+  {
+   "quote": "symptomatic osteoporotic vertebral fractures",
+   "problem": "No pain scale, no imaging requirement"
+  },
+  {
+   "quote": "failed to respond to conservative treatment (eg, ...)",
+   "problem": "No required modality; e.g."
+  },
+  {
+   "quote": "severe pain",
+   "problem": "No scale"
+  },
+  {
+   "quote": "persist at a level that prevents ambulation",
+   "problem": "Not measured"
+  }
+ ],
+ "extraction_hazards": [
+  "Description contains long evidence quotes with Cyrillic/Greek look-alike letters mixed into words (e.g. 'vеrtеbrοplаstу'), so text search for 'vertebroplasty' fails inside that block",
+  "Typos 'GUIDEL, INE'",
+  "Bulleted OR lists with OR at end of bullet",
+  "Device trade-name list under 'Other' looks like criteria",
+  "Table of ICD-10 ranges with XA-XS 7th-character ranges"
+ ],
+ "interesting_structures": [
+  "No imaging requirement, no contraindication list; relies on diagnosis plus conservative duration",
+  "Different conservative durations by etiology (6 weeks vs 2 weeks)",
+  "Level restriction (thoracolumbar) only for kyphoplasty, not vertebroplasty"
+ ],
+ "fit_to_tree": {
+  "score": 1,
+  "scale": "1-5",
+  "why": "Cleanest case: any-of indications each with at most an all; only vague words ('severe', 'symptomatic') and the evidence-text homoglyphs strain it."
+ }
+}

@@ -1,0 +1,170 @@
+{
+ "file": "cigna-0027-abdominoplasty-and-panniculectomy.pdf",
+ "treatment": "panniculectomy",
+ "payer": "cigna",
+ "doc_kind": "coverage policy (Cigna Medical Coverage Policy 0027)",
+ "lines_of_business": [
+  "Cigna-administered plans; 'Coverage for panniculectomy and abdominoplasty varies across plans.'"
+ ],
+ "effective_or_revised": "Effective 6/15/2026; Next Review 3/15/2027",
+ "sections_in_order": [
+  "Instructions for Use",
+  "Overview",
+  "Coverage Policy",
+  "Coding Information",
+  "General Background",
+  "Health Equity Considerations",
+  "References",
+  "Revision Details"
+ ],
+ "criteria_location": "Coverage Policy, pp.2-3 only; ~1.5 pages. Coding Information p.3-4.",
+ "procedures_covered": [
+  "Panniculectomy 15830",
+  "Abdominoplasty/mini-abdominoplasty 15847, 17999",
+  "Diastasis recti repair",
+  "Suction-assisted lipectomy 15877"
+ ],
+ "logic": {
+  "top_level": "all",
+  "max_nesting_depth": 3,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "'not medically necessary for ANY other indication, including ...' list (neck/back pain, cosmesis, psychological, with other abdominal/gyn procedures unless separately met).",
+  "initial_vs_repeat": "None",
+  "and_or_ambiguity": [
+   {
+    "quote": "The pannus is causing persistent intertriginous dermatitis, cellulitis, or skin ulceration, which is refractory to at least three (3) months of medical management, including all applicable treatments. ... treatment should include topical antifungals, topical and/or systemic corticosteroids, and/or local or systemic antibiotics.",
+    "why_ambiguous": "'all applicable treatments' versus 'and/or' list; 'should include' is hortatory not mandatory."
+   },
+   {
+    "quote": "Note: If the procedure is being performed following significant weight loss, in addition to meeting the criteria noted above",
+    "why_ambiguous": "Conditional extension in a Note; 'significant weight loss' undefined, so the branch trigger is unclear."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "imaging finding",
+   "quote": "The following demonstrated on preoperative photographs: The pannus hangs at or below the level of the symphysis pubis",
+   "where": "Coverage Policy"
+  },
+  {
+   "kind": "symptom",
+   "quote": "persistent intertriginous dermatitis, cellulitis, or skin ulceration, which is refractory to at least three (3) months of medical management",
+   "where": "Coverage Policy"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "In addition to good hygiene practices, treatment should include topical antifungals, topical and/or systemic corticosteroids, and/or local or systemic antibiotics",
+   "where": "Coverage Policy"
+  },
+  {
+   "kind": "functional impairment",
+   "quote": "presence of a functional deficit due to severe physical deformity or disfigurement resulting from the pannus",
+   "where": "History and physical"
+  },
+  {
+   "kind": "functional impairment",
+   "quote": "The surgery is expected to restore or improve the functional deficit; The pannus is interfering with activities of daily living",
+   "where": "History and physical"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "panniculectomy should not be performed until at least 18 months after bariatric surgery and only when weight has been stable for at least the most recent six months",
+   "where": "Note"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "preoperative photographs; history and physical examination",
+   "where": "Coverage Policy"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "Pannus position",
+   "value": "at or below symphysis pubis",
+   "unit": "landmark",
+   "quote": "hangs at or below the level of the symphysis pubis"
+  },
+  {
+   "quantity": "Medical management",
+   "value": "≥3",
+   "unit": "months",
+   "quote": "at least three (3) months of medical management"
+  },
+  {
+   "quantity": "Stable weight",
+   "value": "≥6",
+   "unit": "months",
+   "quote": "stable for at least six months"
+  },
+  {
+   "quantity": "Post-bariatric",
+   "value": "≥18",
+   "unit": "months",
+   "quote": "at least 18 months after bariatric surgery"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "Medical management",
+   "length": "3 months",
+   "quote": "at least three (3) months"
+  },
+  {
+   "what": "Stable weight after significant weight loss",
+   "length": "6 months",
+   "quote": "stable weight for at least six months"
+  },
+  {
+   "what": "Post-bariatric",
+   "length": "18 months",
+   "quote": "at least 18 months after bariatric surgery"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Yes: codes grouped under 'Considered Medically Necessary' / 'Cosmetic/Not Medically Necessary' headings",
+  "non_covered_code_lists": "15847, 17999, 22999, 15877 with conditional notes"
+ },
+ "external_dependencies": [
+  {
+   "what": "Benefit plan document supersedes",
+   "quote": "a customer's benefit plan document always supersedes"
+  },
+  {
+   "what": "Related: Bariatric Surgery; Redundant Skin Surgery",
+   "quote": "Related Coverage Resources"
+  }
+ ],
+ "definitions_that_change_meaning": [],
+ "vague_terms": [
+  {
+   "quote": "significant weight loss",
+   "problem": "Undefined here; no BMI/lb/EWL"
+  },
+  {
+   "quote": "severe physical deformity or disfigurement",
+   "problem": "Undefined"
+  },
+  {
+   "quote": "including all applicable treatments",
+   "problem": "which treatments apply is judgment"
+  }
+ ],
+ "extraction_hazards": [
+  "Criteria are split by evidence source: 'demonstrated on preoperative photographs' vs 'documented in the history and physical' - bullets with checkmark glyphs lost",
+  "Footer 'Page N of 10' mid-list",
+  "Coverage Policy sub-bullets are glyphs (non-ASCII)",
+  "Footnote dagger notes in coding tables carry coverage logic"
+ ],
+ "interesting_structures": [
+  "Each criterion is tagged with the document type that must prove it (photos vs H&P)",
+  "Suction lipectomy integral rule: not separately reimbursed when used with MN panniculectomy"
+ ],
+ "fit_to_tree": {
+  "score": 2,
+  "scale": "1-5",
+  "why": "Short ALL list; evidence-source tagging and undefined 'significant weight loss' need care."
+ }
+}

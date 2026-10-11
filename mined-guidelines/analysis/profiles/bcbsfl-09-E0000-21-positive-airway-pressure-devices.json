@@ -1,0 +1,334 @@
+{
+ "file": "bcbsfl-09-E0000-21-positive-airway-pressure-devices.pdf",
+ "treatment": "pap-devices",
+ "payer": "bcbsfl",
+ "doc_kind": "medical policy (Medical Coverage Guideline)",
+ "lines_of_business": [
+  "All lines of business unless noted in Program Exceptions; FEP follows FEP guidelines; SAO follows SAO guidelines; Medicare Advantage references NCD 240.4 and LCDs L33718/L33800"
+ ],
+ "effective_or_revised": "Original 02/15/01; Reviewed 08/28/25; Revised 09/15/25",
+ "sections_in_order": [
+  "Description",
+  "Position Statement",
+  "Continued coverage beyond first three months",
+  "Replacement",
+  "Accessories",
+  "Other (humidifier, accessory quantity table)",
+  "LOINC Codes",
+  "Billing/Coding Information",
+  "Reimbursement Information",
+  "Documentation Required",
+  "Program Exceptions",
+  "Definitions",
+  "Related Guidelines",
+  "References",
+  "Updates"
+ ],
+ "criteria_location": "Position Statement (pp. ~2-6) holds initial-therapy criteria per device/diagnosis; continued coverage, replacement, accessories follow as sub-headings of the same section; Documentation Required and Definitions (AHI, EDS = ESS>=10, hypopnea) are separate later sections and change how the criteria are read.",
+ "procedures_covered": [
+  "CPAP/APAP E0601 (adult OSA, pediatric OSA)",
+  "Bi-level without backup E0470 (OSA after CPAP failure; restrictive thoracic, severe COPD, CSA, hypoventilation)",
+  "Bi-level with backup E0471 (non-OSA only; ASV)",
+  "Humidifiers E0561/E0562",
+  "Accessories A4604, A7027-A7046 with quantity limits",
+  "Replacement of devices",
+  "Investigational: nasal EPAP (A7049), oral pressure therapy, positional electrical devices (E0530), PAP cleaners"
+ ],
+ "logic": {
+  "top_level": "pathways (one block per device x diagnosis group, each with own all/any criteria) plus a separate continued-coverage time-gated block",
+  "max_nesting_depth": 3,
+  "k_of_n": [
+   {
+    "k": 1,
+    "n": 2,
+    "quote": "AHI ... of 5 or more but less than 15 in adult members with symptomatic OSA (...); OR AHI, RDI, or REI of 15 or more in adult members with symptomatic or asymptomatic OSA",
+    "quote_note": "inner symptom list is any-of 7 (EDS, cognition, mood, insomnia, HTN, IHD, stroke)"
+   }
+  ],
+  "exclusions_or_contraindications": "Scattered: E0471 'does not meet the definition of medical necessity for the treatment of obstructive sleep apnea'; ASV 'should not be used' with symptomatic CHF and LVEF <=45% (a NOTE, not formal criterion); investigational device list; billing note denies E0471 with OSA ICD-10 codes.",
+  "initial_vs_repeat": "Yes. First 90 days vs continued coverage (adherence); switching CPAP to bi-level after >3 months needs new face-to-face but no new sleep test and restarts 3-month trial; failed trial allows re-qualification after face-to-face re-evaluation; replacement rules (nonfunctioning & out of warranty OR >5 years).",
+  "and_or_ambiguity": [
+   {
+    "quote": "adenotonsillectomy has been unsuccessful or is contraindicated, or when definitive surgery is indicated but must wait complete dental and facial development",
+    "why_ambiguous": "Third list item contains 'or' and a second 'or' inside; unclear grouping of the three alternatives"
+   },
+   {
+    "quote": "Nonfunctioning and out of warranty or Device is greater than five years old",
+    "why_ambiguous": "Bullets; is 'out of warranty' attached to both? Reads as (nonfunctioning AND out of warranty) OR >5 yrs but not certain"
+   },
+   {
+    "quote": "An E0471 device meets the definition of medical necessity for either criterion I or II",
+    "why_ambiguous": "Criterion I uses 'both criteria A and B'; criterion II is a different population; letters/numerals reused across sub-sections"
+   },
+   {
+    "quote": "when A, B AND either criterion C or D are met",
+    "why_ambiguous": "Clear but only in prose; the list itself shows A. B. C. D. flat"
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "diagnosis",
+   "quote": "CPAP and APAP devices meet the definition of medical necessity ... when a diagnosis of OSA is based on a diagnostic sleep test",
+   "where": "Position Statement"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "AHI, RDI, or REI of 5 or more but less than 15 in adult members with symptomatic OSA",
+   "where": "Position Statement"
+  },
+  {
+   "kind": "symptom",
+   "quote": "evidence suggestive of excessive daytime sleepiness, impaired cognitive ability, mood disorders, insomnia, hypertension, ischemic heart disease, or stroke",
+   "where": "Position Statement"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "child weighs 30 kilograms (66 pounds) or more",
+   "where": "Pediatric CPAP"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "adenotonsillectomy has been unsuccessful or is contraindicated",
+   "where": "Pediatric CPAP"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "when CPAP has been tried and proven ineffective or is not tolerated as documented by a qualified health professional",
+   "where": "Bi-level for OSA"
+  },
+  {
+   "kind": "lab value",
+   "quote": "arterial blood gas PaCO2 ... greater than or equal to 52 mm Hg",
+   "where": "Severe COPD"
+  },
+  {
+   "kind": "lab value",
+   "quote": "Sleep oximetry demonstrates oxygen saturation less than or equal to 88% for at least five continuous minutes",
+   "where": "Restrictive thoracic / COPD"
+  },
+  {
+   "kind": "provider/facility qualification",
+   "quote": "a complete facility-based, attended polysomnogram must be performed",
+   "where": "Central sleep apnea"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "Objective evidence of adherence ... use of PAP greater than or equal to 4 hours per night, on 70% of nights during a consecutive thirty (30) day period",
+   "where": "Continued coverage"
+  },
+  {
+   "kind": "other",
+   "quote": "no sooner than the 31st day but no later than the 91st day after initiating therapy",
+   "where": "Continued coverage"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "supplier-generated form is not a substitute for the medical record documentation",
+   "where": "Documentation Required"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "AHI/RDI/REI adult symptomatic",
+   "value": ">=5 and <15",
+   "unit": "events/hr",
+   "quote": "5 or more but less than 15 in adult members with symptomatic OSA"
+  },
+  {
+   "quantity": "AHI/RDI/REI adult any",
+   "value": ">=15",
+   "unit": "events/hr",
+   "quote": "15 or more in adult members with symptomatic or asymptomatic OSA"
+  },
+  {
+   "quantity": "pediatric AHI/RDI",
+   "value": ">=1.0",
+   "unit": "events/hr",
+   "quote": "AHI or RDI greater than or equal to 1.0 is considered abnormal"
+  },
+  {
+   "quantity": "child weight",
+   "value": ">=30",
+   "unit": "kg",
+   "quote": "child weighs 30 kilograms (66 pounds) or more"
+  },
+  {
+   "quantity": "PaCO2 restrictive thoracic",
+   "value": ">=45",
+   "unit": "mm Hg",
+   "quote": "PaCO2 ... greater than or equal to 45 mm Hg"
+  },
+  {
+   "quantity": "SpO2",
+   "value": "<=88% for >=5 min",
+   "unit": "%",
+   "quote": "oxygen saturation less than or equal to 88% for at least five continuous minutes"
+  },
+  {
+   "quantity": "MIP / FVC (neuromuscular)",
+   "value": "<60 cm H2O / <50% predicted",
+   "unit": "",
+   "quote": "maximal inspiratory pressure is less than 60 cm H20 or forced vital capacity (FVC) is less than 50% predicted"
+  },
+  {
+   "quantity": "PaCO2 severe COPD",
+   "value": ">=52",
+   "unit": "mm Hg",
+   "quote": "PaCO2 ... greater than or equal to 52 mm Hg"
+  },
+  {
+   "quantity": "PaCO2 rise (E0471 COPD / hypoventilation)",
+   "value": ">=7",
+   "unit": "mm Hg",
+   "quote": "increase equal to or greater than 7 mm HG"
+  },
+  {
+   "quantity": "FEV1/FVC hypoventilation",
+   "value": ">=70%",
+   "unit": "%",
+   "quote": "FEV1/FVC greater than or equal to 70%"
+  },
+  {
+   "quantity": "adherence",
+   "value": ">=4 h/night on 70% of nights",
+   "unit": "30 consecutive days",
+   "quote": "4 hours per night, on 70% of nights during a consecutive thirty (30) day period"
+  },
+  {
+   "quantity": "ESS for EDS",
+   "value": ">=10",
+   "unit": "score",
+   "quote": "Score greater than or equal to 10 on the Epworth Sleepiness Scale"
+  },
+  {
+   "quantity": "device age",
+   "value": ">5",
+   "unit": "years",
+   "quote": "Device is greater than five years old"
+  },
+  {
+   "quantity": "LVEF caution for ASV",
+   "value": "<=45%",
+   "unit": "%",
+   "quote": "LVEF less than or equal to 45%"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "initial rental/trial",
+   "length": "first 90 days / three months",
+   "quote": "first (90 days) three months of therapy"
+  },
+  {
+   "what": "adherence evidence window",
+   "length": "31st to 91st day",
+   "quote": "no sooner than the 31st day but no later than the 91st day"
+  },
+  {
+   "what": "bi-level non-OSA compliance statement",
+   "length": ">=61 days after start",
+   "quote": "no sooner than 61 days after initiating use"
+  },
+  {
+   "what": "COPD discharge start",
+   "length": "up to 3 months",
+   "quote": "can continue for up to 3 months"
+  },
+  {
+   "what": "switch after >3 months",
+   "length": "new 3-month trial",
+   "quote": "A new 3-month trial would begin"
+  },
+  {
+   "what": "documentation recency (LOINC)",
+   "length": "<=6 months before date of service",
+   "quote": "made six months or fewer before starting date of service"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": true,
+  "codes_tied_to_criteria": "HCPCS E0601/E0470/E0471 are named in headings of the criteria blocks; ICD-10 (G47.30, G47.33, G47.39, R40.0) listed as 'support medical necessity' but not tied to a specific criterion except an E0471 denial note; accessory quantity table tied to codes.",
+  "non_covered_code_lists": "A7047, A7049, E0530 marked Investigational; E0600/A7002 mentioned for oral pressure therapy"
+ },
+ "external_dependencies": [
+  {
+   "what": "Sleep testing criteria in MCG 01-95828-01",
+   "quote": "see MCG Sleep Testing, 01-95828-01"
+  },
+  {
+   "what": "Positive pressure ventilators policy",
+   "quote": "policy 09-E0000-55 Positive Pressure Ventilation"
+  },
+  {
+   "what": "Medicare Advantage: NCD 240.4, LCD L33718, L33800",
+   "quote": "Continuous Positive Airway Pressure (CPAP) Therapy for Obstructive Sleep Apnea (OSA) (240.4)"
+  },
+  {
+   "what": "FEP and SAO follow own guidelines",
+   "quote": "Federal Employee Program (FEP): Follow FEP guidelines."
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Excessive daytime sleepiness",
+   "definition_quote": "Score greater than or equal to 10 on the Epworth Sleepiness Scale."
+  },
+  {
+   "term": "AHI with <2 hrs sleep",
+   "definition_quote": "the total number of recorded events ... must be at least ... greater than or equal to 10 events"
+  },
+  {
+   "term": "Mild/moderate/severe OSA",
+   "definition_quote": "AHI greater than or equal to 5 but less than 15 is considered mild OSA"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "symptomatic or asymptomatic OSA",
+   "problem": "Symptomatic is defined by a parenthetical 'evidence suggestive of' list, not a test; EDS defined by ESS>=10 only in Definitions"
+  },
+  {
+   "quote": "tried and proven ineffective or is not tolerated as documented by a qualified health professional",
+   "problem": "No definition of ineffective or intolerance, nor minimum trial length"
+  },
+  {
+   "quote": "Significant improvement of the sleep-associated hypoventilation",
+   "problem": "'Significant' undefined"
+  },
+  {
+   "quote": "chronic obstructive pulmonary disease does not contribute significantly",
+   "problem": "'significantly' undefined"
+  },
+  {
+   "quote": "at the clinical discretion of the prescribing qualified healthcare professional",
+   "problem": "ASV with LVEF >45% left to discretion"
+  },
+  {
+   "quote": "usual maximum amount of accessories expected to be medically necessary",
+   "problem": "'usual' is soft; above is 'subject to medical review'"
+  }
+ ],
+ "extraction_hazards": [
+  "Bullets with 'OR' at line end; indented sub-lists with a/b/c, A/B/C, I/II, 1-4 lettering reused",
+  "Criteria inside NOTEs (ASV/CHF caution, pediatric AHI) and in Definitions section",
+  "Page-header navigation links and disclaimer at top",
+  "Accessory quantity table and LOINC tables flatten to columns",
+  "'f ace-to-face' split word and typos ('is meets', 'Win-x')",
+  "Footnote asterisk on E0471 in coding table carries a denial rule tied to ICD-10 list",
+  "Continued coverage and Documentation Required in separate sections from initial criteria"
+ ],
+ "interesting_structures": [
+  "Staged approval: 90-day rental, adherence check between day 31-91, then purchase authorization",
+  "Device-switching rules (CPAP to bi-level) that depend on when the switch occurs (before vs after 3 months)",
+  "ICD-10 deny rule for E0471 + OSA codes",
+  "Different thresholds for adult vs pediatric, weight gate",
+  "Accessory quantity limits per 12 months"
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "scale": "1-5",
+  "why": "Each device x diagnosis block is a clean all/any tree, but time-gated staged approval, device-switching state, definitions elsewhere and prose caveats need extra constructs (episode state, time windows)."
+ }
+}

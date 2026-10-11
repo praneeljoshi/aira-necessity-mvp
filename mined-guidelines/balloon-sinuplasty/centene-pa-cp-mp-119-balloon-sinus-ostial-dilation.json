@@ -1,0 +1,19 @@
+{
+  "payer": "Pennsylvania Health Wellness (Centene)",
+  "payer_key": "centene",
+  "treatment": "balloon-sinuplasty",
+  "title": "Balloon Sinus Ostial Dilation",
+  "policy_number": "PA.CP.MP.119",
+  "effective": "",
+  "url": "https://www.pahealthwellness.com/content/dam/centene/Pennsylvania/policies/clinical-policies/PA.CP.MP.119%20Balloon%20Sinus%20Ostial%20Dilation_APPROVED_01.10.2020.pdf",
+  "final_url": "https://www.pahealthwellness.com/content/dam/centene/Pennsylvania/policies/clinical-policies/PA.CP.MP.119%20Balloon%20Sinus%20Ostial%20Dilation_APPROVED_01.10.2020.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "centene-pa-cp-mp-119-balloon-sinus-ostial-dilation.pdf",
+  "sha256": "a737a09b8b45e39836da1688254ebf30f22d21683d790245569fab2b774614fe",
+  "pages": 6,
+  "bytes": 89936,
+  "retrieved": "2026-10-09",
+  "printed_date": "Effective 01/18; Last Review Date 10/19"
+}

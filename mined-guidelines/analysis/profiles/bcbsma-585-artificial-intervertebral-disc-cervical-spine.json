@@ -1,0 +1,178 @@
+{
+ "file": "bcbsma-585-artificial-intervertebral-disc-cervical-spine.pdf",
+ "treatment": "cervical-spine-surgery",
+ "payer": "Blue Cross Blue Shield of Massachusetts",
+ "doc_kind": "medical policy (BCBSA reference 7.01.108)",
+ "lines_of_business": [
+  "Commercial Managed Care (HMO and POS), PPO, Indemnity",
+  "Medicare HMO Blue and Medicare PPO Blue"
+ ],
+ "effective_or_revised": "Effective date blank in the policy; history runs to 6/2020 (7 pages)",
+ "sections_in_order": [
+  "Policy",
+  "Authorization Information",
+  "Coding Information",
+  "Description",
+  "Policy History",
+  "Information Pertaining to All Policies",
+  "References",
+  "Endnotes"
+ ],
+ "criteria_location": "Policy section, p.1-2, then Authorization Information p.2-3.",
+ "procedures_covered": [
+  "Cervical disc arthroplasty single level, simultaneous second contiguous level, subsequent adjacent level",
+  "Revision/replacement of artificial disc (22861, 0098T) declared investigational"
+ ],
+ "logic": {
+  "top_level": "all (6 numbered criteria); variants by reference",
+  "max_nesting_depth": 2,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "Investigational list for 'ALL other indications', which merges anatomical/clinical contraindications with several extras: neck or arm pain of unknown etiology; absence of neck/arm pain; progressive neurological deficit or deterioration; Paget's disease; radiological evidence of instability (> 3.5 mm subluxation or > 11 degrees angulation); spinal metastases; non-FDA-approved prosthesis.",
+  "initial_vs_repeat": "Subsequent adjacent-level: 4-item AND list; revision/replacement codes 22861 and 0098T listed as investigational.",
+  "and_or_ambiguity": [
+   {
+    "quote": "which has failed at least 6 weeks ... AND physical therapy; OR b. if the patient has severe or rapidly progressive symptoms ...",
+    "why_ambiguous": "Criterion 3 is a one-of-two inside an all-of; 'pharmacotherapy ... AND physical therapy' joins within 3a."
+   },
+   {
+    "quote": "Progressive neurological deficit or deterioration",
+    "why_ambiguous": "Listed as investigational here, yet 3b admits 'severe or rapidly progressive symptoms of nerve root or spinal cord compression' as a qualifying route; internal tension."
+   },
+   {
+    "quote": "Cervical degenerative disc disease is from C3-C7; AND 6. The patient is free from contraindication",
+    "why_ambiguous": "Stray 'AND' after item 5 and semicolon; lists mixed."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "device / regulatory",
+   "quote": "The device is approved by FDA",
+   "where": "1"
+  },
+  {
+   "kind": "age/maturity",
+   "quote": "The patient is skeletally mature",
+   "where": "2"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "failed at least 6 weeks of conservative nonoperative treatment, including active pain management program or protocol, under the direction of a physician, with pharmacotherapy that addresses neuropathic pain and other pain sources AND physical therapy",
+   "where": "3a"
+  },
+  {
+   "kind": "urgent alternative",
+   "quote": "severe or rapidly progressive symptoms of nerve root or spinal cord compression requiring hospitalization or immediate surgical treatment",
+   "where": "3b"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "Degeneration is documented by magnetic resonance imaging (MRI), computed tomography (CT), OR myelography",
+   "where": "4"
+  },
+  {
+   "kind": "level restriction",
+   "quote": "Cervical degenerative disc disease is from C3-C7",
+   "where": "5"
+  },
+  {
+   "kind": "radiologic thresholds",
+   "quote": "clinically significant cervical instability, such as kyphotic deformity or spondylolisthesis (e.g., > 3.5 mm subluxation or > 11 degrees angulation)",
+   "where": "investigational list"
+  },
+  {
+   "kind": "site of service / authorization",
+   "quote": "precertification/preauthorization IS REQUIRED for all products if the procedure is performed inpatient",
+   "where": "Authorization Information"
+  },
+  {
+   "kind": "prior procedure / healing",
+   "quote": "Clinical documentation that the initial cervical disc arthroplasty is fully healed",
+   "where": "subsequent level 4"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "conservative therapy",
+   "value": ">= 6",
+   "unit": "weeks",
+   "quote": "at least 6 weeks of conservative nonoperative treatment"
+  },
+  {
+   "quantity": "subluxation",
+   "value": "> 3.5",
+   "unit": "mm",
+   "quote": "> 3.5 mm subluxation"
+  },
+  {
+   "quantity": "angulation",
+   "value": "> 11",
+   "unit": "degrees",
+   "quote": "> 11 degrees angulation"
+  },
+  {
+   "quantity": "levels",
+   "value": "<= 2",
+   "unit": "",
+   "quote": "Disc implantation at more than 2 levels"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "conservative treatment",
+   "length": "6 weeks",
+   "quote": "at least 6 weeks"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": true,
+  "codes_tied_to_criteria": "CPT 22856, 22858 and ICD-10-PCS 0RR30JZ 'MUST be met for the following codes to be covered'. Explicit code-to-policy tie.",
+  "non_covered_code_lists": "22861 and 0098T investigational"
+ },
+ "external_dependencies": [
+  {
+   "what": "BCBSA national policy 7.01.108; Related policy lumbar disc #592",
+   "quote": "BCBSA Reference Number: 7.01.108 ... Artificial Intervertebral Disc: Lumbar Spine, #592"
+  },
+  {
+   "what": "Prior authorization form #952, fax numbers",
+   "quote": "This form must be completed and faxed to: Medical and Surgical: 1-888-282-0780"
+  }
+ ],
+ "definitions_that_change_meaning": [],
+ "vague_terms": [
+  {
+   "quote": "intractable cervical radicular pain or myelopathy",
+   "problem": "undefined"
+  },
+  {
+   "quote": "active pain management program or protocol",
+   "problem": "undefined"
+  },
+  {
+   "quote": "Neck or arm pain of unknown etiology",
+   "problem": "how does a chart show 'unknown'?"
+  },
+  {
+   "quote": "significant cervical anatomical deformity or compromised vertebral bodies",
+   "problem": "'significant' undefined; examples only"
+  }
+ ],
+ "extraction_hazards": [
+  "Investigational list has duplicated entries (Paget's/osteomalacia/metabolic bone disease repeated) and a nested 'There is radiological evidence of ANY of the following' bullet inside a bullet list",
+  "Footnote markers ('Policy1', '*') and endnotes",
+  "Authorization table by line of business",
+  "Page number alone as footer"
+ ],
+ "interesting_structures": [
+  "Prior authorization routing by product and by inpatient vs outpatient",
+  "Contraindications as investigational list with radiographic thresholds in mm and degrees",
+  "Code list explicitly tied to criteria"
+ ],
+ "fit_to_tree": {
+  "score": 2,
+  "scale": "1 = all/any/not expresses it cleanly ... 5 = needs new constructs or human judgment",
+  "why": "Short all-of list with one OR and a NOT list. The nested radiological-evidence bullet and the tension with 3b are the only snags."
+ }
+}

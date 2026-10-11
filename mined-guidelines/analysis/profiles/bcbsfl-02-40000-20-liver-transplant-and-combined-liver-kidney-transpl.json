@@ -1,0 +1,174 @@
+{
+ "doc_kind": "medical policy (Florida Blue Medical Coverage Guideline)",
+ "lines_of_business": [
+  "All lines of business unless noted in Program Exceptions (disclaimer p.1)",
+  "Federal Employee Program (FEP): follow FEP guidelines",
+  "State Account Organization (SAO): follow SAO guidelines",
+  "Medicare Advantage: reviewed NCD/LCD listed in Program Exceptions"
+ ],
+ "effective_or_revised": "Original Effective Date 02/15/01; Reviewed 07/23/26; Revised 08/15/26 (12 pages)",
+ "sections_in_order": [
+  "Header block (policy number, Original Effective Date, Reviewed, Revised)",
+  "Subject",
+  "Disclaimer (all caps)",
+  "Navigation bar (Position Statement / Billing/Coding / ... hyperlinks)",
+  "DESCRIPTION",
+  "POSITION STATEMENT",
+  "BILLING/CODING INFORMATION",
+  "REIMBURSEMENT INFORMATION",
+  "PROGRAM EXCEPTIONS",
+  "DEFINITIONS",
+  "RELATED GUIDELINES",
+  "OTHER",
+  "REFERENCES",
+  "COMMITTEE APPROVAL",
+  "GUIDELINE UPDATE INFORMATION"
+ ],
+ "criteria_location": "Position Statement pp.2-4: CMN note, a lettered A-G etiology list of end-stage liver disease, then separate one-line coverage statements (polycystic liver, hilar cholangiocarcinoma, hepatoblastoma, retransplant, combined liver-kidney), a does-not-meet list, an investigational list, and advisory contraindications.",
+ "procedures_covered": [
+  "Liver transplant, cadaver or living donor (CPT 47135)",
+  "Donor hepatectomy and backbench preparation (47133, 47140-47147)",
+  "Liver re-transplantation",
+  "Combined liver-kidney transplantation"
+ ],
+ "logic": {
+  "top_level": "pathways: lettered etiology categories A-G (any-of), HCC with ONE of three tumor-size schemes, plus separate standalone indications",
+  "max_nesting_depth": 3,
+  "k_of_n": [
+   {
+    "k": 1,
+    "n": 3,
+    "quote": "Primary hepatocellular carcinoma with ONE of the following: ... Milan criteria ... UCSF Expanded Criteria ... UNOS Stage T2 Criteria"
+   }
+  ],
+  "exclusions_or_contraindications": "Three places: 'does not meet the definition of medical necessity for' (HCC beyond liver; candidate not approved by institution's transplant committee); an 'experimental or investigational' list (intrahepatic cholangiocarcinoma, neuroendocrine tumors metastatic to liver); and advisory 'Potential contraindications ... (subject to the judgment of the transplant center)'.",
+  "initial_vs_repeat": "Retransplant has its own any-of list: 'Primary graft non-function; Hepatic artery thrombosis; Chronic rejection; Ischemic type biliary lesions ...; Recurrent non-neoplastic disease-causing late graft failure'.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Etiologies of end-stage liver disease include, but are not limited to:",
+    "why_ambiguous": "Open-ended list ('not limited to'), so the A-G list cannot be treated as exhaustive; E 'Inborn errors of metabolism', F 'Trauma and toxic reactions', G 'Miscellaneous' are category names with no members."
+   },
+   {
+    "quote": "A single tumor 2 cm or greater, and up to 5 cm or less, OR 2 to 3 tumors 1 cm or greater, and up to 3 cm or less and without extrahepatic spread or macrovascular invasion",
+    "why_ambiguous": "Unclear whether 'without extrahepatic spread' applies to both alternatives or only the last."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "diagnosis",
+   "quote": "carefully selected individuals with end-stage liver failure resulting from irreversible liver damage",
+   "where": "Position Statement, lead sentence"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "A single tumor 5 cm or less, OR 2 to 3 tumors that are 3 cm or less (Milan criteria)",
+   "where": "D. Primary hepatocellular carcinoma"
+  },
+  {
+   "kind": "provider/facility qualification",
+   "quote": "The transplant candidate is not approved by the transplant committee for the institution",
+   "where": "does-not-meet list"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "Submit a completed Certificate of Medical Necessity (CMN)",
+   "where": "Position Statement top"
+  },
+  {
+   "kind": "age",
+   "quote": "pediatric candidates with non-metastatic hepatoblastoma",
+   "where": "standalone statement"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "Combined liver-kidney transplantation ... in those who qualify for liver transplantation and have advanced irreversible kidney disease",
+   "where": "standalone statement"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "single HCC tumor (Milan)",
+   "value": "<= 5",
+   "unit": "cm",
+   "quote": "A single tumor 5 cm or less"
+  },
+  {
+   "quantity": "single tumor (UCSF)",
+   "value": "<= 6.5; total <= 8",
+   "unit": "cm",
+   "quote": "A single tumor 6.5 cm or less, OR up to 3 tumors 4.5 cm or less, and a total tumor size of 8 cm or less"
+  }
+ ],
+ "time_windows": [],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "CPT codes for recipient, donor and backbench work listed with descriptors; none mapped to indications.",
+  "non_covered_code_lists": "None."
+ },
+ "external_dependencies": [
+  {
+   "what": "CMN form",
+   "quote": "Click the link Solid Organ Transplant under Certificates of Medical Necessity"
+  },
+  {
+   "what": "Medicare Advantage NCDs 260.1 and 260.2",
+   "quote": "Adult Liver Transplantation (260.1) and Pediatric Liver Transplantation (260.2), located at cms.gov"
+  },
+  {
+   "what": "Institution transplant committee approval",
+   "quote": "not approved by the transplant committee for the institution where the transplant will be performed"
+  },
+  {
+   "what": "UNOS / Milan / UCSF scoring systems named but not reproduced",
+   "quote": "(University of California, San Francisco Expanded Criteria)"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "UNOS",
+   "definition_quote": "UNOS: United Network of Organ Sharing."
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "carefully selected individuals",
+   "problem": "selection undefined."
+  },
+  {
+   "quote": "massive hepatomegaly causing obstruction or functional impairment",
+   "problem": "'massive' undefined."
+  },
+  {
+   "quote": "unresectable hilar cholangiocarcinoma",
+   "problem": "unresectable is a surgeon judgment."
+  },
+  {
+   "quote": "Familial amyloid polyneuropathy*",
+   "problem": "asterisk footnote not clearly resolved in extracted text."
+  }
+ ],
+ "extraction_hazards": [
+  "Bullets are either the private-use character U+F0B7 or U+2022 depending on the document (the fusion guideline uses both), never '-' or '*'; nested bullets use other glyphs ('o') or only deeper indentation",
+  "Hyperlink navigation bar after the disclaimer is flattened into a 2-3 row text block that looks like headings",
+  "Form-feed (\\f) page breaks can fall mid-list or immediately before a section heading, so '^HEADING' regexes can miss; no running headers/footers or page numbers to strip",
+  "Lettered list A-G mixes category headings with bullets, so category vs member depth depends on glyph/indent",
+  "Two-line 'OR' alternatives inside one bullet in the HCC list",
+  "Compound heading 'Liver Transplant and Combined Liver-Kidney Transplant' wraps to two Subject lines",
+  "No DEFINITIONS-colon problem but definitions are alphabetical glossary of anatomy, not criteria"
+ ],
+ "interesting_structures": [
+  "Three alternative tumor staging systems (Milan, UCSF, UNOS T2) as alternate leaves",
+  "Same advisory contraindication list as heart and pancreas docs (family template with organ-specific edits)",
+  "Three-way outcome vocabulary: meets / does not meet / experimental"
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "scale": "1 = all/any/not expresses it cleanly ... 5 = needs new constructs or human judgment",
+  "why": "Etiology list and HCC any-of are clean; open-ended 'not limited to' list, empty category names, and advisory contraindications need human judgment."
+ },
+ "payer": "bcbsfl",
+ "treatment": "liver-transplant-and-combined-liver-kidn",
+ "file": "bcbsfl-02-40000-20-liver-transplant-and-combined-liver-kidney-transpl.pdf"
+}

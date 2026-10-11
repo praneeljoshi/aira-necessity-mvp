@@ -1,0 +1,213 @@
+{
+ "file": "bcbsfl-02-12000-16-panniculectomy-and-abdominoplasty.pdf",
+ "treatment": "panniculectomy",
+ "payer": "bcbsfl",
+ "doc_kind": "medical coverage guideline (Florida Blue MCG)",
+ "lines_of_business": [
+  "All lines of business unless noted in Program Exceptions",
+  "FEP: follow FEP guidelines",
+  "SAO: follow SAO guidelines",
+  "Medicare Advantage: LCD L38914 reviewed"
+ ],
+ "effective_or_revised": "Original 07/01/13; Reviewed 02/26/26; Revised 03/15/26",
+ "sections_in_order": [
+  "Description (ASPS grading, evidence summary)",
+  "Position Statement (Panniculectomy; Abdominal/Gynecologic Surgery; Significant Weight Loss/Bariatric Surgery; Cosmetic/Non-Covered; Abdominoplasty)",
+  "Billing/Coding Information (CPT, LOINC table)",
+  "Reimbursement Information",
+  "Program Exceptions",
+  "Definitions",
+  "Related Guidelines",
+  "Other",
+  "References",
+  "Committee Approval",
+  "Guideline Update Information"
+ ],
+ "criteria_location": "Position Statement (pp.3-4): base panniculectomy ALL list; separate weight-loss/bariatric ALL list that re-uses the base; with a footnote-style 'Note' defining 'significant weight loss'.",
+ "procedures_covered": [
+  "Panniculectomy (15830)",
+  "Abdominoplasty (15847), always cosmetic",
+  "Panniculectomy at time of abdominal/gynecologic surgery"
+ ],
+ "logic": {
+  "top_level": "all",
+  "max_nesting_depth": 3,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "Separate 'Cosmetic/Non-Covered' section: cosmetic, back or neck pain; abdominoplasty always cosmetic; pannus resulting from a contract-excluded bariatric procedure is excluded.",
+  "initial_vs_repeat": "None. Weight-loss section is a stacked requirement on top of base.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Panniculectomy meets the definition of medical necessity when ALL of the following criteria are met: Panniculus at grade 2 or above ... AND One of the following: ... AND When ALL of the following criteria are met: There is a functional deficit ...",
+    "why_ambiguous": "Three AND-joined blocks where block 2 is an OR of three and block 3 is a second ALL; the 3rd option of block 2 (functional impairment such as difficulty with ambulation) overlaps with block 3's functional deficit."
+   },
+   {
+    "quote": "Symptoms (persistent skin condition under panniculus, chronic maceration of overhanging skin) or functional impairment persists despite *significant weight loss which has been stable for at least 3 months or documented attempts at weight loss (medically supervised diet or bariatric surgery) have been unsuccessful",
+    "why_ambiguous": "'or' appears twice in one bullet: (stable loss) or (attempts unsuccessful); and the next bullet is a separate ALL item with another or."
+   },
+   {
+    "quote": "they are at least 18 months post-operative or has documented stable weight for at least 3 months",
+    "why_ambiguous": "OR lets a bariatric patient bypass 18 months if weight stable 3 months, which contradicts the usual rule in other payers."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "measurement threshold",
+   "quote": "Panniculus at grade 2 or above ... medical records, including photography and/or operative reports may be required",
+   "where": "Position Statement"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "unresponsive to 3 months of medical therapy (failed both oral and topical medications)",
+   "where": "Position Statement option 1"
+  },
+  {
+   "kind": "symptom",
+   "quote": "Chronic maceration of overhanging skin folds that is refractory to medical therapy",
+   "where": "option 2"
+  },
+  {
+   "kind": "functional impairment",
+   "quote": "There is a functional impairment, such as documented difficulty with ambulation due to the abdominal pannus",
+   "where": "option 3"
+  },
+  {
+   "kind": "functional impairment",
+   "quote": "The pannus is interfering with activities of daily living",
+   "where": "Position Statement ALL block"
+  },
+  {
+   "kind": "BMI/comorbidity",
+   "quote": "Reaches a body mass index (BMI) less than or equal to 30 kg/m2; OR ... at least a 100 pound weight loss; OR ... 40% or greater of the excess body weight",
+   "where": "Significant weight loss note"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "at least 18 months post-operative or has documented stable weight for at least 3 months",
+   "where": "Bariatric section"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "Medical records, including photography and/or operative reports may be required",
+   "where": "Position Statement"
+  },
+  {
+   "kind": "other",
+   "quote": "If a pannus results from a contract excluded procedure such as bariatric surgery, the panniculectomy ... will also be considered an excluded procedure",
+   "where": "Position Statement NOTE"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "Pannus grade",
+   "value": "≥2",
+   "unit": "ASPS grade",
+   "quote": "Panniculus at grade 2 or above"
+  },
+  {
+   "quantity": "Significant weight loss BMI",
+   "value": "≤30",
+   "unit": "kg/m2",
+   "quote": "less than or equal to 30 kg/m2"
+  },
+  {
+   "quantity": "Weight loss",
+   "value": "≥100",
+   "unit": "lb",
+   "quote": "at least a 100 pound weight loss"
+  },
+  {
+   "quantity": "%EWL",
+   "value": "≥40",
+   "unit": "%",
+   "quote": "40% or greater of the excess body weight"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "Medical therapy",
+   "length": "3 months",
+   "quote": "unresponsive to 3 months of medical therapy"
+  },
+  {
+   "what": "Stable weight after significant loss",
+   "length": "3 months",
+   "quote": "stable for at least 3 months"
+  },
+  {
+   "what": "Post-bariatric",
+   "length": "18 months (or 3 months stable weight)",
+   "quote": "at least 18 months post-operative or has documented stable weight for at least 3 months"
+  },
+  {
+   "what": "LOINC lookback",
+   "length": "6 months before date of service",
+   "quote": "six months or fewer before starting date of service"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Listed; 15830 panniculectomy, 15847 abdominoplasty; no mapping beyond the description",
+  "non_covered_code_lists": "None (17999 deleted 10/15/22)"
+ },
+ "external_dependencies": [
+  {
+   "what": "Medicare Advantage LCD L38914",
+   "quote": "Cosmetic and Reconstructive Surgery (L38914) located at cms.gov"
+  },
+  {
+   "what": "Member contract / benefit exclusion for weight loss surgery",
+   "quote": "Some plans may exclude coverage for panniculectomy and abdominoplasty as the member may not have a benefit for weight loss surgery"
+  },
+  {
+   "what": "Related guideline Reconstructive/Cosmetic 02-12000-01",
+   "quote": "Reconstructive Surgery/Cosmetic Surgery, 02-12000-01"
+  },
+  {
+   "what": "ASPS grading and recommended criteria",
+   "quote": "ASPS recommended coverage criteria"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "significant weight loss",
+   "definition_quote": "*Significant weight loss varies based on the member's clinical circumstances and may be documented when the member: Reaches a BMI ≤30; OR ... 100 pound weight loss; OR ... 40% or greater of excess body weight"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "Significant weight loss varies based on the member's clinical circumstances and may be documented when",
+   "problem": "'may be' not 'must'; defined by three alternatives but explicitly discretionary"
+  },
+  {
+   "quote": "severe physical deformity or disfigurement",
+   "problem": "undefined; overlaps with grade"
+  },
+  {
+   "quote": "refractory to medical therapy",
+   "problem": "no duration for maceration path"
+  },
+  {
+   "quote": "failed both oral and topical medications",
+   "problem": "'both' in one path only"
+  }
+ ],
+ "extraction_hazards": [
+  "Grade scale appears twice (Description and Position Statement)",
+  "Footnote asterisk '*significant weight loss' with its definition in a Note after the bullets",
+  "'(failed both oral and topical medications); OR' OR attached to the end of bullets",
+  "Bullet glyphs lost; AND/OR line-end tokens carry logic",
+  "Mojibake in ASPS quote ('25 kg/ mg2; to 30')"
+ ],
+ "interesting_structures": [
+  "Three-tier structure: base criteria, weight-loss extension that re-includes base, exclusions",
+  "Pannus grade scale is an ordinal measurement from photographs",
+  "BMI/100 lb/40% EWL alternatives defined in a note"
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "scale": "1-5",
+  "why": "Logic is expressible but nested AND/OR/AND layout, a footnote definition, and photo-based grading need judgment."
+ }
+}

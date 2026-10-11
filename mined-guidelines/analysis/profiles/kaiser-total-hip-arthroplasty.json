@@ -1,0 +1,242 @@
+{
+ "file": "kaiser-total-hip-arthroplasty.pdf",
+ "treatment": "hip-arthroplasty",
+ "payer": "kaiser",
+ "doc_kind": "clinical policy (Kaiser Foundation Health Plan NCP 117)",
+ "lines_of_business": [
+  "OR Commercial, WA Commercial, self-funded plans (applies)",
+  "Medicare: use LCD L34163 (Noridian)",
+  "OR and WA Medicaid: does not apply"
+ ],
+ "effective_or_revised": "Effective 4/1/2026; Last reviewed 6/24/26; Policy # NCP 117 (was NCP 17 until 8/4/26)",
+ "sections_in_order": [
+  "Overview/Definitions",
+  "Coverage Determinations (table)",
+  "Clinical Indications for Non-Medicare Members",
+  "Exclusions",
+  "Coding",
+  "References",
+  "History Details"
+ ],
+ "criteria_location": "Clinical Indications for Non-Medicare Members pp.1-4; Exclusions p.4-5.",
+ "procedures_covered": [
+  "Total hip arthroplasty (27130)",
+  "Conversion (27132)",
+  "Revision (27134, 27137, 27138)",
+  "Acute hip fracture arthroplasty (27236)"
+ ],
+ "logic": {
+  "top_level": "all (1 pain/disability AND 2 exam findings) AND one-of five pathways (advanced joint disease; AVN; inflammatory arthritis; revision; hip arthroplasty ANY: fracture, conversion)",
+  "max_nesting_depth": 5,
+  "k_of_n": [
+   {
+    "k": 1,
+    "n": 6,
+    "quote": "X-Ray findings should show at least ONE of the following"
+   }
+  ],
+  "exclusions_or_contraindications": "Separate Exclusions section: infection of hip or bacteremia; skin infection; unstable angina; dementia that interferes with rehabilitation; lack of caregiver or unsuitable home; non-ambulatory at baseline.",
+  "initial_vs_repeat": "Revision pathway separate; 'Conservative therapy is not indicated' for revision/fracture.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Total Hip Arthroplasty may be considered medically necessary ALL the following are met: 1) ... AND 2) ... AND ONE of the following:",
+    "why_ambiguous": "Revision and fracture/conversion appear as options under the ONE-of list, so it is unclear whether pain/ADL (1) and ROM/gait (2) apply to them."
+   },
+   {
+    "quote": "Hip Arthroplasty may be considered medically necessary if ANY of the following are present",
+    "why_ambiguous": "Second 'ANY' header set at the same bullet level as the ONE-of list."
+   },
+   {
+    "quote": "Trial of at least 3 Physical Therapy sessions in the last 12 months OR documentation that either: Pain is so severe ...; OR Patient has severe functional limitations",
+    "why_ambiguous": "nesting of OR inside OR"
+   },
+   {
+    "quote": "BMI < 40: if BMI is > 40, optimization efforts must include ALL the following",
+    "why_ambiguous": "BMI exactly 40 is unaddressed; ends with 'case-by-case' discretion"
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "functional impairment",
+   "quote": "Pain and functional disability that interferes with Activities of Daily Living (ADL's) due to osteoarthritis, rheumatoid arthritis, avascular necrosis, or post-traumatic arthritis",
+   "where": "Clinical Indications 1"
+  },
+  {
+   "kind": "symptom",
+   "quote": "Limited range of motion (ROM), antalgic gait, and pain with passive ROM on physical examination",
+   "where": "2"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "Radiographic or imaging evidence in the last 12 months showing moderate to severe osteoarthritis ... Tonnis Grade 2 or 3",
+   "where": "Advanced joint disease"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "Continuous use of Anti-inflammatory medication for a minimum of 6 weeks, including BOTH acetaminophen and NSAIDs, unless contraindicated",
+   "where": "Advanced joint disease"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "Trial of at least 3 Physical Therapy sessions in the last 12 months OR documentation that pain is so severe PT is not possible",
+   "where": "Advanced joint disease"
+  },
+  {
+   "kind": "BMI/comorbidity",
+   "quote": "BMI < 40: if BMI is > 40, optimization efforts must include ... sustained weight loss over 3-6 months ... shared decision making",
+   "where": "all non-fracture pathways"
+  },
+  {
+   "kind": "lab value",
+   "quote": "If diabetic the HbA1c < 7.5 (with the presence of heart disease, no specific A1c requirement)",
+   "where": "pathways"
+  },
+  {
+   "kind": "provider/facility qualification",
+   "quote": "Patient is actively followed by a Rheumatologist and has been judged to have exhausted non-surgical options including DMARDs",
+   "where": "Inflammatory arthritis"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "Aseptic loosening; synovitis; instability; peri-prosthetic fracture; mechanical failure or recall; infection; bone loss; dislocation; disabling pain with limb-length inequality or audible noise",
+   "where": "Revision"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "Acute hip fracture by imaging (prior authorization not required when admitted through the emergency room)",
+   "where": "Hip Arthroplasty ANY"
+  },
+  {
+   "kind": "other",
+   "quote": "Dementia that interferes with successful rehabilitation; Lack of caregiver or unsuitable home situation; non-ambulatory at baseline",
+   "where": "Exclusions p.5"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "BMI",
+   "value": "< 40 (> 40 needs optimization)",
+   "unit": "kg/m2",
+   "quote": "BMI < 40: if BMI is > 40, optimization efforts must include ALL the following"
+  },
+  {
+   "quantity": "HbA1c",
+   "value": "< 7.5",
+   "unit": "%",
+   "quote": "If diabetic the HbA1c < 7.5"
+  },
+  {
+   "quantity": "NSAID/acetaminophen",
+   "value": ">= 6",
+   "unit": "weeks",
+   "quote": "minimum of 6 weeks"
+  },
+  {
+   "quantity": "PT",
+   "value": ">= 3",
+   "unit": "sessions in 12 months",
+   "quote": "at least 3 Physical Therapy sessions in the last 12 months"
+  },
+  {
+   "quantity": "weight loss effort",
+   "value": "3-6",
+   "unit": "months",
+   "quote": "sustained weight loss over 3-6 months"
+  },
+  {
+   "quantity": "imaging recency",
+   "value": "12",
+   "unit": "months",
+   "quote": "in the last 12 months"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "imaging",
+   "length": "12 months",
+   "quote": "in the last 12 months"
+  },
+  {
+   "what": "PT sessions",
+   "length": "12 months",
+   "quote": "in the last 12 months"
+  },
+  {
+   "what": "anti-inflammatory",
+   "length": "6 weeks",
+   "quote": "minimum of 6 weeks"
+  },
+  {
+   "what": "weight loss",
+   "length": "3-6 months",
+   "quote": "3-6 months"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Listed only: 27130, 27132, 27134, 27137, 27138, 27236.",
+  "non_covered_code_lists": "none"
+ },
+ "external_dependencies": [
+  {
+   "what": "Medicare uses Noridian LCD",
+   "quote": "LCD- Noridian Healthcare Solutions, LLC L34163 'Total Hip Arthroplasty'"
+  },
+  {
+   "what": "Medical director case-by-case review",
+   "quote": "the case will be reviewed on a case-by-case basis by a medical director"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Tonnis Grade 2 or 3",
+   "definition_quote": "meaning cysts in femoral head or acetabulum, narrowing of joint space, lost sphericity of femoral head or avascular necrosis"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "moderate to severe osteoarthritis",
+   "problem": "radiologist-dependent"
+  },
+  {
+   "quote": "Moderate to severe joint space narrowing",
+   "problem": "no mm value"
+  },
+  {
+   "quote": "adequate efforts to improve these parameters",
+   "problem": "undefined"
+  },
+  {
+   "quote": "Medical or social confounding factors",
+   "problem": "open-ended"
+  },
+  {
+   "quote": "unsuitable home situation",
+   "problem": "not chart-derivable"
+  },
+  {
+   "quote": "Dementia that interferes with successful rehabilitation",
+   "problem": "judgment"
+  }
+ ],
+ "extraction_hazards": [
+  "Ligature glyphs: 'Deﬁnitions', 'ﬁndings', 'inﬂammatory' (fi/fl ligatures break regex)",
+  "Bullet glyphs lost (shown as blank indents); nesting visible only via indentation",
+  "Policy numbered 'Policy 17.1' in one place vs NCP 117",
+  "Reference #4 (sex-specific effects in a wild mammal) is unrelated: reference list errors",
+  "'ALL the following are met' missing verb 'if'/'when'",
+  "Typos: 'Spondyloarthopathy', 'arthtritis', 'Gridlestone'"
+ ],
+ "interesting_structures": [
+  "BMI/A1c block repeated verbatim in each pathway, with a soft path (shared decision making, medical director review)",
+  "Exclusions include social criteria (caregiver, home situation)",
+  "Inflammatory arthritis requires rheumatologist involvement",
+  "PT requirement is only 3 sessions"
+ ],
+ "fit_to_tree": {
+  "score": 4,
+  "why": "Structure fits but pathway scope is ambiguous, many soft and social criteria, and optional exceptions via case-by-case review."
+ }
+}

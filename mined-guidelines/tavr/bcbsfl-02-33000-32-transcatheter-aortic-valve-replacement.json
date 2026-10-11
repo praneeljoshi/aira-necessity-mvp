@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "tavr",
+  "title": "Transcatheter Aortic Valve Replacement",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JEWFS1V0MWBMW3ZZT",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-33000-32",
+  "original_effective": "07/15/12",
+  "reviewed": "01/22/26",
+  "revised": "02/15/26",
+  "file": "bcbsfl-02-33000-32-transcatheter-aortic-valve-replacement.pdf",
+  "sha256": "605602516cbb6857f0208fdea078b1e484f9dd075afbedad13da92e215b56679",
+  "pages": 12,
+  "bytes": 653051,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original 07/15/12; Reviewed 01/22/26; Revised 02/15/26; policy 02-33000-32"
+}

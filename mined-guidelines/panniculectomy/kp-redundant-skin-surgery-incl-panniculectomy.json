@@ -1,0 +1,19 @@
+{
+  "payer": "Kaiser Permanente",
+  "payer_key": "kaiser",
+  "treatment": "panniculectomy",
+  "title": "Redundant Skin Surgery incl. Panniculectomy",
+  "policy_number": "",
+  "effective": "",
+  "url": "https://healthy.kaiserpermanente.org/content/dam/kporg/final/documents/health-plan-documents/notice/utilization-management/redundant-skin-surgery-incl-panniculectomy-mas-en.pdf",
+  "final_url": "https://healthy.kaiserpermanente.org/content/dam/kporg/final/documents/health-plan-documents/notice/utilization-management/redundant-skin-surgery-incl-panniculectomy-mas-en.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "kp-redundant-skin-surgery-incl-panniculectomy.pdf",
+  "sha256": "2d7764295d9a20171faaf6db2bdae70aaa144fb3a2b54ce8269848f20595d25f",
+  "pages": 6,
+  "bytes": 189651,
+  "retrieved": "2026-10-09",
+  "printed_date": "Approval history through 03/26/2025; no effective date printed"
+}

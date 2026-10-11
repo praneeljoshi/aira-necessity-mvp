@@ -1,0 +1,217 @@
+{
+ "file": "evolent-interventional-pain-management-guidelines.pdf",
+ "treatment": "sacroiliac-joint-injections",
+ "payer": "evolent",
+ "doc_kind": "clinical guideline (vendor)",
+ "lines_of_business": [
+  "CHIP",
+  "Commercial",
+  "Exchange/Marketplace",
+  "Medicaid",
+  "Medicare Advantage (all checked)"
+ ],
+ "effective_or_revised": "Compendium effective July 1, 2026 – July 1, 2027; SI guideline original Jan 2014, last revised December 2024, implementation July 2025",
+ "sections_in_order": [
+  "Preamble",
+  "Table of contents",
+  "Epidural spine injections",
+  "Facet joint",
+  "(other guidelines 1752, 1754, 1757, 1758 ...)",
+  "Clinical Guideline 1756: Statement (General Information, Special Note)",
+  "Indications (SI joint pain; Spondyloarthropathy; Imaging guidance; Diagnostic purposes; Repeat injections)",
+  "Exclusions",
+  "Contraindications",
+  "Legislative Language (Washington HTCC 20160318B)",
+  "Coding and Standards",
+  "Applicable Lines of Business",
+  "Background",
+  "Policy History",
+  "Legal and Compliance",
+  "References"
+ ],
+ "criteria_location": "SI guideline is PDF pp.57-66 of 102 (internal pages 1-10); criteria on internal pp.2-5.",
+ "procedures_covered": [
+  "Intra-articular or ligamentous SI joint injections (CPT 27096, G0260)",
+  "Excluded: lateral branch blocks, RF denervation"
+ ],
+ "logic": {
+  "top_level": "pathways (SI joint pain; spondyloarthropathy; diagnostic for surgical planning) with repeat rules",
+  "max_nesting_depth": 4,
+  "k_of_n": [
+   {
+    "k": 3,
+    "n": 8,
+    "quote": "A cluster of any three (3) of the following positive provocation exam findings"
+   },
+   {
+    "k": 4,
+    "n": 5,
+    "quote": "at least 4 of the following criteria present"
+   }
+  ],
+  "exclusions_or_contraindications": "Exclusions (lateral branch blocks, RF) and absolute/relative contraindications lists.",
+  "initial_vs_repeat": "Same as Blue Shield of California: initial phase up to 2, >= 2 weeks apart; therapeutic needs >= 50% relief for >= 2 months; max 4 per 12 months per region; 2 years = new episode.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Sacroiliac joint injections may be repeated only as Medical Necessity.",
+    "why_ambiguous": "capitalized 'Medical Necessity' reads as if a defined term; no definition."
+   },
+   {
+    "quote": "For diagnostic purposes, all the following must be met",
+    "why_ambiguous": "lowercase 'all' versus capitalised ALL elsewhere"
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "symptom",
+   "quote": "Primarily axial low back pain (below level of L5)",
+   "where": "Indications p.2"
+  },
+  {
+   "kind": "functional impairment",
+   "quote": "average pain level of ≥ 6 on a scale of 0 to 10",
+   "where": "p.2"
+  },
+  {
+   "kind": "symptom",
+   "quote": "cluster of any three (3) positive provocation exam findings",
+   "where": "p.2"
+  },
+  {
+   "kind": "duration",
+   "quote": "Duration of pain of at least 3 months",
+   "where": "p.2"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "minimum of 6 weeks in the last 6 months",
+   "where": "p.2"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "sacroiliitis on imaging: grade 2-4 bilaterally or grade 3-4 unilaterally",
+   "where": "SpA p.3"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "At least 75% pain relief ... after each diagnostic injection",
+   "where": "p.4"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "A maximum of 4 sacroiliac joint injections may be performed in a 12-month period per region",
+   "where": "p.4"
+  },
+  {
+   "kind": "documentation",
+   "quote": "pre-operative evaluation and plan for SIJ surgery",
+   "where": "p.4"
+  },
+  {
+   "kind": "other",
+   "quote": "Each sacroiliac joint injection requires an authorization",
+   "where": "p.4"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "average pain",
+   "value": ">= 6",
+   "unit": "0-10",
+   "quote": "average pain level of ≥ 6"
+  },
+  {
+   "quantity": "diagnostic relief",
+   "value": ">= 75",
+   "unit": "%",
+   "quote": "At least 75% pain relief"
+  },
+  {
+   "quantity": "therapeutic relief",
+   "value": ">= 50",
+   "unit": "% for >= 2 months",
+   "quote": "at least 50% pain relief ... for a minimum of 2 months"
+  },
+  {
+   "quantity": "annual cap",
+   "value": "4",
+   "unit": "per 12 months per region",
+   "quote": "maximum of 4 sacroiliac joint injections may be performed in a 12-month period"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "pain",
+   "length": "3 months",
+   "quote": "at least 3 months"
+  },
+  {
+   "what": "conservative",
+   "length": "6 weeks in last 6 months",
+   "quote": "a minimum of 6 weeks in the last 6 months"
+  },
+  {
+   "what": "new episode",
+   "length": "2 years",
+   "quote": "at least two years from prior injections"
+  },
+  {
+   "what": "interval",
+   "length": "2 weeks",
+   "quote": "no sooner than 2 weeks apart"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Listed only: 27096, G0260.",
+  "non_covered_code_lists": "none"
+ },
+ "external_dependencies": [
+  {
+   "what": "Washington HTCC coverage determination 20160318B",
+   "quote": "Therapeutic sacroiliac joint injections for chronic pain is a covered benefit when all of the following conditions are met: With fluoroscopic guidance or CT guidance; After failure of conservative therapy; and No more than one without clinically meaningful improvement"
+  },
+  {
+   "what": "CMS reference",
+   "quote": "in keeping with the benefit guidelines developed by the Centers for Medicare & Medicaid Services (CMS)"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "HEP",
+   "definition_quote": "Documentation of an exercise prescription/plan ... AND Follow-up documentation regarding completion of HEP after the required 6-week timeframe"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "significant documented functional improvement",
+   "problem": "no measure"
+  },
+  {
+   "quote": "clinically meaningful improvement",
+   "problem": "Washington language undefined"
+  },
+  {
+   "quote": "Pain causing functional disability",
+   "problem": "undefined"
+  }
+ ],
+ "extraction_hazards": [
+  "102-page compendium of ~8 guidelines; SI is one 10-page slice with its own page numbers",
+  "Washington mandate in same guideline overrides for WA members and carries 'ƒ' glyph bullets",
+  "Applicable lines of business shown as checkbox glyphs",
+  "Superscript refs (1,2,3,4) glued to headings",
+  "Mandate exempts patients with systemic inflammatory disease"
+ ],
+ "interesting_structures": [
+  "State legislative override block inside a vendor guideline",
+  "Same text is adopted verbatim by Blue Shield of California",
+  "Episode-of-care reset"
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "why": "Same structure as BSCA; state-specific branch and history-based leaves add strain."
+ }
+}

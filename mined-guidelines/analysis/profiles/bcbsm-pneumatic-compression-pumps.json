@@ -1,0 +1,180 @@
+{
+ "file": "bcbsm-pneumatic-compression-pumps.pdf",
+ "treatment": "pneumatic-compression",
+ "payer": "bcbsm",
+ "doc_kind": "medical policy (joint BCBSM/BCN)",
+ "lines_of_business": [
+  "BCBSM and BCN; Medicare Advantage use when CMS rules not fully developed"
+ ],
+ "effective_or_revised": "Current Policy Effective Date: 11/1/25 (library metadata lists 11/1/2022)",
+ "sections_in_order": [
+  "Description",
+  "Medical Policy Statement",
+  "Inclusionary and Exclusionary Guidelines",
+  "Coding",
+  "CPT/HCPCS Level II Codes",
+  "Background",
+  "Summary of Evidence",
+  "Rationale",
+  "Government Regulations",
+  "References"
+ ],
+ "criteria_location": "Medical Policy Statement (p.1) and Inclusionary and Exclusionary Guidelines pp.2-3; conservative measures defined in two starred footnotes (* for limb and non-pneumatic, ** for trunk/chest). 24 pages total.",
+ "procedures_covered": [
+  "Nonprogrammable single/multichamber pumps, limb",
+  "Programmable pumps, limb",
+  "Trunk/chest pumps and appliances",
+  "Non-pneumatic compression appliances for limb (Koya Dayspring)",
+  "Head/neck pneumatic - investigational"
+ ],
+ "logic": {
+  "top_level": "pathways: limb nonprogrammable, limb programmable, non-pneumatic limb, trunk/chest",
+  "max_nesting_depth": 3,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "Exclusions: limb pumps in 'all situations not mentioned above' experimental; head/neck experimental.",
+  "initial_vs_repeat": "No continued-use or replacement criteria.",
+  "and_or_ambiguity": [
+   {
+    "quote": "The use of lymphedema pumps and appliances to treat the trunk or chest is limited to individuals with: • Lymphedema beyond the upper and lower extremities; and • Have failed conservative therapy**; and • Have failed therapy with lymphedema pumps and appliances to the upper and lower extremities only.",
+    "why_ambiguous": "Conservative therapy** is itself defined to include a 4-week trial of E0650/E0651, which is also the third criterion; they overlap."
+   },
+   {
+    "quote": "*Conservative measures: a four-week trial of conservative therapy demonstrating failed responses to treatment is required.",
+    "why_ambiguous": "'failed responses' undefined."
+   },
+   {
+    "quote": "Elevation where appropriate / Manual lymphatic drainage (where available)",
+    "why_ambiguous": "Conditional requirements: when not appropriate/available, the component is waived but the chart must show why."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "conservative therapy",
+   "quote": "The four-week trial of conservative therapy must include all of the following: Regular and compliant use of an appropriate compression bandage system or compression garment; Regular exercise; Elevation of the limb",
+   "where": "* footnote p.2"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "The garment may be prefabricated or custom-fabricated but must provide adequate graduated compression starting with a minimum of 30 mmHg distally.",
+   "where": "* footnote"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "At least four weeks of regular, daily, multiple-hour home usage of the E0650 or E0651 after careful, in-person fitting, training and supervision",
+   "where": "** footnote (trunk)"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "Manual lymphatic drainage (where available) and self-manual lymphatic drainage (MLD) for at least 30 minutes per day",
+   "where": "** footnote"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "Evaluation of diet and implementation of any necessary change; Medications as appropriate (e.g., diuretics ...); Correction (where possible) of anemia and/or hypoproteinemia",
+   "where": "** footnote"
+  },
+  {
+   "kind": "other",
+   "quote": "documentation that the individual has unique characteristics that prevent satisfactory pneumatic compression with single-compartment or multichamber nonprogrammable lymphedema pumps (e.g., significant scarring)",
+   "where": "programmable"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "Lymphedema beyond the upper and lower extremities",
+   "where": "trunk/chest"
+  },
+  {
+   "kind": "other",
+   "quote": "Pneumatic compression pumps and appliances for the head/neck are experimental/investigational.",
+   "where": "Policy Statement"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "distal compression",
+   "value": ">= 30",
+   "unit": "mmHg",
+   "quote": "starting with a minimum of 30 mmHg distally"
+  },
+  {
+   "quantity": "self-MLD",
+   "value": ">= 30",
+   "unit": "minutes/day",
+   "quote": "for at least 30 minutes per day"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "conservative therapy trial",
+   "length": "4 weeks",
+   "quote": "a four-week trial of conservative therapy"
+  },
+  {
+   "what": "home nonprogrammable pump trial for trunk",
+   "length": "4 weeks, daily, multiple hours",
+   "quote": "At least four weeks of regular, daily, multiple-hour home usage"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Codes organized by pump type with appliances 'used in conjunction with' parent pump; no ICD-10.",
+  "non_covered_code_lists": "E0676, E1399 'Other codes (investigational ...)'; E1399 also in non-pneumatic table - listing conflict (E0678-E0682 'Established')."
+ },
+ "external_dependencies": [
+  {
+   "what": "Contract language and CMS for MA",
+   "quote": "Please reference the appropriate certificate or contract for benefit information."
+  },
+  {
+   "what": "International Society of Lymphology staging used in background only",
+   "quote": "Table 1 lists International Society of Lymphology guidance for staging lymphedema (2023)"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Adequate compression",
+   "definition_quote": "(1) sufficient pressure at the lowest pressure point to cause fluid movement, and (2) sufficient pressure across the gradient ... The compression used must not create a tourniquet effect at any point."
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "Regular and compliant use",
+   "problem": "No hours/days defined."
+  },
+  {
+   "quote": "demonstrating failed responses to treatment",
+   "problem": "No measure of failure."
+  },
+  {
+   "quote": "Elevation where appropriate",
+   "problem": "Self-waiving."
+  },
+  {
+   "quote": "adequate graduated compression",
+   "problem": "Chart rarely records mmHg."
+  },
+  {
+   "quote": "Medications as appropriate",
+   "problem": "Not testable."
+  }
+ ],
+ "extraction_hazards": [
+  "Criteria hinge on star-footnotes (* and **) placed after the bullets, distinct definitions per footnote that overlap (** repeats the compression definition).",
+  "Policy history boxes and 'Current Policy Effective Date' vs metadata mismatch.",
+  "Stray empty bullet in Exclusions.",
+  "Medical Policy Statement says non-pneumatic limb 'established' but the title lists Koya Dayspring while BCBSFL calls it investigational."
+ ],
+ "interesting_structures": [
+  "Non-pneumatic devices are covered, unlike BCBSFL and Cigna.",
+  "Two different conservative-therapy definitions (limb vs trunk).",
+  "No diagnosis staging, no continued-use rule, no venous ulcer indication.",
+  "Evidence statement states 'clinical input supports' trunk pump use."
+ ],
+ "fit_to_tree": {
+  "score": 2,
+  "scale": "1 clean ... 5 judgment",
+  "why": "Compact all-of lists with numeric anchors (30 mmHg, 4 weeks, 30 min), but conditional 'where appropriate/available' items and overlapping footnote definitions."
+ }
+}

@@ -1,0 +1,98 @@
+{
+  "file": "bcbsfl-02-61000-30-facet-joint-injections.pdf",
+  "treatment": "facet-joint-injections",
+  "payer": "bcbsfl",
+  "doc_kind": "medical policy (Medical Coverage Guideline)",
+  "lines_of_business": ["All lines of business unless noted in Program Exceptions", "FEP: follow FEP guidelines", "SAO: follow SAO guidelines", "Medicare Advantage: LCD L33930 Facet Joint Interventions for Pain Management reviewed"],
+  "effective_or_revised": "Original 02/15/04; Reviewed 01/23/25; Revised 02/15/25",
+  "sections_in_order": ["Description", "Position Statement (general criteria; diagnostic; therapeutic; ultrasound)", "Billing/Coding Information (CPT, ICD-10, LOINC documentation table)", "Reimbursement Information", "Program Exceptions", "Definitions", "Related Guidelines", "Other (alternate names)", "References", "Updates"],
+  "criteria_location": "Position Statement, pp.1-2 of 10. Three blocks: a general criteria block applying to all injections, a diagnostic block and a therapeutic block. Pain assessment requirement sits in an asterisked footnote under the general block. Reimbursement Information says only 'Refer to POSITION STATEMENT'. Remaining pages are references.",
+  "procedures_covered": ["Diagnostic facet joint injection (intra-articular)", "Diagnostic medial branch block", "Therapeutic facet joint injection", "Ultrasound-guided facet injection (investigational)"],
+  "logic": {
+    "top_level": "all: general criteria (all of 5) AND either the diagnostic block or the therapeutic block, each an all-of",
+    "max_nesting_depth": 3,
+    "k_of_n": [],
+    "exclusions_or_contraindications": "Inline negatives inside criteria ('Absence of nonfacet pathology ... fracture, infection, significant spinal deformity or tumor'; 'No radiculopathy or neurogenic claudication (except for radiculopathy caused by facet joint synovial cyst)'). Ultrasound guidance is a separate investigational sentence.",
+    "initial_vs_repeat": "Explicit. Diagnostic: initial, OR a second confirmatory injection at the same level 'a minimum of 2 weeks after', max 2 diagnostic procedures per region per rolling 12 months. Therapeutic: requires 80% relief from the diagnostic injection, then subsequent therapeutic injections need 50% relief for 3 months OR 50% functional improvement; max 4 therapeutic procedures per region per rolling 12 months.",
+    "and_or_ambiguity": [
+      {"quote": "Pain of ≥ 6 on a scale of 0 to 10, OR functional deficit, AND*", "why_ambiguous": "An OR inside a bullet that ends in AND; with the asterisk this has three connectors in one line."},
+      {"quote": "An initial diagnostic injection, when criteria outlined above are met, OR a second diagnostic injection at the same level (confirmatory) to establish validity of the initial diagnostic injection, performed a minimum of 2 weeks after the initial diagnostic injection, AND", "why_ambiguous": "The OR sits mid-sentence: initial OR confirmatory; the 'when criteria above are met' qualifier attaches only to the first alternative, as written."},
+      {"quote": "Subsequent therapeutic injections at the same anatomic site result in at least 50% pain relief for at least three (3) months from the prior therapeutic injection, OR at least 50% improvement in the ability to perform previously painful movements and ADLs as compared to baseline measurement, AND", "why_ambiguous": "For a first therapeutic injection there is no 'subsequent'/'prior therapeutic injection'; the criterion is vacuous or unmet, undefined which."},
+      {"quote": "Chronic neck or back pain suggestive of facet joint origin: predominantly axial, and/or aggravated by extension, rotation or lateral bending of the spine, and not associated with neurological deficits", "why_ambiguous": "'and/or' makes axial pain optional if aggravated by movement; 'suggestive of' is judgment."},
+      {"quote": "Diagnostic injection provided at least 80% pain relief (with the duration of relief being consistent with the agent used)", "why_ambiguous": "Grammar broken (provided at least 80% relief); applies to prior diagnostic result, not the current request."}
+    ]
+  },
+  "requirement_kinds": [
+    {"kind": "symptom", "quote": "Chronic neck or back pain suggestive of facet joint origin: predominantly axial, and/or aggravated by extension, rotation or lateral bending of the spine, and not associated with neurological deficits", "where": "General criteria bullet 1"},
+    {"kind": "measurement threshold", "quote": "Pain of ≥ 6 on a scale of 0 to 10, OR functional deficit", "where": "General criteria bullet 2"},
+    {"kind": "documentation/photos", "quote": "Pain assessment must be performed and documented at baseline, and after each injection.", "where": "General criteria footnote *"},
+    {"kind": "imaging finding", "quote": "Absence of nonfacet pathology per clinical assessment or radiology imaging, including, but not limited to, fracture, infection, significant spinal deformity or tumor", "where": "General criteria bullet 3"},
+    {"kind": "conservative therapy", "quote": "Pain has been present for a minimum of 3 months with documented failure to respond to noninvasive conservative care management (as tolerated)", "where": "General criteria bullet 4"},
+    {"kind": "diagnosis", "quote": "No radiculopathy or neurogenic claudication (except for radiculopathy caused by facet joint synovial cyst)", "where": "General criteria bullet 5"},
+    {"kind": "prior procedure", "quote": "a second diagnostic injection at the same level (confirmatory) ... performed a minimum of 2 weeks after the initial diagnostic injection", "where": "Diagnostic criteria"},
+    {"kind": "prior procedure", "quote": "Diagnostic injection provided at least 80% pain relief", "where": "Therapeutic criteria"},
+    {"kind": "prior procedure", "quote": "Subsequent therapeutic injections at the same anatomic site result in at least 50% pain relief for at least three (3) months from the prior therapeutic injection", "where": "Therapeutic criteria"},
+    {"kind": "provider/facility qualification", "quote": "Injections are performed with CT or fluoroscopic guidance", "where": "Diagnostic and therapeutic criteria"},
+    {"kind": "other", "quote": "Injections are limited to one spinal region (cervical, thoracic, lumbar, sacral) per session", "where": "Diagnostic and therapeutic criteria"},
+    {"kind": "other", "quote": "No more than 2 diagnostic injection procedures per region per rolling 12 months", "where": "Diagnostic criteria"},
+    {"kind": "other", "quote": "No more than 4 therapeutic injection procedures per region per rolling 12 months", "where": "Therapeutic criteria"},
+    {"kind": "diagnosis", "quote": "ICD-10 Diagnosis Codes That Support Medical Necessity: M47.14-M47.18, M47.812-M47.817, M47.892-M47.897, M47.9, M54.2, M54.50-M54.59, M54.6, M96.1, M25.5xx shoulder pain", "where": "Billing/Coding"}
+  ],
+  "thresholds": [
+    {"quantity": "baseline pain", "value": ">= 6", "unit": "0-10 scale", "quote": "Pain of ≥ 6 on a scale of 0 to 10"},
+    {"quantity": "pain relief from diagnostic injection", "value": ">= 80", "unit": "percent", "quote": "Diagnostic injection provided at least 80% pain relief"},
+    {"quantity": "pain relief from prior therapeutic injection", "value": ">= 50", "unit": "percent", "quote": "at least 50% pain relief for at least three (3) months"},
+    {"quantity": "functional improvement alternative", "value": ">= 50", "unit": "percent", "quote": "at least 50% improvement in the ability to perform previously painful movements and ADLs"},
+    {"quantity": "diagnostic injections per region", "value": "<= 2 per rolling 12 months", "unit": "procedures", "quote": "No more than 2 diagnostic injection procedures per region per rolling 12 months"},
+    {"quantity": "therapeutic injections per region", "value": "<= 4 per rolling 12 months", "unit": "procedures", "quote": "No more than 4 therapeutic injection procedures per region per rolling 12 months"}
+  ],
+  "time_windows": [
+    {"what": "pain duration with failed conservative care", "length": "3 months", "quote": "Pain has been present for a minimum of 3 months"},
+    {"what": "interval between diagnostic and confirmatory injection", "length": "2 weeks minimum", "quote": "performed a minimum of 2 weeks after the initial diagnostic injection"},
+    {"what": "duration of relief after prior therapeutic injection", "length": "3 months", "quote": "at least 50% pain relief for at least three (3) months"},
+    {"what": "frequency caps", "length": "rolling 12 months", "quote": "per region per rolling 12 months"},
+    {"what": "documentation recency (LOINC table)", "length": "6 months", "quote": "observations made six months or fewer before starting date of service"}
+  ],
+  "codes": {
+    "cpt_hcpcs_listed": true,
+    "icd10_listed": true,
+    "codes_tied_to_criteria": "Not tied. 64490-64495 are image-guided facet codes listed flat; the position statement's diagnostic/therapeutic split has no CPT mapping (the codes cover both). 0213T-0218T tagged 'investigational' (ultrasound). Diagnosis codes 'support medical necessity' but include M25.5xx shoulder pain, which is not a spinal facet diagnosis.",
+    "non_covered_code_lists": "0213T, 0214T, 0215T, 0216T, 0217T, 0218T (ultrasound guided) marked investigational."
+  },
+  "external_dependencies": [
+    {"what": "Medicare Advantage: LCD L33930 reviewed", "quote": "Facet Joint Interventions for Pain Management (L33930), located at cms.gov."},
+    {"what": "Related guideline for denervation", "quote": "Neurolysis/Ablation, 02-61000-34"},
+    {"what": "FEP and SAO follow their own guidelines", "quote": "Federal Employee Program (FEP): Follow FEP guidelines."},
+    {"what": "Florida step-therapy exemption law applies to the conservative-care requirement", "quote": "Florida law 627.42393"}
+  ],
+  "definitions_that_change_meaning": [
+    {"term": "Axial pain", "definition_quote": "also called mechanical pain, axial pain is confined to one spot or region."},
+    {"term": "Paravertebral facet joint nerve", "definition_quote": "also known as medial branch nerve."},
+    {"term": "Facet block (Description)", "definition_quote": "either into the facet joint (intra-articular or IA) or outside the joint space around the nerve supply to the joint (the medial branch nerve) known as medial branch block (MBB)"}
+  ],
+  "vague_terms": [
+    {"quote": "functional deficit", "problem": "Undefined; no instrument or ADL threshold."},
+    {"quote": "noninvasive conservative care management (as tolerated)", "problem": "No components or minimum duration of therapy; 'as tolerated' is an escape hatch."},
+    {"quote": "suggestive of facet joint origin", "problem": "Clinical judgment."},
+    {"quote": "significant spinal deformity", "problem": "'significant' undefined."},
+    {"quote": "(with the duration of relief being consistent with the agent used)", "problem": "Depends on drug pharmacology; the chart must name agent and relief duration."},
+    {"quote": "at least 50% improvement in the ability to perform previously painful movements", "problem": "No measurement method."},
+    {"quote": "Pain assessment must be performed and documented at baseline, and after each injection.", "problem": "Footnote; scale not named (the 0-10 scale is only implied by the >= 6 bullet)."}
+  ],
+  "extraction_hazards": [
+    "Asterisk footnote ('AND*' ... '*Pain assessment must be...') carries a criterion and is separated from its bullet.",
+    "The ICD-10 table lists 'M25.511, 512' style compressed ranges and a shoulder pain row; some rows lack spaces ('M25.531,532').",
+    "Position statement spans a page break right before 'BILLING/CODING INFORMATION', where the ultrasound sentence is the last line.",
+    "CPT descriptors for 0213T-0218T are wrapped with '(investigational)' appended on the last line only.",
+    "The LOINC documentation table repeats a six-month narrative in every row.",
+    "Navigation bar line after the disclaimer."
+  ],
+  "interesting_structures": [
+    "Three-block shape: shared general criteria, then diagnostic versus therapeutic with separate frequency caps.",
+    "Two-step clinical logic: therapeutic injections require a documented prior diagnostic response of 80%, then 50% relief for 3 months.",
+    "Rolling-12-month counters per spinal region, for two different procedure classes.",
+    "Pain assessment at baseline and after each injection: the chart must contain a series, not a single note.",
+    "Covers both intra-articular injections and medial branch blocks with one set of criteria; the denervation sibling policy is separate (02-61000-34)."
+  ],
+  "fit_to_tree": {"score": 3, "scale": "1 = all/any/not expresses it cleanly ... 5 = needs new constructs or human judgment", "why": "Shape is all-of with a few inline ORs and fits the tree. Strain comes from stateful history (prior injection count and relief percentages over rolling windows), diagnostic versus therapeutic mode selection (which the CPT code cannot tell), and subjective terms."}
+}

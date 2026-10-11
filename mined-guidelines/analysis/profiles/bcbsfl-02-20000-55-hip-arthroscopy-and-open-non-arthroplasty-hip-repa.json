@@ -1,0 +1,194 @@
+{
+ "doc_kind": "medical policy (Florida Blue Medical Coverage Guideline)",
+ "lines_of_business": [
+  "All lines of business unless noted in Program Exceptions (disclaimer p.1)",
+  "Federal Employee Program (FEP): follow FEP guidelines",
+  "State Account Organization (SAO): follow SAO guidelines",
+  "Medicare Advantage: reviewed NCD/LCD listed in Program Exceptions"
+ ],
+ "effective_or_revised": "Original Effective Date 10/15/16; Reviewed 01/22/26; Revised 02/15/26 (8 pages)",
+ "sections_in_order": [
+  "Header block (policy number, Original Effective Date, Reviewed, Revised)",
+  "Subject",
+  "Disclaimer (all caps)",
+  "Navigation bar (Position Statement / Billing/Coding / ... hyperlinks)",
+  "DESCRIPTION",
+  "POSITION STATEMENT",
+  "BILLING/CODING INFORMATION",
+  "REIMBURSEMENT INFORMATION",
+  "PROGRAM EXCEPTIONS",
+  "DEFINITIONS",
+  "RELATED GUIDELINES",
+  "OTHER",
+  "REFERENCES",
+  "COMMITTEE APPROVAL",
+  "GUIDELINE UPDATE INFORMATION"
+ ],
+ "criteria_location": "Position Statement pp.2-4 under five sub-headings: Diagnostic Hip Arthroscopy; Operative Hip Arthroscopy and Open Hip Repair; FAI Surgery; Microfracture, Abrasion and Drilling; plus an exemption paragraph for biopsy/infection/acute trauma.",
+ "procedures_covered": [
+  "Diagnostic hip arthroscopy (29860)",
+  "Operative hip arthroscopy / open repair (29861-29863, 29916)",
+  "Femoroplasty / acetabuloplasty for FAI (29914, 29915)",
+  "Microfracture, abrasion, drilling (29862)"
+ ],
+ "logic": {
+  "top_level": "pathways: five sub-sections each 'meets the definition of medical necessity when ALL of the following', joined by trailing ', AND' on bullets",
+  "max_nesting_depth": 3,
+  "k_of_n": [
+   {
+    "k": 2,
+    "n": 6,
+    "quote": "failure of at least 12 weeks of non-operative conservative management, including at least 2 of the following: Modification of activity, medications (unless contraindicated), use of assistive device(s), physical therapy, home exercise program, intra-articular steroid injection)"
+   }
+  ],
+  "exclusions_or_contraindications": "Inline negatives as criteria: 'No radiographic evidence of any of the following: FAI, Tonnis grade 3 osteoarthritis, Joint space less than 2mm, Hip dysplasia, fracture'; 'No evidence of severe chondral damage'.",
+  "initial_vs_repeat": "None.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Hip arthroscopy is performed for one of the following: ... Removal of loose body (bodies) when no significant osteoarthritis is present (Tonnis 0 or 1), OR ... As an adjunct to FAI surgery",
+    "why_ambiguous": "Eight alternatives joined by OR, several with their own embedded conditions (Tonnis 0 or 1)."
+   },
+   {
+    "quote": "Hip arthroscopy or open hip repair also meets the definition of medical necessity for the following (imaging and failure of non-operative conservative treatment is not required)",
+    "why_ambiguous": "Exemption overrides the ALL list for biopsy, infection, trauma; it is an alternate path that waives other criteria."
+   },
+   {
+    "quote": "Symptoms suggestive of cam or pincer femoroacetabular impingement (any of the following):",
+    "why_ambiguous": "Nested any-of with a trailing ', AND' on the last bullet that attaches to the parent list."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "symptom",
+   "quote": "Hip pain with loss of function present for at least 6 months",
+   "where": "Diagnostic"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "Radiographic and MRI findings are inconclusive",
+   "where": "Diagnostic"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "failure of at least 3 months of non-operative conservative management",
+   "where": "Diagnostic"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "Femoral head-neck offset with an alpha angle >50°",
+   "where": "FAI"
+  },
+  {
+   "kind": "age",
+   "quote": "Skeletally mature with documented closure of growth plates (eg, ≥15 years of age)",
+   "where": "FAI"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "Repair of a traumatic labral tear causing mechanical symptoms",
+   "where": "Operative"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "No evidence of advanced osteoarthritis (advanced is defined as Tönnis grade 2 or 3)",
+   "where": "FAI"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "joint space of less than 2 mm",
+   "where": "FAI"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "alpha angle",
+   "value": "> 50",
+   "unit": "degrees",
+   "quote": "alpha angle >50°"
+  },
+  {
+   "quantity": "joint space",
+   "value": "< 2 (or <= 2 in microfracture)",
+   "unit": "mm",
+   "quote": "joint space of less than 2 mm"
+  },
+  {
+   "quantity": "age",
+   "value": ">= 15",
+   "unit": "years",
+   "quote": "(eg, ≥15 years of age)"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "symptom duration",
+   "length": "at least 6 months",
+   "quote": "The pain has been present for at least 6 months"
+  },
+  {
+   "what": "diagnostic conservative management",
+   "length": "3 months",
+   "quote": "failure of at least 3 months of non-operative conservative management"
+  },
+  {
+   "what": "operative conservative management",
+   "length": "12 weeks",
+   "quote": "failure of at least 12 weeks of non-operative conservative management"
+  },
+  {
+   "what": "FAI conservative therapy",
+   "length": "3 months",
+   "quote": "Unresponsive to conservative therapy for at least 3 months"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "7 CPT codes listed; not mapped to the five sub-sections.",
+  "non_covered_code_lists": "None."
+ },
+ "external_dependencies": [],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Tonnis classification",
+   "definition_quote": "3: Severe: Large cysts, severe narrowing or obliteration of the joint space, severe deformity of the head"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "significant osteoarthritis",
+   "problem": "defined by Tonnis 0/1 only in some places."
+  },
+  {
+   "quote": "Moderate to severe hip pain ... that significantly limits activities",
+   "problem": "no scale."
+  },
+  {
+   "quote": "Radiographic and MRI findings are inconclusive",
+   "problem": "judgment."
+  }
+ ],
+ "extraction_hazards": [
+  "Bullets are either the private-use character U+F0B7 or U+2022 depending on the document (the fusion guideline uses both), never '-' or '*'; nested bullets use other glyphs ('o') or only deeper indentation",
+  "Hyperlink navigation bar after the disclaimer is flattened into a 2-3 row text block that looks like headings",
+  "Form-feed (\\f) page breaks can fall mid-list or immediately before a section heading, so '^HEADING' regexes can miss; no running headers/footers or page numbers to strip",
+  "Tonnis grade rule is inconsistent across sub-sections (grade 3 vs 2-or-3) and defined only in a '**' footnote placed after the Microfracture list",
+  "Stray parentheses ')' in the middle of lists, bullet text continues on next line",
+  "Same 'at least 2 of the following' bullet block copy-pasted three times; 'Tonnis' and 'Tönnis' spellings both appear",
+  "3 months vs 12 weeks used for the same concept"
+ ],
+ "interesting_structures": [
+  "Exemption path that waives conservative therapy and imaging",
+  "Same k-of-n conservative-therapy block reused in three pathways",
+  "Footnote defining a grading scale"
+ ],
+ "fit_to_tree": {
+  "score": 2,
+  "scale": "1 = all/any/not expresses it cleanly ... 5 = needs new constructs or human judgment",
+  "why": "Well structured all/any/k-of-n tree with numeric leaves; main risk is the small inconsistencies and the footnoted scale."
+ },
+ "payer": "bcbsfl",
+ "treatment": "hip-arthroscopy-and-open-non-arthroplast",
+ "file": "bcbsfl-02-20000-55-hip-arthroscopy-and-open-non-arthroplasty-hip-repa.pdf"
+}

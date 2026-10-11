@@ -1,0 +1,19 @@
+{
+  "payer": "BCBS Rhode Island",
+  "payer_key": "bcbsri",
+  "treatment": "vertebroplasty-kyphoplasty",
+  "title": "Kyphoplasty and Vertebroplasty",
+  "policy_number": "",
+  "effective": "2019-04",
+  "url": "https://www.bcbsri.com/providers/sites/providers/files/policies/2019/04/2019%20Kyphoplasty%20and%20Vertebroplasty.pdf",
+  "final_url": "https://www.bcbsri.com/providers/sites/providers/files/policies/2019/04/2019%20Kyphoplasty%20and%20Vertebroplasty.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "bcbsri-kyphoplasty-and-vertebroplasty.pdf",
+  "sha256": "7814365b224d580362b88cc9d51af886e86ff629ad5662742301a5342c25e487",
+  "pages": 4,
+  "bytes": 203224,
+  "retrieved": "2026-10-09",
+  "printed_date": "Effective 04/01/2019; last updated 04/16/2019"
+}

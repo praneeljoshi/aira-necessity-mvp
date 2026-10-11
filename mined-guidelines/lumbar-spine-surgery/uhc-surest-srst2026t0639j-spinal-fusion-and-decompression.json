@@ -1,0 +1,19 @@
+{
+  "payer": "UnitedHealthcare Surest",
+  "payer_key": "uhc-surest",
+  "treatment": "lumbar-spine-surgery",
+  "title": "Spinal Fusion and Decompression",
+  "policy_number": "SRST2026T0639J",
+  "effective": "2026-09-01",
+  "url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/surest/spinal-fusion-decompression-sur.pdf",
+  "final_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/surest/spinal-fusion-decompression-sur.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "uhc-surest-srst2026t0639j-spinal-fusion-and-decompression.pdf",
+  "sha256": "a83b4947293f843db1bc7dad8285b71c0d9afca327a65a3a33a8f4423472ef39",
+  "pages": 13,
+  "bytes": 443699,
+  "retrieved": "2026-10-09",
+  "printed_date": "SRST2026T0639J; effective September 1, 2026 (supersedes 2026T0639I)"
+}

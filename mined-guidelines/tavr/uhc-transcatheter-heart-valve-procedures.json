@@ -1,0 +1,19 @@
+{
+  "payer": "UnitedHealthcare",
+  "payer_key": "uhc",
+  "treatment": "tavr",
+  "title": "Transcatheter Heart Valve Procedures",
+  "policy_number": "",
+  "effective": "01/01/2026",
+  "url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-medical-drug/transcatheter-heart-valve-procedures.pdf",
+  "final_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-medical-drug/transcatheter-heart-valve-procedures.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "uhc-transcatheter-heart-valve-procedures.pdf",
+  "sha256": "7a559ca8ee7a692269d59d5c5d4c5dbf240470937d5e543c1a9446b609f51067",
+  "pages": 40,
+  "bytes": 694698,
+  "retrieved": "2026-10-09",
+  "printed_date": "Policy 2026T0557FF; effective July 1, 2026 (history entry 07/17/2026 code update)"
+}

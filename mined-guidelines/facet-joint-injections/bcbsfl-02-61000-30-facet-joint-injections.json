@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "facet-joint-injections",
+  "title": "Facet Joint Injections",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76ETIP2HX6043B4OJ9L",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-61000-30",
+  "original_effective": "02/15/04",
+  "reviewed": "01/23/25",
+  "revised": "02/15/25",
+  "file": "bcbsfl-02-61000-30-facet-joint-injections.pdf",
+  "sha256": "c057f9bde5c3eb65105bd28c834c8a30b47d3f7ddce13e60f152e9002f16b450",
+  "pages": 10,
+  "bytes": 643195,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original 02/15/04; Reviewed 01/23/25; Revised 02/15/25"
+}

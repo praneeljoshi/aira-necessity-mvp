@@ -1,0 +1,19 @@
+{
+  "payer": "UnitedHealthcare Community Plan",
+  "payer_key": "uhc-community",
+  "treatment": "vertebroplasty-kyphoplasty",
+  "title": "Percutaneous Vertebroplasty and Kyphoplasty",
+  "policy_number": "",
+  "effective": "2026-05-01",
+  "url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan/ne/percutaneous-vertebroplasty-kyphoplasty-ne-cs.pdf",
+  "final_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medicaid-comm-plan/ne/percutaneous-vertebroplasty-kyphoplasty-ne-cs.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "uhc-cs-percutaneous-vertebroplasty-and-kyphoplasty.pdf",
+  "sha256": "f78b9593a0f0256315a1f0621672eae6d12a08c8505f9bf61c30e7cd44e2cefb",
+  "pages": 21,
+  "bytes": 487405,
+  "retrieved": "2026-10-09",
+  "printed_date": "Effective May 1, 2026 (CS330NE.F), Nebraska Community Plan"
+}

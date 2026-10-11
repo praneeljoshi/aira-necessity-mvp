@@ -1,0 +1,19 @@
+{
+  "payer": "Carelon (via Louisiana Medicaid)",
+  "payer_key": "carelon",
+  "treatment": "tavr",
+  "title": "Transcatheter Heart Valve Procedures SURG.00121",
+  "policy_number": "",
+  "effective": "",
+  "url": "https://www.ldh.la.gov/assets/medicaid/MCPP/10.25.22/1091_HBL_SURG.00121_Transcatheter_Heart_Valve_Procedures.pdf",
+  "final_url": "https://www.ldh.la.gov/assets/medicaid/MCPP/10.25.22/1091_HBL_SURG.00121_Transcatheter_Heart_Valve_Procedures.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "louisiana-carelon-transcatheter-heart-valve-procedures-surg-00121.pdf",
+  "sha256": "69c3194bfea4c2d3b935984b7ba02cd45e0178c828aea59d09f2f3c34292126d",
+  "pages": 42,
+  "bytes": 1428190,
+  "retrieved": "2026-10-09",
+  "printed_date": "SURG.00121; draft shows 'Publish Date 12/29/202108/18/2022' and 'Last Review Date 08/112/20221' (overstruck dates; latest revision history 08/11/2022)"
+}

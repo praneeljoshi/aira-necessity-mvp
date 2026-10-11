@@ -1,0 +1,19 @@
+{
+  "payer": "Blue Cross Blue Shield of Texas",
+  "payer_key": "bcbstx",
+  "treatment": "hyperbaric-oxygen",
+  "title": "Hyperbaric Oxygen Therapy",
+  "policy_number": "THE801.003",
+  "effective": "",
+  "url": "https://medicalpolicy.bcbstx.com/content/dam/bcbs/medicalpolicy/pdf/therapy/THE801.003_2024-10-15.pdf",
+  "final_url": "https://medicalpolicy.bcbstx.com/content/dam/bcbs/medicalpolicy/pdf/therapy/THE801.003_2024-10-15.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "bcbstx-the801-003-hyperbaric-oxygen-therapy.pdf",
+  "sha256": "adfdef55b7ecfa007a3a992b6c40d54240d7343b2438af4bfdfe7ca5eae3bf34",
+  "pages": 92,
+  "bytes": 890691,
+  "retrieved": "2026-10-09",
+  "printed_date": "Policy Effective Date 10/15/2024; Policy End Date 12/31/2025"
+}

@@ -1,0 +1,86 @@
+{
+  "file": "cigna-0551-anesthesia-services-for-interventional-pain-manage.pdf",
+  "treatment": "facet-joint-injections",
+  "payer": "cigna",
+  "doc_kind": "coverage policy (medical coverage policy). Scope note: this document governs sedation and anesthesia for interventional pain procedures, NOT coverage of the facet injection itself.",
+  "lines_of_business": ["Health benefit plans administered by Cigna Companies (adults 18 and over); 'In certain markets, delegated vendor guidelines may be used'"],
+  "effective_or_revised": "Effective Date 9/15/2026; Next Review Date 2/15/2027; Coverage Policy Number 0551",
+  "sections_in_order": ["Overview", "Coverage Policy (Moderate Sedation; Monitored Anesthesia Care)", "Coding Information (Table 1 moderate sedation CPT, Table 2 interventional pain CPT, MAC codes, HCPCS, ICD-10 lists)", "General Background", "Health Equity Considerations", "References", "Revision Details"],
+  "criteria_location": "Coverage Policy, pp.2-4 of 29. Criteria are two lists (moderate sedation, MAC), each 'EITHER of the following': (a) a procedure that requires immobility, or (b) BOTH a named procedure AND a patient risk factor. Everything else is code tables (pp.4-25) and background.",
+  "procedures_covered": ["Moderate sedation (99152, 99153, 99156, 99157) during interventional pain procedures", "Monitored anesthesia care (anesthesia CPT 01937 onward) during interventional pain procedures. Facet joint injection (64490-64495) is only on the list of procedures the sedation may accompany."],
+  "logic": {
+    "top_level": "any: EITHER immobility-required procedure OR (listed procedure AND risk factor)",
+    "max_nesting_depth": 4,
+    "k_of_n": [],
+    "exclusions_or_contraindications": "Fall-through: 'not covered or reimbursable for ANY other indication, including the following: trigger point injection, peripheral joint injection'; for MAC also 'when no anesthetic is administered'.",
+    "initial_vs_repeat": "None.",
+    "and_or_ambiguity": [
+      {"quote": "considered medically necessary when EITHER of the following criteria is met: The interventional pain procedure requires the individual to remain motionless for a prolonged period of time or in a painful position ... BOTH of the following criteria are met: ANY of the following interventional pain procedures is being performed ... severe anxiety ...", "why_ambiguous": "Nesting EITHER > BOTH > ANY is conveyed by indentation and bullets only; flattened text loses it. In the moderate sedation block the second BOTH member is a single risk (severe anxiety/psychiatric/cognitive), whereas in MAC it is an ANY-of 8 risk groups."},
+      {"quote": "presence of ANY of the following: increased risk for complications due to ASA physical status III or above*; ANY of the following comorbidities ...", "why_ambiguous": "Nested ANY inside ANY; asterisk footnote says 'The presence of a stable, treated condition, of itself, is not necessarily sufficient to support the need for MAC.'"},
+      {"quote": "severe cardiac disease and/or pulmonary disease (e.g., severe hypotension [systolic < 90 mm Hg], major cardiac dysfunction)", "why_ambiguous": "'and/or' with examples that are not thresholds."}
+    ]
+  },
+  "requirement_kinds": [
+    {"kind": "age", "quote": "for an adult (age 18 or over)", "where": "Coverage Policy"},
+    {"kind": "provider/facility qualification", "quote": "The interventional pain procedure requires the individual to remain motionless for a prolonged period of time or in a painful position (e.g., sympathetic blocks, plexus blocks, radiofrequency ablation procedures...)", "where": "Coverage Policy, criterion A"},
+    {"kind": "diagnosis", "quote": "ANY of the following interventional pain procedures is being performed: epidural steroid injection, epidural blood patch, facet joint injection, peripheral and/or spinal nerve root block, ... sacroiliac joint injection", "where": "Coverage Policy, criterion B"},
+    {"kind": "BMI/comorbidity", "quote": "morbid obesity (body mass index [BMI] greater than or equal to 40 kg/m2)", "where": "MAC criterion B"},
+    {"kind": "BMI/comorbidity", "quote": "chronic renal failure (estimated glomerular filtration rate [eGFR] < 60 ml/min/1.73 m2 for more than 3 months, or stage 3A or higher)", "where": "MAC criterion B"},
+    {"kind": "BMI/comorbidity", "quote": "chronic liver disease (Model for End-stage Liver Disease [MELD] score > 10)", "where": "MAC criterion B"},
+    {"kind": "age", "quote": "age > 70 years", "where": "MAC criterion B"},
+    {"kind": "BMI/comorbidity", "quote": "increased risk for complications due to ASA physical status III or above*", "where": "MAC criterion B"},
+    {"kind": "psych/nutrition evaluation", "quote": "severe anxiety under active medical management with psychotropic medication and/or cognitive therapy, or other severe psychiatric condition(s), or severe cognitive impairment(s)", "where": "Both criteria"},
+    {"kind": "other", "quote": "anticipated tolerance or physical dependence to sedatives/monitored sedation (e.g., chronic opioid or benzodiazepine use)", "where": "MAC criterion B"},
+    {"kind": "other", "quote": "history of or active illicit drug or alcohol abuse", "where": "MAC criterion B"}
+  ],
+  "thresholds": [
+    {"quantity": "age", "value": ">= 18", "unit": "years", "quote": "adult (age 18 or over)"},
+    {"quantity": "BMI", "value": ">= 40", "unit": "kg/m2", "quote": "body mass index [BMI] greater than or equal to 40 kg/m2"},
+    {"quantity": "eGFR", "value": "< 60 for > 3 months", "unit": "ml/min/1.73 m2", "quote": "eGFR < 60 ml/min/1.73 m2 for more than 3 months"},
+    {"quantity": "MELD", "value": "> 10 (policy criterion); >= 10 in General Background", "unit": "score", "quote": "MELD score > 10"},
+    {"quantity": "systolic blood pressure", "value": "< 90", "unit": "mm Hg", "quote": "severe hypotension [systolic < 90 mm Hg]"},
+    {"quantity": "age for MAC", "value": "> 70", "unit": "years", "quote": "age > 70 years"},
+    {"quantity": "ASA class", "value": ">= III", "unit": "ASA physical status", "quote": "ASA physical status III or above"}
+  ],
+  "time_windows": [
+    {"what": "chronic kidney disease duration", "length": "more than 3 months", "quote": "for more than 3 months"}
+  ],
+  "codes": {
+    "cpt_hcpcs_listed": true,
+    "icd10_listed": true,
+    "codes_tied_to_criteria": "Table 1 moderate sedation codes and Table 2 interventional pain codes are separate lists; coverage is 'when criteria in the applicable policy statements listed above are met'. Table 2 includes facet codes 64490-64495 (alongside epidural, SI, nerve root). ICD-10 lists (dementia, epilepsy, etc.) support the risk factors. Anesthesia code tables run on pp.7-25.",
+    "non_covered_code_lists": "No code is tagged non-covered; non-covered is by indication ('not covered or reimbursable for ANY other indication')."
+  },
+  "external_dependencies": [
+    {"what": "Companion Cigna policy for facet injections themselves (not in the library)", "quote": "Related Coverage Resources: ... Facet Joint Injections/Medial Branch Blocks, Interventional Pain Management Guidelines"},
+    {"what": "Delegated vendor guidelines", "quote": "In certain markets, delegated vendor guidelines may be used to support medical necessity and other coverage determinations."},
+    {"what": "Benefit plan document controls", "quote": "In the event of a conflict, a customer's benefit plan document always supersedes the information in the Coverage Policies."},
+    {"what": "ASA physical status classification", "quote": "ASA I (Modifier P1) – A normal healthy patient ... ASA VI"}
+  ],
+  "definitions_that_change_meaning": [
+    {"term": "Severe anxiety", "definition_quote": "severe anxiety is defined as being under active medical management (with psychotropic medication and/or cognitive therapy)"},
+    {"term": "ASA physical status", "definition_quote": "ASA III (Modifier P3) – A patient with severe systemic disease"},
+    {"term": "Monitored anesthesia care", "definition_quote": "including use of general anesthesia (i.e., intravenous anesthetic without a secured airway)"}
+  ],
+  "vague_terms": [
+    {"quote": "remain motionless for a prolonged period of time or in a painful position", "problem": "No time; examples differ from the facet procedure."},
+    {"quote": "The presence of a stable, treated condition, of itself, is not necessarily sufficient to support the need for MAC.", "problem": "Overrides the checklist with judgment."},
+    {"quote": "severe cognitive impairment(s) that would risk endangering the individual's safety", "problem": "Judgment."},
+    {"quote": "abnormalities of/altered upper airway patency", "problem": "Appears in General Background list only; 'anatomical variation' in criteria."},
+    {"quote": "documented sleep apnea", "problem": "In criteria without severity; General Background says 'obstructive sleep apnea'."}
+  ],
+  "extraction_hazards": [
+    "Nested EITHER/BOTH/ANY bullets with indentation only; a flat parse yields wrong logic.",
+    "Footnote asterisk for ASA table is placed after the nested list and the ASA I-VI list sits inside the criteria text.",
+    "Policy text is only pp.2-4; 25 further pages are code tables (including hundreds of ICD-10 rows) that look like criteria lists.",
+    "Slight disagreements between criteria and background (MELD > 10 vs MELD ≥ 10; BMI >= 40 vs > 40; CKD wording) so extraction from the wrong section changes thresholds.",
+    "Page headers 'Medical Coverage Policy: 0551' interrupt lists."
+  ],
+  "interesting_structures": [
+    "Ancillary-service policy: facet injection appears only as a trigger in a list of procedures for which sedation can be justified.",
+    "EITHER (procedure-driven) OR (procedure AND patient risk) double structure, with a long ANY of risk factors for MAC.",
+    "Companion-policy design: the facet injection criteria live in separate Cigna policies not included here.",
+    "Fall-through denial for unlisted indications (trigger point, peripheral joint)."
+  ],
+  "fit_to_tree": {"score": 2, "scale": "1 = all/any/not expresses it cleanly ... 5 = needs new constructs or human judgment", "why": "As a tree it is clean (any of: immobility procedure; all of procedure-listed and any-of risk). But it does not answer whether a facet injection is covered; using it as the facet guideline would be a category error. Leaves such as BMI, eGFR and MELD are measurable."}
+}

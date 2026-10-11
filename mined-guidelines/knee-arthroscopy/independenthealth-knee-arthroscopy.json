@@ -1,0 +1,19 @@
+{
+  "payer": "Independent Health",
+  "payer_key": "independent-health",
+  "treatment": "knee-arthroscopy",
+  "title": "Knee Arthroscopy",
+  "policy_number": "",
+  "effective": "",
+  "url": "https://www.independenthealth.com/content/dam/independenthealth/individuals-and-families/medicare/medicare-member-resources/documents/medical-policies-j-r/Knee%20Arthroscopy%20State%20Products.pdf",
+  "final_url": "https://www.independenthealth.com/content/dam/independenthealth/individuals-and-families/medicare/medicare-member-resources/documents/medical-policies-j-r/Knee%20Arthroscopy%20State%20Products.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "independenthealth-knee-arthroscopy.pdf",
+  "sha256": "785608aaa8a9c0f0bc04203c773e5d3adb497961b6959d6aa460d7725087ff56",
+  "pages": 4,
+  "bytes": 272833,
+  "retrieved": "2026-10-09",
+  "printed_date": "Effective 6/1/2013; version control last row 4/1/2026 Reviewed"
+}

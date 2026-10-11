@@ -1,0 +1,19 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "radiofrequency-and-microwave-ablation-of",
+  "title": "Radiofrequency and Microwave Ablation of Liver Tumors",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76F8EJ84J8HZHU7UYE9",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-40000-23",
+  "original_effective": "02/15/04",
+  "reviewed": "10/23/25",
+  "revised": "11/15/25",
+  "file": "bcbsfl-02-40000-23-radiofrequency-and-microwave-ablation-of-liver-tum.pdf",
+  "sha256": "3579f9e31099236cfd17c48ee860fe871eb38d6359b3297dac6af635a87c5f75",
+  "pages": 13,
+  "bytes": 700508,
+  "retrieved": "2026-10-09"
+}

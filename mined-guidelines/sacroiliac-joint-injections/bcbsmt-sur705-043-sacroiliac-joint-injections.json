@@ -1,0 +1,19 @@
+{
+  "payer": "BCBS Montana",
+  "payer_key": "bcbsmt",
+  "treatment": "sacroiliac-joint-injections",
+  "title": "Sacroiliac Joint Injections",
+  "policy_number": "SUR705.043",
+  "effective": "2026-01-01",
+  "url": "https://medicalpolicy.bcbsmt.com/content/dam/bcbs/medicalpolicy/pdf/surgery/SUR705.043_2026-01-01.pdf",
+  "final_url": "https://medicalpolicy.bcbsmt.com/content/dam/bcbs/medicalpolicy/pdf/surgery/SUR705.043_2026-01-01.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "bcbsmt-sur705-043-sacroiliac-joint-injections.pdf",
+  "sha256": "d1a5238d7da65187da527d17132199cbb2f2bb5b8f6b4cfeb2f12b94fd8a3550",
+  "pages": 16,
+  "bytes": 374343,
+  "retrieved": "2026-10-09",
+  "printed_date": "Policy effective 01/01/2026"
+}

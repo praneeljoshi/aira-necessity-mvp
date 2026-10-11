@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "manipulation-under-anesthesia",
+  "title": "Manipulation Under Anesthesia",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JN64IGN6VIY9PO1X5",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-20000-34",
+  "original_effective": "10/15/07",
+  "reviewed": "06/25/26",
+  "revised": "07/15/26",
+  "file": "bcbsfl-02-20000-34-manipulation-under-anesthesia.pdf",
+  "sha256": "2fe20b172c481020def7989d7ec0ec56cecfe3b822c32c91c3cb0b6a83cc3f5c",
+  "pages": 7,
+  "bytes": 151464,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original Effective Date 10/15/07; Reviewed 06/25/26; Revised 07/15/26 (7 pages)"
+}

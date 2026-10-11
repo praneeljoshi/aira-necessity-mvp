@@ -1,0 +1,19 @@
+{
+  "payer": "Cigna",
+  "payer_key": "cigna",
+  "treatment": "icd",
+  "title": "Cardioverter-Defibrillator Devices",
+  "policy_number": "0431",
+  "effective": "07/15/2025",
+  "url": "https://static.cigna.com/assets/chcp/pdf/coveragePolicies/medical/mm_0431_coveragepositioncriteria_wearable_cardioverter_defibrillator_and_aed.pdf",
+  "final_url": "https://static.cigna.com/assets/chcp/pdf/coveragePolicies/medical/mm_0431_coveragepositioncriteria_wearable_cardioverter_defibrillator_and_aed.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "cigna-0431-cardioverter-defibrillator-devices.pdf",
+  "sha256": "bf6493eff1bf25c02dbc6b89ece413571a52310f9305bd075c5bbd067737cbfd",
+  "pages": 42,
+  "bytes": 596032,
+  "retrieved": "2026-10-09",
+  "printed_date": "Effective 7/15/2026; Next Review 7/15/2027; annual review 7/15/2026 removed the wearable defibrillator statement; combined with CP 0181 on 8/15/2024"
+}

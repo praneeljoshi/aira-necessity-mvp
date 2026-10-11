@@ -1,0 +1,19 @@
+{
+  "payer": "Blue Shield of California",
+  "payer_key": "blueshield-ca",
+  "treatment": "sacroiliac-joint-injections",
+  "title": "Sacroiliac Joint Injections",
+  "policy_number": "",
+  "effective": "",
+  "url": "https://www.blueshieldca.com/content/dam/bsca/en/provider/docs/medical-policies/Sacroiliac-Joint-Injections.pdf",
+  "final_url": "https://www.blueshieldca.com/content/dam/bsca/en/provider/docs/medical-policies/Sacroiliac-Joint-Injections.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "blueshieldca-sacroiliac-joint-injections.pdf",
+  "sha256": "46f95f7859c74187d50492bd44bfd968802729706f6794a4bcdee397865937d2",
+  "pages": 12,
+  "bytes": 238236,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original 1/1/2017; Effective 7/1/2025"
+}

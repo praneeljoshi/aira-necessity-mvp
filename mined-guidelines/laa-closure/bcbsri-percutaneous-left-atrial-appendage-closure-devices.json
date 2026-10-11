@@ -1,0 +1,19 @@
+{
+  "payer": "Blue Cross Blue Shield of Rhode Island",
+  "payer_key": "bcbsri",
+  "treatment": "laa-closure",
+  "title": "Percutaneous Left Atrial Appendage Closure Devices",
+  "policy_number": "",
+  "effective": "07/16/2020",
+  "url": "https://www.bcbsri.com/providers/sites/providers/files/policies/2020/10/2020%20Percutaneous%20Left%20Atrial%20Appendage%20Closure%20Devices.pdf",
+  "final_url": "https://www.bcbsri.com/providers/sites/providers/files/policies/2020/10/2020%20Percutaneous%20Left%20Atrial%20Appendage%20Closure%20Devices.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "bcbsri-percutaneous-left-atrial-appendage-closure-devices.pdf",
+  "sha256": "ec927ac23efc469194a5a64d6bae62d5d6e4213a33354a710849bdd56c61eac8",
+  "pages": 6,
+  "bytes": 201643,
+  "retrieved": "2026-10-09",
+  "printed_date": "Effective 02|01|2019; last updated 07|16|2020; Provider Updates through December 2020"
+}

@@ -1,0 +1,202 @@
+{
+ "lines_of_business": [
+  "All lines of business unless noted in PROGRAM EXCEPTIONS (disclaimer: 'THIS MEDICAL COVERAGE GUIDELINE APPLIES TO ALL LINES OF BUSINESS UNLESS OTHERWISE NOTED IN THE PROGRAM EXCEPTIONS SECTION')",
+  "FEP: 'Follow FEP guidelines.'",
+  "SAO: 'Follow SAO guidelines.'",
+  "Medicare Advantage products: 'No National Coverage Determination (NCD) and/or Local Coverage Determination (LCD) were found'"
+ ],
+ "effective_or_revised": "Original Effective Date 03/15/04; Reviewed 10/23/25; Revised 11/15/25",
+ "sections_in_order": [
+  "Header block (MCG number, Original Effective Date, Reviewed, Revised)",
+  "Subject",
+  "Disclaimer (all caps)",
+  "Navigation bar (Position Statement / Billing/Coding / Reimbursement / Program Exceptions / Definitions / Related Guidelines / Other / References / Updates)",
+  "DESCRIPTION",
+  "POSITION STATEMENT",
+  "BILLING/CODING INFORMATION",
+  "REIMBURSEMENT INFORMATION",
+  "PROGRAM EXCEPTIONS",
+  "DEFINITIONS",
+  "RELATED GUIDELINES",
+  "OTHER",
+  "REFERENCES",
+  "COMMITTEE APPROVAL",
+  "GUIDELINE UPDATE INFORMATION"
+ ],
+ "criteria_location": "POSITION STATEMENT (about 57 lines, pp.3-4): one indication per bullet, each with its own nested conditions, then an 'all other indications ... experimental or investigational' list. Liver tumors are sent to a sibling policy (02-40000-23).",
+ "procedures_covered": [
+  "RFA for painful osteolytic bone metastases",
+  "RFA for osteoid osteoma",
+  "RFA for localized renal cell carcinoma <= 4 cm",
+  "RFA for isolated peripheral NSCLC lesion <= 3 cm",
+  "RFA for non-pulmonary tumors metastatic to lung <= 3 cm",
+  "Investigational: breast, prostate, adrenal, ovary, thyroid, head and neck, etc."
+ ],
+ "logic": {
+  "top_level": "pathways",
+  "max_nesting_depth": 3,
+  "k_of_n": [
+   {
+    "k": 1,
+    "n": 3,
+    "quote": "Localized renal cell carcinoma that is no more than 4cm in size when either of the following criteria is met:"
+   }
+  ],
+  "exclusions_or_contraindications": "Anatomic exclusion as a requirement: 'Tumor is located at least 1 cm from the trachea, main bronchi, esophagus, aorta, aortic arch branches, pulmonary artery and the heart.' Negative evidence: 'There is no evidence of extrapulmonary metastases'. Everything not listed is investigational.",
+  "initial_vs_repeat": "Repeat ablation: 'If repeat ablation is planned, twelve months should have elapsed before a repeat ablation is considered.' (sits in the lung-metastasis list, applicability to the other pathways unclear).",
+  "and_or_ambiguity": [
+   {
+    "quote": "when either of the following criteria is met: In order to preserve kidney function in members with significantly impaired renal function ...; AND When the standard surgical approach ... is likely to substantially worsen existing kidney function; OR The member is not considered a surgical candidate.",
+    "why_ambiguous": "'Either of the following' implies two options, but three bullets are present with an AND between the first two and an OR before the third: reads as (A AND B) OR C, but could also be read as A AND (B OR C)."
+   },
+   {
+    "quote": "RFA is being performed in order to preserve lung function when surgical resection or radiation treatment is likely to substantially worsen pulmonary status OR the member is not considered a surgical candidate; AND There is no evidence of extrapulmonary metastases; AND ...",
+    "why_ambiguous": "An OR inside a sentence inside an ALL list: bullet-level AND with in-sentence OR."
+   },
+   {
+    "quote": "Renal cell carcinoma not meeting the criteria above; AND All other tumors outside the liver",
+    "why_ambiguous": "The investigational list ends with 'AND' as a list joiner (meaning 'and also'), not conjunction of criteria."
+   },
+   {
+    "quote": "Palliative treatment of pain in members with osteolytic bone metastases who have failed or are poor candidates for standard treatment such as radiation or opioids, OR",
+    "why_ambiguous": "Top-level OR between indications; 'failed or are poor candidates' is an inner OR."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "measurement threshold",
+   "quote": "Localized renal cell carcinoma that is no more than 4cm in size",
+   "where": "Position Statement"
+  },
+  {
+   "kind": "lab value",
+   "quote": "renal insufficiency defined by a glomerular filtration rate of less than 60 mL/min/m2",
+   "where": "Position Statement RCC"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "Osteoid osteomas that cannot be managed with medical treatment (e.g., nonsteroidal anti-inflammatory drugs (NSAIDs), surgical excision)",
+   "where": "Position Statement"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "who have failed or are poor candidates for standard treatment such as radiation or opioids",
+   "where": "Position Statement bone mets"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "Tumor is located at least 1 cm from the trachea, main bronchi, esophagus, aorta, aortic arch branches, pulmonary artery and the heart.",
+   "where": "Position Statement lung"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "There are no more than 3 tumors per lung being ablated;",
+   "where": "Position Statement lung mets"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "An isolated peripheral non-small cell lung cancer lesion that is no more than 3 cm in size",
+   "where": "Position Statement"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "renal tumor size",
+   "value": "<= 4",
+   "unit": "cm",
+   "quote": "no more than 4cm in size"
+  },
+  {
+   "quantity": "GFR (renal insufficiency)",
+   "value": "< 60",
+   "unit": "mL/min/m2",
+   "quote": "glomerular filtration rate of less than 60 mL/min/m2"
+  },
+  {
+   "quantity": "lung lesion size",
+   "value": "<= 3",
+   "unit": "cm",
+   "quote": "no more than 3 cm in size"
+  },
+  {
+   "quantity": "distance from vital structures",
+   "value": ">= 1",
+   "unit": "cm",
+   "quote": "at least 1 cm from the trachea"
+  },
+  {
+   "quantity": "tumors per lung",
+   "value": "<= 3",
+   "unit": "count",
+   "quote": "no more than 3 tumors per lung"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "interval before repeat ablation",
+   "length": "12 months",
+   "quote": "twelve months should have elapsed before a repeat ablation is considered"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Four CPT codes (20982, 32998, 50542, 50592) each correspond to one pathway but the document does not map them; a stray CPT descriptor for 32998 is repeated as plain text after the table. LOINC documentation table present.",
+  "non_covered_code_lists": "None tagged."
+ },
+ "external_dependencies": [
+  {
+   "what": "Liver tumors handled by another policy",
+   "quote": "For radiofrequency ablation of liver tumors, refer to Radiofrequency Ablation of Liver Tumors, 02-40000-23."
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Unresectable",
+   "definition_quote": "a property of a tumor where it is unable to be removed surgically"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "not considered a surgical candidate",
+   "problem": "Who decides, on what basis."
+  },
+  {
+   "quote": "significantly impaired renal function",
+   "problem": "Partly defined by GFR < 60 or one kidney, but 'significantly' remains."
+  },
+  {
+   "quote": "poor candidates for standard treatment",
+   "problem": "Undefined."
+  },
+  {
+   "quote": "amenable to complete ablation",
+   "problem": "Operator judgment."
+  },
+  {
+   "quote": "twelve months should have elapsed",
+   "problem": "'Should' vs 'must'."
+  }
+ ],
+ "extraction_hazards": [
+  "Bullet characters are dropped in the text; the 'OR' / '; AND' line endings are the only separators.",
+  "Second-level bullets (the RCC sub-conditions) are indented but with the same glyph; the RCC block is followed by a blank line and the next bullet starts at the original indent.",
+  "A stray repeated CPT descriptor (32998) appears as free text after the coding table.",
+  "The investigational list ends items with ';' and 'AND' unlike the covered list.",
+  "'cm' with no space ('4cm') and 'mL/min/m2' with superscript lost."
+ ],
+ "interesting_structures": [
+  "Multi-indication pathway list with per-indication size ceilings and anatomic proximity rules.",
+  "Mixed AND/OR at the same level with prose lead-ins like 'either of the following' that disagree with the number of bullets.",
+  "Explicit investigational enumeration after criteria (not just 'all other')."
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "why": "Each pathway is a small tree with numeric leaves, but the RCC AND/OR grouping is ambiguous and several terms ('surgical candidate', 'amenable') need clinician judgment; imaging/path data needed for size and distance."
+ },
+ "file": "bcbsfl-02-99221-13-radiofrequency-ablation-of-solid-tumors-other-than.pdf",
+ "treatment": "radiofrequency-ablation-of-solid-tumors",
+ "payer": "bcbsfl",
+ "doc_kind": "medical policy (Florida Blue Medical Coverage Guideline)"
+}

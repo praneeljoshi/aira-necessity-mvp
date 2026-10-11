@@ -1,0 +1,123 @@
+{
+ "file": "providence-mp53-mp53-cpap.pdf",
+ "treatment": "pap-devices",
+ "payer": "providence",
+ "doc_kind": "Medicare Advantage policy",
+ "lines_of_business": [
+  "Medicare Only (Providence Health Plan, Health Assurance, Plan Partners)"
+ ],
+ "effective_or_revised": "Effective 6/1/2026; Last Review 5/2026; Next 5/2027",
+ "sections_in_order": [
+  "Medicare Coverage Criteria (table)",
+  "Policy Cross References",
+  "Policy Guidelines (Background, Coverage Quick Guide, Replacement, ULTepap)",
+  "Regulatory Status",
+  "Billing Guidelines and Coding",
+  "References",
+  "Policy Revision History"
+ ],
+ "criteria_location": "Medicare Coverage Criteria table (p.2-3) points to NCD 240.4 and LCDs L33718 / L33800; clinical criteria themselves are not reproduced. Only replacement rules (p.5-6) and EPAP exclusion are stated in full.",
+ "procedures_covered": [
+  "CPAP E0601",
+  "Bi-level E0470, E0471, E0472",
+  "EPAP A7049",
+  "Accessories"
+ ],
+ "logic": {
+  "top_level": "pathways (a device x condition lookup matrix pointing at external CMS documents)",
+  "max_nesting_depth": 2,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "E0471 not covered for primary OSA; EPAP A7049 not DME so denied; CPAP for non-OSA denied.",
+  "initial_vs_repeat": "Replacement: 5-year reasonable useful lifetime; earlier replacement only lost/stolen/irreparably damaged or change in condition.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Replacement ... prior to the 5-year RUL is eligible for coverage only in select situations (e.g., lost, stolen, irreparably damaged)",
+    "why_ambiguous": "e.g. list is open"
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "diagnosis",
+   "quote": "Both NCD and LCD criteria include diagnosis of OSA for coverage",
+   "where": "Table 1 CPAP row"
+  },
+  {
+   "kind": "other",
+   "quote": "HCPCS code E0471 is not medically necessary for a primary diagnosis of OSA",
+   "where": "Medicare Coverage Criteria"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "documentation of the specific incident of irreparable damage or a written explanation regarding the loss",
+   "where": "Replacement"
+  },
+  {
+   "kind": "other",
+   "quote": "The member must be regularly using the equipment as prescribed; and, the equipment continues to provide the needed therapeutic benefit",
+   "where": "Replacement after RUL"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "reasonable useful lifetime",
+   "value": "5",
+   "unit": "years",
+   "quote": "The reasonable useful lifetime (RUL) for PAP and RAD equipment is 5 years."
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "RUL",
+   "length": "5 years",
+   "quote": "RUL ... is 5 years"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Quick Guide matrix maps HCPCS code x condition to NCD/LCD.",
+  "non_covered_code_lists": "A7049 EPAP denied; E0471 for OSA"
+ },
+ "external_dependencies": [
+  {
+   "what": "NCD 240.4; LCD L33718; LCD L33800; LCA A52467, A52517",
+   "quote": "If there is a conflict between the Company Medicare Medical Policy and CMS guidance, the CMS guidance will govern."
+  },
+  {
+   "what": "MP57 Sleep Disorder Testing",
+   "quote": "Sleep Disorder Testing, MP57"
+  }
+ ],
+ "definitions_that_change_meaning": [],
+ "vague_terms": [
+  {
+   "quote": "select situations",
+   "problem": "Undefined beyond examples"
+  },
+  {
+   "quote": "continues to use and benefit from the device",
+   "problem": "No measure of use or benefit"
+  },
+  {
+   "quote": "Company policy criteria or applicable utilization management vendor criteria may be applied",
+   "problem": "Unspecified"
+  }
+ ],
+ "extraction_hazards": [
+  "Two-column table where left cell is the service and right cell the criteria; wrapped text",
+  "Coverage Quick Guide is a 7-column matrix flattened by pdftotext",
+  "Quotes from LCD embedded in the policy",
+  "Sidebar table of contents in the header"
+ ],
+ "interesting_structures": [
+  "Lookup matrix device x condition -> external document",
+  "Hierarchy rule: CMS guidance governs conflicts",
+  "Non-DME benefit category denial (EPAP)"
+ ],
+ "fit_to_tree": {
+  "score": 5,
+  "scale": "1-5",
+  "why": "Mostly a router to CMS documents; the policy has no OSA or RAD thresholds, so the tree must come from NCD/LCD text not in this PDF."
+ }
+}

@@ -1,0 +1,19 @@
+{
+  "payer": "Blue Cross Blue Shield of Michigan",
+  "payer_key": "bcbsm",
+  "treatment": "panniculectomy",
+  "title": "Panniculectomy",
+  "policy_number": "",
+  "effective": "",
+  "url": "https://www.bcbsm.com/amslibs/content/dam/public/mpr/mprsearch/pdf/82375.pdf",
+  "final_url": "https://www.bcbsm.com/amslibs/content/dam/public/mpr/mprsearch/pdf/82375.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "bcbsm-panniculectomy.pdf",
+  "sha256": "d6e30661ca428ac57a5d62563a06f8430dee228523ca99c96b102d9f07e6f5ce",
+  "pages": 9,
+  "bytes": 352725,
+  "retrieved": "2026-10-09",
+  "printed_date": "Current Policy Effective Date: 3/1/26"
+}

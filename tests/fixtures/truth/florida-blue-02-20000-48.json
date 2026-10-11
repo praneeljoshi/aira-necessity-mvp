@@ -1,0 +1,2174 @@
+{
+ "id": "florida-blue-02-20000-48",
+ "payer": "Florida Blue",
+ "payer_aliases": [
+  "Florida Blue",
+  "BCBS FL",
+  "BCBSFL",
+  "Blue Cross Blue Shield of Florida",
+  "Blue Cross and Blue Shield of Florida",
+  "BCBS of Florida"
+ ],
+ "title": "Thoracic and Lumbar Spine Surgery",
+ "guideline_number": "02-20000-48",
+ "effective_date": "2015-07-01",
+ "reviewed_date": "2026-05-28",
+ "source_file": "bcbsfl-02-20000-48-thoracic-and-lumbar-spine-surgery.pdf",
+ "plan_types": [
+  "All lines of business unless otherwise noted in the Program Exceptions section"
+ ],
+ "excluded_plans": [
+  "Federal Employee Program (FEP): Follow FEP guidelines",
+  "State Account Organization (SAO): Follow SAO guidelines",
+  "Medicare Advantage products: National Coverage Determination (NCD) Lumbar ARTIFICIAL DISC Replacement (LADR) (150.10)"
+ ],
+ "scope": {
+  "cpt": {
+   "0164T": "covered",
+   "0165T": "covered",
+   "22533": "covered",
+   "22534": "covered",
+   "22558": "covered",
+   "22585": "covered",
+   "22612": "covered",
+   "22614": "covered",
+   "22630": "covered",
+   "22632": "covered",
+   "22633": "covered",
+   "22634": "covered",
+   "22857": "covered",
+   "22860": "covered",
+   "22862": "covered",
+   "22865": "covered",
+   "63005": "covered",
+   "63012": "covered",
+   "63017": "covered",
+   "63030": "covered",
+   "63035": "covered",
+   "63042": "covered",
+   "63044": "covered",
+   "63047": "covered",
+   "63048": "covered",
+   "63052": "covered",
+   "63053": "covered",
+   "63056": "covered",
+   "63057": "covered"
+  },
+  "icd10": []
+ },
+ "criteria": [
+  {
+   "id": "thoracic_deformity_in_adults",
+   "text": "Thoracic deformity (minimal / secondary / flexible lumbar involvement) in adults",
+   "question": "Is the patient an adult with a thoracic deformity (with at most minimal, secondary or flexible lumbar involvement)?"
+  },
+  {
+   "id": "lumbar_deformity_in_adults",
+   "text": "Lumbar deformity (with or without secondary thoracic involvement) in adults",
+   "question": "Is the patient an adult with a lumbar deformity (with or without secondary thoracic involvement)?"
+  },
+  {
+   "id": "deformity_progressive_neuro_deficit",
+   "text": "Progressive neurological deficit (motor deficit, bowel or bladder dysfunction) or lower extremity weakness (0-3/5 on the strength scale) or paralysis",
+   "question": "Does the chart document a progressive neurological deficit (motor deficit, bowel or bladder dysfunction), lower extremity weakness graded 0-3/5, or paralysis?"
+  },
+  {
+   "id": "deformity_compression_on_mri_ct",
+   "text": "corresponding evidence of spinal cord or nerve root compression on an MRI or CT scan images",
+   "question": "Does an MRI or CT report show spinal cord or nerve root compression that corresponds to the neurological deficit?"
+  },
+  {
+   "id": "thoracic_pain_impairs_adl_over_6_months",
+   "text": "Significant pain or symptoms that impair daily activities for > 6 months",
+   "question": "Has the patient had significant pain or symptoms that impair daily activities for more than 6 months (dated notes)?",
+   "threshold": {
+    "kind": "duration_months",
+    "op": "gt",
+    "value": 6,
+    "unit": "months"
+   }
+  },
+  {
+   "id": "failed_12_weeks_focused_nonoperative_care_past_year",
+   "text": "Failure of symptom or pain improvement upon completion of at least 12 weeks of focused non-operative care* in the past year",
+   "question": "Did the patient complete at least 12 consecutive weeks of physician-directed non-operative care within the past year without improvement in symptoms or pain?",
+   "threshold": {
+    "kind": "duration_months",
+    "op": "gte",
+    "value": 2.77,
+    "unit": "months"
+   }
+  },
+  {
+   "id": "deformity_conservative_analgesics_steroids_nsaids",
+   "text": "Analgesics, steroids, and/or NSAIDs",
+   "question": "Were analgesics, steroids and/or NSAIDs used as part of the conservative treatment?"
+  },
+  {
+   "id": "deformity_conservative_structured_pt_core_strength",
+   "text": "Structured program of physical therapy aimed at increasing core muscle strength",
+   "question": "Did the patient complete a structured physical therapy program aimed at core muscle strength?"
+  },
+  {
+   "id": "deformity_conservative_home_exercise_program",
+   "text": "Structured home exercise program prescribed by a physical therapist, chiropractic provider or physician",
+   "question": "Was a structured home exercise program prescribed by a physical therapist, chiropractor or physician and followed?"
+  },
+  {
+   "id": "deformity_conservative_injections_or_nerve_block",
+   "text": "Epidural steroid injections and or facet injections /selective nerve root block",
+   "question": "Did the patient receive epidural steroid injections, facet injections or a selective nerve root block?"
+  },
+  {
+   "id": "thoracic_imaging_confirms_curvature",
+   "text": "Imaging studies confirm spinal curvature",
+   "question": "Do imaging studies confirm the spinal curvature?"
+  },
+  {
+   "id": "thoracic_scoliosis_curve_over_50_degrees",
+   "text": "Spinal curvature > 50 degrees (scoliosis)",
+   "question": "Is a scoliosis curve greater than 50 degrees measured on imaging?",
+   "threshold": {
+    "kind": "number",
+    "op": "gt",
+    "value": 50,
+    "unit": "degrees"
+   }
+  },
+  {
+   "id": "thoracic_kyphosis_curve_over_75_degrees",
+   "text": "Spinal curvature > 75 degrees (kyphosis)",
+   "question": "Is a kyphosis curve greater than 75 degrees measured on imaging?",
+   "threshold": {
+    "kind": "number",
+    "op": "gt",
+    "value": 75,
+    "unit": "degrees"
+   }
+  },
+  {
+   "id": "severe_kyphosis_chin_brow_angle_over_35",
+   "text": "Severe kyphosis (chin-brow vertical angle greater than 35 degrees)",
+   "question": "Is there severe kyphosis with a chin-brow vertical angle greater than 35 degrees?",
+   "threshold": {
+    "kind": "number",
+    "op": "gt",
+    "value": 35,
+    "unit": "degrees"
+   }
+  },
+  {
+   "id": "lumbar_deformity_pain_impairs_adl_6_months",
+   "text": "Lumbar back pain, neurogenic claudication, and/or radicular leg pain without significant motor deficit (0-3/5) that impairs daily activities for at least 6 months",
+   "question": "Has the patient had lumbar back pain, neurogenic claudication and/or radicular leg pain (without a 0-3/5 motor deficit) impairing daily activities for at least 6 months (dated notes)?",
+   "threshold": {
+    "kind": "duration_months",
+    "op": "gte",
+    "value": 6,
+    "unit": "months"
+   }
+  },
+  {
+   "id": "lumbar_deformity_imaging_corresponds_to_findings",
+   "text": "Imaging studies that correspond to clinical findings",
+   "question": "Do the imaging studies correspond to the clinical findings?"
+  },
+  {
+   "id": "sagittal_or_coronal_imbalance_5cm_standing_xray",
+   "text": "Sagittal or coronal imbalance of at least 5 cm measured on long plate standing x-rays of the entire spine",
+   "question": "Do long-plate standing full-spine x-rays measure sagittal or coronal imbalance of at least 5 cm?",
+   "threshold": {
+    "kind": "number",
+    "op": "gte",
+    "value": 5,
+    "unit": "cm"
+   }
+  },
+  {
+   "id": "coronal_progression_10_degrees_one_year",
+   "text": "Documented progression of 10 degrees in one year in the coronal plane on x-ray (scoliosis)",
+   "question": "Do serial x-rays document 10 degrees of coronal-plane (scoliosis) progression within one year?",
+   "threshold": {
+    "kind": "number",
+    "op": "gte",
+    "value": 10,
+    "unit": "degrees"
+   }
+  },
+  {
+   "id": "fixed_scoliosis_40_degrees",
+   "text": "A fixed scoliosis of at least 40 degrees",
+   "question": "Is a fixed scoliosis of at least 40 degrees measured on imaging?",
+   "threshold": {
+    "kind": "number",
+    "op": "gte",
+    "value": 40,
+    "unit": "degrees"
+   }
+  },
+  {
+   "id": "lumbar_herniated_disc",
+   "text": "the treatment of lumbar herniated disc",
+   "question": "Is the discectomy for a lumbar herniated disc?"
+  },
+  {
+   "id": "radiculopathy_pain_radiates_below_knee",
+   "text": "Pain that radiates down the back of the leg to below the knee",
+   "question": "Does pain radiate down the back of the leg to below the knee?"
+  },
+  {
+   "id": "radiculopathy_dermatomal_numbness_tingling",
+   "text": "Numbness and tingling in a dermatomal distribution",
+   "question": "Are numbness and tingling documented in a dermatomal distribution?"
+  },
+  {
+   "id": "radiculopathy_muscular_weakness_root_pattern",
+   "text": "Muscular weakness in a pattern associated with spinal nerve root compression",
+   "question": "Is muscular weakness documented in a pattern matching spinal nerve root compression?"
+  },
+  {
+   "id": "radiculopathy_positive_straight_leg_raise",
+   "text": "Positive straight leg raise test",
+   "question": "Is a positive straight leg raise test documented on exam?"
+  },
+  {
+   "id": "radiculopathy_loss_of_deep_tendon_reflexes",
+   "text": "Loss of deep tendon reflexes corresponding to affected nerve root level",
+   "question": "Is loss of deep tendon reflexes documented at the affected nerve root level?"
+  },
+  {
+   "id": "radiculopathy_dermatomal_sensory_loss",
+   "text": "Loss of sensation in a dermatomal pattern",
+   "question": "Is loss of sensation documented in a dermatomal pattern?"
+  },
+  {
+   "id": "rapidly_progressing_neurologic_deficits",
+   "text": "Rapidly progressing neurologic deficits",
+   "question": "Are rapidly progressing neurologic deficits documented?"
+  },
+  {
+   "id": "discectomy_persistent_debilitating_pain_vas_4",
+   "text": "Persistent debilitating back or leg pain (defined as daily pain with a visual analog scale score of 4 or greater and affects ADLs)",
+   "question": "Is there persistent debilitating back or leg pain: daily pain with a VAS score of 4 or greater that affects activities of daily living?",
+   "threshold": {
+    "kind": "number",
+    "op": "gte",
+    "value": 4,
+    "unit": "VAS"
+   }
+  },
+  {
+   "id": "refractory_to_6_weeks_conservative_therapy",
+   "text": "refractory to at least 6 weeks of conservative nonsurgical therapy",
+   "question": "Has the pain been refractory to at least 6 weeks of conservative nonsurgical therapy (dated notes)?",
+   "threshold": {
+    "kind": "duration_months",
+    "op": "gte",
+    "value": 1.38,
+    "unit": "months"
+   }
+  },
+  {
+   "id": "prescription_strength_analgesics_several_weeks",
+   "text": "Use of prescription-strength analgesics for several weeks at a dose sufficient to induce a therapeutic response",
+   "question": "Were prescription-strength analgesics (anti-inflammatories, with or without nerve membrane stabilizers or muscle relaxants, unless contraindicated or not tolerated) used for several weeks at a therapeutic dose?"
+  },
+  {
+   "id": "physical_therapy_at_least_6_weeks",
+   "text": "Participation in at least 6 weeks of physical therapy (including active exercise)",
+   "question": "Did the patient participate in at least 6 weeks of physical therapy including active exercise (dated notes)?",
+   "threshold": {
+    "kind": "duration_months",
+    "op": "gte",
+    "value": 1.38,
+    "unit": "months"
+   }
+  },
+  {
+   "id": "physical_therapy_intolerance_documented",
+   "text": "documentation of why the candidate could not tolerate physical therapy",
+   "question": "Does the chart document why the patient could not tolerate physical therapy?"
+  },
+  {
+   "id": "cognitive_behavioral_addiction_issues_managed",
+   "text": "Evaluation and appropriate management of associated cognitive, behavioral, or addiction issues, if any",
+   "question": "If the patient has associated cognitive, behavioral or addiction issues, were they evaluated and appropriately managed (none present also satisfies this)?"
+  },
+  {
+   "id": "discectomy_mri_or_ct_myelogram_within_6_months",
+   "text": "Documentation of nerve root compression and lumbar spine abnormality based on a magnetic resonance image or computerized tomography scan with myelogram of the lumbar spine, within the past 6 months",
+   "question": "Does a lumbar MRI or CT myelogram from within the past 6 months document nerve root compression and a lumbar spine abnormality?",
+   "threshold": {
+    "kind": "duration_months",
+    "op": "lte",
+    "value": 6,
+    "unit": "months"
+   }
+  },
+  {
+   "id": "laminectomy_compression_due_to_spinal_stenosis",
+   "text": "Spinal cord or nerve root compression due to spinal stenosis (with or without spondylolisthesis)",
+   "question": "Is there spinal cord or nerve root compression due to spinal stenosis (with or without spondylolisthesis)?"
+  },
+  {
+   "id": "laminectomy_neurologic_deficits_rapidly_progressive",
+   "text": "Neurologic deficits that are rapidly progressive",
+   "question": "Are rapidly progressive neurologic deficits documented?"
+  },
+  {
+   "id": "laminectomy_neurologic_claudication_persistent_refractory",
+   "text": "Neurologic claudication that is persistent and refractory",
+   "question": "Is neurologic claudication documented as persistent and refractory to treatment?"
+  },
+  {
+   "id": "laminectomy_persistent_debilitating_pain_vas_4",
+   "text": "persistent debilitating pain (defined as daily pain with a visual analog scale score of 4 or greater and affects ADLs)",
+   "question": "Is there persistent debilitating pain: daily pain with a VAS score of 4 or greater that affects activities of daily living?",
+   "threshold": {
+    "kind": "number",
+    "op": "gte",
+    "value": 4,
+    "unit": "VAS"
+   }
+  },
+  {
+   "id": "laminectomy_mri_or_ct_myelogram_within_6_months",
+   "text": "Magnetic resonance image or computerized tomography scan with myelogram of the spine demonstrating spinal cord or nerve root compression corresponding to the level of symptoms, within the past 6 months",
+   "question": "Does an MRI or CT myelogram from within the past 6 months show spinal cord or nerve root compression at the level matching the symptoms?",
+   "threshold": {
+    "kind": "duration_months",
+    "op": "lte",
+    "value": 6,
+    "unit": "months"
+   }
+  },
+  {
+   "id": "space_occupying_lesion_spinal_cord_or_canal",
+   "text": "space-occupying lesions of the spinal cord or spinal canal",
+   "question": "Is there a space-occupying lesion of the spinal cord or spinal canal (for example a primary or metastatic tumor, an abscess or other localized infection)?"
+  },
+  {
+   "id": "fusion_spinal_stenosis",
+   "text": "Spinal stenosis",
+   "question": "Is spinal stenosis the diagnosis for which fusion is planned?"
+  },
+  {
+   "id": "spondylolisthesis_on_plain_xrays",
+   "text": "Associated spondylolisthesis demonstrated on plain x-rays",
+   "question": "Do plain x-rays demonstrate spondylolisthesis associated with the stenosis?"
+  },
+  {
+   "id": "spinal_instability_on_imaging",
+   "text": "Spinal instability demonstrated on imaging studies",
+   "question": "Do imaging studies demonstrate spinal instability?"
+  },
+  {
+   "id": "spinal_instability_anticipated_from_wide_decompression",
+   "text": "Spinal instability is anticipated due to need for bilateral or wide decompression with facetectomy or resection of pars interarticularis",
+   "question": "Does the surgeon document that instability is anticipated because a bilateral or wide decompression with facetectomy or pars resection is needed?"
+  },
+  {
+   "id": "neurogenic_claudication_or_radicular_pain_functional_impairment",
+   "text": "Neurogenic claudication or radicular pain that results in significant functional impairment",
+   "question": "Does neurogenic claudication or radicular pain cause significant functional impairment?"
+  },
+  {
+   "id": "stenosis_documented_on_mri_or_imaging",
+   "text": "documentation of central/lateral recess/or foraminal stenosis on MRI or other imaging",
+   "question": "Does MRI or other imaging document central, lateral recess or foraminal stenosis?"
+  },
+  {
+   "id": "failed_3_months_conservative_therapy",
+   "text": "failed at least 3 months of conservative nonsurgical therapy",
+   "question": "Has the patient failed at least 3 months of conservative nonsurgical therapy (dated notes)?",
+   "threshold": {
+    "kind": "duration_months",
+    "op": "gte",
+    "value": 3,
+    "unit": "months"
+   }
+  },
+  {
+   "id": "severe_or_rapidly_progressive_motor_loss_claudication_cauda_equina",
+   "text": "severe or rapidly progressive symptoms of motor loss, neurogenic claudication, or cauda equina syndrome",
+   "question": "Are there severe or rapidly progressive symptoms of motor loss, neurogenic claudication or cauda equina syndrome?"
+  },
+  {
+   "id": "severe_progressive_idiopathic_scoliosis",
+   "text": "Severe, progressive idiopathic scoliosis",
+   "question": "Is the diagnosis severe, progressive idiopathic scoliosis?"
+  },
+  {
+   "id": "cobb_angle_greater_than_40",
+   "text": "Cobb angle greater than 40°",
+   "question": "Is the Cobb angle greater than 40 degrees?",
+   "threshold": {
+    "kind": "number",
+    "op": "gt",
+    "value": 40,
+    "unit": "degrees"
+   }
+  },
+  {
+   "id": "cord_compression_with_claudication_or_radicular_pain_impairment",
+   "text": "Spinal cord compression with neurogenic claudication or radicular pain that results in significant functional impairment",
+   "question": "Is there spinal cord compression with neurogenic claudication or radicular pain causing significant functional impairment?"
+  },
+  {
+   "id": "severe_degenerative_scoliosis",
+   "text": "Severe degenerative scoliosis (ie, lumbar or thoracolumbar)",
+   "question": "Is the diagnosis severe degenerative (lumbar or thoracolumbar) scoliosis?"
+  },
+  {
+   "id": "cobb_angle_minimum_30",
+   "text": "a minimum Cobb angle of 30°",
+   "question": "Is the Cobb angle at least 30 degrees?",
+   "threshold": {
+    "kind": "number",
+    "op": "gte",
+    "value": 30,
+    "unit": "degrees"
+   }
+  },
+  {
+   "id": "significant_sagittal_imbalance_sva_over_5cm",
+   "text": "significant sagittal imbalance (eg, sagittal vertical axis >5 cm)",
+   "question": "Is there significant sagittal imbalance, for example a sagittal vertical axis greater than 5 cm?",
+   "threshold": {
+    "kind": "number",
+    "op": "gt",
+    "value": 5,
+    "unit": "cm"
+   }
+  },
+  {
+   "id": "deformity_progression_with_axial_pain_and_impairment",
+   "text": "Documented progression of deformity with persistent axial (nonradiating) pain and impairment or loss of function",
+   "question": "Is progression of the deformity documented together with persistent axial (nonradiating) pain and impairment or loss of function?"
+  },
+  {
+   "id": "unresponsive_to_1_year_conservative_therapy",
+   "text": "unresponsive to at least 1 year of conservative nonsurgical therapy",
+   "question": "Have the symptoms been unresponsive to at least 1 year of conservative nonsurgical therapy (dated notes)?",
+   "threshold": {
+    "kind": "duration_months",
+    "op": "gte",
+    "value": 12,
+    "unit": "months"
+   }
+  },
+  {
+   "id": "persistent_significant_neurogenic_symptoms_with_impairment",
+   "text": "Persistent and significant neurogenic symptoms (claudication or radicular pain) with impairment or loss of function",
+   "question": "Are there persistent and significant neurogenic symptoms (claudication or radicular pain) with impairment or loss of function?"
+  },
+  {
+   "id": "isthmic_spondylolisthesis",
+   "text": "Isthmic spondylolisthesis",
+   "question": "Is the diagnosis isthmic spondylolisthesis?"
+  },
+  {
+   "id": "pars_defect_wiltse_i_or_ii_on_xray",
+   "text": "Congenital (Wiltse type I) or acquired pars defect (Wiltse type II), documented on x-ray",
+   "question": "Is a congenital (Wiltse type I) or acquired (Wiltse type II) pars defect documented on x-ray?"
+  },
+  {
+   "id": "persistent_back_pain_with_impairment",
+   "text": "Persistent back pain (with or without neurogenic symptoms), with impairment or loss of function",
+   "question": "Is there persistent back pain (with or without neurogenic symptoms) with impairment or loss of function?"
+  },
+  {
+   "id": "unresponsive_to_3_months_conservative_therapy",
+   "text": "Unresponsive to at least 3 months of conservative nonsurgical therapy",
+   "question": "Have the symptoms been unresponsive to at least 3 months of conservative nonsurgical therapy (dated notes)?",
+   "threshold": {
+    "kind": "duration_months",
+    "op": "gte",
+    "value": 3,
+    "unit": "months"
+   }
+  },
+  {
+   "id": "recurrent_same_level_disc_herniation",
+   "text": "Recurrent, same-level disc herniation",
+   "question": "Is there a recurrent disc herniation at the same level as the previous disc surgery?"
+  },
+  {
+   "id": "at_least_3_months_after_previous_disc_surgery",
+   "text": "at least 3 months after previous disc surgery",
+   "question": "Is the planned fusion at least 3 months after the previous disc surgery?",
+   "threshold": {
+    "kind": "duration_months",
+    "op": "gte",
+    "value": 3,
+    "unit": "months"
+   }
+  },
+  {
+   "id": "recurrent_neurogenic_symptoms_or_nerve_root_irritation",
+   "text": "Recurrent neurogenic symptoms (radicular pain or claudication) or evidence of nerve root irritation, as demonstrated by a positive nerve root tension sign or positive femoral tension sign or a corresponding neurologic deficit",
+   "question": "Are there recurrent neurogenic symptoms (radicular pain or claudication), or nerve root irritation shown by a positive nerve root tension sign, positive femoral tension sign or a corresponding neurologic deficit?"
+  },
+  {
+   "id": "impairment_or_loss_of_function",
+   "text": "Impairment or loss of function",
+   "question": "Is impairment or loss of function documented?"
+  },
+  {
+   "id": "compression_and_instability_on_imaging_corresponding_level_side",
+   "text": "Neural structure compression and instability documented by imaging at a level and side corresponding to the clinical symptoms",
+   "question": "Does imaging document neural compression and instability at the level and side matching the clinical symptoms?"
+  },
+  {
+   "id": "pseudarthrosis_documented_radiologically",
+   "text": "Pseudarthrosis, documented radiologically",
+   "question": "Is pseudarthrosis of the prior fusion documented radiologically?"
+  },
+  {
+   "id": "at_least_6_months_after_initial_fusion",
+   "text": "No less than 6 months after initial fusion",
+   "question": "Is it at least 6 months since the initial fusion?",
+   "threshold": {
+    "kind": "duration_months",
+    "op": "gte",
+    "value": 6,
+    "unit": "months"
+   }
+  },
+  {
+   "id": "persistent_axial_back_pain",
+   "text": "persistent axial back pain, with or without neurogenic symptoms",
+   "question": "Is there persistent axial back pain (with or without neurogenic symptoms)?"
+  },
+  {
+   "id": "significant_interval_relief_after_prior_fusion",
+   "text": "significant interval relief of prior symptoms",
+   "question": "Did the patient experience significant interval relief of symptoms after the initial fusion?"
+  },
+  {
+   "id": "instability_due_to_fracture_dislocation_infection_abscess_tumor",
+   "text": "Instability due to fracture, dislocation, infection, abscess, or tumor",
+   "question": "Is spinal instability due to fracture, dislocation, infection, abscess or tumor?"
+  },
+  {
+   "id": "extensive_surgery_required_could_create_unstable_spine",
+   "text": "extensive surgery is required that could create an unstable spine",
+   "question": "Is extensive surgery required that could create an unstable spine?"
+  },
+  {
+   "id": "flatback_syndrome_with_significant_sagittal_imbalance",
+   "text": "Iatrogenic or degenerative flatback syndrome with significant sagittal imbalance",
+   "question": "Is there iatrogenic or degenerative flatback syndrome with significant sagittal imbalance?"
+  },
+  {
+   "id": "fusion_with_spinal_osteotomy_or_interbody_spacers",
+   "text": "fusion is performed with spinal osteotomy or interbody spacers",
+   "question": "Will the fusion be performed with a spinal osteotomy or interbody spacers?"
+  },
+  {
+   "id": "adjacent_level_disease",
+   "text": "Adjacent-level disease",
+   "question": "Is the diagnosis adjacent-level disease above or below a previous fusion?"
+  },
+  {
+   "id": "adjacent_level_imaging_collapse_listhesis_or_scoliosis",
+   "text": "Eccentric disc space collapse, spondylolisthesis, acute single-level scoliosis, or lateral listhesis on imaging",
+   "question": "Does imaging show eccentric disc space collapse, spondylolisthesis, acute single-level scoliosis or lateral listhesis at the adjacent level?"
+  },
+  {
+   "id": "symptoms_and_function_correlate_with_imaging",
+   "text": "Symptoms and functional measures correlate with imaging findings",
+   "question": "Do the symptoms and functional measures correlate with the imaging findings?"
+  },
+  {
+   "id": "previous_fusion_relief_at_least_6_months",
+   "text": "The previous fusion resulted in significant relief for at least 6 months",
+   "question": "Did the previous fusion give significant relief for at least 6 months?",
+   "threshold": {
+    "kind": "duration_months",
+    "op": "gte",
+    "value": 6,
+    "unit": "months"
+   }
+  },
+  {
+   "id": "tda_fda_approved_device_per_labeling",
+   "text": "The lumbar total disc is FDA approved for lumbar disc arthroplasty and used in accordance with FDA labeling",
+   "question": "Is the planned lumbar artificial disc an FDA-approved device, used in accordance with its FDA labeling?"
+  },
+  {
+   "id": "tda_age_18_to_60",
+   "text": "Candidate is age 18 to 60",
+   "question": "Is the patient between 18 and 60 years of age?",
+   "threshold": {
+    "kind": "number",
+    "op": "gte",
+    "value": 18,
+    "unit": "years"
+   }
+  },
+  {
+   "id": "tda_significant_pain_vas_5",
+   "text": "Significant pain with visual analog score of 5 or greater",
+   "question": "Is significant pain documented with a visual analog score of 5 or greater?",
+   "threshold": {
+    "kind": "number",
+    "op": "gte",
+    "value": 5,
+    "unit": "VAS"
+   }
+  },
+  {
+   "id": "tda_single_level_ddd_l3_s1_confirmed",
+   "text": "Lumbar degenerative disc disease or significant discogenic back pain with disc degeneration at a single level at L3-4, L4-L5 or L5-S1, confirmed by history, physical, and imaging",
+   "question": "Is lumbar degenerative disc disease or significant discogenic back pain with disc degeneration at a single level (L3-4, L4-L5 or L5-S1) confirmed by history, physical exam and imaging?"
+  },
+  {
+   "id": "tda_no_more_than_grade_1_spondylolisthesis",
+   "text": "No more than Grade 1 spondylolisthesis demonstrated on x-ray at the operative levels",
+   "question": "Does x-ray show no more than Grade 1 spondylolisthesis at the operative levels?",
+   "threshold": {
+    "kind": "number",
+    "op": "lte",
+    "value": 1,
+    "unit": "grade"
+   }
+  },
+  {
+   "id": "tda_failed_6_months_conservative_therapy",
+   "text": "Failure of at least six months of conservative nonsurgical therapy",
+   "question": "Has the patient failed at least six months of conservative nonsurgical therapy (dated notes)?",
+   "threshold": {
+    "kind": "duration_months",
+    "op": "gte",
+    "value": 6,
+    "unit": "months"
+   }
+  },
+  {
+   "id": "tda_one_or_two_levels_l3_s1_anterior_retroperitoneal",
+   "text": "Total disc arthroplasty will be performed at one or two consecutive levels from L3-S1 using an anterior retroperitoneal approach",
+   "question": "Will the arthroplasty be performed at one or two consecutive levels between L3 and S1 by an anterior retroperitoneal approach?"
+  },
+  {
+   "id": "tda_contraindication_disease_above_l3_4",
+   "text": "Disease above L3-4",
+   "question": "Is there disc disease above L3-4?"
+  },
+  {
+   "id": "tda_contraindication_active_infection",
+   "text": "Active systemic or local infection",
+   "question": "Is there an active systemic or local infection?"
+  },
+  {
+   "id": "tda_contraindication_osteoporosis_osteopenia",
+   "text": "Osteoporosis or osteopenia (T-score less than or equal to -1.0)",
+   "question": "Is there osteoporosis or osteopenia (T-score of -1.0 or lower)?",
+   "threshold": {
+    "kind": "number",
+    "op": "lte",
+    "value": -1.0,
+    "unit": "T-score"
+   }
+  },
+  {
+   "id": "tda_contraindication_lumbar_scoliosis_over_11_degrees",
+   "text": "Lumbar scoliosis (> 11 degrees of sagittal plane deformity)",
+   "question": "Is there lumbar scoliosis with more than 11 degrees of sagittal plane deformity?",
+   "threshold": {
+    "kind": "number",
+    "op": "gt",
+    "value": 11,
+    "unit": "degrees"
+   }
+  },
+  {
+   "id": "tda_contraindication_spondylolisthesis_over_3mm",
+   "text": "Degenerative or lytic spondylolisthesis > 3mm",
+   "question": "Is there degenerative or lytic spondylolisthesis greater than 3 mm?",
+   "threshold": {
+    "kind": "number",
+    "op": "gt",
+    "value": 3,
+    "unit": "mm"
+   }
+  },
+  {
+   "id": "tda_contraindication_more_than_two_levels",
+   "text": "Disc degeneration requiring treatment at more than two levels",
+   "question": "Does disc degeneration require treatment at more than two levels?"
+  },
+  {
+   "id": "tda_contraindication_severe_facet_arthrosis",
+   "text": "Severe facet arthrosis or joint degeneration",
+   "question": "Is there severe facet arthrosis or facet joint degeneration?"
+  },
+  {
+   "id": "tda_contraindication_autoimmune_disorder",
+   "text": "Ankylosing spondylitis, rheumatoid arthritis, lupus, or other autoimmune disorder",
+   "question": "Does the patient have ankylosing spondylitis, rheumatoid arthritis, lupus or another autoimmune disorder?"
+  },
+  {
+   "id": "tda_contraindication_free_disc_fragment",
+   "text": "Presence of free disc fragment",
+   "question": "Is a free disc fragment present?"
+  }
+ ],
+ "scenarios": [
+  {
+   "id": "thoracic_deformity_fusion",
+   "name": "Surgery for Spinal Deformity: thoracic deformity (minimal / secondary / flexible lumbar involvement) in adults, posterior or anterior spinal fusion with instrumentation",
+   "applies_to_cpt": [
+    "22533",
+    "22534",
+    "22558",
+    "22585",
+    "22612",
+    "22614",
+    "22630",
+    "22632",
+    "22633",
+    "22634"
+   ],
+   "requires": {
+    "type": "all",
+    "label": "Thoracic deformity in adults: posterior or anterior spinal fusion with instrumentation",
+    "children": [
+     {
+      "type": "leaf",
+      "criterion": "thoracic_deformity_in_adults"
+     },
+     {
+      "type": "any",
+      "label": "Meets the definition of medical necessity for the following indications",
+      "children": [
+       {
+        "type": "all",
+        "label": "Progressive neurological deficit or lower extremity weakness or paralysis with corresponding compression on MRI or CT: immediate surgical evaluation is indicated",
+        "children": [
+         {
+          "type": "leaf",
+          "criterion": "deformity_progressive_neuro_deficit"
+         },
+         {
+          "type": "leaf",
+          "criterion": "deformity_compression_on_mri_ct"
+         }
+        ]
+       },
+       {
+        "type": "all",
+        "label": "When ALL of the following criteria are met",
+        "children": [
+         {
+          "type": "leaf",
+          "criterion": "thoracic_pain_impairs_adl_over_6_months"
+         },
+         {
+          "type": "all",
+          "label": "Failure of at least 12 weeks of focused non-operative care in the past year",
+          "children": [
+           {
+            "type": "leaf",
+            "criterion": "failed_12_weeks_focused_nonoperative_care_past_year"
+           },
+           {
+            "type": "any",
+            "label": "*Non-operative care: documented failure of at least twelve (12) consecutive weeks in the past year of any 2 of the following physician-directed conservative treatments",
+            "children": [
+             {
+              "type": "all",
+              "label": "Two of the conservative treatments",
+              "children": [
+               {
+                "type": "leaf",
+                "criterion": "deformity_conservative_analgesics_steroids_nsaids"
+               },
+               {
+                "type": "leaf",
+                "criterion": "deformity_conservative_structured_pt_core_strength"
+               }
+              ]
+             },
+             {
+              "type": "all",
+              "label": "Two of the conservative treatments",
+              "children": [
+               {
+                "type": "leaf",
+                "criterion": "deformity_conservative_analgesics_steroids_nsaids"
+               },
+               {
+                "type": "leaf",
+                "criterion": "deformity_conservative_home_exercise_program"
+               }
+              ]
+             },
+             {
+              "type": "all",
+              "label": "Two of the conservative treatments",
+              "children": [
+               {
+                "type": "leaf",
+                "criterion": "deformity_conservative_analgesics_steroids_nsaids"
+               },
+               {
+                "type": "leaf",
+                "criterion": "deformity_conservative_injections_or_nerve_block"
+               }
+              ]
+             },
+             {
+              "type": "all",
+              "label": "Two of the conservative treatments",
+              "children": [
+               {
+                "type": "leaf",
+                "criterion": "deformity_conservative_structured_pt_core_strength"
+               },
+               {
+                "type": "leaf",
+                "criterion": "deformity_conservative_home_exercise_program"
+               }
+              ]
+             },
+             {
+              "type": "all",
+              "label": "Two of the conservative treatments",
+              "children": [
+               {
+                "type": "leaf",
+                "criterion": "deformity_conservative_structured_pt_core_strength"
+               },
+               {
+                "type": "leaf",
+                "criterion": "deformity_conservative_injections_or_nerve_block"
+               }
+              ]
+             },
+             {
+              "type": "all",
+              "label": "Two of the conservative treatments",
+              "children": [
+               {
+                "type": "leaf",
+                "criterion": "deformity_conservative_home_exercise_program"
+               },
+               {
+                "type": "leaf",
+                "criterion": "deformity_conservative_injections_or_nerve_block"
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "all",
+          "label": "Imaging studies confirm spinal curvature and demonstrate at least one of the following",
+          "children": [
+           {
+            "type": "leaf",
+            "criterion": "thoracic_imaging_confirms_curvature"
+           },
+           {
+            "type": "any",
+            "label": "At least one of the following",
+            "children": [
+             {
+              "type": "leaf",
+              "criterion": "thoracic_scoliosis_curve_over_50_degrees"
+             },
+             {
+              "type": "leaf",
+              "criterion": "thoracic_kyphosis_curve_over_75_degrees"
+             },
+             {
+              "type": "leaf",
+              "criterion": "severe_kyphosis_chin_brow_angle_over_35"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   "notes": [
+    "The code table lists no thoracic primary fusion code; 22534 is the only arthrodesis code naming the thoracic spine. Mapped to every fusion code because a thoracic deformity with lumbar involvement is billed with the lumbar codes in the table."
+   ]
+  },
+  {
+   "id": "lumbar_deformity_fusion",
+   "name": "Surgery for Spinal Deformity: lumbar deformity (with or without secondary thoracic involvement) in adults, posterior or anterior spinal fusion with instrumentation",
+   "applies_to_cpt": [
+    "22533",
+    "22534",
+    "22558",
+    "22585",
+    "22612",
+    "22614",
+    "22630",
+    "22632",
+    "22633",
+    "22634"
+   ],
+   "requires": {
+    "type": "all",
+    "label": "Lumbar deformity in adults: posterior or anterior spinal fusion with instrumentation",
+    "children": [
+     {
+      "type": "leaf",
+      "criterion": "lumbar_deformity_in_adults"
+     },
+     {
+      "type": "any",
+      "label": "Meets the definition of medical necessity for the following indications",
+      "children": [
+       {
+        "type": "all",
+        "label": "Progressive neurological deficit or lower extremity weakness or paralysis with corresponding compression on MRI or CT: immediate surgical evaluation is indicated",
+        "children": [
+         {
+          "type": "leaf",
+          "criterion": "deformity_progressive_neuro_deficit"
+         },
+         {
+          "type": "leaf",
+          "criterion": "deformity_compression_on_mri_ct"
+         }
+        ]
+       },
+       {
+        "type": "all",
+        "label": "When ALL of the following criteria are met",
+        "children": [
+         {
+          "type": "leaf",
+          "criterion": "lumbar_deformity_pain_impairs_adl_6_months"
+         },
+         {
+          "type": "all",
+          "label": "Failure of at least 12 weeks of focused non-operative care in the past year",
+          "children": [
+           {
+            "type": "leaf",
+            "criterion": "failed_12_weeks_focused_nonoperative_care_past_year"
+           },
+           {
+            "type": "any",
+            "label": "*Non-operative care: documented failure of at least twelve (12) consecutive weeks in the past year of any 2 of the following physician-directed conservative treatments",
+            "children": [
+             {
+              "type": "all",
+              "label": "Two of the conservative treatments",
+              "children": [
+               {
+                "type": "leaf",
+                "criterion": "deformity_conservative_analgesics_steroids_nsaids"
+               },
+               {
+                "type": "leaf",
+                "criterion": "deformity_conservative_structured_pt_core_strength"
+               }
+              ]
+             },
+             {
+              "type": "all",
+              "label": "Two of the conservative treatments",
+              "children": [
+               {
+                "type": "leaf",
+                "criterion": "deformity_conservative_analgesics_steroids_nsaids"
+               },
+               {
+                "type": "leaf",
+                "criterion": "deformity_conservative_home_exercise_program"
+               }
+              ]
+             },
+             {
+              "type": "all",
+              "label": "Two of the conservative treatments",
+              "children": [
+               {
+                "type": "leaf",
+                "criterion": "deformity_conservative_analgesics_steroids_nsaids"
+               },
+               {
+                "type": "leaf",
+                "criterion": "deformity_conservative_injections_or_nerve_block"
+               }
+              ]
+             },
+             {
+              "type": "all",
+              "label": "Two of the conservative treatments",
+              "children": [
+               {
+                "type": "leaf",
+                "criterion": "deformity_conservative_structured_pt_core_strength"
+               },
+               {
+                "type": "leaf",
+                "criterion": "deformity_conservative_home_exercise_program"
+               }
+              ]
+             },
+             {
+              "type": "all",
+              "label": "Two of the conservative treatments",
+              "children": [
+               {
+                "type": "leaf",
+                "criterion": "deformity_conservative_structured_pt_core_strength"
+               },
+               {
+                "type": "leaf",
+                "criterion": "deformity_conservative_injections_or_nerve_block"
+               }
+              ]
+             },
+             {
+              "type": "all",
+              "label": "Two of the conservative treatments",
+              "children": [
+               {
+                "type": "leaf",
+                "criterion": "deformity_conservative_home_exercise_program"
+               },
+               {
+                "type": "leaf",
+                "criterion": "deformity_conservative_injections_or_nerve_block"
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "all",
+          "label": "Imaging studies that correspond to clinical findings and show at least one of the following",
+          "children": [
+           {
+            "type": "leaf",
+            "criterion": "lumbar_deformity_imaging_corresponds_to_findings"
+           },
+           {
+            "type": "any",
+            "label": "At least one of the following",
+            "children": [
+             {
+              "type": "leaf",
+              "criterion": "sagittal_or_coronal_imbalance_5cm_standing_xray"
+             },
+             {
+              "type": "leaf",
+              "criterion": "coronal_progression_10_degrees_one_year"
+             },
+             {
+              "type": "leaf",
+              "criterion": "fixed_scoliosis_40_degrees"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "lumbar_discectomy",
+   "name": "Lumbar Discectomy/Microdiscectomy for lumbar herniated disc",
+   "applies_to_cpt": [
+    "63030",
+    "63035",
+    "63042",
+    "63044",
+    "63056",
+    "63057"
+   ],
+   "requires": {
+    "type": "all",
+    "label": "Lumbar discectomy meets the definition of medical necessity for the treatment of lumbar herniated disc when the following are met",
+    "children": [
+     {
+      "type": "leaf",
+      "criterion": "lumbar_herniated_disc"
+     },
+     {
+      "type": "any",
+      "label": "Signs and symptoms of radiculopathy on history and physical exam, including at least 2 of the following",
+      "children": [
+       {
+        "type": "all",
+        "label": "Two of the signs and symptoms",
+        "children": [
+         {
+          "type": "leaf",
+          "criterion": "radiculopathy_pain_radiates_below_knee"
+         },
+         {
+          "type": "leaf",
+          "criterion": "radiculopathy_dermatomal_numbness_tingling"
+         }
+        ]
+       },
+       {
+        "type": "all",
+        "label": "Two of the signs and symptoms",
+        "children": [
+         {
+          "type": "leaf",
+          "criterion": "radiculopathy_pain_radiates_below_knee"
+         },
+         {
+          "type": "leaf",
+          "criterion": "radiculopathy_muscular_weakness_root_pattern"
+         }
+        ]
+       },
+       {
+        "type": "all",
+        "label": "Two of the signs and symptoms",
+        "children": [
+         {
+          "type": "leaf",
+          "criterion": "radiculopathy_pain_radiates_below_knee"
+         },
+         {
+          "type": "leaf",
+          "criterion": "radiculopathy_positive_straight_leg_raise"
+         }
+        ]
+       },
+       {
+        "type": "all",
+        "label": "Two of the signs and symptoms",
+        "children": [
+         {
+          "type": "leaf",
+          "criterion": "radiculopathy_pain_radiates_below_knee"
+         },
+         {
+          "type": "leaf",
+          "criterion": "radiculopathy_loss_of_deep_tendon_reflexes"
+         }
+        ]
+       },
+       {
+        "type": "all",
+        "label": "Two of the signs and symptoms",
+        "children": [
+         {
+          "type": "leaf",
+          "criterion": "radiculopathy_pain_radiates_below_knee"
+         },
+         {
+          "type": "leaf",
+          "criterion": "radiculopathy_dermatomal_sensory_loss"
+         }
+        ]
+       },
+       {
+        "type": "all",
+        "label": "Two of the signs and symptoms",
+        "children": [
+         {
+          "type": "leaf",
+          "criterion": "radiculopathy_dermatomal_numbness_tingling"
+         },
+         {
+          "type": "leaf",
+          "criterion": "radiculopathy_muscular_weakness_root_pattern"
+         }
+        ]
+       },
+       {
+        "type": "all",
+        "label": "Two of the signs and symptoms",
+        "children": [
+         {
+          "type": "leaf",
+          "criterion": "radiculopathy_dermatomal_numbness_tingling"
+         },
+         {
+          "type": "leaf",
+          "criterion": "radiculopathy_positive_straight_leg_raise"
+         }
+        ]
+       },
+       {
+        "type": "all",
+        "label": "Two of the signs and symptoms",
+        "children": [
+         {
+          "type": "leaf",
+          "criterion": "radiculopathy_dermatomal_numbness_tingling"
+         },
+         {
+          "type": "leaf",
+          "criterion": "radiculopathy_loss_of_deep_tendon_reflexes"
+         }
+        ]
+       },
+       {
+        "type": "all",
+        "label": "Two of the signs and symptoms",
+        "children": [
+         {
+          "type": "leaf",
+          "criterion": "radiculopathy_dermatomal_numbness_tingling"
+         },
+         {
+          "type": "leaf",
+          "criterion": "radiculopathy_dermatomal_sensory_loss"
+         }
+        ]
+       },
+       {
+        "type": "all",
+        "label": "Two of the signs and symptoms",
+        "children": [
+         {
+          "type": "leaf",
+          "criterion": "radiculopathy_muscular_weakness_root_pattern"
+         },
+         {
+          "type": "leaf",
+          "criterion": "radiculopathy_positive_straight_leg_raise"
+         }
+        ]
+       },
+       {
+        "type": "all",
+        "label": "Two of the signs and symptoms",
+        "children": [
+         {
+          "type": "leaf",
+          "criterion": "radiculopathy_muscular_weakness_root_pattern"
+         },
+         {
+          "type": "leaf",
+          "criterion": "radiculopathy_loss_of_deep_tendon_reflexes"
+         }
+        ]
+       },
+       {
+        "type": "all",
+        "label": "Two of the signs and symptoms",
+        "children": [
+         {
+          "type": "leaf",
+          "criterion": "radiculopathy_muscular_weakness_root_pattern"
+         },
+         {
+          "type": "leaf",
+          "criterion": "radiculopathy_dermatomal_sensory_loss"
+         }
+        ]
+       },
+       {
+        "type": "all",
+        "label": "Two of the signs and symptoms",
+        "children": [
+         {
+          "type": "leaf",
+          "criterion": "radiculopathy_positive_straight_leg_raise"
+         },
+         {
+          "type": "leaf",
+          "criterion": "radiculopathy_loss_of_deep_tendon_reflexes"
+         }
+        ]
+       },
+       {
+        "type": "all",
+        "label": "Two of the signs and symptoms",
+        "children": [
+         {
+          "type": "leaf",
+          "criterion": "radiculopathy_positive_straight_leg_raise"
+         },
+         {
+          "type": "leaf",
+          "criterion": "radiculopathy_dermatomal_sensory_loss"
+         }
+        ]
+       },
+       {
+        "type": "all",
+        "label": "Two of the signs and symptoms",
+        "children": [
+         {
+          "type": "leaf",
+          "criterion": "radiculopathy_loss_of_deep_tendon_reflexes"
+         },
+         {
+          "type": "leaf",
+          "criterion": "radiculopathy_dermatomal_sensory_loss"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "any",
+      "label": "One of the following clinical presentations is present",
+      "children": [
+       {
+        "type": "leaf",
+        "criterion": "rapidly_progressing_neurologic_deficits"
+       },
+       {
+        "type": "all",
+        "label": "Persistent debilitating pain refractory to at least 6 weeks of conservative nonsurgical therapy that included the following",
+        "children": [
+         {
+          "type": "leaf",
+          "criterion": "discectomy_persistent_debilitating_pain_vas_4"
+         },
+         {
+          "type": "leaf",
+          "criterion": "refractory_to_6_weeks_conservative_therapy"
+         },
+         {
+          "type": "leaf",
+          "criterion": "prescription_strength_analgesics_several_weeks"
+         },
+         {
+          "type": "any",
+          "label": "Participation in at least 6 weeks of physical therapy or documentation of why the candidate could not tolerate physical therapy",
+          "children": [
+           {
+            "type": "leaf",
+            "criterion": "physical_therapy_at_least_6_weeks"
+           },
+           {
+            "type": "leaf",
+            "criterion": "physical_therapy_intolerance_documented"
+           }
+          ]
+         },
+         {
+          "type": "leaf",
+          "criterion": "cognitive_behavioral_addiction_issues_managed"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "leaf",
+      "criterion": "discectomy_mri_or_ct_myelogram_within_6_months"
+     }
+    ]
+   }
+  },
+  {
+   "id": "lumbar_laminectomy_stenosis",
+   "name": "Lumbar Laminectomy (Laminotomy, Facetectomy, Foraminotomy) for spinal stenosis",
+   "applies_to_cpt": [
+    "63005",
+    "63012",
+    "63017",
+    "63030",
+    "63035",
+    "63042",
+    "63044",
+    "63047",
+    "63048",
+    "63052",
+    "63053"
+   ],
+   "requires": {
+    "type": "all",
+    "label": "Lumbar laminectomy meets the definition of medical necessity when the following are met",
+    "children": [
+     {
+      "type": "leaf",
+      "criterion": "laminectomy_compression_due_to_spinal_stenosis"
+     },
+     {
+      "type": "any",
+      "label": "Signs or symptoms of at least 1 of the following",
+      "children": [
+       {
+        "type": "leaf",
+        "criterion": "laminectomy_neurologic_deficits_rapidly_progressive"
+       },
+       {
+        "type": "leaf",
+        "criterion": "laminectomy_neurologic_claudication_persistent_refractory"
+       },
+       {
+        "type": "all",
+        "label": "Persistent debilitating pain refractory to at least 6 weeks of conservative nonsurgical therapy that included the following",
+        "children": [
+         {
+          "type": "leaf",
+          "criterion": "laminectomy_persistent_debilitating_pain_vas_4"
+         },
+         {
+          "type": "leaf",
+          "criterion": "refractory_to_6_weeks_conservative_therapy"
+         },
+         {
+          "type": "leaf",
+          "criterion": "prescription_strength_analgesics_several_weeks"
+         },
+         {
+          "type": "any",
+          "label": "Participation in at least 6 weeks of physical therapy or documentation of why the candidate could not tolerate physical therapy",
+          "children": [
+           {
+            "type": "leaf",
+            "criterion": "physical_therapy_at_least_6_weeks"
+           },
+           {
+            "type": "leaf",
+            "criterion": "physical_therapy_intolerance_documented"
+           }
+          ]
+         },
+         {
+          "type": "leaf",
+          "criterion": "cognitive_behavioral_addiction_issues_managed"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "leaf",
+      "criterion": "laminectomy_mri_or_ct_myelogram_within_6_months"
+     }
+    ]
+   }
+  },
+  {
+   "id": "lumbar_laminectomy_space_occupying_lesion",
+   "name": "Lumbar Laminectomy for space-occupying lesions of the spinal cord or spinal canal",
+   "applies_to_cpt": [
+    "63005",
+    "63012",
+    "63017",
+    "63030",
+    "63035",
+    "63042",
+    "63044",
+    "63047",
+    "63048",
+    "63052",
+    "63053"
+   ],
+   "requires": {
+    "type": "leaf",
+    "criterion": "space_occupying_lesion_spinal_cord_or_canal"
+   },
+   "notes": [
+    "The document's examples (primary or metastatic tumors; abscesses or other localized infections) are 'including, but not limited to', so the pathway is the general lesion requirement rather than an any over the two examples."
+   ]
+  },
+  {
+   "id": "fusion_spinal_stenosis",
+   "name": "Lumbar Spinal Fusion: spinal stenosis",
+   "applies_to_cpt": [
+    "22533",
+    "22534",
+    "22558",
+    "22585",
+    "22612",
+    "22614",
+    "22630",
+    "22632",
+    "22633",
+    "22634"
+   ],
+   "requires": {
+    "type": "all",
+    "label": "Spinal stenosis with one of the following",
+    "children": [
+     {
+      "type": "leaf",
+      "criterion": "fusion_spinal_stenosis"
+     },
+     {
+      "type": "any",
+      "label": "One of the following",
+      "children": [
+       {
+        "type": "leaf",
+        "criterion": "spondylolisthesis_on_plain_xrays"
+       },
+       {
+        "type": "leaf",
+        "criterion": "spinal_instability_on_imaging"
+       },
+       {
+        "type": "leaf",
+        "criterion": "spinal_instability_anticipated_from_wide_decompression"
+       }
+      ]
+     },
+     {
+      "type": "any",
+      "label": "Either of the following, a or b",
+      "children": [
+       {
+        "type": "all",
+        "label": "a. Neurogenic claudication or radicular pain with significant functional impairment, stenosis on imaging, failed at least 3 months of conservative nonsurgical therapy that included",
+        "children": [
+         {
+          "type": "leaf",
+          "criterion": "neurogenic_claudication_or_radicular_pain_functional_impairment"
+         },
+         {
+          "type": "leaf",
+          "criterion": "stenosis_documented_on_mri_or_imaging"
+         },
+         {
+          "type": "leaf",
+          "criterion": "failed_3_months_conservative_therapy"
+         },
+         {
+          "type": "leaf",
+          "criterion": "prescription_strength_analgesics_several_weeks"
+         },
+         {
+          "type": "any",
+          "label": "Participation in at least 6 weeks of physical therapy or documentation of why the candidate could not tolerate physical therapy",
+          "children": [
+           {
+            "type": "leaf",
+            "criterion": "physical_therapy_at_least_6_weeks"
+           },
+           {
+            "type": "leaf",
+            "criterion": "physical_therapy_intolerance_documented"
+           }
+          ]
+         },
+         {
+          "type": "leaf",
+          "criterion": "cognitive_behavioral_addiction_issues_managed"
+         }
+        ]
+       },
+       {
+        "type": "leaf",
+        "criterion": "severe_or_rapidly_progressive_motor_loss_claudication_cauda_equina"
+       }
+      ]
+     }
+    ]
+   },
+   "notes": [
+    "For multi-level fusion, criteria must be met for each level intended for fusion."
+   ]
+  },
+  {
+   "id": "fusion_idiopathic_scoliosis",
+   "name": "Lumbar Spinal Fusion: severe, progressive idiopathic scoliosis",
+   "applies_to_cpt": [
+    "22533",
+    "22534",
+    "22558",
+    "22585",
+    "22612",
+    "22614",
+    "22630",
+    "22632",
+    "22633",
+    "22634"
+   ],
+   "requires": {
+    "type": "all",
+    "label": "Severe, progressive idiopathic scoliosis with either of the following",
+    "children": [
+     {
+      "type": "leaf",
+      "criterion": "severe_progressive_idiopathic_scoliosis"
+     },
+     {
+      "type": "any",
+      "label": "Either of the following",
+      "children": [
+       {
+        "type": "leaf",
+        "criterion": "cobb_angle_greater_than_40"
+       },
+       {
+        "type": "all",
+        "label": "Spinal cord compression with neurogenic claudication or radicular pain, significant functional impairment, failed at least 3 months of conservative nonsurgical therapy",
+        "children": [
+         {
+          "type": "leaf",
+          "criterion": "cord_compression_with_claudication_or_radicular_pain_impairment"
+         },
+         {
+          "type": "leaf",
+          "criterion": "failed_3_months_conservative_therapy"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   "notes": [
+    "For multi-level fusion, criteria must be met for each level intended for fusion."
+   ]
+  },
+  {
+   "id": "fusion_degenerative_scoliosis",
+   "name": "Lumbar Spinal Fusion: severe degenerative scoliosis",
+   "applies_to_cpt": [
+    "22533",
+    "22534",
+    "22558",
+    "22585",
+    "22612",
+    "22614",
+    "22630",
+    "22632",
+    "22633",
+    "22634"
+   ],
+   "requires": {
+    "type": "all",
+    "label": "Severe degenerative scoliosis with a minimum Cobb angle of 30°, or significant sagittal imbalance, and with any one of the following",
+    "children": [
+     {
+      "type": "leaf",
+      "criterion": "severe_degenerative_scoliosis"
+     },
+     {
+      "type": "any",
+      "label": "Minimum Cobb angle of 30° or significant sagittal imbalance",
+      "children": [
+       {
+        "type": "leaf",
+        "criterion": "cobb_angle_minimum_30"
+       },
+       {
+        "type": "leaf",
+        "criterion": "significant_sagittal_imbalance_sva_over_5cm"
+       }
+      ]
+     },
+     {
+      "type": "any",
+      "label": "Any one of the following",
+      "children": [
+       {
+        "type": "all",
+        "label": "Documented progression of deformity with persistent axial pain and impairment unresponsive to at least 1 year of conservative nonsurgical therapy",
+        "children": [
+         {
+          "type": "leaf",
+          "criterion": "deformity_progression_with_axial_pain_and_impairment"
+         },
+         {
+          "type": "leaf",
+          "criterion": "unresponsive_to_1_year_conservative_therapy"
+         }
+        ]
+       },
+       {
+        "type": "all",
+        "label": "Persistent and significant neurogenic symptoms with impairment unresponsive to at least 1 year of conservative nonsurgical therapy",
+        "children": [
+         {
+          "type": "leaf",
+          "criterion": "persistent_significant_neurogenic_symptoms_with_impairment"
+         },
+         {
+          "type": "leaf",
+          "criterion": "unresponsive_to_1_year_conservative_therapy"
+         }
+        ]
+       },
+       {
+        "type": "leaf",
+        "criterion": "severe_or_rapidly_progressive_motor_loss_claudication_cauda_equina"
+       }
+      ]
+     }
+    ]
+   },
+   "notes": [
+    "For multi-level fusion, criteria must be met for each level intended for fusion."
+   ]
+  },
+  {
+   "id": "fusion_isthmic_spondylolisthesis",
+   "name": "Lumbar Spinal Fusion: isthmic spondylolisthesis",
+   "applies_to_cpt": [
+    "22533",
+    "22534",
+    "22558",
+    "22585",
+    "22612",
+    "22614",
+    "22630",
+    "22632",
+    "22633",
+    "22634"
+   ],
+   "requires": {
+    "type": "all",
+    "label": "Isthmic spondylolisthesis, when all of the following are present",
+    "children": [
+     {
+      "type": "leaf",
+      "criterion": "isthmic_spondylolisthesis"
+     },
+     {
+      "type": "leaf",
+      "criterion": "pars_defect_wiltse_i_or_ii_on_xray"
+     },
+     {
+      "type": "leaf",
+      "criterion": "persistent_back_pain_with_impairment"
+     },
+     {
+      "type": "any",
+      "label": "Unresponsive to at least 3 months of conservative nonsurgical therapy, OR with severe or rapidly progressive symptoms",
+      "children": [
+       {
+        "type": "leaf",
+        "criterion": "unresponsive_to_3_months_conservative_therapy"
+       },
+       {
+        "type": "leaf",
+        "criterion": "severe_or_rapidly_progressive_motor_loss_claudication_cauda_equina"
+       }
+      ]
+     }
+    ]
+   },
+   "notes": [
+    "For multi-level fusion, criteria must be met for each level intended for fusion."
+   ]
+  },
+  {
+   "id": "fusion_recurrent_disc_herniation",
+   "name": "Lumbar Spinal Fusion: recurrent same-level disc herniation",
+   "applies_to_cpt": [
+    "22533",
+    "22534",
+    "22558",
+    "22585",
+    "22612",
+    "22614",
+    "22630",
+    "22632",
+    "22633",
+    "22634"
+   ],
+   "requires": {
+    "type": "all",
+    "label": "Recurrent, same-level disc herniation, at least 3 months after previous disc surgery, when all of the following are present",
+    "children": [
+     {
+      "type": "leaf",
+      "criterion": "recurrent_same_level_disc_herniation"
+     },
+     {
+      "type": "leaf",
+      "criterion": "at_least_3_months_after_previous_disc_surgery"
+     },
+     {
+      "type": "leaf",
+      "criterion": "recurrent_neurogenic_symptoms_or_nerve_root_irritation"
+     },
+     {
+      "type": "leaf",
+      "criterion": "impairment_or_loss_of_function"
+     },
+     {
+      "type": "any",
+      "label": "Unresponsive to at least 3 months of conservative nonsurgical therapy or with severe or rapidly progressive symptoms",
+      "children": [
+       {
+        "type": "leaf",
+        "criterion": "unresponsive_to_3_months_conservative_therapy"
+       },
+       {
+        "type": "leaf",
+        "criterion": "severe_or_rapidly_progressive_motor_loss_claudication_cauda_equina"
+       }
+      ]
+     },
+     {
+      "type": "leaf",
+      "criterion": "compression_and_instability_on_imaging_corresponding_level_side"
+     }
+    ]
+   },
+   "notes": [
+    "For multi-level fusion, criteria must be met for each level intended for fusion."
+   ]
+  },
+  {
+   "id": "fusion_pseudarthrosis",
+   "name": "Lumbar Spinal Fusion: pseudarthrosis",
+   "applies_to_cpt": [
+    "22533",
+    "22534",
+    "22558",
+    "22585",
+    "22612",
+    "22614",
+    "22630",
+    "22632",
+    "22633",
+    "22634"
+   ],
+   "requires": {
+    "type": "all",
+    "label": "Pseudarthrosis, documented radiologically, when all of the following are present",
+    "children": [
+     {
+      "type": "leaf",
+      "criterion": "pseudarthrosis_documented_radiologically"
+     },
+     {
+      "type": "leaf",
+      "criterion": "at_least_6_months_after_initial_fusion"
+     },
+     {
+      "type": "any",
+      "label": "With persistent axial back pain, with or without neurogenic symptoms, or with severe or rapidly progressive symptoms",
+      "children": [
+       {
+        "type": "leaf",
+        "criterion": "persistent_axial_back_pain"
+       },
+       {
+        "type": "leaf",
+        "criterion": "severe_or_rapidly_progressive_motor_loss_claudication_cauda_equina"
+       }
+      ]
+     },
+     {
+      "type": "leaf",
+      "criterion": "impairment_or_loss_of_function"
+     },
+     {
+      "type": "leaf",
+      "criterion": "significant_interval_relief_after_prior_fusion"
+     }
+    ]
+   },
+   "notes": [
+    "For multi-level fusion, criteria must be met for each level intended for fusion."
+   ]
+  },
+  {
+   "id": "fusion_instability",
+   "name": "Lumbar Spinal Fusion: instability due to fracture, dislocation, infection, abscess, or tumor",
+   "applies_to_cpt": [
+    "22533",
+    "22534",
+    "22558",
+    "22585",
+    "22612",
+    "22614",
+    "22630",
+    "22632",
+    "22633",
+    "22634"
+   ],
+   "requires": {
+    "type": "all",
+    "label": "Instability due to fracture, dislocation, infection, abscess, or tumor when extensive surgery is required that could create an unstable spine",
+    "children": [
+     {
+      "type": "leaf",
+      "criterion": "instability_due_to_fracture_dislocation_infection_abscess_tumor"
+     },
+     {
+      "type": "leaf",
+      "criterion": "extensive_surgery_required_could_create_unstable_spine"
+     }
+    ]
+   },
+   "notes": [
+    "For multi-level fusion, criteria must be met for each level intended for fusion."
+   ]
+  },
+  {
+   "id": "fusion_flatback_syndrome",
+   "name": "Lumbar Spinal Fusion: iatrogenic or degenerative flatback syndrome",
+   "applies_to_cpt": [
+    "22533",
+    "22534",
+    "22558",
+    "22585",
+    "22612",
+    "22614",
+    "22630",
+    "22632",
+    "22633",
+    "22634"
+   ],
+   "requires": {
+    "type": "all",
+    "label": "Iatrogenic or degenerative flatback syndrome with significant sagittal imbalance; when fusion is performed with spinal osteotomy or interbody spacers",
+    "children": [
+     {
+      "type": "leaf",
+      "criterion": "flatback_syndrome_with_significant_sagittal_imbalance"
+     },
+     {
+      "type": "leaf",
+      "criterion": "fusion_with_spinal_osteotomy_or_interbody_spacers"
+     }
+    ]
+   },
+   "notes": [
+    "For multi-level fusion, criteria must be met for each level intended for fusion."
+   ]
+  },
+  {
+   "id": "fusion_adjacent_level_disease",
+   "name": "Lumbar Spinal Fusion: adjacent level disease",
+   "applies_to_cpt": [
+    "22533",
+    "22534",
+    "22558",
+    "22585",
+    "22612",
+    "22614",
+    "22630",
+    "22632",
+    "22633",
+    "22634"
+   ],
+   "requires": {
+    "type": "all",
+    "label": "Adjacent-level disease when all of the following are present",
+    "children": [
+     {
+      "type": "leaf",
+      "criterion": "adjacent_level_disease"
+     },
+     {
+      "type": "all",
+      "label": "Persistent back pain with impairment or loss of function that is unresponsive to at least 3 months of conservative nonsurgical therapy",
+      "children": [
+       {
+        "type": "leaf",
+        "criterion": "persistent_back_pain_with_impairment"
+       },
+       {
+        "type": "leaf",
+        "criterion": "unresponsive_to_3_months_conservative_therapy"
+       }
+      ]
+     },
+     {
+      "type": "leaf",
+      "criterion": "adjacent_level_imaging_collapse_listhesis_or_scoliosis"
+     },
+     {
+      "type": "leaf",
+      "criterion": "symptoms_and_function_correlate_with_imaging"
+     },
+     {
+      "type": "leaf",
+      "criterion": "previous_fusion_relief_at_least_6_months"
+     }
+    ]
+   },
+   "notes": [
+    "For multi-level fusion, criteria must be met for each level intended for fusion."
+   ]
+  },
+  {
+   "id": "lumbar_total_disc_arthroplasty",
+   "name": "Lumbar Total Disc Arthroplasty",
+   "applies_to_cpt": [
+    "22857",
+    "22860",
+    "0164T",
+    "0165T",
+    "22862",
+    "22865"
+   ],
+   "requires": {
+    "type": "all",
+    "label": "Lumbar total disc arthroplasty meets the definition of medical necessity when ALL of the following are met",
+    "children": [
+     {
+      "type": "leaf",
+      "criterion": "tda_fda_approved_device_per_labeling"
+     },
+     {
+      "type": "leaf",
+      "criterion": "tda_age_18_to_60"
+     },
+     {
+      "type": "leaf",
+      "criterion": "tda_significant_pain_vas_5"
+     },
+     {
+      "type": "leaf",
+      "criterion": "tda_single_level_ddd_l3_s1_confirmed"
+     },
+     {
+      "type": "leaf",
+      "criterion": "tda_no_more_than_grade_1_spondylolisthesis"
+     },
+     {
+      "type": "all",
+      "label": "Failure of at least six months of conservative nonsurgical therapy that included",
+      "children": [
+       {
+        "type": "leaf",
+        "criterion": "tda_failed_6_months_conservative_therapy"
+       },
+       {
+        "type": "leaf",
+        "criterion": "prescription_strength_analgesics_several_weeks"
+       },
+       {
+        "type": "any",
+        "label": "Participation in at least 6 weeks of physical therapy or documentation of why the candidate could not tolerate physical therapy",
+        "children": [
+         {
+          "type": "leaf",
+          "criterion": "physical_therapy_at_least_6_weeks"
+         },
+         {
+          "type": "leaf",
+          "criterion": "physical_therapy_intolerance_documented"
+         }
+        ]
+       },
+       {
+        "type": "leaf",
+        "criterion": "cognitive_behavioral_addiction_issues_managed"
+       }
+      ]
+     },
+     {
+      "type": "leaf",
+      "criterion": "tda_one_or_two_levels_l3_s1_anterior_retroperitoneal"
+     },
+     {
+      "type": "not",
+      "label": "There are no contraindications to lumbar disc arthroplasty, including but not limited to",
+      "child": {
+       "type": "any",
+       "label": "Contraindications",
+       "children": [
+        {
+         "type": "leaf",
+         "criterion": "tda_contraindication_disease_above_l3_4"
+        },
+        {
+         "type": "leaf",
+         "criterion": "tda_contraindication_active_infection"
+        },
+        {
+         "type": "leaf",
+         "criterion": "tda_contraindication_osteoporosis_osteopenia"
+        },
+        {
+         "type": "leaf",
+         "criterion": "tda_contraindication_lumbar_scoliosis_over_11_degrees"
+        },
+        {
+         "type": "leaf",
+         "criterion": "tda_contraindication_spondylolisthesis_over_3mm"
+        },
+        {
+         "type": "leaf",
+         "criterion": "tda_contraindication_more_than_two_levels"
+        },
+        {
+         "type": "leaf",
+         "criterion": "tda_contraindication_severe_facet_arthrosis"
+        },
+        {
+         "type": "leaf",
+         "criterion": "tda_contraindication_autoimmune_disorder"
+        },
+        {
+         "type": "leaf",
+         "criterion": "tda_contraindication_free_disc_fragment"
+        }
+       ]
+      }
+     }
+    ]
+   },
+   "notes": [
+    "Removal and revision of a lumbar artificial disc (0164T, 0165T, 22862, 22865) are in the code table but the document states no criteria for them; they are mapped here as the closest pathway (see notes)."
+   ]
+  }
+ ],
+ "exclusions": [
+  {
+   "text": "Lumbar spinal fusion is considered experimental or investigational if the sole indication for fusion is any one of the following conditions: Disc herniation",
+   "cpt": []
+  },
+  {
+   "text": "Chronic nonspecific low back pain without radiculopathy",
+   "cpt": []
+  },
+  {
+   "text": "Degenerative disc disease",
+   "cpt": []
+  },
+  {
+   "text": "Initial discectomy/laminectomy for neural structure decompression",
+   "cpt": []
+  },
+  {
+   "text": "Facet syndrome",
+   "cpt": []
+  }
+ ],
+ "notes": [
+  "Built from the PDF alone (02-20000-48, Reviewed 05/28/26, Revised 06/15/26). The download holds a single clean copy; no redline. Original Effective Date 07/01/15 is recorded as effective_date; 06/15/26 is the latest revision ('Review; no change in position statement').",
+  "Pathways: one per indication the position statement grants coverage for: thoracic deformity fusion, lumbar deformity fusion, discectomy, laminectomy for stenosis, laminectomy for a space-occupying lesion, nine lumbar fusion diagnoses (the document's 'any of the following' list, each a bullet group), and lumbar total disc arthroplasty.",
+  "Code mapping. Fusion (22533, 22534, 22558, 22585, 22612, 22614, 22630, 22632, 22633, 22634): both deformity pathways and all nine fusion-by-diagnosis pathways; the weakest-of-several rule means a chart passes if any one diagnosis pathway is met. Discectomy (63030, 63035, 63042, 63044, 63056, 63057): 63030/63035 describe laminotomy with excision of a herniated disc, 63042/63044 are the re-exploration versions and 63056/63057 the transpedicular approach for a far-lateral herniated disc. Laminectomy (63005, 63012, 63017, 63047, 63048, 63052, 63053, plus 63030, 63035, 63042, 63044): the section heading is 'Lumbar Laminectomy (Laminotomy, Facetectomy, Foraminotomy)' so the laminotomy codes 63030-63044 are governed by both the discectomy and the laminectomy pathways, since the same CPT covers foraminotomy for stenosis and disc excision; 63052/63053 are laminectomy during posterior interbody arthrodesis and follow the laminectomy pathways. TDA (22857, 22860): the arthroplasty pathway. 0164T, 0165T, 22862, 22865 (removal / revision of an artificial disc) are in the table with no criteria anywhere in the document; mapped to the arthroplasty pathway as the closest section rather than left ungoverned.",
+  "Every code in the table is tagged covered: the document states no code or exactly-described procedure as non-covered or investigational. The fusion exclusions are by sole indication, not by code, so the fusion codes stay covered and the exclusions carry no codes.",
+  "The ++ block 'Conservative nonsurgical therapy for lumbar spinal fusion should include the following' (analgesics, 6 weeks PT, cognitive/behavioral evaluation) is advisory wording ('should'), and the ++ marker is referenced nowhere else in the document. It is therefore not nested into the fusion pathways that say only 'conservative nonsurgical therapy' (idiopathic scoliosis, degenerative scoliosis, isthmic spondylolisthesis, recurrent herniation, adjacent-level disease). Where the document itself spells the three components out with 'that included' (spinal stenosis fusion item a, discectomy, laminectomy, total disc arthroplasty) they are leaves. A reviewer who reads the ++ definition as binding would add the three leaves to those five fusion pathways.",
+  "Parenthetical 'analgesics should include anti-inflammatory medications with or without adjunctive medications such as nerve membrane stabilizers or muscle relaxants, unless contraindicated or not tolerated' is advisory and sits in the question, not the criterion text.",
+  "'Participation in at least 6 weeks of physical therapy (including active exercise) or documentation of why the candidate could not tolerate physical therapy' is an any of two leaves: the second half waives the first.",
+  "'Evaluation and appropriate management of associated cognitive, behavioral, or addiction issues, if any' is conditional: a chart with no such issues satisfies it.",
+  "Laminectomy 'Signs or symptoms of at least 1 of the following': the bullet 'Neurologic claudication that is persistent and refractory, OR persistent debilitating pain (...), that is refractory to at least 6 weeks of conservative nonsurgical therapy that included the following' is read as three alternatives: rapidly progressive deficits; persistent and refractory claudication; persistent debilitating pain refractory to 6 weeks of the listed therapy. The 6-week conservative-therapy block attaches to the pain clause only (the discectomy section has the identical construction with pain alone). A stricter reading would attach the 6-week block to the claudication clause too.",
+  "'At least 2 of the following' six radiculopathy signs is expanded to an any over all 15 pairs; 'any 2 of the following' four non-operative treatments to an any over 6 pairs. The header 'Signs and symptoms of radiculopathy on history and physical exam' is the label of that any, not a leaf, because the list defines it.",
+  "Deformity footnote: the bullet 'Failure of symptom or pain improvement upon completion of at least 12 weeks of focused non-operative care* in the past year' is the leaf (threshold 12 weeks = 2.77 months); the * definition ('Documented failure of at least twelve (12) consecutive weeks in the past year of any 2 of the following physician-directed conservative treatments') is the label of the any-of-pairs beneath it, so 'consecutive' and 'physician-directed' are carried in the label and question rather than as a second leaf stating the same 12 weeks.",
+  "The deformity emergency bullet is split in two: the deficit/weakness/paralysis and the 'corresponding evidence of spinal cord or nerve root compression on an MRI or CT scan images'. The trailing 'immediate surgical evaluation is indicated' is a consequence, not a requirement, and is left out.",
+  "'Imaging studies confirm spinal curvature and demonstrate at least one of the following' and 'Imaging studies that correspond to clinical findings and show at least one of the following' each hold a requirement of their own, so each is an all of a header leaf plus the any of measurements.",
+  "Fusion for spinal stenosis is read as all of: spinal stenosis; one of (spondylolisthesis on plain x-rays, instability on imaging, instability anticipated from bilateral/wide decompression); and either a or b. Item a is split into claudication/radicular pain with functional impairment, stenosis documented on MRI or other imaging, failed at least 3 months of conservative therapy, and the three therapy components printed under it (flat, as printed).",
+  "Degenerative scoliosis header 'with a minimum Cobb angle of 30°, or significant sagittal imbalance (eg, sagittal vertical axis >5 cm), and with any one of the following' is read as scoliosis AND (Cobb >= 30° OR sagittal imbalance) AND one of the three symptom items. The '>5 cm' is an example ('eg') of significant imbalance and is kept as the threshold.",
+  "'Documented progression of deformity with persistent axial (nonradiating) pain and impairment or loss of function unresponsive to at least 1 year of conservative nonsurgical therapy' and the neurogenic-symptoms item are each split into the clinical picture plus a shared 'unresponsive to at least 1 year of conservative nonsurgical therapy' leaf.",
+  "'Persistent back pain (with or without neurogenic symptoms), with impairment or loss of function' (isthmic) and 'Persistent back pain (with or without neurogenic symptoms) with impairment or loss of function' (adjacent-level) are the same requirement; one leaf with the isthmic wording serves both. 'Unresponsive to at least 3 months of conservative nonsurgical therapy' (isthmic, recurrent herniation, adjacent-level) and 'failed at least 3 months of conservative nonsurgical therapy' (stenosis, idiopathic scoliosis) are kept as two leaves because the verbatim wording differs, though they state the same trial. 'severe or rapidly progressive symptoms of motor loss, neurogenic claudication, or cauda equina syndrome' appears in five fusion sections and is one shared leaf.",
+  "'Recurrent, same-level disc herniation, at least 3 months after previous disc surgery' is two leaves: the recurrence and the 3-month interval (duration threshold). Pseudarthrosis 'Impairment or loss of function, in an individual who had experienced significant interval relief of prior symptoms' is two leaves: impairment (shared with recurrent herniation) and interval relief.",
+  "Instability: 'Instability due to fracture, dislocation, infection, abscess, or tumor when extensive surgery is required that could create an unstable spine' is read as two requirements (the cause of instability, and that extensive surgery is required that could create an unstable spine), an all. A reviewer could read the 'when' clause as explanatory and accept the first alone. Flatback likewise: the syndrome with sagittal imbalance AND fusion performed with osteotomy or interbody spacers.",
+  "Scoping leaves: the section headers 'Thoracic deformity (minimal / secondary / flexible lumbar involvement) in adults', 'Lumbar deformity (with or without secondary thoracic involvement) in adults' and discectomy 'for the treatment of lumbar herniated disc' name the population or diagnosis the pathway covers, so each is the first leaf of its pathway, as the fusion diagnoses ('Spinal stenosis', 'Isthmic spondylolisthesis', ...) are. 'adults' carries no number in the document, so no age threshold is typed.",
+  "'*Note: For multi-level fusion, criteria must be met for each level intended for fusion' is a rule about how to apply the pathways, not a chart requirement; it is recorded on each fusion pathway's notes.",
+  "Total disc arthroplasty: 'Candidate is age 18 to 60' is one leaf with threshold age >= 18 years; the 60-year upper bound is in the question (the schema holds one op per criterion). 'No more than Grade 1 spondylolisthesis' is typed as number <= 1 (grade). The contraindication list is 'including but not limited to'; the not(any) covers the nine listed items, each with its own leaf and threshold where printed (T-score <= -1.0, > 11 degrees, > 3mm). The FDA-approved-device requirement is kept answerable: a chart names the planned device and the surgeon's statement of on-label use.",
+  "Internal tension in the arthroplasty section (single level L3-4/L4-L5/L5-S1 in one bullet; one or two consecutive levels from L3-S1 in another; 'more than two levels' as a contraindication) is reproduced as printed, not resolved.",
+  "'within the past 6 months' on the two imaging requirements is typed as duration_months lte 6 (recency of the study); the app checks note dates only for 'at least' durations, so this is a hint, not a gate. Weeks convert at 12/52 (6 weeks = 1.38 months, 12 weeks = 2.77 months).",
+  "Fusion exclusions: the five sole-indication conditions are each an exclusion; the first carries the governing sentence (contiguous in the PDF), the others the condition as printed. They carry no codes because no code in the table is itself an excluded procedure. The Description and Summary and Analysis of Evidence sections state no requirements (the Scheuermann's kyphosis thresholds and the NASS recommendations there are evidence summary, not position) and are left out.",
+  "Program exceptions: FEP and SAO follow their own guidelines; Medicare Advantage products follow NCD 150.10 (Lumbar Artificial Disc Replacement) for the arthroplasty question. The Florida step-therapy exemption paragraph (627.42393) is a process statement and is left out. 'Related Guidelines: 02-20000-45, Cervical Spine Surgery' is cross-reference only."
+ ],
+ "status": "ok"
+}

@@ -1,0 +1,302 @@
+{
+  "id": "florida-blue-02-33000-31",
+  "payer": "Florida Blue",
+  "payer_aliases": ["Florida Blue", "BCBSF", "Blue Cross and Blue Shield of Florida", "Blue Cross Blue Shield of Florida", "BCBSFL", "BCBS FL", "BCBS of Florida"],
+  "title": "Treatments for Varicose Veins/Venous Insufficiency",
+  "guideline_number": "02-33000-31",
+  "effective_date": "01/01/26",
+  "reviewed_date": "07/24/25",
+  "source_file": "bcbsfl-02-33000-31-treatments-for-varicose-veins-venous-insufficiency.pdf",
+  "plan_types": ["All lines of business unless otherwise noted in the Program Exceptions section"],
+  "excluded_plans": ["Federal Employee Program (FEP)", "State Account Organization (SAO)", "Medicare Advantage Products"],
+  "scope": {
+    "cpt": {
+      "36465": "covered",
+      "36466": "covered",
+      "36468": "non_covered",
+      "36470": "covered",
+      "36471": "covered",
+      "36473": "investigational",
+      "36474": "investigational",
+      "36475": "covered",
+      "36476": "covered",
+      "36478": "covered",
+      "36479": "covered",
+      "36482": "covered",
+      "36483": "covered",
+      "37700": "covered",
+      "37718": "covered",
+      "37722": "covered",
+      "37735": "covered",
+      "37760": "covered",
+      "37761": "covered",
+      "37765": "covered",
+      "37766": "covered",
+      "37780": "covered",
+      "37785": "covered",
+      "0524T": "investigational",
+      "37241": "investigational",
+      "37244": "investigational",
+      "S2202": "covered"
+    },
+    "icd10": ["I83.001-I83.899", "I87.2"]
+  },
+  "criteria": [
+    {
+      "id": "saphenous_reflux",
+      "text": "There is demonstrated saphenous reflux",
+      "question": "Does imaging (typically duplex ultrasound) demonstrate reflux in the great or small saphenous vein?"
+    },
+    {
+      "id": "ceap_c2_or_greater",
+      "text": "CEAP (Clinical-Etiology-Anatomy-Pathophysiology) class C2* or greater",
+      "question": "Is the documented CEAP clinical class C2 or higher (varicose veins, or worse: edema, skin changes, healed or active ulcer)?",
+      "threshold": {"kind": "enum", "op": "gte_enum", "value": "C2", "enum_values": ["C0", "C1", "C2", "C2r", "C3", "C4", "C4a", "C4b", "C4c", "C5", "C6", "C6r"]}
+    },
+    {
+      "id": "varicosities_3mm",
+      "text": "The varicosities are at least 3 millimeters in size",
+      "question": "Are the varicosities documented as at least 3 millimeters in diameter?",
+      "threshold": {"kind": "number", "op": "gte", "value": 3, "unit": "mm"}
+    },
+    {
+      "id": "venous_stasis_ulcer",
+      "text": "Ulceration secondary to venous stasis",
+      "question": "Is there a documented ulcer caused by venous stasis?"
+    },
+    {
+      "id": "recurrent_superficial_thrombophlebitis",
+      "text": "Recurrent superficial thrombophlebitis",
+      "question": "Is recurrent superficial thrombophlebitis documented?"
+    },
+    {
+      "id": "hemorrhage_ruptured_varicosity",
+      "text": "Hemorrhage or recurrent bleeding episodes from a ruptured superficial varicosity",
+      "question": "Has a superficial varicosity ruptured and bled (hemorrhage or recurrent bleeding episodes)?"
+    },
+    {
+      "id": "persistent_symptoms_saphenous_reflux",
+      "text": "Persistent pain, swelling, itching, burning, or other symptoms are associated with saphenous reflux",
+      "question": "Are persistent symptoms (pain, swelling, itching, burning or other) documented and attributed to saphenous reflux?"
+    },
+    {
+      "id": "symptoms_interfere_adl",
+      "text": "the symptoms significantly interfere with activities of daily living",
+      "question": "Do the symptoms significantly interfere with the patient's activities of daily living?"
+    },
+    {
+      "id": "compression_3_months_not_improved",
+      "text": "conservative management including compression therapy for at least 3 months has not improved the symptoms",
+      "question": "Has conservative management including compression therapy been tried for at least 3 months (dated notes) without improvement of the symptoms?",
+      "threshold": {"kind": "duration_months", "op": "gte", "value": 3, "unit": "months"}
+    },
+    {
+      "id": "accessory_incompetence_isolated",
+      "text": "Incompetence of the accessory saphenous vein is isolated",
+      "question": "Is the accessory saphenous vein incompetence isolated (the great and small saphenous veins are competent)?"
+    },
+    {
+      "id": "truncal_previously_eliminated_3_months",
+      "text": "the great or small saphenous veins had been previously eliminated (at least 3 months)",
+      "question": "Were the great or small saphenous veins eliminated (treated) at least 3 months before the planned accessory vein treatment?",
+      "threshold": {"kind": "duration_months", "op": "gte", "value": 3, "unit": "months"}
+    },
+    {
+      "id": "accessory_saphenous_reflux",
+      "text": "There is demonstrated accessory saphenous reflux",
+      "question": "Does imaging demonstrate reflux in an accessory saphenous vein?"
+    },
+    {
+      "id": "accessory_discharges_into_common_femoral_vein",
+      "text": "documentation of anatomy showing that the accessory saphenous vein discharged directly into the common femoral vein",
+      "question": "Does the imaging or operative documentation show the accessory saphenous vein discharging directly into the common femoral vein?"
+    },
+    {
+      "id": "tributaries_symptomatic",
+      "text": "symptomatic varicose tributaries",
+      "question": "Are the varicose tributaries to be treated documented as symptomatic?"
+    },
+    {
+      "id": "saphenous_treated_same_time_or_prior",
+      "text": "performed either at the same time or following prior treatment (surgical, radiofrequency, or laser) of the saphenous veins",
+      "question": "Is the tributary treatment performed at the same time as saphenous vein treatment, or after prior surgical, radiofrequency or laser treatment of the saphenous veins?"
+    },
+    {
+      "id": "perforator_reflux",
+      "text": "There is demonstrated perforator reflux",
+      "question": "Does imaging demonstrate reflux in the perforator vein(s) to be treated?"
+    },
+    {
+      "id": "superficial_veins_previously_eliminated",
+      "text": "The superficial saphenous veins (great, small, or accessory saphenous and symptomatic varicose tributaries) have been previously eliminated",
+      "question": "Have the superficial saphenous veins (great, small or accessory) and the symptomatic varicose tributaries already been treated before this perforator procedure?"
+    },
+    {
+      "id": "ulcers_unresolved_3_months",
+      "text": "Ulcers have not resolved following combined superficial vein treatment and compression therapy for at least 3 months",
+      "question": "Has the leg ulcer persisted for at least 3 months (dated notes) despite superficial vein treatment combined with compression therapy?",
+      "threshold": {"kind": "duration_months", "op": "gte", "value": 3, "unit": "months"}
+    },
+    {
+      "id": "secondary_to_deep_venous_thromboembolism",
+      "text": "secondary to deep venous thromboembolism",
+      "question": "Is the venous insufficiency secondary to deep venous thromboembolism (a prior DVT / post-thrombotic syndrome)?"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "great_or_small_saphenous_veins",
+      "name": "Great or Small Saphenous Veins (surgery, endovenous radiofrequency, laser ablation, microfoam sclerotherapy, or cyanoacrylate adhesive)",
+      "applies_to_cpt": ["36465", "36466", "36475", "36476", "36478", "36479", "36482", "36483", "37700", "37718", "37722", "37735", "37780"],
+      "requires": {"type": "all", "label": "when the following criteria have been met", "children": [
+        {"type": "leaf", "criterion": "saphenous_reflux"},
+        {"type": "leaf", "criterion": "ceap_c2_or_greater"},
+        {"type": "leaf", "criterion": "varicosities_3mm"},
+        {"type": "any", "label": "There is documentation of one or more of the following indications", "children": [
+          {"type": "leaf", "criterion": "venous_stasis_ulcer"},
+          {"type": "leaf", "criterion": "recurrent_superficial_thrombophlebitis"},
+          {"type": "leaf", "criterion": "hemorrhage_ruptured_varicosity"},
+          {"type": "all", "label": "Persistent symptoms, interfering with activities of daily living, not improved by conservative management", "children": [
+            {"type": "leaf", "criterion": "persistent_symptoms_saphenous_reflux"},
+            {"type": "leaf", "criterion": "symptoms_interfere_adl"},
+            {"type": "leaf", "criterion": "compression_3_months_not_improved"}
+          ]}
+        ]}
+      ]},
+      "notes": [
+        "Treatment of great or small saphenous veins by these techniques that does not meet the criteria is considered cosmetic and does not meet the definition of medical necessity.",
+        "Sclerotherapy techniques other than microfoam sclerotherapy of the great or small saphenous veins are investigational, so 36470/36471 and S2202 are not mapped to this pathway."
+      ]
+    },
+    {
+      "id": "accessory_saphenous_veins",
+      "name": "Accessory Saphenous Veins (surgery, endovenous radiofrequency, laser ablation, microfoam sclerotherapy, or cyanoacrylate adhesive)",
+      "applies_to_cpt": ["36465", "36466", "36475", "36476", "36478", "36479", "36482", "36483", "37700", "37718", "37722", "37735", "37780"],
+      "requires": {"type": "all", "label": "when the following criteria have been met", "children": [
+        {"type": "any", "label": "Incompetence of the accessory saphenous vein is isolated, or the great or small saphenous veins had been previously eliminated (at least 3 months)", "children": [
+          {"type": "leaf", "criterion": "accessory_incompetence_isolated"},
+          {"type": "leaf", "criterion": "truncal_previously_eliminated_3_months"}
+        ]},
+        {"type": "leaf", "criterion": "accessory_saphenous_reflux"},
+        {"type": "leaf", "criterion": "varicosities_3mm"},
+        {"type": "any", "label": "There is documentation of one or more of the following indications", "children": [
+          {"type": "leaf", "criterion": "venous_stasis_ulcer"},
+          {"type": "leaf", "criterion": "recurrent_superficial_thrombophlebitis"},
+          {"type": "leaf", "criterion": "hemorrhage_ruptured_varicosity"},
+          {"type": "all", "label": "Persistent symptoms, interfering with activities of daily living, not improved by conservative management", "children": [
+            {"type": "leaf", "criterion": "persistent_symptoms_saphenous_reflux"},
+            {"type": "leaf", "criterion": "symptoms_interfere_adl"},
+            {"type": "leaf", "criterion": "compression_3_months_not_improved"}
+          ]}
+        ]}
+      ]},
+      "notes": [
+        "Treatment of accessory saphenous veins by these techniques that does not meet the criteria is considered cosmetic and does not meet the definition of medical necessity."
+      ]
+    },
+    {
+      "id": "concurrent_accessory_and_great_or_small_saphenous",
+      "name": "Concurrent treatment of the accessory saphenous veins along with the great or small saphenous veins",
+      "applies_to_cpt": ["36465", "36466", "36475", "36476", "36478", "36479", "36482", "36483", "37700", "37718", "37722", "37735", "37780"],
+      "requires": {"type": "all", "label": "criteria is met for each vein and there is documentation of anatomy", "children": [
+        {"type": "all", "label": "Great or small saphenous vein criteria", "children": [
+          {"type": "leaf", "criterion": "saphenous_reflux"},
+          {"type": "leaf", "criterion": "ceap_c2_or_greater"},
+          {"type": "leaf", "criterion": "varicosities_3mm"}
+        ]},
+        {"type": "all", "label": "Accessory saphenous vein criteria", "children": [
+          {"type": "leaf", "criterion": "accessory_saphenous_reflux"},
+          {"type": "leaf", "criterion": "varicosities_3mm"}
+        ]},
+        {"type": "any", "label": "There is documentation of one or more of the following indications", "children": [
+          {"type": "leaf", "criterion": "venous_stasis_ulcer"},
+          {"type": "leaf", "criterion": "recurrent_superficial_thrombophlebitis"},
+          {"type": "leaf", "criterion": "hemorrhage_ruptured_varicosity"},
+          {"type": "all", "label": "Persistent symptoms, interfering with activities of daily living, not improved by conservative management", "children": [
+            {"type": "leaf", "criterion": "persistent_symptoms_saphenous_reflux"},
+            {"type": "leaf", "criterion": "symptoms_interfere_adl"},
+            {"type": "leaf", "criterion": "compression_3_months_not_improved"}
+          ]}
+        ]},
+        {"type": "leaf", "criterion": "accessory_discharges_into_common_femoral_vein"}
+      ]},
+      "notes": [
+        "The accessory pathway's first bullet (isolated incompetence, or truncal veins eliminated at least 3 months earlier) is deliberately left out here: it cannot hold when the truncal and accessory veins are treated in the same session, and the concurrent-treatment sentence supplies the anatomy requirement in its place. See the guideline notes."
+      ]
+    },
+    {
+      "id": "symptomatic_varicose_tributaries",
+      "name": "Symptomatic Varicose Tributaries (stab avulsion, hook phlebectomy, sclerotherapy, transilluminated powered phlebectomy)",
+      "applies_to_cpt": ["36470", "36471", "37765", "37766", "37785", "S2202"],
+      "requires": {"type": "all", "label": "as a component of the treatment of symptomatic varicose tributaries when performed either at the same time or following prior treatment of the saphenous veins", "children": [
+        {"type": "leaf", "criterion": "tributaries_symptomatic"},
+        {"type": "leaf", "criterion": "saphenous_treated_same_time_or_prior"}
+      ]},
+      "notes": [
+        "Treatment of symptomatic varicose tributaries by any technique other than stab avulsion, hook phlebectomy, sclerotherapy or transilluminated powered phlebectomy is experimental or investigational.",
+        "Ultrasound guidance for sclerotherapy of the varicose tributaries does not meet the definition of medical necessity.",
+        "Sclerotherapy of isolated tributary veins without prior or concurrent treatment of saphenous veins is investigational (Other section); the second criterion already enforces this."
+      ]
+    },
+    {
+      "id": "perforator_veins",
+      "name": "Perforator Veins (surgical ligation including SEPS, or endovenous radiofrequency or laser ablation) as a treatment of leg ulcers associated with chronic venous insufficiency",
+      "applies_to_cpt": ["37760", "37761", "36475", "36476", "36478", "36479"],
+      "requires": {"type": "all", "label": "when ALL of the following conditions have been met", "children": [
+        {"type": "leaf", "criterion": "perforator_reflux"},
+        {"type": "leaf", "criterion": "varicosities_3mm"},
+        {"type": "leaf", "criterion": "superficial_veins_previously_eliminated"},
+        {"type": "leaf", "criterion": "ulcers_unresolved_3_months"},
+        {"type": "not", "label": "The venous insufficiency is not secondary to deep venous thromboembolism", "child": {"type": "leaf", "criterion": "secondary_to_deep_venous_thromboembolism"}}
+      ]},
+      "notes": [
+        "Ligation or ablation of incompetent perforator veins performed concurrently with superficial venous surgery does not meet the definition of medical necessity (also enforced by the 'previously eliminated' criterion).",
+        "Sclerotherapy of perforator veins is investigational; 36470/36471/S2202 are not mapped to this pathway."
+      ]
+    }
+  ],
+  "exclusions": [
+    {"text": "Treatment of great or small saphenous veins by surgery, endovenous radiofrequency, laser ablation, microfoam sclerotherapy, or cyanoacrylate adhesive that do not meet the criteria described above is considered cosmetic and does not meet the definition of medical necessity.", "cpt": []},
+    {"text": "Treatment of accessory saphenous veins by surgery, endovenous radiofrequency, laser ablation, microfoam sclerotherapy, or cyanoacrylate adhesive that do not meet the criteria described above is considered cosmetic and does not meet the definition of medical necessity.", "cpt": []},
+    {"text": "Treatment of symptomatic varicose tributaries, when performed either at the same time or following prior treatment of saphenous veins using any other techniques than those noted above, is considered experimental or investigational.", "cpt": []},
+    {"text": "Ultrasound guidance for sclerotherapy of the varicose tributaries does not meet the definition of medical necessity.", "cpt": []},
+    {"text": "Ligation or ablation of incompetent perforator veins performed concurrently with superficial venous surgery does not meet the definition of medical necessity.", "cpt": []},
+    {"text": "Treatment of telangiectasia such as spider veins, angiomata, and hemangiomata is considered cosmetic and does not meet the definition of medical necessity.", "cpt": ["36468"]},
+    {"text": "Techniques for conditions not specifically listed above are considered experimental or investigational, including, but not limited to:", "cpt": []},
+    {"text": "Sclerotherapy techniques, other than microfoam sclerotherapy, of great, small, or accessory saphenous veins", "cpt": []},
+    {"text": "Sclerotherapy of perforator veins", "cpt": []},
+    {"text": "Sclerotherapy of isolated tributary veins without prior or concurrent treatment of saphenous veins", "cpt": []},
+    {"text": "Stab avulsion, hook phlebectomy, or transilluminated powered phlebectomy of perforator, great or small saphenous, or accessory saphenous veins", "cpt": []},
+    {"text": "Endovenous radiofrequency or laser ablation of tributary veins", "cpt": []},
+    {"text": "Endovenous cryoablation of any vein", "cpt": []},
+    {"text": "Mechanochemical ablation (MOCA) of any vein (e.g. ClariVein™ Catheter)", "cpt": ["36473", "36474", "37241", "37244"]},
+    {"text": "Conservative ambulatory hemodynamic correction of venous insufficiency (CHIVA).", "cpt": []},
+    {"text": "Injection(s) of sclerosant for spider veins (telangiectasia), limb or trunk (Non-covered)", "cpt": ["36468"]},
+    {"text": "Endovenous ablation therapy of incompetent vein, extremity, inclusive of all imaging guidance and monitoring, percutaneous, mechanochemical; first vein treated (Investigational)", "cpt": ["36473"]},
+    {"text": "Endovenous ablation therapy of incompetent vein, extremity, inclusive of all imaging guidance and monitoring, percutaneous, mechanochemical; subsequent vein(s) treated in a single extremity, each through separate access sites (List separately in addition to code for primary procedure) (Investigational)", "cpt": ["36474"]},
+    {"text": "Endovenous catheter directed chemical ablation with balloon isolation of incompetent extremity vein, open or percutaneous, including all vascular access, catheter manipulation, diagnostic imaging, imaging guidance and monitoring (Investigational)", "cpt": ["0524T"]}
+  ],
+  "notes": [
+    "Built by hand from the PDF only (pdftotext -layout). The download holds a single clean copy of the guideline (no redline), 15 pages, Revised 01/01/26, Reviewed 07/24/25, Original Effective Date 02/15/02. effective_date is the printed 'Revised' date of the version in force; reviewed_date is the printed 'Reviewed' date.",
+    "Payer: the document text names the issuer only as 'BCBSF' (committee approval) and the filename says bcbsfl; BCBSF is Blue Cross and Blue Shield of Florida, which does business as Florida Blue. payer is set to Florida Blue with BCBSF and the long forms as aliases.",
+    "plan_types is the header statement: the guideline applies to all lines of business unless otherwise noted in Program Exceptions. excluded_plans are the three Program Exceptions: FEP (follow FEP guidelines), SAO (follow SAO guidelines) and Medicare Advantage Products (reviewed against FCSO LCD L38720 and Article A58250).",
+    "The step therapy protocol exemption paragraph (Florida law 627.42393) is a process a member or provider may invoke, not something a chart documents; it is left out. The 3-month compression requirement is the step-therapy-like requirement it would apply to.",
+    "Five pathways: great or small saphenous; accessory saphenous; concurrent accessory plus great or small saphenous; symptomatic varicose tributaries; perforator veins. Telangiectasia and the 'Other' list grant no coverage and are exclusions only.",
+    "The first bullet of the great/small saphenous criteria ('There is demonstrated saphenous reflux and CEAP ... class C2* or greater') holds two requirements and is split into two leaves under the top-level all. The asterisk after C2 is a footnote marker to the CEAP table and is kept so the text is verbatim.",
+    "Indication 4 ('Persistent pain ... AND the symptoms significantly interfere ... AND conservative management ... at least 3 months') is three requirements joined by AND inside one OR option, so it is an all of three leaves nested inside the indications any. Indications 1-3 are single leaves. The same any block is reused verbatim in the accessory and concurrent pathways because the document repeats it word for word.",
+    "The accessory pathway's first bullet ('Incompetence of the accessory saphenous vein is isolated, or the great or small saphenous veins had been previously eliminated (at least 3 months)') is an OR of two requirements, one of which carries a 3-month duration; it is an any of two leaves so the duration threshold attaches to the branch it belongs to.",
+    "Concurrent treatment of accessory plus great/small saphenous veins is a separate pathway: 'meets the definition of medical necessity when criteria is met for each vein and there is documentation of anatomy showing that the accessory saphenous vein discharged directly into the common femoral vein'. 'Criteria is met for each vein' is read as the saphenous criteria (reflux, CEAP C2 or greater, 3 mm, an indication) plus the accessory criteria (accessory reflux, 3 mm, an indication) with the anatomy requirement added. The accessory first bullet (isolated incompetence, or truncal veins eliminated at least 3 months before) is deliberately omitted from this pathway: by definition the truncal veins are being treated in the same session, so neither alternative can hold, and a literal reading would make the concurrent pathway unsatisfiable. A reviewer who reads 'criteria is met for each vein' literally would include that any block; this is the hardest judgment call in the file. The indication block is shared rather than duplicated per vein because the symptoms belong to the limb, not to a single vein.",
+    "The tributaries requirement 'performed either at the same time or following prior treatment (surgical, radiofrequency, or laser) of the saphenous veins' is kept as one leaf (one condition with two ways to satisfy it, no number on either side), unlike the accessory bullet, which was split because one alternative carries a duration. A reviewer could split it into an any of 'at the same time' and 'following prior treatment'. 'symptomatic varicose tributaries' is a separate leaf because the heading and the sentence both condition coverage on the tributaries being symptomatic. The parenthetical '(none of these techniques has been shown to be superior to another)' is commentary and is not a criterion.",
+    "The perforator bullet 'The venous insufficiency is not secondary to deep venous thromboembolism' is modelled as not(leaf 'secondary to deep venous thromboembolism') so the negation is explicit in the tree; a reviewer could instead keep the whole sentence as one positive leaf. 'as a treatment of leg ulcers associated with chronic venous insufficiency' is the population; it is not a separate leaf because the 'Ulcers have not resolved' criterion already requires an ulcer.",
+    "'Ligation or ablation of incompetent perforator veins performed concurrently with superficial venous surgery does not meet the definition of medical necessity' is recorded as an exclusion and a pathway note; it is not a separate criterion because the 'superficial saphenous veins ... have been previously eliminated' leaf already requires the superficial treatment to precede the perforator procedure.",
+    "'for symptomatic varicose veins/venous insufficiency' in the saphenous and accessory lead-in sentences is not a separate leaf: the symptomatic requirement is carried by the indications block (ulcer, thrombophlebitis, bleeding, or persistent symptoms).",
+    "The LOINC documentation paragraph ('failure of at least 3 consecutive months of medical management', history and physical, progress notes, radiology reports) describes what to submit and restates the 3-month conservative-management requirement; it adds no criterion. The Reimbursement section (36470/36471 reporting, imaging guidance included in 36475-36479, 37765/37766 once per leg and not together, 'reimburse according to operative report') is billing policy, not medical necessity, and is left out.",
+    "The DESCRIPTION section and the CEAP classification table are background; the CEAP table supplies the enum_values for the C2-or-greater threshold (C0, C1, C2, C2r, C3, C4, C4a, C4b, C4c, C5, C6, C6r; S/A are symptom modifiers, not classes).",
+    "Code tags: 36468 is marked (Non-covered) in the table and is the telangiectasia exclusion; 36473, 36474 and 0524T are marked (Investigational) in the table; every other listed code is untagged and therefore covered. The table markings are also recorded as exclusions so each tagged code has a verbatim statement behind it.",
+    "37241 and 37244 are not in the code table but the coding section says 'Mechanochemical ablation may be billed with codes 37241 or 37244'. MOCA is investigational, and within this guideline those codes are named only as the way MOCA is billed, so they are included and tagged investigational and listed on the MOCA exclusion. A reviewer applying the strict rule (tag only codes whose descriptor is exactly the excluded procedure) would omit them, since 37241/37244 are generic venous embolization codes.",
+    "S2202 Echosclerotherapy is untagged in the HCPCS table, so it is covered. It is mapped to the tributaries pathway as a sclerotherapy code (microfoam sclerotherapy of saphenous veins has its own codes 36465/36466, and other sclerotherapy of saphenous veins is investigational). Note the tension: 'Ultrasound guidance for sclerotherapy of the varicose tributaries does not meet the definition of medical necessity' and echosclerotherapy is ultrasound-guided sclerotherapy; the exclusion speaks of the guidance, not the sclerotherapy, and the document does not tag S2202, so S2202 is not listed on that exclusion.",
+    "Code-to-pathway mapping (the document ties no code to a section; mapping is by the technique each code describes): great/small saphenous, accessory and concurrent pathways share the saphenous technique codes: 36465/36466 (microfoam sclerotherapy), 36475/36476 (radiofrequency), 36478/36479 (laser), 36482/36483 (cyanoacrylate), 37700/37718/37722/37735/37780 (ligation and stripping). The surgical codes name long/short saphenous veins; they are also given to the accessory pathway because the document covers accessory treatment 'by surgery (ligation and stripping)' and no code is specific to the accessory vein. Tributaries pathway: 37765/37766 (stab phlebectomy), 36470/36471 (sclerotherapy), S2202 (echosclerotherapy), 37785 (ligation/excision of varicose vein clusters, a surgical treatment of tributaries that fits no other section). Perforator pathway: 37760/37761 (subfascial ligation) plus 36475/36476/36478/36479 because the document covers 'endovenous radiofrequency or laser ablation of incompetent perforator veins' and those are the radiofrequency/laser ablation codes. Transilluminated powered phlebectomy has no code in the table (billed under 37765/37766). 37735 includes 'interruption of communicating veins' but is a saphenous stripping code and stays on the saphenous pathways.",
+    "ICD-10 codes I83.001-I83.899 and I87.2 are listed as supporting medical necessity; they are recorded in scope.icd10 and are not criteria."
+  ],
+  "status": "ok"
+}

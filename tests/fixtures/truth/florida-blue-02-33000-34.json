@@ -1,0 +1,2672 @@
+{
+  "id": "florida-blue-02-33000-34",
+  "payer": "Florida Blue",
+  "payer_aliases": [
+    "Florida Blue",
+    "BCBS FL",
+    "BCBSFL",
+    "Blue Cross Blue Shield of Florida",
+    "Blue Cross and Blue Shield of Florida",
+    "BCBS of Florida"
+  ],
+  "title": "Implantable Cardioverter Defibrillators and Cardiac Contractility Modulation (CCM) Therapy",
+  "guideline_number": "02-33000-34",
+  "effective_date": "2026-05-15",
+  "reviewed_date": "2026-04-23",
+  "source_file": "bcbsfl-02-33000-34-implantable-cardioverter-defibrillators-cardiac-co.pdf",
+  "plan_types": [
+    "All lines of business unless otherwise noted in the Program Exceptions section"
+  ],
+  "excluded_plans": [
+    "Federal Employee Program (FEP)",
+    "State Account Organization (SAO)",
+    "Medicare Advantage products"
+  ],
+  "scope": {
+    "cpt": {
+      "33215": "covered",
+      "33216": "covered",
+      "33217": "covered",
+      "33218": "covered",
+      "33220": "covered",
+      "33223": "covered",
+      "33224": "covered",
+      "33225": "covered",
+      "33230": "covered",
+      "33231": "covered",
+      "33240": "covered",
+      "33241": "covered",
+      "33243": "covered",
+      "33244": "covered",
+      "33249": "covered",
+      "33262": "covered",
+      "33263": "covered",
+      "33264": "covered",
+      "33270": "covered",
+      "33271": "covered",
+      "33272": "covered",
+      "33273": "covered",
+      "93260": "covered",
+      "93261": "covered",
+      "93640": "covered",
+      "93641": "covered",
+      "93642": "covered",
+      "93644": "covered",
+      "G0448": "covered",
+      "0408T": "investigational",
+      "0409T": "investigational",
+      "0410T": "investigational",
+      "0411T": "investigational",
+      "0412T": "investigational",
+      "0413T": "investigational",
+      "0414T": "investigational",
+      "0415T": "investigational",
+      "0416T": "investigational",
+      "0417T": "investigational",
+      "0418T": "investigational",
+      "0915T": "investigational",
+      "0916T": "investigational",
+      "0917T": "investigational",
+      "0918T": "investigational",
+      "0919T": "investigational",
+      "0920T": "investigational",
+      "0921T": "investigational",
+      "0922T": "investigational",
+      "0923T": "investigational",
+      "0924T": "investigational",
+      "0925T": "investigational",
+      "0926T": "investigational",
+      "0927T": "investigational",
+      "0928T": "investigational",
+      "0929T": "investigational",
+      "0930T": "investigational",
+      "0931T": "investigational",
+      "0948T": "investigational",
+      "0949T": "investigational",
+      "K1030": "investigational"
+    },
+    "icd10": [
+      "I25.5",
+      "I42.1",
+      "I42.2",
+      "I42.8",
+      "I42.9",
+      "I45.81",
+      "I45.89",
+      "I46.2-I46.9",
+      "I47.20-I47.29",
+      "I49.01",
+      "I49.9",
+      "Q20.0-Q20.9",
+      "Q21.0-Q21.9",
+      "Q22.0-Q22.9",
+      "Q23.0-Q23.9",
+      "Q24.0-Q24.9"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "adult",
+      "text": "adults",
+      "question": "Is the patient an adult?",
+      "evidence_hint": "Date of birth / age in the demographics or H&P."
+    },
+    {
+      "id": "child",
+      "text": "children",
+      "question": "Is the patient a child (pediatric member)?",
+      "evidence_hint": "Date of birth / age in the demographics or H&P."
+    },
+    {
+      "id": "ischemic_cardiomyopathy",
+      "text": "Ischemic cardiomyopathy",
+      "question": "Does the chart document ischemic cardiomyopathy?",
+      "evidence_hint": "'ischemic cardiomyopathy', ICM, I25.5; CAD with reduced EF."
+    },
+    {
+      "id": "nyha_class_2_or_3",
+      "text": "New York Heart Association (NYHA) functional Class II or Class III symptoms",
+      "question": "Is the documented NYHA functional class II or III?",
+      "evidence_hint": "'NYHA class II', 'NYHA III', 'class II-III symptoms' in the cardiology note."
+    },
+    {
+      "id": "mi_at_least_40_days_before",
+      "text": "a history of myocardial infarction at least 40 days before ICD treatment",
+      "question": "Is there a documented myocardial infarction that occurred at least 40 days before the planned ICD implant?",
+      "threshold": {
+        "kind": "number",
+        "op": "gte",
+        "value": 40,
+        "unit": "days"
+      },
+      "evidence_hint": "MI date (STEMI/NSTEMI, 'history of MI') compared with the planned implant date."
+    },
+    {
+      "id": "lvef_35_or_less",
+      "text": "left ventricular ejection fraction of 35% or less",
+      "question": "Is the documented left ventricular ejection fraction 35% or less?",
+      "threshold": {
+        "kind": "number",
+        "op": "lte",
+        "value": 35,
+        "unit": "%"
+      },
+      "evidence_hint": "Echo, nuclear or MRI report: 'LVEF 25%', 'EF 30-35%'."
+    },
+    {
+      "id": "nyha_class_1",
+      "text": "NYHA functional Class I symptoms",
+      "question": "Is the documented NYHA functional class I?",
+      "threshold": {
+        "kind": "enum",
+        "op": "eq",
+        "value": "I",
+        "enum_values": [
+          "I",
+          "II",
+          "III",
+          "IV"
+        ]
+      },
+      "evidence_hint": "'NYHA class I', 'asymptomatic heart failure'."
+    },
+    {
+      "id": "lvef_30_or_less",
+      "text": "left ventricular ejection fraction of 30% or less",
+      "question": "Is the documented left ventricular ejection fraction 30% or less?",
+      "threshold": {
+        "kind": "number",
+        "op": "lte",
+        "value": 30,
+        "unit": "%"
+      },
+      "evidence_hint": "Echo, nuclear or MRI report: 'LVEF 25%', 'EF 20-25%'."
+    },
+    {
+      "id": "nonischemic_dilated_cardiomyopathy",
+      "text": "Nonischemic dilated cardiomyopathy",
+      "question": "Does the chart document nonischemic dilated cardiomyopathy?",
+      "evidence_hint": "'nonischemic cardiomyopathy', NICM, 'dilated cardiomyopathy', I42.0/I42.8/I42.9; normal coronaries."
+    },
+    {
+      "id": "nidcm_reversible_causes_excluded",
+      "text": "after reversible causes have been excluded",
+      "question": "Have reversible causes of the cardiomyopathy been excluded?",
+      "evidence_hint": "Work-up ruling out ischemia, tachycardia-mediated, thyroid, alcohol, myocarditis, peripartum, toxins."
+    },
+    {
+      "id": "omt_response_determined",
+      "text": "the response to optimal medical therapy has been adequately determined",
+      "question": "Has the patient been on optimal (guideline-directed) medical therapy long enough that the response has been adequately determined?",
+      "evidence_hint": "GDMT (beta-blocker, ACEi/ARB/ARNI, MRA, SGLT2i) with duration and a repeat EF after therapy."
+    },
+    {
+      "id": "hypertrophic_cardiomyopathy",
+      "text": "hypertrophic cardiomyopathy",
+      "question": "Does the chart document hypertrophic cardiomyopathy?",
+      "evidence_hint": "'HCM', 'hypertrophic cardiomyopathy', I42.1/I42.2, echo wall thickness."
+    },
+    {
+      "id": "hcm_family_history_premature_scd",
+      "text": "history of premature HCM-related sudden death in 1 or more first-degree relatives younger than 50 years",
+      "question": "Is there a first-degree relative who died suddenly of HCM before age 50?",
+      "threshold": {
+        "kind": "number",
+        "op": "lt",
+        "value": 50,
+        "unit": "years"
+      },
+      "evidence_hint": "Family history: parent/sibling/child sudden cardiac death, age at death."
+    },
+    {
+      "id": "lvh_greater_than_30mm",
+      "text": "left ventricular hypertrophy greater than 30 mm",
+      "question": "Is the maximal left ventricular wall thickness greater than 30 mm?",
+      "threshold": {
+        "kind": "number",
+        "op": "gt",
+        "value": 30,
+        "unit": "mm"
+      },
+      "evidence_hint": "Echo or cardiac MRI: 'maximal wall thickness 32 mm', 'septal thickness 3.1 cm'."
+    },
+    {
+      "id": "nsvt_on_holter",
+      "text": "1 or more runs of nonsustained ventricular tachycardia at heart rates of 120 beats per minute or greater on 24-hour Holter monitoring",
+      "question": "Did 24-hour Holter monitoring show one or more runs of nonsustained ventricular tachycardia at 120 bpm or faster?",
+      "threshold": {
+        "kind": "number",
+        "op": "gte",
+        "value": 120,
+        "unit": "bpm"
+      },
+      "evidence_hint": "Holter report: 'NSVT', 'run of VT, 5 beats at 150 bpm'."
+    },
+    {
+      "id": "unexplained_syncope",
+      "text": "prior unexplained syncope inconsistent with neurocardiogenic origin",
+      "question": "Has the patient had unexplained syncope that is not attributed to a neurocardiogenic (vasovagal) cause?",
+      "evidence_hint": "'syncope', 'unexplained syncope', 'not vasovagal'."
+    },
+    {
+      "id": "hcm_judged_high_risk_by_experienced_physician",
+      "text": "judged to be at high risk for sudden cardiac death by a physician experienced in the care of members with HCM",
+      "question": "Has a physician experienced in HCM care documented that the patient is at high risk of sudden cardiac death?",
+      "evidence_hint": "Cardiology / HCM clinic note: 'high risk for SCD', risk score, recommendation for ICD."
+    },
+    {
+      "id": "congenital_long_qt",
+      "text": "congenital long QT syndrome",
+      "question": "Does the chart document congenital long QT syndrome?",
+      "evidence_hint": "'long QT syndrome', LQTS, LQT1/2/3, I45.81, QTc, genetic testing."
+    },
+    {
+      "id": "brugada_syndrome",
+      "text": "Brugada syndrome",
+      "question": "Does the chart document Brugada syndrome?",
+      "evidence_hint": "'Brugada', type 1 Brugada pattern on ECG, SCN5A."
+    },
+    {
+      "id": "short_qt",
+      "text": "short QT syndrome",
+      "question": "Does the chart document short QT syndrome?",
+      "evidence_hint": "'short QT syndrome', SQTS, short QTc."
+    },
+    {
+      "id": "cpvt",
+      "text": "catecholaminergic polymorphic ventricular tachycardia",
+      "question": "Does the chart document catecholaminergic polymorphic ventricular tachycardia (CPVT)?",
+      "evidence_hint": "'CPVT', RYR2, exercise-induced polymorphic VT."
+    },
+    {
+      "id": "considered_high_risk_scd",
+      "text": "considered to be at high risk for sudden cardiac death",
+      "question": "Is the patient considered (by the treating physician) to be at high risk for sudden cardiac death?",
+      "evidence_hint": "'high risk for sudden cardiac death', 'high risk of SCD' in the assessment or plan."
+    },
+    {
+      "id": "cardiac_sarcoid",
+      "text": "Diagnosis of cardiac sarcoid",
+      "question": "Does the chart document a diagnosis of cardiac sarcoidosis?",
+      "evidence_hint": "'cardiac sarcoid', 'cardiac sarcoidosis', PET/MRI findings, biopsy."
+    },
+    {
+      "id": "life_threatening_ventricular_arrhythmic_event",
+      "text": "a history of a life-threatening clinical event associated with ventricular arrhythmic events such as sustained ventricular tachyarrhythmia",
+      "question": "Has the patient had a life-threatening clinical event associated with a ventricular arrhythmia (e.g., sustained VT/VF, resuscitated cardiac arrest)?",
+      "evidence_hint": "'cardiac arrest', 'VF arrest', 'sustained VT', 'resuscitated', 'syncopal VT'."
+    },
+    {
+      "id": "secondary_reversible_causes_excluded",
+      "text": "after reversible causes (eg, acute ischemia) have been excluded",
+      "question": "Have reversible causes of the arrhythmic event (e.g., acute ischemia, electrolytes, drugs) been excluded?",
+      "evidence_hint": "Catheterization / troponin / electrolyte work-up; 'no reversible cause identified'."
+    },
+    {
+      "id": "acute_mi_less_than_40_days",
+      "text": "an acute myocardial infarction (i.e., less than 40 days before ICD treatment)",
+      "question": "Has the patient had an acute myocardial infarction less than 40 days before the planned ICD implant?",
+      "threshold": {
+        "kind": "number",
+        "op": "lt",
+        "value": 40,
+        "unit": "days"
+      },
+      "evidence_hint": "MI date compared with the planned implant date."
+    },
+    {
+      "id": "nyha_class_4_chf",
+      "text": "NYHA Class IV congestive heart failure",
+      "question": "Is the documented NYHA functional class IV?",
+      "threshold": {
+        "kind": "enum",
+        "op": "eq",
+        "value": "IV",
+        "enum_values": [
+          "I",
+          "II",
+          "III",
+          "IV"
+        ]
+      },
+      "evidence_hint": "'NYHA class IV', 'symptoms at rest'."
+    },
+    {
+      "id": "eligible_for_crt_d",
+      "text": "member is eligible to receive a combination cardiac resynchronization therapy ICD device",
+      "question": "Is the patient eligible for a combination cardiac resynchronization therapy ICD (CRT-D) device?",
+      "evidence_hint": "'CRT-D', 'biventricular ICD', LBBB with wide QRS, CRT candidacy."
+    },
+    {
+      "id": "revascularization_past_3_months",
+      "text": "a cardiac revascularization procedure in the past 3 months (coronary artery bypass graft [CABG] or percutaneous transluminal coronary angioplasty [PTCA])",
+      "question": "Has the patient had CABG or PTCA/PCI within the past 3 months?",
+      "threshold": {
+        "kind": "duration_months",
+        "op": "lt",
+        "value": 3,
+        "unit": "months"
+      },
+      "evidence_hint": "Date of CABG / PCI / stent compared with the planned implant date."
+    },
+    {
+      "id": "revascularization_candidate",
+      "text": "candidates for a cardiac revascularization procedure",
+      "question": "Is the patient a candidate for a cardiac revascularization procedure (CABG or PCI)?",
+      "evidence_hint": "'candidate for revascularization', planned CABG/PCI, viable myocardium with revascularizable lesions."
+    },
+    {
+      "id": "noncardiac_life_expectancy_under_1_year",
+      "text": "noncardiac disease that would be associated with life expectancy less than 1 year",
+      "question": "Does the patient have a noncardiac disease with an expected survival of less than 1 year?",
+      "threshold": {
+        "kind": "number",
+        "op": "lt",
+        "value": 1,
+        "unit": "years"
+      },
+      "evidence_hint": "Metastatic cancer, end-stage disease, hospice, 'prognosis < 1 year'."
+    },
+    {
+      "id": "ped_cardiac_arrest_survivor_vt_vf",
+      "text": "survivors of cardiac arrest due to ventricular tachycardia or ventricular fibrillation",
+      "question": "Is the child a survivor of cardiac arrest caused by ventricular tachycardia or ventricular fibrillation?",
+      "evidence_hint": "'cardiac arrest', 'VF arrest', 'resuscitated', documented VT/VF rhythm."
+    },
+    {
+      "id": "ped_reversible_causes_excluded",
+      "text": "after reversible causes have been excluded",
+      "question": "Have reversible causes of the cardiac arrest been excluded?",
+      "evidence_hint": "Work-up for electrolytes, drugs, ischemia, myocarditis; 'no reversible cause'."
+    },
+    {
+      "id": "long_qt",
+      "text": "long QT syndrome",
+      "question": "Does the chart document long QT syndrome?",
+      "evidence_hint": "'long QT syndrome', LQTS, I45.81, QTc, genetic testing."
+    },
+    {
+      "id": "sudden_cardiac_arrest_survivor",
+      "text": "survivors of sudden cardiac arrest",
+      "question": "Is the patient a survivor of sudden cardiac arrest?",
+      "evidence_hint": "'sudden cardiac arrest', 'aborted SCD', 'resuscitated cardiac arrest'."
+    },
+    {
+      "id": "with_beta_blockers",
+      "text": "in combination with beta-blockers",
+      "question": "Is the patient on beta-blocker therapy (the ICD being used in combination with beta-blockers)?",
+      "evidence_hint": "Medication list: propranolol, nadolol, metoprolol, atenolol."
+    },
+    {
+      "id": "cannot_take_beta_blockers",
+      "text": "cannot take beta-blockers",
+      "question": "Is it documented that the patient cannot take beta-blockers (intolerance, contraindication or failure)?",
+      "evidence_hint": "'intolerant of beta-blockers', 'contraindicated', 'unable to tolerate'."
+    },
+    {
+      "id": "csd_or_other_medications_not_appropriate",
+      "text": "cardiac sympathetic denervation or other medications are not considered appropriate",
+      "question": "Is it documented that cardiac sympathetic denervation and other medications are not considered appropriate for this patient?",
+      "evidence_hint": "'not a candidate for sympathectomy / LCSD', 'alternative medications not appropriate'."
+    },
+    {
+      "id": "cpvt_arrest_despite_maximal_therapy",
+      "text": "experience cardiac arrest despite maximally tolerated beta-blockers, flecainide, or cardiac sympathetic denervation",
+      "question": "Did the patient have a cardiac arrest despite maximally tolerated beta-blockers, flecainide, or cardiac sympathetic denervation?",
+      "evidence_hint": "Cardiac arrest while on nadolol/propranolol, flecainide, or after LCSD."
+    },
+    {
+      "id": "documented_spontaneous_sustained_vt",
+      "text": "have documented spontaneous sustained ventricular tachycardia",
+      "question": "Is there documented spontaneous (not induced) sustained ventricular tachycardia?",
+      "evidence_hint": "ECG / monitor strip showing sustained VT (> 30 s or requiring intervention) that was not induced at EP study."
+    },
+    {
+      "id": "arrhythmogenic_cardiomyopathy",
+      "text": "arrhythmogenic cardiomyopathy",
+      "question": "Does the chart document arrhythmogenic cardiomyopathy (e.g., ARVC)?",
+      "evidence_hint": "'arrhythmogenic cardiomyopathy', ARVC/ARVD, desmosomal gene variant, cardiac MRI findings."
+    },
+    {
+      "id": "sustained_vt_not_hemodynamically_tolerated",
+      "text": "sustained ventricular tachycardia that is not hemodynamically tolerated",
+      "question": "Is there documented sustained ventricular tachycardia that was not hemodynamically tolerated (syncope, hypotension, shock)?",
+      "evidence_hint": "'hemodynamically unstable VT', 'VT with syncope/hypotension', cardioversion required."
+    },
+    {
+      "id": "sustained_vt_not_reversible",
+      "text": "have documented spontaneous sustained ventricular tachycardia that is not due to completely reversible causes",
+      "question": "Is there documented spontaneous sustained ventricular tachycardia that is not due to a completely reversible cause?",
+      "evidence_hint": "Sustained VT on ECG/monitor with no reversible cause (electrolytes, drugs, acute myocarditis) identified."
+    },
+    {
+      "id": "congenital_heart_disease",
+      "text": "congenital heart disease",
+      "question": "Does the chart document congenital heart disease?",
+      "evidence_hint": "Tetralogy of Fallot, TGA, single ventricle, Q20-Q24 diagnoses, prior congenital heart surgery."
+    },
+    {
+      "id": "symptomatic_sustained_vt_with_chd",
+      "text": "symptomatic, sustained ventricular tachycardia in association with congenital heart disease",
+      "question": "Is there documented symptomatic, sustained ventricular tachycardia in a patient with congenital heart disease?",
+      "evidence_hint": "Sustained VT with palpitations/syncope/presyncope in a congenital heart disease patient."
+    },
+    {
+      "id": "hemodynamic_and_ep_evaluation",
+      "text": "have undergone hemodynamic and electrophysiologic evaluation",
+      "question": "Has the patient undergone both hemodynamic and electrophysiologic evaluation?",
+      "evidence_hint": "Cardiac catheterization / hemodynamic study and EP study reports."
+    },
+    {
+      "id": "lack_of_vascular_access",
+      "text": "lack of adequate vascular access",
+      "question": "Does the patient lack adequate vascular access for transvenous leads?",
+      "evidence_hint": "Venous occlusion / stenosis on venogram, bilateral subclavian occlusion, no usable central veins."
+    },
+    {
+      "id": "reason_to_preserve_vascular_access",
+      "text": "compelling reason to preserve existing vascular access (ie, need for chronic dialysis; younger members with anticipated long-term need for ICD therapy)",
+      "question": "Is there a compelling reason to preserve the patient's vascular access, such as chronic dialysis or a young patient with an anticipated long-term need for ICD therapy?",
+      "evidence_hint": "ESRD on hemodialysis / AV fistula; young age with lifelong ICD need stated by the physician."
+    },
+    {
+      "id": "prior_transvenous_explant_for_complication",
+      "text": "history of need for explanation of a transvenous ICD due to a complication",
+      "question": "Was a prior transvenous ICD explanted because of a complication (infection, lead failure, etc.)?",
+      "evidence_hint": "'lead extraction', 'system explant for endocarditis / pocket infection / lead fracture'."
+    },
+    {
+      "id": "ongoing_need_for_icd",
+      "text": "with ongoing need for ICD therapy",
+      "question": "Does the patient still have an ongoing need for ICD therapy?",
+      "evidence_hint": "'continues to meet ICD indication', 'ongoing need for defibrillator'."
+    },
+    {
+      "id": "no_antibradycardia_pacing_indication",
+      "text": "Have no indication for antibradycardia pacing",
+      "question": "Is it documented that the patient has no indication for antibradycardia pacing?",
+      "evidence_hint": "'no pacing indication', 'no bradycardia / AV block', normal sinus and AV conduction."
+    },
+    {
+      "id": "no_atp_responsive_ventricular_arrhythmias",
+      "text": "Do not have ventricular arrhythmias that are known or anticipated to respond to antitachycardia pacing",
+      "question": "Is it documented that the patient has no ventricular arrhythmias known or anticipated to respond to antitachycardia pacing (e.g., no recurrent monomorphic VT)?",
+      "evidence_hint": "'no monomorphic VT', 'ATP not expected to be needed', EP assessment of ATP candidacy."
+    },
+    {
+      "id": "device_or_lead_malfunction",
+      "text": "device/lead malfunction",
+      "question": "Is there a documented malfunction of the ICD device or a lead?",
+      "evidence_hint": "Device interrogation: lead fracture, impedance change, noise, inappropriate shocks, advisory/recall failure."
+    },
+    {
+      "id": "change_in_medical_condition",
+      "text": "change in member's medical condition",
+      "question": "Has the patient's medical condition changed in a way that requires a different device or replacement?",
+      "evidence_hint": "New pacing need, upgrade to CRT, infection, pocket erosion stated as the reason for replacement."
+    },
+    {
+      "id": "battery_depletion",
+      "text": "battery depletion",
+      "question": "Is the ICD battery depleted or near depletion?",
+      "evidence_hint": "Interrogation: 'ERI', 'elective replacement indicator', 'battery at ERI/EOL', remaining longevity."
+    },
+    {
+      "id": "generator_end_of_life",
+      "text": "generator end-of-life",
+      "question": "Has the ICD generator reached end-of-life?",
+      "evidence_hint": "Interrogation: 'EOL', 'end of life', 'end of service'."
+    },
+    {
+      "id": "replacement_of_an_icd",
+      "text": "Replacement of an ICD",
+      "question": "Is this order to replace an ICD system, generator or lead that the patient already has implanted, rather than a first-time implant?",
+      "evidence_hint": "Prior ICD implant documented (device, implant date, interrogation); order states generator change, lead replacement or revision of an existing system."
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "adult_primary_ischemic_nyha_2_3",
+      "name": "Primary Prevention 1: Ischemic cardiomyopathy, NYHA Class II or III, MI at least 40 days before, LVEF 35% or less",
+      "applies_to_cpt": [
+        "33216",
+        "33217",
+        "33225",
+        "33230",
+        "33231",
+        "33240",
+        "33249",
+        "93640",
+        "93641",
+        "93642",
+        "G0448"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "Adult, primary prevention",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "adult"
+          },
+          {
+            "type": "all",
+            "label": "1. Ischemic cardiomyopathy with NYHA functional Class II or Class III symptoms, a history of myocardial infarction at least 40 days before ICD treatment, AND left ventricular ejection fraction of 35% or less",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "ischemic_cardiomyopathy"
+              },
+              {
+                "type": "leaf",
+                "criterion": "nyha_class_2_or_3"
+              },
+              {
+                "type": "leaf",
+                "criterion": "mi_at_least_40_days_before"
+              },
+              {
+                "type": "leaf",
+                "criterion": "lvef_35_or_less"
+              }
+            ]
+          },
+          {
+            "type": "not",
+            "label": "Has had NONE of the following (primary prevention exclusions)",
+            "child": {
+              "type": "any",
+              "label": "ANY of the following",
+              "children": [
+                {
+                  "type": "leaf",
+                  "criterion": "acute_mi_less_than_40_days"
+                },
+                {
+                  "type": "all",
+                  "label": "NYHA Class IV congestive heart failure (unless member is eligible to receive a combination cardiac resynchronization therapy ICD device)",
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "criterion": "nyha_class_4_chf"
+                    },
+                    {
+                      "type": "not",
+                      "label": "unless member is eligible to receive a combination cardiac resynchronization therapy ICD device",
+                      "child": {
+                        "type": "leaf",
+                        "criterion": "eligible_for_crt_d"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "leaf",
+                  "criterion": "revascularization_past_3_months"
+                },
+                {
+                  "type": "leaf",
+                  "criterion": "revascularization_candidate"
+                },
+                {
+                  "type": "leaf",
+                  "criterion": "noncardiac_life_expectancy_under_1_year"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "notes": [
+        "Primary prevention: the ICD is experimental or investigational if the member has had ANY of the listed exclusions (acute MI < 40 days, NYHA IV unless CRT-D eligible, revascularization in the past 3 months or candidate, noncardiac life expectancy < 1 year); modelled as not(any(...)) inside the pathway."
+      ]
+    },
+    {
+      "id": "adult_primary_ischemic_nyha_1",
+      "name": "Primary Prevention 2: Ischemic cardiomyopathy, NYHA Class I, MI at least 40 days before, LVEF 30% or less",
+      "applies_to_cpt": [
+        "33216",
+        "33217",
+        "33225",
+        "33230",
+        "33231",
+        "33240",
+        "33249",
+        "93640",
+        "93641",
+        "93642",
+        "G0448"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "Adult, primary prevention",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "adult"
+          },
+          {
+            "type": "all",
+            "label": "2. Ischemic cardiomyopathy with NYHA functional Class I symptoms, a history of myocardial infarction at least 40 days before ICD treatment, AND left ventricular ejection fraction of 30% or less",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "ischemic_cardiomyopathy"
+              },
+              {
+                "type": "leaf",
+                "criterion": "nyha_class_1"
+              },
+              {
+                "type": "leaf",
+                "criterion": "mi_at_least_40_days_before"
+              },
+              {
+                "type": "leaf",
+                "criterion": "lvef_30_or_less"
+              }
+            ]
+          },
+          {
+            "type": "not",
+            "label": "Has had NONE of the following (primary prevention exclusions)",
+            "child": {
+              "type": "any",
+              "label": "ANY of the following",
+              "children": [
+                {
+                  "type": "leaf",
+                  "criterion": "acute_mi_less_than_40_days"
+                },
+                {
+                  "type": "all",
+                  "label": "NYHA Class IV congestive heart failure (unless member is eligible to receive a combination cardiac resynchronization therapy ICD device)",
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "criterion": "nyha_class_4_chf"
+                    },
+                    {
+                      "type": "not",
+                      "label": "unless member is eligible to receive a combination cardiac resynchronization therapy ICD device",
+                      "child": {
+                        "type": "leaf",
+                        "criterion": "eligible_for_crt_d"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "leaf",
+                  "criterion": "revascularization_past_3_months"
+                },
+                {
+                  "type": "leaf",
+                  "criterion": "revascularization_candidate"
+                },
+                {
+                  "type": "leaf",
+                  "criterion": "noncardiac_life_expectancy_under_1_year"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "notes": [
+        "Primary prevention: the ICD is experimental or investigational if the member has had ANY of the listed exclusions (acute MI < 40 days, NYHA IV unless CRT-D eligible, revascularization in the past 3 months or candidate, noncardiac life expectancy < 1 year); modelled as not(any(...)) inside the pathway."
+      ]
+    },
+    {
+      "id": "adult_primary_nonischemic_dcm",
+      "name": "Primary Prevention 3: Nonischemic dilated cardiomyopathy, LVEF 35% or less",
+      "applies_to_cpt": [
+        "33216",
+        "33217",
+        "33225",
+        "33230",
+        "33231",
+        "33240",
+        "33249",
+        "93640",
+        "93641",
+        "93642",
+        "G0448"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "Adult, primary prevention",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "adult"
+          },
+          {
+            "type": "all",
+            "label": "3. Nonischemic dilated cardiomyopathy AND left ventricular ejection fraction of 35% or less, after reversible causes have been excluded, AND the response to optimal medical therapy has been adequately determined",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "nonischemic_dilated_cardiomyopathy"
+              },
+              {
+                "type": "leaf",
+                "criterion": "lvef_35_or_less"
+              },
+              {
+                "type": "leaf",
+                "criterion": "nidcm_reversible_causes_excluded"
+              },
+              {
+                "type": "leaf",
+                "criterion": "omt_response_determined"
+              }
+            ]
+          },
+          {
+            "type": "not",
+            "label": "Has had NONE of the following (primary prevention exclusions)",
+            "child": {
+              "type": "any",
+              "label": "ANY of the following",
+              "children": [
+                {
+                  "type": "leaf",
+                  "criterion": "acute_mi_less_than_40_days"
+                },
+                {
+                  "type": "all",
+                  "label": "NYHA Class IV congestive heart failure (unless member is eligible to receive a combination cardiac resynchronization therapy ICD device)",
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "criterion": "nyha_class_4_chf"
+                    },
+                    {
+                      "type": "not",
+                      "label": "unless member is eligible to receive a combination cardiac resynchronization therapy ICD device",
+                      "child": {
+                        "type": "leaf",
+                        "criterion": "eligible_for_crt_d"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "leaf",
+                  "criterion": "revascularization_past_3_months"
+                },
+                {
+                  "type": "leaf",
+                  "criterion": "revascularization_candidate"
+                },
+                {
+                  "type": "leaf",
+                  "criterion": "noncardiac_life_expectancy_under_1_year"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "notes": [
+        "Primary prevention: the ICD is experimental or investigational if the member has had ANY of the listed exclusions (acute MI < 40 days, NYHA IV unless CRT-D eligible, revascularization in the past 3 months or candidate, noncardiac life expectancy < 1 year); modelled as not(any(...)) inside the pathway."
+      ]
+    },
+    {
+      "id": "adult_primary_hcm",
+      "name": "Primary Prevention 4: Hypertrophic cardiomyopathy with major risk factors for sudden cardiac death",
+      "applies_to_cpt": [
+        "33216",
+        "33217",
+        "33225",
+        "33230",
+        "33231",
+        "33240",
+        "33249",
+        "93640",
+        "93641",
+        "93642",
+        "G0448"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "Adult, primary prevention",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "adult"
+          },
+          {
+            "type": "all",
+            "label": "4. Hypertrophic cardiomyopathy (HCM) with 1 or more major risk factors for sudden cardiac death and judged to be at high risk",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "hypertrophic_cardiomyopathy"
+              },
+              {
+                "type": "any",
+                "label": "1 or more major risk factors for sudden cardiac death",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "hcm_family_history_premature_scd"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "lvh_greater_than_30mm"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "nsvt_on_holter"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "unexplained_syncope"
+                  }
+                ]
+              },
+              {
+                "type": "leaf",
+                "criterion": "hcm_judged_high_risk_by_experienced_physician"
+              }
+            ]
+          },
+          {
+            "type": "not",
+            "label": "Has had NONE of the following (primary prevention exclusions)",
+            "child": {
+              "type": "any",
+              "label": "ANY of the following",
+              "children": [
+                {
+                  "type": "leaf",
+                  "criterion": "acute_mi_less_than_40_days"
+                },
+                {
+                  "type": "all",
+                  "label": "NYHA Class IV congestive heart failure (unless member is eligible to receive a combination cardiac resynchronization therapy ICD device)",
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "criterion": "nyha_class_4_chf"
+                    },
+                    {
+                      "type": "not",
+                      "label": "unless member is eligible to receive a combination cardiac resynchronization therapy ICD device",
+                      "child": {
+                        "type": "leaf",
+                        "criterion": "eligible_for_crt_d"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "leaf",
+                  "criterion": "revascularization_past_3_months"
+                },
+                {
+                  "type": "leaf",
+                  "criterion": "revascularization_candidate"
+                },
+                {
+                  "type": "leaf",
+                  "criterion": "noncardiac_life_expectancy_under_1_year"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "notes": [
+        "Primary prevention: the ICD is experimental or investigational if the member has had ANY of the listed exclusions (acute MI < 40 days, NYHA IV unless CRT-D eligible, revascularization in the past 3 months or candidate, noncardiac life expectancy < 1 year); modelled as not(any(...)) inside the pathway."
+      ]
+    },
+    {
+      "id": "adult_primary_ion_channelopathy",
+      "name": "Primary Prevention 5: Cardiac ion channelopathy at high risk for sudden cardiac death",
+      "applies_to_cpt": [
+        "33216",
+        "33217",
+        "33225",
+        "33230",
+        "33231",
+        "33240",
+        "33249",
+        "93640",
+        "93641",
+        "93642",
+        "G0448"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "Adult, primary prevention",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "adult"
+          },
+          {
+            "type": "all",
+            "label": "5. Diagnosis of ONE of the following cardiac ion channelopathies and considered to be at high risk for sudden cardiac death",
+            "children": [
+              {
+                "type": "any",
+                "label": "ONE of the following cardiac ion channelopathies",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "congenital_long_qt"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "brugada_syndrome"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "short_qt"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "cpvt"
+                  }
+                ]
+              },
+              {
+                "type": "leaf",
+                "criterion": "considered_high_risk_scd"
+              }
+            ]
+          },
+          {
+            "type": "not",
+            "label": "Has had NONE of the following (primary prevention exclusions)",
+            "child": {
+              "type": "any",
+              "label": "ANY of the following",
+              "children": [
+                {
+                  "type": "leaf",
+                  "criterion": "acute_mi_less_than_40_days"
+                },
+                {
+                  "type": "all",
+                  "label": "NYHA Class IV congestive heart failure (unless member is eligible to receive a combination cardiac resynchronization therapy ICD device)",
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "criterion": "nyha_class_4_chf"
+                    },
+                    {
+                      "type": "not",
+                      "label": "unless member is eligible to receive a combination cardiac resynchronization therapy ICD device",
+                      "child": {
+                        "type": "leaf",
+                        "criterion": "eligible_for_crt_d"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "leaf",
+                  "criterion": "revascularization_past_3_months"
+                },
+                {
+                  "type": "leaf",
+                  "criterion": "revascularization_candidate"
+                },
+                {
+                  "type": "leaf",
+                  "criterion": "noncardiac_life_expectancy_under_1_year"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "notes": [
+        "Primary prevention: the ICD is experimental or investigational if the member has had ANY of the listed exclusions (acute MI < 40 days, NYHA IV unless CRT-D eligible, revascularization in the past 3 months or candidate, noncardiac life expectancy < 1 year); modelled as not(any(...)) inside the pathway."
+      ]
+    },
+    {
+      "id": "adult_primary_cardiac_sarcoid",
+      "name": "Primary Prevention 6: Cardiac sarcoid at high risk for sudden cardiac death",
+      "applies_to_cpt": [
+        "33216",
+        "33217",
+        "33225",
+        "33230",
+        "33231",
+        "33240",
+        "33249",
+        "93640",
+        "93641",
+        "93642",
+        "G0448"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "Adult, primary prevention",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "adult"
+          },
+          {
+            "type": "all",
+            "label": "6. Diagnosis of cardiac sarcoid and considered to be at high risk for sudden cardiac death",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "cardiac_sarcoid"
+              },
+              {
+                "type": "leaf",
+                "criterion": "considered_high_risk_scd"
+              }
+            ]
+          },
+          {
+            "type": "not",
+            "label": "Has had NONE of the following (primary prevention exclusions)",
+            "child": {
+              "type": "any",
+              "label": "ANY of the following",
+              "children": [
+                {
+                  "type": "leaf",
+                  "criterion": "acute_mi_less_than_40_days"
+                },
+                {
+                  "type": "all",
+                  "label": "NYHA Class IV congestive heart failure (unless member is eligible to receive a combination cardiac resynchronization therapy ICD device)",
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "criterion": "nyha_class_4_chf"
+                    },
+                    {
+                      "type": "not",
+                      "label": "unless member is eligible to receive a combination cardiac resynchronization therapy ICD device",
+                      "child": {
+                        "type": "leaf",
+                        "criterion": "eligible_for_crt_d"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "leaf",
+                  "criterion": "revascularization_past_3_months"
+                },
+                {
+                  "type": "leaf",
+                  "criterion": "revascularization_candidate"
+                },
+                {
+                  "type": "leaf",
+                  "criterion": "noncardiac_life_expectancy_under_1_year"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "notes": [
+        "Primary prevention: the ICD is experimental or investigational if the member has had ANY of the listed exclusions (acute MI < 40 days, NYHA IV unless CRT-D eligible, revascularization in the past 3 months or candidate, noncardiac life expectancy < 1 year); modelled as not(any(...)) inside the pathway."
+      ]
+    },
+    {
+      "id": "adult_secondary_prevention",
+      "name": "Secondary Prevention: life-threatening ventricular arrhythmic event",
+      "applies_to_cpt": [
+        "33216",
+        "33217",
+        "33225",
+        "33230",
+        "33231",
+        "33240",
+        "33249",
+        "93640",
+        "93641",
+        "93642",
+        "G0448"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "Adult, secondary prevention",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "adult"
+          },
+          {
+            "type": "all",
+            "label": "Members with a history of a life-threatening clinical event associated with ventricular arrhythmic events such as sustained ventricular tachyarrhythmia after reversible causes (eg, acute ischemia) have been excluded",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "life_threatening_ventricular_arrhythmic_event"
+              },
+              {
+                "type": "leaf",
+                "criterion": "secondary_reversible_causes_excluded"
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "The primary-prevention exclusion list is not applied to secondary prevention; the document says only that members who do not meet the secondary prevention criteria are experimental/investigational."
+      ]
+    },
+    {
+      "id": "pediatric_cardiac_arrest_survivor",
+      "name": "Pediatrics: survivors of cardiac arrest due to VT or VF",
+      "applies_to_cpt": [
+        "33216",
+        "33217",
+        "33225",
+        "33230",
+        "33231",
+        "33240",
+        "33249",
+        "93640",
+        "93641",
+        "93642",
+        "G0448"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "Pediatric",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "child"
+          },
+          {
+            "type": "all",
+            "label": "survivors of cardiac arrest due to ventricular tachycardia or ventricular fibrillation, after reversible causes have been excluded",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "ped_cardiac_arrest_survivor_vt_vf"
+              },
+              {
+                "type": "leaf",
+                "criterion": "ped_reversible_causes_excluded"
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "All other pediatric indications are experimental or investigational."
+      ]
+    },
+    {
+      "id": "pediatric_long_qt_sca_survivor",
+      "name": "Pediatrics: long QT syndrome, survivor of sudden cardiac arrest, with beta-blockers",
+      "applies_to_cpt": [
+        "33216",
+        "33217",
+        "33225",
+        "33230",
+        "33231",
+        "33240",
+        "33249",
+        "93640",
+        "93641",
+        "93642",
+        "G0448"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "Pediatric",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "child"
+          },
+          {
+            "type": "all",
+            "label": "long QT syndrome in members who are survivors of sudden cardiac arrest (in combination with beta-blockers)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "long_qt"
+              },
+              {
+                "type": "leaf",
+                "criterion": "sudden_cardiac_arrest_survivor"
+              },
+              {
+                "type": "leaf",
+                "criterion": "with_beta_blockers"
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "All other pediatric indications are experimental or investigational."
+      ]
+    },
+    {
+      "id": "pediatric_long_qt_cannot_take_beta_blockers",
+      "name": "Pediatrics: long QT syndrome, cannot take beta-blockers",
+      "applies_to_cpt": [
+        "33216",
+        "33217",
+        "33225",
+        "33230",
+        "33231",
+        "33240",
+        "33249",
+        "93640",
+        "93641",
+        "93642",
+        "G0448"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "Pediatric",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "child"
+          },
+          {
+            "type": "all",
+            "label": "long QT syndrome in members who cannot take beta-blockers and for whom cardiac sympathetic denervation or other medications are not considered appropriate",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "long_qt"
+              },
+              {
+                "type": "leaf",
+                "criterion": "cannot_take_beta_blockers"
+              },
+              {
+                "type": "leaf",
+                "criterion": "csd_or_other_medications_not_appropriate"
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "All other pediatric indications are experimental or investigational."
+      ]
+    },
+    {
+      "id": "pediatric_cpvt",
+      "name": "Pediatrics: catecholaminergic polymorphic VT with cardiac arrest despite therapy",
+      "applies_to_cpt": [
+        "33216",
+        "33217",
+        "33225",
+        "33230",
+        "33231",
+        "33240",
+        "33249",
+        "93640",
+        "93641",
+        "93642",
+        "G0448"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "Pediatric",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "child"
+          },
+          {
+            "type": "all",
+            "label": "catecholaminergic polymorphic ventricular tachycardia in members who experience cardiac arrest despite maximally tolerated beta-blockers, flecainide, or cardiac sympathetic denervation",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "cpvt"
+              },
+              {
+                "type": "leaf",
+                "criterion": "cpvt_arrest_despite_maximal_therapy"
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "All other pediatric indications are experimental or investigational."
+      ]
+    },
+    {
+      "id": "pediatric_brugada",
+      "name": "Pediatrics: Brugada syndrome with sudden cardiac arrest or spontaneous sustained VT",
+      "applies_to_cpt": [
+        "33216",
+        "33217",
+        "33225",
+        "33230",
+        "33231",
+        "33240",
+        "33249",
+        "93640",
+        "93641",
+        "93642",
+        "G0448"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "Pediatric",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "child"
+          },
+          {
+            "type": "all",
+            "label": "Brugada syndrome in members who are survivors of sudden cardiac arrest or have documented spontaneous sustained ventricular tachycardia",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "brugada_syndrome"
+              },
+              {
+                "type": "any",
+                "label": "survivors of sudden cardiac arrest or have documented spontaneous sustained ventricular tachycardia",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "sudden_cardiac_arrest_survivor"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "documented_spontaneous_sustained_vt"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "All other pediatric indications are experimental or investigational."
+      ]
+    },
+    {
+      "id": "pediatric_hcm",
+      "name": "Pediatrics: hypertrophic cardiomyopathy with sudden cardiac arrest or spontaneous sustained VT",
+      "applies_to_cpt": [
+        "33216",
+        "33217",
+        "33225",
+        "33230",
+        "33231",
+        "33240",
+        "33249",
+        "93640",
+        "93641",
+        "93642",
+        "G0448"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "Pediatric",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "child"
+          },
+          {
+            "type": "all",
+            "label": "hypertrophic cardiomyopathy in members who are survivors of sudden cardiac arrest or have documented spontaneous sustained ventricular tachycardia",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "hypertrophic_cardiomyopathy"
+              },
+              {
+                "type": "any",
+                "label": "survivors of sudden cardiac arrest or have documented spontaneous sustained ventricular tachycardia",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "sudden_cardiac_arrest_survivor"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "documented_spontaneous_sustained_vt"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "All other pediatric indications are experimental or investigational."
+      ]
+    },
+    {
+      "id": "pediatric_arrhythmogenic_cardiomyopathy",
+      "name": "Pediatrics: arrhythmogenic cardiomyopathy with sudden cardiac arrest or non-tolerated sustained VT",
+      "applies_to_cpt": [
+        "33216",
+        "33217",
+        "33225",
+        "33230",
+        "33231",
+        "33240",
+        "33249",
+        "93640",
+        "93641",
+        "93642",
+        "G0448"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "Pediatric",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "child"
+          },
+          {
+            "type": "all",
+            "label": "arrhythmogenic cardiomyopathy in members who are survivors of sudden cardiac arrest or sustained ventricular tachycardia that is not hemodynamically tolerated",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "arrhythmogenic_cardiomyopathy"
+              },
+              {
+                "type": "any",
+                "label": "survivors of sudden cardiac arrest or sustained ventricular tachycardia that is not hemodynamically tolerated",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "sudden_cardiac_arrest_survivor"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "sustained_vt_not_hemodynamically_tolerated"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "All other pediatric indications are experimental or investigational."
+      ]
+    },
+    {
+      "id": "pediatric_nonischemic_dcm",
+      "name": "Pediatrics: nonischemic dilated cardiomyopathy with sudden cardiac arrest or spontaneous sustained VT",
+      "applies_to_cpt": [
+        "33216",
+        "33217",
+        "33225",
+        "33230",
+        "33231",
+        "33240",
+        "33249",
+        "93640",
+        "93641",
+        "93642",
+        "G0448"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "Pediatric",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "child"
+          },
+          {
+            "type": "all",
+            "label": "nonischemic dilated cardiomyopathy in members who are survivors of sudden cardiac arrest or have documented spontaneous sustained ventricular tachycardia that is not due to completely reversible causes",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "nonischemic_dilated_cardiomyopathy"
+              },
+              {
+                "type": "any",
+                "label": "survivors of sudden cardiac arrest or have documented spontaneous sustained ventricular tachycardia that is not due to completely reversible causes",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "sudden_cardiac_arrest_survivor"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "sustained_vt_not_reversible"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "All other pediatric indications are experimental or investigational."
+      ]
+    },
+    {
+      "id": "pediatric_congenital_heart_disease_sca",
+      "name": "Pediatrics: congenital heart disease, survivor of sudden cardiac arrest",
+      "applies_to_cpt": [
+        "33216",
+        "33217",
+        "33225",
+        "33230",
+        "33231",
+        "33240",
+        "33249",
+        "93640",
+        "93641",
+        "93642",
+        "G0448"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "Pediatric",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "child"
+          },
+          {
+            "type": "all",
+            "label": "congenital heart disease in members who are survivors of sudden cardiac arrest, after reversible causes have been excluded",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "congenital_heart_disease"
+              },
+              {
+                "type": "leaf",
+                "criterion": "sudden_cardiac_arrest_survivor"
+              },
+              {
+                "type": "leaf",
+                "criterion": "ped_reversible_causes_excluded"
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "All other pediatric indications are experimental or investigational."
+      ]
+    },
+    {
+      "id": "pediatric_congenital_heart_disease_sustained_vt",
+      "name": "Pediatrics: symptomatic sustained VT with congenital heart disease after hemodynamic and EP evaluation",
+      "applies_to_cpt": [
+        "33216",
+        "33217",
+        "33225",
+        "33230",
+        "33231",
+        "33240",
+        "33249",
+        "93640",
+        "93641",
+        "93642",
+        "G0448"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "Pediatric",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "child"
+          },
+          {
+            "type": "all",
+            "label": "symptomatic, sustained ventricular tachycardia in association with congenital heart disease in members who have undergone hemodynamic and electrophysiologic evaluation",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "symptomatic_sustained_vt_with_chd"
+              },
+              {
+                "type": "leaf",
+                "criterion": "hemodynamic_and_ep_evaluation"
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "All other pediatric indications are experimental or investigational."
+      ]
+    },
+    {
+      "id": "subcutaneous_icd",
+      "name": "Subcutaneous Implantable Cardioverter Defibrillator",
+      "applies_to_cpt": [
+        "33270",
+        "33271",
+        "93260",
+        "93261",
+        "93644"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "meet the criteria for ICD implantation for primary or secondary prevention AND meet ALL of the following criteria",
+        "children": [
+          {
+            "type": "any",
+            "label": "meet the criteria for ICD implantation for primary or secondary prevention (adults or children)",
+            "children": [
+              {
+                "type": "all",
+                "label": "Adult, primary prevention",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "adult"
+                  },
+                  {
+                    "type": "all",
+                    "label": "1. Ischemic cardiomyopathy with NYHA functional Class II or Class III symptoms, a history of myocardial infarction at least 40 days before ICD treatment, AND left ventricular ejection fraction of 35% or less",
+                    "children": [
+                      {
+                        "type": "leaf",
+                        "criterion": "ischemic_cardiomyopathy"
+                      },
+                      {
+                        "type": "leaf",
+                        "criterion": "nyha_class_2_or_3"
+                      },
+                      {
+                        "type": "leaf",
+                        "criterion": "mi_at_least_40_days_before"
+                      },
+                      {
+                        "type": "leaf",
+                        "criterion": "lvef_35_or_less"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "not",
+                    "label": "Has had NONE of the following (primary prevention exclusions)",
+                    "child": {
+                      "type": "any",
+                      "label": "ANY of the following",
+                      "children": [
+                        {
+                          "type": "leaf",
+                          "criterion": "acute_mi_less_than_40_days"
+                        },
+                        {
+                          "type": "all",
+                          "label": "NYHA Class IV congestive heart failure (unless member is eligible to receive a combination cardiac resynchronization therapy ICD device)",
+                          "children": [
+                            {
+                              "type": "leaf",
+                              "criterion": "nyha_class_4_chf"
+                            },
+                            {
+                              "type": "not",
+                              "label": "unless member is eligible to receive a combination cardiac resynchronization therapy ICD device",
+                              "child": {
+                                "type": "leaf",
+                                "criterion": "eligible_for_crt_d"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "leaf",
+                          "criterion": "revascularization_past_3_months"
+                        },
+                        {
+                          "type": "leaf",
+                          "criterion": "revascularization_candidate"
+                        },
+                        {
+                          "type": "leaf",
+                          "criterion": "noncardiac_life_expectancy_under_1_year"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "all",
+                "label": "Adult, primary prevention",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "adult"
+                  },
+                  {
+                    "type": "all",
+                    "label": "2. Ischemic cardiomyopathy with NYHA functional Class I symptoms, a history of myocardial infarction at least 40 days before ICD treatment, AND left ventricular ejection fraction of 30% or less",
+                    "children": [
+                      {
+                        "type": "leaf",
+                        "criterion": "ischemic_cardiomyopathy"
+                      },
+                      {
+                        "type": "leaf",
+                        "criterion": "nyha_class_1"
+                      },
+                      {
+                        "type": "leaf",
+                        "criterion": "mi_at_least_40_days_before"
+                      },
+                      {
+                        "type": "leaf",
+                        "criterion": "lvef_30_or_less"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "not",
+                    "label": "Has had NONE of the following (primary prevention exclusions)",
+                    "child": {
+                      "type": "any",
+                      "label": "ANY of the following",
+                      "children": [
+                        {
+                          "type": "leaf",
+                          "criterion": "acute_mi_less_than_40_days"
+                        },
+                        {
+                          "type": "all",
+                          "label": "NYHA Class IV congestive heart failure (unless member is eligible to receive a combination cardiac resynchronization therapy ICD device)",
+                          "children": [
+                            {
+                              "type": "leaf",
+                              "criterion": "nyha_class_4_chf"
+                            },
+                            {
+                              "type": "not",
+                              "label": "unless member is eligible to receive a combination cardiac resynchronization therapy ICD device",
+                              "child": {
+                                "type": "leaf",
+                                "criterion": "eligible_for_crt_d"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "leaf",
+                          "criterion": "revascularization_past_3_months"
+                        },
+                        {
+                          "type": "leaf",
+                          "criterion": "revascularization_candidate"
+                        },
+                        {
+                          "type": "leaf",
+                          "criterion": "noncardiac_life_expectancy_under_1_year"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "all",
+                "label": "Adult, primary prevention",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "adult"
+                  },
+                  {
+                    "type": "all",
+                    "label": "3. Nonischemic dilated cardiomyopathy AND left ventricular ejection fraction of 35% or less, after reversible causes have been excluded, AND the response to optimal medical therapy has been adequately determined",
+                    "children": [
+                      {
+                        "type": "leaf",
+                        "criterion": "nonischemic_dilated_cardiomyopathy"
+                      },
+                      {
+                        "type": "leaf",
+                        "criterion": "lvef_35_or_less"
+                      },
+                      {
+                        "type": "leaf",
+                        "criterion": "nidcm_reversible_causes_excluded"
+                      },
+                      {
+                        "type": "leaf",
+                        "criterion": "omt_response_determined"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "not",
+                    "label": "Has had NONE of the following (primary prevention exclusions)",
+                    "child": {
+                      "type": "any",
+                      "label": "ANY of the following",
+                      "children": [
+                        {
+                          "type": "leaf",
+                          "criterion": "acute_mi_less_than_40_days"
+                        },
+                        {
+                          "type": "all",
+                          "label": "NYHA Class IV congestive heart failure (unless member is eligible to receive a combination cardiac resynchronization therapy ICD device)",
+                          "children": [
+                            {
+                              "type": "leaf",
+                              "criterion": "nyha_class_4_chf"
+                            },
+                            {
+                              "type": "not",
+                              "label": "unless member is eligible to receive a combination cardiac resynchronization therapy ICD device",
+                              "child": {
+                                "type": "leaf",
+                                "criterion": "eligible_for_crt_d"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "leaf",
+                          "criterion": "revascularization_past_3_months"
+                        },
+                        {
+                          "type": "leaf",
+                          "criterion": "revascularization_candidate"
+                        },
+                        {
+                          "type": "leaf",
+                          "criterion": "noncardiac_life_expectancy_under_1_year"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "all",
+                "label": "Adult, primary prevention",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "adult"
+                  },
+                  {
+                    "type": "all",
+                    "label": "4. Hypertrophic cardiomyopathy (HCM) with 1 or more major risk factors for sudden cardiac death and judged to be at high risk",
+                    "children": [
+                      {
+                        "type": "leaf",
+                        "criterion": "hypertrophic_cardiomyopathy"
+                      },
+                      {
+                        "type": "any",
+                        "label": "1 or more major risk factors for sudden cardiac death",
+                        "children": [
+                          {
+                            "type": "leaf",
+                            "criterion": "hcm_family_history_premature_scd"
+                          },
+                          {
+                            "type": "leaf",
+                            "criterion": "lvh_greater_than_30mm"
+                          },
+                          {
+                            "type": "leaf",
+                            "criterion": "nsvt_on_holter"
+                          },
+                          {
+                            "type": "leaf",
+                            "criterion": "unexplained_syncope"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "leaf",
+                        "criterion": "hcm_judged_high_risk_by_experienced_physician"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "not",
+                    "label": "Has had NONE of the following (primary prevention exclusions)",
+                    "child": {
+                      "type": "any",
+                      "label": "ANY of the following",
+                      "children": [
+                        {
+                          "type": "leaf",
+                          "criterion": "acute_mi_less_than_40_days"
+                        },
+                        {
+                          "type": "all",
+                          "label": "NYHA Class IV congestive heart failure (unless member is eligible to receive a combination cardiac resynchronization therapy ICD device)",
+                          "children": [
+                            {
+                              "type": "leaf",
+                              "criterion": "nyha_class_4_chf"
+                            },
+                            {
+                              "type": "not",
+                              "label": "unless member is eligible to receive a combination cardiac resynchronization therapy ICD device",
+                              "child": {
+                                "type": "leaf",
+                                "criterion": "eligible_for_crt_d"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "leaf",
+                          "criterion": "revascularization_past_3_months"
+                        },
+                        {
+                          "type": "leaf",
+                          "criterion": "revascularization_candidate"
+                        },
+                        {
+                          "type": "leaf",
+                          "criterion": "noncardiac_life_expectancy_under_1_year"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "all",
+                "label": "Adult, primary prevention",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "adult"
+                  },
+                  {
+                    "type": "all",
+                    "label": "5. Diagnosis of ONE of the following cardiac ion channelopathies and considered to be at high risk for sudden cardiac death",
+                    "children": [
+                      {
+                        "type": "any",
+                        "label": "ONE of the following cardiac ion channelopathies",
+                        "children": [
+                          {
+                            "type": "leaf",
+                            "criterion": "congenital_long_qt"
+                          },
+                          {
+                            "type": "leaf",
+                            "criterion": "brugada_syndrome"
+                          },
+                          {
+                            "type": "leaf",
+                            "criterion": "short_qt"
+                          },
+                          {
+                            "type": "leaf",
+                            "criterion": "cpvt"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "leaf",
+                        "criterion": "considered_high_risk_scd"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "not",
+                    "label": "Has had NONE of the following (primary prevention exclusions)",
+                    "child": {
+                      "type": "any",
+                      "label": "ANY of the following",
+                      "children": [
+                        {
+                          "type": "leaf",
+                          "criterion": "acute_mi_less_than_40_days"
+                        },
+                        {
+                          "type": "all",
+                          "label": "NYHA Class IV congestive heart failure (unless member is eligible to receive a combination cardiac resynchronization therapy ICD device)",
+                          "children": [
+                            {
+                              "type": "leaf",
+                              "criterion": "nyha_class_4_chf"
+                            },
+                            {
+                              "type": "not",
+                              "label": "unless member is eligible to receive a combination cardiac resynchronization therapy ICD device",
+                              "child": {
+                                "type": "leaf",
+                                "criterion": "eligible_for_crt_d"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "leaf",
+                          "criterion": "revascularization_past_3_months"
+                        },
+                        {
+                          "type": "leaf",
+                          "criterion": "revascularization_candidate"
+                        },
+                        {
+                          "type": "leaf",
+                          "criterion": "noncardiac_life_expectancy_under_1_year"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "all",
+                "label": "Adult, primary prevention",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "adult"
+                  },
+                  {
+                    "type": "all",
+                    "label": "6. Diagnosis of cardiac sarcoid and considered to be at high risk for sudden cardiac death",
+                    "children": [
+                      {
+                        "type": "leaf",
+                        "criterion": "cardiac_sarcoid"
+                      },
+                      {
+                        "type": "leaf",
+                        "criterion": "considered_high_risk_scd"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "not",
+                    "label": "Has had NONE of the following (primary prevention exclusions)",
+                    "child": {
+                      "type": "any",
+                      "label": "ANY of the following",
+                      "children": [
+                        {
+                          "type": "leaf",
+                          "criterion": "acute_mi_less_than_40_days"
+                        },
+                        {
+                          "type": "all",
+                          "label": "NYHA Class IV congestive heart failure (unless member is eligible to receive a combination cardiac resynchronization therapy ICD device)",
+                          "children": [
+                            {
+                              "type": "leaf",
+                              "criterion": "nyha_class_4_chf"
+                            },
+                            {
+                              "type": "not",
+                              "label": "unless member is eligible to receive a combination cardiac resynchronization therapy ICD device",
+                              "child": {
+                                "type": "leaf",
+                                "criterion": "eligible_for_crt_d"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "leaf",
+                          "criterion": "revascularization_past_3_months"
+                        },
+                        {
+                          "type": "leaf",
+                          "criterion": "revascularization_candidate"
+                        },
+                        {
+                          "type": "leaf",
+                          "criterion": "noncardiac_life_expectancy_under_1_year"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "all",
+                "label": "Adult, secondary prevention",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "adult"
+                  },
+                  {
+                    "type": "all",
+                    "label": "Members with a history of a life-threatening clinical event associated with ventricular arrhythmic events such as sustained ventricular tachyarrhythmia after reversible causes (eg, acute ischemia) have been excluded",
+                    "children": [
+                      {
+                        "type": "leaf",
+                        "criterion": "life_threatening_ventricular_arrhythmic_event"
+                      },
+                      {
+                        "type": "leaf",
+                        "criterion": "secondary_reversible_causes_excluded"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "all",
+                "label": "Pediatric",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "child"
+                  },
+                  {
+                    "type": "all",
+                    "label": "survivors of cardiac arrest due to ventricular tachycardia or ventricular fibrillation, after reversible causes have been excluded",
+                    "children": [
+                      {
+                        "type": "leaf",
+                        "criterion": "ped_cardiac_arrest_survivor_vt_vf"
+                      },
+                      {
+                        "type": "leaf",
+                        "criterion": "ped_reversible_causes_excluded"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "all",
+                "label": "Pediatric",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "child"
+                  },
+                  {
+                    "type": "all",
+                    "label": "long QT syndrome in members who are survivors of sudden cardiac arrest (in combination with beta-blockers)",
+                    "children": [
+                      {
+                        "type": "leaf",
+                        "criterion": "long_qt"
+                      },
+                      {
+                        "type": "leaf",
+                        "criterion": "sudden_cardiac_arrest_survivor"
+                      },
+                      {
+                        "type": "leaf",
+                        "criterion": "with_beta_blockers"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "all",
+                "label": "Pediatric",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "child"
+                  },
+                  {
+                    "type": "all",
+                    "label": "long QT syndrome in members who cannot take beta-blockers and for whom cardiac sympathetic denervation or other medications are not considered appropriate",
+                    "children": [
+                      {
+                        "type": "leaf",
+                        "criterion": "long_qt"
+                      },
+                      {
+                        "type": "leaf",
+                        "criterion": "cannot_take_beta_blockers"
+                      },
+                      {
+                        "type": "leaf",
+                        "criterion": "csd_or_other_medications_not_appropriate"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "all",
+                "label": "Pediatric",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "child"
+                  },
+                  {
+                    "type": "all",
+                    "label": "catecholaminergic polymorphic ventricular tachycardia in members who experience cardiac arrest despite maximally tolerated beta-blockers, flecainide, or cardiac sympathetic denervation",
+                    "children": [
+                      {
+                        "type": "leaf",
+                        "criterion": "cpvt"
+                      },
+                      {
+                        "type": "leaf",
+                        "criterion": "cpvt_arrest_despite_maximal_therapy"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "all",
+                "label": "Pediatric",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "child"
+                  },
+                  {
+                    "type": "all",
+                    "label": "Brugada syndrome in members who are survivors of sudden cardiac arrest or have documented spontaneous sustained ventricular tachycardia",
+                    "children": [
+                      {
+                        "type": "leaf",
+                        "criterion": "brugada_syndrome"
+                      },
+                      {
+                        "type": "any",
+                        "label": "survivors of sudden cardiac arrest or have documented spontaneous sustained ventricular tachycardia",
+                        "children": [
+                          {
+                            "type": "leaf",
+                            "criterion": "sudden_cardiac_arrest_survivor"
+                          },
+                          {
+                            "type": "leaf",
+                            "criterion": "documented_spontaneous_sustained_vt"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "all",
+                "label": "Pediatric",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "child"
+                  },
+                  {
+                    "type": "all",
+                    "label": "hypertrophic cardiomyopathy in members who are survivors of sudden cardiac arrest or have documented spontaneous sustained ventricular tachycardia",
+                    "children": [
+                      {
+                        "type": "leaf",
+                        "criterion": "hypertrophic_cardiomyopathy"
+                      },
+                      {
+                        "type": "any",
+                        "label": "survivors of sudden cardiac arrest or have documented spontaneous sustained ventricular tachycardia",
+                        "children": [
+                          {
+                            "type": "leaf",
+                            "criterion": "sudden_cardiac_arrest_survivor"
+                          },
+                          {
+                            "type": "leaf",
+                            "criterion": "documented_spontaneous_sustained_vt"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "all",
+                "label": "Pediatric",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "child"
+                  },
+                  {
+                    "type": "all",
+                    "label": "arrhythmogenic cardiomyopathy in members who are survivors of sudden cardiac arrest or sustained ventricular tachycardia that is not hemodynamically tolerated",
+                    "children": [
+                      {
+                        "type": "leaf",
+                        "criterion": "arrhythmogenic_cardiomyopathy"
+                      },
+                      {
+                        "type": "any",
+                        "label": "survivors of sudden cardiac arrest or sustained ventricular tachycardia that is not hemodynamically tolerated",
+                        "children": [
+                          {
+                            "type": "leaf",
+                            "criterion": "sudden_cardiac_arrest_survivor"
+                          },
+                          {
+                            "type": "leaf",
+                            "criterion": "sustained_vt_not_hemodynamically_tolerated"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "all",
+                "label": "Pediatric",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "child"
+                  },
+                  {
+                    "type": "all",
+                    "label": "nonischemic dilated cardiomyopathy in members who are survivors of sudden cardiac arrest or have documented spontaneous sustained ventricular tachycardia that is not due to completely reversible causes",
+                    "children": [
+                      {
+                        "type": "leaf",
+                        "criterion": "nonischemic_dilated_cardiomyopathy"
+                      },
+                      {
+                        "type": "any",
+                        "label": "survivors of sudden cardiac arrest or have documented spontaneous sustained ventricular tachycardia that is not due to completely reversible causes",
+                        "children": [
+                          {
+                            "type": "leaf",
+                            "criterion": "sudden_cardiac_arrest_survivor"
+                          },
+                          {
+                            "type": "leaf",
+                            "criterion": "sustained_vt_not_reversible"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "all",
+                "label": "Pediatric",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "child"
+                  },
+                  {
+                    "type": "all",
+                    "label": "congenital heart disease in members who are survivors of sudden cardiac arrest, after reversible causes have been excluded",
+                    "children": [
+                      {
+                        "type": "leaf",
+                        "criterion": "congenital_heart_disease"
+                      },
+                      {
+                        "type": "leaf",
+                        "criterion": "sudden_cardiac_arrest_survivor"
+                      },
+                      {
+                        "type": "leaf",
+                        "criterion": "ped_reversible_causes_excluded"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "all",
+                "label": "Pediatric",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "child"
+                  },
+                  {
+                    "type": "all",
+                    "label": "symptomatic, sustained ventricular tachycardia in association with congenital heart disease in members who have undergone hemodynamic and electrophysiologic evaluation",
+                    "children": [
+                      {
+                        "type": "leaf",
+                        "criterion": "symptomatic_sustained_vt_with_chd"
+                      },
+                      {
+                        "type": "leaf",
+                        "criterion": "hemodynamic_and_ep_evaluation"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "any",
+            "label": "Have a contraindication to a transvenous ICD due to one or more of the following",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "lack_of_vascular_access"
+              },
+              {
+                "type": "leaf",
+                "criterion": "reason_to_preserve_vascular_access"
+              },
+              {
+                "type": "all",
+                "label": "(3) history of need for explanation of a transvenous ICD due to a complication, with ongoing need for ICD therapy",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "prior_transvenous_explant_for_complication"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "ongoing_need_for_icd"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "leaf",
+            "criterion": "no_antibradycardia_pacing_indication"
+          },
+          {
+            "type": "leaf",
+            "criterion": "no_atp_responsive_ventricular_arrhythmias"
+          }
+        ]
+      },
+      "notes": [
+        "A subcutaneous ICD that does not meet these criteria is experimental or investigational.",
+        "The nested 'meet the criteria for ICD implantation' block repeats every adult and pediatric ICD indication pathway (with the adult primary-prevention exclusions) rather than referring to them by name, so the pathway is self-contained."
+      ]
+    },
+    {
+      "id": "icd_replacement",
+      "name": "Replacement of an ICD",
+      "applies_to_cpt": [
+        "33215",
+        "33216",
+        "33217",
+        "33218",
+        "33220",
+        "33223",
+        "33224",
+        "33225",
+        "33230",
+        "33231",
+        "33240",
+        "33241",
+        "33243",
+        "33244",
+        "33249",
+        "33262",
+        "33263",
+        "33264",
+        "33270",
+        "33271",
+        "33272",
+        "33273",
+        "93260",
+        "93261",
+        "93640",
+        "93641",
+        "93642",
+        "93644",
+        "G0448"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "Replacement of an existing ICD for one of the listed reasons",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "replacement_of_an_icd"
+          },
+          {
+            "type": "any",
+            "label": "Replacement of an ICD meets the definition of medical necessity for device/lead malfunction, change in member's medical condition, battery depletion, or generator end-of-life",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "device_or_lead_malfunction"
+              },
+              {
+                "type": "leaf",
+                "criterion": "change_in_medical_condition"
+              },
+              {
+                "type": "leaf",
+                "criterion": "battery_depletion"
+              },
+              {
+                "type": "leaf",
+                "criterion": "generator_end_of_life"
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "From the Note printed after the subcutaneous ICD section; read as applying to replacement of any ICD (transvenous or subcutaneous).",
+        "Mapped to every ICD code: the codes that read 'insertion or replacement' or 'with existing leads' as well as the repair / repositioning / removal / pocket revision / lead-extraction codes, which the document otherwise states no criteria for.",
+        "Second check (FABLE_KEY_CRITIQUE.md): gate leaf added so new-implant orders on shared 'insertion or replacement' codes are judged only by the indication pathways."
+      ]
+    }
+  ],
+  "exclusions": [
+    {
+      "text": "The use of the ICD is considered experimental or investigational in primary prevention members who do not meet the above criteria or have had ANY of the following:",
+      "cpt": []
+    },
+    {
+      "text": "an acute myocardial infarction (i.e., less than 40 days before ICD treatment);",
+      "cpt": []
+    },
+    {
+      "text": "NYHA Class IV congestive heart failure (unless member is eligible to receive a combination cardiac resynchronization therapy ICD device);",
+      "cpt": []
+    },
+    {
+      "text": "a cardiac revascularization procedure in the past 3 months (coronary artery bypass graft [CABG] or percutaneous transluminal coronary angioplasty [PTCA]) or are candidates for a cardiac revascularization procedure;",
+      "cpt": []
+    },
+    {
+      "text": "noncardiac disease that would be associated with life expectancy less than 1 year.",
+      "cpt": []
+    },
+    {
+      "text": "The use of the ICD for secondary prevention is considered experimental or investigational for members who do not meet the criteria for secondary prevention.",
+      "cpt": []
+    },
+    {
+      "text": "The use of the ICD is considered experimental or investigational for all other indications in pediatric members.",
+      "cpt": []
+    },
+    {
+      "text": "The use of a subcutaneous ICD is considered experimental or investigational for individuals who do not meet the criteria outlined above.",
+      "cpt": []
+    },
+    {
+      "text": "The use of cardiac contractility modulation therapy is considered experimental or investigational for all indications.",
+      "cpt": [
+        "0408T",
+        "0409T",
+        "0410T",
+        "0411T",
+        "0412T",
+        "0413T",
+        "0414T",
+        "0415T",
+        "0416T",
+        "0417T",
+        "0418T",
+        "0915T",
+        "0916T",
+        "0917T",
+        "0918T",
+        "0919T",
+        "0920T",
+        "0921T",
+        "0922T",
+        "0923T",
+        "0924T",
+        "0925T",
+        "0926T",
+        "0927T",
+        "0928T",
+        "0929T",
+        "0930T",
+        "0931T",
+        "0948T",
+        "0949T",
+        "K1030"
+      ]
+    }
+  ],
+  "notes": [
+    "Built from the PDF only (pdftotext -layout). The download holds a single clean copy of the guideline (no redline); position statement revised 05/15/26, reviewed 04/23/26, original effective date 12/15/13. effective_date holds the Revised date, reviewed_date the Reviewed date.",
+    "Structure: the document prints 'adults who meet ONE of the following criteria' over six numbered primary-prevention items and one secondary-prevention bullet, then 'children who meet ANY of the following criteria' over ten bullets. Each numbered item / bullet is its own pathway (one pathway per indication). Each adult pathway starts with the leaf 'adults' and each pediatric pathway with the leaf 'children' because the two sections grant different indications and a chart documents age; the document gives no numeric age boundary, so neither leaf has a threshold.",
+    "Adult primary-prevention exclusions ('experimental or investigational in primary prevention members who ... have had ANY of the following') are placed inside each of the six primary-prevention pathways as not(any(...)), nested as printed. The NYHA Class IV bullet carries a waiver '(unless member is eligible to receive a combination cardiac resynchronization therapy ICD device)', modelled as all(NYHA Class IV, not(eligible for CRT-D)) inside that any; logically identical to any(not(NYHA IV), CRT-D eligible) outside it. The revascularization bullet holds two alternatives (procedure in the past 3 months; candidate for a procedure) and is split into two leaves of the same any. These exclusions are not applied to the secondary-prevention pathway or to the pediatric pathways, which the document does not subject to them.",
+    "The parenthetical definitions under 'Primary Prevention (... who have not yet experienced life-threatening VT or VF)' and 'Secondary Prevention (... who have experienced a potentially life-threatening episode of near sudden cardiac death)' describe the two categories and are not modelled as leaves; a patient with prior life-threatening VT/VF qualifies through the secondary-prevention pathway.",
+    "Primary prevention item 1 and item 2 share the leaves 'Ischemic cardiomyopathy' and 'a history of myocardial infarction at least 40 days before ICD treatment' (identical wording in both items); the LVEF thresholds differ (35% or less with NYHA II/III; 30% or less with NYHA I). NYHA Class II or Class III has no threshold object because the schema's enum thresholds express a single comparison, not a set {II, III}; NYHA Class I and Class IV use enum eq.",
+    "Time thresholds: 'at least 40 days' / 'less than 40 days' before ICD treatment are number thresholds in days (not duration_months, which the app computes from note dates for treatment trials); 'in the past 3 months' is duration_months lt 3; 'life expectancy less than 1 year' is a number threshold in years.",
+    "Item 3 (nonischemic dilated cardiomyopathy): 'after reversible causes have been excluded' and 'the response to optimal medical therapy has been adequately determined' are two leaves. The same phrase 'after reversible causes have been excluded' appears in the pediatric cardiac-arrest and congenital heart disease bullets; there it is a separate criterion (reversible causes of the arrest, not of the cardiomyopathy). The secondary-prevention wording 'after reversible causes (eg, acute ischemia) have been excluded' is a third, separate leaf.",
+    "Item 4 (HCM): '1 or more major risk factors' is any() of the four parenthetical risk factors; 'judged to be at high risk ... by a physician experienced in the care of members with HCM' is kept answerable because the physician's risk judgment is charted, although the physician's experience is a credential a chart may not show.",
+    "Items 5 and 6 share the leaf 'considered to be at high risk for sudden cardiac death' (identical wording). The channelopathy list 'ONE of the following' is any() of four diagnoses. 'Brugada syndrome', 'catecholaminergic polymorphic ventricular tachycardia', 'hypertrophic cardiomyopathy' and 'nonischemic dilated cardiomyopathy' are shared between the adult and pediatric sections where the wording is identical (case aside); adult 'congenital long QT syndrome' and pediatric 'long QT syndrome' are separate leaves because the adult wording adds 'congenital'.",
+    "Secondary prevention: the single bullet holds two requirements, the life-threatening event associated with ventricular arrhythmic events and the exclusion of reversible causes; both leaves are required.",
+    "Pediatric bullets: 'survivors of sudden cardiac arrest' is one shared leaf across six bullets; 'have documented spontaneous sustained ventricular tachycardia' is shared by the Brugada and HCM bullets, while the arrhythmogenic cardiomyopathy ('not hemodynamically tolerated') and nonischemic dilated cardiomyopathy ('not due to completely reversible causes') bullets qualify the VT differently and have their own leaves. 'in combination with beta-blockers' (long QT survivor bullet) is modelled as a requirement that the patient is on beta-blocker therapy. The last bullet's 'symptomatic, sustained ventricular tachycardia in association with congenital heart disease' is one leaf (the diagnosis is inseparable from the arrhythmia as printed) plus the evaluation leaf.",
+    "Subcutaneous ICD: 'meet the criteria for ICD implantation for primary or secondary prevention' for 'adults or children' is modelled by nesting every adult and pediatric ICD pathway inside an any() in the S-ICD pathway, followed by the three bulleted S-ICD requirements (ALL). The contraindication bullet lists three alternatives ('one or more of the following'), the third of which has two parts (explant for a complication; ongoing need). 'Have no indication for antibradycardia pacing' and 'Do not have ventricular arrhythmias that are known or anticipated to respond to antitachycardia pacing' are kept as leaves worded as printed (a nurse asks the chart for the negative statement) rather than not() of the positive condition.",
+    "ICD replacement: the Note after the S-ICD section ('Replacement of an ICD meets the definition of medical necessity for device/lead malfunction, change in member's medical condition, battery depletion, or generator end-of-life') is its own pathway, any() of the four reasons, applying to both transvenous and subcutaneous devices.",
+    "Code-to-pathway mapping (the document ties no code to a section): codes that describe inserting a transvenous ICD system, generator or lead, or EP testing of a transvenous system (33216, 33217, 33225, 33230, 33231, 33240, 33249, 93640, 93641, 93642, G0448) are governed by every adult and pediatric ICD indication pathway and by the replacement pathway (their descriptors read 'insertion or replacement' / 'with existing leads' / 'at time of initial implantation or replacement'). Subcutaneous system codes (33270, 33271, 93644) and S-ICD programming/interrogation (93260, 93261) are governed by the subcutaneous ICD pathway and by the replacement pathway. Repair, repositioning, removal, lead extraction, pocket revision and LV-lead upgrade of an existing system (33215, 33218, 33220, 33223, 33224, 33241, 33243, 33244, 33262, 33263, 33264, 33272, 33273) are governed only by the replacement pathway, since the document states no criteria for them other than the replacement Note. No covered code is left without a pathway. CCM codes are governed by no pathway: they are investigational and stop at the code gate.",
+    "CRT-D: the document addresses 'ICDs alone' and names cardiac resynchronization only in the NYHA IV waiver; G0448 (ICD system with LV pacing electrode), 33224 and 33225 (LV pacing electrode) are in the code table without a tag and are treated as covered ICD codes governed by the ICD criteria. Criteria for the resynchronization component are not in this document.",
+    "Wearable cardioverter-defibrillators are not addressed here; the document refers them to Related Guideline 01-93000-30.",
+    "All codes in the code table are covered unless printed '(Investigational)': the 30 cardiac contractility modulation / CCM-defibrillation Category III codes (0408T-0418T, 0915T-0931T, 0948T, 0949T) and HCPCS K1030 are investigational and are the cpt of the CCM exclusion. The four primary-prevention exclusion bullets are listed as exclusions as well as modelled in the trees.",
+    "Left out as not requirements: the Description section and 'Summary and Analysis of Evidence'; every 'The evidence is insufficient ...' sentence; the LOINC documentation table; the ICD-10 list (recorded in scope.icd10); the NYHA definitions table; the step-therapy protocol exemption paragraph (no step therapy requirement in this guideline); the disclaimer paragraph.",
+    "Program exceptions: FEP follows FEP guidelines, SAO follows SAO guidelines, and Medicare Advantage products follow NCD 20.4 Implantable Automatic Defibrillators; recorded in excluded_plans."
+  ],
+  "status": "ok"
+}

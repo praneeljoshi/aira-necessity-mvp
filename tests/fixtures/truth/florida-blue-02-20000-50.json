@@ -1,0 +1,194 @@
+{
+  "id": "florida-blue-02-20000-50",
+  "payer": "Florida Blue",
+  "payer_aliases": ["Florida Blue", "BCBS FL", "BCBSFL", "Blue Cross Blue Shield of Florida", "Blue Cross and Blue Shield of Florida", "BCBS of Florida"],
+  "title": "Hip Arthroplasty",
+  "guideline_number": "02-20000-50",
+  "effective_date": "2025-02-15",
+  "reviewed_date": "2025-01-23",
+  "source_file": "bcbsfl-02-20000-50-hip-arthroplasty.pdf",
+  "plan_types": ["All lines of business"],
+  "excluded_plans": ["Federal Employee Program (FEP)", "State Account Organization (SAO)", "Medicare Advantage products"],
+  "scope": {
+    "cpt": {
+      "27130": "covered",
+      "27132": "covered",
+      "27134": "covered",
+      "27137": "covered",
+      "27138": "covered",
+      "S2118": "covered"
+    },
+    "icd10": []
+  },
+  "criteria": [
+    {"id": "tha_malignancy", "text": "Malignancy of the joint involving the bones or soft tissues of the pelvis or proximal femur", "question": "Is there a malignancy of the hip joint involving the bones or soft tissues of the pelvis or proximal femur?"},
+    {"id": "tha_avascular_necrosis", "text": "Avascular necrosis (osteonecrosis of femoral head)", "question": "Is there avascular necrosis (osteonecrosis) of the femoral head?"},
+    {"id": "tha_femoral_neck_fracture", "text": "Fracture of the femoral neck", "question": "Is there a fracture of the femoral neck?"},
+    {"id": "tha_acetabular_fracture", "text": "Acetabular fracture", "question": "Is there an acetabular fracture?"},
+    {"id": "tha_failed_previous_hip_surgery", "text": "Failure of previous hip surgery", "question": "Has a previous hip surgery (e.g. fracture fixation, osteotomy, hemiarthroplasty) failed?"},
+    {"id": "tha_malunion", "text": "Mal-union of acetabular or proximal femur fracture", "question": "Is there mal-union of an acetabular or proximal femur fracture?"},
+    {"id": "tha_advanced_joint_disease", "text": "Advanced joint disease demonstrated by radiographic or magnetic resonance imaging (MRI) evidence of subchondral cysts, subchondral sclerosis, periarticular osteophytes, joint subluxation, joint space narrowing, avascular necrosis)", "question": "Do radiographs or MRI show advanced joint disease of the hip (subchondral cysts, subchondral sclerosis, periarticular osteophytes, joint subluxation, joint space narrowing or avascular necrosis)?"},
+    {"id": "tha_pain_or_functional_disability", "text": "Pain or functional disability from injury due to trauma or arthritis of the joint", "question": "Does the patient have pain or functional disability from traumatic injury or arthritis of the hip?"},
+    {"id": "tha_conservative_3_months", "text": "Failure of at least 3 months of conservative non-surgical management that is clearly documented in the medical record", "question": "Has at least 3 months of conservative non-surgical management been tried and failed, with the trial clearly documented in the record?", "threshold": {"kind": "duration_months", "op": "gte", "value": 3, "unit": "months"}},
+    {"id": "cm_anti_inflammatory", "text": "Anti-inflammatory medications", "question": "Did conservative management include anti-inflammatory medications (NSAIDs)?"},
+    {"id": "cm_analgesics", "text": "Analgesics", "question": "Did conservative management include analgesics?"},
+    {"id": "cm_flexibility_strengthening", "text": "Flexibility and muscle strengthening exercises", "question": "Did conservative management include flexibility and muscle strengthening exercises?"},
+    {"id": "cm_supervised_pt", "text": "Supervised physical therapy", "question": "Did conservative management include supervised physical therapy?"},
+    {"id": "cm_activity_restrictions", "text": "Activity restrictions as is reasonable", "question": "Did conservative management include activity restrictions?"},
+    {"id": "cm_assistive_device", "text": "Assistive device use", "question": "Did conservative management include use of an assistive device (cane, walker)?"},
+    {"id": "cm_weight_reduction", "text": "Weight reduction as appropriate", "question": "Did conservative management include weight reduction?"},
+    {"id": "ci_active_systemic_bacteremia", "text": "Active systemic bacteremia", "question": "Does the patient have active systemic bacteremia?"},
+    {"id": "ci_active_skin_infection_surgical_site", "text": "Active skin infection or open wound within the planned surgical site of the hip", "question": "Is there an active skin infection or open wound at the planned surgical site of the hip?"},
+    {"id": "ci_neuropathic_arthritis", "text": "Neuropathic arthritis", "question": "Does the patient have neuropathic (Charcot) arthritis of the hip?"},
+    {"id": "ci_rapidly_progressive_neurological_disease", "text": "Rapidly progressive neurological disease", "question": "Does the patient have a rapidly progressive neurological disease?"},
+    {"id": "rev_component_instability", "text": "Instability of one or both components", "question": "Is there instability of one or both components of the existing hip arthroplasty?"},
+    {"id": "rev_implant_fracture_or_mechanical_failure", "text": "Fracture or mechanical failure of the implant", "question": "Is there fracture or mechanical failure of the implant?"},
+    {"id": "rev_recurrent_or_irreducible_dislocation", "text": "Recurrent or irreducible dislocation", "question": "Is there recurrent or irreducible dislocation of the replaced hip?"},
+    {"id": "rev_infection", "text": "Infection", "question": "Is there infection of the existing hip arthroplasty (prosthetic joint infection)?"},
+    {"id": "rev_displaced_periprosthetic_fracture", "text": "Treatment of a displaced periprosthetic fracture", "question": "Is the revision for treatment of a displaced periprosthetic fracture?"},
+    {"id": "rev_leg_length_inequality", "text": "Clinically significant leg length inequality", "question": "Is there a clinically significant leg length inequality after the existing arthroplasty?"},
+    {"id": "rev_bone_loss", "text": "Progressive or substantial bone loss", "question": "Is there progressive or substantial bone loss around the existing hip arthroplasty?"},
+    {"id": "rev_audible_noise", "text": "Clinically significant audible noise", "question": "Is there clinically significant audible noise (e.g. squeaking) from the existing hip arthroplasty?"},
+    {"id": "rev_adverse_local_tissue_reaction", "text": "Adverse local tissue reaction", "question": "Is there an adverse local tissue reaction (e.g. metallosis, pseudotumor) around the existing hip arthroplasty?"},
+    {"id": "hr_candidate_for_thr", "text": "Is a candidate for total hip replacement", "question": "Is the patient documented as a candidate for total hip replacement (meets the indications for total hip arthroplasty)?"},
+    {"id": "hr_likely_to_outlive_prosthesis", "text": "Is likely to outlive a traditional prosthesis (eg, age 55 or younger)", "question": "Is the patient likely to outlive a traditional hip prosthesis, e.g. aged 55 or younger?", "threshold": {"kind": "number", "op": "lte", "value": 55, "unit": "years"}},
+    {"id": "hr_ci_severe_osteopenia", "text": "Severe osteopenia or a family history of severe osteoporosis or severe osteopenia", "question": "Does the patient have severe osteopenia, or a family history of severe osteoporosis or severe osteopenia?"},
+    {"id": "hr_ci_avn_more_than_50pct", "text": "Osteonecrosis or avascular necrosis with more than 50% involvement of the femoral head", "question": "Is there osteonecrosis or avascular necrosis involving more than 50% of the femoral head?", "threshold": {"kind": "number", "op": "gt", "value": 50, "unit": "% of femoral head"}},
+    {"id": "hr_ci_multiple_cysts_gt_1cm", "text": "Multiple cysts of the femoral head (>1 cm)", "question": "Are there multiple cysts of the femoral head larger than 1 cm?", "threshold": {"kind": "number", "op": "gt", "value": 1, "unit": "cm"}},
+    {"id": "hr_ci_skeletal_immaturity", "text": "Skeletal immaturity", "question": "Is the patient skeletally immature (open growth plates)?"},
+    {"id": "hr_ci_vascular_muscular_neuromuscular", "text": "Vascular insufficiency, muscular atrophy, or neuromuscular disease severe enough to compromise implant stability or postoperative recovery", "question": "Is there vascular insufficiency, muscular atrophy, or neuromuscular disease severe enough to compromise implant stability or postoperative recovery?"},
+    {"id": "hr_ci_renal_insufficiency", "text": "Known moderate-to-severe renal insufficiency", "question": "Does the patient have known moderate-to-severe renal insufficiency?"},
+    {"id": "hr_ci_severely_overweight", "text": "Severely overweight", "question": "Is the patient severely overweight (e.g. BMI in the obese range)?"},
+    {"id": "hr_attempted_weight_loss", "text": "attempted weight loss", "question": "Has the patient attempted weight loss?"},
+    {"id": "hr_bmi_risk_discussion", "text": "discussion of increased risk related to BMI", "question": "Does the record document a discussion with the patient of the increased surgical risk related to BMI?"},
+    {"id": "hr_metal_sensitivity", "text": "Known or suspected metal sensitivity or concern about potential effects of metal ions", "question": "Does the patient have known or suspected metal sensitivity, or a documented concern about potential effects of metal ions?"},
+    {"id": "hr_ci_immunosuppressed", "text": "Immunosuppressed or receiving high doses of corticosteroids", "question": "Is the patient immunosuppressed or receiving high doses of corticosteroids?"},
+    {"id": "hr_ci_female_childbearing_age", "text": "Females of childbearing age due to unknown effects on the fetus of metal ion release", "question": "Is the patient a female of childbearing age?"},
+    {"id": "phr_osteonecrosis_femoral_head", "text": "osteonecrosis of the femoral head", "question": "Does the patient have osteonecrosis of the femoral head?"},
+    {"id": "phr_no_more_than_50pct_involvement", "text": "There is no more than 50% involvement of the femoral head", "question": "Is the osteonecrosis limited to no more than 50% of the femoral head?", "threshold": {"kind": "number", "op": "lte", "value": 50, "unit": "% of femoral head"}},
+    {"id": "phr_minimal_acetabular_cartilage_change", "text": "There is minimal change in acetabular cartilage or articular cartilage space identified on radiography", "question": "Do radiographs show minimal change in the acetabular cartilage or articular cartilage space?"}
+  ],
+  "scenarios": [
+    {
+      "id": "total_hip_arthroplasty",
+      "name": "Total hip arthroplasty",
+      "applies_to_cpt": ["27130", "27132"],
+      "requires": {"type": "all", "label": "Total hip arthroplasty", "children": [
+        {"type": "any", "label": "1 or more of the following conditions exist", "children": [
+          {"type": "leaf", "criterion": "tha_malignancy"},
+          {"type": "leaf", "criterion": "tha_avascular_necrosis"},
+          {"type": "leaf", "criterion": "tha_femoral_neck_fracture"},
+          {"type": "leaf", "criterion": "tha_acetabular_fracture"},
+          {"type": "leaf", "criterion": "tha_failed_previous_hip_surgery"},
+          {"type": "leaf", "criterion": "tha_malunion"},
+          {"type": "all", "label": "Advanced joint disease with pain or disability and failed conservative management", "children": [
+            {"type": "leaf", "criterion": "tha_advanced_joint_disease"},
+            {"type": "leaf", "criterion": "tha_pain_or_functional_disability"},
+            {"type": "all", "label": "Failure of at least 3 months of conservative non-surgical management", "children": [
+              {"type": "leaf", "criterion": "tha_conservative_3_months"},
+              {"type": "any", "label": "Includes 1 or more of the following", "children": [
+                {"type": "leaf", "criterion": "cm_anti_inflammatory"},
+                {"type": "leaf", "criterion": "cm_analgesics"},
+                {"type": "leaf", "criterion": "cm_flexibility_strengthening"},
+                {"type": "leaf", "criterion": "cm_supervised_pt"},
+                {"type": "leaf", "criterion": "cm_activity_restrictions"},
+                {"type": "leaf", "criterion": "cm_assistive_device"},
+                {"type": "leaf", "criterion": "cm_weight_reduction"}
+              ]}
+            ]}
+          ]}
+        ]},
+        {"type": "not", "label": "No contraindications to total hip arthroplasty for any indication above are present", "child": {"type": "any", "label": "Contraindications for total and revision hip arthroplasty", "children": [
+          {"type": "leaf", "criterion": "ci_active_systemic_bacteremia"},
+          {"type": "leaf", "criterion": "ci_active_skin_infection_surgical_site"},
+          {"type": "leaf", "criterion": "ci_neuropathic_arthritis"},
+          {"type": "leaf", "criterion": "ci_rapidly_progressive_neurological_disease"}
+        ]}}
+      ]}
+    },
+    {
+      "id": "revision_arthroplasty",
+      "name": "Revision arthroplasty",
+      "applies_to_cpt": ["27134", "27137", "27138"],
+      "requires": {"type": "all", "label": "Revision arthroplasty", "children": [
+        {"type": "any", "label": "1 or more of the following conditions exist", "children": [
+          {"type": "leaf", "criterion": "rev_component_instability"},
+          {"type": "leaf", "criterion": "rev_implant_fracture_or_mechanical_failure"},
+          {"type": "leaf", "criterion": "rev_recurrent_or_irreducible_dislocation"},
+          {"type": "leaf", "criterion": "rev_infection"},
+          {"type": "leaf", "criterion": "rev_displaced_periprosthetic_fracture"},
+          {"type": "leaf", "criterion": "rev_leg_length_inequality"},
+          {"type": "leaf", "criterion": "rev_bone_loss"},
+          {"type": "leaf", "criterion": "rev_audible_noise"},
+          {"type": "leaf", "criterion": "rev_adverse_local_tissue_reaction"}
+        ]},
+        {"type": "not", "label": "No contraindications to revision arthroplasty are present", "child": {"type": "any", "label": "Contraindications for total and revision hip arthroplasty", "children": [
+          {"type": "leaf", "criterion": "ci_active_systemic_bacteremia"},
+          {"type": "leaf", "criterion": "ci_active_skin_infection_surgical_site"},
+          {"type": "leaf", "criterion": "ci_neuropathic_arthritis"},
+          {"type": "leaf", "criterion": "ci_rapidly_progressive_neurological_disease"}
+        ]}}
+      ]}
+    },
+    {
+      "id": "metal_on_metal_total_hip_resurfacing",
+      "name": "Metal-on-metal total hip resurfacing (alternative to total hip replacement)",
+      "applies_to_cpt": ["S2118"],
+      "requires": {"type": "all", "label": "Metal-on-metal total hip resurfacing meets the definition of medical necessity as an alternative to total hip replacement when", "children": [
+        {"type": "leaf", "criterion": "hr_candidate_for_thr"},
+        {"type": "leaf", "criterion": "hr_likely_to_outlive_prosthesis"},
+        {"type": "not", "label": "Does not have a contraindication for total hip resurfacing", "child": {"type": "any", "label": "Contraindications for total hip resurfacing", "children": [
+          {"type": "leaf", "criterion": "hr_ci_severe_osteopenia"},
+          {"type": "leaf", "criterion": "hr_ci_avn_more_than_50pct"},
+          {"type": "leaf", "criterion": "hr_ci_multiple_cysts_gt_1cm"},
+          {"type": "leaf", "criterion": "hr_ci_skeletal_immaturity"},
+          {"type": "leaf", "criterion": "hr_ci_vascular_muscular_neuromuscular"},
+          {"type": "leaf", "criterion": "hr_ci_renal_insufficiency"},
+          {"type": "all", "label": "Severely overweight (without attempted weight loss or discussion of increased risk related to BMI)", "children": [
+            {"type": "leaf", "criterion": "hr_ci_severely_overweight"},
+            {"type": "not", "label": "Without attempted weight loss or discussion of increased risk related to BMI", "child": {"type": "any", "label": "Attempted weight loss or discussion of increased risk related to BMI", "children": [
+              {"type": "leaf", "criterion": "hr_attempted_weight_loss"},
+              {"type": "leaf", "criterion": "hr_bmi_risk_discussion"}
+            ]}}
+          ]},
+          {"type": "leaf", "criterion": "hr_metal_sensitivity"},
+          {"type": "leaf", "criterion": "hr_ci_immunosuppressed"},
+          {"type": "leaf", "criterion": "hr_ci_female_childbearing_age"}
+        ]}}
+      ]}
+    },
+    {
+      "id": "partial_hip_resurfacing",
+      "name": "Partial hip resurfacing (osteonecrosis of the femoral head)",
+      "applies_to_cpt": [],
+      "requires": {"type": "all", "label": "Partial hip resurfacing meets the definition of medical necessity in candidates with osteonecrosis of the femoral head who", "children": [
+        {"type": "leaf", "criterion": "phr_osteonecrosis_femoral_head"},
+        {"type": "leaf", "criterion": "hr_candidate_for_thr"},
+        {"type": "leaf", "criterion": "hr_likely_to_outlive_prosthesis"},
+        {"type": "leaf", "criterion": "hr_metal_sensitivity"},
+        {"type": "leaf", "criterion": "phr_no_more_than_50pct_involvement"},
+        {"type": "leaf", "criterion": "phr_minimal_acetabular_cartilage_change"}
+      ]},
+      "notes": ["The document's coding table has no code for partial hip resurfacing (S2118 is metal-on-metal total resurfacing), so this pathway is tied to no listed code."]
+    }
+  ],
+  "exclusions": [
+    {"text": "All other types and applications of hip resurfacing are considered experimental or investigational.", "cpt": []}
+  ],
+  "notes": [
+    "Built from the PDF only (02-20000-50, Reviewed 01/23/25, Revised 02/15/25). The download holds a single clean copy; there is no redline. effective_date is the printed Revised date of this version (the Original Effective Date 10/15/16 is the first version); reviewed_date is the printed Reviewed date. pdftotext drops the bullet glyphs in this PDF; the indentation still shows the nesting.",
+    "THA list structure: '1 or more of the following conditions exist' is six single indications joined by OR, then a compound seventh: 'Advanced joint disease ... AND' with 'Pain or functional disability ...' and 'Failure of at least 3 months of conservative non-surgical management ...' indented as sub-bullets beneath it. Pain/disability and the conservative trial therefore attach only to the advanced-joint-disease alternative, not to the malignancy, AVN, fracture, failed-surgery or mal-union alternatives. Tree: any(6 single indications, all(advanced disease, pain/disability, conservative trial)).",
+    "'No contraindications* to total hip arthroplasty for any indication above are present' is indented like the conservative-management modalities but 'for any indication above' makes it a general requirement for every THA alternative; modelled as not(any(the four starred contraindications)) in the THA pathway's all. 'No contraindications* to revision arthroplasty are present' is modelled the same way in the Revision pathway. Those two sentences are not criteria; the four contraindication items are, and the ids are shared by both pathways.",
+    "Conservative management: the criterion is the 3-month documented trial (duration_months >= 3) and the seven modalities are an any() beneath it ('includes 1 or more of the following'); unlike the knee guideline, therapeutic injections are not listed for the hip. The hip PDF reads 'and that includes'; the criterion text stops before that clause so it is the requirement's exact words.",
+    "Metal-on-metal total hip resurfacing: 'Is a candidate for total hip replacement' is kept as one leaf (what a surgeon documents) rather than nesting the whole THA tree; a stricter reviewer could substitute the THA pathway's requirements for this leaf. 'Is likely to outlive a traditional prosthesis (eg, age 55 or younger)' is one leaf with an age threshold <= 55 years; the 'eg' makes 55 an example, not a hard cutoff, so an older patient documented as likely to outlive a prosthesis could still satisfy it.",
+    "Resurfacing contraindication 'Severely overweight (without attempted weight loss or discussion of increased risk related to BMI)' holds an embedded waiver: it is a contraindication only when the patient is severely overweight AND neither attempted weight loss nor a BMI-risk discussion is documented. Modelled inside the contraindication any() as all(severely overweight, not(any(attempted weight loss, discussion of increased risk related to BMI))), so that either waiver clears it. The three parts are separate criteria with the PDF's exact substrings.",
+    "Partial hip resurfacing (hardest call): the bullet 'Has known or suspected metal sensitivity or concern about potential effects of metal ions' carries no AND/OR connector in the PDF while every other bullet in the list ends with AND. We read it as a required element (all of five bullets plus the population qualifier 'osteonecrosis of the femoral head'), since the list is otherwise conjunctive and partial resurfacing is positioned as the option for patients who cannot have a metal-on-metal total resurfacing. The same criterion id (hr_metal_sensitivity) is a contraindication for total resurfacing and a requirement for partial resurfacing; the verbatim text 'Known or suspected metal sensitivity or concern about potential effects of metal ions' is the substring common to both bullets.",
+    "Partial hip resurfacing thresholds: 'There is no more than 50% involvement of the femoral head' is number <= 50 (kept as a positive leaf rather than not(the total-resurfacing contraindication 'more than 50% involvement'), since the PDF states it as its own positive requirement). 'Multiple cysts of the femoral head (>1 cm)' is number > 1 cm; 'more than 50% involvement' is number > 50.",
+    "Code-to-pathway mapping: the coding table does not tie codes to sections. 27130 (total hip arthroplasty) -> Total hip arthroplasty; 27132 (conversion of previous hip surgery to total hip arthroplasty) -> Total hip arthroplasty, because the THA indications 'Failure of previous hip surgery' and 'Mal-union of acetabular or proximal femur fracture' describe a conversion, and the Revision indications all concern an existing implant; 27134, 27137, 27138 (revision of total hip arthroplasty) -> Revision arthroplasty; S2118 (metal-on-metal total hip resurfacing) -> Metal-on-metal total hip resurfacing. Partial hip resurfacing has no code in the table, so its applies_to_cpt is empty: under the app's rule that an untied pathway governs only codes no other pathway names, it governs none of the six listed codes; under the brief's 'empty list = all codes' reading it would be checked for every order, which is a leniency we flag here. A reviewer could instead attach it to S2118.",
+    "Exclusion: 'All other types and applications of hip resurfacing are considered experimental or investigational.' names no code; S2118 itself is the covered metal-on-metal total resurfacing, so the exclusion's cpt list is empty. No listed code is non-covered or investigational.",
+    "Bullets that hold alternatives with 'or' inside an OR list ('Fracture or mechanical failure of the implant', 'Recurrent or irreducible dislocation', 'Progressive or substantial bone loss', 'Instability of one or both components') are kept as one criterion each, since splitting them inside an any() changes nothing. 'Avascular necrosis (osteonecrosis of femoral head)' is one criterion; 'avascular necrosis' also appears inside the advanced-joint-disease imaging list, copied with the PDF's stray closing parenthesis.",
+    "Program exceptions: FEP and SAO follow their own guidelines; Medicare Advantage products: the LCD Major Joint Replacement (Hip and Knee) L33618 'was reviewed on the last guideline review date', which we read (as the hand-built varicose vein fixture does) as Medicare Advantage following the LCD rather than this guideline.",
+    "Left out of the tree: the DESCRIPTION section (including 'Partial hip resurfacing is considered a treatment option for avascular necrosis with collapse of the femoral head' and the named metal-on-metal devices) because it is background, not the position statement; the guideline update history; the related guidelines list."
+  ],
+  "status": "ok"
+}

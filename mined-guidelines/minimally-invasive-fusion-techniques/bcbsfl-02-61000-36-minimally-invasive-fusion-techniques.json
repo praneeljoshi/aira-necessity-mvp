@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "minimally-invasive-fusion-techniques",
+  "title": "Minimally Invasive Fusion Techniques",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76FAC6X4A7PBHXT9I0H",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-61000-36",
+  "original_effective": "03/15/10",
+  "reviewed": "09/25/25",
+  "revised": "01/01/26",
+  "file": "bcbsfl-02-61000-36-minimally-invasive-fusion-techniques.pdf",
+  "sha256": "a6887fa9fded7a74cb61e68d5254a404ee8417add9eeb01ac7129710412b95ce",
+  "pages": 22,
+  "bytes": 736638,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original Effective Date 03/15/10; Reviewed 09/25/25; Revised 01/01/26 (23 pages)"
+}

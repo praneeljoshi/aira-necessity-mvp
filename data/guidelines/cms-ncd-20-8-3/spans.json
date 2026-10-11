@@ -1,0 +1,499 @@
+{
+  "id": "cms-ncd-20-8-3",
+  "sha256": "4138b44e8e6924509c79878bf647bdfa055bac6749345f550ec795d2a971ea4f",
+  "filename": "cms_ncd_20_8_3_pacemakers.pdf",
+  "spans": [
+    {
+      "id": "g0001",
+      "text": "Centers for Medicare & Medicaid Services",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0002",
+      "text": "           National Coverage Determination (NCD) 20.8.3",
+      "page": 1,
+      "blank_before": true
+    },
+    {
+      "id": "g0003",
+      "text": "Single Chamber and Dual Chamber Permanent Cardiac Pacemakers",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0004",
+      "text": "Medicare National Coverage Determinations Manual, Publication 100-03, Chapter 1, Part 1, Section",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0005",
+      "text": "20.8.3. Effective date: 08/13/2013. Implementation: Transmittal 170 (CR 8525).",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0006",
+      "text": "Applies to Medicare Advantage plans, including UnitedHealthcare Medicare Advantage, which follow CMS National Coverage",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0007",
+      "text": "Determinations for cardiac pacemakers. Reproduced for software testing from the published NCD and the UF Health",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0008",
+      "text": "Jacksonville compliance checklist of NCD 20.8.3 (10/22/2018); wording reconstructed, verify against cms.gov before clinical",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0009",
+      "text": "use.",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0010",
+      "text": "A. General",
+      "page": 1,
+      "blank_before": true
+    },
+    {
+      "id": "g0011",
+      "text": "A permanent cardiac pacemaker is an implanted device that provides electrical stimulation to the heart to",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0012",
+      "text": "maintain an adequate heart rate. This section addresses single-chamber and dual-chamber permanent",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0013",
+      "text": "cardiac pacemakers. It does not address biventricular pacemakers, devices that stimulate more than two",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0014",
+      "text": "chambers, devices intended to treat tachyarrhythmias or cardiac dyssynchrony, cardiac resynchronization",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0015",
+      "text": "therapy, or self-contained pacemaker monitors.",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0016",
+      "text": "B. Nationally Covered Indications",
+      "page": 1,
+      "blank_before": true
+    },
+    {
+      "id": "g0017",
+      "text": "Effective for claims with dates of service on and after August 13, 2013, CMS covers single-chamber or",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0018",
+      "text": "dual-chamber permanent cardiac pacemakers when ALL of the following are met:",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0019",
+      "text": "1. The patient has documented bradycardia; AND",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0020",
+      "text": "2. The bradycardia is non-reversible (not due to a transient or correctable cause); AND",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0021",
+      "text": "3. The bradycardia is symptomatic, with documented symptoms directly attributable to the bradycardia (for",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0022",
+      "text": "example syncope, near-syncope, dizziness, confusion, exercise intolerance, heart failure symptoms); AND",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0023",
+      "text": "4. The bradycardia is due to ONE of the following:",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0024",
+      "text": "       \u2022 Sinus node dysfunction (sick sinus syndrome, sinus bradycardia, sinus arrest, sinoatrial block,",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0025",
+      "text": "       chronotropic incompetence); OR",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0026",
+      "text": "       \u2022 Second-degree and/or third-degree atrioventricular (AV) block.",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0027",
+      "text": "C. Nationally Non-Covered Indications",
+      "page": 1,
+      "blank_before": true
+    },
+    {
+      "id": "g0028",
+      "text": "Single-chamber and dual-chamber permanent cardiac pacemakers are not covered for the following:",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0029",
+      "text": "       \u2022 Bradycardia due to reversible causes, such as electrolyte abnormalities, medications or drugs, and",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0030",
+      "text": "       hypothermia.",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0031",
+      "text": "       \u2022 Asymptomatic first-degree AV block.",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0032",
+      "text": "       \u2022 Asymptomatic sinus bradycardia.",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0033",
+      "text": "       \u2022 Asymptomatic sinoatrial block or sinus arrest.",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0034",
+      "text": "       \u2022 Ineffective atrial contractions (such as chronic atrial fibrillation or flutter, or giant left atrium) without",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0035",
+      "text": "       symptomatic bradycardia.",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0036",
+      "text": "     \u2022 Asymptomatic second-degree AV block of Mobitz Type I, unless the QRS complexes are prolonged",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0037",
+      "text": "     or electrophysiological studies demonstrate that the block is at or beyond the level of the His bundle.",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0038",
+      "text": "     \u2022 Syncope of undetermined cause.",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0039",
+      "text": "     \u2022 Bradycardia during sleep.",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0040",
+      "text": "     \u2022 Right bundle branch block with left axis deviation (and other forms of fascicular or bundle branch",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0041",
+      "text": "     blocks) without syncope or other symptoms of intermittent AV block.",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0042",
+      "text": "     \u2022 Asymptomatic bradycardia in post-myocardial infarction patients about to initiate long-term",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0043",
+      "text": "     beta-blocker drug therapy.",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0044",
+      "text": "     \u2022 Frequent or persistent supraventricular tachycardias, except where the pacemaker is specifically for",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0045",
+      "text": "     the control of the tachycardia.",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0046",
+      "text": "     \u2022 A clinical condition in which pacing takes place only intermittently and briefly, and which is not",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0047",
+      "text": "     associated with a reasonable likelihood that pacing needs will become prolonged.",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0048",
+      "text": "D. Other",
+      "page": 2,
+      "blank_before": true
+    },
+    {
+      "id": "g0049",
+      "text": "All other indications for single-chamber or dual-chamber permanent cardiac pacemakers not otherwise",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0050",
+      "text": "indicated as covered or non-covered above remain at local Medicare Administrative Contractor discretion.",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0051",
+      "text": "Billing and Coding",
+      "page": 2,
+      "blank_before": true
+    },
+    {
+      "id": "g0052",
+      "text": "CPT / HCPCS         Description                                                                 Status",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0053",
+      "text": "33206               Insertion of new or replacement of permanent pacemaker with transvenous Covered",
+      "page": 2,
+      "blank_before": true
+    },
+    {
+      "id": "g0054",
+      "text": "                                                                                           electrode(s);",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0055",
+      "text": "                                                                                                     whenatrial",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0056",
+      "text": "                                                                                                             criteria met",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0057",
+      "text": "33207               Insertion of new or replacement of permanent pacemaker with transvenous Covered",
+      "page": 2,
+      "blank_before": true
+    },
+    {
+      "id": "g0058",
+      "text": "                                                                                           electrode(s);",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0059",
+      "text": "                                                                                                     whenventricular",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0060",
+      "text": "                                                                                                           criteria met",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0061",
+      "text": "33208               Insertion of new or replacement of permanent pacemaker with transvenous Covered",
+      "page": 2,
+      "blank_before": true
+    },
+    {
+      "id": "g0062",
+      "text": "                                                                                           electrode(s);",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0063",
+      "text": "                                                                                                     whenatrial",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0064",
+      "text": "                                                                                                             criteria",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0065",
+      "text": "                                                                                                                and met",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0066",
+      "text": "                                                                                                                      ventricular",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0067",
+      "text": "C1785               Pacemaker, dual chamber, rate-responsive (implantable)                      Covered when criteria met",
+      "page": 2,
+      "blank_before": true
+    },
+    {
+      "id": "g0068",
+      "text": "C1786               Pacemaker, single chamber, rate-responsive (implantable)                    Covered when criteria met",
+      "page": 2,
+      "blank_before": true
+    },
+    {
+      "id": "g0069",
+      "text": "C2619               Pacemaker, dual chamber, non rate-responsive (implantable)                  Covered when criteria met",
+      "page": 2,
+      "blank_before": true
+    },
+    {
+      "id": "g0070",
+      "text": "C2620               Pacemaker, single chamber, non rate-responsive (implantable)                Covered when criteria met",
+      "page": 2,
+      "blank_before": true
+    },
+    {
+      "id": "g0071",
+      "text": "33227\u201333229, 33233 Pulse generator removal/replacement                                          MAC discretion",
+      "page": 2,
+      "blank_before": true
+    },
+    {
+      "id": "g0072",
+      "text": "Diagnosis codes and modifier requirements are specified in Local Coverage Article A54926.",
+      "page": 2,
+      "blank_before": true
+    },
+    {
+      "id": "g0073",
+      "text": "Documentation should include the rhythm diagnosis, the symptoms attributed to the bradycardia and their",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0074",
+      "text": "correlation with the rhythm, and the exclusion of reversible causes (including review of rate-slowing",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0075",
+      "text": "medications and metabolic workup).",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0076",
+      "text": "Related",
+      "page": 2,
+      "blank_before": true
+    },
+    {
+      "id": "g0077",
+      "text": "     \u2022 NCD 20.8.1 Cardiac Pacemaker Evaluation Services",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0078",
+      "text": "     \u2022 NCD 20.8.2 Self-Contained Pacemaker Monitors",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0079",
+      "text": "     \u2022 NCD 10.6 Anesthesia in Cardiac Pacemaker Surgery",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0080",
+      "text": "     \u2022 Local Coverage Article A54926",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0081",
+      "text": "Source: cms.gov Medicare Coverage Database, NCD 20.8.3 (ncdid=238, version 3) and UF Health Jacksonville, Cardiac",
+      "page": 3,
+      "blank_before": false
+    },
+    {
+      "id": "g0082",
+      "text": "Pacemakers Single/Dual Chamber NCD 20.8.3 Checklist (10/22/2018).",
+      "page": 3,
+      "blank_before": false
+    }
+  ]
+}

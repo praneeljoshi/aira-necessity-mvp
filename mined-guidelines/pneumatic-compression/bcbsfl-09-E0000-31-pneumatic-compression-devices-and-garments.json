@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "pneumatic-compression",
+  "title": "Pneumatic Compression Devices and Garments",
+  "category": "Durable Medical Equipment",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JI7IHU531X438FE9L",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "09-E0000-31",
+  "original_effective": "11/15/02",
+  "reviewed": "03/26/26",
+  "revised": "04/15/26",
+  "file": "bcbsfl-09-E0000-31-pneumatic-compression-devices-and-garments.pdf",
+  "sha256": "3bc00d27435701331ca48ada82e65c308cb3bf49243e70e86b784603d09208c0",
+  "pages": 15,
+  "bytes": 217360,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original 11/15/02; Reviewed 03/26/26; Revised 04/15/26"
+}

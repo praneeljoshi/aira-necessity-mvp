@@ -1,0 +1,197 @@
+{
+ "file": "bcbsmt-sur705-043-sacroiliac-joint-injections.pdf",
+ "treatment": "sacroiliac-joint-injections",
+ "payer": "bcbsmt",
+ "doc_kind": "medical policy",
+ "lines_of_business": [
+  "Not stated beyond disclaimer to check member contract; Medicare statement: no national coverage position"
+ ],
+ "effective_or_revised": "Policy effective 01/01/2026",
+ "sections_in_order": [
+  "Coverage",
+  "Policy Guidelines",
+  "Description",
+  "Rationale",
+  "Coding",
+  "References",
+  "Policy History"
+ ],
+ "criteria_location": "Coverage (p.1) with NOTE 1 and NOTE 2 (p.2), repeated verbatim in Policy Guidelines (pp.2-3). Rationale is evidence only.",
+ "procedures_covered": [
+  "Diagnostic SI joint anesthetic injection",
+  "Therapeutic SI joint corticosteroid injection (CPT 27096, 64451, HCPCS G0260)"
+ ],
+ "logic": {
+  "top_level": "pathways (diagnostic block vs corticosteroid injection), each an ALL list",
+  "max_nesting_depth": 3,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "Scope exclusion only: 'This policy does not address the treatment of sacroiliac joint (SIJ) pain due to infection, trauma, or neoplasm.' No contraindication list.",
+  "initial_vs_repeat": "Corticosteroid: 'No more than 3 injections are given in 1 year.' No efficacy-of-prior-injection rule.",
+  "and_or_ambiguity": [
+   {
+    "quote": "which may consist of therapies such as nonsteroidal anti-inflammatory medications, acetaminophen, manipulation, physical therapy, and a home exercise program (See NOTE 1)",
+    "why_ambiguous": "'may consist of ... such as' reads optional, but NOTE 1 says conservative therapy 'should include' four mandatory elements with 'and'."
+   },
+   {
+    "quote": "A successful trial of controlled diagnostic lateral branch blocks consists of 2 separate positive blocks",
+    "why_ambiguous": "NOTE 2 defines the SI diagnostic block by reference to 'lateral branch blocks', a different procedure."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "conservative therapy",
+   "quote": "Pain has failed to respond to 3 months of conservative (nonsurgical) management",
+   "where": "Coverage p.1"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "Participation in at least 6 weeks of physical therapy (including active exercise) or documentation of why the patient could not tolerate physical therapy",
+   "where": "NOTE 1 p.2"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "Use of prescription-strength analgesics for several weeks at a dose sufficient to induce a therapeutic response",
+   "where": "NOTE 1"
+  },
+  {
+   "kind": "psych/nutrition evaluation",
+   "quote": "Evaluation and appropriate management of associated cognitive, behavioral, or addiction issues",
+   "where": "NOTE 1"
+  },
+  {
+   "kind": "documentation",
+   "quote": "Documentation of compliance with the preceding criteria",
+   "where": "NOTE 1"
+  },
+  {
+   "kind": "other",
+   "quote": "Dual (controlled) diagnostic blocks with 2 anesthetic agents with differing duration of action",
+   "where": "Coverage p.1 (diagnostic)"
+  },
+  {
+   "kind": "provider/facility qualification",
+   "quote": "The injections are performed under imaging guidance",
+   "where": "Coverage p.1"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "No more than 3 injections are given in 1 year",
+   "where": "Coverage p.2"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "reduction in pain for the duration of the local anesthetic used (e.g., 3 hours longer with bupivacaine than lidocaine)",
+   "where": "NOTE 2"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "conservative management",
+   "value": "3",
+   "unit": "months",
+   "quote": "failed to respond to 3 months of conservative (nonsurgical) management"
+  },
+  {
+   "quantity": "physical therapy",
+   "value": ">= 6",
+   "unit": "weeks",
+   "quote": "at least 6 weeks of physical therapy"
+  },
+  {
+   "quantity": "injections",
+   "value": "<= 3",
+   "unit": "per year",
+   "quote": "No more than 3 injections are given in 1 year"
+  },
+  {
+   "quantity": "washout before diagnostic block",
+   "value": ">= 4",
+   "unit": "weeks",
+   "quote": "for a period of at least 4 weeks before the diagnostic block"
+  },
+  {
+   "quantity": "pain reduction for diagnostic block",
+   "value": "no fixed value (50%, 75% discussed)",
+   "unit": "%",
+   "quote": "There is no consensus on whether a minimum of 50% or 75% reduction in pain would be required"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "conservative management",
+   "length": "3 months",
+   "quote": "3 months of conservative (nonsurgical) management"
+  },
+  {
+   "what": "PT",
+   "length": "6 weeks",
+   "quote": "at least 6 weeks of physical therapy"
+  },
+  {
+   "what": "no therapeutic intra-articular injection before diagnostic block",
+   "length": "4 weeks",
+   "quote": "at least 4 weeks before the diagnostic block"
+  },
+  {
+   "what": "injection cap",
+   "length": "1 year",
+   "quote": "3 injections are given in 1 year"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Listed only: CPT 27096, 64451; HCPCS G0260. 64451 is the nerve (lateral branch) block, not the joint injection.",
+  "non_covered_code_lists": "none"
+ },
+ "external_dependencies": [
+  {
+   "what": "Related policies SUR705.033 SI joint fusion, MED201.013 prolotherapy",
+   "quote": "SUR705.033 Sacroiliac Joint Fusion or Stabilization"
+  },
+  {
+   "what": "Medicare",
+   "quote": "does not have a national Medicare coverage position. Coverage may be subject to local carrier discretion."
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "successful diagnostic block",
+   "definition_quote": "2 separate positive blocks on different days with local anesthetic only (no steroids or other drugs)"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "several weeks",
+   "problem": "prescription-strength analgesics duration not defined"
+  },
+  {
+   "quote": "appropriate management of associated cognitive, behavioral, or addiction issues",
+   "problem": "not measurable from a chart"
+  },
+  {
+   "quote": "a dose sufficient to induce a therapeutic response",
+   "problem": "undefined"
+  },
+  {
+   "quote": "There is no consensus on whether a minimum of 50% or 75%",
+   "problem": "policy declines to set a threshold, so the diagnostic-block success test is not decidable"
+  }
+ ],
+ "extraction_hazards": [
+  "NOTE 1 and NOTE 2 repeated verbatim in Policy Guidelines (duplicate criteria text)",
+  "Page footers 'Sacroiliac Joint Injections/SUR705.043 Page N' break lists mid-bullet (Coverage list splits between pp.1-2)",
+  "Four-fifths of the 16 pages is rationale/evidence with study percentages",
+  "Policy History repeats the old criteria text"
+ ],
+ "interesting_structures": [
+  "Diagnostic criterion requires TWO blocks with TWO agents of different duration (dual controlled blocks)",
+  "Behavioral/addiction evaluation inside conservative therapy",
+  "Notes moved from Coverage into Policy Guidelines in 2026 revision"
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "why": "Short ALL lists, but definitions live in notes and several leaves (dual blocks, behavioral evaluation, therapeutic response) are hard to judge from a chart."
+ }
+}

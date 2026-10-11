@@ -1,0 +1,118 @@
+{
+  "id": "florida-blue-02-99221-15",
+  "payer": "Florida Blue",
+  "payer_aliases": ["Florida Blue", "BCBS FL", "BCBSFL", "Blue Cross Blue Shield of Florida", "Blue Cross and Blue Shield of Florida", "BCBS of Florida"],
+  "title": "Total Ankle Replacement",
+  "guideline_number": "02-99221-15",
+  "effective_date": "2026-04-15",
+  "reviewed_date": "2026-03-26",
+  "source_file": "bcbsfl-02-99221-15-total-ankle-replacement.pdf",
+  "plan_types": ["All lines of business unless otherwise noted in the Program Exceptions section"],
+  "excluded_plans": ["Federal Employee Program (FEP)", "State Account Organization (SAO)"],
+  "scope": {
+    "cpt": {"27702": "covered", "27703": "covered"},
+    "icd10": [
+      "M05.071-M05.079", "M05.171-M05.179", "M05.271-M05.279", "M05.371-M05.379", "M05.471-M05.479",
+      "M05.571-M05.579", "M05.671-M05.679", "M05.771-M05.779", "M05.871-M05.879", "M06.071-M06.079",
+      "M06.871-M06.879", "M07.671-M07.679", "M12.071", "M12.072", "M12.571-M12.579", "M12.871-M12.879",
+      "M13.171-M13.179", "M19.071-M19.079", "M19.171-M19.179", "M19.271-M19.279",
+      "T84.018A-T84.018S", "T84.028A-T84.028S", "T84.038A-T84.038S", "T84.068A-T84.068S", "T84.098A-T84.098S"
+    ]
+  },
+  "criteria": [
+    {"id": "fda_approved_device", "text": "using an FDA-approved device", "question": "Is the planned total ankle replacement system a specific, named FDA-approved device?"},
+    {"id": "skeletally_mature", "text": "skeletally mature members", "question": "Is the patient skeletally mature (closed growth plates / adult)?"},
+    {"id": "ankle_pain_limits_adl", "text": "ankle pain that limits activities of daily living", "question": "Does the chart document ankle pain that limits the patient's activities of daily living?"},
+    {"id": "conservative_treatment_6_months", "text": "documented failure of at least 6 consecutive months of conservative treatment (such as physical therapy, anti-inflammatory medication, splints or orthotic devices)", "question": "Has conservative treatment (physical therapy, anti-inflammatory medication, splints or orthotic devices) been tried for at least 6 consecutive months and failed, with dates?", "threshold": {"kind": "duration_months", "op": "gte", "value": 6, "unit": "months"}},
+    {"id": "arthritis_adjacent_joints", "text": "Arthritis in adjacent joints (i.e., subtalar or midfoot)", "question": "Is there arthritis in the adjacent joints (subtalar or midfoot)?"},
+    {"id": "severe_arthritis_contralateral_ankle", "text": "Severe arthritis of the contralateral ankle", "question": "Is there severe arthritis of the opposite ankle?"},
+    {"id": "arthrodesis_contralateral_ankle", "text": "Arthrodesis of the contralateral ankle", "question": "Has the opposite ankle been fused (arthrodesis)?"},
+    {"id": "inflammatory_arthritis", "text": "Inflammatory (e.g., rheumatoid) arthritis", "question": "Does the patient have an inflammatory arthritis such as rheumatoid arthritis?"},
+    {"id": "avascular_necrosis_talar_dome", "text": "Extensive avascular necrosis of the talar dome", "question": "Is there evidence of extensive avascular necrosis of the talar dome?"},
+    {"id": "compromised_bone_stock_soft_tissue", "text": "Compromised bone stock or soft tissue (including skin and muscle)", "question": "Is there evidence of compromised bone stock or compromised soft tissue (skin or muscle) at the ankle?"},
+    {"id": "severe_malalignment_not_correctable", "text": "Severe malalignment (e.g., > 15 degrees) not correctable by surgery", "question": "Is there severe malalignment (for example more than 15 degrees) that cannot be corrected by surgery?", "threshold": {"kind": "number", "op": "gt", "value": 15, "unit": "degrees"}},
+    {"id": "active_ankle_joint_infection", "text": "Active ankle joint infection", "question": "Is there evidence of an active infection of the ankle joint?"},
+    {"id": "peripheral_vascular_disease", "text": "Peripheral vascular disease", "question": "Is there evidence of peripheral vascular disease?"},
+    {"id": "charcot_neuroarthropathy", "text": "Charcot neuroarthropathy", "question": "Is there evidence of Charcot neuroarthropathy (neuropathic osteoarthropathy)?"},
+    {"id": "device_has_failed", "text": "the device has failed", "question": "Has the existing total ankle replacement device failed (e.g., loosening, wear, breakage, dislocation, mechanical complication)?"}
+  ],
+  "scenarios": [
+    {
+      "id": "primary_total_ankle_replacement",
+      "name": "Total ankle replacement (primary)",
+      "applies_to_cpt": ["27702"],
+      "requires": {"type": "all", "label": "Total ankle replacement using an FDA-approved device meets the definition of medical necessity in", "children": [
+        {"type": "leaf", "criterion": "fda_approved_device"},
+        {"type": "leaf", "criterion": "skeletally_mature"},
+        {"type": "leaf", "criterion": "ankle_pain_limits_adl"},
+        {"type": "leaf", "criterion": "conservative_treatment_6_months"},
+        {"type": "any", "label": "ONE of the following conditions", "children": [
+          {"type": "leaf", "criterion": "arthritis_adjacent_joints"},
+          {"type": "leaf", "criterion": "severe_arthritis_contralateral_ankle"},
+          {"type": "leaf", "criterion": "arthrodesis_contralateral_ankle"},
+          {"type": "leaf", "criterion": "inflammatory_arthritis"}
+        ]},
+        {"type": "not", "label": "AND NO evidence of the following", "child": {"type": "any", "label": "Any of the following", "children": [
+          {"type": "leaf", "criterion": "avascular_necrosis_talar_dome"},
+          {"type": "leaf", "criterion": "compromised_bone_stock_soft_tissue"},
+          {"type": "leaf", "criterion": "severe_malalignment_not_correctable"},
+          {"type": "leaf", "criterion": "active_ankle_joint_infection"},
+          {"type": "leaf", "criterion": "peripheral_vascular_disease"},
+          {"type": "leaf", "criterion": "charcot_neuroarthropathy"}
+        ]}}
+      ]},
+      "notes": ["Total ankle replacement is considered experimental or investigational for all other indications."]
+    },
+    {
+      "id": "revision_or_replacement_of_implant",
+      "name": "Revision or replacement of the implant (failed device)",
+      "applies_to_cpt": ["27703"],
+      "requires": {"type": "all", "label": "Revision or replacement of the implant, using an FDA-approved device, meets the definition of medical necessity when the device has failed and all medical necessity criteria outlined above (excluding 6 consecutive months of conservative treatment) are met", "children": [
+        {"type": "leaf", "criterion": "device_has_failed"},
+        {"type": "leaf", "criterion": "fda_approved_device"},
+        {"type": "leaf", "criterion": "skeletally_mature"},
+        {"type": "leaf", "criterion": "ankle_pain_limits_adl"},
+        {"type": "any", "label": "ONE of the following conditions", "children": [
+          {"type": "leaf", "criterion": "arthritis_adjacent_joints"},
+          {"type": "leaf", "criterion": "severe_arthritis_contralateral_ankle"},
+          {"type": "leaf", "criterion": "arthrodesis_contralateral_ankle"},
+          {"type": "leaf", "criterion": "inflammatory_arthritis"}
+        ]},
+        {"type": "not", "label": "AND NO evidence of the following", "child": {"type": "any", "label": "Any of the following", "children": [
+          {"type": "leaf", "criterion": "avascular_necrosis_talar_dome"},
+          {"type": "leaf", "criterion": "compromised_bone_stock_soft_tissue"},
+          {"type": "leaf", "criterion": "severe_malalignment_not_correctable"},
+          {"type": "leaf", "criterion": "active_ankle_joint_infection"},
+          {"type": "leaf", "criterion": "peripheral_vascular_disease"},
+          {"type": "leaf", "criterion": "charcot_neuroarthropathy"}
+        ]}}
+      ]},
+      "notes": [
+        "The 6 consecutive months of conservative treatment requirement is expressly excluded for revision/replacement.",
+        "Reimbursement section: reimbursement for the revision or replacement of a total ankle device is made only if the procedure was initially allowed (a payment condition on the original authorization, not a chart requirement; see guideline notes)."
+      ]
+    }
+  ],
+  "exclusions": [
+    {"text": "Total ankle replacement is considered experimental or investigational for all other indications.", "cpt": []}
+  ],
+  "notes": [
+    "Dates: 'Original Effective Date: 02/15/10', 'Reviewed: 03/26/26', 'Revised: 04/15/26'. effective_date follows the example fixture's convention (the Revised date of the current version); reviewed_date is the Reviewed date; the original effective date 02/15/10 is recorded here only.",
+    "Lines of business: the header says the guideline applies to all lines of business unless otherwise noted in Program Exceptions. FEP and SAO follow their own guidelines (excluded_plans). Medicare Advantage products: 'No National Coverage Determination (NCD) and/or Local Coverage Determination (LCD) were found at the time of the last guideline reviewed date' - the document does not say MA follows another document, so MA is not listed as excluded; a reviewer should confirm Florida Blue's MA handling.",
+    "The position statement is one sentence holding several requirements; it was split into: FDA-approved device, skeletally mature, ankle pain that limits ADL, documented failure of at least 6 consecutive months of conservative treatment, ONE of four conditions, and NO evidence of six contraindications (modelled as not(any(...))).",
+    "'using an FDA-approved device' is kept as an answerable criterion: a surgical plan normally names the implant system, and a nurse would ask for the device name if absent. A reviewer could instead mark it answerable: false (FDA status is not a chart fact); the device name is what the chart can show.",
+    "'ankle pain that limits activities of daily living' is kept as one criterion (pain is only a requirement insofar as it limits ADL), not split into 'ankle pain' and 'limits ADL'.",
+    "'Severe malalignment (e.g., > 15 degrees) not correctable by surgery': the threshold > 15 degrees is given as an example (e.g.) of severe, so it is recorded as the threshold but is illustrative; malalignment that is correctable by surgery is not a contraindication even if > 15 degrees.",
+    "The NOTE 'Optimal candidates for total ankle replacement are considered to be older (age older than 50), thin, low-demand individuals with minimal deformity and no functional barriers to participation in a rehabilitation program' is deliberately left out of the tree: it describes optimal candidates and is not a requirement (no age, BMI or demand threshold is imposed).",
+    "Revision/replacement pathway: 'all medical necessity criteria outlined above (excluding 6 consecutive months of conservative treatment)' is read as every primary criterion except the 6-month conservative treatment trial, including skeletal maturity, ankle pain limiting ADL, ONE of the four conditions and NO evidence of the six contraindications. A reviewer could argue the 'ONE of the following conditions' list was written for primary arthritis indications and sits oddly with a failed implant, but the document says 'all' and lists only one exclusion.",
+    "'Revision or replacement of the implant, using an FDA-approved device' reuses the fda_approved_device criterion; the same words 'using an FDA-approved device' appear in both the primary and the revision sentences.",
+    "REIMBURSEMENT INFORMATION: 'Reimbursement for the revision or replacement of a total ankle device is made only if the procedure was initially allowed.' Deliberately left out of the tree: it is a payment condition about the payer's own prior authorization history, outside the Position Statement, and not something a chart documents. A reviewer could instead add it to the revision pathway as an answerable: false criterion.",
+    "The LOINC documentation table and the sentence 'The following information may be required documentation to support medical necessity: Physician history and physical, attending physician treatment plan, progress notes, and treatment notes including documentation of symptoms, failure of at least 6 consecutive months of conservative treatment, and radiology reports (if applicable)' describe what records to submit (observations six months or fewer before the date of service), not additional criteria; left out.",
+    "ICD-10 codes are listed as 'Diagnosis Codes That Support Medical Necessity'; they are recorded in scope.icd10 as printed and are not a criterion. The T84.0x8 ranges (prosthesis complications) correspond to the revision pathway and the M-codes to the primary pathway, but the document does not assign codes to pathways.",
+    "Both CPT codes are tagged covered: 27702 (primary TAR) is governed by the primary pathway and 27703 (revision) by the revision pathway. The investigational statement 'for all other indications' does not make either code non-covered; it is recorded as an exclusion with no codes.",
+    "The six 'NO evidence of' items are contraindications inside the medical necessity statement, so they live in the tree as not(any(...)) and are not repeated in exclusions.",
+    "The step therapy protocol exemption paragraph (Florida law 627.42393) is an administrative right to request an exemption, not a criterion; left out.",
+    "DESCRIPTION, DEFINITIONS (arthrodesis, Charcot neuroarthropathy), RELATED GUIDELINES, REFERENCES and update history hold no requirements."
+  ],
+  "status": "ok"
+}

@@ -1,0 +1,6 @@
+/* Classic: the review page's look as of 6c1f8e7 (white page, teal actions, status as coloured blocks under the
+   lines). These tokens are the defaults every style starts from; review.css draws Classic with them. Another style
+   overrides tokens and presentation under html[data-style="<name>"] in its own file next to this one. */
+:root { --ink:#1B2430; --sec:#64707F; --dim:#9AA3AE; --line:#E6E9ED; --soft:#F6F7F9; --rail:#FAFBFC; --act:#0F6E68; --act-h:#0B5A55;
+        --ready:#1E7A54; --needs:#A6681A; --no:#9A3B3B; --wait:#64707F;
+        --ready-bg:#EEF7F2; --needs-bg:#FBF4E8; --no-bg:#FBEFEF; --wait-bg:#F3F4F6; --sel:#FFF3B0; --sel-line:#E0B400; }

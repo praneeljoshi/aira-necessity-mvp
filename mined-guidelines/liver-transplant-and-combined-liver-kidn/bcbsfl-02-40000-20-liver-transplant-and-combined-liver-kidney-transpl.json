@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "liver-transplant-and-combined-liver-kidn",
+  "title": "Liver Transplant and Combined Liver-Kidney Transplant",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JOUTOL084Y3QDONC9",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-40000-20",
+  "original_effective": "02/15/01",
+  "reviewed": "07/23/26",
+  "revised": "08/15/26",
+  "file": "bcbsfl-02-40000-20-liver-transplant-and-combined-liver-kidney-transpl.pdf",
+  "sha256": "8fdd148bdf8d455c467071bf2c8476f31ac1d09f6a244b50f9221f20bca64eeb",
+  "pages": 11,
+  "bytes": 222879,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original Effective Date 02/15/01; Reviewed 07/23/26; Revised 08/15/26 (12 pages)"
+}

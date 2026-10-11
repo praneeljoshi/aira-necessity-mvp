@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "lumbar-spine-surgery",
+  "title": "Thoracic and Lumbar Spine Surgery",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JLIL6IA76UM259CX5",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-20000-48",
+  "original_effective": "07/01/15",
+  "reviewed": "05/28/26",
+  "revised": "06/15/26",
+  "file": "bcbsfl-02-20000-48-thoracic-and-lumbar-spine-surgery.pdf",
+  "sha256": "6318c784b2c7cd15a4f9a5cff2bb814dd632f809f17d2aed9a3fedb61f6df164",
+  "pages": 16,
+  "bytes": 245626,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original 07/01/15; Reviewed 05/28/26; Revised 06/15/26; policy 02-20000-48"
+}

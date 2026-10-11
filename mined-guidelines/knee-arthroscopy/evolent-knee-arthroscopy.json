@@ -1,0 +1,19 @@
+{
+  "payer": "Evolent",
+  "payer_key": "evolent",
+  "treatment": "knee-arthroscopy",
+  "title": "Knee Arthroscopy",
+  "policy_number": "",
+  "effective": "2025",
+  "url": "https://www.ldh.la.gov/assets/medicaid/MCPP/7_15_25/2/1885_LHCC_Knee_Arthroscopy.pdf",
+  "final_url": "https://www.ldh.la.gov/assets/medicaid/MCPP/7_15_25/2/1885_LHCC_Knee_Arthroscopy.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "evolent-knee-arthroscopy.pdf",
+  "sha256": "2bd89cf6dda36e33c08d983ac52333ebd14680663406eac4035dcf8a75edf1d9",
+  "pages": 84,
+  "bytes": 949386,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original Nov 2015; Last Revised Nov 2024 (redline shows 'December 2023November 2024'); Implementation July 2025 (redline shows 'July 20242025'). Library URL is Louisiana Healthcare Connections Medicaid."
+}

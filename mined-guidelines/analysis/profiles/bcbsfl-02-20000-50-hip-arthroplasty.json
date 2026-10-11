@@ -1,0 +1,210 @@
+{
+ "file": "bcbsfl-02-20000-50-hip-arthroplasty.pdf",
+ "treatment": "hip-arthroplasty",
+ "payer": "bcbsfl",
+ "doc_kind": "medical policy (Medical Coverage Guideline)",
+ "lines_of_business": [
+  "All lines unless noted",
+  "FEP: follow FEP guidelines",
+  "SAO: follow SAO guidelines",
+  "Medicare Advantage: LCD L33618 Major Joint Replacement (Hip and Knee) reviewed"
+ ],
+ "effective_or_revised": "Original 10/15/16; Reviewed 01/23/25; Revised 02/15/25",
+ "sections_in_order": [
+  "Description",
+  "Position Statement (Total hip arthroplasty, Revision arthroplasty, Hip resurfacing)",
+  "Billing/Coding Information",
+  "Reimbursement Information",
+  "Program Exceptions",
+  "Definitions",
+  "Related Guidelines",
+  "Other",
+  "References",
+  "Committee Approval",
+  "Guideline Update Information"
+ ],
+ "criteria_location": "Position Statement pp.1-3: THA and revision (p.1-2), contraindication footnote, resurfacing (p.2-3).",
+ "procedures_covered": [
+  "Total hip arthroplasty (27130, 27132 conversion)",
+  "Revision arthroplasty (27134, 27137, 27138)",
+  "Metal-on-metal total hip resurfacing (S2118)",
+  "Partial hip resurfacing",
+  "All other resurfacing: E/I"
+ ],
+ "logic": {
+  "top_level": "pathways (THA, revision, total resurfacing, partial resurfacing); THA is any-of-7 conditions where the last one carries ALL sub-criteria",
+  "max_nesting_depth": 3,
+  "k_of_n": [
+   {
+    "k": 1,
+    "n": 7,
+    "quote": "meets the definition of medical necessity when 1 or more of the following conditions exist"
+   }
+  ],
+  "exclusions_or_contraindications": "Starred contraindication lists: THA/revision (active systemic bacteremia; active skin infection or open wound; neuropathic arthritis; rapidly progressive neurological disease) and resurfacing (10 items incl. female of childbearing age).",
+  "initial_vs_repeat": "Revision pathway separate; no repeat-procedure rules.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Advanced joint disease demonstrated by ... (subchondral cysts, ... avascular necrosis), AND o Pain or functional disability ..., AND o Failure of at least 3 months of conservative ... No contraindications* to total hip arthroplasty for any indication above are present",
+    "why_ambiguous": "The AND items follow only the last OR item (advanced joint disease) by indentation, but the contraindication line is dedented and reads as applying to all seven indications."
+   },
+   {
+    "quote": "Partial hip resurfacing ... Has known or suspected metal sensitivity or concern about potential effects of metal ions There is no more than 50% involvement",
+    "why_ambiguous": "Metal sensitivity is a contraindication for total resurfacing but required for partial; bullet lacks AND; reads as odd/conflicting."
+   },
+   {
+    "quote": "Failure of previous hip surgery",
+    "why_ambiguous": "undefined; history says criteria revised 'for clarity' but no detail"
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "diagnosis",
+   "quote": "Malignancy ...; Avascular necrosis; Fracture of the femoral neck; Acetabular fracture; Failure of previous hip surgery; Mal-union of acetabular or proximal femur fracture",
+   "where": "THA p.1"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "Advanced joint disease demonstrated by radiographic or MRI evidence of subchondral cysts, subchondral sclerosis, periarticular osteophytes, joint subluxation, joint space narrowing",
+   "where": "p.1"
+  },
+  {
+   "kind": "functional impairment",
+   "quote": "Pain or functional disability from injury due to trauma or arthritis of the joint",
+   "where": "p.1"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "Failure of at least 3 months of conservative non-surgical management ... includes 1 or more of the following: anti-inflammatory, analgesics, exercises, supervised PT, activity restrictions, assistive device, weight reduction",
+   "where": "p.1"
+  },
+  {
+   "kind": "age",
+   "quote": "Likely to outlive a traditional prosthesis (eg, age 55 or younger)",
+   "where": "resurfacing p.2"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "no more than 50% involvement of the femoral head; minimal change in acetabular cartilage",
+   "where": "partial resurfacing p.3"
+  },
+  {
+   "kind": "BMI/comorbidity",
+   "quote": "Severely overweight (without attempted weight loss or discussion of increased risk related to BMI) is a contraindication to resurfacing",
+   "where": "p.2-3"
+  },
+  {
+   "kind": "provider/facility qualification",
+   "quote": "none stated",
+   "where": ""
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "conservative management",
+   "value": ">= 3",
+   "unit": "months",
+   "quote": "Failure of at least 3 months of conservative non-surgical management"
+  },
+  {
+   "quantity": "age",
+   "value": "<= 55 (example)",
+   "unit": "years",
+   "quote": "(eg, age 55 or younger)"
+  },
+  {
+   "quantity": "femoral head involvement",
+   "value": "> 50 excluded",
+   "unit": "%",
+   "quote": "more than 50% involvement of the femoral head"
+  },
+  {
+   "quantity": "head cysts",
+   "value": "> 1",
+   "unit": "cm",
+   "quote": "Multiple cysts of the femoral head (>1 cm)"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "conservative management",
+   "length": "3 months",
+   "quote": "at least 3 months of conservative non-surgical management"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Listed only; hemiarthroplasty (27125) not listed here",
+  "non_covered_code_lists": "none (resurfacing outside criteria is E/I)"
+ },
+ "external_dependencies": [
+  {
+   "what": "Medicare LCD L33618",
+   "quote": "Major Joint Replacement (Hip and Knee) (L33618), located at fcso.com"
+  },
+  {
+   "what": "Related FL guidelines",
+   "quote": "Hip Arthroscopy and Open, Non-Arthroplasty Hip Repair, 02-20000-55"
+  },
+  {
+   "what": "InterQual 2014 listed as reference",
+   "quote": "InterQual® 2014. CP: Procedures, Adult. Total Joint Replacement (TJR), Hip."
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Definitions",
+   "definition_quote": "No guideline specific definitions apply."
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "Failure of previous hip surgery",
+   "problem": "undefined"
+  },
+  {
+   "quote": "as is reasonable",
+   "problem": "activity restrictions 'as is reasonable'"
+  },
+  {
+   "quote": "Weight reduction as appropriate",
+   "problem": "no BMI threshold"
+  },
+  {
+   "quote": "Severely overweight",
+   "problem": "no BMI value"
+  },
+  {
+   "quote": "Clinically significant leg length inequality / audible noise",
+   "problem": "no measure"
+  },
+  {
+   "quote": "Progressive or substantial bone loss",
+   "problem": "no measure"
+  },
+  {
+   "quote": "Severe osteopenia",
+   "problem": "no T-score"
+  }
+ ],
+ "extraction_hazards": [
+  "Indentation, not numbering, carries the nesting; AND items under the last OR item look like top-level",
+  "Typos: 'femoral headmay', 'avascular necrosis)' unmatched parenthesis",
+  "Asterisk footnote for contraindications is defined below the revision section",
+  "Revision list ends with 'AND No contraindications' after nine ORs",
+  "References include knee/shoulder and 27 citations",
+  "Update history references deleted criteria (simultaneous bilateral THA)"
+ ],
+ "interesting_structures": [
+  "Seven-way OR list in which only one branch requires imaging, pain and conservative therapy",
+  "Contraindication footnote applied to several pathways",
+  "Resurfacing age rule 'eg, age 55 or younger'",
+  "Star-footnoted lists"
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "why": "Pathway structure fits any/all/not; problems are scope of the shared AND/contraindication lines and undefined terms."
+ }
+}

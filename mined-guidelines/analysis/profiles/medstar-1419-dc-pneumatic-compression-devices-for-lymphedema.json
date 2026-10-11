@@ -1,0 +1,244 @@
+{
+ "file": "medstar-1419-dc-pneumatic-compression-devices-for-lymphedema.pdf",
+ "treatment": "pneumatic-compression",
+ "payer": "medstar",
+ "doc_kind": "Medicaid managed care administrative policy",
+ "lines_of_business": [
+  "MedStar Family Choice District of Columbia (Medicaid MCO)"
+ ],
+ "effective_or_revised": "Initial 10/01/2020; revisions 12/20, 07/22, 07/24, 07/25; reviewed 07/23",
+ "sections_in_order": [
+  "Purpose",
+  "Scope",
+  "Policy",
+  "Background (prior authorization)",
+  "A. Medical Description/Background",
+  "B. Indications for Pneumatic Compression Devices (1-7)",
+  "ISL Clinical Stage footnote",
+  "Summary of Changes"
+ ],
+ "criteria_location": "Section B, pp.2-5, numbered 1-7 with a-h letters and i-vi sub-items; stage definitions in a footnote on p.5.",
+ "procedures_covered": [
+  "Non-programmable pumps E0650/E0651",
+  "Programmable pumps E0652",
+  "Not covered: head/neck, non-extremity, non-lymphedema"
+ ],
+ "logic": {
+  "top_level": "all (B.1 all of a-h), B.2 programmable: all of a-e on top of B.1",
+  "max_nesting_depth": 4,
+  "k_of_n": [
+   {
+    "k": 1,
+    "n": 4,
+    "quote": "documented presence of at least one of the following findings: Marked hyperkeratosis with hyperplasia and hyperpigmentation; Papillomatosis cutis lymphostatica; Deformity of elephantiasis; Skin breakdown with persisting lymphorrhea"
+   }
+  ],
+  "exclusions_or_contraindications": "B.3-B.7 list non-covered uses: other clinical situations, other diseases, head and neck, non-extremity, truncal-only lymphedema.",
+  "initial_vs_repeat": "Reassessment loop: 'If there has been improvement, then a pneumatic compression device will not be approved ... trial of conservative therapy must be continued with subsequent reassessment at four-week intervals.' No continued-use criteria.",
+  "and_or_ambiguity": [
+   {
+    "quote": "The Enrollee must have documented persistence over a period of at least six months of \"chronic and severe\" lymphedema as identified by ... at least one of the following findings",
+    "why_ambiguous": "Six-month duration plus a stage that excludes Stage 0/1 and mild lymphedema; relation between 'severe findings' and 'Stage' unclear."
+   },
+   {
+    "quote": "iv. Documentation of ability of member/caregiver to apply the device in frequency prescribed. v. Documentation of ability of member/caregiver to apply the device in frequency prescribed.",
+    "why_ambiguous": "Duplicate items iv and v."
+   },
+   {
+    "quote": "f. ... ii. The Enrollee has other complications such as severe fibrosis, recurrent cellulitis or skin breakdown.",
+    "why_ambiguous": "Under 'documentation for no improvement must include all of the following' - requires complications as a condition of failure, not just no improvement."
+   },
+   {
+    "quote": "d. The Enrollee must have extremity lymphedema extending onto the chest, trunk and/or abdomen ... and the chest, trunk and/or abdominal lymphedema has failed to improve with four-week trial defined above and is not covered without lymphedema extending onto chest, trunk, abdomen.",
+    "why_ambiguous": "Run-on sentence; E0652 requires BOTH unique characteristics (c) and truncal extension (d) as written - 'all of the following'."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "diagnosis",
+   "quote": "A documented diagnosis of lymphedema as well as the cause of the lymphedema ... and the date of onset of swelling.",
+   "where": "B.1.a"
+  },
+  {
+   "kind": "duration",
+   "quote": "documented persistence over a period of at least six months of \"chronic and severe\" lymphedema",
+   "where": "B.1.b"
+  },
+  {
+   "kind": "symptom",
+   "quote": "Marked hyperkeratosis with hyperplasia and hyperpigmentation; Papillomatosis cutis lymphostatica; Deformity of elephantiasis; Skin breakdown with persisting lymphorrhea",
+   "where": "B.1.b i-iv"
+  },
+  {
+   "kind": "provider/facility qualification",
+   "quote": "The Enrollee must be under the care of a lymphedema specialist or program.",
+   "where": "B.1.c"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "Circumferential measurement charts demonstrating significant asymmetrical swelling",
+   "where": "B.1.d.i"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "Stage 0/Stage 1 and/or mild lymphedema do not meet criteria for a pneumatic compression device",
+   "where": "B.1.d.ii"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "compliant with a minimum of a four-week trial of conservative therapy ... compression bandage or garment ... minimum of 30mmHg distally; Exercise; Elevation; Manual lymphatic drainage with a lymphedema specialist; Self-manual lymphatic drainage for a least 30 minutes per day; Counseling on weight reduction",
+   "where": "B.1.e"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "Detailed measurements obtained in the same manner and with reference to the same anatomic landmarks, prior to and at the conclusion of the various trials and therapy",
+   "where": "B.1.f.i"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "the prescribing provider must sign and date these reports and state agreement or disagreement ... The signature date must be on or before the pneumatic compression device prescription date.",
+   "where": "B.1.h"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "failed a minimum of four weeks of regular, daily, multiple-hour home usage of a non-programmable pump (E0650 or E0651) after careful in-person fitting, training and supervision",
+   "where": "B.2.b"
+  },
+  {
+   "kind": "other",
+   "quote": "must have extremity lymphedema extending onto the chest, trunk and/or abdomen",
+   "where": "B.2.d"
+  },
+  {
+   "kind": "other",
+   "quote": "Documents must justify why the Enrollee has a medical need for a programmable pneumatic compression device and how that will produce better results",
+   "where": "B.2.e"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "lymphedema persistence",
+   "value": ">= 6",
+   "unit": "months",
+   "quote": "at least six months"
+  },
+  {
+   "quantity": "distal garment compression",
+   "value": ">= 30",
+   "unit": "mmHg",
+   "quote": "minimum of 30mmHg distally"
+  },
+  {
+   "quantity": "conservative trial",
+   "value": ">= 4",
+   "unit": "weeks",
+   "quote": "minimum of a four-week trial"
+  },
+  {
+   "quantity": "self-MLD",
+   "value": ">= 30",
+   "unit": "minutes/day",
+   "quote": "for a least 30 minutes per day"
+  },
+  {
+   "quantity": "reassessment interval",
+   "value": "4",
+   "unit": "weeks",
+   "quote": "subsequent reassessment at four-week intervals"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "persistence of severe lymphedema",
+   "length": "6 months",
+   "quote": "at least six months"
+  },
+  {
+   "what": "conservative trial",
+   "length": "4 weeks (repeatable)",
+   "quote": "four-week trial of conservative therapy"
+  },
+  {
+   "what": "prior non-programmable pump trial",
+   "length": "4 weeks",
+   "quote": "minimum of four weeks of regular, daily, multiple-hour home usage"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": false,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Only E0650, E0651, E0652 mentioned inline; no code tables.",
+  "non_covered_code_lists": "None."
+ },
+ "external_dependencies": [
+  {
+   "what": "Medicare LCD and NCD (regulatory references)",
+   "quote": "Regulatory References: LCD L33829, NCD 280.6"
+  },
+  {
+   "what": "Companion policy for venous stasis ulcers",
+   "quote": "lymphedema or chronic venous insufficiency with venous stasis ulcers (see policy #1420)"
+  },
+  {
+   "what": "ISL staging",
+   "quote": "[Clinical Stage as defined by The International Society of Lymphology]"
+  },
+  {
+   "what": "Prior authorization policy",
+   "quote": "in accordance with the MedStar Family Choice Prior Authorization Policy"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "ISL Stage",
+   "definition_quote": "Stage II - Lymphedema does not resolve with limb elevation alone."
+  },
+  {
+   "term": "Adequate compression",
+   "definition_quote": "sufficient pressure at the lowest pressure point to cause fluid movement"
+  },
+  {
+   "term": "Multi-chamber programmable",
+   "definition_quote": "possible to make manual adjustments in the pressure on at least three outflow ports"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "significant asymmetrical swelling",
+   "problem": "No cm or % threshold."
+  },
+  {
+   "quote": "Clinician determination from a provider experienced in lymphedema treatment",
+   "problem": "Unverifiable experience."
+  },
+  {
+   "quote": "no improvement with conservative therapy",
+   "problem": "No amount of improvement defined."
+  },
+  {
+   "quote": "chronic and severe",
+   "problem": "Defined only by the skin findings."
+  },
+  {
+   "quote": "lymphedema specialist or program",
+   "problem": "Credential undefined."
+  }
+ ],
+ "extraction_hazards": [
+  "Typo/duplicate item (iv and v identical).",
+  "Footnote asterisk glyph '⃰' attaches the stage table to criterion ii.",
+  "Page footer 'Proprietary & Confidential n' interrupts lists.",
+  "Summary of Changes table at the end holds a rule (caregiver ability) added in 07/22."
+ ],
+ "interesting_structures": [
+  "Most prescriptive of the four: severity findings, specialist, 6-month persistence, 4-week trial with six components, same-landmark measurement, signature-timing rule.",
+  "Improvement during the trial blocks approval and restarts the trial (loop).",
+  "Truncal extension required for programmable pump."
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "scale": "1 clean ... 5 judgment",
+  "why": "Pure all-of list with nested lists and numbers, but many sub-criteria require reading provider notes (specialist, signature dates, measurement landmarks), a looping trial, and duplicated/contradictory items."
+ }
+}

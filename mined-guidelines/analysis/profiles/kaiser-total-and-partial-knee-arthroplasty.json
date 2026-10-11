@@ -1,0 +1,88 @@
+{
+  "file": "kaiser-total-and-partial-knee-arthroplasty.pdf",
+  "treatment": "knee-arthroplasty",
+  "payer": "kaiser",
+  "doc_kind": "clinical policy (Kaiser National Clinical Policy NCP 114)",
+  "lines_of_business": ["Commercial (OR and WA)", "Self-funded plans", "Medicare members: use LCD L36575", "Medicaid: OR and WA 'This policy does not apply'"],
+  "effective_or_revised": "Effective 2/4/2026; Last Reviewed 6/24/26; policy # NCP 114 (was NCP 14 until 8/4/26)",
+  "sections_in_order": ["Overview/Definitions", "Coverage Determinations (table by line of business)", "Clinical Indications for Non-Medicare Members", "Kellgren-Lawrence table", "Outerbridge table", "Exclusions", "Coding", "References", "History Details"],
+  "criteria_location": "'Clinical Indications for None-Medicare Members' (main ALL list of 6 numbered items) plus a second 'ALSO' list of diagnoses, then separate Exclusions section and grading tables. Pages 1-2 of 6.",
+  "procedures_covered": ["Total and partial knee arthroplasty treated as one set of criteria (27437-27447)", "Revision (27486, 27487) and prosthesis removal (27488) appear in the code table but have no criteria"],
+  "logic": {
+    "top_level": "pathways (two: the ALL-of-6 degenerative joint disease path; the ALSO-any-of-7 diagnoses path)",
+    "max_nesting_depth": 3,
+    "k_of_n": [
+      {"k": 1, "n": 3, "quote": "Radiographic or arthroscopic evidence of moderate to severe osteoarthritis as evidenced by 1 or more of the following", "pointer": "Criterion 2"},
+      {"k": 1, "n": 3, "quote": "a trial of 1 or more of the following medications: NSAIDs (oral or topical), Acetaminophen, Intra-articular injection of corticosteroids", "pointer": "Criterion 3"},
+      {"k": 1, "n": 7, "quote": "for ANY of the following diagnoses", "pointer": "ALSO list"}
+    ],
+    "exclusions_or_contraindications": "Separate 'Exclusions' section: a not-medically-necessary list (infection, unstable angina, anything interfering with rehabilitation, no caregiver, non-ambulatory). BMI and A1c are written as criteria 5 and 6 inside the ALL list, with conditional branches.",
+    "initial_vs_repeat": "No revision or repeat criteria even though revision codes are in the table.",
+    "and_or_ambiguity": [
+      {"quote": "BMI < 40: if BMI is > 40, optimization efforts must include ALL the following", "why_ambiguous": "BMI exactly 40 is covered by neither '< 40' nor '> 40'. Then 'BMI > 40 is a relative contraindication' and a medical director reviews 'case-by-case', so criterion 5 is simultaneously a hard requirement and a soft one."},
+      {"quote": "If optimization attempts are unsuccessful, the surgeon and patient may proceed if there is documentation of understanding of the risks through shared decision making", "why_ambiguous": "Sits inside the 'ALL the following' optimization list as a third bullet, but it is an alternative fallback ('If ... unsuccessful'), not a further requirement."},
+      {"quote": "If diabetic the HbA1c < 7.5 (with the presence of heart disease, no specific A1c requirement), if A1C >7.5 the following must be documented", "why_ambiguous": "A1c exactly 7.5 uncovered. The heart-disease clause waives the threshold, but 'heart disease' is undefined. Only requirement for A1c > 7.5 is 'active medical management pre and post operatively', which a pre-op chart cannot show post-operatively."},
+      {"quote": "Treatment is needed because of functional disabling pain of at least 3 months duration", "why_ambiguous": "Criterion 1 (pain 3 months) and criterion 3 (3 months conservative treatment) overlap in time; unclear if the same 3 months can satisfy both."},
+      {"quote": "a trial of at least 3 Physical Therapy sessions in the last 12 months ... OR documentation that Physical Therapy is not clinically appropriate due to severe pain, severe functional limitations OR severe (end-stage) osteoarthritis", "why_ambiguous": "The exemption OR list is itself an OR inside an OR; the 'documentation that includes flexibility/muscle strengthening exercises and reasonable restriction of activities' attaches to the PT branch only by reading."}
+    ]
+  },
+  "requirement_kinds": [
+    {"kind": "functional impairment", "quote": "functional disabling pain of at least 3 months duration which interferes with the ability to carry out activities of daily living", "where": "Criterion 1"},
+    {"kind": "imaging finding", "quote": "Kellgren-Lawrence Grade 3 ... Grade 4 ... Exposed subchondral bone ... noted on arthroscopy or MRI (Outerbridge Grade IV)", "where": "Criterion 2"},
+    {"kind": "conservative therapy", "quote": "3 months of non-operative, conservative treatment as demonstrated by a trial of 1 or more of the following medications", "where": "Criterion 3"},
+    {"kind": "conservative therapy", "quote": "A trial of at least 3 Physical Therapy sessions in the last 12 months", "where": "Criterion 4"},
+    {"kind": "BMI/comorbidity", "quote": "BMI < 40: if BMI is > 40, optimization efforts must include ALL the following", "where": "Criterion 5"},
+    {"kind": "lab value", "quote": "If diabetic the HbA1c < 7.5", "where": "Criterion 6"},
+    {"kind": "diagnosis", "quote": "Distal femur fracture in a patient with osteoporosis; Failure of a previous proximal tibial or distal femoral osteotomy; Hemophilic arthroplasty; Limb salvage for malignancy; Post-traumatic knee joint destruction; Avascular necrosis of the tibial or femoral condyle; Inflammatory arthritis", "where": "ALSO list"},
+    {"kind": "other", "quote": "Unstable angina; Presence of any medical condition that interferes with successful rehabilitation; Lack of caregiver or unsuitable home situation for rehabilitation; Patients who are non-ambulatory at baseline", "where": "Exclusions"}
+  ],
+  "thresholds": [
+    {"quantity": "pain duration", "value": ">= 3", "unit": "months", "quote": "functional disabling pain of at least 3 months duration"},
+    {"quantity": "conservative treatment duration", "value": ">= 3", "unit": "months", "quote": "Patients must have 3 months of non-operative, conservative treatment"},
+    {"quantity": "PT sessions", "value": ">= 3 in last 12 months", "unit": "sessions", "quote": "a trial of at least 3 Physical Therapy sessions in the last 12 months"},
+    {"quantity": "BMI", "value": "< 40", "unit": "kg/m2", "quote": "BMI < 40: if BMI is > 40, optimization efforts must include ALL the following"},
+    {"quantity": "weight-loss documentation window", "value": "3-6 months", "unit": "months", "quote": "sustained weight loss over 3-6 months"},
+    {"quantity": "HbA1c", "value": "< 7.5", "unit": "%", "quote": "If diabetic the HbA1c < 7.5"},
+    {"quantity": "Kellgren-Lawrence", "value": ">= 3", "unit": "grade", "quote": "Kellgren-Lawrence Grade 3 ... Grade 4"},
+    {"quantity": "Outerbridge", "value": "IV", "unit": "grade", "quote": "Exposed subchondral bone ... (Outerbridge Grade IV)"}
+  ],
+  "time_windows": [
+    {"what": "functional disabling pain", "length": "at least 3 months", "quote": "functional disabling pain of at least 3 months duration"},
+    {"what": "non-operative medication trial", "length": "3 months", "quote": "Patients must have 3 months of non-operative, conservative treatment"},
+    {"what": "PT sessions look-back", "length": "last 12 months", "quote": "at least 3 Physical Therapy sessions in the last 12 months"},
+    {"what": "weight-loss attempts", "length": "3-6 months", "quote": "sustained weight loss over 3-6 months"}
+  ],
+  "codes": {"cpt_hcpcs_listed": true, "icd10_listed": false, "codes_tied_to_criteria": "Codes listed in a table (12 CPT codes) with no mapping to criteria; includes revision and removal codes though no revision criteria exist.", "non_covered_code_lists": "none"},
+  "external_dependencies": [
+    {"what": "Medicare: CMS LCD L36575 Total Knee Arthroplasty (Noridian)", "quote": "L36575 'Total Knee Arthroplasty'. For Medicare lines of business, use the criteria in the LCD"},
+    {"what": "Level-of-care policy", "quote": "Kaiser Permanente. Elective Surgical Procedure Level of Care Policy (reference 18)"},
+    {"what": "Medical director case-by-case review for BMI > 40", "quote": "the case will be reviewed on a case-by-case basis by a medical director"}
+  ],
+  "definitions_that_change_meaning": [
+    {"term": "Kellgren-Lawrence grade", "definition_quote": "grade 3 (moderate) moderate multiple osteophytes, definite narrowing of joint space and some sclerosis and possible deformity of bone ends"},
+    {"term": "Outerbridge 4", "definition_quote": "Full thickness cartilage loss"}
+  ],
+  "vague_terms": [
+    {"quote": "Intra-articular injection of corticosteroids as appropriate", "problem": "'as appropriate' unspecified"},
+    {"quote": "reasonable restriction of activities", "problem": "undefined"},
+    {"quote": "Presence of any medical condition that interferes with successful rehabilitation", "problem": "open-ended; any condition"},
+    {"quote": "Lack of caregiver or unsuitable home situation for rehabilitation", "problem": "social criterion rarely found in a chart; 'unsuitable' undefined"},
+    {"quote": "severe pain, severe functional limitations OR severe (end-stage) osteoarthritis", "problem": "'severe' undefined; PT exemption depends on it"},
+    {"quote": "Medicare ... None-Medicare Members", "problem": "typo in heading; extraction of section by heading text will miss"}
+  ],
+  "extraction_hazards": [
+    "Bullets render as private-use glyphs in text (squares); sub-bullets lose nesting depth.",
+    "Numbered criteria 1-6 hang their continuation lines at column 0, so wrapped lines look like new paragraphs.",
+    "Two short grading tables follow the criteria and are separate from them.",
+    "Header says 'NCP 114 (was NCP 14 until 8/4/26)' while Effective is 2/4/2026 and Last Reviewed 6/24/26: dates and numbering are internally odd (the renumbering date follows the review date).",
+    "Reference list cites LCD L36577 and L36007 while coverage table cites L36575: LCD number inconsistency."
+  ],
+  "interesting_structures": [
+    "Quantified optimization pathway for BMI and A1c that converts a hard threshold into a documented-effort alternative (soft gate with medical director review).",
+    "PT requirement of 3 sessions in 12 months with a clinical-inappropriateness exemption.",
+    "Partial and total arthroplasty share one criteria set; no separate UKA geometry (no ACL, ROM, deformity tests).",
+    "Social/caregiver requirement in exclusions.",
+    "Line-of-business table at the top routes Medicare to an LCD and excludes Medicaid."
+  ],
+  "fit_to_tree": {"score": 3, "scale": "1 = clean, 5 = needs new constructs or human judgment", "why": "Top-level ALL of 6 with k-of-n leaves maps well, but BMI/A1c are conditional with fallbacks and medical-director discretion, PT has a clinical exemption, and the exclusions need a NOT over social facts."}
+}

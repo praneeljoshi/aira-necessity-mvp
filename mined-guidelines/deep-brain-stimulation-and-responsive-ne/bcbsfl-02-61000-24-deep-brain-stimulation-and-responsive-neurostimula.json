@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "deep-brain-stimulation-and-responsive-ne",
+  "title": "Deep Brain Stimulation and Responsive Neurostimulation",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JN64IGO29DMG3ZID5",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-61000-24",
+  "original_effective": "01/01/02",
+  "reviewed": "06/25/26",
+  "revised": "07/15/26",
+  "file": "bcbsfl-02-61000-24-deep-brain-stimulation-and-responsive-neurostimula.pdf",
+  "sha256": "5145f8aff07958bf6abfa92ec96e88c790b218941aa4a55ac7a5996607659799",
+  "pages": 12,
+  "bytes": 193733,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original Effective Date 01/01/02; Reviewed 06/25/26; Revised 07/15/26"
+}

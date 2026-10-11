@@ -1,0 +1,89 @@
+{
+  "id": "florida-blue-02-50300-01",
+  "payer": "Florida Blue",
+  "payer_aliases": ["Florida Blue", "BCBS FL", "BCBSFL", "Blue Cross Blue Shield of Florida", "Blue Cross and Blue Shield of Florida", "BCBS of Florida"],
+  "title": "Kidney Transplant",
+  "guideline_number": "02-50300-01",
+  "effective_date": "2025-07-15",
+  "reviewed_date": "2025-06-26",
+  "source_file": "bcbsfl-02-50300-01-kidney-transplant.pdf",
+  "plan_types": ["All lines of business"],
+  "excluded_plans": ["Federal Employee Program (FEP)", "State Account Organization (SAO)"],
+  "scope": {
+    "cpt": {
+      "50300": "covered", "50320": "covered", "50323": "covered", "50325": "covered", "50327": "covered",
+      "50328": "covered", "50329": "covered", "50340": "covered", "50360": "covered", "50365": "covered",
+      "50547": "covered"
+    },
+    "icd10": []
+  },
+  "criteria": [
+    {"id": "physician_confirmed_esrd", "text": "physician-confirmed diagnosis of end-stage renal disease", "question": "Does a physician's note confirm a diagnosis of end-stage renal disease (ESRD)?"},
+    {"id": "failed_primary_kidney_transplant", "text": "failed primary kidney transplant", "question": "Has the patient had a prior kidney transplant that has failed?"},
+    {"id": "contra_known_current_malignancy", "text": "Known current malignancy, including metastatic cancer", "question": "Does the chart document a known current malignancy, including metastatic cancer?"},
+    {"id": "contra_recent_malignancy_high_risk", "text": "Recent malignancy with high risk of recurrence", "question": "Does the chart document a recent malignancy with a high risk of recurrence?"},
+    {"id": "contra_cancer_history_moderate_risk", "text": "History of cancer with a moderate risk of recurrence", "question": "Does the chart document a history of cancer with a moderate risk of recurrence?"},
+    {"id": "contra_systemic_disease_immunosuppression", "text": "Systemic disease that could be exacerbated by immunosuppression", "question": "Does the chart document a systemic disease that could be exacerbated by immunosuppression?"},
+    {"id": "contra_untreated_systemic_infection", "text": "Untreated systemic infection making immunosuppression unsafe, including chronic infection", "question": "Does the chart document an untreated systemic or chronic infection that makes immunosuppression unsafe?"},
+    {"id": "contra_other_irreversible_end_stage_disease", "text": "Other irreversible end-stage disease not attributed to kidney failure", "question": "Does the chart document another irreversible end-stage disease that is not attributed to the kidney failure?"},
+    {"id": "contra_psychosocial_or_chemical_dependency", "text": "Psychosocial conditions or chemical dependency affecting ability to adhere to therapy", "question": "Does the chart document a psychosocial condition or chemical dependency that affects the patient's ability to adhere to therapy?"}
+  ],
+  "scenarios": [
+    {
+      "id": "kidney_transplant",
+      "name": "Kidney transplant with either a living or cadaver donor",
+      "applies_to_cpt": ["50300", "50320", "50323", "50325", "50327", "50328", "50329", "50340", "50360", "50365", "50547"],
+      "requires": {"type": "all", "label": "Kidney transplant meets the definition of medical necessity", "children": [
+        {"type": "leaf", "criterion": "physician_confirmed_esrd"},
+        {"type": "not", "label": "None of the potential contraindications", "child": {"type": "any", "label": "Potential contraindications to kidney transplant", "children": [
+          {"type": "leaf", "criterion": "contra_known_current_malignancy"},
+          {"type": "leaf", "criterion": "contra_recent_malignancy_high_risk"},
+          {"type": "leaf", "criterion": "contra_cancer_history_moderate_risk"},
+          {"type": "leaf", "criterion": "contra_systemic_disease_immunosuppression"},
+          {"type": "leaf", "criterion": "contra_untreated_systemic_infection"},
+          {"type": "leaf", "criterion": "contra_other_irreversible_end_stage_disease"},
+          {"type": "leaf", "criterion": "contra_psychosocial_or_chemical_dependency"}
+        ]}}
+      ]},
+      "notes": ["Kidney transplant is considered experimental or investigational in all other situations."]
+    },
+    {
+      "id": "kidney_retransplant",
+      "name": "Kidney re-transplant after a failed primary kidney transplant",
+      "applies_to_cpt": ["50300", "50320", "50323", "50325", "50327", "50328", "50329", "50340", "50360", "50365", "50547"],
+      "requires": {"type": "all", "label": "Kidney re-transplant meets the definition of medical necessity", "children": [
+        {"type": "leaf", "criterion": "failed_primary_kidney_transplant"},
+        {"type": "all", "label": "Meets criteria for kidney transplantation", "children": [
+          {"type": "leaf", "criterion": "physician_confirmed_esrd"},
+          {"type": "not", "label": "None of the potential contraindications", "child": {"type": "any", "label": "Potential contraindications to kidney transplant", "children": [
+            {"type": "leaf", "criterion": "contra_known_current_malignancy"},
+            {"type": "leaf", "criterion": "contra_recent_malignancy_high_risk"},
+            {"type": "leaf", "criterion": "contra_cancer_history_moderate_risk"},
+            {"type": "leaf", "criterion": "contra_systemic_disease_immunosuppression"},
+            {"type": "leaf", "criterion": "contra_untreated_systemic_infection"},
+            {"type": "leaf", "criterion": "contra_other_irreversible_end_stage_disease"},
+            {"type": "leaf", "criterion": "contra_psychosocial_or_chemical_dependency"}
+          ]}}
+        ]}
+      ]}
+    }
+  ],
+  "exclusions": [
+    {"text": "Kidney transplant is considered experimental or investigational in all other situations.", "cpt": []}
+  ],
+  "notes": [
+    "Built from the PDF only; the download holds one clean copy of the guideline (no redline), 6 pages, Reviewed 06/26/25, Revised 07/15/25, Original Effective Date 01/01/01. effective_date is the Revised date and reviewed_date the Reviewed date, following the hand-built example; the original effective date (01/01/01) is not recorded as effective_date.",
+    "Two pathways: primary kidney transplant and re-transplant after a failed primary kidney transplant. Re-transplant 'meets the definition of medical necessity in individuals who meet criteria for kidney transplantation', so the re-transplant pathway is the full primary tree plus one extra leaf, a failed primary kidney transplant. Primary and re-transplant are distinguished by history, not by code.",
+    "The one indication, 'physician-confirmed diagnosis of end-stage renal disease', is kept as a single criterion: 'physician-confirmed' qualifies how the diagnosis must be documented (a physician's confirmation, added by the 03/15/20 revision) rather than being a separate thing a chart shows. A reviewer could split it into a diagnosis leaf and a confirmation leaf; the judge question asks for both.",
+    "'with either a living or cadaver donor' is scope, not a requirement (either donor type qualifies), so it is not a criterion; it is carried in the pathway name.",
+    "Code-to-pathway mapping: the document ties no code to any section. All eleven codes (donor nephrectomy 50300/50320/50547, backbench preparation 50323/50325, backbench reconstruction 50327/50328/50329, recipient nephrectomy 50340, renal allotransplantation 50360/50365) are components of one kidney transplant, and the document never says a code is non-covered or investigational, so all are tagged covered and both pathways list all eleven explicitly. 50340 'Recipient nephrectomy (separate procedure)' is included because it appears in the document's code table with no separate rule.",
+    "The contraindication list is headed 'Potential contraindications to kidney transplant (subject to the judgment of the transplant center) include'. Modelled as not(any(the seven bullets)) inside each pathway's all, so a documented contraindication fails the pathway; the 'potential' and 'subject to the judgment of the transplant center' wording means a reviewer could treat a documented contraindication as a review item rather than a hard fail. Not listed under exclusions because they are conditional on center judgment rather than categorical non-coverage statements.",
+    "'candidates' in 'meets the definition of medical necessity for candidates with' is not modelled as a requirement (transplant candidacy is what the request is).",
+    "The Certificate of Medical Necessity block (submit a completed CMN with the request) is an administrative submission step, not a clinical requirement, and is left out of the tree.",
+    "No ICD-10 codes are listed in the Billing/Coding section (the 2010 and 2012 update history mentions ICD-10 codes, but none are printed), so scope.icd10 is empty.",
+    "Program exceptions: FEP and SAO follow their own guidelines and are listed under excluded_plans. For Medicare Advantage the document says no NCD and/or LCD were found, so Medicare Advantage is not excluded and this guideline applies to it. The step-therapy exemption paragraph is boilerplate (this guideline has no step therapy requirement) and is left out.",
+    "Definitions (Anastomosis; ESRD: end stage renal disease) are supporting definitions, not requirements. The Description (donor may be cadaver, living-related or living-unrelated) and the 'Other' section quoting Florida statutes on non-discrimination in transplant coverage hold no requirements and are left out.",
+    "Related guidelines (Allogeneic Pancreas Transplant 02-40000-17; Liver Transplant and Combined Liver-Kidney Transplant 02-40000-20) govern other organs and combined liver-kidney transplant, not this tree."
+  ],
+  "status": "ok"
+}

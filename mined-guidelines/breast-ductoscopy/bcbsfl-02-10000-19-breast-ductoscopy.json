@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "breast-ductoscopy",
+  "title": "Breast Ductoscopy",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JI7IGFR76W2H5G67D",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-10000-19",
+  "original_effective": "12/15/03",
+  "reviewed": "03/26/26",
+  "revised": "04/15/26",
+  "file": "bcbsfl-02-10000-19-breast-ductoscopy.pdf",
+  "sha256": "c0088007d4b33f0601b11204763c3240164c65646dde0c3ea13af81a2aeaf261",
+  "pages": 4,
+  "bytes": 113392,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original Effective Date 12/15/03; Reviewed 03/26/26; Revised 04/15/26 (4 pages)"
+}

@@ -1,0 +1,391 @@
+{
+ "file": "carelon-msk03-1024-2-clinical-appropriateness-guidelines-spine-surgery.pdf",
+ "treatment": "lumbar-spine-surgery",
+ "payer": "carelon",
+ "doc_kind": "clinical guideline (vendor / utilization-management company), redline version",
+ "lines_of_business": [
+  "Health plans that delegate to Carelon (Anthem/Elevance family and others); 'Approval and implementation dates for specific health plans may vary'",
+  "Medicare Advantage: 'Guidelines are only applied where there are not fully established CMS criteria'",
+  "Medicaid mentioned in history (Indiana, Anthem Medicaid)"
+ ],
+ "effective_or_revised": "MSK03-1024.2, effective 10/20/2024 (redline against 01/01/2024 version); last review 01/23/2024",
+ "sections_in_order": [
+  "Description and Application of the Guidelines",
+  "General Clinical Guideline (appropriateness framework, simultaneous ordering, repeat diagnostic / therapeutic)",
+  "Cervical Decompression With or Without Fusion",
+  "Cervical Disc Arthroplasty",
+  "Lumbar Disc Arthroplasty",
+  "Lumbar Discectomy, Foraminotomy, and Laminotomy",
+  "Lumbar Fusion and Treatment of Spinal Deformity",
+  "Lumbar Laminectomy",
+  "Noninvasive Electrical Bone Growth Stimulation",
+  "Vertebroplasty/Kyphoplasty",
+  "Bone Graft Substitutes and BMPs",
+  "History"
+ ],
+ "criteria_location": "Each of 11 procedure guidelines (66 pages total) repeats: Description and Scope, Clinical Indications (General Information + criteria), Contraindications, Exclusions, Selected References, Codes. Lumbar parts: disc arthroplasty pp.25-28, discectomy/foraminotomy/laminotomy pp.29-32, fusion/deformity pp.35-41, laminectomy pp.48-52. Shared definitions (conservative management, failure, severity, imaging) sit in the 'General Information' paragraph repeated at the top of every guideline.",
+ "procedures_covered": [
+  "Lumbar disc arthroplasty (22857, 22860, 22862, 22865, 0164T, 0165T)",
+  "Lumbar discectomy, foraminotomy, laminotomy (incl. endoscopic 62380)",
+  "Lumbar fusion and deformity (scoliosis, kyphosis) with or without decompression",
+  "Lumbar laminectomy incl. synovial cyst, dorsal rhizotomy, tethered cord, biopsy/excision",
+  "Also in same file but not lumbar: cervical decompression, cervical disc arthroplasty, bone growth stimulation, vertebroplasty, BMP"
+ ],
+ "logic": {
+  "top_level": "pathways (each procedure has a list of conditions; each condition has an ALL list, sometimes with nested EITHER/ANY)",
+  "max_nesting_depth": 4,
+  "k_of_n": [
+   {
+    "k": 1,
+    "n": 2,
+    "quote": "Conservative management must include ... physical therapy AND at least ONE complementary conservative treatment strategy.",
+    "pointer": "General Information (each guideline)"
+   },
+   {
+    "k": 1,
+    "n": 4,
+    "quote": "ANY of the following (1-4) are present AND ALL 3 additional criteria are met",
+    "pointer": "Spinal stenosis fusion, p.39-40"
+   },
+   {
+    "k": 1,
+    "n": 5,
+    "quote": "ANY of the following: Persistent back pain ...; Listhesis greater than 50% ...; Progressive postural deformity ...; Persistent functional impairment; Neurological symptoms",
+    "pointer": "Isthmic spondylolisthesis, p.38"
+   }
+  ],
+  "exclusions_or_contraindications": "Three separate lists per guideline: Contraindications (disc arthroplasty, laminectomy tethered cord), Exclusions ('Indications other than those addressed in this guideline are considered not medically necessary including, but not limited to'), and inline relative contraindications. Open-ended 'including, but not limited to'.",
+  "initial_vs_repeat": "Explicit: 'Initial disc herniation when ALL ...' versus 'Recurrent disc herniation when BOTH criteria are met: Requirements for initial herniation; Failure of at least 6 weeks of conservative management'. Fusion: recurrent herniation needs 3 months since procedure + 12 weeks conservative care; 'Fusion for same-level disc herniation without instability may be considered following two (2) prior discectomies'. Staged fusions: 'not medically necessary for fusion involving fewer than three (3) levels'. General section defines repeat diagnostic and repeat therapeutic rules.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Radicular pain (radiculitis/radiculopathy) with significant functional impairment and/or or physical exam findings that correlate with radiculopathy",
+    "why_ambiguous": "Redline artifact 'and/or or' (an 'or' inserted next to 'and/or'); unclear whether pain, exam findings, or both required."
+   },
+   {
+    "quote": "EITHER of the following ... Progressive or severe neurologic deficits ... (conservative management requirement waived)",
+    "why_ambiguous": "The EITHER branch carries an inline waiver of a sibling criterion (6 weeks conservative management listed later in the ALL list); a tree needs an 'unless' construct."
+   },
+   {
+    "quote": "Neurogenic claudication (symptoms aggravated by standing/walking and/or alleviated by sitting/forward flexion) or radicular pain (VAS at least 4) with significant functional impairment",
+    "why_ambiguous": "Followed by two more bullets restating the aggravated/alleviated symptoms as separate required items, so the 'and/or' inside the first bullet is contradicted."
+   },
+   {
+    "quote": "within the past 126 months",
+    "why_ambiguous": "Redline: old '6' and new '12' both extracted; the History table confirms 12 months for stenosis. Similarly 'past 6 9 months' = 9 months for herniation."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "conservative therapy",
+   "quote": "Conservative management must include a combination of strategies ... including physical therapy AND at least ONE complementary conservative treatment strategy.",
+   "where": "General Information"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "Supervised home treatment program that includes ALL of the following: patient-specific program; initial active instruction by MD/DO/PT with redemonstration; compliance",
+   "where": "PT definition"
+  },
+  {
+   "kind": "duration",
+   "quote": "Failure of at least 6 weeks of conservative management (Physical therapy optional)",
+   "where": "Disc herniation, laminectomy stenosis"
+  },
+  {
+   "kind": "functional impairment",
+   "quote": "significant pain and functional impairment refer to pain rated at least 3 out of 10 in intensity and associated with inability to perform at least two (2) ADLs and/or IADLs",
+   "where": "Reporting of symptom severity"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "Documentation of nerve root compression or thecal sac impingement on MRI or other advanced imaging performed within the past 6 months",
+   "where": "Disc herniation, p.31"
+  },
+  {
+   "kind": "imaging reader",
+   "quote": "All imaging must be performed and read by an independent radiologist. If discrepancies should arise ... the radiologist report will supersede.",
+   "where": "General Information"
+  },
+  {
+   "kind": "documentation",
+   "quote": "The medical record must document the surgeon's interpretation of office-based flexion-extension lateral spine x-rays ... Verbal attestation will not be sufficient",
+   "where": "Fusion footnote *, p.38, 40"
+  },
+  {
+   "kind": "documentation",
+   "quote": "Clinical reevaluation must be done in reasonable proximity to the anticipated date of service",
+   "where": "General Information"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "fixed anterolisthesis of greater than or equal to 3 mm, or movement of greater than or equal to 3 mm",
+   "where": "Instability, isthmic, stenosis"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "mismatch between pelvic incidence (PI) and lumbar lordosis (LL) of more than 10 degrees and sagittal vertical axis (SVA) greater than 5 cm",
+   "where": "Flat back"
+  },
+  {
+   "kind": "age",
+   "quote": "Age between 18 and 60 years",
+   "where": "Disc arthroplasty"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "Axial pain determined to be of discogenic origin; advanced disc disease at L3-L4, L4-L5, or L5-S1 with Modic changes",
+   "where": "Disc arthroplasty"
+  },
+  {
+   "kind": "psych evaluation",
+   "quote": "Any underlying psychiatric disorder, such as depression, should be diagnosed and the management optimized prior to surgical intervention",
+   "where": "Disc arthroplasty"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "At least 3 months have elapsed since the prior procedure; significant relief of symptoms following the procedure",
+   "where": "Recurrent herniation / pseudoarthrosis / failed arthroplasty"
+  },
+  {
+   "kind": "lifestyle (soft)",
+   "quote": "Adherence to a tobacco cessation program resulting in abstinence ... at least 6 weeks prior to spinal surgery is strongly recommended",
+   "where": "General Recommendations"
+  },
+  {
+   "kind": "device/FDA",
+   "quote": "Use of an FDA-approved implant for the intended level",
+   "where": "Disc arthroplasty"
+  },
+  {
+   "kind": "staging",
+   "quote": "Staged, multi-session spinal fusions are considered not medically necessary for fusion involving fewer than three (3) levels",
+   "where": "Fusion Exclusions"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "pain intensity for 'significant'",
+   "value": ">= 3 of 10 plus 2 ADLs/IADLs",
+   "unit": "NRS",
+   "quote": "pain rated at least 3 out of 10 in intensity and associated with inability to perform at least two (2) ADLs and/or IADLs"
+  },
+  {
+   "quantity": "VAS for disc arthroplasty",
+   "value": ">= 40/100 (4/10) ideally",
+   "unit": "VAS",
+   "quote": "ideally documented by a visual analog scale (VAS) pain score of 40 or higher (out of 100, or 4 out of 10)"
+  },
+  {
+   "quantity": "VAS radicular pain, stenosis laminectomy",
+   "value": ">= 4",
+   "unit": "VAS",
+   "quote": "radicular pain (VAS at least 4) with significant functional impairment"
+  },
+  {
+   "quantity": "Anterolisthesis / translation",
+   "value": ">= 3",
+   "unit": "mm",
+   "quote": "fixed anterolisthesis of greater than or equal to 3 mm, or movement of greater than or equal to 3 mm"
+  },
+  {
+   "quantity": "PI minus LL mismatch",
+   "value": "> 10",
+   "unit": "degrees",
+   "quote": "mismatch between pelvic incidence (PI) and lumbar lordosis (LL) of more than 10 degrees"
+  },
+  {
+   "quantity": "Sagittal vertical axis",
+   "value": "> 5",
+   "unit": "cm",
+   "quote": "sagittal vertical axis (SVA) greater than 5 cm"
+  },
+  {
+   "quantity": "Cobb angle, adolescent idiopathic, skeletally immature",
+   "value": "> 40",
+   "unit": "degrees",
+   "quote": "Skeletally immature: Cobb angle greater than 40 degrees"
+  },
+  {
+   "quantity": "Cobb angle, adolescent idiopathic, skeletally mature",
+   "value": "> 50",
+   "unit": "degrees",
+   "quote": "Skeletally mature: Cobb angle greater than 50 degrees"
+  },
+  {
+   "quantity": "Degenerative scoliosis",
+   "value": ">= 30 (or SVA > 5 cm)",
+   "unit": "degrees",
+   "quote": "Severe degenerative scoliosis with a minimum Cobb angle of 30 degrees, or sagittal vertical axis greater than 5 cm"
+  },
+  {
+   "quantity": "Scheuermann thoracic kyphosis",
+   "value": "> 60",
+   "unit": "degrees",
+   "quote": "Thoracic kyphosis is greater than 60 degrees or thoracolumbar kyphosis is greater than 20 degrees"
+  },
+  {
+   "quantity": "Facet excision (anticipated instability)",
+   "value": "> 50% bilateral or > 75% unilateral",
+   "unit": "percent",
+   "quote": "Facet joint excision greater than 50% bilaterally or 75% unilaterally at the level fused"
+  },
+  {
+   "quantity": "Osteoporosis contraindication",
+   "value": "T-score <= -1.0",
+   "unit": "T-score",
+   "quote": "DEXA bone density measured T-score less than or equal to -1.0"
+  },
+  {
+   "quantity": "Disc arthroplasty age",
+   "value": "18-60",
+   "unit": "years",
+   "quote": "Age between 18 and 60 years"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "Conservative management, disc herniation and laminectomy/stenosis",
+   "length": "at least 6 weeks",
+   "quote": "Failure of at least 6 weeks of conservative management"
+  },
+  {
+   "what": "Conservative management, isthmic spondylolisthesis, degenerative scoliosis",
+   "length": "3 months",
+   "quote": "Failure of at least 3 months of conservative management"
+  },
+  {
+   "what": "Conservative management, flat back; Scheuermann",
+   "length": "6 months",
+   "quote": "Failure of 6 months of conservative management"
+  },
+  {
+   "what": "Conservative management after prior surgery (recurrence, pseudoarthrosis, failed arthroplasty)",
+   "length": "12 weeks",
+   "quote": "have not responded to at least 12 weeks of conservative management"
+  },
+  {
+   "what": "Imaging recency, discectomy herniation and synovial cyst",
+   "length": "within past 6 months",
+   "quote": "MRI or other advanced imaging performed within the past 6 months"
+  },
+  {
+   "what": "Imaging recency, laminectomy central herniation (redline)",
+   "length": "within past 9 months",
+   "quote": "within the past 6 9 months"
+  },
+  {
+   "what": "Imaging recency, laminectomy stenosis (redline)",
+   "length": "within past 12 months",
+   "quote": "within the past 126 months"
+  },
+  {
+   "what": "Time since prior procedure",
+   "length": "3 months (recurrent herniation), 6 months (pseudoarthrosis, failed disc)",
+   "quote": "At least 6 months have elapsed since the prior procedure"
+  },
+  {
+   "what": "Disc arthroplasty symptom duration",
+   "length": "at least 6 months",
+   "quote": "Symptoms present for at least 6 months"
+  },
+  {
+   "what": "Tobacco abstinence (recommended only)",
+   "length": "6 weeks",
+   "quote": "abstinence from tobacco for at least 6 weeks prior to spinal surgery is strongly recommended"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Codes are grouped per guideline (disc arthroplasty list, discectomy list, fusion list, laminectomy list) so the guideline-to-code link is by section, not by criterion.",
+  "non_covered_code_lists": "None; exclusions are conditions/devices."
+ },
+ "external_dependencies": [
+  {
+   "what": "Health plan may substitute own policy",
+   "quote": "If requested by a health plan, Carelon will review requests based on health plan medical policy/guidelines in lieu of the Carelon Guidelines."
+  },
+  {
+   "what": "CMS criteria take precedence for Medicare Advantage",
+   "quote": "in the case of reviews for Medicare Advantage Plans, the Guidelines are only applied where there are not fully established CMS criteria"
+  },
+  {
+   "what": "FDA approval of implant",
+   "quote": "Use of an FDA-approved implant for the intended level"
+  },
+  {
+   "what": "Peer-to-peer fallback",
+   "quote": "the determination of appropriateness will most likely require a peer-to-peer conversation"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Conservative management",
+   "definition_quote": "must include a combination of strategies to reduce inflammation, alleviate pain, and correct underlying dysfunction, including physical therapy AND at least ONE complementary conservative treatment strategy"
+  },
+  {
+   "term": "Failure of conservative management",
+   "definition_quote": "Failure of conservative management requires ALL of the following: ... completed a full course ... Worsening of or no significant improvement ... More invasive forms of therapy are being considered"
+  },
+  {
+   "term": "significant pain and functional impairment",
+   "definition_quote": "pain rated at least 3 out of 10 in intensity and associated with inability to perform at least two (2) ADLs and/or IADLs"
+  },
+  {
+   "term": "Multi-session",
+   "definition_quote": "procedures occurring on different days or requiring an additional anesthesia session"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "All other reasonable sources of pain have been ruled out",
+   "problem": "No list of what to rule out; negative evidence."
+  },
+  {
+   "quote": "reasonable proximity to the anticipated date of service",
+   "problem": "No day count."
+  },
+  {
+   "quote": "ideally documented by a visual analog scale (VAS) pain score of 40 or higher",
+   "problem": "'ideally' makes threshold soft; alternative is any IADL limitation."
+  },
+  {
+   "quote": "Exception to the physical therapy requirement in unusual circumstances",
+   "problem": "'unusual' undefined; free-text judgment."
+  },
+  {
+   "quote": "relative contraindications",
+   "problem": "Not a binary criterion."
+  },
+  {
+   "quote": "significant relief of symptoms",
+   "problem": "No magnitude or duration (contrast FL 'at least 6 months')."
+  },
+  {
+   "quote": "Absence of symptomatic degenerative disc disease at all other lumbar levels",
+   "problem": "Requires a negative across all levels."
+  }
+ ],
+ "extraction_hazards": [
+  "Redline: insertions are blue underline, deletions red strikethrough but both survive as plain text ('6 9 months', '126 months', 'thise section', 'Tthere', 'are is'); the clean intent must be reconstructed from the History table",
+  "The 'General Information' block (conservative management, failure, severity, imaging) is repeated for every guideline, so 4 lumbar copies plus 7 other sections",
+  "Footnote markers 1 and 2 (superscripts) run into text ('analgesics2')",
+  "Page headers 'Spine Surgery' and footers '\u00a9 2024 Carelon ...' interrupt lists mid-bullet",
+  "Multi-topic file: cervical, bone stimulator, vertebroplasty, BMP share the same headings (Clinical Indications, Exclusions) so heading matching alone grabs the wrong section",
+  "Table of contents has dot leaders and page numbers that look like section content",
+  "'Also see Lumbar disc herniation in the Lumbar Laminectomy guideline' cross-references sibling sections"
+ ],
+ "interesting_structures": [
+  "Layered definitions: a document-wide definitions block that criteria call by name ('conservative management', 'failure', 'significant pain')",
+  "Specific-overrides-general rule stated in text: 'The specific requirements take precedence over any stated general requirement.'",
+  "Waiver embedded in a criterion: conservative-care requirement waived for progressive deficit or cauda equina / conus syndrome",
+  "Spinal stenosis fusion is ANY(1-4) AND ALL(3 additional) with footnotes defining instability",
+  "Procedure-adjacent logic: staged multi-session fusion rule counts levels",
+  "Soft recommendations (tobacco cessation, shared decision-making) that are not criteria"
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "scale": "1 clean ... 5 human judgment",
+  "why": "Highly regular all/any with explicit definitions, which suits a tree; but redline text corruption, document-level waivers and defaults, 'ideally' thresholds and repeated boilerplate need preprocessing."
+ }
+}

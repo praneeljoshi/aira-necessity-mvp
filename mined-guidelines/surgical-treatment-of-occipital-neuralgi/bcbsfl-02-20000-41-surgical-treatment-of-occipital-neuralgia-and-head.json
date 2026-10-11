@@ -1,0 +1,19 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "surgical-treatment-of-occipital-neuralgi",
+  "title": "Surgical Treatment of Occipital Neuralgia and Headache",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JN64IGP612NPQ9EIH",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-20000-41",
+  "original_effective": "01/15/13",
+  "reviewed": "06/25/26",
+  "revised": "07/15/26",
+  "file": "bcbsfl-02-20000-41-surgical-treatment-of-occipital-neuralgia-and-head.pdf",
+  "sha256": "424154c27312a0bc4bcc70b250c8cb1d5bd8ea5f1c787626ef92dceadce1a784",
+  "pages": 7,
+  "bytes": 123510,
+  "retrieved": "2026-10-09"
+}

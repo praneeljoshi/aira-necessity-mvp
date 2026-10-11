@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "endovascular-procedures-for-intracranial",
+  "title": "Endovascular Procedures for Intracranial Arterial Disease (Atherosclerosis and Aneurysms) and Extracranial Vertebral Artery Disease",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JGJZ3UZ78JFE3ZFO1",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-61000-35",
+  "original_effective": "07/15/08",
+  "reviewed": "02/26/26",
+  "revised": "03/15/26",
+  "file": "bcbsfl-02-61000-35-endovascular-procedures-for-intracranial-arterial.pdf",
+  "sha256": "0221b8141b390ec256eec187b4984881ca137b5ede3d829d88be737012d4468c",
+  "pages": 8,
+  "bytes": 509758,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original Effective Date 07/15/08; Reviewed 02/26/26; Revised 03/15/26"
+}

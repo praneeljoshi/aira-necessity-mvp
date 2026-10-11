@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "facet-arthroplasty",
+  "title": "Facet Arthroplasty",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JQH76YV7FYOAFB4EH",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-20000-37",
+  "original_effective": "11/15/09",
+  "reviewed": "08/27/26",
+  "revised": "09/15/26",
+  "file": "bcbsfl-02-20000-37-facet-arthroplasty.pdf",
+  "sha256": "0441fcccc2519f2d3860cb64bfa9557849a6d6333fcf90f7df0537628e5f6f20",
+  "pages": 5,
+  "bytes": 103400,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original Effective Date 11/15/09; Reviewed 08/27/26; Revised 09/15/26 (6 pages)"
+}

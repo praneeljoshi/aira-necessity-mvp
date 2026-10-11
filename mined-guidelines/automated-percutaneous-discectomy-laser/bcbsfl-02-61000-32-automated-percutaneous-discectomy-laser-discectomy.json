@@ -1,0 +1,19 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "automated-percutaneous-discectomy-laser",
+  "title": "Automated Percutaneous Discectomy, Laser Discectomy, Percutaneous Endoscopic Discectomy, and DISC Nucleoplasty",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JOUTOL29E7JW4Z57T",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-61000-32",
+  "original_effective": "05/15/04",
+  "reviewed": "07/23/26",
+  "revised": "08/15/26",
+  "file": "bcbsfl-02-61000-32-automated-percutaneous-discectomy-laser-discectomy.pdf",
+  "sha256": "5ea7bf236b6df18962aa57bc8566b4ad54ba75d97f125e0fbf6d762c97f2c5eb",
+  "pages": 13,
+  "bytes": 227454,
+  "retrieved": "2026-10-09"
+}

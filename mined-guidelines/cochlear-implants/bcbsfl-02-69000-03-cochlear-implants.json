@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "cochlear-implants",
+  "title": "Cochlear Implants",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76F3FX61L04EJTTLCW1",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-69000-03",
+  "original_effective": "08/15/03",
+  "reviewed": "07/24/25",
+  "revised": "08/15/25",
+  "file": "bcbsfl-02-69000-03-cochlear-implants.pdf",
+  "sha256": "8a3a6643c72ad2552b044b31921ecefab45df519260ff41c47c4fe563d5e5862",
+  "pages": 11,
+  "bytes": 694116,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original Effective Date 08/15/03; Reviewed 07/24/25; Revised 08/15/25 (12 pages)"
+}

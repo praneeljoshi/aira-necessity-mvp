@@ -1,0 +1,126 @@
+/* Policy health (static/health.html). Plain's tokens from static/theme.css (Soft / Light / Dark); one typeface
+   (Public Sans) on Plain's scale, 12 / 13.5 / 15 / 16.5 / 22, weights 400 / 600. Say each thing once: no boxes, no
+   icons, hairlines between rows; ink only where attention is needed (a high removal or gap rate, the demo notice). */
+
+html[data-flow="health"], html[data-flow="health"] body { background:var(--bg); color:var(--ink) }
+html[data-flow="health"] body { margin:0; font:15px/1.55 var(--f-ui); -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility }
+html[data-flow="health"] * { box-sizing:border-box }
+html[data-flow="health"] a { color:var(--act); text-decoration:none }
+html[data-flow="health"] a:hover { text-decoration:underline; text-underline-offset:2px }
+html[data-flow="health"] :focus-visible { outline:2px solid var(--act); outline-offset:2px; border-radius:3px }
+@media (prefers-reduced-motion: no-preference) { html[data-flow="health"] a, html[data-flow="health"] button { transition:color .12s, background-color .12s, border-color .12s } }
+
+/* the bar: back to the review, the theme */
+.bar { max-width:880px; margin:0 auto; padding:20px 32px 0; display:flex; align-items:center; justify-content:space-between }
+.bar .back { font-size:13.5px; color:var(--sec) }
+.bar .back::before { content:"←"; margin-right:6px }
+html[data-style="plain"] .bar .theme-btn { position:static; display:inline-block; font-family:inherit; cursor:pointer }
+
+/* the page: one column */
+.page { max-width:880px; margin:0 auto; padding:40px 32px 64px }
+.loading { color:var(--sec) }
+.kicker { margin:0 0 6px; font-size:12px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--sec) }
+.page h1 { margin:0; font-size:22px; line-height:1.3; font-weight:600; letter-spacing:-.01em; max-width:30em; text-wrap:balance }
+.lede { margin:8px 0 0; color:var(--sec); max-width:38em }
+
+/* the one action */
+.act { display:flex; flex-wrap:wrap; align-items:center; gap:6px 16px; margin:20px 0 0 }
+.act button { font:600 13.5px/1 var(--f-ui); cursor:pointer }
+.act .primary { padding:10px 14px; border-radius:7px; background:var(--act); color:var(--panel); border:1px solid var(--act) }
+.act .primary:hover { background:var(--act-h); border-color:var(--act-h) }
+.act .link { padding:6px 0; background:none; border:0; color:var(--act); font-weight:400 }
+.act .link:hover { text-decoration:underline; text-underline-offset:2px }
+.act .msg { font-size:13.5px; color:var(--ready) }
+.note { margin:16px 0 0; padding:16px 18px; max-height:360px; overflow:auto; background:var(--panel); border:1px solid var(--line); border-radius:8px;
+  font:13.5px/1.6 var(--f-ui); color:var(--ink); white-space:pre-wrap; word-break:break-word }
+
+/* 1. the headline: four plain numbers */
+.stats { display:grid; grid-template-columns:repeat(4, minmax(0, 1fr)); gap:0 32px; margin:40px 0 0; padding:20px 0 0; border-top:1px solid var(--line) }
+.stats div { min-width:0 }
+.stats dt { font-size:13.5px; color:var(--sec) }
+.stats dd { margin:0 0 2px; font-size:22px; font-weight:600; letter-spacing:-.01em; font-variant-numeric:tabular-nums; white-space:nowrap }
+.stats div { display:flex; flex-direction:column }
+.stats dd { order:-1 }
+
+/* the sections */
+.page section { margin:56px 0 0 }
+.page h2 { margin:0; font-size:16.5px; font-weight:600 }
+.dek { margin:4px 0 0; font-size:13.5px; color:var(--sec); max-width:44em }
+.rows { list-style:none; margin:14px 0 0; padding:0; border-top:1px solid var(--line) }
+.row { display:grid; grid-template-columns:minmax(0, 1fr) 168px; gap:24px; padding:16px 0; border-bottom:1px solid var(--line) }
+.row[hidden] { display:none }
+.what { min-width:0; position:relative }
+.sub { font-size:13.5px; color:var(--sec) }
+.fine { font-size:13.5px; color:var(--sec); margin-top:2px }
+.side { text-align:right; font-size:13.5px; color:var(--sec) }
+.side .ex { display:inline-block; margin-top:6px; font-size:13.5px }
+
+/* a requirement: its short label; its own words on hover / focus */
+.req { font-weight:600; color:var(--ink); cursor:help; text-decoration:underline dotted var(--edge-2); text-underline-offset:4px; text-decoration-thickness:1px }
+.req.plain { cursor:auto; text-decoration:none }
+.req:hover, .req:focus { text-decoration-color:var(--sec); outline:none }
+.words { position:absolute; left:0; top:calc(1.55em + 6px); z-index:5; width:min(460px, 100%); padding:10px 12px; border-radius:8px; background:var(--panel);
+  border:1px solid var(--edge-2); box-shadow:0 8px 24px -10px rgba(40,32,20,.25); font-size:13.5px; line-height:1.55; color:var(--ink);
+  visibility:hidden; opacity:0; pointer-events:none }
+.req:hover + .words, .req:focus + .words { visibility:visible; opacity:1 }
+html[data-theme="dark"] .words { box-shadow:0 8px 24px -10px rgba(0,0,0,.6) }
+
+.more-btn { margin:10px 0 0; padding:4px 0; background:none; border:0; font:13.5px var(--f-ui); color:var(--act); cursor:pointer }
+.more-btn:hover { text-decoration:underline; text-underline-offset:2px }
+
+/* the reasons, the notes */
+.reasons { display:flex; flex-wrap:wrap; gap:2px 16px; margin-top:6px; font-size:13.5px; color:var(--sec) }
+.reasons b { font-weight:600; color:var(--sec); font-variant-numeric:tabular-nums }
+.reasons .top, .reasons .top b { color:var(--ink) }
+.notes { list-style:none; margin:8px 0 0; padding:0; font-size:13.5px; color:var(--sec) }
+.notes li { margin:2px 0; font-style:italic }
+.notes .x { font-style:normal; margin-left:8px; white-space:nowrap; color:var(--dim); font-variant-numeric:tabular-nums }
+.why { margin:6px 0 0; font-size:13.5px; color:var(--ink); max-width:40em }
+
+/* a rate: the count, and a hairline meter under it; ink when high */
+.num { color:var(--sec); font-variant-numeric:tabular-nums }
+.num b { font-size:15px; font-weight:600; color:var(--ink) }
+.meter { display:block; height:3px; margin:7px 0 0 auto; width:100%; max-width:120px; background:var(--edge); border-radius:2px; overflow:hidden }
+.meter i { display:block; height:100%; background:var(--dim); border-radius:2px }
+.num.hot b { color:var(--needs) }
+.num.hot .meter i { background:var(--needs) }
+
+/* sections confused: from -> to */
+.pair { display:flex; flex-wrap:wrap; align-items:baseline; gap:4px 10px; font-weight:600 }
+.pair .none { font-weight:400; color:var(--sec); font-style:italic }
+.pair .arrow { color:var(--dim); font-weight:400 }
+
+/* lines flagged */
+.kind { font-size:12px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--sec) }
+blockquote { margin:6px 0 4px; padding:0 0 0 14px; border-left:2px solid var(--edge-2); color:var(--ink); max-width:40em }
+.prop { margin:8px 0 0; font-size:13.5px; color:var(--ink); max-width:40em }
+.prop span { font-size:12px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--sec); margin-right:6px }
+
+/* footer */
+.page footer { margin:64px 0 0; padding:16px 0 0; border-top:1px solid var(--line); font-size:13.5px; color:var(--sec) }
+.page footer p { margin:0 0 6px; max-width:44em }
+.page footer .demo { color:var(--needs) }
+.page footer .demo b { font-weight:600 }
+
+/* a phone: one column, the count beside the label's details */
+@media (max-width: 640px) {
+  .bar { padding:16px 16px 0 }
+  .page { padding:28px 16px 48px }
+  .stats { grid-template-columns:repeat(2, minmax(0, 1fr)); gap:18px 16px; margin-top:28px }
+  .page section { margin-top:44px }
+  .row { grid-template-columns:minmax(0, 1fr); gap:8px; padding:14px 0 }
+  .side { text-align:left; display:flex; flex-wrap:wrap; align-items:center; gap:4px 14px }
+  .side .num { display:flex; align-items:center; gap:10px; flex:1 1 auto }
+  .side .meter { margin:0; width:96px; flex:none }
+  .side .fine { margin:0 }
+  .side .ex { margin:0 }
+  .words { position:static; display:none; width:auto; margin:6px 0 2px; box-shadow:none; visibility:visible; opacity:1 }
+  .req:focus + .words { display:block }
+}
+
+@media print {
+  .bar, .act { display:none }
+  .page { padding:0 }
+  .row { break-inside:avoid }
+}
+.nw { white-space:nowrap }

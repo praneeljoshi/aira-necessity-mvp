@@ -1,0 +1,204 @@
+{
+  "id": "unitedhealthcare-2026t0447ss",
+  "payer": "UnitedHealthcare",
+  "payer_aliases": [
+    "UnitedHealthcare",
+    "United Healthcare",
+    "UHC",
+    "UHG",
+    "United HealthCare Services",
+    "UnitedHealthcare Insurance Company",
+    "UnitedHealthcare Commercial",
+    "UnitedHealthcare Individual Exchange"
+  ],
+  "title": "Surgical and Ablative Procedures for Venous Insufficiency and Varicose Veins",
+  "guideline_number": "2026T0447SS",
+  "effective_date": "2026-07-01",
+  "reviewed_date": null,
+  "source_file": "uhc-2026t0447ss-surgical-and-ablative-procedures-for-venous-insuff.pdf",
+  "plan_types": [
+    "UnitedHealthcare Commercial benefit plans",
+    "UnitedHealthcare Individual Exchange benefit plans"
+  ],
+  "excluded_plans": [
+    "UnitedHealthcare Community Plan (follows the Community Plan Policy: Surgical and Ablative Procedures for Venous Insufficiency and Varicose Veins)",
+    "UnitedHealthcare Medicare Advantage (follows the Medicare Advantage Policy: Varicose Veins Treatment and Other Vein Embolization Procedures)"
+  ],
+  "scope": {
+    "cpt": {
+      "0744T": "investigational",
+      "36465": "covered",
+      "36466": "covered",
+      "36468": "non_covered",
+      "36470": "covered",
+      "36471": "covered",
+      "36473": "investigational",
+      "36474": "investigational",
+      "36475": "covered",
+      "36476": "covered",
+      "36478": "covered",
+      "36479": "covered",
+      "36482": "covered",
+      "36483": "covered",
+      "37700": "covered",
+      "37718": "covered",
+      "37722": "covered",
+      "37735": "covered",
+      "37780": "covered",
+      "37785": "covered"
+    },
+    "icd10": []
+  },
+  "criteria": [
+    {
+      "id": "interqual_endovenous_ablation",
+      "text": "For medical necessity clinical coverage criteria, refer to the InterQual® Client Defined CP: Procedures, Endovenous Ablation, Lower Extremity Superficial Truncal or Perforator Vein (Custom) – UHG.",
+      "question": "Does the chart meet the InterQual Client Defined CP: Procedures, Endovenous Ablation, Lower Extremity Superficial Truncal or Perforator Vein (Custom) – UHG criteria? (The criteria are held in InterQual, not in this policy; a reviewer must open that subset.)",
+      "threshold": null,
+      "refs": [],
+      "answerable": false
+    },
+    {
+      "id": "interqual_ligation",
+      "text": "For medical necessity clinical coverage criteria, refer to the InterQual® CP: Procedures, Ligation and Division +/- Stripping or Excision, Lower Extremity Superficial Vein.",
+      "question": "Does the chart meet the InterQual CP: Procedures, Ligation and Division +/- Stripping or Excision, Lower Extremity Superficial Vein criteria? (The criteria are held in InterQual, not in this policy; a reviewer must open that subset.)",
+      "threshold": null,
+      "refs": [],
+      "answerable": false
+    },
+    {
+      "id": "sclerotherapy_nontruncal_nontelangiectasia",
+      "text": "Sclerotherapy (nontruncal, nontelangiectasia)",
+      "question": "Is the vein targeted for sclerotherapy a nontruncal vein (not the great, small or accessory saphenous trunk) and not a telangiectasia/spider vein (i.e., a reticular or tributary varicose vein)?",
+      "threshold": null,
+      "refs": [],
+      "answerable": true
+    },
+    {
+      "id": "sclerotherapy_sessions_up_to_three_per_leg_per_year",
+      "text": "up to three sessions per leg within a year",
+      "question": "Counting the requested session, will the number of sclerotherapy sessions (dates of service on which CPT 36470/36471 is performed) on this leg within the rolling 12 months (365 days) be three or fewer?",
+      "threshold": {"kind": "number", "op": "lte", "value": 3, "unit": "sessions per leg within a rolling 12 months"},
+      "refs": [],
+      "answerable": true
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "endovenous_ablation_truncal_or_perforator",
+      "name": "Endovenous ablation (thermal and nonthermal) of lower extremity superficial truncal or perforator veins — InterQual",
+      "applies_to_cpt": ["36465", "36466", "36475", "36476", "36478", "36479", "36482", "36483"],
+      "requires": {"type": "leaf", "criterion": "interqual_endovenous_ablation"},
+      "notes": [
+        "The policy states endovenous ablation is reconstructive and medically necessary in certain circumstances and defers the clinical criteria entirely to the InterQual Client Defined (Custom) – UHG subset; nothing in this document can be judged from a chart for this pathway.",
+        "Codes: radiofrequency (36475/36476), laser (36478/36479) and cyanoacrylate adhesive (36482/36483) ablation. Noncompounded foam sclerosant of a truncal vein (36465/36466) is placed here as a nonthermal endovenous treatment of a superficial truncal vein (see guideline notes for the alternative reading).",
+        "MOCA (36473/36474) is excluded from this pathway: the policy lists it as unproven and not medically necessary."
+      ]
+    },
+    {
+      "id": "ligation_and_division",
+      "name": "Ligation and division, with or without stripping or excision, of lower extremity superficial veins — InterQual",
+      "applies_to_cpt": ["37700", "37718", "37722", "37735", "37780", "37785"],
+      "requires": {"type": "leaf", "criterion": "interqual_ligation"},
+      "notes": [
+        "The policy states ligation and division is reconstructive and medically necessary in certain circumstances and defers the clinical criteria entirely to the InterQual CP: Procedures subset; nothing in this document can be judged from a chart for this pathway.",
+        "37785 (ligation, division and/or excision of varicose vein clusters) is included because the section covers ligation 'with or without stripping or excision of lower extremity Superficial Veins'."
+      ]
+    },
+    {
+      "id": "sclerotherapy_36470_36471",
+      "name": "Sclerotherapy of nontruncal, nontelangiectatic veins (CPT 36470, 36471)",
+      "applies_to_cpt": ["36470", "36471"],
+      "requires": {
+        "type": "all",
+        "label": "Covered for Sclerotherapy (nontruncal, nontelangiectasia) up to three sessions per leg within a year",
+        "children": [
+          {"type": "leaf", "criterion": "sclerotherapy_nontruncal_nontelangiectasia"},
+          {"type": "leaf", "criterion": "sclerotherapy_sessions_up_to_three_per_leg_per_year"}
+        ]
+      },
+      "notes": [
+        "Source: Applicable Codes > Coding Clarifications > Sclerotherapy: 'CPT codes 36470 and 36471 are covered for Sclerotherapy (nontruncal, nontelangiectasia) up to three sessions per leg within a year.' The Coverage Rationale's Sclerotherapy of Superficial Veins section points to this section for sclerotherapy coverage.",
+        "A session is defined as one date of service in which Sclerotherapy (CPT codes 36470 and 36471) is performed. A year is defined as a rolling 12 months (365 days).",
+        "More than three sessions per leg within a year is considered cosmetic (does not improve a Functional, Physical, or physiological Impairment) and cosmetic sclerotherapy is excluded; this is the same limit stated as an exclusion, not an additional criterion."
+      ]
+    }
+  ],
+  "exclusions": [
+    {
+      "text": "The following procedures for the treatment of Venous Insufficiency and Varicose Veins are considered unproven and not medically necessary due to insufficient evidence of efficacy: Endovenous mechanochemical ablation (MOCA)",
+      "cpt": ["36473", "36474"],
+      "refs": []
+    },
+    {
+      "text": "Endovenous Ablation of incompetent perforator veins using endovenous foam Sclerotherapy (e.g., noncompounded foam sclerosant)",
+      "cpt": [],
+      "refs": []
+    },
+    {
+      "text": "Endovenous Ablation of recurrent or residual perforator vein following a prior vein procedure",
+      "cpt": [],
+      "refs": []
+    },
+    {
+      "text": "Porcine bioprosthetic valve (e.g., VenoValve) implantation into the femoral vein for treatment of deep vein reflux associated with chronic Venous Insufficiency is unproven and not medically necessary for treating Venous Reflux due to insufficient evidence of efficacy.",
+      "cpt": ["0744T"],
+      "refs": []
+    },
+    {
+      "text": "CPT code 36468 for sclerosant treatment for Spider Veins/Telangiectasias is considered cosmetic and does not improve a Functional, Physical, or physiological Impairment",
+      "cpt": ["36468"],
+      "refs": []
+    },
+    {
+      "text": "More than three sessions per leg within a year is considered cosmetic and does not improve a Functional, Physical, or physiological Impairment. Cosmetic Sclerotherapy is excluded",
+      "cpt": [],
+      "refs": []
+    },
+    {
+      "text": "Procedures that correct an anatomical congenital anomaly, without improving or restoring physiological function, are considered cosmetic procedures and therefore excluded from coverage.",
+      "cpt": [],
+      "refs": []
+    },
+    {
+      "text": "Any procedure that does not meet the criteria in the Coverage Rationale section.",
+      "cpt": [],
+      "refs": []
+    },
+    {
+      "text": "Treatments for Spider Veins and/or Telangiectasias are considered to be cosmetic and therefore excluded from coverage.",
+      "cpt": ["36468"],
+      "refs": []
+    },
+    {
+      "text": "Endovenous Ablation (radiofrequency and/or laser) of either reticular or Telangiectatic Veins is not reconstructive and not medically necessary and therefore excluded from coverage.",
+      "cpt": [],
+      "refs": []
+    },
+    {
+      "text": "Cosmetic Sclerotherapy is excluded.",
+      "cpt": [],
+      "refs": []
+    }
+  ],
+  "notes": [
+    "Structure of the Coverage Rationale: two procedure families (endovenous ablation of superficial truncal or perforator veins; ligation and division +/- stripping or excision) are 'medically necessary in certain circumstances' with all clinical criteria deferred to named InterQual subsets. Each is one pathway whose single criterion is answerable: false. The only criteria this document holds of its own are the 36470/36471 sclerotherapy conditions in the Coding Clarifications, so status is 'ok' with one answerable pathway.",
+    "Judgment call — 36465/36466 (noncompounded foam sclerosant, truncal vein): the document never states coverage or criteria for these codes. The Sclerotherapy section says only 'Refer to the Applicable Codes section', where the Coding Clarification is AMA coding guidance (truncal vein + noncompounded foam with ultrasound-guided compression = 36465/36466), not a criterion. They are tagged covered (listed, with no non-covered statement) and placed in the endovenous ablation (InterQual) pathway because the section heading is 'Thermal and Nonthermal Treatments', the policy itself calls foam sclerotherapy of a vein 'Endovenous Ablation ... using endovenous foam Sclerotherapy', and the target is a superficial truncal vein. A reviewer could instead read these codes as governed only by the coding clarification with no clinical criteria in this document.",
+    "Judgment call — 36482/36483 (cyanoacrylate adhesive): placed in the endovenous ablation (InterQual) pathway as the nonthermal treatment under 'Thermal and Nonthermal Treatments'; the CPT descriptor is 'Endovenous ablation therapy'. The Sclerotherapy section's example list includes 'endovenous chemical ablation', which a reviewer might read as cyanoacrylate and route to the Applicable Codes section instead; that section says nothing about 36482/36483, so the InterQual pathway is the only reading that yields criteria.",
+    "Judgment call — tags: 'unproven and not medically necessary due to insufficient evidence of efficacy' is tagged investigational (MOCA 36473/36474; VenoValve 0744T). 36468 is tagged non_covered because the document says of that code that it is cosmetic and that treatments for spider veins/telangiectasias are excluded from coverage. All other listed codes carry no non-covered statement and are tagged covered.",
+    "Judgment call — the exclusions 'Endovenous Ablation of incompetent perforator veins using endovenous foam Sclerotherapy' and 'Endovenous Ablation of recurrent or residual perforator vein following a prior vein procedure' carry no codes: the code table has no code that is exactly those procedures (they would be billed with 36470/36471 or 36475-36483 depending on technique, codes that are covered for other targets). Likewise 'Endovenous Ablation (radiofrequency and/or laser) of either reticular or Telangiectatic Veins' carries no code because 36475-36479 describe ablation of an incompetent vein, not of reticular/telangiectatic veins specifically. These exclusions are a chart-level check (which vein, which history), not a code-level one.",
+    "Judgment call — the three unproven bullets are kept in the exclusions list rather than nested as not(...) inside the InterQual ablation pathway, following the brief's rule that a deferred pathway has a single unanswerable criterion. A reviewer could reasonably nest them: ablation is necessary 'in certain circumstances' AND not one of the three unproven procedures.",
+    "Judgment call — the parenthetical 'nontruncal, nontelangiectasia' is kept as one criterion describing the targeted vein rather than two; the question asks both halves. Truncal veins treated with noncompounded foam are coded 36465/36466 per the coding clarification, and telangiectasia sclerotherapy is 36468 (cosmetic), so the parenthetical mostly restates what 36470/36471 already are, but it is the document's stated condition for coverage of those codes.",
+    "Judgment call — the 'up to three sessions per leg within a year' threshold is modelled as number lte 3 (sessions per leg in a rolling 12 months), not as a duration_months: the number is a count of sessions; the 12-month window is the counting period. The chart would need the dates of prior sclerotherapy sessions on the same leg.",
+    "Judgment call — the exclusion 'More than three sessions per leg within a year is considered cosmetic ... Cosmetic Sclerotherapy is excluded' carries no code because 36470/36471 themselves are covered; only the excess sessions are excluded. Tagging 36470/36471 non_covered would be wrong.",
+    "Left out: Coding Clarification bullet 1 (one primary endovenous RF ablation code per extremity for the initial vein; only one add-on code per extremity regardless of the number of subsequent veins). This is a billing-unit rule about how codes may be requested, not something a chart documents; it is not a criterion.",
+    "Left out: the Definitions section (Varicose Veins = dilated subcutaneous tributaries >= 3 mm, CEAP C2; pathological reflux > 0.5 s superficial/perforator, > 1 s deep; Axial Reflux >= 5 cm apart for accessory GSV; Moderate to Severe Pain per VCSS; Functional or Physical Impairment; Telangiectasias < 1 mm). No sentence in this policy attaches a requirement to these definitions; the clinical thresholds live in the InterQual subsets. They are recorded here so a reviewer knows the document's own meanings.",
+    "Left out: 'Medical Records Documentation Used for Reviews' and 'Instructions for Use' (generic benefit-plan language). The Instructions for Use also say this Medical Policy 'may also be applied to Medicare Advantage plans in certain instances' when no NCD/LCD exists; the Related Policies box names a separate Medicare Advantage Policy (Varicose Veins Treatment and Other Vein Embolization Procedures), which is why Medicare Advantage is listed as an excluded plan.",
+    "Left out: Description of Services, Clinical Evidence, Clinical Practice Guidelines, FDA, References and Policy History: background only, no requirements. The CEAP class list (C0-C6) in Description of Services is explanatory.",
+    "The Benefit Considerations exclusion 'Any procedure that does not meet the criteria in the Coverage Rationale section' restates that the InterQual criteria (and the sclerotherapy conditions) must be met; it adds no criterion.",
+    "Plan types as written: 'This Medical Policy applies to UnitedHealthcare Commercial benefit plans' and 'This Medical Policy applies to Individual Exchange benefit plans'. The Related Policies box names a Community Plan Policy and a Medicare Advantage Policy for those lines of business.",
+    "No ICD-10 codes are listed in the document."
+  ],
+  "status": "ok",
+  "review": null
+}

@@ -1,0 +1,114 @@
+{
+ "file": "uhc-sacroiliac-joint-interventions.pdf",
+ "treatment": "sacroiliac-joint-injections",
+ "payer": "uhc",
+ "doc_kind": "medical policy",
+ "lines_of_business": [
+  "UnitedHealthcare Commercial",
+  "UnitedHealthcare Individual Exchange"
+ ],
+ "effective_or_revised": "Policy 2026T0621O; Effective September 10, 2026",
+ "sections_in_order": [
+  "Application",
+  "Coverage Rationale",
+  "Medical Records Documentation Used for Reviews",
+  "Definitions",
+  "Applicable Codes",
+  "Description of Services",
+  "Clinical Evidence",
+  "U.S. Food and Drug Administration",
+  "References",
+  "Policy History/Revision Information",
+  "Instructions for Use"
+ ],
+ "criteria_location": "Coverage Rationale p.1-2 states coverage only in principle; the actual criteria are in InterQual Client Defined CP: Procedures, Sacroiliac (SI) Joint Injection (AQS) (Custom) - UHG, not in the PDF.",
+ "procedures_covered": [
+  "Intra-articular SI joint injection (criteria in InterQual)",
+  "Sacral lateral branch blocks (unproven)",
+  "Open SI fusion and minimally invasive fusion with titanium triangular implant (InterQual)",
+  "Other fusion devices (unproven)"
+ ],
+ "logic": {
+  "top_level": "other (delegated; policy states only 'proven and medically necessary in certain circumstances')",
+  "max_nesting_depth": 0,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "Only: 'Sacral Lateral Branch Nerve Blocks as a diagnostic tool prior to radiofrequency ablation are unproven and not medically necessary'.",
+  "initial_vs_repeat": "Not in the document.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Sacroiliac Joint (SI) injections are proven and medically necessary in certain circumstances.",
+    "why_ambiguous": "the circumstances are not stated in the policy"
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "other",
+   "quote": "SI injections are proven and medically necessary in certain circumstances. For medical necessity clinical coverage criteria, refer to the InterQual® Client Defined CP",
+   "where": "Coverage Rationale p.1"
+  },
+  {
+   "kind": "site of service",
+   "quote": "Intra-articular Sacroiliac Joint (SI) injections require site of service review. Refer to the Medical Policy titled Outpatient Surgical Procedures - Site of Service.",
+   "where": "Notes p.1"
+  },
+  {
+   "kind": "documentation",
+   "quote": "Requested procedure codes, diagnosis codes, body part and laterality, number of levels",
+   "where": "Medical Records Documentation p.2 / history p.11"
+  }
+ ],
+ "thresholds": [],
+ "time_windows": [],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Codes listed (27278, 27279, 27280, 64451) are fusion and nerve block codes. The injection code 27096 is NOT listed.",
+  "non_covered_code_lists": "none stated"
+ },
+ "external_dependencies": [
+  {
+   "what": "InterQual SI joint injection criteria (proprietary, linked)",
+   "quote": "refer to the InterQual® Client Defined CP: Procedures, Sacroiliac (SI) Joint Injection (AQS) (Custom) - UHG"
+  },
+  {
+   "what": "Site-of-service policy",
+   "quote": "Refer to the Medical Policy titled Outpatient Surgical Procedures - Site of Service."
+  },
+  {
+   "what": "RFA in other policy",
+   "quote": "refer to the Medical Policy titled Ablative Treatment for Spinal Pain"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Provocative Tests",
+   "definition_quote": "Tests performed to reproduce the patient's typical pain in the SI region"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "proven and medically necessary in certain circumstances",
+   "problem": "circumstances not given"
+  },
+  {
+   "quote": "Click here to view the InterQual® criteria.",
+   "problem": "criteria not in the PDF"
+  }
+ ],
+ "extraction_hazards": [
+  "No criteria text to extract for SI injections",
+  "Links ('Click here') are not in text",
+  "Long clinical evidence section about fusion (pp.4-9) is not related to injection criteria",
+  "Definitions list provocative tests but no policy uses them"
+ ],
+ "interesting_structures": [
+  "Pure delegation: policy is a pointer to InterQual",
+  "Site-of-service review applies to injections",
+  "Customized InterQual set labelled 'Client Defined ... (Custom) - UHG'"
+ ],
+ "fit_to_tree": {
+  "score": 5,
+  "why": "No criteria in the document at all; a checker would need the InterQual subset, which is proprietary."
+ }
+}

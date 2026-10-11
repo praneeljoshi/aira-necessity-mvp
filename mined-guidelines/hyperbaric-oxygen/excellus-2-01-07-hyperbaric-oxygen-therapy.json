@@ -1,0 +1,19 @@
+{
+  "payer": "Excellus BCBS",
+  "payer_key": "excellus",
+  "treatment": "hyperbaric-oxygen",
+  "title": "Hyperbaric Oxygen Therapy",
+  "policy_number": "2.01.07",
+  "effective": "",
+  "url": "https://provider.excellusbcbs.com/documents/d/global/exc-prv-hyperbaric-oxygen-therapy",
+  "final_url": "https://provider.excellusbcbs.com/documents/d/global/exc-prv-hyperbaric-oxygen-therapy",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "excellus-2-01-07-hyperbaric-oxygen-therapy.pdf",
+  "sha256": "1d61e4255f37c7bbf52f5cfa57ec1f663eb70b0d46b467aa0a73995c0b8dfebb",
+  "pages": 27,
+  "bytes": 240834,
+  "retrieved": "2026-10-09",
+  "printed_date": "Current Effective Date July 16, 2026; Next Review July 2027"
+}

@@ -1,0 +1,215 @@
+{
+ "file": "bcbsfl-02-20000-21-sacroiliac-joint-injections.pdf",
+ "treatment": "sacroiliac-joint-injections",
+ "payer": "bcbsfl",
+ "doc_kind": "medical policy (Medical Coverage Guideline)",
+ "lines_of_business": [
+  "All lines of business unless noted in Program Exceptions",
+  "FEP: follow FEP guidelines",
+  "SAO: follow SAO guidelines",
+  "Medicare Advantage: no NCD/LCD found"
+ ],
+ "effective_or_revised": "Original 11/15/02; Reviewed 10/23/25; Revised 11/15/25",
+ "sections_in_order": [
+  "Description (with Summary and Analysis of Evidence)",
+  "Position Statement",
+  "Billing/Coding Information",
+  "Reimbursement Information (with LOINC documentation table)",
+  "Program Exceptions",
+  "Definitions",
+  "Related Guidelines",
+  "Other",
+  "References",
+  "Committee Approval",
+  "Guideline Update Information"
+ ],
+ "criteria_location": "Position Statement (PDF p.3) holds the main criteria; frequency cap is separate under Reimbursement Information (p.4); ICD-10 'support' list is under Billing/Coding.",
+ "procedures_covered": [
+  "SI joint injection under fluoroscopy or arthrography (CPT 27096, HCPCS G0259, G0260)",
+  "SI joint injection under ultrasound (investigational)"
+ ],
+ "logic": {
+  "top_level": "all (with one 'either-or' inside: two alternative conservative-therapy tracks)",
+  "max_nesting_depth": 3,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "No contraindication list. One negative rule: 'do not meet the definition of medical necessity if medical documentation indicates the injection procedures are not effective.' NSAIDs 'if not contraindicated' is an inline unless. Ultrasound guidance is declared E/I.",
+  "initial_vs_repeat": "Phase-based: 'In the diagnostic phase, up to two (2) injections ... no sooner than one (1) week'; 'In the therapeutic phase, each subsequent injection requires that prior injection provided >= 50% pain reduction for at least six (6) weeks'. Reimbursement cap: three injections per SI joint in six months, beyond which 'subject to medical review'.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Continued pain after 6 weeks with ALL of the following treatments: ... OR Worsening pain after 2 weeks with ALL of the following treatments:",
+    "why_ambiguous": "The OR sits at the same bullet level as the AND-list, and the 6-week bullet group is a sub-bullet of the top-level ALL; a parser can attach the OR to the whole policy rather than just the conservative-therapy item."
+   },
+   {
+    "quote": "Sacroiliac joint pain for more than 3 months, AND ... Continued pain after 6 weeks",
+    "why_ambiguous": "Requires >3 months of pain but only 6 weeks (or 2 weeks) of treatment; unclear whether treatment must be within the 3 months or whether the 2-week track can ever be reached given the 3-month floor."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "duration",
+   "quote": "Sacroiliac joint pain for more than 3 months",
+   "where": "Position Statement p.3"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "Continued pain after 6 weeks with ALL of the following: NSAIDS >= 4 weeks (if not contraindicated); Activity modification >= 6 weeks; PT, chiropractic or HEP >= 6 weeks",
+   "where": "p.3"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "OR Worsening pain after 2 weeks with ALL of the following (NSAIDs, activity modification, PT/chiro/HEP)",
+   "where": "p.3"
+  },
+  {
+   "kind": "other",
+   "quote": "Sacroiliac joint injections are part of a comprehensive pain treatment plan",
+   "where": "p.3"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "In the therapeutic phase, each subsequent injection requires that prior injection provided >= 50% pain reduction for at least six (6) weeks",
+   "where": "p.3"
+  },
+  {
+   "kind": "other",
+   "quote": "up to two (2) injections may be administered, at intervals of no sooner than one (1) week",
+   "where": "p.3 diagnostic phase"
+  },
+  {
+   "kind": "provider/facility qualification",
+   "quote": "performed under fluoroscopy or with arthrography; ultrasound investigational",
+   "where": "p.3"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "ICD-10 Diagnosis Codes That Support Medical Necessity: M46.1, M47.898, M48.08, M53.2X8, M54.18, M54.30-32, M54.40-42, M54.50/51/59, M54.6, S33.2XXA/D/S, S33.6XXA/D/S",
+   "where": "Billing/Coding p.4"
+  },
+  {
+   "kind": "documentation",
+   "quote": "physician history and physical, radiology study reports, physician progress notes, with documentation of conservative treatment, treatment plan including narrative, and physician operative report",
+   "where": "Reimbursement p.4"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "pain duration",
+   "value": "> 3",
+   "unit": "months",
+   "quote": "Sacroiliac joint pain for more than 3 months"
+  },
+  {
+   "quantity": "pain relief from prior injection",
+   "value": ">= 50",
+   "unit": "%",
+   "quote": "prior injection provided ≥ 50% pain reduction for at least six (6) weeks"
+  },
+  {
+   "quantity": "injections per joint",
+   "value": "3 per 6 months",
+   "unit": "count",
+   "quote": "limited to three (3) injections per sacroiliac joint in six (6) months"
+  },
+  {
+   "quantity": "diagnostic injections",
+   "value": "up to 2",
+   "unit": "count",
+   "quote": "up to two (2) injections may be administered"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "NSAIDs",
+   "length": ">= 4 weeks",
+   "quote": "NSAIDS ≥ 4 weeks (if not contraindicated)"
+  },
+  {
+   "what": "activity modification / PT / chiro / HEP",
+   "length": ">= 6 weeks",
+   "quote": "Activity modification ≥ 6 weeks"
+  },
+  {
+   "what": "fast track: worsening pain",
+   "length": "2 weeks",
+   "quote": "Worsening pain after 2 weeks"
+  },
+  {
+   "what": "interval between diagnostic injections",
+   "length": ">= 1 week",
+   "quote": "no sooner than one (1) week"
+  },
+  {
+   "what": "durability of relief",
+   "length": ">= 6 weeks",
+   "quote": "at least six (6) weeks"
+  },
+  {
+   "what": "chart look-back for documents",
+   "length": "6 months",
+   "quote": "observations made six months or fewer before starting date of service"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": true,
+  "codes_tied_to_criteria": "ICD-10 list is titled 'Codes That Support Medical Necessity' but is not mapped to any criterion; list includes M54.6 (thoracic spine pain) and S33 injury codes.",
+  "non_covered_code_lists": "None; ultrasound-guided injection called E/I in text but no separate code list."
+ },
+ "external_dependencies": [
+  {
+   "what": "Florida step-therapy exemption (statute 627.42393)",
+   "quote": "members or providers may request a step therapy protocol exemption to this requirement if based on medical necessity"
+  },
+  {
+   "what": "FEP and SAO follow their own guidelines",
+   "quote": "Federal Employee Program (FEP): Follow FEP guidelines."
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Arthrography",
+   "definition_quote": "a diagnostic study of the joint structures. X-ray contrast is injected"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "part of a comprehensive pain treatment plan",
+   "problem": "undefined; no required elements"
+  },
+  {
+   "quote": "if not contraindicated",
+   "problem": "no list of NSAID contraindications"
+  },
+  {
+   "quote": "Activity modification",
+   "problem": "no definition of what counts or how documented"
+  },
+  {
+   "quote": "medical documentation indicates the injection procedures are not effective",
+   "problem": "no threshold; overlaps with the 50%/6-week rule"
+  },
+  {
+   "quote": "Worsening pain",
+   "problem": "no scale or measure"
+  }
+ ],
+ "extraction_hazards": [
+  "Criteria bullets use o markers and indentation with an OR at same level as an AND list (pdftotext flattens)",
+  "Cap of 3 per 6 months sits in Reimbursement section, not Position Statement",
+  "Long Description section is evidence review with study numbers that look like thresholds",
+  "LOINC table is multi-column and repeats the same six-month sentence ten times",
+  "Navigation bar (Position Statement / Billing...) text appears at top of page 1",
+  "ICD-10 codes wrap onto two lines (M54.50, M54.51, / M54.59)"
+ ],
+ "interesting_structures": [
+  "Two alternative conservative-therapy tracks (6 weeks vs worsening pain at 2 weeks) as an OR inside an ALL",
+  "Diagnostic vs therapeutic phase with different rules",
+  "Frequency cap in reimbursement section creates a soft limit ('subject to medical review') rather than a denial",
+  "LOINC codes map required documents to time frames"
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "why": "Mostly ALL with one OR, and quantitative leaves. Strain: phase/count rules (injection history), the cap outside the criteria, and the 3-month vs 2-week tension."
+ }
+}

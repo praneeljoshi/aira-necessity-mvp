@@ -1,0 +1,220 @@
+{
+ "file": "cigna-0051-bariatric-surgery.pdf",
+ "treatment": "bariatric-surgery",
+ "payer": "cigna",
+ "doc_kind": "coverage policy (Cigna Medical Coverage Policy 0051)",
+ "lines_of_business": [
+  "Health benefit plans administered by Cigna Companies; varies by plan and state mandate: 'Coverage for bariatric surgery ... varies across plans and may be governed by state mandates'"
+ ],
+ "effective_or_revised": "Effective 7/15/2026; Next Review 7/15/2027",
+ "sections_in_order": [
+  "Instructions for Use",
+  "Overview",
+  "Coverage Policy (Adults: Initial, Reoperation/Revisional; Adolescents: Initial, Reoperation/Revisional; Adults and Adolescents: Other Conditions, Liver Biopsy/Upper Endoscopy)",
+  "Coding Information",
+  "General Background (very long evidence review)",
+  "Health Equity Considerations",
+  "References",
+  "Revision Details"
+ ],
+ "criteria_location": "Coverage Policy pp.2-8 of 111 only; criteria text followed by procedure/CPT tables. Pages 13-78 are evidence review; 80-110 references.",
+ "procedures_covered": [
+  "Vertical band gastroplasty",
+  "Adjustable gastric banding + adjustments",
+  "Sleeve gastrectomy (stand-alone or staged)",
+  "RYGB (limb <150 and >150 cm)",
+  "BPD/DS, BPD",
+  "SADI-S",
+  "Endoscopic sleeve gastroplasty 43889",
+  "Revision/reversal/conversion",
+  "Not medically necessary: GES, VNS; experimental: band-over-bypass, OAGB, balloons, TORe, aspiration, VBLOC, etc.",
+  "Liver biopsy and EGD concurrent"
+ ],
+ "logic": {
+  "top_level": "pathways (Adult, Adolescent), each an ALL of [BMI EITHER, multidisciplinary evaluation ALL-of-4]; then a separate procedure-eligibility ANY list",
+  "max_nesting_depth": 4,
+  "k_of_n": [
+   {
+    "k": 1,
+    "n": 2,
+    "quote": "EITHER of the following: BMI ≥35 ... BMI 30-34.9 ... with at least one clinically significant obesity-related comorbidity"
+   }
+  ],
+  "exclusions_or_contraindications": "Tables of procedures that are not medically necessary or experimental; no patient-level contraindications. Revision not MN for 'Inadequate weight loss due to individual noncompliance'.",
+  "initial_vs_repeat": "Separate Reoperation and Revisional sections for adults and adolescents: major complication path (no weight criteria) vs no-complication path requiring 'Weight loss failure ≥ two years' plus initial criteria.",
+  "and_or_ambiguity": [
+   {
+    "quote": "at least one clinically significant obesity-related comorbidity, including but not limited to the following",
+    "why_ambiguous": "Open-ended comorbidity list; 'clinically significant' undefined."
+   },
+   {
+    "quote": "Replacement of an adjustable silicone gastric band or separate or concurrent band removal and conversion to a second bariatric surgical procedure is considered medically necessary if there is evidence of band slippage or band component malfunction and the faulty component cannot be repaired",
+    "why_ambiguous": "'separate or concurrent' and 'conversion' scope unclear; nested conditions without bullets."
+   },
+   {
+    "quote": "ANY other indication",
+    "why_ambiguous": "Catch-all not-medically-necessary clause overrides the preceding list for revision."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "BMI/comorbidity",
+   "quote": "BMI ≥35 kg/m2 (class 2 obesity) (BMI ≥27.5 kg/m2 in Asians- when ethnicity is confirmed by provider attestation)",
+   "where": "Adults p.3"
+  },
+  {
+   "kind": "BMI/comorbidity",
+   "quote": "BMI 30–34.9 kg/m2 ... with at least one clinically significant obesity-related comorbidity",
+   "where": "Adults p.3"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "poorly controlled hypertension (systolic blood pressure at least 140 mm Hg or diastolic ... 90 mm Hg or greater, despite optimal medical management)",
+   "where": "Adults comorbidity list"
+  },
+  {
+   "kind": "psych/nutrition evaluation",
+   "quote": "unequivocal clearance for bariatric surgery by a mental health provider",
+   "where": "Multidisciplinary evaluation"
+  },
+  {
+   "kind": "psych/nutrition evaluation",
+   "quote": "a nutritional evaluation by a physician, physician assistant, nurse practitioner or registered dietician",
+   "where": "Multidisciplinary evaluation"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "documentation of failure of weight loss by medical management",
+   "where": "Multidisciplinary evaluation"
+  },
+  {
+   "kind": "time window",
+   "quote": "A thorough multidisciplinary evaluation within the previous 12 months",
+   "where": "Adults p.3"
+  },
+  {
+   "kind": "age",
+   "quote": "adult (age ≥ 18 years); adolescent (age 11–17 years)",
+   "where": "pp.2,6"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "Weight loss failure ≥ two years following a previous bariatric surgical procedure",
+   "where": "Revision p.5"
+  },
+  {
+   "kind": "other",
+   "quote": "provider attestation of Asian ethnicity",
+   "where": "BMI branch"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "BMI adult class 2+",
+   "value": "≥35 (≥27.5 Asian)",
+   "unit": "kg/m2",
+   "quote": "BMI ≥35 kg/m2 ... (BMI ≥27.5 kg/m2 in Asians"
+  },
+  {
+   "quantity": "BMI adult class 1 with comorbidity",
+   "value": "30-34.9 (25-27.4 Asian)",
+   "unit": "kg/m2",
+   "quote": "BMI 30–34.9 kg/m2"
+  },
+  {
+   "quantity": "BMI adolescent class 3",
+   "value": "≥40 or ≥140% of 95th pct (lower)",
+   "unit": "kg/m2",
+   "quote": "BMI ≥ 40 kg/m2 or ≥ 140% of the 95th percentile"
+  },
+  {
+   "quantity": "BMI adolescent class 2 with comorbidity",
+   "value": "35-39.9 or ≥120% of 95th pct (lower)",
+   "unit": "kg/m2",
+   "quote": "35–39.9 kg/m2 or ≥ 120%"
+  },
+  {
+   "quantity": "BP poorly controlled",
+   "value": "SBP ≥140 or DBP ≥90",
+   "unit": "mm Hg",
+   "quote": "systolic blood pressure at least 140 mm Hg or diastolic blood pressure 90 mm Hg or greater"
+  },
+  {
+   "quantity": "Adolescent age",
+   "value": "11-17",
+   "unit": "years",
+   "quote": "adolescent (age 11–17 years)"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "Multidisciplinary evaluation",
+   "length": "within previous 12 months",
+   "quote": "within the previous 12 months"
+  },
+  {
+   "what": "Weight-loss failure before revision",
+   "length": "≥2 years",
+   "quote": "Weight loss failure ≥ two years following a previous bariatric surgical procedure"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Strong: each procedure row pairs open and laparoscopic CPT inside the criteria text; Coding Information repeats lists (pp.8-13).",
+  "non_covered_code_lists": "Yes: tables of not medically necessary and experimental procedures with CPT/HCPCS in the Coverage Policy."
+ },
+ "external_dependencies": [
+  {
+   "what": "Plan benefit document and state mandates supersede",
+   "quote": "a customer's benefit plan document always supersedes the information in the Coverage Policies"
+  },
+  {
+   "what": "Delegated vendor guidelines",
+   "quote": "In certain markets, delegated vendor guidelines may be used"
+  },
+  {
+   "what": "Related policies: GES, Panniculectomy, OSA surgery",
+   "quote": "Related Coverage Resources"
+  }
+ ],
+ "definitions_that_change_meaning": [],
+ "vague_terms": [
+  {
+   "quote": "unequivocal clearance for bariatric surgery by a mental health provider",
+   "problem": "Needs the word 'unequivocal' in the note; wording of real clearance letters varies"
+  },
+  {
+   "quote": "documentation of failure of weight loss by medical management",
+   "problem": "No program length, supervision, or attempt count"
+  },
+  {
+   "quote": "clinically significant obesity-related comorbidity, including but not limited to",
+   "problem": "Open list"
+  },
+  {
+   "quote": "optimal medical management",
+   "problem": "Undefined"
+  }
+ ],
+ "extraction_hazards": [
+  "111 pages; criteria only in first 8; evidence text mentions BMI and other thresholds that are not criteria",
+  "Two procedure tables repeated (initial vs revision) with columns 'Open CPT' / 'Laparoscopic CPT' that flatten badly",
+  "Nested bullet glyphs with 'o' sub-bullets for comorbidities",
+  "Typo 'Billiopancreatic'",
+  "Page footers 'Page N of 111 / Medical Coverage Policy: 0051' interrupt lists mid-page"
+ ],
+ "interesting_structures": [
+  "Asian-specific BMI cutoffs conditional on provider attestation",
+  "Class 1 obesity (BMI 30-34.9) eligible with a comorbidity: lowest BMI of the group",
+  "Open vs laparoscopic codes mapped per procedure",
+  "Two-year weight-loss-failure gate for non-complication revision",
+  "Adolescent path allows only sleeve and RYGB"
+ ],
+ "fit_to_tree": {
+  "score": 2,
+  "scale": "1-5",
+  "why": "Clean ALL/EITHER structure with procedure-eligibility tables; only evaluation wording and open comorbidity list need judgment."
+ }
+}

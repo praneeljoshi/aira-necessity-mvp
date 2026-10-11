@@ -1,0 +1,187 @@
+{
+ "doc_kind": "medical policy (Florida Blue Medical Coverage Guideline)",
+ "lines_of_business": [
+  "All lines of business unless noted in Program Exceptions (disclaimer p.1)",
+  "Federal Employee Program (FEP): follow FEP guidelines",
+  "State Account Organization (SAO): follow SAO guidelines",
+  "Medicare Advantage: reviewed NCD/LCD listed in Program Exceptions"
+ ],
+ "effective_or_revised": "Original Effective Date 01/01/01; Reviewed 04/24/25; Revised 05/15/25 (8 pages)",
+ "sections_in_order": [
+  "Header block (policy number, Original Effective Date, Reviewed, Revised)",
+  "Subject",
+  "Disclaimer (all caps)",
+  "Navigation bar (Position Statement / Billing/Coding / ... hyperlinks)",
+  "DESCRIPTION",
+  "POSITION STATEMENT",
+  "BILLING/CODING INFORMATION",
+  "REIMBURSEMENT INFORMATION",
+  "PROGRAM EXCEPTIONS",
+  "DEFINITIONS",
+  "RELATED GUIDELINES",
+  "OTHER",
+  "REFERENCES",
+  "COMMITTEE APPROVAL",
+  "GUIDELINE UPDATE INFORMATION"
+ ],
+ "criteria_location": "Position Statement, pp.1-3 only. Opens with a Certificate of Medical Necessity (CMN) submission note, then adult indications, pediatric indications, retransplant, catch-all investigational sentence, and a contraindications list. Billing/Coding lists only 3 CPT codes; Other (pp.4-5) is Florida organ-transplant statutes, not criteria.",
+ "procedures_covered": [
+  "Heart transplant (CPT 33945), donor cardiectomy (33940), backbench prep (33944)",
+  "Heart retransplantation after failed primary transplant"
+ ],
+ "logic": {
+  "top_level": "pathways: separate Adult and Pediatric lists, each 'Accepted indications' (strong) and for adults also 'Probable indications'; each list is an OR of numbered items, some items contain a nested any-of bullet list",
+  "max_nesting_depth": 3,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "Separate trailing list: 'Potential contraindications to cardiac transplantation (subject to the judgment of the transplant center) include:' nine bullets, e.g. 'Known current malignancy, including metastatic cancer'. Not stated as hard NOT; defers to transplant center judgment. Plus catch-all 'considered experimental or investigational in all other situations'.",
+  "initial_vs_repeat": "'Heart retransplantation after a failed primary cardiac transplant meets the definition of medical necessity in individuals who meet criteria for heart transplantation.' (reuses the same criteria)",
+  "and_or_ambiguity": [
+   {
+    "quote": "1. Hemodynamic compromise due to heart failure demonstrated by any of the following: ... Documented dependence on intravenous inotropic support to maintain adequate organ perfusion, OR",
+    "why_ambiguous": "The trailing OR sits at the end of the third sub-bullet but joins item 1 to item 2; sub-bullets themselves carry no OR (the 'any of the following' header supplies it). A parser reading 'OR' as belonging to the last bullet would mis-nest."
+   },
+   {
+    "quote": "Accepted indications ... Probable indications for cardiac transplantation:",
+    "why_ambiguous": "Two tiers ('accepted' vs 'probable') with identical medical-necessity header 'when selection criteria are met'; the text never says whether 'probable' alone suffices for approval."
+   },
+   {
+    "quote": "Pediatric heart disease with symptoms of heart failure who do not meet the above criteria but who have:",
+    "why_ambiguous": "Item 2 is conditional on NOT meeting item 1 (a hidden NOT), then an OR list of seven alternatives."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "measurement threshold",
+   "quote": "Maximal VO2 (oxygen consumption) <10 mL/kg/min with achievement of anaerobic metabolism",
+   "where": "Position Statement, Adult accepted 1"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "Human heart transplantation meets the definition of medical necessity for adults and children with end-stage heart failure",
+   "where": "Position Statement"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "Severe ischemia ... not amenable to bypass surgery or angioplasty",
+   "where": "Adult accepted 2"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "Submit a completed Certificate of Medical Necessity (CMN) along with your request",
+   "where": "Position Statement, top"
+  },
+  {
+   "kind": "age",
+   "quote": "Pediatric transplantation",
+   "where": "separate pathway heading; no numeric cut-off for adult vs pediatric"
+  },
+  {
+   "kind": "psych/nutrition evaluation",
+   "quote": "Psychosocial conditions or chemical dependency affecting ability to adhere to therapy",
+   "where": "contraindications list"
+  },
+  {
+   "kind": "provider/facility qualification",
+   "quote": "subject to the judgment of the transplant center",
+   "where": "contraindications lead-in"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "maximal VO2 (adult, accepted)",
+   "value": "< 10",
+   "unit": "mL/kg/min",
+   "quote": "Maximal VO2 (oxygen consumption) <10 mL/kg/min"
+  },
+  {
+   "quantity": "maximal VO2 (adult, probable)",
+   "value": "< 14",
+   "unit": "mL/kg/min",
+   "quote": "Maximal Vo2 <14 mL/kg/min and major limitation of activities"
+  },
+  {
+   "quantity": "maximal VO2 (pediatric)",
+   "value": "< 50% predicted",
+   "unit": "% predicted for age and sex",
+   "quote": "maximum VO2 <50% predicted for age and sex"
+  },
+  {
+   "quantity": "pulmonary vascular resistance (contraindication)",
+   "value": "> 5",
+   "unit": "Wood units",
+   "quote": "pulmonary vascular resistance >5 Wood units, or transpulmonary gradient ≥16 mm/Hg despite treatment"
+  }
+ ],
+ "time_windows": [],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Three CPT codes listed with descriptors only; no mapping to indications. No ICD-10 list.",
+  "non_covered_code_lists": "None."
+ },
+ "external_dependencies": [
+  {
+   "what": "CMN form (Solid Organ Transplant) on Florida Blue provider site",
+   "quote": "Click the link Solid Organ Transplant under Certificates of Medical Necessity in the side navigation of this page"
+  },
+  {
+   "what": "Medicare Advantage defers to CMS NCD 260.9",
+   "quote": "National Coverage Determination (NCD) for Heart Transplants (260.9), located at cms.gov"
+  },
+  {
+   "what": "Transplant center clinical judgment decides contraindications",
+   "quote": "Potential contraindications to cardiac transplantation (subject to the judgment of the transplant center)"
+  },
+  {
+   "what": "Florida statutes on transplant discrimination (Other section)",
+   "quote": "may not deny coverage for an organ transplant solely on the basis of an insured's disability"
+  }
+ ],
+ "definitions_that_change_meaning": [],
+ "vague_terms": [
+  {
+   "quote": "Refractory cardiogenic shock",
+   "problem": "'refractory' undefined, no hemodynamic criteria."
+  },
+  {
+   "quote": "Severe ischemia consistently limiting routine activity",
+   "problem": "'severe', 'consistently', 'routine activity' undefined."
+  },
+  {
+   "quote": "refractory to ALL accepted therapeutic modalities",
+   "problem": "'accepted therapeutic modalities' not enumerated."
+  },
+  {
+   "quote": "Untreated systemic infection making immunosuppression unsafe",
+   "problem": "clinical judgment."
+  },
+  {
+   "quote": "when selection criteria are met",
+   "problem": "Refers to criteria below without saying which tier (accepted vs probable) satisfies it."
+  }
+ ],
+ "extraction_hazards": [
+  "Bullets are either the private-use character U+F0B7 or U+2022 depending on the document (the fusion guideline uses both), never '-' or '*'; nested bullets use other glyphs ('o') or only deeper indentation",
+  "Hyperlink navigation bar after the disclaimer is flattened into a 2-3 row text block that looks like headings",
+  "Form-feed (\\f) page breaks can fall mid-list or immediately before a section heading, so '^HEADING' regexes can miss; no running headers/footers or page numbers to strip",
+  "Pediatric bullet list splits across a page break (page 2 to page 3): the last bullet starts a new page after a form feed",
+  "CMN instructions use a numbered 1-3 list that is not criteria and is inside the Position Statement",
+  "Section heading 'REIMBURSEMENT INFORMATION' has no trailing colon here (others do)",
+  "Mixed-case 'Vo2' / 'VO2' inside one list"
+ ],
+ "interesting_structures": [
+  "Two evidence tiers: 'Accepted' vs 'Probable' indications (graded recommendation, not both required)",
+  "Contraindications are advisory ('potential', 'subject to the judgment of the transplant center'), so a NOT node would be wrongly hard",
+  "Statutory text in OTHER section is not criteria but is long and could be mistaken for it",
+  "Hidden NOT in pediatric item 2 ('do not meet the above criteria but who have')"
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "scale": "1 = all/any/not expresses it cleanly ... 5 = needs new constructs or human judgment",
+  "why": "Adult/pediatric accepted lists are clean any-of trees with numeric VO2 leaves, but 'probable' tier, advisory contraindications and CMN submission are not plain all/any/not; many leaves ('refractory', 'severe') need clinician judgment."
+ },
+ "payer": "bcbsfl",
+ "treatment": "heart-transplant",
+ "file": "bcbsfl-02-33000-23-heart-transplant.pdf"
+}

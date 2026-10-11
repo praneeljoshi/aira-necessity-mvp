@@ -1,0 +1,183 @@
+{
+ "file": "bcbstx-rad601-041-minimally-invasive-approaches-to-vertebral-fractur.pdf",
+ "treatment": "vertebroplasty-kyphoplasty",
+ "payer": "bcbstx",
+ "doc_kind": "medical policy",
+ "lines_of_business": [
+  "Not stated; check member contract"
+ ],
+ "effective_or_revised": "Effective 01/01/2025; Policy End Date 12/31/2025",
+ "sections_in_order": [
+  "Coverage",
+  "Policy Guidelines",
+  "Description",
+  "Rationale (very long, ~2,700 lines)",
+  "Coding",
+  "References",
+  "Policy History",
+  "Disclaimer"
+ ],
+ "criteria_location": "Coverage, pp.1-2 only. The remaining ~3,100 lines are description, FDA tables, evidence review and references.",
+ "procedures_covered": [
+  "Vertebroplasty 22510-22512",
+  "Sacroplasty (investigational)",
+  "Balloon kyphoplasty / mechanical augmentation 22513-22515",
+  "RF kyphoplasty, other mechanical devices, vertebral body stenting (investigational)"
+ ],
+ "logic": {
+  "top_level": "pathways (vertebroplasty list; kyphoplasty list incl. an ALL block for osteoporotic VCF)",
+  "max_nesting_depth": 3,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "Embedded as imaging absences inside the osteoporotic kyphoplasty criterion: stenosis >20% from retropulsion, collapse to <1/3, vertebra plana >90%, anatomy preventing access, burst fracture with retropulsion.",
+  "initial_vs_repeat": "None.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Vertebral compression fracture due to osteoporosis or osteopenia when ALL the following requirements are met: ... and; ... and; ...",
+    "why_ambiguous": "Bullets end with 'and' while sub-list 1-5 are items of 'absence of' (so each must be absent: reads as NOT any of the 5, 'or' between them)"
+   },
+   {
+    "quote": "considered experimental, investigational and/or unproven for all other indications, including use in acute vertebral fractures due to osteoporosis or trauma",
+    "why_ambiguous": "Acute osteoporotic fracture excluded, yet criterion requires 'acute compression fracture' on imaging"
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "conservative therapy",
+   "quote": "has not responded to at least 6 weeks of conservative medical management (e.g., analgesics, physical therapy, rest)",
+   "where": "Kyphoplasty osteoporotic"
+  },
+  {
+   "kind": "symptom",
+   "quote": "Recent onset of back pain localized to the fracture site",
+   "where": "Kyphoplasty osteoporotic"
+  },
+  {
+   "kind": "symptom",
+   "quote": "Tenderness to palpation directly over the fracture site",
+   "where": "Kyphoplasty osteoporotic"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "Advanced imaging studies confirming a non-traumatic, acute compression fracture",
+   "where": "Kyphoplasty osteoporotic"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "Recent imaging studies (MRI or CT) which eliminate disc herniation or other causes of spine pain",
+   "where": "Kyphoplasty osteoporotic"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "Spinal stenosis of greater than 20% due to retropulsed fragments",
+   "where": "Absence list 1"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "Vertebral body collapse to less than one third (33%) original height",
+   "where": "Absence list 2"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "Vertebral plana (collapse greater than 90%)",
+   "where": "Absence list 3"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "when chemotherapy or radiation therapy has failed to relieve symptoms",
+   "where": "Kyphoplasty metastasis"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "Eosinophilic granuloma with pain and spinal instability",
+   "where": "Kyphoplasty"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "conservative care",
+   "value": ">=6",
+   "unit": "weeks",
+   "quote": "at least 6 weeks of conservative medical management"
+  },
+  {
+   "quantity": "canal stenosis from retropulsion",
+   "value": ">20",
+   "unit": "%",
+   "quote": "Spinal stenosis of greater than 20%"
+  },
+  {
+   "quantity": "vertebral height",
+   "value": "<33",
+   "unit": "% original",
+   "quote": "less than one third (33%) original height"
+  },
+  {
+   "quantity": "vertebra plana",
+   "value": ">90",
+   "unit": "% collapse",
+   "quote": "collapse greater than 90%"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "conservative care",
+   "length": "6 weeks",
+   "quote": "at least 6 weeks of conservative medical management"
+  },
+  {
+   "what": "hospitalization-route fracture age",
+   "length": "<6 weeks",
+   "quote": "less than 6 weeks in duration"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "CPT and HCPCS listed in generic Coding block, not tied to criteria",
+  "non_covered_code_lists": "0200T, 0201T in same list; HCPCS C1062, C7504, C7505, C7507, C7508"
+ },
+ "external_dependencies": [
+  {
+   "what": "Member contract",
+   "quote": "Carefully check state regulations and/or the member contract."
+  }
+ ],
+ "definitions_that_change_meaning": [],
+ "vague_terms": [
+  {
+   "quote": "severe back pain",
+   "problem": "No scale"
+  },
+  {
+   "quote": "Recent onset of back pain",
+   "problem": "Undefined 'recent'"
+  },
+  {
+   "quote": "aggressive radiologic signs",
+   "problem": "Undefined"
+  },
+  {
+   "quote": "NOT involving a major part of the cortical bone",
+   "problem": "Major undefined"
+  }
+ ],
+ "extraction_hazards": [
+  "3,159 lines, criteria only on first 2 pages",
+  "Nested bullets with 'o' sub-bullets and numbered sub-list",
+  "Criteria split by page break after 'Policy Guidelines' heading",
+  "Policy end date 12/31/2025",
+  "Large FDA device tables"
+ ],
+ "interesting_structures": [
+  "Stronger imaging gates for osteoporotic kyphoplasty than for vertebroplasty",
+  "Oncology indications require failure of chemo or radiation",
+  "Quantified anatomical exclusions (20%, 33%, 90%)",
+  "Vertebroplasty and kyphoplasty use different criteria sets"
+ ],
+ "fit_to_tree": {
+  "score": 2,
+  "scale": "1-5",
+  "why": "Explicit all/any/not with numeric imaging thresholds, but depends on radiology report reading."
+ }
+}

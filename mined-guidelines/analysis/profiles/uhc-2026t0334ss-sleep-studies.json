@@ -1,0 +1,268 @@
+{
+ "file": "uhc-2026t0334ss-sleep-studies.pdf",
+ "treatment": "sleep-testing",
+ "payer": "uhc",
+ "doc_kind": "medical policy (commercial)",
+ "lines_of_business": [
+  "UnitedHealthcare Commercial",
+  "UnitedHealthcare Individual Exchange"
+ ],
+ "effective_or_revised": "Effective July 1, 2026 (Policy 2026T0334SS)",
+ "sections_in_order": [
+  "Application",
+  "Coverage Rationale",
+  "Medical Records Documentation Used for Review",
+  "Definitions",
+  "Applicable Codes",
+  "Description of Services",
+  "Clinical Evidence",
+  "U.S. Food and Drug Administration",
+  "References",
+  "Policy History/Revision Information",
+  "Instructions for Use"
+ ],
+ "criteria_location": "Coverage Rationale, pp.1-3 only (about 2.5 pages of 18); Definitions pp.3-6 carry the numeric severity tables (FEV1 bands, OSA severity). Daytime studies (MSLT) are delegated to InterQual.",
+ "procedures_covered": [
+  "HSAT",
+  "Attended full-channel PSG (OSA suspected)",
+  "PSG for other conditions (PLMD, RLS, parasomnia, narcolepsy, CSA)",
+  "PSG before hypoglossal nerve stimulator",
+  "Split-night and full-night PAP titration",
+  "Repeat attended PSG / titration",
+  "MSLT (delegated to InterQual)",
+  "MWT",
+  "Oral appliance adjustment testing",
+  "Not medically necessary: PSG for circadian, depression, insomnia; actigraphy; PAP-Nap"
+ ],
+ "logic": {
+  "top_level": "pathways: HSAT = default for adults with suspected OSA; PSG has any-of list for OSA and a separate any-of list for 'Other Conditions'",
+  "max_nesting_depth": 3,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "HSAT contraindications are phrased as positive PSG indications: 'Individual is known to have one or more of the following comorbid medical conditions that prohibits the use of a HSAT' (7 items). Not-medically-necessary studies listed under 'Other Studies'.",
+  "initial_vs_repeat": "'Attended Repeat Testing': 'When the above criteria for an attended study are met, repeat attended full-channel Polysomnography and repeat PAP titration are medically necessary' for persistent symptoms despite treatment OR weight change >=10%. Repeat HSAT discouraged by a Note.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Results of previous (within the past 12 months) HSAT are negative or indeterminate to make a diagnosis of OSA ...; or Individual is a child or adolescent ...; or Individual is known to have one or more of the following comorbid",
+    "why_ambiguous": "Bullets are glyph-less in the text extraction; the 'or' is at line ends so list is any-of but visually looks like three separate rules."
+   },
+   {
+    "quote": "Attended full-channel Polysomnography is medically necessary following an appropriate clinical assessment either because OSA has been excluded, OSA has been adequately treated, or documented symptoms suggest one of the following conditions",
+    "why_ambiguous": "Nested: (OSA excluded OR treated OR documented symptoms) wrapped around the condition list; not clear whether the 'either' clause is required for each condition."
+   },
+   {
+    "quote": "Where HSAT is indicated, an autotitrating Positive Airway Pressure (APAP) device is an option",
+    "why_ambiguous": "Permissive; 'indicated' has no criteria - HSAT is simply 'medically necessary for evaluating adults with suspected OSA'."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "diagnosis",
+   "quote": "Home Sleep Apnea Testing (HSAT), using a portable monitor, is medically necessary for evaluating adults with suspected Obstructive Sleep Apnea (OSA).",
+   "where": "p.1"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "Results of previous (within the past 12 months) HSAT are negative or indeterminate to make a diagnosis of OSA",
+   "where": "p.1 PSG bullet 1"
+  },
+  {
+   "kind": "age",
+   "quote": "Individual is a child or adolescent (i.e., less than 18 years of age)",
+   "where": "p.1"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "Significant Chronic Pulmonary Disease as defined by a forced expiratory volume (FEV1) % predicted of < 60%",
+   "where": "p.1"
+  },
+  {
+   "kind": "BMI/comorbidity",
+   "quote": "Body mass index (BMI) ≥ 50",
+   "where": "p.2"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "New York Heart Association class III or IV ... or left ventricular ejection fraction ≤ 40%",
+   "where": "p.2"
+  },
+  {
+   "kind": "other",
+   "quote": "Chronic opiate medication use (> 3 months)",
+   "where": "p.2"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "Parasomnia with documented disruptive, violent, or potentially injurious sleep behaviors",
+   "where": "p.2 Other Conditions"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "RLS ... that has not responded to treatment",
+   "where": "p.2"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "persistent, recurrent or new symptoms, despite documented appropriate current treatment or PAP therapy (e.g., equipment failure, improper mask fit, pressure leaks, unsuccessful titration, inadequate pressure, and medical problems including nasal congestion have been addressed",
+   "where": "p.3 repeat testing"
+  },
+  {
+   "kind": "other",
+   "quote": "clinically significant weight loss or gain (≥ 10%) since the last study",
+   "where": "p.3"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "Medical records documentation may be required to assess whether the member meets the clinical criteria",
+   "where": "p.3 (generic, points to another policy)"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "FEV1 % predicted",
+   "value": "< 60",
+   "unit": "%",
+   "quote": "forced expiratory volume (FEV1) % predicted of < 60%"
+  },
+  {
+   "quantity": "LVEF",
+   "value": "<= 40",
+   "unit": "%",
+   "quote": "left ventricular ejection fraction ≤ 40%"
+  },
+  {
+   "quantity": "BMI",
+   "value": ">= 50",
+   "unit": "kg/m2",
+   "quote": "Body mass index (BMI) ≥ 50"
+  },
+  {
+   "quantity": "opiate duration",
+   "value": "> 3",
+   "unit": "months",
+   "quote": "Chronic opiate medication use (> 3 months)"
+  },
+  {
+   "quantity": "weight change",
+   "value": ">= 10",
+   "unit": "%",
+   "quote": "clinically significant weight loss or gain (≥ 10%)"
+  },
+  {
+   "quantity": "OHS definition",
+   "value": "BMI >= 30 and PaCO2 >= 45",
+   "unit": "kg/m2, mm Hg",
+   "quote": "obesity (BMI ≥ 30 kg/m2) and daytime hypercapnia (arterial PaCO2 ≥ 45 mm Hg)"
+  },
+  {
+   "quantity": "adequate HSAT recording",
+   "value": ">= 4",
+   "unit": "hours",
+   "quote": "Adequate HSAT occurs over a minimum of four hours"
+  },
+  {
+   "quantity": "OSA severity",
+   "value": "mild 5-<15; moderate 15-30; severe >30",
+   "unit": "events/h",
+   "quote": "Mild for AHI or RDI ≥ 5 and < 15"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "prior HSAT",
+   "length": "past 12 months",
+   "quote": "previous (within the past 12 months) HSAT"
+  },
+  {
+   "what": "chronic opiate use",
+   "length": "> 3 months",
+   "quote": "Chronic opiate medication use (> 3 months)"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "No: list provided 'for reference purposes only'; criteria do not cite codes.",
+  "non_covered_code_lists": "None."
+ },
+ "external_dependencies": [
+  {
+   "what": "InterQual CP: Procedures Sleep Studies (adult and pediatric) for MSLT",
+   "quote": "For medical necessity clinical coverage criteria, refer to the InterQual® CP: Procedures: Sleep Studies"
+  },
+  {
+   "what": "Another UHC policy for hypoglossal nerve stimulator indications",
+   "quote": "Refer to the Medical Policy titled Obstructive and Central Sleep Apnea Treatment"
+  },
+  {
+   "what": "Medical Records Documentation Used for Reviews policy",
+   "quote": "refer to the guidelines titled Medical Records Documentation Used for Reviews"
+  },
+  {
+   "what": "Literature citations inline as authority for thresholds",
+   "quote": "(Kapur et al., 2017; Centers for Medicare and Medicaid Services)"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Chronic Pulmonary Disease",
+   "definition_quote": "Severity of any spirometric abnormality based on the forced expiratory volume in one second (FEV1) ... Moderate 60-69"
+  },
+  {
+   "term": "HSAT (adequate)",
+   "definition_quote": "minimum of four hours and includes a minimum of the following sensors: nasal pressure, chest and abdominal respiratory inductance plethysmography, and oximetry"
+  },
+  {
+   "term": "Obesity Hypoventilation Syndrome",
+   "definition_quote": "obesity (BMI ≥ 30 kg/m2) and daytime hypercapnia (arterial PaCO2 ≥ 45 mm Hg)"
+  },
+  {
+   "term": "OSA severity",
+   "definition_quote": "Moderate for AHI or RDI ≥ 15 and ≤ 30"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "Progressive neuromuscular disease/neurodegenerative disorder (examples include but are not limited to ...)",
+   "problem": "Open list; 'progressive' undefined."
+  },
+  {
+   "quote": "history of stroke with persistent neurological sequelae",
+   "problem": "'persistent sequelae' undefined."
+  },
+  {
+   "quote": "Documented ongoing epileptic seizures in the presence of symptoms of sleep disorder",
+   "problem": "'ongoing' undefined."
+  },
+  {
+   "quote": "suspected Obstructive Sleep Apnea (OSA)",
+   "problem": "No symptom/risk criteria for what makes OSA 'suspected' - the biggest difference from BCBSFL."
+  },
+  {
+   "quote": "appropriate clinical assessment",
+   "problem": "Used three times as a gate; no content."
+  },
+  {
+   "quote": "clinically significant weight loss or gain (≥ 10%)",
+   "problem": "Two qualifiers (clinically significant and 10%)."
+  }
+ ],
+ "extraction_hazards": [
+  "Bullets render as private-use glyphs or nothing in pdftotext, so list items have no markers; only indentation and 'or' at line ends show the structure.",
+  "Running header/footer ('Sleep Studies Page n of 18', proprietary notice) interrupts the criteria lists mid-bullet-group (p.1->2).",
+  "Short criteria section (3 pages) followed by 15 pages of definitions, evidence, references.",
+  "Inline literature citations after thresholds (e.g. '(Pellegrino et al., 2005)').",
+  "InterQual criteria live behind a hyperlink ('Click here to view the InterQual® criteria'), not in the PDF."
+ ],
+ "interesting_structures": [
+  "HSAT is the default; PSG only on exception - the logic is 'HSAT unless ...' with no symptom prerequisites.",
+  "Criteria for MSLT delegated wholly to InterQual.",
+  "Daytime studies may be done at night 'if necessary to match an individual's normal sleep pattern'.",
+  "Table of FEV1 severity bands in Definitions drives the pulmonary threshold."
+ ],
+ "fit_to_tree": {
+  "score": 2,
+  "scale": "1 clean ... 5 judgment",
+  "why": "Short, mostly any-of lists of comorbidities with numeric cutoffs; the strain is the InterQual delegation for MSLT, 'suspected OSA' undefined, and open-ended 'examples include but are not limited to' lists."
+ }
+}

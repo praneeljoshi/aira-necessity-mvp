@@ -1,0 +1,243 @@
+{
+ "file": "bcbsfl-02-33000-32-transcatheter-aortic-valve-replacement.pdf",
+ "treatment": "tavr",
+ "payer": "bcbsfl",
+ "doc_kind": "medical coverage guideline (payer-written policy)",
+ "lines_of_business": [
+  "All lines of business unless noted in Program Exceptions",
+  "FEP: follow FEP guidelines",
+  "SAO: follow SAO guidelines",
+  "Medicare Advantage: NCD 20.32 TAVR reviewed; no LCD found"
+ ],
+ "effective_or_revised": "Original 07/15/12; Reviewed 01/22/26; Revised 02/15/26; policy 02-33000-32",
+ "sections_in_order": [
+  "Description",
+  "Summary and Analysis of Evidence",
+  "Position Statement",
+  "Notes",
+  "Billing/Coding Information (CPT, LOINC)",
+  "Reimbursement Information",
+  "Program Exceptions",
+  "Definitions",
+  "Related Guidelines",
+  "Other",
+  "References",
+  "Updates"
+ ],
+ "criteria_location": "Position Statement on pp.2-3 (three paragraphs: native valve, valve-in-valve, cerebral embolic protection) plus a NOTES block immediately after that defines 'severe aortic stenosis' and the FDA risk categories. About 1.5 of 12 pages; the rest is code table, definitions and ~100 references.",
+ "procedures_covered": [
+  "TAVR for native valve aortic stenosis (33361-33369)",
+  "Valve-in-valve TAVR for failed surgical bioprosthesis",
+  "Cerebral embolic protection during TAVR (33370, investigational)"
+ ],
+ "logic": {
+  "top_level": "pathways (native valve; valve-in-valve) each ALL, plus one NOT (cerebral protection investigational)",
+  "max_nesting_depth": 3,
+  "k_of_n": [
+   {
+    "k": 1,
+    "n": 4,
+    "quote": "severe aortic stenosis is defined by ONE OR MORE of the following criteria",
+    "pointer": "Notes, p.2-3"
+   }
+  ],
+  "exclusions_or_contraindications": "Native valve: negative leaf 'Member does not have unicuspid or bicuspid aortic valves' inside the ALL list. Cerebral protection: stated investigational.",
+  "initial_vs_repeat": "None. Valve-in-valve is the only follow-on case (failed bioprosthesis).",
+  "and_or_ambiguity": [
+   {
+    "quote": "Member is not an operable candidate for open surgery, as documented by at least 2 cardiovascular specialists (including a cardiac surgeon); or member is an operable candidate but is considered at increased surgical risk for open surgery (e.g., repeat sternotomy) due to a history of congenital vascular anomalies and/or has a complex intrathoracic surgical history",
+    "why_ambiguous": "Top-level OR with an inner 'and/or'; the second branch combines 'increased risk' with documentation by two specialists via a trailing clause that may bind to both branches."
+   },
+   {
+    "quote": "New York Heart Association (NYHA) heart failure Class II,III or IV symptoms",
+    "why_ambiguous": "Equivalent to class >= II; a parser may read 'II,III or IV' as three leaves."
+   },
+   {
+    "quote": "Individuals with Society of Thoracic Surgeons predicted operative risk score of less than 3% or 4% are considered at low risk",
+    "why_ambiguous": "'3% or 4%' leaves a gap between 3% and 4% / 7% and 8%; and none of the risk categories is wired into the native-valve criteria."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "diagnosis",
+   "quote": "Severe aortic stenosis with a calcified aortic annulus (see notes below)",
+   "where": "Position Statement, native valve"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "An aortic valve area of less than or equal to 1 cm2; ... index <= 0.6 cm2/m2; mean gradient >= 40 mm Hg; peak aortic-jet velocity >= 4.0 m/sec",
+   "where": "Notes"
+  },
+  {
+   "kind": "symptom",
+   "quote": "New York Heart Association (NYHA) heart failure Class II,III or IV symptoms",
+   "where": "Both pathways"
+  },
+  {
+   "kind": "exclusion (anatomy)",
+   "quote": "Member does not have unicuspid or bicuspid aortic valves.",
+   "where": "Native valve"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "Failed (stenosed, insufficient, or combined) of a surgical bioprosthetic aortic valve",
+   "where": "Valve-in-valve"
+  },
+  {
+   "kind": "provider/team",
+   "quote": "not an operable candidate for open surgery, as documented by at least 2 cardiovascular specialists (including a cardiac surgeon)",
+   "where": "Valve-in-valve"
+  },
+  {
+   "kind": "device/FDA",
+   "quote": "with an FDA approved transcatheter heart valve system, performed via an approach consistent with the device's FDA approved labeling",
+   "where": "Both"
+  },
+  {
+   "kind": "documentation",
+   "quote": "Documentation Table of LOINC codes: Physician history and physical; progress note; plan of treatment; laboratory studies - observations made six months or fewer before starting date of service",
+   "where": "Billing/Coding"
+  },
+  {
+   "kind": "investigational",
+   "quote": "Use of a cerebral embolic protection device (e.g., Sentinel) during transcatheter aortic valve replacement procedures is considered experimental or investigational.",
+   "where": "Position Statement"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "Aortic valve area",
+   "value": "<= 1.0",
+   "unit": "cm2",
+   "quote": "An aortic valve area of less than or equal to 1 cm2"
+  },
+  {
+   "quantity": "Aortic valve area index",
+   "value": "<= 0.6",
+   "unit": "cm2/m2",
+   "quote": "An aortic valve area index of less than or equal to 0.6 cm 2/m2"
+  },
+  {
+   "quantity": "Mean gradient",
+   "value": ">= 40",
+   "unit": "mm Hg",
+   "quote": "A mean aortic valve gradient greater than or equal to 40 mm Hg"
+  },
+  {
+   "quantity": "Peak jet velocity",
+   "value": ">= 4.0",
+   "unit": "m/sec",
+   "quote": "A peak aortic-jet velocity greater than or equal to 4.0 m/sec"
+  },
+  {
+   "quantity": "NYHA class",
+   "value": ">= II",
+   "unit": "class",
+   "quote": "NYHA heart failure Class II,III or IV symptoms"
+  },
+  {
+   "quantity": "STS score, FDA high risk (definition only)",
+   "value": ">= 8% or heart-team mortality >= 15%",
+   "unit": "percent",
+   "quote": "Society of Thoracic Surgeons predicted operative risk score of 8% or higher"
+  },
+  {
+   "quantity": "STS score, intermediate (definition only)",
+   "value": "3% to 7%",
+   "unit": "percent",
+   "quote": "Society of Thoracic Surgeons predicted operative risk score of 3% to 7%"
+  },
+  {
+   "quantity": "Extreme risk / inoperable (definition only)",
+   "value": ">= 50%",
+   "unit": "percent",
+   "quote": "Predicted risk of operative mortality and/or serious irreversible morbidity 50% or higher"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "LOINC documentation table: observations recency before date of service",
+   "length": "six months or fewer",
+   "quote": "observations made six months or fewer before starting date of service for the claim"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "CPT 33361-33369 listed once; only 33370 is annotated '(investigational)' tying it to the cerebral protection statement. LOINC codes list documentation types, not criteria.",
+  "non_covered_code_lists": "33370 flagged '(investigational)' inside the description."
+ },
+ "external_dependencies": [
+  {
+   "what": "FDA labeling for device and approach",
+   "quote": "performed via an approach consistent with the device's FDA approved labeling"
+  },
+  {
+   "what": "CMS NCD 20.32 for Medicare Advantage",
+   "quote": "Transcatheter Aortic Valve Replacement (TAVR) (20.32) located at cms.gov"
+  },
+  {
+   "what": "FEP / SAO guidelines",
+   "quote": "Federal Employee Program (FEP): Follow FEP guidelines."
+  },
+  {
+   "what": "Florida step-therapy exemption statute",
+   "quote": "in compliance with Florida law 627.42393"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "severe aortic stenosis",
+   "definition_quote": "For the use of the SAPIEN or CoreValve devices, severe aortic stenosis is defined by ONE OR MORE of the following criteria"
+  },
+  {
+   "term": "FDA extreme risk / high risk / intermediate risk",
+   "definition_quote": "The U.S. Food and Drug Administration (FDA) definition of high risk for open surgery: Society of Thoracic Surgeons predicted operative risk score of 8% or higher; or Judged by a heart team ... expected mortality risk of 15% or higher"
+  },
+  {
+   "term": "NYHA class",
+   "definition_quote": "Places patients in one of four categories based on the patient's physical activity limitations"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "calcified aortic annulus (see notes below)",
+   "problem": "'See notes' points to the severity thresholds, not to a calcification definition; no imaging method or grading."
+  },
+  {
+   "quote": "increased surgical risk for open surgery (e.g., repeat sternotomy)",
+   "problem": "Open-ended, 'complex intrathoracic surgical history' undefined."
+  },
+  {
+   "quote": "For the use of the SAPIEN or CoreValve devices",
+   "problem": "Severity thresholds are tied to two named devices; other valves (Evolut, Navitor, Portico listed in OTHER) have no stated threshold."
+  },
+  {
+   "quote": "less than 3% or 4%",
+   "problem": "Undefined boundary between low and intermediate risk."
+  },
+  {
+   "quote": "Member does not have unicuspid or bicuspid aortic valves",
+   "problem": "Negative finding requiring echo/CT; charts often say nothing."
+  }
+ ],
+ "extraction_hazards": [
+  "Criteria bullets are glyph characters; 'see notes below' separates criteria from definitions",
+  "Risk-category definitions in NOTES look like criteria but are not referenced by the position statement",
+  "Navigation bar text at top and 'Updates' links",
+  "LOINC table adds a code-based documentation rule not found in the prose",
+  "Evidence section quotes UpToDate in one long paragraph including phrases like 'not candidates for surgery' that contradict the criteria",
+  "Reference list is 100+ entries (~7 pages)"
+ ],
+ "interesting_structures": [
+  "Risk definitions (FDA extreme/high/intermediate/low) are given but the native-valve criteria impose no risk requirement, so low-risk patients appear to qualify",
+  "Documentation spelled out as LOINC panel codes with a six-month look-back",
+  "Cerebral embolic protection is both a CPT code (33370) and an investigational statement"
+ ],
+ "fit_to_tree": {
+  "score": 2,
+  "scale": "1 clean ... 5 human judgment",
+  "why": "Short ALL lists with numeric leaves and one ANY; only the specialist-documentation OR and the orphaned risk definitions need care."
+ }
+}

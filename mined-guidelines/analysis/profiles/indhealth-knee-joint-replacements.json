@@ -1,0 +1,102 @@
+{
+  "file": "indhealth-knee-joint-replacements.pdf",
+  "treatment": "knee-arthroplasty",
+  "payer": "independent-health",
+  "doc_kind": "medical policy (Independent Health, external policy M20210611026)",
+  "lines_of_business": ["State products: MediSource, MediSource Connect, Child Health Plus, Essential Plan", "Medicare: MAPD, ISNP, CSNP (but criteria are 'Medicare Advantage: refer to LCD/LCA')", "Commercial: Large Group, Small Group, Individual", "Self-funded (SPD supersedes)"],
+  "effective_or_revised": "Effective 9/1/2021 (references accessed August 2026)",
+  "sections_in_order": ["Header and Applies-to checkboxes", "Purpose and Applicability", "Policy: Background", "Medicare Advantage", "Clinical Indications", "Not covered lists (UKA, TKA)", "Pre-Authorization Required?", "Definitions", "References"],
+  "criteria_location": "Clinical Indications, pp. 2-6 of 9: ALL-of list with procedure choice (partial / total / revision), a documentation block, then two NOT COVERED lists. Notes in Background (no timeframe; surgeon must optimize comorbidities).",
+  "procedures_covered": ["Partial knee replacement (unicompartmental)", "Total knee arthroplasty", "Replacement/revision knee arthroplasty"],
+  "logic": {
+    "top_level": "all (ALL of: one procedure + its clinical indication; AND documentation block), then NOT-covered exclusion lists",
+    "max_nesting_depth": 5,
+    "k_of_n": [
+      {"k": 1, "n": 3, "quote": "Radiographic or arthroscopic findings of 1 or more of the following: Severe ... degenerative arthritis; Avascular necrosis (AVN)", "pointer": "TKA/UKA"},
+      {"k": 2, "n": 7, "quote": "a combination of strategies to reduce inflammation, alleviate pain, and improve function, including 2 or more of the following", "pointer": "Documentation, conservative management"},
+      {"k": 1, "n": 4, "quote": "1 or more of the following: The member's BMI is less than 40 and/or they have no medical comorbidities; For members with BMI > 40 ...; significant conditions ...; diabetes ...", "pointer": "Documentation, BMI block"},
+      {"k": 1, "n": 3, "quote": "non-surgical medical management may be inappropriate, ineffective, or counterproductive as evidenced by 1 or more of the following: Bone on bone articulation; Severe deformity; Severe pain", "pointer": "Documentation"}
+    ],
+    "exclusions_or_contraindications": "Two separate lists headed 'NOT COVERED for Any of the following' (UKA: 13 items; TKA: 8 items), written after the criteria.",
+    "initial_vs_repeat": "Revision is a third procedure under the ALL list with 10 any-of indications (loosening, fracture, infection, periprosthetic bone loss, wear with synovitis, misalignment, stiffness/arthrofibrosis, instability). No repeat or bilateral rule.",
+    "and_or_ambiguity": [
+      {"quote": "Documentation in the medical record of 1 or more of the following: When any procedure above is indicated for advanced joint disease, ALL of the following: ... That non-surgical medical management may be inappropriate ... For TKA indications other than advanced joint disease, ALL of the following when indicated", "why_ambiguous": "The 1-or-more documentation block is an OR of three differently shaped branches; 'when indicated' is not defined. The 'non-surgical management may be inappropriate' branch reads as a separate alternative to the 3-month history, but sits at the same level as the branch that contains the history."},
+      {"quote": "The member's BMI is less than 40 and/or they have no medical comorbidities", "why_ambiguous": "'and/or' makes the first sub-bullet satisfied by BMI < 40 alone, by no comorbidities alone, or both."},
+      {"quote": "For members with BMI > 40, at least six (6) months of provider-directed non-surgical management has failed. Provider-directed non-surgical management may be inappropriate. The medical record must clearly document why", "why_ambiguous": "A sentence list of alternatives without OR; BMI exactly 40 unaddressed (< 40 above, > 40 here)."},
+      {"quote": "Adherence to a tobacco-cessation program resulting in abstinence from tobacco for at least 6 weeks prior to surgery is recommended. If smoking cessation is not achieved, then the provider must document they reviewed the benefits", "why_ambiguous": "'recommended' means this is a soft requirement; the actual requirement is documentation of counseling."},
+      {"quote": "poor control as evidenced by an elevated HbA1c levels (> 8.5%), every effort was made to optimize", "why_ambiguous": "Threshold only defines when optimization must be documented, not a coverage cutoff."}
+    ]
+  },
+  "requirement_kinds": [
+    {"kind": "functional impairment", "quote": "Function-limiting pain at short distances (e.g., walking less than 1/4 mile, limiting activity to two city blocks, the equivalent to walking the length of a shopping mall) for at least three (3) months duration", "where": "Clinical Indications, partial and TKA"},
+    {"kind": "functional impairment", "quote": "Loss of knee function which interferes with the ability to carry out age-appropriate activities of daily living (ADLs) and/or demands of employment", "where": "Clinical Indications"},
+    {"kind": "imaging finding", "quote": "Severe unicompartmental ... degenerative arthritis ... Kellgren-Lawrence Grade IV radiographic findings ... Exposed subchondral bone (i.e., Outerbridge Classification Grade IV arthroscopy findings)", "where": "Clinical Indications"},
+    {"kind": "imaging finding", "quote": "Avascular necrosis (AVN) of the femoral condyles and/or proximal tibia", "where": "Clinical Indications"},
+    {"kind": "measurement threshold", "quote": "Knee arc of motion (full extension to full flexion) greater than 90", "where": "Partial knee"},
+    {"kind": "other", "quote": "Intact, stable ligaments, in particular the anterior cruciate ligament", "where": "Partial knee"},
+    {"kind": "conservative therapy", "quote": "Failure of at least three (3) months of provider-directed non-surgical management OR clear documentation must be provided if the medical provider-directed non-surgical management is not appropriate", "where": "Partial knee"},
+    {"kind": "documentation/photos", "quote": "The request is submitted less than 6 months after the last clinical visit or ... an attestation by the requesting surgeon that the patient does not need repeat imaging and clinical status has not changed must be provided", "where": "Documentation"},
+    {"kind": "documentation/photos", "quote": "Documentation includes the start and concluding dates of treatments with results included", "where": "Documentation"},
+    {"kind": "BMI/comorbidity", "quote": "The member's BMI is less than 40 and/or they have no medical comorbidities", "where": "Documentation"},
+    {"kind": "lab value", "quote": "poor control as evidenced by an elevated HbA1c levels (> 8.5%)", "where": "Documentation"},
+    {"kind": "patient commitment", "quote": "abstinence from tobacco for at least 6 weeks prior to surgery is recommended", "where": "Documentation"},
+    {"kind": "diagnosis", "quote": "Fracture of the distal femur when conservative management or surgical fixation is not considered a reasonable option", "where": "TKA"},
+    {"kind": "other", "quote": "Members on dialysis who are on a renal transplant list", "where": "TKA NOT COVERED"}
+  ],
+  "thresholds": [
+    {"quantity": "walking distance", "value": "< 1/4", "unit": "mile (two city blocks)", "quote": "walking less than 1/4 mile, limiting activity to two city blocks"},
+    {"quantity": "pain duration", "value": ">= 3", "unit": "months", "quote": "for at least three (3) months duration"},
+    {"quantity": "arc of motion (partial)", "value": "> 90", "unit": "degrees", "quote": "Knee arc of motion (full extension to full flexion) greater than 90"},
+    {"quantity": "BMI", "value": "< 40 (> 40 triggers 6 months)", "unit": "kg/m2", "quote": "For members with BMI > 40, at least six (6) months of provider-directed non-surgical management has failed"},
+    {"quantity": "HbA1c", "value": "> 8.5", "unit": "%", "quote": "elevated HbA1c levels (> 8.5%)"},
+    {"quantity": "tobacco abstinence", "value": ">= 6", "unit": "weeks", "quote": "abstinence from tobacco for at least 6 weeks prior to surgery is recommended"},
+    {"quantity": "time since last visit", "value": "< 6", "unit": "months", "quote": "less than 6 months after the last clinical visit"},
+    {"quantity": "flexion contracture (UKA exclusion)", "value": "> 15", "unit": "degrees", "quote": "Flexion contracture greater than 15"},
+    {"quantity": "varus (UKA exclusion)", "value": "> 15", "unit": "degrees", "quote": "Varus deformity greater than 15"},
+    {"quantity": "valgus (UKA exclusion)", "value": "> 20", "unit": "degrees", "quote": "Valgus deformity greater than 20"},
+    {"quantity": "fixed varus/valgus (TKA exclusion)", "value": "> 30", "unit": "degrees", "quote": "Greater than 30 degrees of fixed varus or valgus deformity not amenable to surgical correction"},
+    {"quantity": "conservative strategies", "value": ">= 2", "unit": "strategies", "quote": "including 2 or more of the following"}
+  ],
+  "time_windows": [
+    {"what": "non-surgical management", "length": "3 months (6 months if BMI > 40)", "quote": "a period of 3 months for their condition(s)"},
+    {"what": "request recency", "length": "within 6 months of last clinical visit", "quote": "less than 6 months after the last clinical visit"},
+    {"what": "tobacco abstinence", "length": "6 weeks pre-surgery (recommended)", "quote": "at least 6 weeks prior to surgery is recommended"},
+    {"what": "surgery timing", "length": "no deadline", "quote": "the procedure does not have to be performed within a specific timeframe"}
+  ],
+  "codes": {"cpt_hcpcs_listed": false, "icd10_listed": false, "codes_tied_to_criteria": "No codes at all; the policy is by procedure name.", "non_covered_code_lists": "none"},
+  "external_dependencies": [
+    {"what": "Medicare Advantage: LCD and LCA for total joint arthroplasty", "quote": "There are currently a Local Coverage Determination (LCD) and a Local Coverage Article (LCA) for total joint arthroplasty. Please refer to the links in the Reference section"},
+    {"what": "Self-funded SPD supersedes", "quote": "In the event of any conflict between this policy and the SPD of a Self-Funded Plan, the SPD shall supersede the policy."},
+    {"what": "Preauthorization", "quote": "Preauthorization is required for all lines of business except Medicare for this service."}
+  ],
+  "definitions_that_change_meaning": [
+    {"term": "Outerbridge Classification", "definition_quote": "Grade IV, which includes erosion of the articular cartilage that exposes subchondral bone"},
+    {"term": "Kellgren-Lawrence", "definition_quote": "Grade 4 (severe): large osteophytes, marked narrowing of joint space, severe sclerosis and definite deformity of bone ends"}
+  ],
+  "vague_terms": [
+    {"quote": "the member's overall clinical condition is considered appropriate for proceeding with surgery", "problem": "subjective gate in Background"},
+    {"quote": "It is incumbent on the surgeon to optimize reasonably modifiable medical comorbidities preoperatively", "problem": "'reasonably modifiable' undefined"},
+    {"quote": "age-appropriate activities of daily living and/or demands of employment", "problem": "age-appropriate undefined"},
+    {"quote": "Reasonable activity restrictions or modifications; Weight reduction as appropriate; Therapeutic injections into the joint as appropriate", "problem": "'reasonable'/'as appropriate'"},
+    {"quote": "One or more medical condition(s) that is (are) not optimized preoperatively that would significantly increase the risk of morbidity", "problem": "'significantly', 'not optimized' undefined; open list"},
+    {"quote": "Severe immunocompromised state; Severe deformity; Severe pain (particularly at rest)", "problem": "'severe' undefined"},
+    {"quote": "Osseous abnormalities that cannot be optimally managed", "problem": "no standard"}
+  ],
+  "extraction_hazards": [
+    "Checkbox glyphs in the header (☐ ☒) carry the applicability facts; plain text extraction shows both boxes similarly, so selected vs unselected must be read from the glyph.",
+    "Bullets and nesting levels use private glyphs, only indentation shows depth (up to 5 levels).",
+    "'Restricted Page |n' footers break the list in mid-branch (pages 2/3/4/5/6).",
+    "Fractions rendered as 1/4 mile; degree signs dropped in places ('greater than 90' then degree glyph).",
+    "NOT COVERED lists are physically after the criteria and before pre-auth, easily mistaken for part of the BMI block.",
+    "Text 'Effective Date 9/1/2021' while references are 'Accessed August 12, 2026': revision dates not printed."
+  ],
+  "interesting_structures": [
+    "Top-level 'ALL of' contains an 'at least one procedure' choice and a documentation clause; a procedure-specific indication is nested under each procedure.",
+    "Requirement is partly a documentation requirement ('documentation must establish') rather than a clinical fact.",
+    "Six-month recency of clinical visit with surgeon attestation fallback.",
+    "BMI > 40 raises conservative therapy from 3 to 6 months.",
+    "Comorbidity and A1c criteria are phrased as 'document risk/benefit discussion', never as a numeric cutoff.",
+    "Quantified walking distance in function criterion (1/4 mile / two city blocks)."
+  ],
+  "fit_to_tree": {"score": 4, "scale": "1 = clean, 5 = needs new constructs or human judgment", "why": "Logic is expressible, but many leaves are documentation-quality tests ('documentation includes start and end dates', attestation), conditional blocks (BMI branch) and open-ended NOT lists with soft words ('significantly', 'cannot be optimally managed')."}
+}

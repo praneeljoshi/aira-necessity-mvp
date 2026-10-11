@@ -1,0 +1,188 @@
+{
+ "file": "bcbsm-panniculectomy.pdf",
+ "treatment": "panniculectomy",
+ "payer": "bcbsm",
+ "doc_kind": "medical policy (BCBSM/BCN joint medical policy)",
+ "lines_of_business": [
+  "BCBSM and BCN commercial; Medicare Advantage may use the policy when CMS rules are not fully developed (42 CFR § 422.101(b)(6)); BCN benefit page at end"
+ ],
+ "effective_or_revised": "Current Policy Effective Date: 3/1/26",
+ "sections_in_order": [
+  "Description",
+  "Medical Policy Statement",
+  "Inclusionary and Exclusionary Guidelines",
+  "CPT/HCPCS Codes",
+  "Background",
+  "Summary of Evidence",
+  "Rationale",
+  "Regulatory Status",
+  "Government Regulations (National, Local LCD L39051, Article A58774)",
+  "Related Policies",
+  "References",
+  "Policy History",
+  "BCN Benefit Coverage Policy"
+ ],
+ "criteria_location": "Inclusionary and Exclusionary Guidelines, p.1-2 (two ALL-of paths joined by OR); Medicare LCD criteria are restated in Government Regulations pp.3-5 and are different (3 months, 6 months stable, 18 months post-bariatric).",
+ "procedures_covered": [
+  "Panniculectomy (CPT 15830)"
+ ],
+ "logic": {
+  "top_level": "any (two pathways, each an all)",
+  "max_nesting_depth": 3,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "'Panniculectomy when the above criteria are not met' only; LCD text lists non-covered (diastasis recti, solely to improve appearance, hernia prevention).",
+  "initial_vs_repeat": "None",
+  "and_or_ambiguity": [
+   {
+    "quote": "The panniculus causes uncontrolled intertrigo (which is unresponsive to conservative therapy including topical drying agents, corticosteroids and appropriate antibiotics/antifungals), skin ulceration, or other skin changes such as skin necrosis or peau d'orange.",
+    "why_ambiguous": "'unresponsive to conservative therapy' modifies intertrigo only or all three conditions? No duration given."
+   },
+   {
+    "quote": "This procedure may also be medically necessary for the individual who has had a significant weight-loss ... in addition to meeting the criteria noted above",
+    "why_ambiguous": "In the LCD section (not the commercial criteria) 'in addition to'; commercial criteria and LCD criteria differ and the document does not say which governs which line."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "measurement threshold",
+   "quote": "A panniculus that hangs below the level of the pubis",
+   "where": "Inclusions"
+  },
+  {
+   "kind": "symptom",
+   "quote": "uncontrolled intertrigo ... skin ulceration, or other skin changes such as skin necrosis or peau d'orange",
+   "where": "Inclusions"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "unresponsive to conservative therapy including topical drying agents, corticosteroids and appropriate antibiotics/antifungals",
+   "where": "Inclusions"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "Documented massive weight loss of at least 100 pounds as a result of bariatric surgery or dieting",
+   "where": "Inclusions pathway 1"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "Sufficient time has elapsed (a minimum of 6 months) to ensure maximum weight loss and weight stability",
+   "where": "Inclusions pathway 1"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "Preoperative photographs may be required to support justification and should be supplied upon request",
+   "where": "LCD section"
+  },
+  {
+   "kind": "functional impairment",
+   "quote": "Difficulty walking or functional impairment in activities of daily living due to pannus size, chronic pain, and/or ulceration",
+   "where": "LCD section, p.4"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "Weight loss",
+   "value": "≥100",
+   "unit": "lb",
+   "quote": "at least 100 pounds"
+  },
+  {
+   "quantity": "Time since weight loss",
+   "value": "≥6",
+   "unit": "months",
+   "quote": "a minimum of 6 months"
+  },
+  {
+   "quantity": "Intertrigo duration (LCD)",
+   "value": "3",
+   "unit": "months",
+   "quote": "over a period of 3 months"
+  },
+  {
+   "quantity": "Stable weight (LCD)",
+   "value": "6",
+   "unit": "months",
+   "quote": "stable weight for at least 6 months"
+  },
+  {
+   "quantity": "Post-bariatric (LCD)",
+   "value": "18",
+   "unit": "months",
+   "quote": "until at least 18 months after bariatric surgery"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "Time elapsed after massive weight loss",
+   "length": "≥6 months",
+   "quote": "a minimum of 6 months"
+  },
+  {
+   "what": "LCD: stable weight",
+   "length": "6 months",
+   "quote": "stable weight for at least 6 months"
+  },
+  {
+   "what": "LCD: post-bariatric",
+   "length": "18 months",
+   "quote": "not be performed until at least 18 months after bariatric surgery"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "15830 only; 'inclusion of a code in this list is not a guarantee of coverage'",
+  "non_covered_code_lists": "Other codes: N/A"
+ },
+ "external_dependencies": [
+  {
+   "what": "Medicare LCD L39051 and Article A58774",
+   "quote": "Local Coverage Determination (LCD) for Cosmetic and Reconstructive Surgery (L39051)"
+  },
+  {
+   "what": "Related policies Bariatric Surgery, Cosmetic and Reconstructive Surgery",
+   "quote": "Related Policies"
+  },
+  {
+   "what": "CMS Benefit Policy Manual Ch.16 s120 for cosmetic definition",
+   "quote": "CMS IOM Publication 100-02, Medicare Benefit Policy Manual, Chapter 16: Section 120"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "chronic intertrigo (LCD)",
+   "definition_quote": "dermatitis occurring on opposed surfaces of the skin, skin irritation, infection or chafing that consistently recurs or remains refractory"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "uncontrolled intertrigo",
+   "problem": "'uncontrolled' undefined"
+  },
+  {
+   "quote": "appropriate antibiotics/antifungals",
+   "problem": "no drug/duration"
+  },
+  {
+   "quote": "hangs below the level of the pubis",
+   "problem": "landmark, not graded; photos not required in commercial section"
+  }
+ ],
+ "extraction_hazards": [
+  "Medicare LCD criteria (different thresholds) share the document with commercial criteria",
+  "Page numbers and headers inside lists",
+  "Criteria include sub-bullet 'o' with 'and' tokens at line ends",
+  "BCN benefit page appended with administrative rules not clinical"
+ ],
+ "interesting_structures": [
+  "Two OR'd pathways: post-weight-loss and non-weight-loss",
+  "Short: no functional-impairment or ADL requirement in commercial criteria",
+  "LCD text embedded as reference with stricter timing"
+ ],
+ "fit_to_tree": {
+  "score": 2,
+  "scale": "1-5",
+  "why": "Short and cleanly any-of-two, each all-of; only the embedded LCD and vague 'uncontrolled' need care."
+ }
+}

@@ -1,0 +1,217 @@
+{
+ "payer": "bcbstx",
+ "doc_kind": "medical policy",
+ "lines_of_business": [
+  "HCSC plans (BCBSTX, IL, MT, NM, OK) per ALERT; Illinois mandates noted; Medicare referred to CMS"
+ ],
+ "effective_or_revised": "Policy Effective Date 10/15/2024; Policy End Date 12/31/2025",
+ "sections_in_order": [
+  "Disclaimer",
+  "Legislative Mandates",
+  "Coverage",
+  "Policy Guidelines",
+  "Description",
+  "Rationale",
+  "Coding",
+  "References",
+  "Policy History"
+ ],
+ "criteria_location": "Coverage, pp.1-7: Table 1 (IF diagnosis THEN REVIEW) plus NOTES 1-12. Policy Guidelines: 'None.' Remaining ~85 pages evidence and references.",
+ "procedures_covered": [
+  "Systemic HBO2 pressurization",
+  "Topical HBO2 pressurization (investigational)"
+ ],
+ "logic": {
+  "top_level": "pathways (table: one row per diagnosis, each with number of treatments before review)",
+  "max_nesting_depth": 2,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "Long investigational list 'and any diagnosis not previously listed as covered'; Note 11: 1 atm O2 without chamber is not HBO2.",
+  "initial_vs_repeat": "Review thresholds per row: 'Approval of treatment or services beyond the number initially authorized requires review'. Request form 'for extension of treatment' items: 'Whether this is initial treatment or extension of treatment.'",
+  "and_or_ambiguity": [
+   {
+    "quote": "Acute carbon monoxide poisoning (intoxication) AND/OR acute smoke inhalation",
+    "why_ambiguous": "AND/OR"
+   },
+   {
+    "quote": "Documentation must include at least two of the following: ... 1. Photo record(s), or 2. Consultation reports, or 3. ... or 4. Office records; AND",
+    "why_ambiguous": "2-of-4 plus conjoined AND with wound-specific list; applies only 'when services are in excess of 1-month duration'"
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "diagnosis",
+   "quote": "Non-healing diabetic wounds ... who meet all the following three criteria",
+   "where": "Table 1"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "Wagner grade-3 or higher",
+   "where": "Table 1, Note 2"
+  },
+  {
+   "kind": "duration",
+   "quote": "no measurable signs of healing after 30 days of an adequate course of standard wound therapy (See NOTE 12)",
+   "where": "Table 1"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "assessment of vascular status ... optimization of nutritional status, optimization of glucose control, debridement ... off-loading ... resolve any infection",
+   "where": "Note 12"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "Thermal burns, second- or third-degree burns involving 15% to 90% of total body surface and initiated within 24 hours of the burn injury",
+   "where": "Table 1"
+  },
+  {
+   "kind": "symptom",
+   "quote": "Shock, systolic blood pressure below 90 mm Hg ... Disorientation to coma ... Ischemic changes of the myocardium ... Ischemic gut",
+   "where": "Table 1 anemia row"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "Venous stasis ulcer, only if venous surgery, local wound care, leg elevation, counterpressure support, and skin grafting fails",
+   "where": "Table 1"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "Documentation must include at least two of the following: Photo record(s) ... Consultation reports ...",
+   "where": "Coverage p.2"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "Wagner classification system grade level ... Whether this is initial treatment or extension of treatment.",
+   "where": "Coverage p.2"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "Wagner grade",
+   "value": ">= 3",
+   "unit": "grade",
+   "quote": "Wagner grade-3 or higher"
+  },
+  {
+   "quantity": "TBSA burned",
+   "value": "15-90",
+   "unit": "%",
+   "quote": "15% to 90% of total body surface"
+  },
+  {
+   "quantity": "burn onset",
+   "value": "<= 24",
+   "unit": "hours",
+   "quote": "initiated within 24 hours of the burn injury"
+  },
+  {
+   "quantity": "systolic BP (anemia)",
+   "value": "< 90",
+   "unit": "mm Hg",
+   "quote": "systolic blood pressure below 90 mm Hg"
+  },
+  {
+   "quantity": "treatments before review (diabetic wounds, osteomyelitis)",
+   "value": "30",
+   "unit": "treatments",
+   "quote": "After 30 treatments."
+  },
+  {
+   "quantity": "treatments before review (radiation necrosis)",
+   "value": "20",
+   "unit": "treatments",
+   "quote": "After 20 treatments."
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "standard wound therapy without healing",
+   "length": "30 days",
+   "quote": "after 30 days of an adequate course of standard wound therapy"
+  },
+  {
+   "what": "extra documentation threshold",
+   "length": "1 month",
+   "quote": "when services are in excess of 1-month duration"
+  },
+  {
+   "what": "average course",
+   "length": "2 to 4 weeks",
+   "quote": "The average length of treatment is 2 to 4 weeks."
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Codes only listed (99183; A4575, G0277); disclaimer says presence 'has no relevance for determination of benefit coverage'.",
+  "non_covered_code_lists": "none"
+ },
+ "external_dependencies": [
+  {
+   "what": "HCSC HBO2 request form",
+   "quote": "HCSC has created a form to facilitate review of requests for coverage of HBO2 therapy"
+  },
+  {
+   "what": "Medicare",
+   "quote": "A national coverage position for Medicare may have been changed since this medical policy document was written."
+  },
+  {
+   "what": "member contract",
+   "quote": "Carefully check state regulations and/or the member contract."
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Wagner grades",
+   "definition_quote": "Grade-4 = wet or dry gangrene in the toes or forefoot"
+  },
+  {
+   "term": "Standard wound care",
+   "definition_quote": "Standard wound care in patients with diabetic wounds includes: assessment of a patient's vascular status ..."
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "For individual consideration of number of treatments",
+   "problem": "no criteria"
+  },
+  {
+   "quote": "Selected refractory mycoses",
+   "problem": "'selected' undefined"
+  },
+  {
+   "quote": "marginally perfused wounds",
+   "problem": "undefined"
+  },
+  {
+   "quote": "Compromised skin graft or flap, or for enhancement of healing in a selected problem wound",
+   "problem": "'selected problem wound' open-ended"
+  },
+  {
+   "quote": "Decubitus ulcers",
+   "problem": "covered for individual consideration with no criteria, in contrast to other payers"
+  }
+ ],
+ "extraction_hazards": [
+  "92 pages; criteria in first 7",
+  "Table 1 two-column layout with bullets inside cells; row for diabetic wounds spans a page",
+  "Two rows ('Acute postoperative foot surgical treatment ...') have the review count blank in text",
+  "Notes 1-12 referenced out of order (Note 12 defined after Note 10, Note 11)",
+  "Page-break splits table row (carbon monoxide)",
+  "Policy end date 12/31/2025 printed though retrieved later; may be superseded"
+ ],
+ "interesting_structures": [
+  "Review-count column makes utilization checkpoint part of the criteria",
+  "Numeric burn TBSA and time window",
+  "Anemia row has a 4-symptom checklist",
+  "Covers brown recluse spider bite, acute cerebral edema, decubitus ulcers, venous stasis ulcers",
+  "Staged documentation requirement kicks in after 1 month"
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "scale": "1 = all/any/not expresses it cleanly ... 5 = needs new constructs",
+  "why": "Mostly any-of rows, but the review-count column, notes, and 'individual consideration' rows are not criteria leaves; documentation rule is 2-of-4 conditional on duration."
+ },
+ "file": "bcbstx-the801-003-hyperbaric-oxygen-therapy.pdf",
+ "treatment": "hyperbaric-oxygen"
+}

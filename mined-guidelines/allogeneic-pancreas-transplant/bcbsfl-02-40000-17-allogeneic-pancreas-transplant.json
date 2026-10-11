@@ -1,0 +1,19 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "allogeneic-pancreas-transplant",
+  "title": "Allogeneic Pancreas Transplant",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76EYHS3T16HEEA84PRL",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-40000-17",
+  "original_effective": "07/15/02",
+  "reviewed": "04/24/25",
+  "revised": "05/15/25",
+  "file": "bcbsfl-02-40000-17-allogeneic-pancreas-transplant.pdf",
+  "sha256": "41f4f93716a21a3f5f53d494eab9060fbf1a4b2b6d2ccef5b7f3fdf8f4b4b1f4",
+  "pages": 7,
+  "bytes": 726996,
+  "retrieved": "2026-10-09"
+}

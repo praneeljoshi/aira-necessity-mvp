@@ -1,0 +1,172 @@
+{
+ "file": "bcbsfl-02-61000-05-spinal-cord-and-dorsal-root-ganglion-stimulation.pdf",
+ "treatment": "spinal-cord-stimulation",
+ "payer": "bcbsfl",
+ "doc_kind": "medical policy (Medical Coverage Guideline)",
+ "lines_of_business": [
+  "All lines of business unless noted",
+  "FEP: follow FEP guidelines",
+  "SAO: follow SAO guidelines",
+  "Medicare Advantage: NCD 160.7 Electrical Nerve Stimulators"
+ ],
+ "effective_or_revised": "Original 09/15/02; Reviewed 02/26/26; Revised 03/15/26",
+ "sections_in_order": [
+  "Description",
+  "Position Statement",
+  "Billing/Coding Information (CPT, HCPCS, ICD-10)",
+  "Reimbursement Information (incl. documentation, LOINC table)",
+  "Program Exceptions",
+  "Definitions (None)",
+  "Related Guidelines (DBS 02-61000-24)",
+  "Other",
+  "References",
+  "Updates"
+ ],
+ "criteria_location": "Position Statement only (about one page, p.2). Documentation list sits in Reimbursement Information; revision/removal rule also there.",
+ "procedures_covered": [
+  "Temporary (trial) standard or high-frequency SCS",
+  "Permanent standard or high-frequency SCS",
+  "FDA-approved dorsal root ganglion stimulator",
+  "Revision or removal of SCS/DRG (reimbursement rule)",
+  "Programming 95970-95972, 0788T, 0789T"
+ ],
+ "logic": {
+  "top_level": "pathways (trial block; permanent block = trial block AND 50% relief) with an investigational catch-all",
+  "max_nesting_depth": 2,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "Inline: nociceptive and central deafferentation pain 'generally not effective'; explicit investigational list (critical limb ischemia, refractory angina, heart failure, cancer pain); psychological evaluation must show no uncontrolled mental health problem.",
+  "initial_vs_repeat": "Permanent implant requires 50% relief in trial; revision/removal paid 'only if the implantation procedure was initially allowed and the existing stimulator, battery, or generator is malfunctioning and cannot be repaired'.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Psychological evaluation was obtained and documentation clearly states the pain is not psychological in origin and/or no evidence of an uncontrolled mental health problem",
+    "why_ambiguous": "'and/or' makes the two documentation conditions either both or either"
+   },
+   {
+    "quote": "Other treatment modalities (pharmacologic, surgical, physical, psychological) have been tried and failed OR the treatment modalities are judged to be unsuitable or contraindicated",
+    "why_ambiguous": "Unclear whether every listed modality must be tried or any one; no minimum duration"
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "conservative therapy",
+   "quote": "Other treatment modalities (pharmacologic, surgical, physical, psychological) have been tried and failed OR the treatment modalities are judged to be unsuitable or contraindicated",
+   "where": "Position Statement bullet 2"
+  },
+  {
+   "kind": "other",
+   "quote": "The treatment is used as a last resort",
+   "where": "Position Statement bullet 1"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "Pain is neuropathic in nature i.e., resulting from actual damage to the peripheral nerves",
+   "where": "Position Statement bullet 3"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "failed back surgery syndrome, complex regional pain syndrome ..., arachnoiditis, radiculopathies, phantom limb/stump pain, peripheral neuropathy, and painful diabetic neuropathy",
+   "where": "Position Statement bullet 3 (common indications, not limited to)"
+  },
+  {
+   "kind": "psych/nutrition evaluation",
+   "quote": "Psychological evaluation was obtained and documentation clearly states the pain is not psychological in origin and/or no evidence of an uncontrolled mental health problem",
+   "where": "Position Statement bullet 4"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "Demonstration of at least 50% pain relief with a temporarily implanted electrode precedes permanent implantation",
+   "where": "Permanent implant paragraph"
+  },
+  {
+   "kind": "symptom",
+   "quote": "severe and chronic, intractable neuropathic pain of the trunk or limbs",
+   "where": "Position Statement lead-in"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "physician history and physical, physician progress notes including demonstration of pain relief with temporary stimulator, documentation of other treatment modalities",
+   "where": "Reimbursement Information"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "pain relief in trial",
+   "value": ">= 50",
+   "unit": "%",
+   "quote": "at least 50% pain relief with a temporarily implanted electrode"
+  },
+  {
+   "quantity": "documentation lookback",
+   "value": "<= 6",
+   "unit": "months",
+   "quote": "observations made six months or fewer before starting date of service"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "documentation lookback (LOINC)",
+   "length": "6 months",
+   "quote": "six months or fewer before starting date of service for the claim"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": true,
+  "codes_tied_to_criteria": "ICD-10 list 'support medical necessity' is a broad pain list (G89, M54, M79 etc.) that includes diagnoses the text calls nociceptive (low back pain M54.5x, joint pain M25.5x); not tied to criteria",
+  "non_covered_code_lists": "None; investigational conditions are in text only"
+ },
+ "external_dependencies": [
+  {
+   "what": "Medicare Advantage NCD 160.7",
+   "quote": "Electrical Nerve Stimulators (160.7) located at cms.gov"
+  },
+  {
+   "what": "Related DBS guideline",
+   "quote": "Deep Brain Stimulation and Responsive Neurostimulation, 02-61000-24"
+  }
+ ],
+ "definitions_that_change_meaning": [],
+ "vague_terms": [
+  {
+   "quote": "used as a last resort",
+   "problem": "no definition or duration"
+  },
+  {
+   "quote": "tried and failed",
+   "problem": "no minimum duration, no named modalities required"
+  },
+  {
+   "quote": "severe and chronic, intractable",
+   "problem": "no pain score, no minimum months"
+  },
+  {
+   "quote": "generally not effective in treating nociceptive pain",
+   "problem": "hedged exclusion ('generally'); not a hard NOT"
+  },
+  {
+   "quote": "Common indications include, but are not limited to",
+   "problem": "open list"
+  },
+  {
+   "quote": "clearly states the pain is not psychological in origin",
+   "problem": "requires a specific statement in a psych note"
+  }
+ ],
+ "extraction_hazards": [
+  "Criteria bullets use glyphs; sub-sentence 'AND' at ends of bullets",
+  "Permanent-implant criterion references 'all criteria for temporarily implanted stimulator' (cross-reference inside the same section)",
+  "Wide HCPCS/CPT tables; L8689 and L8695 descriptions merged across lines",
+  "ICD-10 list contradicts exclusion text",
+  "Documentation requirement lives under Reimbursement, not Position Statement"
+ ],
+ "interesting_structures": [
+  "Trial then permanent staging with a 50% relief gate",
+  "Reimbursement rule for revision/removal tied to original authorization and malfunction",
+  "Psych evaluation as a gate"
+ ],
+ "fit_to_tree": {
+  "score": 2,
+  "why": "Short ALL-of list with one nested OR and a staging rule. Hard parts are vague leaves (last resort, failed, severe) not structure."
+ }
+}

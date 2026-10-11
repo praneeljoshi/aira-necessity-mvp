@@ -1,0 +1,19 @@
+{
+  "payer": "Excellus BCBS",
+  "payer_key": "excellus",
+  "treatment": "panniculectomy",
+  "title": "Abdominoplasty and Panniculectomy",
+  "policy_number": "",
+  "effective": "",
+  "url": "https://excellusbcbs.com/documents/d/global/exc-prv-abdominoplasty-and-panniculectomy",
+  "final_url": "https://www.excellusbcbs.com/documents/d/global/exc-prv-abdominoplasty-and-panniculectomy",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "excellus-abdominoplasty-and-panniculectomy.pdf",
+  "sha256": "f94cffdcb61e37af588b5ee43cafa03fe4a569b00c071420b7067fdae8773e5d",
+  "pages": 11,
+  "bytes": 106784,
+  "retrieved": "2026-10-09",
+  "printed_date": "Current Effective Date May 21, 2026; Next Review May 2027"
+}

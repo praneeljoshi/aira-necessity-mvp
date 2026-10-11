@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+data/runs/*
+data/charts/*
+data/orders/*
+!data/runs/.gitkeep
+.env
+data/results/*
+data/criteria/*
+!data/criteria/.gitkeep
+stress
+data/score_v11/
+data/stress_v11/
+data/feedback/*

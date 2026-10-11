@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "vertebroplasty-kyphoplasty",
+  "title": "Percutaneous Vertebroplasty, Kyphoplasty, and Sacroplasty",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JEWFS1T53IFYEJ56H",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-20000-18",
+  "original_effective": "02/15/01",
+  "reviewed": "01/22/26",
+  "revised": "02/15/26",
+  "file": "bcbsfl-02-20000-18-percutaneous-vertebroplasty-kyphoplasty-and-sacrop.pdf",
+  "sha256": "11dbdb1253ce7f8c1eb9a85fd823e85a663607491ad5e5637ac1feb414ac732e",
+  "pages": 11,
+  "bytes": 646321,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original 02/15/01; Reviewed 01/22/26; Revised 02/15/26"
+}

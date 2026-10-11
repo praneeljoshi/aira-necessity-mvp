@@ -1,0 +1,204 @@
+{
+ "file": "kp-redundant-skin-surgery-incl-panniculectomy.pdf",
+ "treatment": "panniculectomy",
+ "payer": "kaiser",
+ "doc_kind": "medical coverage policy (Kaiser Permanente Mid-Atlantic States)",
+ "lines_of_business": [
+  "KFHP Mid-Atlantic States; contracts differ for MD, VA, DC, Federal, Medicare, self-pay"
+ ],
+ "effective_or_revised": "Approval history through 03/26/2025; no effective date printed",
+ "sections_in_order": [
+  "Utilization ALERT",
+  "I. Specialty",
+  "II. Coverage",
+  "III. Coverage Criteria",
+  "IV. Restrictions/Limitations",
+  "V. Exclusions",
+  "VI. Grading Scale",
+  "References",
+  "Approval History"
+ ],
+ "criteria_location": "III (criteria), IV (restrictions that add to III) and V (exclusions), pp.1-3. Restrictions in IV change the meaning of III (nutrition class for BMI>35; weight-loss timing).",
+ "procedures_covered": [
+  "Panniculectomy",
+  "Panniculectomy with abdominal/gynecologic procedures",
+  "Pre-renal-transplant panniculectomy",
+  "Other redundant skin surgery: brachioplasty, thigh lift, back lift",
+  "Suction-assisted lipectomy (exclusion)"
+ ],
+ "logic": {
+  "top_level": "pathways (III.A standalone; III.B with abdominal procedures; III.C wound-healing; III.D renal transplant; III.E other body areas) plus conjunctive restrictions IV",
+  "max_nesting_depth": 3,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "Section V: neck/back pain, hernia risk reduction, abdominal wall laxity or diastasis, suction lipectomy alone; 'list is not inclusive'.",
+  "initial_vs_repeat": "None",
+  "and_or_ambiguity": [
+   {
+    "quote": "Panniculectomy performed in conjunction with abdominal or gynecological procedures (such as hysterectomy, obesity surgery, including hernia repair that are reducible and have associated symptoms) is considered medically necessary if all the criteria for performing panniculectomy (III A.) have been met or there is persistent documented infection which cannot be resolved with medical treatments",
+    "why_ambiguous": "Garbled parenthetical; whether 'or persistent infection' alone suffices without III.A."
+   },
+   {
+    "quote": "In addition to the Section III criteria, obese patients (BMI greater than 35) must receive nutrition education for 3 or more months",
+    "why_ambiguous": "Restriction applies to III.A only or also III.E?"
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "measurement threshold",
+   "quote": "Pannus is Grade II or above as documented by clinical notes and/or pre-operative notes",
+   "where": "III.A.1"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "unresponsive and refractory to three or more months of medical treatment. Medical treatment should consist of good hygiene practices, topical antifungals, topical and/or systemic corticosteroids, and local and/or systemic antibiotics",
+   "where": "III.A.2"
+  },
+  {
+   "kind": "functional impairment",
+   "quote": "Pannus interferes with activities of daily living",
+   "where": "III.A.3"
+  },
+  {
+   "kind": "psych/nutrition evaluation",
+   "quote": "obese patients (BMI greater than 35) must receive nutrition education for 3 or more months ... attendance of professional nutrition class ... two or more individual professional nutrition counseling sessions",
+   "where": "IV.A"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "panniculectomy should not be performed until eighteen (18) months post bariatric surgery and when the weight loss has been stable for the most recent six (6) months",
+   "where": "IV.C"
+  },
+  {
+   "kind": "other",
+   "quote": "Select patients undergoing renal transplant whose large pannus creates a very high risk for wound complications",
+   "where": "III.D"
+  },
+  {
+   "kind": "provider/facility qualification",
+   "quote": "A Kaiser Permanente-participating physician must order imaging and testing necessary to establish a diagnosis",
+   "where": "II.D"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "Pannus grade",
+   "value": "≥II",
+   "unit": "grade",
+   "quote": "Grade II or above"
+  },
+  {
+   "quantity": "Medical treatment",
+   "value": "≥3",
+   "unit": "months",
+   "quote": "three or more months"
+  },
+  {
+   "quantity": "BMI for nutrition requirement",
+   "value": "> 35",
+   "unit": "kg/m2",
+   "quote": "BMI greater than 35"
+  },
+  {
+   "quantity": "Nutrition education",
+   "value": "≥3 months, 2+ counseling sessions",
+   "unit": "months",
+   "quote": "3 or more months ... two or more individual professional nutrition counseling sessions"
+  },
+  {
+   "quantity": "Stable weight",
+   "value": "≥6",
+   "unit": "months",
+   "quote": "minimum of six (6) months"
+  },
+  {
+   "quantity": "Post-bariatric",
+   "value": "≥18",
+   "unit": "months",
+   "quote": "eighteen (18) months post bariatric surgery"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "Medical treatment",
+   "length": "3 months or more",
+   "quote": "three or more months of medical treatment"
+  },
+  {
+   "what": "Nutrition education",
+   "length": "3 months or more",
+   "quote": "3 or more months"
+  },
+  {
+   "what": "Stable weight",
+   "length": "6 months",
+   "quote": "minimum of six (6) months"
+  },
+  {
+   "what": "Post-bariatric",
+   "length": "18 months",
+   "quote": "eighteen (18) months post bariatric surgery"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": false,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "No codes at all",
+  "non_covered_code_lists": "None"
+ },
+ "external_dependencies": [
+  {
+   "what": "Member EOC / contract exclusions",
+   "quote": "benefit coverage MUST be verified in the member's EOC or benefit document"
+  },
+  {
+   "what": "Medicare Coverage Database for Medicare members",
+   "quote": "For Medicare members, please refer to CMS guidelines through Medicare Coverage Database"
+  },
+  {
+   "what": "MCG ACG A-0498 Panniculectomy (reference 32)",
+   "quote": "MCG 29th edition ... ACG: A-0498; Panniculectomy"
+  },
+  {
+   "what": "Kaiser nutrition class (KPMAS Nutrition for Weight Control)",
+   "quote": "professional nutrition class such as KPMAS Nutrition for Weight Control"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Grading scale",
+   "definition_quote": "Grade 2: the panniculus lies over the genitals down to the thigh crease"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "significant weight loss documentation",
+   "problem": "Undefined threshold"
+  },
+  {
+   "quote": "significant functional deficits",
+   "problem": "in III.E, undefined"
+  },
+  {
+   "quote": "list is not inclusive",
+   "problem": "Open exclusions"
+  }
+ ],
+ "extraction_hazards": [
+  "Restrictions in a separate section IV condition the criteria in III",
+  "Garbled parenthesis in III.B",
+  "Page header 'Redundant Skin Surgery including Panniculectomy' repeated; references numbered with gaps (4,5 missing)",
+  "Criteria 'A.' references inside subsection cross-refer (III A.)"
+ ],
+ "interesting_structures": [
+  "Only payer with a nutrition-class requirement for BMI>35",
+  "Pre-renal-transplant indication",
+  "Other body-region lifts (brachioplasty, thigh lift) in same policy",
+  "Combined-procedure paths III.B and III.C"
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "scale": "1-5",
+  "why": "Pathways plus cross-section restrictions; BMI>35 conditional requirement and garbled combined-procedure text need human reading."
+ }
+}

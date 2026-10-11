@@ -1,0 +1,254 @@
+{
+ "lines_of_business": [
+  "All lines of business unless noted in PROGRAM EXCEPTIONS (disclaimer: 'THIS MEDICAL COVERAGE GUIDELINE APPLIES TO ALL LINES OF BUSINESS UNLESS OTHERWISE NOTED IN THE PROGRAM EXCEPTIONS SECTION')",
+  "FEP: 'Follow FEP guidelines.'",
+  "SAO: 'Follow SAO guidelines.'",
+  "Medicare Advantage Products: NCD Stem Cell Transplantation (110.23) reviewed",
+  "State law: Chapter 59B (Florida Administrative Code) and Florida Statute 627.4236, quoted in OTHER"
+ ],
+ "effective_or_revised": "Original Effective Date 08/15/02; Reviewed 01/22/26; Revised 09/15/26; committee approval 08/27/26 (header 'Reviewed' date is stale versus committee date)",
+ "sections_in_order": [
+  "Header block",
+  "Subject",
+  "Disclaimer",
+  "Navigation bar",
+  "DESCRIPTION",
+  "POSITION STATEMENT (begins with 'Certificate of Medical Necessity' submission steps)",
+  "BILLING/CODING INFORMATION",
+  "REIMBURSEMENT INFORMATION",
+  "PROGRAM EXCEPTIONS",
+  "DEFINITIONS",
+  "RELATED GUIDELINES",
+  "OTHER (Florida statute excerpts)",
+  "REFERENCES",
+  "COMMITTEE APPROVAL",
+  "GUIDELINE UPDATE INFORMATION"
+ ],
+ "criteria_location": "POSITION STATEMENT, about 215 lines (pp.2-8): six statute-derived subsections (1)-(6) of FAC 59B indication lists, followed by a separate list of added indications with nested criteria (systemic sclerosis, retinoblastoma, POEMS, CNS embryonal tumors, Ewing sarcoma, germ cell tumors, ALL, multiple sclerosis), then an 'all other' investigational list and storage/harvest rules.",
+ "procedures_covered": [
+  "Autologous HCT for roughly 40 named indications",
+  "Harvesting, processing, cryopreservation, storage, thawing of stem cells",
+  "Clinical-trial-conditioned transplant (routine care costs)",
+  "Cord-blood banking (not medically necessary)"
+ ],
+ "logic": {
+  "top_level": "pathways",
+  "max_nesting_depth": 4,
+  "k_of_n": [
+   {
+    "k": 1,
+    "n": 5,
+    "quote": "high risk of relapse, defined as one of the following: Age older than 35 years; Leukocytosis ...; 'Poor prognosis' genetic abnormalities ...; Extramedullary disease; Time to attain complete remission longer than 4 weeks"
+   }
+  ],
+  "exclusions_or_contraindications": "Systemic sclerosis has an explicit exclusion list: 'None of the following exclusion criteria are present: left ventricular ejection fraction <50%; tricuspid annular plane systolic excursion <1.8 cm; pulmonary artery systolic pressure >40 mm Hg ...'. MS adds 'does not have medical comorbidities that would increase the risk of the procedure.' Other indications are excluded by a final investigational list.",
+  "initial_vs_repeat": "Tandem / multiple transplants appear as listed indications only ('Multiple autologous bone marrow transplants for pediatric solid tumors', 'Tandem autologous HCT ... for treatment of testicular tumors'); no general repeat rule.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Multiple Sclerosis when ALL of the following are met: o Relapsing-remitting multiple sclerosis (RRMS); OR o Secondary progressive multiple sclerosis with evidence of ongoing inflammatory disease activity defined by any of the following:",
+    "why_ambiguous": "'ALL of the following' contains first a bullet that is an OR choice, then column-0 'AND' lines join further groups; the ALL lead-in conflicts with the OR items inside the first group."
+   },
+   {
+    "quote": "o Prior DMT exposure, evidenced by: Failure of >=1 disease-modifying therapy ... OR Documented intolerance ... ; AND o Evidence of treatment failure, evidenced by:",
+    "why_ambiguous": "The 'both of the following' header is followed by two bullets at the same level as the AND connectors that are printed at the margin; scope of each AND depends on indentation."
+   },
+   {
+    "quote": "Autologous hematopoietic stem cell transplantation also meets the definition of medical necessity when performed for one of the following indications (in addition to any mandated coverage in subsections 1-6 above)",
+    "why_ambiguous": "Layering: second list is additive to a statutory list; combining them is a union, not obvious from tree structure."
+   },
+   {
+    "quote": "Any bone marrow transplant performed outside of a clinical trial will be covered when all the following criteria are met: The plan of care follows a clinical trial protocol that meets the requirements of subsection (5)",
+    "why_ambiguous": "Cross-reference says subsection (5) but the protocol definition is subsection (6)."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "diagnosis",
+   "quote": "Acute myelogenous leukemia (stem cells collected in remission)",
+   "where": "Position Statement (1)"
+  },
+  {
+   "kind": "provider/facility qualification",
+   "quote": "Treatment center is part of the BMT CTN at a core or non-core center",
+   "where": "Position Statement (5)"
+  },
+  {
+   "kind": "other",
+   "quote": "provided that the bone marrow transplantation procedure is performed in the context of a well-designed clinical treatment trial",
+   "where": "Position Statement (2)"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "Modified Rodnan Scale score >= 15",
+   "where": "Position Statement systemic sclerosis"
+  },
+  {
+   "kind": "age",
+   "quote": "Adult less than age 60",
+   "where": "Position Statement systemic sclerosis"
+  },
+  {
+   "kind": "age",
+   "quote": "The member is between 18 to 55 years old with a disease duration <=15 years;",
+   "where": "Position Statement MS"
+  },
+  {
+   "kind": "lab value",
+   "quote": "diffusing capacity of carbon monoxide (DLCo) <80% of predicted value",
+   "where": "Position Statement systemic sclerosis"
+  },
+  {
+   "kind": "functional impairment",
+   "quote": "EDSS score between 2.0 to 6.5; AND The member is ambulatory (with or without an assistive device)",
+   "where": "Position Statement MS"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "Failure of >=1 disease-modifying therapy at therapeutic doses for adequate duration",
+   "where": "Position Statement MS"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "Submit a completed Certificate of Medical Necessity (CMN) along with your request to expedite the medical review process.",
+   "where": "Position Statement preamble"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "Modified Rodnan skin score",
+   "value": ">= 15",
+   "unit": "points",
+   "quote": "Modified Rodnan Scale score >= 15"
+  },
+  {
+   "quantity": "LVEF exclusion (SSc)",
+   "value": "< 50",
+   "unit": "%",
+   "quote": "left ventricular ejection fraction <50%"
+  },
+  {
+   "quantity": "DLCo exclusion (SSc)",
+   "value": "< 40",
+   "unit": "% predicted",
+   "quote": "DLCo <40% of predicted value"
+  },
+  {
+   "quantity": "FVC exclusion (SSc)",
+   "value": "< 45",
+   "unit": "% predicted",
+   "quote": "FVC <45% of predicted value"
+  },
+  {
+   "quantity": "creatinine clearance exclusion",
+   "value": "< 40",
+   "unit": "ml/minute",
+   "quote": "creatinine clearance <40 ml/minute"
+  },
+  {
+   "quantity": "EDSS score",
+   "value": "2.0 to 6.5",
+   "unit": "points",
+   "quote": "EDSS score between 2.0 to 6.5"
+  },
+  {
+   "quantity": "leukocytosis (adult ALL, B-cell)",
+   "value": "> 30,000",
+   "unit": "/uL",
+   "quote": "Leukocytosis at presentation of >30,000/uL (B-cell lineage)"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "systemic sclerosis maximum duration",
+   "length": "5 years",
+   "quote": "Maximum duration of condition of 5 years"
+  },
+  {
+   "what": "prior cyclophosphamide",
+   "length": "< 6 months",
+   "quote": "History of < 6 months treatment with cyclophosphamide"
+  },
+  {
+   "what": "SPMS relapses",
+   "length": "2 or more in 12 months",
+   "quote": "Two or more clinical relapses in the previous 12 months"
+  },
+  {
+   "what": "MS disease duration",
+   "length": "<= 15 years",
+   "quote": "disease duration <=15 years"
+  },
+  {
+   "what": "ALL time to remission",
+   "length": "> 4 weeks",
+   "quote": "Time to attain complete remission longer than 4 weeks"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Procedure codes (38204-38241) are listed; no ICD-10 table at all (indications are named in words only; update history mentions ICD-10 codes were added in 2010 and later dropped). S2150 tagged '(non-covered)'. LOINC documentation table gives documentation items.",
+  "non_covered_code_lists": "S2150 '(non-covered)'"
+ },
+ "external_dependencies": [
+  {
+   "what": "Florida Administrative Code Chapter 59B and Statute 627.4236 define the mandated list",
+   "quote": "In accordance with Chapter 59-B of the Florida Administrative Code [(1) - (6)]"
+  },
+  {
+   "what": "BMT CTN network and NCI-approved protocols",
+   "quote": "Such clinical treatment trials shall be consistent with protocols reviewed and approved by the National Cancer Institute for scientific merit."
+  },
+  {
+   "what": "Related allogeneic policy",
+   "quote": "Allogeneic Hematopoietic Cell Transplantation, 02-38240-01"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Well-designed clinical treatment trial",
+   "definition_quote": "one which includes an IRB-approved written protocol"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "the appropriateness of bone marrow transplantation may be determined on a case by case basis",
+   "problem": "Open-ended carve-out for non-listed malignant and non-malignant diseases."
+  },
+  {
+   "quote": "adequate duration",
+   "problem": "DMT failure duration unspecified."
+  },
+  {
+   "quote": "medical comorbidities that would increase the risk of the procedure",
+   "problem": "Not enumerated."
+  },
+  {
+   "quote": "Patient is an appropriate candidate",
+   "problem": "Undefined."
+  }
+ ],
+ "extraction_hazards": [
+  "Position Statement starts with form-submission instructions (numbered 1-3 'Click the link ...') that look like criteria numbering and precede the statutory '1.'-'6.' list.",
+  "Numbering '1.' to '6.' (statute subsections) and bullets 'o' / '▪' / '-' at several indent levels; 'AND' / 'OR' appear on their own lines at column 0.",
+  "Bullet list indentation shifts mid-list (the systemic sclerosis 'None of the following exclusion' bullet is indented differently).",
+  "Unicode glyphs (▪, ≥, ≤, μ) and '<' without spaces.",
+  "Header 'Reviewed 01/22/26' versus 'Revised 09/15/26' versus committee 08/27/26.",
+  "LOINC documentation table repeats the same time-frame text on every row (repeated_lines in survey)."
+ ],
+ "interesting_structures": [
+  "Statute-defined coverage: indications are listed because Florida law forbids the experimental exclusion for them; the 'mandated' vs 'plan-added' split matters for audit.",
+  "Three coverage tiers: covered; covered only inside a clinical trial (routine care costs); covered for rare diseases at BMT CTN centers.",
+  "Multiple sclerosis criteria are the deepest nesting in the batch.",
+  "Indication lists with per-indication qualifiers ('chemotherapy sensitive after first relapse', 'stem cells collected in remission')."
+ ],
+ "fit_to_tree": {
+  "score": 4,
+  "why": "Too many indications for one tree: effectively 40 separate trees; some tiers depend on trial enrolment and center membership; MS and SSc branches have real depth and an ambiguous AND/OR layout; 'case by case' catch-all needs human review."
+ },
+ "file": "bcbsfl-02-38241-01-autologous-hematopoietic-cell-transplantation.pdf",
+ "treatment": "autologous-hematopoietic-cell-transplant",
+ "payer": "bcbsfl",
+ "doc_kind": "medical policy (Florida Blue Medical Coverage Guideline)"
+}

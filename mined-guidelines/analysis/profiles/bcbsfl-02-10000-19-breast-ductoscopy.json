@@ -1,0 +1,83 @@
+{
+ "lines_of_business": [
+  "All lines of business unless noted in PROGRAM EXCEPTIONS (disclaimer: \"THIS MEDICAL COVERAGE GUIDELINE APPLIES TO ALL LINES OF BUSINESS UNLESS OTHERWISE NOTED IN THE PROGRAM EXCEPTIONS SECTION\")",
+  "FEP: \"Follow FEP guidelines.\"",
+  "SAO: \"Follow SAO guidelines.\"",
+  "Medicare Advantage: 'No National Coverage Determination (NCD) and/or Local Coverage Determination (LCD) were found'"
+ ],
+ "effective_or_revised": "Original Effective Date 12/15/03; Reviewed 03/26/26; Revised 04/15/26 (4 pages)",
+ "sections_in_order": [
+  "header block (guideline number, Original Effective Date, Reviewed, Revised, Subject)",
+  "disclaimer paragraph",
+  "navigation bar (Position Statement / Billing/Coding / Reimbursement / Program Exceptions / Definitions / Related Guidelines / Other / References / Updates)",
+  "DESCRIPTION",
+  "POSITION STATEMENT",
+  "BILLING/CODING INFORMATION",
+  "REIMBURSEMENT INFORMATION",
+  "PROGRAM EXCEPTIONS",
+  "DEFINITIONS",
+  "RELATED GUIDELINES",
+  "OTHER",
+  "REFERENCES",
+  "COMMITTEE APPROVAL",
+  "GUIDELINE UPDATE INFORMATION"
+ ],
+ "criteria_location": "POSITION STATEMENT, p.1: one sentence. There are no criteria; the whole document is a not-covered statement. The Description carries a 'Summary and Analysis of Evidence' paragraph that justifies it.",
+ "procedures_covered": [
+  "Breast ductoscopy (fiberoptic ductoscopy, mammary ductoscopy): investigational for all indications"
+ ],
+ "logic": {
+  "top_level": "other: single blanket not-covered statement (no leaf requirements exist)",
+  "max_nesting_depth": 0,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "None needed; everything is excluded.",
+  "initial_vs_repeat": "",
+  "and_or_ambiguity": []
+ },
+ "requirement_kinds": [
+  {
+   "kind": "other",
+   "quote": "Breast ductoscopy is considered experimental or investigational for all indications.",
+   "where": "Position Statement; no requirement kinds exist, this is a blanket investigational statement"
+  }
+ ],
+ "thresholds": [],
+ "time_windows": [],
+ "codes": {
+  "cpt_hcpcs_listed": false,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "No codes. 'There is no specific CPT or HCPCS code for breast ductoscopy; unlisted code 19499 may be used.'",
+  "non_covered_code_lists": "Unlisted code 19499 named as the billing route; no list of denied codes."
+ },
+ "external_dependencies": [
+  {
+   "what": "Medicare Advantage: no NCD/LCD exists",
+   "quote": "No National Coverage Determination (NCD) and/or Local Coverage Determination (LCD) were found at the time of the last guideline reviewed date."
+  }
+ ],
+ "definitions_that_change_meaning": [],
+ "vague_terms": [
+  {
+   "quote": "The evidence is insufficient to determine the effects of the technology on health outcomes.",
+   "problem": "stock rationale sentence, not a testable requirement."
+  }
+ ],
+ "extraction_hazards": [
+  "Boilerplate dominates the file: disclaimer, nav bar, step-therapy paragraph (appears twice, in Billing/Coding and in Program Exceptions), definitions 'No guideline specific definitions apply.'.",
+  "The Position Statement is two lines; a heading-based parser must not mistake the long Description 'Summary and Analysis of Evidence' for criteria.",
+  "Update log shows 'investigational status maintained' repeated annually (useful as a stability signal)."
+ ],
+ "interesting_structures": [
+  "Minimal document: Position Statement = blanket 'experimental or investigational for all indications'.",
+  "Step-therapy exemption paragraph appears in BILLING/CODING as well as PROGRAM EXCEPTIONS, even though ductoscopy has no step-therapy requirement."
+ ],
+ "fit_to_tree": {
+  "score": 1,
+  "scale": "1..5",
+  "why": "nothing to evaluate: result is always not medically necessary. The tree is a single constant NOT_MET (or no tree), the system should recognize this class."
+ },
+ "file": "bcbsfl-02-10000-19-breast-ductoscopy.pdf",
+ "treatment": "breast-ductoscopy",
+ "payer": "bcbsfl",
+ "doc_kind": "medical policy (Florida Blue 'Medical Coverage Guideline', MCG)"
+}

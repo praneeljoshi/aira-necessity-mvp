@@ -1,0 +1,19 @@
+{
+  "payer": "UnitedHealthcare",
+  "payer_key": "uhc",
+  "treatment": "hyperbaric-oxygen",
+  "title": "Hyperbaric Oxygen Therapy and Topical Oxygen Therapy",
+  "policy_number": "2026T0632J",
+  "effective": "05/01/2026",
+  "url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-medical-drug/hyperbaric-topical-oxygen-therapy.pdf",
+  "final_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-medical-drug/hyperbaric-topical-oxygen-therapy.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "uhc-2026t0632j-hyperbaric-oxygen-therapy-and-topical-oxygen-thera.pdf",
+  "sha256": "4842e83070c0874eb20a571d3e4920ce05949f317aaad1b1cf0d4b48a4be8bdf",
+  "pages": 25,
+  "bytes": 523045,
+  "retrieved": "2026-10-09",
+  "printed_date": "Effective May 1, 2026"
+}

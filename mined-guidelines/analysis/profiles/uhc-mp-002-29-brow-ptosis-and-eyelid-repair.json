@@ -1,0 +1,205 @@
+{
+ "file": "uhc-mp-002-29-brow-ptosis-and-eyelid-repair.pdf",
+ "treatment": "blepharoplasty",
+ "payer": "uhc",
+ "doc_kind": "medical policy (UnitedHealthcare Commercial and Individual Exchange) delegating criteria to InterQual",
+ "lines_of_business": [
+  "UnitedHealthcare Commercial",
+  "UnitedHealthcare Individual Exchange",
+  "Separate Community Plan and Medicare Advantage policies"
+ ],
+ "effective_or_revised": "Policy MP.002.29; effective August 1, 2026 (library metadata matches)",
+ "sections_in_order": [
+  "Application",
+  "Coverage Rationale",
+  "Medical Records Documentation Used for Reviews",
+  "Definitions",
+  "Applicable Codes",
+  "Benefit Considerations",
+  "Clinical Evidence",
+  "U.S. Food and Drug Administration",
+  "References",
+  "Policy History/Revision Information",
+  "Instructions for Use"
+ ],
+ "criteria_location": "Coverage Rationale pp.1-3, but the core criteria for blepharoplasty, ectropion, entropion, lesion excision, eyelid reconstruction and ptosis repair are NOT in this document: they are 'InterQual CP: Procedures' (link). Only the carve-outs written in the policy (internal browpexy, lagophthalmos, lid retraction, canthoplasty, floppy eyelid syndrome) have criteria on the page.",
+ "procedures_covered": [
+  "Blepharoplasty 15820-15823, brow ptosis 67900, blepharoptosis 67901-67909 (criteria in InterQual)",
+  "Lid retraction 67911",
+  "Lagophthalmos 67912",
+  "Ectropion/entropion 67914-67924",
+  "Canthoplasty/canthopexy 21280, 21282, 67950",
+  "Floppy eyelid syndrome 67961, 67966",
+  "Internal browpexy (cosmetic)"
+ ],
+ "logic": {
+  "top_level": "delegation: InterQual for the main procedures; locally written pathways (all-of lists) for lid retraction, thyroid eye disease, canthoplasty, floppy eyelid syndrome",
+  "max_nesting_depth": 4,
+  "k_of_n": [
+   {
+    "k": 1,
+    "n": 3,
+    "quote": "At least one of the following is present: Epiphora (excess tearing) not resolved by conservative measures; or Corneal dryness unresponsive to lubricants; or Corneal ulcer"
+   }
+  ],
+  "exclusions_or_contraindications": "'Internal Browpexy for any condition is considered cosmetic and not medically necessary.' Benefit Considerations lists cosmetic exclusion; psychological consequences do not make a procedure reconstructive.",
+  "initial_vs_repeat": "None.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Brow ptosis repair and repair of the eyelid are considered reconstructive and medically necessary in certain circumstances. For medical necessity clinical coverage criteria, refer to the InterQual CP: Procedures",
+    "why_ambiguous": "The criteria are not on the page; an automated checker given this PDF alone has nothing to evaluate for blepharoplasty."
+   },
+   {
+    "quote": "Note: If multiple procedures are requested, criteria for each individual procedure must be met.",
+    "why_ambiguous": "Says nothing about what 'met' means since criteria are external."
+   },
+   {
+    "quote": "The InterQual criteria below only apply to persons 18 years of age or older.",
+    "why_ambiguous": "'below' but nothing is below; refers to externally held criteria; no pathway stated for under 18."
+   },
+   {
+    "quote": "Moderate to severe disease where all the following apply: ... or Severe, sight-threatening thyroid eye disease to address subluxation",
+    "why_ambiguous": "The bullet 'or' is on its own line between blocks, and 'euthyroidism has been achieved and maintained' is a state that can change."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "external criteria",
+   "quote": "For medical necessity clinical coverage criteria, refer to the InterQual CP: Procedures: Blepharoplasty, Ectropion Repair, Entropion Repair, Eyelid Lesion Excision, Eyelid Reconstruction, Ptosis Repair",
+   "where": "Coverage Rationale"
+  },
+  {
+   "kind": "age",
+   "quote": "The InterQual criteria below only apply to persons 18 years of age or older",
+   "where": "Coverage Rationale note"
+  },
+  {
+   "kind": "functional impairment",
+   "quote": "There is a functional impairment (e.g., dry eyes, pain/discomfort, tearing, blurred vision)",
+   "where": "lid retraction; thyroid eye disease; canthoplasty"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "Tried and failed conservative treatments",
+   "where": "lid retraction"
+  },
+  {
+   "kind": "exclusion of other cause",
+   "quote": "Other causes have been eliminated as the reason for the lid retraction such as use of dilating eye drops or glaucoma medications",
+   "where": "lid retraction"
+  },
+  {
+   "kind": "disease state",
+   "quote": "The disease is stable or inactive, and euthyroidism has been achieved and maintained",
+   "where": "thyroid eye disease"
+  },
+  {
+   "kind": "photos",
+   "quote": "Clear, high-quality, clinical photographs ... Lids must be everted in the photographs; Conjunctival surface (underbelly) of the lids must be clearly visible",
+   "where": "floppy eyelid syndrome"
+  },
+  {
+   "kind": "exam finding",
+   "quote": "Eyelash ptosis; and Significant upper eyelid laxity ... giant papillary conjunctivitis or corneal findings",
+   "where": "floppy eyelid syndrome"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "Documentation that conservative treatment has been tried and failed; examples may include: ocular lubricants ... antihistamines ... topical steroid drops ... eye shield",
+   "where": "floppy eyelid syndrome"
+  },
+  {
+   "kind": "ruled out",
+   "quote": "Infections of the eye have been ruled out",
+   "where": "floppy eyelid syndrome"
+  },
+  {
+   "kind": "investigational/cosmetic",
+   "quote": "Internal Browpexy for any condition is considered cosmetic",
+   "where": "Coverage Rationale"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "age for InterQual",
+   "value": ">= 18",
+   "unit": "years",
+   "quote": "The InterQual criteria below only apply to persons 18 years of age or older"
+  }
+ ],
+ "time_windows": [],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "CPT grouped by procedure heading; note: 'The following codes may be cosmetic; review is required to determine if considered cosmetic or reconstructive.' 67961 and 67966 appear twice (Canthoplasty and Floppy Eyelid Syndrome).",
+  "non_covered_code_lists": "None."
+ },
+ "external_dependencies": [
+  {
+   "what": "InterQual CP: Procedures (Blepharoplasty, Ectropion, Entropion, Eyelid Lesion Excision, Eyelid Reconstruction, Ptosis Repair)",
+   "quote": "refer to the InterQual® CP: Procedures"
+  },
+  {
+   "what": "Cosmetic and Reconstructive Procedures policy",
+   "quote": "Cosmetic and Reconstructive Procedures"
+  },
+  {
+   "what": "Medical Records Documentation Used for Reviews",
+   "quote": "refer to the guidelines titled Medical Records Documentation Used for Reviews"
+  },
+  {
+   "what": "State benefit mandates for cosmetic services",
+   "quote": "Some states require benefit coverage for services that UnitedHealthcare considers cosmetic procedures"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Lagophthalmos",
+   "definition_quote": "The inability to close the eyelids completely."
+  },
+  {
+   "term": "Internal Browpexy",
+   "definition_quote": "A minimally invasive technique to provide stabilization and subtle elevation of the lateral brow"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "in certain circumstances",
+   "problem": "Reconstructive status deferred."
+  },
+  {
+   "quote": "Tried and failed conservative treatments",
+   "problem": "No duration, no list."
+  },
+  {
+   "quote": "Significant upper eyelid laxity",
+   "problem": "No grading."
+  },
+  {
+   "quote": "Clear, high-quality, clinical photographs",
+   "problem": "Subjective."
+  },
+  {
+   "quote": "complete closure to the eye, resulting in dryness and other complications",
+   "problem": "'other complications' open."
+  }
+ ],
+ "extraction_hazards": [
+  "The central criteria are a hyperlink to InterQual, invisible to text extraction.",
+  "'Click here to view the InterQual criteria' link text only.",
+  "CPT table has 67961/67966 repeated under two headings.",
+  "Footers 'Proprietary Information of UnitedHealthcare' on each page; criteria bullets with 'or' on its own line between blocks.",
+  "Long Clinical Evidence section (pp.5-7) about floppy eyelid, lagophthalmos, lid retraction can be mistaken for criteria."
+ ],
+ "interesting_structures": [
+  "Criteria delegated to a proprietary vendor tool; the policy itself is a router.",
+  "Policy-level carve-outs with detailed criteria exist only for rarer conditions.",
+  "Age gate (>= 18) attached to external tool.",
+  "Photograph standard defined for floppy eyelid syndrome (lids everted)."
+ ],
+ "fit_to_tree": {
+  "score": 5,
+  "why": "For the main blepharoplasty question, the criteria do not exist in the document; they live in InterQual. A checker can only evaluate the few written carve-outs."
+ }
+}

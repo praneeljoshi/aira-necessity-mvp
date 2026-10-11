@@ -1,0 +1,19 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "transmyocardial-revascularization-tmr",
+  "title": "Transmyocardial Revascularization (TMR)",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JEWFS1H2QN1TDP2IH",
+  "source_format": "pdf",
+  "anchor": true,
+  "original_effective": "06/15/00",
+  "reviewed": "01/22/26",
+  "revised": "02/15/26",
+  "file": "bcbsfl-76JEWFS1H2QN1TDP2IH-transmyocardial-revascularization-tmr.pdf",
+  "sha256": "038f3a43e3f0edbeeddf3a89f121eaea690493413f7613148e21207ca49c1ec5",
+  "pages": 5,
+  "bytes": 703392,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original Effective Date 06/15/00; Reviewed 01/22/26; Revised 02/15/26 (5 pages). Guideline number prints truncated as '02-33000-1' and the filename carries a random token, not the number."
+}

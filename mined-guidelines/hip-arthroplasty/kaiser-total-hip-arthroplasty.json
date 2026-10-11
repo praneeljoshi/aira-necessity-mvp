@@ -1,0 +1,19 @@
+{
+  "payer": "Kaiser Permanente",
+  "payer_key": "kaiser",
+  "treatment": "hip-arthroplasty",
+  "title": "Total Hip Arthroplasty",
+  "policy_number": "",
+  "effective": "",
+  "url": "https://healthy.kaiserpermanente.org/content/dam/kporg/final/documents/health-plan-documents/coverage-information/total-hip-arthoplasty-ps-nw-en-forms.pdf",
+  "final_url": "https://healthy.kaiserpermanente.org/content/dam/kporg/final/documents/health-plan-documents/coverage-information/total-hip-arthoplasty-ps-nw-en-forms.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "kaiser-total-hip-arthroplasty.pdf",
+  "sha256": "49df95e455504864d18038c5446482897c83832235dcd6ef05ddffbf5d05d725",
+  "pages": 8,
+  "bytes": 189353,
+  "retrieved": "2026-10-09",
+  "printed_date": "Effective 4/1/2026; Last reviewed 6/24/26; Policy # NCP 117 (was NCP 17 until 8/4/26)"
+}

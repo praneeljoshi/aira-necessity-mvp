@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "orthognathic-surgery",
+  "title": "Orthognathic Surgery",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JLIL6Z43DOBBUOGPT",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-12000-17",
+  "original_effective": "08/15/13",
+  "reviewed": "05/28/26",
+  "revised": "06/15/26",
+  "file": "bcbsfl-02-12000-17-orthognathic-surgery.pdf",
+  "sha256": "94c25a5f74cb2b3d75ae5ebf01a49ce9055f8e95f5ba06b8be6d71cdbca7f2bb",
+  "pages": 12,
+  "bytes": 209596,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original Effective Date 08/15/13; Reviewed 05/28/26; Revised 06/15/26"
+}

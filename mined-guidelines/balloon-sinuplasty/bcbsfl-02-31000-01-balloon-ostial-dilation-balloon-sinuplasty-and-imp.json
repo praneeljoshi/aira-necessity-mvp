@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "balloon-sinuplasty",
+  "title": "Balloon Ostial Dilation (Balloon Sinuplasty) and Implantable Devices",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JOUTO4B0K9HGUQD2X",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-31000-01",
+  "original_effective": "03/15/17",
+  "reviewed": "07/23/26",
+  "revised": "08/15/26",
+  "file": "bcbsfl-02-31000-01-balloon-ostial-dilation-balloon-sinuplasty-and-imp.pdf",
+  "sha256": "38011e77eabe62b1953823b2d23eb163a8f8333e6e657bd675143251b6bffdcc",
+  "pages": 10,
+  "bytes": 185837,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original 03/15/17; Reviewed 07/23/26; Revised 08/15/26"
+}

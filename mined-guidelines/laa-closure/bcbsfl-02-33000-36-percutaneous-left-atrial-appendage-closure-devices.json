@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "laa-closure",
+  "title": "Percutaneous Left Atrial Appendage Closure Devices for Stroke Prevention in Atrial Fibrillation",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JGJZ4DQ0N3M1HUHD5",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-33000-36",
+  "original_effective": "04/15/16",
+  "reviewed": "02/26/26",
+  "revised": "03/15/26",
+  "file": "bcbsfl-02-33000-36-percutaneous-left-atrial-appendage-closure-devices.pdf",
+  "sha256": "35a61ca04b7b610dd0182beebd490cb954ff5f11fd7452ad9299af795045b636",
+  "pages": 8,
+  "bytes": 626105,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original 04/15/16; Reviewed 02/26/26; Revised 03/15/26"
+}

@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "infertility",
+  "title": "Infertility",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JQQQ49Y51RBPAR63L",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-56000-24",
+  "original_effective": "11/15/00",
+  "reviewed": "05/28/26",
+  "revised": "10/01/26",
+  "file": "bcbsfl-02-56000-24-infertility.pdf",
+  "sha256": "6154d502985151be346a972bb1e52b6f687c6c3aed09bc085b8e78b6cf9acac6",
+  "pages": 11,
+  "bytes": 236569,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original Effective Date 11/15/00; Reviewed 05/28/26; Revised 10/01/26 ('Quarterly CPT/HCPCS update. Added 1062T'); committee approval 05/28/26 (worded 'approved by the BCBSF Medical Policy and Coverage Committee', older brand name)"
+}

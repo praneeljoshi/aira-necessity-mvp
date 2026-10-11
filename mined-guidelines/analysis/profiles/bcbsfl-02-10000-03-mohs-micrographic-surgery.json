@@ -1,0 +1,197 @@
+{
+ "lines_of_business": [
+  "All lines of business unless noted in PROGRAM EXCEPTIONS (disclaimer: \"THIS MEDICAL COVERAGE GUIDELINE APPLIES TO ALL LINES OF BUSINESS UNLESS OTHERWISE NOTED IN THE PROGRAM EXCEPTIONS SECTION\")",
+  "FEP: \"Follow FEP guidelines.\"",
+  "SAO: \"Follow SAO guidelines.\"",
+  "Medicare Advantage: LCD L33689 and Article A57767 'reviewed' (First Coast, fcso.com); no criteria are restated"
+ ],
+ "effective_or_revised": "Original Effective Date 05/15/02; Reviewed 01/23/25; Revised 02/15/25 (8 pages)",
+ "sections_in_order": [
+  "header block (guideline number, Original Effective Date, Reviewed, Revised, Subject)",
+  "disclaimer paragraph",
+  "navigation bar (Position Statement / Billing/Coding / Reimbursement / Program Exceptions / Definitions / Related Guidelines / Other / References / Updates)",
+  "DESCRIPTION",
+  "POSITION STATEMENT",
+  "BILLING/CODING INFORMATION",
+  "REIMBURSEMENT INFORMATION",
+  "PROGRAM EXCEPTIONS",
+  "DEFINITIONS",
+  "RELATED GUIDELINES",
+  "OTHER",
+  "REFERENCES",
+  "COMMITTEE APPROVAL",
+  "GUIDELINE UPDATE INFORMATION"
+ ],
+ "criteria_location": "POSITION STATEMENT, pp.1-3. Five lettered pathways A-E for coverage, then one not-covered list. ICD-10 'codes that support medical necessity' in Billing/Coding (p.4-5) are a loose diagnosis screen, not mapped to A-E. Reimbursement and Definitions add nothing to criteria.",
+ "procedures_covered": [
+  "Mohs micrographic surgery (CPT 17311-17315): one procedure, many indications"
+ ],
+ "logic": {
+  "top_level": "pathways: 'meets the definition of medical necessity when performed for ONE of the following indications' A-E, each a diagnosis x anatomic location x host/status combination; followed by a 'does not meet' list that partly mirrors it",
+  "max_nesting_depth": 3,
+  "k_of_n": [
+   {
+    "k": 1,
+    "n": 5,
+    "quote": "meets the definition of medical necessity when performed for ONE of the following indications:"
+   }
+  ],
+  "exclusions_or_contraindications": "Written as a second list ('does not meet the definition of medical necessity for all other indications and including but not limited to') of cancer type x site x size x host status. It is both a catch-all and an enumerated NOT list. Sub-bullets use size ceilings (<=2 cm, <=1 cm) for healthy vs immunocompromised members.",
+  "initial_vs_repeat": "No separate repeat criteria for later stages. 'Recurrent' vs 'primary' is a lesion attribute inside pathways C and D, and in the exclusions ('Recurrent superficial BCC ... of any size').",
+  "and_or_ambiguity": [
+   {
+    "quote": "Superficial (except on trunk and extremities ) BCC of any size or unexpected positive margin on recent excision (healthy or immunocompromised members with genetic syndromes)",
+    "why_ambiguous": "Parenthetical 'healthy or immunocompromised members with genetic syndromes' can attach to either or both of the two conditions; unclear if 'with genetic syndromes' modifies only immunocompromised."
+   },
+   {
+    "quote": "B. ... that are in anatomic locations listed above (A), trunk, and extremities, regardless of subtype, size, or depth, in: Prior radiated skin / Traumatic scar / ...",
+    "why_ambiguous": "Items after 'in:' are an implicit OR list; nothing says OR. Also 'listed above (A)' means the A list, so B = A-sites + trunk + extremities."
+   },
+   {
+    "quote": "D. Lentigo maligna, melanoma in situ, non-lentigo maligna – primary or locally recurrent in anatomic locations listed above (B).",
+    "why_ambiguous": "'listed above (B)' - B is a list of conditions on top of A sites, not a site list, so the referent is an inference."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "diagnosis",
+   "quote": "Basal cell carcinomas, squamous cell carcinomas, basalosquamous/basosquamous cell carcinomas in the following anatomic locations",
+   "where": "Position Statement A, p.1"
+  },
+  {
+   "kind": "other",
+   "quote": "\"Mask areas\" of face (central face, eyelids-including inner/outer canthi, eyebrows, nose, lips ...)",
+   "where": "A, anatomic site list (site of lesion)"
+  },
+  {
+   "kind": "other",
+   "quote": "Prior radiated skin / Traumatic scar / Area of osteomyelitis / Area of chronic inflammation/ulceration / Members with genetic syndromes",
+   "where": "B, host/field qualifiers"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "Recurrent aggressive basal cell carcinomas (BCC) ... Verrucous SCC ... KA-type SCC (not central facial)",
+   "where": "C, recurrent skin cancers"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "Primary nodular BCC (immunocompromised members) ≤ 1 cm.",
+   "where": "not-covered list, p.2-3"
+  },
+  {
+   "kind": "provider/facility qualification",
+   "quote": "the physician functions in two separate, but distinct capacities: as the surgeon and the pathologist",
+   "where": "Description and Position Statement NOTE (billing rule: if pathology is delegated it is not reported as Mohs)"
+  },
+  {
+   "kind": "other",
+   "quote": "healthy or immunocompromised members",
+   "where": "host immune status recurs across C and exclusions"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "primary nodular BCC size, healthy member, trunk/extremities (NOT covered at or below)",
+   "value": "<= 2",
+   "unit": "cm",
+   "quote": "Primary nodular BCC (healthy members) ≤ 2 cm"
+  },
+  {
+   "quantity": "primary nodular BCC size, immunocompromised (NOT covered at or below)",
+   "value": "<= 1",
+   "unit": "cm",
+   "quote": "Primary nodular BCC (immunocompromised members) ≤ 1 cm."
+  },
+  {
+   "quantity": "primary SCC depth / Clark level / size (NOT covered)",
+   "value": "< 2 mm; Clark <= III; <= 2 cm",
+   "unit": "mm / level / cm",
+   "quote": "Primary SCC; without aggressive histologic features, < 2 mm depth without other defining features, Clark level ≤ III (healthy members) ≤2 cm"
+  },
+  {
+   "quantity": "KA-type SCC size (NOT covered)",
+   "value": "<= 1",
+   "unit": "cm",
+   "quote": "Primary SCC keratoacanthoma (KA) type; not central facial (healthy members) ≤ 1 cm"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "recency of positive margin",
+   "length": "'recent' (undefined)",
+   "quote": "unexpected positive margin on recent excision"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": true,
+  "codes_tied_to_criteria": "No. CPT 17311-17315 are listed with full descriptors; ICD-10 table headed 'Codes That Support Medical Necessity' is a broad skin/lip/eyelid/genital malignancy screen (C44.*, C4A, D03, D04 etc.) that cannot distinguish pathways A-E or the size/host rules.",
+  "non_covered_code_lists": "none; non-coverage is by clinical description only"
+ },
+ "external_dependencies": [
+  {
+   "what": "Medicare Advantage: LCD Mohs Micrographic Surgery (L33689) and Article A57767",
+   "quote": "Medicare Advantage products: The following were reviewed on the last guideline reviewed date: Local Coverage Determination (LCD): Mohs Micrographic Surgery (MMS) (L33689)"
+  },
+  {
+   "what": "FEP and SAO members go to other criteria entirely",
+   "quote": "Federal Employee Program (FEP): Follow FEP guidelines. / State Account Organization (SAO): Follow SAO guidelines."
+  },
+  {
+   "what": "Underlying criteria are the 2012 AAD/ACMS/ASDSA/ASMS appropriate use criteria (cited in References, not restated)",
+   "quote": "AAD/ACMS/ASDSA/ASMS 2012 appropriate use criteria for Mohs micrographic surgery"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Basalosquamous Cell Carcinoma",
+   "definition_quote": "basal cell with squamous differentiation."
+  },
+  {
+   "term": "Melanoma in situ",
+   "definition_quote": "Abnormal melanocytes ... are found in the epidermis ... Also called stage 0 melanoma."
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "Recurrent aggressive basal cell carcinomas (BCC)",
+   "problem": "'aggressive' not defined (histologic subtype? clinical features?)."
+  },
+  {
+   "quote": "healthy or immunocompromised members",
+   "problem": "neither 'healthy' nor 'immunocompromised' defined; the exclusion size cutoffs depend on it."
+  },
+  {
+   "quote": "unexpected positive margin on recent excision",
+   "problem": "'unexpected' and 'recent' undefined."
+  },
+  {
+   "quote": "including but not limited to",
+   "problem": "the not-covered list is open; absence from the covered list A-E is the real test."
+  }
+ ],
+ "extraction_hazards": [
+  "Pathway letters A-E are inconsistently indented in pdftotext: A is indented, B-E start at the left margin, so indentation cannot be trusted to find nesting.",
+  "Bullets in this file are the private-use glyph U+F0B7 (36 of them, invisible in many viewers) rather than a visible bullet; sub-bullets under the not-covered list render as a literal 'o'. A parser must treat U+F0B7 as a bullet.",
+  "Stray space inside parentheses ('trunk and extremities )'), mixed spelling 'vermillion', 'Mohs' vs 'Mohs’' apostrophes.",
+  "Coding section is a three-column table flattened into 'code  long descriptor' with hanging indents; CPT descriptors repeat nearly verbatim for 17311/17313 etc.",
+  "LOINC documentation table (Reimbursement section) is a 4-column table flattened; same six-month sentence repeats per row.",
+  "The Position Statement NOTE about surgeon-and-pathologist is repeated verbatim in Description, Position Statement and Reimbursement."
+ ],
+ "interesting_structures": [
+  "Coverage defined by an anatomic-site x histology x host-status matrix with size ceilings on the NOT side (the covered side has no sizes).",
+  "'Mask areas' of face is a named region with an embedded inclusion list.",
+  "Billing rule inside the clinical policy: not Mohs unless the same physician is surgeon and pathologist.",
+  "LOINC table lists the records a reviewer may request with a six-month look-back (18805-2)."
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "scale": "1..5",
+  "why": "any-of over five pathways, each an all-of of leaves, fits. Strain comes from the site list needing a lookup table, host-status terms with no definition, 'listed above' back-references, and the NOT list that overlaps pathways. Size thresholds appear only as exclusions."
+ },
+ "file": "bcbsfl-02-10000-03-mohs-micrographic-surgery.pdf",
+ "treatment": "mohs-micrographic-surgery",
+ "payer": "bcbsfl",
+ "doc_kind": "medical policy (Florida Blue 'Medical Coverage Guideline', MCG)"
+}

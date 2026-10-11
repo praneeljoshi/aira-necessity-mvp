@@ -1,0 +1,162 @@
+/* the guideline view inside the patient screen; scoped under .tv (see static/tree.js) */
+.tv .next { margin-top:22px; border:1px solid var(--line); border-radius:10px; padding:16px 18px; background:var(--soft) }
+.tv .next h2 { margin:0 0 8px; font-size:15px; font-weight:600 }
+.tv .next.needs { border-color:#E8D3B2; background:var(--needs-bg) }
+.tv .next.needs h2 { color:var(--needs) }
+.tv .next.no { border-color:#E5C4C4; background:var(--no-bg) }
+.tv .next.no h2 { color:var(--no) }
+.tv .next.ready { border-color:#BFDCCB; background:var(--ready-bg) }
+.tv .next.ready h2 { color:var(--ready) }
+.tv .next ol { margin:0 0 10px; padding-left:22px }
+.tv .next li { margin:3px 0 }
+.tv .next li a { color:inherit }
+.tv .next .act { display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-top:8px }
+.tv .next .hint { color:var(--sec); font-size:14px }
+.tv .draft { margin-top:12px; background:#fff; border:1px solid var(--line); border-radius:10px; padding:14px 16px; white-space:pre-wrap; max-width:70ch; display:none; font-size:14.5px }
+.tv .draft.show { display:block }
+.tv .legend { display:flex; gap:14px 22px; flex-wrap:wrap; margin:28px 0 10px; color:var(--sec); font-size:13.5px }
+.tv .legend span b { font-weight:700; margin-right:5px }
+.tv .doc { border:1px solid var(--line); border-radius:10px; overflow:hidden; background:#fff }
+.tv .doc-head { padding:12px 18px; background:var(--rail); border-bottom:1px solid var(--line); display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; font-size:14px; color:var(--sec) }
+.tv .doc-head b { color:var(--ink); font-weight:600 }
+.tv .sec { padding:8px 0 10px }
+.tv .sec + .sec { border-top:1px dashed var(--line) }
+.tv .sec-label { padding:8px 18px 2px 50px; font-size:12.5px; text-transform:uppercase; letter-spacing:.04em; color:var(--sec); font-weight:600 }
+.tv .pg { display:flex; align-items:center; gap:10px; padding:4px 18px 4px 50px; color:var(--dim); font-size:12px }
+.tv .pg::after { content:""; flex:1; border-top:1px solid var(--line) }
+.tv .ln { display:grid; grid-template-columns:32px 1fr; gap:0 0; padding:1px 18px 1px 10px; line-height:1.5 }
+.tv .ln.blank { margin-top:10px }
+.tv .ln .mk { text-align:center; font-weight:700; font-size:14px; line-height:1.5 }
+.tv .ln .tx { white-space:pre-wrap; word-break:break-word }
+.tv .ln.heading .tx { font-weight:600; font-size:16px; margin:6px 0 2px }
+.tv .ln.other .tx, .tv .ln.gap .tx, .tv .ln.context .tx { color:var(--sec) }
+.tv .ln.gap .tx { color:var(--dim) }
+.tv .ln.context .tx { color:var(--sec); font-style:italic }
+.tv .ln.req .tx { color:var(--ink) }
+.tv .b-documented { background:#fff }
+.tv .b-missing { background:var(--needs-bg) }
+.tv .b-contradicted, .tv .b-applies { background:var(--no-bg) }
+.tv .b-unclear { background:var(--needs-bg) }
+.tv .b-not_needed .tx, .tv .b-other_option .tx { color:var(--sec) }
+.tv .b-clear { background:#fff }
+.tv .b-part_shown { background:var(--no-bg) }
+.tv .ln.first { margin-top:3px; border-top-left-radius:6px; border-top-right-radius:6px }
+.tv .m-y { color:var(--ready) }
+.tv .m-n { color:var(--no) }
+.tv .m-q { color:var(--needs) }
+.tv .m-o { color:var(--dim) }
+.tv .ev { margin:0 18px 10px 42px; padding:8px 12px 6px; border-left:3px solid var(--line); font-size:14px }
+.tv .b-missing + .ev, .tv .ev.e-missing { border-left-color:var(--needs) }
+.tv .ev.e-contradicted, .tv .ev.e-applies, .tv .ev.e-part_shown { border-left-color:var(--no) }
+.tv .ev.e-documented, .tv .ev.e-clear { border-left-color:var(--ready) }
+.tv .ev.e-unclear { border-left-color:var(--needs) }
+.tv .it { margin:0 0 8px }
+.tv .it:last-child { margin-bottom:0 }
+.tv .it .st { font-weight:600 }
+.tv .it .st.m-y { color:var(--ready) }
+.tv .it .st.m-n { color:var(--no) }
+.tv .it .st.m-q { color:var(--needs) }
+.tv .it .st.m-o { color:var(--sec); font-weight:500 }
+.tv .it .wd { color:var(--sec) }
+.tv .it .wd::before { content:" — " }
+.tv .it q { display:block; margin:3px 0 0 14px; color:var(--ink); quotes:"“" "”" }
+.tv .it q::before, .tv .it q::after { color:var(--sec) }
+.tv .it small { display:block; margin-left:14px; color:var(--sec); font-size:13px }
+.tv .it .note { display:block; margin:4px 0 0 14px; color:var(--sec); font-size:13px }
+.tv .it .more { margin-left:14px; font-size:13px }
+.tv .it .hid { display:none }
+.tv .it.open .hid { display:block }
+.tv .it.open .more { display:none }
+.tv .cmp { color:var(--sec); font-size:13.5px; margin:0 0 6px }
+.tv .row-tbl { font-family:inherit; white-space:pre-wrap; padding:6px 18px 6px 10px; display:grid; grid-template-columns:32px 1fr }
+.tv .cands label { display:flex; gap:10px; align-items:flex-start; padding:8px 10px; border:1px solid var(--line); border-radius:8px; margin:6px 0; cursor:pointer }
+.tv .cands label:hover { background:var(--soft) }
+.tv .cands b { display:block; font-weight:500 }
+.tv .cands small { color:var(--sec); white-space:pre-wrap; display:block }
+.tv .err { color:var(--no) }
+.tv .next { display:block }
+.tv input[type=text] { font:inherit; padding:7px 10px; border:1px solid var(--line); border-radius:8px; min-width:260px }
+
+/* ================================================================ the / flow: Plain, from the shared theme (static/theme.css)
+   Scoped to html[data-flow="home"] because /review loads this file too and its styles draw .tv themselves.
+   Ink only where a person is needed: a missing or contradicted requirement carries the warm pen and a dot in the
+   gutter; a documented one only a whisper of blue; lines that are not requirements stay grey. */
+html[data-flow="home"] .tv .next { margin-top:22px; background:var(--paper); border:1px solid var(--edge); border-radius:10px; box-shadow:var(--sheet-shadow); padding:16px 20px 18px }
+html[data-flow="home"] .tv .next.needs, html[data-flow="home"] .tv .next.no, html[data-flow="home"] .tv .next.ready { background:var(--paper); border-color:var(--edge) }
+html[data-flow="home"] .tv .next h2, html[data-flow="home"] .tv .next.needs h2, html[data-flow="home"] .tv .next.no h2, html[data-flow="home"] .tv .next.ready h2 { color:var(--ink); font-size:var(--t-m); font-weight:600; margin:0 0 6px }
+html[data-flow="home"] .tv .next h2::before { content:""; display:inline-block; width:6px; height:6px; border-radius:50%; margin:0 9px 2px 0; background:var(--dim); vertical-align:middle }
+html[data-flow="home"] .tv .next.needs h2::before { background:var(--needs) } html[data-flow="home"] .tv .next.no h2::before { background:var(--no) } html[data-flow="home"] .tv .next.ready h2::before { background:var(--ready) }
+html[data-flow="home"] .tv .next ol { font-size:var(--t-s); padding-left:34px; margin:6px 0 10px }
+html[data-flow="home"] .tv .next li a { color:var(--ink); text-decoration-color:var(--edge-2); text-underline-offset:3px }
+html[data-flow="home"] .tv .next li a:hover { text-decoration-color:var(--act) }
+html[data-flow="home"] .tv .next .hint { color:var(--sec); font-size:var(--t-s) }
+html[data-flow="home"] .tv .next .act .hint { font-size:var(--t-xs) }
+html[data-flow="home"] .tv .draft { background:var(--desk); border:1px solid var(--edge); box-shadow:none; font-size:var(--t-s) }
+/* the legend: the pens themselves, small */
+html[data-flow="home"] .tv .legend { gap:8px 20px; margin:26px 0 10px; color:var(--sec); font-size:var(--t-xs) }
+html[data-flow="home"] .tv .legend span { display:inline-flex; align-items:center }
+html[data-flow="home"] .tv .legend span b { font-size:0; display:inline-block; width:14px; height:10px; border-radius:2px; margin-right:7px; background:transparent; box-shadow:inset 0 0 0 1px var(--edge-2) }
+html[data-flow="home"] .tv .legend b.m-y { background:rgb(var(--pen-doc)); box-shadow:none }
+html[data-flow="home"] .tv .legend b.m-q { background:rgb(var(--pen-miss)); box-shadow:none }
+html[data-flow="home"] .tv .legend b.m-n { background:rgb(var(--pen-bad)); box-shadow:none }
+/* the sheet */
+/* the policy on the page, as /review: no sheet, the text straight on the desk at a readable measure */
+html[data-flow="home"] .tv .doc { background:transparent; border:0; border-radius:0; box-shadow:none; padding:8px 0 40px; overflow:visible }
+html[data-flow="home"] .tv .doc-head { display:block; background:transparent; border:0; border-bottom:1px solid var(--edge); margin:0 24px 16px 52px; padding:0 0 14px; font-size:var(--t-xs); color:var(--dim) }
+html[data-flow="home"] .tv .doc-head .doc-kicker { display:block; color:var(--dim); margin-bottom:2px }
+html[data-flow="home"] .tv .doc-head b { display:block; font-size:var(--t-m); font-weight:600; color:var(--ink); margin-bottom:2px }
+html[data-flow="home"] .tv .sec + .sec { border-top:0 }
+html[data-flow="home"] .tv .sec-label { padding:10px 24px 2px 52px; font-size:11px; font-weight:600; letter-spacing:.06em; color:var(--dim) }
+html[data-flow="home"] .tv .pg { padding:4px 24px 4px 52px; color:var(--dim); font-size:10.5px; letter-spacing:.02em }
+html[data-flow="home"] .tv .pg::after { border-color:var(--edge) }
+html[data-flow="home"] .tv .ln { grid-template-columns:42px 1fr; padding:1px 24px 1px 10px; font-size:var(--t-m); line-height:1.7; background:transparent }
+html[data-flow="home"] .tv .ln .tx { color:var(--ink); padding-left:calc(var(--ind, 0) * .5ch) }
+html[data-flow="home"] .tv .ln.other .tx, html[data-flow="home"] .tv .ln.gap .tx, html[data-flow="home"] .tv .ln.context .tx { color:var(--sec) }
+html[data-flow="home"] .tv .ln.context .tx { font-style:normal }
+html[data-flow="home"] .tv .ln.heading .tx { font-size:var(--t-l); font-weight:600; letter-spacing:-.005em; margin:10px 0 4px }
+/* status: a dot in the gutter only where a person is needed */
+html[data-flow="home"] .tv .ln .mk { font-size:0; display:flex; justify-content:center; padding-top:10px }
+html[data-flow="home"] .tv .ln.first .mk.m-q::before, html[data-flow="home"] .tv .ln.first .mk.m-n::before { content:""; width:6px; height:6px; border-radius:50% }
+html[data-flow="home"] .tv .ln.first .mk.m-q::before { background:var(--needs) } html[data-flow="home"] .tv .ln.first .mk.m-n::before { background:var(--no) }
+/* the pens: over the requirement's own words, not its indent */
+html[data-flow="home"] .tv .b-documented, html[data-flow="home"] .tv .b-missing, html[data-flow="home"] .tv .b-contradicted, html[data-flow="home"] .tv .b-applies,
+html[data-flow="home"] .tv .b-unclear, html[data-flow="home"] .tv .b-clear, html[data-flow="home"] .tv .b-part_shown { background:transparent }
+html[data-flow="home"] .tv .ln[class*=" b-"] .w { border-radius:2px; padding:1px 1px; -webkit-box-decoration-break:clone; box-decoration-break:clone }
+html[data-flow="home"] .tv .b-documented .w, html[data-flow="home"] .tv .b-clear .w { background:rgb(var(--pen-doc) / var(--pen-doc-a)) }
+html[data-flow="home"] .tv .b-missing .w, html[data-flow="home"] .tv .b-unclear .w, html[data-flow="home"] .tv .b-confirm .w { background:rgb(var(--pen-miss)) }
+html[data-flow="home"] .tv .b-contradicted .w, html[data-flow="home"] .tv .b-applies .w, html[data-flow="home"] .tv .b-part_shown .w { background:rgb(var(--pen-bad)) }
+html[data-flow="home"] .tv .b-not_needed .tx, html[data-flow="home"] .tv .b-other_option .tx { color:var(--sec) }
+html[data-flow="home"] .tv .ln:target .w { box-shadow:inset 0 -2px 0 var(--act) }
+/* the chart's own lines under each requirement: a fine rule, the label above the quote */
+html[data-flow="home"] .tv .ev { margin:6px 24px 14px 52px; padding:2px 0 2px 14px; border-left:2px solid var(--edge-2); font-size:var(--t-s) }
+html[data-flow="home"] .tv .ev.e-documented, html[data-flow="home"] .tv .ev.e-clear { border-left-color:color-mix(in srgb, var(--ready) 45%, transparent) }
+html[data-flow="home"] .tv .ev.e-missing, html[data-flow="home"] .tv .ev.e-unclear, html[data-flow="home"] .tv .b-missing + .ev { border-left-color:var(--needs) }
+html[data-flow="home"] .tv .ev.e-contradicted, html[data-flow="home"] .tv .ev.e-applies, html[data-flow="home"] .tv .ev.e-part_shown { border-left-color:var(--no) }
+html[data-flow="home"] .tv .ev.e-not_needed, html[data-flow="home"] .tv .ev.e-other_option { border-left-color:transparent; margin-top:0 }
+html[data-flow="home"] .tv .it { margin:0 0 10px }
+html[data-flow="home"] .tv .it .g { display:none }
+html[data-flow="home"] .tv .it .st { font-size:10.5px; font-weight:600; letter-spacing:.08em; text-transform:uppercase }
+html[data-flow="home"] .tv .it .st.m-y { color:var(--ready) } html[data-flow="home"] .tv .it .st.m-q { color:var(--needs) } html[data-flow="home"] .tv .it .st.m-n { color:var(--no) }
+html[data-flow="home"] .tv .it .st.m-o { color:var(--dim); font-weight:600 }
+html[data-flow="home"] .tv .it .wd { color:var(--sec); font-size:var(--t-xs) }
+html[data-flow="home"] .tv .it q { margin:4px 0 0; color:var(--ink); line-height:1.55 }
+html[data-flow="home"] .tv .it small, html[data-flow="home"] .tv .it .note { margin-left:0; color:var(--dim); font-size:var(--t-xs); margin-top:2px }
+html[data-flow="home"] .tv .it .note { color:var(--sec) }
+html[data-flow="home"] .tv .it .more { margin-left:0; font-size:var(--t-xs) }
+html[data-flow="home"] .tv .cmp { color:var(--sec); font-size:var(--t-xs) }
+html[data-flow="home"] .tv .row-tbl { grid-template-columns:42px 1fr; padding:4px 24px 4px 10px; background:transparent; font-size:var(--t-s) }
+html[data-flow="home"] .tv .row-tbl .mk { font-size:0; display:flex; justify-content:center; padding-top:9px }
+html[data-flow="home"] .tv .row-tbl .mk.m-n:not(:empty)::before { content:""; width:6px; height:6px; border-radius:50%; background:var(--no) }
+html[data-flow="home"] .tv .row-tbl.b-contradicted .tx { background:rgb(var(--pen-bad)); border-radius:2px; padding:1px 3px; width:fit-content }
+html[data-flow="home"] .tv .cands label { background:var(--paper); border-color:var(--edge-2); font-size:var(--t-s) }
+html[data-flow="home"] .tv .cands label:hover { background:var(--soft) }
+html[data-flow="home"] .tv .cands small { font-size:var(--t-xs) }
+html[data-flow="home"] .tv input[type=text] { border-color:var(--edge-2); background:var(--paper) }
+@media (max-width:640px){
+  html[data-flow="home"] .tv .doc { padding:4px 0 24px; margin:0 -16px }
+  html[data-flow="home"] .tv .doc-head, html[data-flow="home"] .tv .sec-label, html[data-flow="home"] .tv .pg { margin-left:30px; margin-right:16px; padding-left:0; padding-right:0 }
+  html[data-flow="home"] .tv .sec-label, html[data-flow="home"] .tv .pg { margin-left:30px }
+  html[data-flow="home"] .tv .ln, html[data-flow="home"] .tv .row-tbl { grid-template-columns:24px 1fr; padding:1px 16px 1px 6px; font-size:14px; line-height:1.6 }
+  html[data-flow="home"] .tv .ln .mk { padding-top:9px }
+  html[data-flow="home"] .tv .ev { margin:6px 16px 14px 30px }
+}

@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "knee-arthroscopy",
+  "title": "Knee Arthroscopy and Open, Non-Arthroplasty Knee Repair",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JLIL6IE51BVZ2MCH5",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-20000-65",
+  "original_effective": "10/15/16",
+  "reviewed": "05/28/26",
+  "revised": "06/15/26",
+  "file": "bcbsfl-02-20000-65-knee-arthroscopy-and-open-non-arthroplasty-knee-re.pdf",
+  "sha256": "ce3c33b396b6d9293e99ea6616be9677432c3d63721fbbf648929d5199a1ef0f",
+  "pages": 16,
+  "bytes": 333549,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original 10/15/16; Reviewed 05/28/26; Revised 06/15/26"
+}

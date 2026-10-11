@@ -1,0 +1,19 @@
+{
+  "payer": "EmblemHealth",
+  "payer_key": "emblem",
+  "treatment": "blepharoplasty",
+  "title": "Blepharoplasty",
+  "policy_number": "",
+  "effective": "",
+  "url": "https://emblemhealth.com/content/dam/emblemhealth/pdfs/provider/medical_policies/b/blepharoplasty-medical-policy-emblemhealth.pdf",
+  "final_url": "https://www.emblemhealth.com/content/dam/emblemhealth/pdfs/provider/medical_policies/b/blepharoplasty-medical-policy-emblemhealth.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "emblem-blepharoplasty.pdf",
+  "sha256": "45ca8baaa778e7936c802a7ba20c43a4172c359e3bd674ea42edb72923dd35ea",
+  "pages": 11,
+  "bytes": 271477,
+  "retrieved": "2026-10-09",
+  "printed_date": "Policy MG.MM.SU.10jC2; Last Review March 13, 2026"
+}

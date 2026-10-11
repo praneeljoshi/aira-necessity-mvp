@@ -1,0 +1,1837 @@
+{
+  "id": "florida-blue-02-10000-11",
+  "payer": "Florida Blue",
+  "payer_aliases": [
+    "Florida Blue",
+    "BCBS FL",
+    "BCBSFL",
+    "Blue Cross Blue Shield of Florida",
+    "Blue Cross and Blue Shield of Florida",
+    "BCBS of Florida"
+  ],
+  "title": "Bio-Engineered Skin and Soft Tissue Substitutes; Amniotic Membrane and Amniotic Fluid",
+  "guideline_number": "02-10000-11",
+  "effective_date": "2026-10-01",
+  "reviewed_date": "2026-04-23",
+  "source_file": "bcbsfl-02-10000-11-bio-engineered-skin-and-soft-tissue-substitutes-am.pdf",
+  "plan_types": [
+    "All lines of business"
+  ],
+  "excluded_plans": [
+    "Federal Employee Program (FEP)",
+    "State Account Organization (SAO)",
+    "Medicare Advantage products"
+  ],
+  "scope": {
+    "cpt": {
+      "15011": "investigational",
+      "15012": "investigational",
+      "15013": "investigational",
+      "15014": "investigational",
+      "15015": "investigational",
+      "15016": "investigational",
+      "15017": "investigational",
+      "15018": "investigational",
+      "1044T": "investigational",
+      "1045T": "investigational",
+      "1046T": "investigational",
+      "1047T": "investigational",
+      "1048T": "investigational",
+      "1049T": "investigational",
+      "A2001": "investigational",
+      "A2002": "investigational",
+      "A2004": "investigational",
+      "A2005": "investigational",
+      "A2006": "investigational",
+      "A2007": "investigational",
+      "A2008": "investigational",
+      "A2009": "investigational",
+      "A2010": "investigational",
+      "A2011": "investigational",
+      "A2012": "investigational",
+      "A2013": "investigational",
+      "A2014": "investigational",
+      "A2015": "investigational",
+      "A2016": "investigational",
+      "A2017": "investigational",
+      "A2018": "investigational",
+      "A2019": "covered",
+      "A2020": "investigational",
+      "A2021": "investigational",
+      "A2022": "investigational",
+      "A2023": "investigational",
+      "A2024": "investigational",
+      "A2025": "investigational",
+      "A2026": "investigational",
+      "A2027": "investigational",
+      "A2028": "investigational",
+      "A2029": "investigational",
+      "A2030": "investigational",
+      "A2031": "investigational",
+      "A2032": "investigational",
+      "A2033": "investigational",
+      "A2034": "investigational",
+      "A2035": "investigational",
+      "A2036": "investigational",
+      "A2037": "investigational",
+      "A2038": "investigational",
+      "A2039": "investigational",
+      "A2040": "investigational",
+      "A2041": "investigational",
+      "A2042": "investigational",
+      "A2043": "investigational",
+      "A2044": "investigational",
+      "A2045": "investigational",
+      "A2046": "investigational",
+      "A2047": "investigational",
+      "A2048": "investigational",
+      "A2049": "investigational",
+      "A2050": "investigational",
+      "A4100": "covered",
+      "C1832": "investigational",
+      "C8002": "investigational",
+      "C9354": "investigational",
+      "C9356": "investigational",
+      "C9358": "investigational",
+      "C9360": "investigational",
+      "C9363": "investigational",
+      "C9364": "investigational",
+      "G0681": "covered",
+      "G0682": "covered",
+      "G0683": "covered",
+      "G0684": "covered",
+      "Q4101": "covered",
+      "Q4102": "covered",
+      "Q4103": "investigational",
+      "Q4104": "investigational",
+      "Q4105": "covered",
+      "Q4107": "covered",
+      "Q4108": "investigational",
+      "Q4110": "covered",
+      "Q4111": "investigational",
+      "Q4112": "investigational",
+      "Q4113": "investigational",
+      "Q4114": "covered",
+      "Q4115": "investigational",
+      "Q4116": "covered",
+      "Q4117": "investigational",
+      "Q4118": "investigational",
+      "Q4121": "covered",
+      "Q4122": "covered",
+      "Q4123": "investigational",
+      "Q4124": "investigational",
+      "Q4125": "investigational",
+      "Q4126": "investigational",
+      "Q4127": "investigational",
+      "Q4128": "covered",
+      "Q4130": "investigational",
+      "Q4132": "covered",
+      "Q4133": "covered",
+      "Q4134": "investigational",
+      "Q4135": "investigational",
+      "Q4136": "investigational",
+      "Q4137": "covered",
+      "Q4138": "investigational",
+      "Q4139": "investigational",
+      "Q4140": "investigational",
+      "Q4141": "investigational",
+      "Q4142": "investigational",
+      "Q4143": "investigational",
+      "Q4145": "investigational",
+      "Q4146": "investigational",
+      "Q4147": "investigational",
+      "Q4148": "investigational",
+      "Q4149": "investigational",
+      "Q4150": "investigational",
+      "Q4151": "covered",
+      "Q4152": "investigational",
+      "Q4153": "investigational",
+      "Q4154": "covered",
+      "Q4155": "investigational",
+      "Q4156": "investigational",
+      "Q4157": "investigational",
+      "Q4158": "covered",
+      "Q4159": "covered",
+      "Q4160": "covered",
+      "Q4161": "investigational",
+      "Q4162": "investigational",
+      "Q4163": "investigational",
+      "Q4164": "investigational",
+      "Q4165": "investigational",
+      "Q4166": "investigational",
+      "Q4167": "investigational",
+      "Q4168": "investigational",
+      "Q4169": "investigational",
+      "Q4170": "investigational",
+      "Q4171": "investigational",
+      "Q4173": "investigational",
+      "Q4174": "investigational",
+      "Q4175": "investigational",
+      "Q4176": "investigational",
+      "Q4177": "investigational",
+      "Q4178": "investigational",
+      "Q4179": "investigational",
+      "Q4180": "investigational",
+      "Q4181": "investigational",
+      "Q4182": "investigational",
+      "Q4183": "investigational",
+      "Q4184": "investigational",
+      "Q4185": "investigational",
+      "Q4186": "covered",
+      "Q4187": "covered",
+      "Q4188": "investigational",
+      "Q4189": "investigational",
+      "Q4190": "investigational",
+      "Q4191": "investigational",
+      "Q4192": "investigational",
+      "Q4193": "investigational",
+      "Q4194": "investigational",
+      "Q4195": "investigational",
+      "Q4196": "investigational",
+      "Q4197": "investigational",
+      "Q4198": "investigational",
+      "Q4199": "investigational",
+      "Q4200": "investigational",
+      "Q4201": "investigational",
+      "Q4203": "investigational",
+      "Q4204": "investigational",
+      "Q4205": "investigational",
+      "Q4206": "investigational",
+      "Q4207": "investigational",
+      "Q4208": "investigational",
+      "Q4209": "investigational",
+      "Q4211": "investigational",
+      "Q4212": "investigational",
+      "Q4213": "investigational",
+      "Q4214": "investigational",
+      "Q4215": "investigational",
+      "Q4216": "investigational",
+      "Q4217": "investigational",
+      "Q4218": "investigational",
+      "Q4219": "investigational",
+      "Q4220": "investigational",
+      "Q4221": "investigational",
+      "Q4222": "investigational",
+      "Q4224": "investigational",
+      "Q4225": "investigational",
+      "Q4226": "investigational",
+      "Q4227": "investigational",
+      "Q4229": "investigational",
+      "Q4230": "investigational",
+      "Q4232": "investigational",
+      "Q4233": "investigational",
+      "Q4234": "investigational",
+      "Q4235": "investigational",
+      "Q4236": "investigational",
+      "Q4237": "investigational",
+      "Q4238": "investigational",
+      "Q4239": "investigational",
+      "Q4240": "investigational",
+      "Q4241": "investigational",
+      "Q4242": "investigational",
+      "Q4243": "investigational",
+      "Q4245": "investigational",
+      "Q4246": "investigational",
+      "Q4247": "investigational",
+      "Q4248": "investigational",
+      "Q4249": "investigational",
+      "Q4250": "investigational",
+      "Q4251": "investigational",
+      "Q4252": "investigational",
+      "Q4253": "investigational",
+      "Q4254": "investigational",
+      "Q4255": "investigational",
+      "Q4256": "investigational",
+      "Q4257": "investigational",
+      "Q4258": "investigational",
+      "Q4259": "investigational",
+      "Q4260": "investigational",
+      "Q4261": "investigational",
+      "Q4262": "investigational",
+      "Q4263": "investigational",
+      "Q4264": "investigational",
+      "Q4265": "investigational",
+      "Q4266": "investigational",
+      "Q4267": "investigational",
+      "Q4268": "investigational",
+      "Q4269": "investigational",
+      "Q4270": "investigational",
+      "Q4271": "investigational",
+      "Q4272": "investigational",
+      "Q4273": "investigational",
+      "Q4274": "investigational",
+      "Q4275": "investigational",
+      "Q4276": "investigational",
+      "Q4278": "investigational",
+      "Q4279": "investigational",
+      "Q4280": "investigational",
+      "Q4281": "investigational",
+      "Q4282": "investigational",
+      "Q4283": "covered",
+      "Q4284": "investigational",
+      "Q4285": "investigational",
+      "Q4286": "investigational",
+      "Q4287": "investigational",
+      "Q4288": "investigational",
+      "Q4289": "investigational",
+      "Q4290": "investigational",
+      "Q4291": "investigational",
+      "Q4292": "investigational",
+      "Q4293": "investigational",
+      "Q4294": "investigational",
+      "Q4295": "investigational",
+      "Q4296": "investigational",
+      "Q4297": "investigational",
+      "Q4298": "investigational",
+      "Q4299": "investigational",
+      "Q4300": "investigational",
+      "Q4301": "investigational",
+      "Q4302": "investigational",
+      "Q4303": "investigational",
+      "Q4304": "covered",
+      "Q4305": "investigational",
+      "Q4306": "investigational",
+      "Q4307": "investigational",
+      "Q4308": "investigational",
+      "Q4309": "investigational",
+      "Q4310": "investigational",
+      "Q4311": "investigational",
+      "Q4312": "investigational",
+      "Q4313": "investigational",
+      "Q4314": "investigational",
+      "Q4315": "investigational",
+      "Q4316": "investigational",
+      "Q4317": "investigational",
+      "Q4318": "investigational",
+      "Q4319": "investigational",
+      "Q4320": "investigational",
+      "Q4321": "investigational",
+      "Q4322": "investigational",
+      "Q4323": "investigational",
+      "Q4324": "investigational",
+      "Q4325": "investigational",
+      "Q4326": "investigational",
+      "Q4327": "investigational",
+      "Q4328": "investigational",
+      "Q4329": "investigational",
+      "Q4330": "investigational",
+      "Q4331": "investigational",
+      "Q4332": "investigational",
+      "Q4333": "investigational",
+      "Q4336": "investigational",
+      "Q4337": "investigational",
+      "Q4338": "investigational",
+      "Q4339": "investigational",
+      "Q4340": "investigational",
+      "Q4341": "investigational",
+      "Q4342": "investigational",
+      "Q4343": "investigational",
+      "Q4344": "investigational",
+      "Q4345": "investigational",
+      "Q4346": "investigational",
+      "Q4347": "investigational",
+      "Q4348": "investigational",
+      "Q4349": "investigational",
+      "Q4350": "investigational",
+      "Q4351": "investigational",
+      "Q4352": "investigational",
+      "Q4353": "investigational",
+      "Q4354": "investigational",
+      "Q4355": "investigational",
+      "Q4356": "investigational",
+      "Q4357": "investigational",
+      "Q4358": "investigational",
+      "Q4359": "investigational",
+      "Q4360": "investigational",
+      "Q4361": "investigational",
+      "Q4362": "investigational",
+      "Q4363": "investigational",
+      "Q4364": "investigational",
+      "Q4365": "investigational",
+      "Q4366": "investigational",
+      "Q4367": "investigational",
+      "Q4368": "investigational",
+      "Q4369": "investigational",
+      "Q4370": "investigational",
+      "Q4371": "investigational",
+      "Q4372": "investigational",
+      "Q4373": "investigational",
+      "Q4375": "investigational",
+      "Q4376": "investigational",
+      "Q4377": "investigational",
+      "Q4378": "investigational",
+      "Q4379": "investigational",
+      "Q4380": "investigational",
+      "Q4382": "investigational",
+      "Q4383": "investigational",
+      "Q4384": "investigational",
+      "Q4385": "investigational",
+      "Q4386": "investigational",
+      "Q4387": "investigational",
+      "Q4388": "investigational",
+      "Q4389": "investigational",
+      "Q4390": "investigational",
+      "Q4391": "investigational",
+      "Q4392": "investigational",
+      "Q4393": "investigational",
+      "Q4394": "investigational",
+      "Q4395": "investigational",
+      "Q4396": "investigational",
+      "Q4397": "investigational",
+      "Q4398": "investigational",
+      "Q4399": "investigational",
+      "Q4400": "investigational",
+      "Q4401": "investigational",
+      "Q4402": "investigational",
+      "Q4403": "investigational",
+      "Q4404": "investigational",
+      "Q4405": "investigational",
+      "Q4406": "investigational",
+      "Q4407": "investigational",
+      "Q4408": "investigational",
+      "Q4409": "investigational",
+      "Q4410": "investigational",
+      "Q4411": "investigational",
+      "Q4412": "investigational",
+      "Q4413": "investigational",
+      "Q4414": "investigational",
+      "Q4415": "investigational",
+      "Q4416": "investigational",
+      "Q4417": "investigational",
+      "Q4418": "investigational",
+      "Q4419": "investigational",
+      "Q4420": "investigational",
+      "Q4421": "investigational",
+      "Q4422": "investigational",
+      "Q4423": "investigational",
+      "Q4424": "investigational",
+      "Q4425": "investigational",
+      "Q4426": "investigational",
+      "Q4427": "investigational",
+      "Q4428": "investigational",
+      "Q4429": "investigational",
+      "Q4431": "covered",
+      "Q4432": "covered",
+      "Q4433": "covered",
+      "Q4435": "investigational",
+      "Q4436": "investigational",
+      "Q4437": "investigational",
+      "Q4438": "investigational",
+      "Q4439": "investigational",
+      "Q4440": "investigational",
+      "15271": "covered",
+      "15272": "covered",
+      "15273": "covered",
+      "15274": "covered",
+      "15275": "covered",
+      "15276": "covered",
+      "15277": "covered",
+      "15278": "covered",
+      "A6010": "covered",
+      "A6011": "covered",
+      "A6021": "covered",
+      "A6022": "covered",
+      "A6023": "covered",
+      "A6024": "covered"
+    },
+    "icd10": [
+      "C50.011-C50.019",
+      "C50.111-C50.119",
+      "C50.211-C50.219",
+      "C50.311-C50.319",
+      "C50.411-C50.519",
+      "C50.611-C50.619",
+      "C50.811-C50.819",
+      "C50.911-C50.919",
+      "D05.00-D05.92",
+      "E08.621",
+      "E08.622",
+      "E09.621",
+      "E09.622",
+      "E10.621",
+      "E10.622",
+      "E11.621",
+      "E11.622",
+      "E13.621",
+      "E13.622",
+      "I83.001-I83.029",
+      "I83.201-I83.229",
+      "I87.2",
+      "Q81.2",
+      "T20.20xA-T20.39xS",
+      "T20.60xA-T20.79xS",
+      "T21.20xA-T21.39xS",
+      "T21.60xA-T21.79xS",
+      "T22.20xA-T22.399S",
+      "T22.60xA-T22.799S",
+      "T23.201A-T23.399S",
+      "T23.601A-T23.799S",
+      "T24.201A-T24.399S",
+      "T24.601A-T24.799S",
+      "T25.211A-T25.399S",
+      "T25.611A-T25.799S",
+      "T30.0-T32.99",
+      "T34.011A-T34.99XS"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "breast_recon_adm",
+      "text": "Breast reconstructive surgery using allogeneic acellular dermal matrix products",
+      "question": "Is the acellular dermal matrix being used in breast reconstructive surgery?"
+    },
+    {
+      "id": "prod_alloderm",
+      "text": "AlloDerm®",
+      "question": "Is the product being applied AlloDerm?"
+    },
+    {
+      "id": "prod_allomend",
+      "text": "AlloMend®",
+      "question": "Is the product being applied AlloMend?"
+    },
+    {
+      "id": "prod_cortiva",
+      "text": "Cortiva® (AlloMax™)",
+      "question": "Is the product being applied Cortiva (AlloMax)?"
+    },
+    {
+      "id": "prod_dermacell",
+      "text": "DermACELL™",
+      "question": "Is the product being applied DermACELL?"
+    },
+    {
+      "id": "prod_dermamatrix",
+      "text": "DermaMatrix™",
+      "question": "Is the product being applied DermaMatrix?"
+    },
+    {
+      "id": "prod_flexhd",
+      "text": "FlexHD®",
+      "question": "Is the product being applied FlexHD?"
+    },
+    {
+      "id": "prod_flexhd_pliable",
+      "text": "FlexHD® Pliable™",
+      "question": "Is the product being applied FlexHD Pliable?"
+    },
+    {
+      "id": "prod_graftjacket",
+      "text": "GraftJacket®",
+      "question": "Is the product being applied GraftJacket?"
+    },
+    {
+      "id": "breast_insufficient_coverage",
+      "text": "when there is insufficient tissue expander or implant coverage by the pectoralis major muscle and additional coverage is required",
+      "question": "Does the operative plan document insufficient pectoralis major coverage of the tissue expander or implant, so that additional coverage is required?"
+    },
+    {
+      "id": "breast_compromised_flaps",
+      "text": "when there is viable but compromised or thin post-mastectomy skin flaps that are at risk of dehiscence or necrosis",
+      "question": "Are the post-mastectomy skin flaps documented as viable but compromised or thin, at risk of dehiscence or necrosis?"
+    },
+    {
+      "id": "breast_folds_undermined",
+      "text": "the inframammary fold and lateral mammary folds have been undermined during mastectomy and re-establishment of these landmarks is needed",
+      "question": "Were the inframammary and lateral mammary folds undermined during mastectomy, with re-establishment of these landmarks needed?"
+    },
+    {
+      "id": "dfu_chronic_noninfected_full_thickness",
+      "text": "chronic, non-infected, full-thickness diabetic lower extremity ulcers",
+      "question": "Is the wound a chronic, non-infected, full-thickness diabetic ulcer of the lower extremity?"
+    },
+    {
+      "id": "prod_allopatch",
+      "text": "AlloPatch®",
+      "question": "Is the product being applied AlloPatch?"
+    },
+    {
+      "id": "prod_apligraf",
+      "text": "Apligraf®",
+      "question": "Is the product being applied Apligraf?"
+    },
+    {
+      "id": "apligraf_max_5_applications",
+      "text": "Apligraf® is limited to five (5) applications per ulcer",
+      "question": "Including this request, will the ulcer have received no more than 5 Apligraf applications?",
+      "threshold": {
+        "kind": "number",
+        "op": "lte",
+        "value": 5,
+        "unit": "applications per ulcer"
+      }
+    },
+    {
+      "id": "prod_dermagraft",
+      "text": "Dermagraft®",
+      "question": "Is the product being applied Dermagraft?"
+    },
+    {
+      "id": "dermagraft_max_8_applications",
+      "text": "Dermagraft® is limited to eight (8) applications per treatment site over a twelve (12) week period",
+      "question": "Including this request, will the treatment site have received no more than 8 Dermagraft applications over a 12-week period?",
+      "threshold": {
+        "kind": "number",
+        "op": "lte",
+        "value": 8,
+        "unit": "applications per treatment site per 12 weeks"
+      }
+    },
+    {
+      "id": "retreatment_single_wound",
+      "text": "re-treatment of a single wound using Apligraf®, Dermagraft® or OrCel™",
+      "question": "Is this a re-treatment of a wound that already completed a course of Apligraf, Dermagraft or OrCel?"
+    },
+    {
+      "id": "prod_integra_omnigraft",
+      "text": "Integra® Omnigraft Dermal Regeneration Matrix (also known as Omnigraft)",
+      "question": "Is the product being applied Integra Omnigraft Dermal Regeneration Matrix?"
+    },
+    {
+      "id": "prod_integra_flowable",
+      "text": "Integra™ Flowable Wound Matrix",
+      "question": "Is the product being applied Integra Flowable Wound Matrix?"
+    },
+    {
+      "id": "prod_kerecis_omega3",
+      "text": "Kerecis™ Omega3",
+      "question": "Is the product being applied Kerecis Omega3?"
+    },
+    {
+      "id": "prod_primatrix",
+      "text": "Primatrix®",
+      "question": "Is the product being applied Primatrix?"
+    },
+    {
+      "id": "prod_primatrix_drs",
+      "text": "Primatrix® Dermal Repair Scaffold",
+      "question": "Is the product being applied Primatrix Dermal Repair Scaffold?"
+    },
+    {
+      "id": "prod_mvasc",
+      "text": "mVASC®",
+      "question": "Is the product being applied mVASC?"
+    },
+    {
+      "id": "prod_theraskin",
+      "text": "TheraSkin®",
+      "question": "Is the product being applied TheraSkin?"
+    },
+    {
+      "id": "vlu_chronic_noninfected",
+      "text": "chronic, noninfected, partial- or full-thickness lower extremity skin ulcers due to venous insufficiency",
+      "question": "Is the wound a chronic, non-infected, partial- or full-thickness lower extremity skin ulcer due to venous insufficiency?"
+    },
+    {
+      "id": "vlu_failed_one_month_conventional",
+      "text": "have not adequately responded following a one-month period of conventional ulcer therapy",
+      "question": "Has the ulcer failed to respond adequately to at least one month of conventional ulcer therapy (dated notes)?",
+      "threshold": {
+        "kind": "duration_months",
+        "op": "gte",
+        "value": 1,
+        "unit": "months"
+      }
+    },
+    {
+      "id": "prod_oasis_wound_matrix",
+      "text": "Oasis™ Wound Matrix",
+      "question": "Is the product being applied Oasis Wound Matrix?"
+    },
+    {
+      "id": "eb_dystrophic",
+      "text": "dystrophic epidermolysis bullosa",
+      "question": "Does the patient have dystrophic epidermolysis bullosa?"
+    },
+    {
+      "id": "prod_orcel",
+      "text": "OrCel™",
+      "question": "Is the product being applied OrCel?"
+    },
+    {
+      "id": "orcel_mitten_hand",
+      "text": "for the treatment of mitten-hand deformity",
+      "question": "Is the treatment for mitten-hand deformity (hand reconstruction)?"
+    },
+    {
+      "id": "orcel_standard_therapy_failed",
+      "text": "when standard wound therapy has failed",
+      "question": "Has standard wound therapy failed?"
+    },
+    {
+      "id": "orcel_hde",
+      "text": "when provided in accordance with the Humanitarian Device Exemption (HDE) specifications of the FDA",
+      "question": "Is OrCel provided in accordance with the FDA Humanitarian Device Exemption specifications?",
+      "answerable": false
+    },
+    {
+      "id": "orcel_single_application",
+      "text": "OrCel™ is limited to a single, one-time application per donor site",
+      "question": "Is this the single, one-time OrCel application for this donor site?",
+      "threshold": {
+        "kind": "number",
+        "op": "lte",
+        "value": 1,
+        "unit": "applications per donor site"
+      }
+    },
+    {
+      "id": "orcel_max_8_pieces",
+      "text": "No more than eight (8) pieces should be used per donor site",
+      "question": "Will no more than 8 pieces of OrCel be used per donor site?",
+      "threshold": {
+        "kind": "number",
+        "op": "lte",
+        "value": 8,
+        "unit": "pieces per donor site"
+      }
+    },
+    {
+      "id": "burns_second_third_degree",
+      "text": "second- and third-degree burns",
+      "question": "Does the patient have second- or third-degree burns?"
+    },
+    {
+      "id": "prod_epicel",
+      "text": "Epicel®",
+      "question": "Is the product being applied Epicel?"
+    },
+    {
+      "id": "epicel_deep_burn_tbsa_30",
+      "text": "deep dermal or full-thickness burns comprising a total body surface area of greater than or equal to 30%",
+      "question": "Are the burns deep dermal or full-thickness and do they comprise at least 30% total body surface area?",
+      "threshold": {
+        "kind": "number",
+        "op": "gte",
+        "value": 30,
+        "unit": "% total body surface area"
+      }
+    },
+    {
+      "id": "epicel_hde",
+      "text": "when provided in accordance with the HDE specifications of the FDA",
+      "question": "Is Epicel provided in accordance with the FDA Humanitarian Device Exemption specifications?",
+      "answerable": false
+    },
+    {
+      "id": "prod_integra_drt",
+      "text": "Integra® Dermal Regeneration Template™",
+      "question": "Is the product being applied Integra Dermal Regeneration Template?"
+    },
+    {
+      "id": "ham_nonhealing_dfu",
+      "text": "nonhealing diabetic lower-extremity ulcers",
+      "question": "Is the wound a nonhealing diabetic lower-extremity ulcer?"
+    },
+    {
+      "id": "nonhealing_lt_20pct_decrease",
+      "text": "less than a 20% decrease in wound area",
+      "question": "Do serial wound measurements show less than a 20% decrease in wound area?",
+      "threshold": {
+        "kind": "number",
+        "op": "lt",
+        "value": 20,
+        "unit": "% decrease in wound area"
+      }
+    },
+    {
+      "id": "nonhealing_standard_care_2_weeks",
+      "text": "with standard wound care for at least 2 weeks",
+      "question": "Was standard wound care provided for at least 2 weeks (dated notes) before the ulcer was called nonhealing?",
+      "threshold": {
+        "kind": "duration_months",
+        "op": "gte",
+        "value": 0.5,
+        "unit": "months"
+      }
+    },
+    {
+      "id": "prod_affinity",
+      "text": "Affinity®",
+      "question": "Is the product being applied Affinity?"
+    },
+    {
+      "id": "prod_amnioband_membrane",
+      "text": "AmnioBand® Membrane",
+      "question": "Is the product being applied AmnioBand Membrane?"
+    },
+    {
+      "id": "prod_amnioexcel",
+      "text": "AmnioExcel®",
+      "question": "Is the product being applied AmnioExcel?"
+    },
+    {
+      "id": "prod_biovance",
+      "text": "Biovance®",
+      "question": "Is the product being applied Biovance?"
+    },
+    {
+      "id": "prod_epicord",
+      "text": "Epicord®",
+      "question": "Is the product being applied Epicord?"
+    },
+    {
+      "id": "prod_epifix",
+      "text": "Epifix®",
+      "question": "Is the product being applied Epifix?"
+    },
+    {
+      "id": "prod_grafix",
+      "text": "Grafix™",
+      "question": "Is the product being applied Grafix?"
+    },
+    {
+      "id": "prod_nushield",
+      "text": "NuShield®",
+      "question": "Is the product being applied NuShield?"
+    },
+    {
+      "id": "collagen_full_thickness_wounds",
+      "text": "full thickness wounds (e.g., stage 3 or 4 ulcers)",
+      "question": "Is the wound full thickness (for example a stage 3 or 4 ulcer)?"
+    },
+    {
+      "id": "collagen_light_moderate_exudate",
+      "text": "wounds with light to moderate exudate",
+      "question": "Does the wound have light to moderate exudate?"
+    },
+    {
+      "id": "collagen_stalled_wounds",
+      "text": "wounds that have stalled or have not progressed toward a healing goal",
+      "question": "Has the wound stalled or failed to progress toward a healing goal?"
+    },
+    {
+      "id": "collagen_heavy_exudate",
+      "text": "wounds with heavy exudate",
+      "question": "Does the wound have heavy exudate?"
+    },
+    {
+      "id": "collagen_third_degree_burns",
+      "text": "third-degree burns",
+      "question": "Is the wound a third-degree burn?"
+    },
+    {
+      "id": "collagen_active_vasculitis",
+      "text": "when an active vasculitis is present",
+      "question": "Is an active vasculitis present?"
+    },
+    {
+      "id": "collagen_max_26_units",
+      "text": "Dressings are limited to 26 units per treatment site per 6-month period",
+      "question": "Including this request, will the treatment site have received no more than 26 collagen dressing units in a 6-month period?",
+      "threshold": {
+        "kind": "number",
+        "op": "lte",
+        "value": 26,
+        "unit": "units per treatment site per 6 months"
+      }
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "breast_reconstruction_adm",
+      "name": "Breast reconstructive surgery using allogeneic acellular dermal matrix products",
+      "applies_to_cpt": [
+        "Q4107",
+        "Q4116",
+        "Q4122",
+        "Q4128",
+        "A4100",
+        "Q4431",
+        "Q4432",
+        "Q4433"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "Breast reconstruction with a listed allogeneic ADM, for ONE of the indications",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "breast_recon_adm"
+          },
+          {
+            "type": "any",
+            "label": "Allogeneic acellular dermal matrix products (i.e.)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "prod_alloderm"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prod_allomend"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prod_cortiva"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prod_dermacell"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prod_dermamatrix"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prod_flexhd"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prod_flexhd_pliable"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prod_graftjacket"
+              }
+            ]
+          },
+          {
+            "type": "any",
+            "label": "ONE of the following indications",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "breast_insufficient_coverage"
+              },
+              {
+                "type": "leaf",
+                "criterion": "breast_compromised_flaps"
+              },
+              {
+                "type": "leaf",
+                "criterion": "breast_folds_undermined"
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "AlloMend, Cortiva (AlloMax) and DermaMatrix have no product code in the coding section; only the NOS codes could carry them.",
+        "Application codes 15271-15278 / G0681-G0684 describe skin substitute graft application to wounds and are not mapped here; the document names no application code for breast reconstruction."
+      ]
+    },
+    {
+      "id": "diabetic_lower_extremity_ulcer_skin_substitutes",
+      "name": "Chronic, non-infected, full-thickness diabetic lower extremity ulcers (tissue-engineered skin substitutes)",
+      "applies_to_cpt": [
+        "A2019",
+        "Q4101",
+        "Q4105",
+        "Q4110",
+        "Q4114",
+        "Q4121",
+        "Q4128",
+        "Q4158",
+        "15271",
+        "15272",
+        "15273",
+        "15274",
+        "15275",
+        "15276",
+        "15277",
+        "15278",
+        "G0681",
+        "G0682",
+        "G0683",
+        "G0684",
+        "A4100",
+        "Q4431",
+        "Q4432",
+        "Q4433"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "Diabetic lower extremity ulcer treated with a listed skin substitute",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "dfu_chronic_noninfected_full_thickness"
+          },
+          {
+            "type": "any",
+            "label": "using the following tissue-engineered skin substitutes",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "prod_allopatch"
+              },
+              {
+                "type": "all",
+                "label": "Apligraf, within its application limit",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "prod_apligraf"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "apligraf_max_5_applications"
+                  },
+                  {
+                    "type": "not",
+                    "label": "Not a re-treatment of the same wound",
+                    "child": {
+                      "type": "leaf",
+                      "criterion": "retreatment_single_wound"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "all",
+                "label": "Dermagraft, within its application limit",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "prod_dermagraft"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "dermagraft_max_8_applications"
+                  },
+                  {
+                    "type": "not",
+                    "label": "Not a re-treatment of the same wound",
+                    "child": {
+                      "type": "leaf",
+                      "criterion": "retreatment_single_wound"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "leaf",
+                "criterion": "prod_integra_omnigraft"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prod_integra_flowable"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prod_kerecis_omega3"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prod_primatrix"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prod_primatrix_drs"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prod_mvasc"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prod_theraskin"
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "Dermagraft and mVASC have no product code in the coding section (Q4106 Dermagraft was deleted 01/01/26); only the NOS codes could carry them.",
+        "The Apligraf (5 per ulcer) and Dermagraft (8 per site per 12 weeks) limits and the re-treatment exclusion come from the Reimbursement Information section and are attached to those products' branches only."
+      ]
+    },
+    {
+      "id": "venous_insufficiency_ulcer_skin_substitutes",
+      "name": "Chronic lower extremity skin ulcers due to venous insufficiency (tissue-engineered skin substitutes)",
+      "applies_to_cpt": [
+        "Q4101",
+        "Q4102",
+        "15271",
+        "15272",
+        "15273",
+        "15274",
+        "15275",
+        "15276",
+        "15277",
+        "15278",
+        "G0681",
+        "G0682",
+        "G0683",
+        "G0684",
+        "A4100",
+        "Q4431",
+        "Q4432",
+        "Q4433"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "Venous insufficiency ulcer after one month of conventional therapy, listed product",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "vlu_chronic_noninfected"
+          },
+          {
+            "type": "leaf",
+            "criterion": "vlu_failed_one_month_conventional"
+          },
+          {
+            "type": "any",
+            "label": "using the following tissue-engineered skin substitutes",
+            "children": [
+              {
+                "type": "all",
+                "label": "Apligraf, within its application limit",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "prod_apligraf"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "apligraf_max_5_applications"
+                  },
+                  {
+                    "type": "not",
+                    "label": "Not a re-treatment of the same wound",
+                    "child": {
+                      "type": "leaf",
+                      "criterion": "retreatment_single_wound"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "leaf",
+                "criterion": "prod_oasis_wound_matrix"
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "Human amniotic membrane products for venous leg ulcers are investigational (Amniotic Membrane section); this pathway is only for Apligraf and Oasis Wound Matrix."
+      ]
+    },
+    {
+      "id": "dystrophic_epidermolysis_bullosa_orcel",
+      "name": "Dystrophic epidermolysis bullosa (OrCel)",
+      "applies_to_cpt": [
+        "15271",
+        "15272",
+        "15273",
+        "15274",
+        "15275",
+        "15276",
+        "15277",
+        "15278",
+        "G0681",
+        "G0682",
+        "G0683",
+        "G0684",
+        "A4100",
+        "Q4431",
+        "Q4432",
+        "Q4433"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "Dystrophic epidermolysis bullosa treated with OrCel under its HDE conditions",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "eb_dystrophic"
+          },
+          {
+            "type": "leaf",
+            "criterion": "prod_orcel"
+          },
+          {
+            "type": "leaf",
+            "criterion": "orcel_mitten_hand"
+          },
+          {
+            "type": "leaf",
+            "criterion": "orcel_standard_therapy_failed"
+          },
+          {
+            "type": "leaf",
+            "criterion": "orcel_hde"
+          },
+          {
+            "type": "leaf",
+            "criterion": "orcel_single_application"
+          },
+          {
+            "type": "leaf",
+            "criterion": "orcel_max_8_pieces"
+          },
+          {
+            "type": "not",
+            "label": "Not a re-treatment of the same wound",
+            "child": {
+              "type": "leaf",
+              "criterion": "retreatment_single_wound"
+            }
+          }
+        ]
+      },
+      "notes": [
+        "OrCel has no product code in the coding section; the pathway is reachable only through application or NOS codes.",
+        "The single-application and eight-piece limits and the re-treatment exclusion come from the Reimbursement Information section."
+      ]
+    },
+    {
+      "id": "second_third_degree_burns_skin_substitutes",
+      "name": "Second- and third-degree burns (tissue-engineered skin substitutes)",
+      "applies_to_cpt": [
+        "Q4105",
+        "Q4110",
+        "15271",
+        "15272",
+        "15273",
+        "15274",
+        "15275",
+        "15276",
+        "15277",
+        "15278",
+        "G0681",
+        "G0682",
+        "G0683",
+        "G0684",
+        "A4100",
+        "Q4431",
+        "Q4432",
+        "Q4433"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "Second- or third-degree burns treated with a listed skin substitute",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "burns_second_third_degree"
+          },
+          {
+            "type": "any",
+            "label": "using the following tissue-engineered skin substitutes",
+            "children": [
+              {
+                "type": "all",
+                "label": "Epicel under its HDE conditions",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "prod_epicel"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "epicel_deep_burn_tbsa_30"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "epicel_hde"
+                  }
+                ]
+              },
+              {
+                "type": "leaf",
+                "criterion": "prod_integra_drt"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prod_primatrix_drs"
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "Epicel has no product code in the coding section; only the NOS codes could carry it.",
+        "Q4105 covers both Integra Dermal Regeneration Template (burns) and Integra Omnigraft (diabetic ulcers); Q4110 covers Primatrix and Primatrix Dermal Repair Scaffold, so both codes map to this pathway and to the diabetic ulcer pathway."
+      ]
+    },
+    {
+      "id": "nonhealing_diabetic_ulcer_amniotic_membrane",
+      "name": "Nonhealing diabetic lower-extremity ulcers (human amniotic membrane products)",
+      "applies_to_cpt": [
+        "Q4132",
+        "Q4133",
+        "Q4137",
+        "Q4151",
+        "Q4154",
+        "Q4159",
+        "Q4160",
+        "Q4186",
+        "Q4187",
+        "Q4283",
+        "Q4304",
+        "15271",
+        "15272",
+        "15273",
+        "15274",
+        "15275",
+        "15276",
+        "15277",
+        "15278",
+        "G0681",
+        "G0682",
+        "G0683",
+        "G0684",
+        "A4100",
+        "Q4431",
+        "Q4432",
+        "Q4433"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "Nonhealing diabetic lower-extremity ulcer treated with a listed amniotic membrane product",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "ham_nonhealing_dfu"
+          },
+          {
+            "type": "all",
+            "label": "Nonhealing (Definitions section)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "nonhealing_lt_20pct_decrease"
+              },
+              {
+                "type": "leaf",
+                "criterion": "nonhealing_standard_care_2_weeks"
+              }
+            ]
+          },
+          {
+            "type": "any",
+            "label": "using the following human amniotic membrane products",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "prod_affinity"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prod_amnioband_membrane"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prod_amnioexcel"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prod_biovance"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prod_epicord"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prod_epifix"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prod_grafix"
+              },
+              {
+                "type": "leaf",
+                "criterion": "prod_nushield"
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "'Nonhealing' is defined in the Definitions section as less than a 20% decrease in wound area with standard wound care for at least 2 weeks; both halves are leaves under the indication.",
+        "Codes mapped by product name: Affinity Q4159; AmnioBand Membrane Q4151 (Q4168 'Amnioband, 1 mg' is the particulate form and is marked investigational); AmnioExcel Q4137; Biovance Q4154 and Q4283; Epicord Q4187; Epifix Q4186 (Q4145 Epifix injectable is investigational); Grafix Q4132, Q4133 and Q4304 (Q4392 Grafix duo is marked investigational); NuShield Q4160."
+      ]
+    },
+    {
+      "id": "collagen_dressing_or_wound_filler",
+      "name": "Collagen-based dressing or wound filler",
+      "applies_to_cpt": [
+        "A6010",
+        "A6011",
+        "A6021",
+        "A6022",
+        "A6023",
+        "A6024"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "Collagen-based dressing or wound filler",
+        "children": [
+          {
+            "type": "any",
+            "label": "Qualifying wound",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "collagen_full_thickness_wounds"
+              },
+              {
+                "type": "leaf",
+                "criterion": "collagen_light_moderate_exudate"
+              },
+              {
+                "type": "leaf",
+                "criterion": "collagen_stalled_wounds"
+              }
+            ]
+          },
+          {
+            "type": "not",
+            "label": "Does not meet medical necessity for",
+            "child": {
+              "type": "any",
+              "label": "Any of the following",
+              "children": [
+                {
+                  "type": "leaf",
+                  "criterion": "collagen_heavy_exudate"
+                },
+                {
+                  "type": "leaf",
+                  "criterion": "collagen_third_degree_burns"
+                },
+                {
+                  "type": "leaf",
+                  "criterion": "collagen_active_vasculitis"
+                }
+              ]
+            }
+          },
+          {
+            "type": "leaf",
+            "criterion": "collagen_max_26_units"
+          }
+        ]
+      },
+      "notes": [
+        "The 'does not meet the definition of medical necessity for wounds with heavy exudate, third-degree burns, or when an active vasculitis is present' sentence is modelled as not(any(...)) inside this pathway because it is printed as part of the same collagen position statement.",
+        "The 26-unit limit comes from the Reimbursement Information section; 'can stay in place up to 7 days' is a usage statement, not a chart requirement, and is left out."
+      ]
+    }
+  ],
+  "exclusions": [
+    {
+      "text": "All other uses of the bio-engineered skin and soft tissue substitutes listed above do not meet the definition of medical necessity.",
+      "cpt": []
+    },
+    {
+      "text": "All other indications not listed above are considered experimental or investigational, including but not limited to treatment of lower extremity ulcers due to venous insufficiency and repair following Mohs micrographic surgery.",
+      "cpt": []
+    },
+    {
+      "text": "The following is considered experimental or investigational for all indications, including but not limited to treatment of osteoarthritis and plantar fasciitis: • Injection of micronized or particulated human amniotic membrane • Injection of human amniotic fluid.",
+      "cpt": [
+        "Q4139",
+        "Q4145",
+        "Q4206"
+      ]
+    },
+    {
+      "text": "All other bio-engineered skin substitutes, soft tissue substitutes, amniotic membranes and amniotic fluids are considered experimental or investigational, including, but not limited to:",
+      "cpt": [
+        "15011",
+        "15012",
+        "15013",
+        "15014",
+        "15015",
+        "15016",
+        "15017",
+        "15018",
+        "1044T",
+        "1045T",
+        "1046T",
+        "1047T",
+        "1048T",
+        "1049T",
+        "A2001",
+        "A2002",
+        "A2004",
+        "A2005",
+        "A2006",
+        "A2007",
+        "A2008",
+        "A2009",
+        "A2010",
+        "A2011",
+        "A2012",
+        "A2013",
+        "A2014",
+        "A2015",
+        "A2016",
+        "A2017",
+        "A2018",
+        "A2020",
+        "A2021",
+        "A2022",
+        "A2023",
+        "A2024",
+        "A2025",
+        "A2026",
+        "A2027",
+        "A2028",
+        "A2029",
+        "A2030",
+        "A2031",
+        "A2032",
+        "A2033",
+        "A2034",
+        "A2035",
+        "A2036",
+        "A2037",
+        "A2038",
+        "A2039",
+        "A2040",
+        "A2041",
+        "A2042",
+        "A2043",
+        "A2044",
+        "A2045",
+        "A2046",
+        "A2047",
+        "A2048",
+        "A2049",
+        "A2050",
+        "C1832",
+        "C8002",
+        "C9354",
+        "C9356",
+        "C9358",
+        "C9360",
+        "C9363",
+        "C9364",
+        "Q4103",
+        "Q4104",
+        "Q4108",
+        "Q4111",
+        "Q4112",
+        "Q4113",
+        "Q4115",
+        "Q4117",
+        "Q4118",
+        "Q4123",
+        "Q4124",
+        "Q4125",
+        "Q4126",
+        "Q4127",
+        "Q4130",
+        "Q4134",
+        "Q4135",
+        "Q4136",
+        "Q4138",
+        "Q4139",
+        "Q4140",
+        "Q4141",
+        "Q4142",
+        "Q4143",
+        "Q4145",
+        "Q4146",
+        "Q4147",
+        "Q4148",
+        "Q4149",
+        "Q4150",
+        "Q4152",
+        "Q4153",
+        "Q4155",
+        "Q4156",
+        "Q4157",
+        "Q4161",
+        "Q4162",
+        "Q4163",
+        "Q4164",
+        "Q4165",
+        "Q4166",
+        "Q4167",
+        "Q4168",
+        "Q4169",
+        "Q4170",
+        "Q4171",
+        "Q4173",
+        "Q4174",
+        "Q4175",
+        "Q4176",
+        "Q4177",
+        "Q4178",
+        "Q4179",
+        "Q4180",
+        "Q4181",
+        "Q4182",
+        "Q4183",
+        "Q4184",
+        "Q4185",
+        "Q4188",
+        "Q4189",
+        "Q4190",
+        "Q4191",
+        "Q4192",
+        "Q4193",
+        "Q4194",
+        "Q4195",
+        "Q4196",
+        "Q4197",
+        "Q4198",
+        "Q4199",
+        "Q4200",
+        "Q4201",
+        "Q4203",
+        "Q4204",
+        "Q4205",
+        "Q4206",
+        "Q4207",
+        "Q4208",
+        "Q4209",
+        "Q4211",
+        "Q4212",
+        "Q4213",
+        "Q4214",
+        "Q4215",
+        "Q4216",
+        "Q4217",
+        "Q4218",
+        "Q4219",
+        "Q4220",
+        "Q4221",
+        "Q4222",
+        "Q4224",
+        "Q4225",
+        "Q4226",
+        "Q4227",
+        "Q4229",
+        "Q4230",
+        "Q4232",
+        "Q4233",
+        "Q4234",
+        "Q4235",
+        "Q4236",
+        "Q4237",
+        "Q4238",
+        "Q4239",
+        "Q4240",
+        "Q4241",
+        "Q4242",
+        "Q4243",
+        "Q4245",
+        "Q4246",
+        "Q4247",
+        "Q4248",
+        "Q4249",
+        "Q4250",
+        "Q4251",
+        "Q4252",
+        "Q4253",
+        "Q4254",
+        "Q4255",
+        "Q4256",
+        "Q4257",
+        "Q4258",
+        "Q4259",
+        "Q4260",
+        "Q4261",
+        "Q4262",
+        "Q4263",
+        "Q4264",
+        "Q4265",
+        "Q4266",
+        "Q4267",
+        "Q4268",
+        "Q4269",
+        "Q4270",
+        "Q4271",
+        "Q4272",
+        "Q4273",
+        "Q4274",
+        "Q4275",
+        "Q4276",
+        "Q4278",
+        "Q4279",
+        "Q4280",
+        "Q4281",
+        "Q4282",
+        "Q4284",
+        "Q4285",
+        "Q4286",
+        "Q4287",
+        "Q4288",
+        "Q4289",
+        "Q4290",
+        "Q4291",
+        "Q4292",
+        "Q4293",
+        "Q4294",
+        "Q4295",
+        "Q4296",
+        "Q4297",
+        "Q4298",
+        "Q4299",
+        "Q4300",
+        "Q4301",
+        "Q4302",
+        "Q4303",
+        "Q4305",
+        "Q4306",
+        "Q4307",
+        "Q4308",
+        "Q4309",
+        "Q4310",
+        "Q4311",
+        "Q4312",
+        "Q4313",
+        "Q4314",
+        "Q4315",
+        "Q4316",
+        "Q4317",
+        "Q4318",
+        "Q4319",
+        "Q4320",
+        "Q4321",
+        "Q4322",
+        "Q4323",
+        "Q4324",
+        "Q4325",
+        "Q4326",
+        "Q4327",
+        "Q4328",
+        "Q4329",
+        "Q4330",
+        "Q4331",
+        "Q4332",
+        "Q4333",
+        "Q4336",
+        "Q4337",
+        "Q4338",
+        "Q4339",
+        "Q4340",
+        "Q4341",
+        "Q4342",
+        "Q4343",
+        "Q4344",
+        "Q4345",
+        "Q4346",
+        "Q4347",
+        "Q4348",
+        "Q4349",
+        "Q4350",
+        "Q4351",
+        "Q4352",
+        "Q4353",
+        "Q4354",
+        "Q4355",
+        "Q4356",
+        "Q4357",
+        "Q4358",
+        "Q4359",
+        "Q4360",
+        "Q4361",
+        "Q4362",
+        "Q4363",
+        "Q4364",
+        "Q4365",
+        "Q4366",
+        "Q4367",
+        "Q4368",
+        "Q4369",
+        "Q4370",
+        "Q4371",
+        "Q4372",
+        "Q4373",
+        "Q4375",
+        "Q4376",
+        "Q4377",
+        "Q4378",
+        "Q4379",
+        "Q4380",
+        "Q4382",
+        "Q4383",
+        "Q4384",
+        "Q4385",
+        "Q4386",
+        "Q4387",
+        "Q4388",
+        "Q4389",
+        "Q4390",
+        "Q4391",
+        "Q4392",
+        "Q4393",
+        "Q4394",
+        "Q4395",
+        "Q4396",
+        "Q4397",
+        "Q4398",
+        "Q4399",
+        "Q4400",
+        "Q4401",
+        "Q4402",
+        "Q4403",
+        "Q4404",
+        "Q4405",
+        "Q4406",
+        "Q4407",
+        "Q4408",
+        "Q4409",
+        "Q4410",
+        "Q4411",
+        "Q4412",
+        "Q4413",
+        "Q4414",
+        "Q4415",
+        "Q4416",
+        "Q4417",
+        "Q4418",
+        "Q4419",
+        "Q4420",
+        "Q4421",
+        "Q4422",
+        "Q4423",
+        "Q4424",
+        "Q4425",
+        "Q4426",
+        "Q4427",
+        "Q4428",
+        "Q4429",
+        "Q4435",
+        "Q4436",
+        "Q4437",
+        "Q4438",
+        "Q4439",
+        "Q4440"
+      ]
+    },
+    {
+      "text": "Collagen-based dressing or wound filler does not meet the definition of medical necessity for wounds with heavy exudate, third-degree burns, or when an active vasculitis is present.",
+      "cpt": []
+    },
+    {
+      "text": "Safety and effectiveness of re-treatment of a single wound using Apligraf®, Dermagraft® or OrCel™ has not been established and is considered experimental or Investigational.",
+      "cpt": []
+    },
+    {
+      "text": "For products considered experimental or investigational, the application codes",
+      "cpt": []
+    }
+  ],
+  "notes": [
+    "Built from the single clean copy in the PDF (no redline/tracked-changes copy is present). effective_date is the printed Revised date 10/01/26 and reviewed_date the printed Reviewed date 04/23/26, as in the hand-built example; the printed Original Effective Date is 01/01/01.",
+    "Scope: the document says it does not address meshes or patches of non-biologic origin used for standard repair procedures such as hernia repairs.",
+    "Pathways: one per indication the position statement grants (breast reconstruction ADM; diabetic lower extremity ulcers; venous insufficiency ulcers; dystrophic epidermolysis bullosa; second- and third-degree burns; nonhealing diabetic ulcers with human amniotic membrane; collagen-based dressing). Each product bullet is its own leaf under an 'any' so a code maps to a leaf; no document-level general block exists.",
+    "Code tags: every code printed with '(Investigational)' in the coding section is tagged investigational (364 codes). The 45 codes printed without that mark are tagged covered: product codes of position-statement products (Q4101, Q4102, Q4105, Q4107, Q4110, Q4114, Q4116, Q4121, Q4122, Q4128, Q4132, Q4133, Q4137, Q4151, Q4154, Q4158, Q4159, Q4160, Q4186, Q4187, Q4283, Q4304, A2019), the application codes 15271-15278 and G0681-G0684, the not-otherwise-specified product codes A4100, Q4431, Q4432, Q4433, and the collagen dressing codes A6010, A6011, A6021-A6024. 'Covered' means covered for the indication of the pathway that names the code; all other uses do not meet medical necessity (exclusion 1).",
+    "Judgment call, unmarked codes whose descriptor also names an investigational product: Q4133 (Grafix prime ... stravix and stravixpl; Stravix is on the investigational list), Q4151 (Amnioband or guardian; Guardian/AmniBand is on the investigational list), Q4128 (Flex hd, or allopatch hd), A2019 (Kerecis omega3 marigen shield; Alphaplex with MariGen Omega3 is on the investigational list). Tagged covered because the document does not mark the code, and mapped to the pathway of the covered product the code names (Grafix, AmnioBand Membrane, FlexHD/AlloPatch, Kerecis Omega3). A reviewer could read A2019 as a different Kerecis product and tag it investigational.",
+    "Judgment call, NOS codes: A4100, Q4431, Q4432 and Q4433 describe an unspecified product and are printed without an investigational mark; tagged covered and mapped to every product pathway (not collagen) because the position-statement products that have no product code of their own (AlloMend, Cortiva, DermaMatrix, Dermagraft, mVASC, OrCel, Epicel) could only be billed through them. Coverage then turns on the product leaf in the pathway.",
+    "Judgment call, application codes: 15271-15278 and G0681-G0684 are tagged covered and mapped to the five wound-treatment pathways (diabetic ulcer, venous ulcer, epidermolysis bullosa, burns, amniotic membrane DFU), not to breast reconstruction or collagen dressings. The Reimbursement section says they must be submitted with product codes and are denied with an investigational product; that conditional denial ('For products considered experimental or investigational, the application codes (15271-15278, G0681-G0684) will also be denied.') is recorded as an exclusion with no codes rather than as a tag; its text is cut at 'application codes' because the PDF breaks the line inside 'G0681-G0684' and the verbatim check cannot match across that hyphenation.",
+    "Judgment call, reimbursement limits in the tree: 'Apligraf is limited to five (5) applications per ulcer', 'Dermagraft is limited to eight (8) applications per treatment site over a twelve (12) week period', OrCel single application and no more than eight pieces per donor site, and 'Dressings are limited to 26 units per treatment site per 6-month period' are quantities a chart can show, so they are criteria attached to the product (or collagen) branch they name. 'Safety and effectiveness of re-treatment of a single wound using Apligraf, Dermagraft or OrCel ... is considered experimental or Investigational' is both an exclusion and a not-leaf on those three product branches. 'Collagen-based dressings or wound fillers ... can stay in place up to 7 days' is left out (usage, not a requirement).",
+    "Judgment call, compound indication phrases kept as one criterion: 'chronic, non-infected, full-thickness diabetic lower extremity ulcers' and 'chronic, noninfected, partial- or full-thickness lower extremity skin ulcers due to venous insufficiency' hold several adjectives a chart must support; they are kept as one leaf each (the question asks for all parts) because splitting into one-word criteria would not be verbatim-meaningful. The venous ulcer sentence's 'which have not adequately responded following a one-month period of conventional ulcer therapy' is a separate leaf with a one-month duration threshold.",
+    "Judgment call, 'when there is insufficient tissue expander or implant coverage by the pectoralis major muscle and additional coverage is required' is kept as one criterion: the 'and' clause is the consequence of the first, not a second finding.",
+    "Judgment call, HDE clauses: 'when provided in accordance with the Humanitarian Device Exemption (HDE) specifications of the FDA' (OrCel) and 'when provided in accordance with the HDE specifications of the FDA' (Epicel) are answerable: false because the HDE specifications live in FDA labeling, not in a chart; the clinical parts of each HDE indication (mitten-hand deformity, failed standard therapy; deep dermal/full-thickness burns >= 30% TBSA) are their own answerable leaves.",
+    "Judgment call, 'Nonhealing' definition: 'less than a 20% decrease in wound area with standard wound care for at least 2 weeks' is split into a number leaf (< 20%) and a duration leaf (standard wound care >= 2 weeks, recorded as 0.5 months because thresholds for treatment trials are in months).",
+    "Left out of the tree: the Description / Summary and Analysis of Evidence section (evidence narrative, not requirements); the footnotes '* Banked Human Tissue', '** FDA premarket approval', '*** FDA 510(k) clearance', '**** FDA-approved under an HDE' (regulatory status, not chart requirements); the Program Exceptions (FEP, SAO, Medicare Advantage follow other documents, recorded in excluded_plans); the step therapy protocol exemption paragraph (Florida law 627.42393; a process, not a criterion); the Related Guidelines, References and update history.",
+    "Exclusion 3 (injection of micronized/particulated human amniotic membrane; injection of human amniotic fluid) lists only the codes whose descriptor is an injectable amniotic product (Q4139 AmnioMatrix/BioDMatrix injectable, Q4145 Epifix injectable, Q4206 Fluid flow or fluid GF, an amniotic fluid product on the investigational list); other per-mg/per-cc amniotic codes are investigational by their table mark and are carried by exclusion 4.",
+    "Exclusion 4 ('All other bio-engineered skin substitutes ... are considered experimental or investigational, including, but not limited to:') carries every code the coding section marks investigational; the bulleted product list itself is not a coding list and is not re-typed.",
+    "Dermagraft is covered by the position statement for diabetic ulcers but has no product code in this document's coding section (the update history records Q4106 deleted 01/01/26).",
+    "The ICD-10 list is the document's 'ICD-10 Diagnosis Codes That Support Medical Necessity' table, ranges as printed."
+  ],
+  "status": "ok"
+}

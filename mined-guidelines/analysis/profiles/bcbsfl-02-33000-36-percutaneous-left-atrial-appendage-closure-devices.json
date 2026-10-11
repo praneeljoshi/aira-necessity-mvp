@@ -1,0 +1,173 @@
+{
+ "file": "bcbsfl-02-33000-36-percutaneous-left-atrial-appendage-closure-devices.pdf",
+ "treatment": "laa-closure",
+ "payer": "bcbsfl",
+ "doc_kind": "medical coverage guideline",
+ "lines_of_business": [
+  "All lines unless noted",
+  "FEP and SAO follow own guidelines",
+  "Medicare Advantage: NCD 20.34 reviewed"
+ ],
+ "effective_or_revised": "Original 04/15/16; Reviewed 02/26/26; Revised 03/15/26",
+ "sections_in_order": [
+  "Description",
+  "Position Statement",
+  "Billing/Coding Information",
+  "Reimbursement Information",
+  "Program Exceptions",
+  "Definitions",
+  "Related Guidelines",
+  "Other",
+  "References",
+  "Committee Approval",
+  "Guideline Update Information"
+ ],
+ "criteria_location": "Position Statement, first page: two bullets plus an experimental sentence. Scoring tables for CHADS2, CHA2DS2-VASc and HAS-BLED follow it as footnotes (*, **, ***).",
+ "procedures_covered": [
+  "Percutaneous LAA closure with FDA-approved device (Watchman, Amplatzer Amulet), CPT 33340",
+  "Other devices (Lariat, Amplatzer Cardiac Plug) experimental"
+ ],
+ "logic": {
+  "top_level": "all",
+  "max_nesting_depth": 2,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "No exclusion list. Experimental sentence for non-approved devices. No contraindication to anticoagulation required, only a HAS-BLED score.",
+  "initial_vs_repeat": "None.",
+  "and_or_ambiguity": [
+   {
+    "quote": "increased risk of stroke and/or systemic embolism based on CHADS2 score* ( \u2265 2), or CHA2DS2-VASc score** ( \u2265 3), and systemic anticoagulation therapy is recommended; AND",
+    "why_ambiguous": "Either score qualifies (OR) - a patient can pass on one and fail the other; 'and/or' on stroke/embolism; 'systemic anticoagulation is recommended' is a clinician statement."
+   },
+   {
+    "quote": "when the all of the following criteria are met",
+    "why_ambiguous": "Typo, but the only all-of marker for two bullets."
+   },
+   {
+    "quote": "The long-term risks of systemic anticoagulation outweigh the risks of the device implantation (HAS-BLED score*** \u2265 3)",
+    "why_ambiguous": "Parenthesis makes a judgement statement into a score threshold; unclear if HAS-BLED >=3 is the definition or an example."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "measurement threshold",
+   "quote": "CHADS2 score* ( \u2265 2), or CHA2DS2-VASc score** ( \u2265 3)",
+   "where": "Position Statement bullet 1"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "HAS-BLED score*** \u2265 3",
+   "where": "Position Statement bullet 2"
+  },
+  {
+   "kind": "other",
+   "quote": "systemic anticoagulation therapy is recommended",
+   "where": "bullet 1"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "prevention of stroke in individuals with atrial fibrillation",
+   "where": "Position Statement"
+  },
+  {
+   "kind": "provider/facility qualification",
+   "quote": "use of a device approved by the U.S. Food and Drug Administration (FDA) (eg, the Watchman; Amplatzer Amulet)",
+   "where": "Position Statement"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "CHADS2",
+   "value": ">= 2",
+   "unit": "points",
+   "quote": "CHADS2 score* ( \u2265 2)"
+  },
+  {
+   "quantity": "CHA2DS2-VASc",
+   "value": ">= 3",
+   "unit": "points",
+   "quote": "CHA2DS2-VASc score** ( \u2265 3)"
+  },
+  {
+   "quantity": "HAS-BLED",
+   "value": ">= 3",
+   "unit": "points",
+   "quote": "HAS-BLED score*** \u2265 3"
+  },
+  {
+   "quantity": "HAS-BLED alcohol",
+   "value": "> 8",
+   "unit": "drinks/week",
+   "quote": "Alcohol - more than 8 drinks per week"
+  },
+  {
+   "quantity": "labile INR",
+   "value": "TTR < 60%",
+   "unit": "percent",
+   "quote": "therapeutic time in range < 60%"
+  }
+ ],
+ "time_windows": [],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "One CPT 33340; 'Billing/Coding Information: None applicable' is printed above it.",
+  "non_covered_code_lists": "None; Lariat and Cardiac Plug named in text only."
+ },
+ "external_dependencies": [
+  {
+   "what": "Medicare Advantage NCD 20.34",
+   "quote": "Percutaneous LEFT ATRIAL APPENDAGE Closure (LAAC) (20.34), located at cms.gov."
+  },
+  {
+   "what": "FDA approval status of device",
+   "quote": "The use of a device approved by the U.S. Food and Drug Administration (FDA)"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "CHADS2 hypertension",
+   "definition_quote": "any history of a hypertension diagnosis, regardless of severity"
+  },
+  {
+   "term": "CHA2DS2-VASc hypertension",
+   "definition_quote": "resting BP > 140/90 mmHg on at least 2 occasions or current antihypertensive pharmacologic treatment"
+  },
+  {
+   "term": "HAS-BLED hypertension",
+   "definition_quote": "uncontrolled hypertension (systolic BP > 160 mmHg)"
+  },
+  {
+   "term": "HAS-BLED elderly",
+   "definition_quote": "Elderly (greater than 65 years old"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "systemic anticoagulation therapy is recommended",
+   "problem": "Whose recommendation, documented where?"
+  },
+  {
+   "quote": "long-term risks of systemic anticoagulation outweigh the risks of the device implantation",
+   "problem": "Judgement tied to a score by parenthesis."
+  }
+ ],
+ "extraction_hazards": [
+  "Bullets render as private-use glyphs",
+  "Score tables with +1/+2 columns flatten",
+  "Asterisk footnotes ** and *** tied to tables below",
+  "'Billing/Coding Information: None applicable.' followed by a coding table",
+  "Update log contradicts itself (07/15/21: score requirement to >=3; 11/15/22: CHADS2 to >=2)",
+  "Other-names list (PLAATO, Lariat) in Other section",
+  "55 references"
+ ],
+ "interesting_structures": [
+  "Three embedded risk calculators with different definitions of the same condition",
+  "Either-score OR",
+  "Bleeding-risk threshold substitutes for clinical contraindication"
+ ],
+ "fit_to_tree": {
+  "score": 2,
+  "why": "Two-leaf all-of, but each leaf is a computed score whose inputs are chart facts defined differently in three tables, and the OR between two scores hides which one is used."
+ }
+}

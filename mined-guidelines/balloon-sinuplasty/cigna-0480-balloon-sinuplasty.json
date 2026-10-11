@@ -1,0 +1,19 @@
+{
+  "payer": "Cigna",
+  "payer_key": "cigna",
+  "treatment": "balloon-sinuplasty",
+  "title": "Balloon Sinuplasty",
+  "policy_number": "0480",
+  "effective": "",
+  "url": "https://static.cigna.com/assets/chcp/pdf/coveragePolicies/medical/mm_0480_coveragepositioncriteria_balloon_sinuplasty.pdf",
+  "final_url": "https://static.cigna.com/assets/chcp/pdf/coveragePolicies/medical/mm_0480_coveragepositioncriteria_balloon_sinuplasty.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "cigna-0480-balloon-sinuplasty.pdf",
+  "sha256": "949df81a715c6b93dccc5cd0f09ff33c3f5af7e74d1f234fdb84c479dcb4e389",
+  "pages": 28,
+  "bytes": 511890,
+  "retrieved": "2026-10-09",
+  "printed_date": "Effective 4/15/2026; Next Review 4/15/2027; annual reviews 5/15/2025, 4/15/2024"
+}

@@ -1,0 +1,183 @@
+{
+ "file": "lhcc-la-cp-mp-147-percutaneous-left-atrial-appendage-closure.pdf",
+ "treatment": "laa-closure",
+ "payer": "lhcc",
+ "doc_kind": "Medicaid policy",
+ "lines_of_business": [
+  "Louisiana Healthcare Connections (Medicaid managed care)"
+ ],
+ "effective_or_revised": "Date of Last Revision 06/2307/24 (redline merged: 06/23 and 07/24); annual review 07/24",
+ "sections_in_order": [
+  "Description",
+  "Policy/Criteria",
+  "Background",
+  "Coding Implications",
+  "Reviews, Revisions, and Approvals",
+  "References",
+  "Important Reminder"
+ ],
+ "criteria_location": "Policy/Criteria p.1: I.A, I.B (with 11 numbered contraindications and a warfarin note), II.",
+ "procedures_covered": [
+  "Percutaneous LAA occlusion with Watchman, Watchman FLX, Amplatzer Amulet (33340)",
+  "Other devices: research does not support"
+ ],
+ "logic": {
+  "top_level": "all (A and B)",
+  "max_nesting_depth": 2,
+  "k_of_n": [
+   {
+    "k": 1,
+    "n": 11,
+    "quote": "Contraindications or unacceptable high risk of bleeding from long-term oral anticoagulants, including, but not limited to: 1. Thrombocytopenia ... 11. Inability to obtain regular international normalized ratios."
+   }
+  ],
+  "exclusions_or_contraindications": "Non-listed devices not supported (II).",
+  "initial_vs_repeat": "None.",
+  "and_or_ambiguity": [
+   {
+    "quote": "including, but not limited to:",
+    "why_ambiguous": "Open list: the 11 items are examples, so any other contraindication counts; also not stated that any one suffices."
+   },
+   {
+    "quote": "There is an increased risk for stroke and systemic embolism based on CHADS2 or CHA2DS2-VASc scores, and long-term anticoagulation therapy is recommended;",
+    "why_ambiguous": "No cutoff; 'or' lets either score qualify."
+   },
+   {
+    "quote": "adults with non-valvular atrial fibrillation (AF)",
+    "why_ambiguous": "Non-valvular is a criterion in the lead-in, but no definition is given."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "diagnosis",
+   "quote": "adults with non-valvular atrial fibrillation (AF)",
+   "where": "Policy I"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "increased risk for stroke and systemic embolism based on CHADS2 or CHA2DS2-VASc scores",
+   "where": "I.A"
+  },
+  {
+   "kind": "other",
+   "quote": "long-term anticoagulation therapy is recommended",
+   "where": "I.A"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "Thrombocytopenia or known coagulation defect associated with bleeding",
+   "where": "I.B.1"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "Recurrent bleeding, including gastrointestinal, genitourinary, respiratory",
+   "where": "I.B.2"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "Prior severe bleeding, including intracranial hemorrhage",
+   "where": "I.B.3"
+  },
+  {
+   "kind": "other",
+   "quote": "Combined use of dual antiplatelet and anticoagulant therapy",
+   "where": "I.B.4"
+  },
+  {
+   "kind": "other",
+   "quote": "Poor compliance or intolerance with anticoagulant therapy",
+   "where": "I.B.5"
+  },
+  {
+   "kind": "other",
+   "quote": "High risk of the patient falling or prior falls resulting in injury",
+   "where": "I.B.6"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "Severe liver disease",
+   "where": "I.B.8"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "Severe high blood pressure",
+   "where": "I.B.10"
+  },
+  {
+   "kind": "lab value",
+   "quote": "Inability to obtain regular international normalized ratios",
+   "where": "I.B.11"
+  },
+  {
+   "kind": "age",
+   "quote": "adults",
+   "where": "Policy I"
+  }
+ ],
+ "thresholds": [],
+ "time_windows": [
+  {
+   "what": "warfarin after Watchman",
+   "length": "at least six weeks",
+   "quote": "Warfarin may be required for at least six weeks after implantation of the Watchman or Watchman FLX device."
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "33340 only; ICD-10 table removed per revision log.",
+  "non_covered_code_lists": "None"
+ },
+ "external_dependencies": [
+  {
+   "what": "FDA approval of device",
+   "quote": "Federal Drug Administration (FDA) approved percutaneous devices (i.e., WATCHMAN, WATCHMAN FLX, and Amplatzer Amulet)"
+  },
+  {
+   "what": "Corporate Important Reminder",
+   "quote": "See Important Reminder at the end of this policy for important regulatory and legal information."
+  }
+ ],
+ "definitions_that_change_meaning": [],
+ "vague_terms": [
+  {
+   "quote": "unacceptable high risk of bleeding",
+   "problem": "No scale or threshold."
+  },
+  {
+   "quote": "Severe high blood pressure",
+   "problem": "No BP value."
+  },
+  {
+   "quote": "Poor compliance or intolerance",
+   "problem": "Chart rarely documents; subjective."
+  },
+  {
+   "quote": "Recent trauma or surgery",
+   "problem": "'Recent' undefined."
+  },
+  {
+   "quote": "Severe liver disease",
+   "problem": "No Child-Pugh."
+  },
+  {
+   "quote": "Note: Warfarin may be required",
+   "problem": "Note not a criterion."
+  }
+ ],
+ "extraction_hazards": [
+  "Redline merged year digits in header ('06/2307/24', '20222023')",
+  "Numbered sub-list I.B.1-11 under a colon, indistinct from sentence flow",
+  "Coding table and revision log in two-column table",
+  "Background includes guideline recommendations with numbers (CHA2DS2-VASc > 2) that are not criteria"
+ ],
+ "interesting_structures": [
+  "Contraindication menu of 11 with open 'including, but not limited to'",
+  "Explicit anticoagulation-contraindication requirement (unlike FL's score-based approach)"
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "why": "Clean all-of with a 1-of-11 any-block, but the any-block is open-ended and each item is vague."
+ }
+}

@@ -1,0 +1,202 @@
+{
+ "file": "emblem-blepharoplasty.pdf",
+ "treatment": "blepharoplasty",
+ "payer": "emblem",
+ "doc_kind": "medical guideline (EmblemHealth clinical review criteria)",
+ "lines_of_business": [
+  "EmblemHealth plans (and ConnectiCare per revision history); benefit program governs; mentions Medicare and Medicaid mandates in the disclaimer"
+ ],
+ "effective_or_revised": "Policy MG.MM.SU.10jC2; Last Review March 13, 2026",
+ "sections_in_order": [
+  "Medical Guideline Disclaimer",
+  "Definitions",
+  "Guideline (covered conditions; patient complaints)",
+  "Documentation (photographic evidence; visual fields)",
+  "Limitations and Exclusions",
+  "Procedure Codes",
+  "ICD-10 Diagnoses",
+  "References",
+  "Revision History"
+ ],
+ "criteria_location": "'Guideline' and 'Documentation' on pp.2-3: a list of acceptable indications (explicitly 'not meant to be all-inclusive') followed by photograph and visual-field measurements. About 6 of 11 pages are an ICD-10 list (H01-H02, L11, L57.4, Q10, Q11, Z90.01).",
+ "procedures_covered": [
+  "Blepharoplasty 15820-15823",
+  "Brow ptosis repair 67900",
+  "Blepharoptosis repair 67901-67909",
+  "Lid retraction 67911",
+  "Ectropion and entropion repair 67914-67924"
+ ],
+ "logic": {
+  "top_level": "any (a non-exhaustive list of covered indications) plus a separate all-of documentation block",
+  "max_nesting_depth": 2,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "Limitations: 'solely for cosmetic reasons' and 'cosmetic ... in the absence of any signs or symptoms of functional abnormalities'; no contraindication list.",
+  "initial_vs_repeat": "None.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Members are eligible for coverage of blepharoplasty procedures and repair of blepharoptosis when performed as functional or reconstructive surgery to correct any of the following (list not meant to be all-inclusive)",
+    "why_ambiguous": "An open list: a condition not listed may still be covered, so 'not on the list' cannot be NOT_MET."
+   },
+   {
+    "quote": "Photographs must demonstrate ≥ 1 of the following",
+    "why_ambiguous": "Documentation 'any of'; unclear whether it applies to every indication on the list or only ptosis-type ones (it says oblique photos 'only needed ... when this is the only indication')."
+   },
+   {
+    "quote": "Ectropion and Entropion (visual fields not necessary)",
+    "why_ambiguous": "Inline exemption from the visual-field requirement for one list item, while the field requirement is stated later and not scoped."
+   },
+   {
+    "quote": "Blepharoplasty, blepharoptosis repair, or brow lift and lower lid blepharoplasty is considered cosmetic ...",
+    "why_ambiguous": "Brow lift appears in the cosmetic exclusion, but no brow lift indication appears in the Guideline list; there are no brow-lift criteria."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "diagnosis list",
+   "quote": "Congenital ptosis with risk for amblyopia; Ectropion and Entropion; Prosthesis difficulties in an anophthalmia socket; Epiblepharon; Lagophthalmos; Post-traumatic defects of the eyelid; Exposure keratopathy secondary to thyroid eye disease",
+   "where": "Guideline list"
+  },
+  {
+   "kind": "symptom",
+   "quote": "Symptomatic redundant skin weighing down upper lashes; Visual impairment with near or far vision due to dermatochalasis, blepharochalasis or blepharoptosis; painful symptoms of blepharospasm",
+   "where": "Guideline list"
+  },
+  {
+   "kind": "patient complaint",
+   "quote": "Documented patient complaints ... Interference with vision or visual field. Difficulty reading or driving ... Looking through the eyelashes",
+   "where": "Guideline"
+  },
+  {
+   "kind": "photographs",
+   "quote": "Photographs must be frontal (canthus-to-canthus), with the head perpendicular to the plane of the camera",
+   "where": "Documentation"
+  },
+  {
+   "kind": "photo finding",
+   "quote": "The upper eyelid margin rests 2 mm or less above the corneal light reflex / The upper eyelid skin rests on the eyelashes / ... prosthesis",
+   "where": "Documentation (>= 1 of)"
+  },
+  {
+   "kind": "visual field threshold",
+   "quote": "The superior visual with the upper eyelid at rest should be restricted to within 30 degrees of fixation and there should be a minimum of 12 degrees of improvement",
+   "where": "Documentation"
+  },
+  {
+   "kind": "test method",
+   "quote": "Must be recorded using either the Goldmann Perimeter or a programmable perimeter to test a superior (vertical) extent of 50-60 degrees above fixation",
+   "where": "Documentation"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "Blepharotomy for symptomatic exposure secondary to eyelid retraction resistant to medical therapy; Superficial punctate keratitis resistant to medical therapy",
+   "where": "Guideline list"
+  },
+  {
+   "kind": "cosmetic exclusion",
+   "quote": "The Plan does not consider blepharoplasty procedures performed solely for cosmetic reasons to be medically necessary",
+   "where": "Limitations and Exclusions"
+  },
+  {
+   "kind": "diagnosis code",
+   "quote": "ICD-10 H01.xx blepharitis, H02.xx entropion/ectropion/trichiasis/lagophthalmos/ptosis, L57.4, Q10.x, Z90.01",
+   "where": "ICD-10 Diagnoses list"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "eyelid margin position (photo)",
+   "value": "<= 2",
+   "unit": "mm above corneal light reflex",
+   "quote": "The upper eyelid margin rests 2 mm or less above the corneal light reflex"
+  },
+  {
+   "quantity": "superior visual field at rest",
+   "value": "within 30",
+   "unit": "degrees of fixation",
+   "quote": "restricted to within 30 degrees of fixation"
+  },
+  {
+   "quantity": "visual field improvement with taping",
+   "value": ">= 12",
+   "unit": "degrees",
+   "quote": "a minimum of 12 degrees of improvement in the superior visual field"
+  },
+  {
+   "quantity": "perimetry extent tested",
+   "value": "50-60",
+   "unit": "degrees above fixation",
+   "quote": "test a superior (vertical) extent of 50–60 degrees above fixation"
+  }
+ ],
+ "time_windows": [],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": true,
+  "codes_tied_to_criteria": "Listed without mapping; the ICD-10 list is long (about 180 rows) and includes blepharitis codes even though 'chronic blepharitis' as an indication was removed 1/2022.",
+  "non_covered_code_lists": "None."
+ },
+ "external_dependencies": [
+  {
+   "what": "MCG Care Guidelines may be used",
+   "quote": "EmblemHealth may also use tools developed by third parties, such as the MCG Care Guidelines, to assist us in administering health benefits."
+  },
+  {
+   "what": "Cosmetic and Reconstructive Surgery Procedures policy",
+   "quote": "(See also Cosmetic and Reconstructive Surgery Procedures)"
+  },
+  {
+   "what": "Medicare Local Coverage Article A51525 cited",
+   "quote": "National Government Services. Local Coverage Article: Blepharoplasty (A51525)"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Reconstructive blepharoplasty",
+   "definition_quote": "performed to correct visual impairment caused by drooping of the eyelids (ptosis); repair defects caused by trauma or tumor-ablative surgery; treat periorbital sequelae of thyroid disease and nerve palsy; or relieve the painful symptoms of blepharospasm"
+  },
+  {
+   "term": "Cosmetic blepharoplasty",
+   "definition_quote": "performed to improve a patient's appearance in the absence of any signs or symptoms of functional abnormalities"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "list not meant to be all-inclusive",
+   "problem": "Open list."
+  },
+  {
+   "quote": "Symptomatic redundant skin weighing down upper lashes",
+   "problem": "'Symptomatic' undefined; not tied to a measurement."
+  },
+  {
+   "quote": "Visual impairment with near or far vision",
+   "problem": "No acuity threshold."
+  },
+  {
+   "quote": "resistant to medical therapy",
+   "problem": "No duration or treatment."
+  },
+  {
+   "quote": "should be restricted ... should be a minimum",
+   "problem": "'should' phrasing in a requirement."
+  }
+ ],
+ "extraction_hazards": [
+  "About half the PDF is an ICD-10 table in a one-code-per-row layout with blank lines; it dominates extracted text.",
+  "Page footers 'Proprietary information of EmblemHealth' and 'Page x of 11' sit mid-table.",
+  "Bullets have no glyph in text; list items are indistinguishable from prose.",
+  "Typo 'The superior visual with the upper eyelid at rest' (missing 'field').",
+  "Definitions table is two columns."
+ ],
+ "interesting_structures": [
+  "Open-ended indications list.",
+  "Visual-field threshold lower than BCBSFL: improvement of only 12 degrees, with the lid at rest within 30 degrees of fixation.",
+  "Revision history documents indications removed (chronic blepharitis 2022; pretarsal dermatitis 2023) and added (epiblepharon, lagophthalmos, thyroid exposure).",
+  "No brow lift criteria at all though brow lift is in the code list."
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "why": "Open lists and 'should' phrasing resist a closed tree; the ANY-of list is easy but 'list not meant to be all-inclusive' means a missing match cannot be treated as a failure."
+ }
+}

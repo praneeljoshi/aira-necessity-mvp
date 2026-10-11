@@ -1,0 +1,168 @@
+{
+ "file": "uhc-ma-mmp368-11-spinal-cord-stimulators-for-chronic-pain.pdf",
+ "treatment": "spinal-cord-stimulation",
+ "payer": "uhc-ma",
+ "doc_kind": "Medicare Advantage policy",
+ "lines_of_business": [
+  "UnitedHealthcare Medicare Advantage"
+ ],
+ "effective_or_revised": "Text prints policy number MMP368.14, last committee approval June 10, 2026, effective September 1, 2026 (library file name and metadata say MMP368.11, effective 06/01/2024)",
+ "sections_in_order": [
+  "Coverage Rationale (Overview; NCDs; LCDs; narrative criteria)",
+  "Applicable Codes",
+  "CMS Related Documents (NCD/LCD/MAC table)",
+  "Clinical Evidence",
+  "U.S. Food and Drug Administration",
+  "References",
+  "Policy History/Revision Information",
+  "Instructions for Use"
+ ],
+ "criteria_location": "Coverage Rationale pp.1-2, in paragraph prose (taken from the CMS Electrical Nerve Stimulators NCD 160.7 text plus UHC supplement). LCDs L35136, L37632, L36204 and articles control by state.",
+ "procedures_covered": [
+  "SCS trial",
+  "Permanent SCS implant",
+  "SCS replacement",
+  "Dorsal root ganglion stimulators (covered when SCS criteria are met)"
+ ],
+ "logic": {
+  "top_level": "other (prose; stages: trial then permanent; LCD overrides by MAC jurisdiction)",
+  "max_nesting_depth": 2,
+  "k_of_n": [
+   {
+    "k": 1,
+    "n": 2,
+    "quote": "A trial achieved at least a 50% reduction of target pain or 50% reduction of analgesic medications; and Some element of functional improvement was achieved."
+   }
+  ],
+  "exclusions_or_contraindications": "No exclusion list. Repeat trial not appropriate after failed trial unless 'extenuating circumstances'.",
+  "initial_vs_repeat": "'If a trial fails, a repeat trial is not appropriate unless there are extenuating circumstances'; replacement for battery/malfunction/end of life: 'a new trial is not needed'.",
+  "and_or_ambiguity": [
+   {
+    "quote": "A trial achieved at least a 50% reduction of target pain or 50% reduction of analgesic medications; and Some element of functional improvement was achieved.",
+    "why_ambiguous": "'or' inside a bullet joined by 'and'; analgesic reduction can substitute for pain relief"
+   },
+   {
+    "quote": "SCS therapy should be considered as a late option after more conservative attempts such as medications, physical therapy, psychological therapy, or other modalities have been tried.",
+    "why_ambiguous": "'should' not 'must'; 'such as' list open"
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "conservative therapy",
+   "quote": "SCS therapy should be considered as a late option after more conservative attempts such as medications, physical therapy, psychological therapy, or other modalities have been tried",
+   "where": "Coverage Rationale p.1"
+  },
+  {
+   "kind": "psych/nutrition evaluation",
+   "quote": "Patients must have undergone careful screening, evaluation, and diagnosis by a multidisciplinary team prior to implantation. Such screening must include psychological, as well as physical evaluation.",
+   "where": "p.2"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "A trial achieved at least a 50% reduction of target pain or 50% reduction of analgesic medications",
+   "where": "p.2"
+  },
+  {
+   "kind": "functional impairment",
+   "quote": "Some element of functional improvement was achieved",
+   "where": "p.2"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "All trials which proceed to permanent implant must have adequate documentation in the chart to support that decision",
+   "where": "p.2"
+  },
+  {
+   "kind": "provider/facility qualification",
+   "quote": "If the physician implanting the trial neurostimulator does not or cannot implant the permanent neurostimulator, the patient should be informed of this in writing",
+   "where": "p.2"
+  },
+  {
+   "kind": "other",
+   "quote": "Performance and documentation of an effective trial is a prerequisite for permanent nerve stimulation",
+   "where": "p.1"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "trial pain reduction",
+   "value": ">= 50",
+   "unit": "%",
+   "quote": "at least a 50% reduction of target pain"
+  },
+  {
+   "quantity": "analgesic reduction",
+   "value": ">= 50",
+   "unit": "%",
+   "quote": "50% reduction of analgesic medications"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "typical trial length (mentioned for RSD)",
+   "length": "one to two weeks",
+   "quote": "takes longer periods for improvement than the typical one to two-week trial"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Three CPT codes listed; diagnosis code list is a link placeholder",
+  "non_covered_code_lists": "None"
+ },
+ "external_dependencies": [
+  {
+   "what": "CMS NCD 160.7",
+   "quote": "For coverage guidelines, refer to the NCD for Electrical Nerve Stimulators (160.7)."
+  },
+  {
+   "what": "LCDs L35136, L37632, L36204 and billing articles by MAC",
+   "quote": "compliance with these policies is required where applicable"
+  },
+  {
+   "what": "Related MA policy Electrical Stimulators",
+   "quote": "Related Medicare Advantage Medical Policy: Electrical Stimulators"
+  }
+ ],
+ "definitions_that_change_meaning": [],
+ "vague_terms": [
+  {
+   "quote": "best suited for neuropathic pain but may have some limited value in other types of nociceptive severe, intractable pain",
+   "problem": "no diagnosis whitelist; allows nociceptive pain"
+  },
+  {
+   "quote": "Some element of functional improvement",
+   "problem": "no measure"
+  },
+  {
+   "quote": "extenuating circumstances",
+   "problem": "undefined"
+  },
+  {
+   "quote": "late option",
+   "problem": "no duration of conservative therapy"
+  },
+  {
+   "quote": "Dorsal root ganglion stimulators may be covered when coverage criteria for spinal cord stimulation are met",
+   "problem": "'may'"
+  }
+ ],
+ "extraction_hazards": [
+  "Criteria are in running prose with a long rationale paragraph about harms and benefits",
+  "LCD/MAC table in three columns with 'Retired' rows and footnote asterisks",
+  "Diagnosis code list is a link, not text",
+  "Library file name says MMP368.11 while text says MMP368.14",
+  "Text is a mix of CMS NCD wording and UHC supplement; unclear which sentences are NCD and which are UHC"
+ ],
+ "interesting_structures": [
+  "Criteria come from a federal NCD; LCDs vary by jurisdiction (First Coast covers FL)",
+  "50% pain OR 50% analgesic reduction plus functional improvement",
+  "Repeat trial discouraged",
+  "Explicit statement that no new trial is needed for replacement"
+ ],
+ "fit_to_tree": {
+  "score": 4,
+  "why": "Criteria are prose with 'should' and 'may', and the binding LCD for the patient's MAC jurisdiction lives outside the document."
+ }
+}

@@ -1,0 +1,88 @@
+{
+  "file": "uhc-2026t0447ss-surgical-and-ablative-procedures-for-venous-insuff.pdf",
+  "treatment": "varicose-veins",
+  "payer": "uhc",
+  "doc_kind": "medical policy (Commercial and Individual Exchange)",
+  "lines_of_business": ["UnitedHealthcare Commercial", "UnitedHealthcare Individual Exchange"],
+  "effective_or_revised": "Effective 07/01/2026 (Policy 2026T0447SS)",
+  "sections_in_order": ["Application", "Coverage Rationale", "Medical Records Documentation Used for Reviews", "Definitions", "Applicable Codes (with Coding Clarifications)", "Description of Services", "Benefit Considerations", "Clinical Evidence", "U.S. Food and Drug Administration", "References", "Policy History/Revision Information", "Instructions for Use"],
+  "criteria_location": "There are no clinical criteria in the document. Coverage Rationale (p.1-2) delegates to two InterQual products. Only measurable rules in the text are in Applicable Codes > Coding Clarifications (sclerotherapy session limit, once-per-extremity coding) and Definitions (varicose vein >= 3 mm, reflux times). Cosmetic exclusions are in Benefit Considerations. Pages 6-16 are evidence, FDA, references.",
+  "procedures_covered": ["Endovenous ablation of lower extremity superficial truncal or perforator veins (thermal and nonthermal)", "Ligation and division with or without stripping or excision", "Sclerotherapy of superficial veins (liquid, foam, ultrasound-guided, microfoam)", "Unproven: endovenous MOCA, endovenous foam sclerotherapy ablation of incompetent perforators, ablation of recurrent or residual perforator after prior procedure, VenoValve porcine bioprosthetic valve"],
+  "logic": {
+    "top_level": "other: delegation. Coverage is decided by an external InterQual subset (ablation, ligation) and by a simple code-count rule (sclerotherapy)",
+    "max_nesting_depth": 1,
+    "k_of_n": [],
+    "exclusions_or_contraindications": "Benefit Considerations bullet list of exclusions: congenital anomaly correction without function, 'Any procedure that does not meet the criteria in the Coverage Rationale section', spider veins/telangiectasias, endovenous ablation of reticular or telangiectatic veins, cosmetic sclerotherapy. Unproven list in Coverage Rationale.",
+    "initial_vs_repeat": "Sclerotherapy only: 'CPT codes 36470 and 36471 are covered for Sclerotherapy (nontruncal, nontelangiectasia) up to three sessions per leg within a year.' Session = one date of service; year = rolling 12 months (365 days). Also: 'Endovenous Ablation of recurrent or residual perforator vein following a prior vein procedure' is unproven.",
+    "and_or_ambiguity": [
+      {"quote": "Endovenous Ablation ... is reconstructive and medically necessary in certain circumstances. For medical necessity clinical coverage criteria, refer to the InterQual® Client Defined CP", "why_ambiguous": "'certain circumstances' are not in the document; the criteria cannot be read from the policy at all."},
+      {"quote": "Any procedure that does not meet the criteria in the Coverage Rationale section.", "why_ambiguous": "Circular: the Coverage Rationale has no criteria of its own, only a pointer to InterQual."},
+      {"quote": "More than three sessions per leg within a year is considered cosmetic", "why_ambiguous": "Applies by code (36470/36471) only; does not say whether truncal foam codes 36465/36466 count."}
+    ]
+  },
+  "requirement_kinds": [
+    {"kind": "other", "quote": "For medical necessity clinical coverage criteria, refer to the InterQual® Client Defined CP: Procedures, Endovenous Ablation, Lower Extremity Superficial Truncal or Perforator Vein (Custom) – UHG.", "where": "Coverage Rationale p.1"},
+    {"kind": "other", "quote": "refer to the InterQual® CP: Procedures, Ligation and Division +/- Stripping or Excision, Lower Extremity Superficial Vein.", "where": "Coverage Rationale p.2"},
+    {"kind": "prior procedure", "quote": "up to three sessions per leg within a year", "where": "Applicable Codes > Coding Clarifications"},
+    {"kind": "measurement threshold", "quote": "Varicose Veins are dilated subcutaneous tributaries greater than or equal to 3 mm in diameter", "where": "Definitions"},
+    {"kind": "diagnosis", "quote": "Treatments for Spider Veins and/or Telangiectasias are considered to be cosmetic and therefore excluded from coverage.", "where": "Benefit Considerations"},
+    {"kind": "imaging finding", "quote": "Abnormal (pathological reflux) times exceed different thresholds ... Superficial Veins: 0.5 seconds; Perforator veins: 0.5 seconds; Deep veins: 1 second", "where": "Definitions, Venous Reflux/Insufficiency"},
+    {"kind": "functional impairment", "quote": "Moderate Pain to be daily pain or other discomfort interfering with but not preventing regular daily activities and Severe Pain to be daily pain or discomfort that limits most regular daily activities", "where": "Definitions"},
+    {"kind": "documentation/photos", "quote": "Medical records documentation may be required to assess whether the member meets the clinical criteria for coverage", "where": "Medical Records Documentation Used for Reviews"}
+  ],
+  "thresholds": [
+    {"quantity": "varicose vein diameter", "value": ">= 3", "unit": "mm", "quote": "greater than or equal to 3 mm in diameter"},
+    {"quantity": "spider vein diameter", "value": "< 1", "unit": "mm", "quote": "Dilated small Superficial Veins measuring less than 1 mm in diameter"},
+    {"quantity": "pathologic reflux time, superficial and perforator", "value": "> 0.5", "unit": "seconds", "quote": "Superficial Veins: 0.5 seconds"},
+    {"quantity": "pathologic reflux time, deep", "value": "> 1", "unit": "seconds", "quote": "Deep veins: 1 second"},
+    {"quantity": "axial reflux in accessory GSV", "value": ">= 5", "unit": "cm", "quote": "retrograde flow between two measurements, at least 5 cm apart"},
+    {"quantity": "sclerotherapy sessions per leg", "value": "<= 3 per rolling 12 months", "unit": "sessions", "quote": "up to three sessions per leg within a year"}
+  ],
+  "time_windows": [
+    {"what": "sclerotherapy sessions per leg", "length": "rolling 12 months (365 days)", "quote": "A year is defined as a rolling 12 months (365 days)."}
+  ],
+  "codes": {
+    "cpt_hcpcs_listed": true,
+    "icd10_listed": false,
+    "codes_tied_to_criteria": "Not tied, except 36470/36471 session limit and 36468 cosmetic, both in Coding Clarifications. 36475/36476, 36465/36466 get AMA once-per-extremity coding notes. Codes listed 'for reference purposes only'; 0744T VenoValve listed with no tag but the Coverage Rationale calls the valve unproven.",
+    "non_covered_code_lists": "None as a code list. 36468 'considered cosmetic'; 36473/36474 (MOCA) and 0744T are unproven in the text but untagged in the table."
+  },
+  "external_dependencies": [
+    {"what": "InterQual Client Defined CP: Endovenous Ablation, Lower Extremity Superficial Truncal or Perforator Vein (Custom) - UHG", "quote": "refer to the InterQual® Client Defined CP: Procedures, Endovenous Ablation, Lower Extremity Superficial Truncal or Perforator Vein (Custom) – UHG."},
+    {"what": "InterQual CP: Ligation and Division +/- Stripping or Excision, Lower Extremity Superficial Vein", "quote": "refer to the InterQual® CP: Procedures, Ligation and Division +/- Stripping or Excision, Lower Extremity Superficial Vein."},
+    {"what": "Member benefit plan document and the 2019 Certificate of Coverage Amendment for cosmetic sclerotherapy", "quote": "(2019 Certificate of Coverage Amendment)"},
+    {"what": "Medical Records Documentation Used for Reviews guideline", "quote": "refer to the guidelines titled Medical Records Documentation Used for Reviews."},
+    {"what": "Related UHC policies: Cosmetic and Reconstructive Procedures; Outpatient Surgical Procedures - Site of Service", "quote": "Related Commercial/Individual Exchange Policies"}
+  ],
+  "definitions_that_change_meaning": [
+    {"term": "Varicose Veins", "definition_quote": "dilated subcutaneous tributaries greater than or equal to 3 mm in diameter, and individuals with Varicose Veins belong to CEAP ... class C2"},
+    {"term": "Venous Reflux/Insufficiency", "definition_quote": "Superficial Veins: 0.5 seconds"},
+    {"term": "Axial Reflux", "definition_quote": "uninterrupted retrograde venous flow from the groin to the upper calf"},
+    {"term": "Functional or Physical Impairment", "definition_quote": "significantly limited, impaired, or delayed capacity to move, coordinate actions, or perform physical activities"},
+    {"term": "Moderate to Severe Pain", "definition_quote": "daily pain or other discomfort interfering with but not preventing regular daily activities"},
+    {"term": "Session", "definition_quote": "A session is defined as one date of service in which Sclerotherapy (CPT codes 36470 and 36471) is performed."}
+  ],
+  "vague_terms": [
+    {"quote": "reconstructive and medically necessary in certain circumstances", "problem": "The criteria sit in InterQual, which is proprietary and not in this file."},
+    {"quote": "Moderate to Severe Pain", "problem": "Defined in Definitions but never used by any criterion in this document; it is orphan text that probably feeds the InterQual subset."},
+    {"quote": "Cosmetic Sclerotherapy is excluded.", "problem": "Cosmetic is defined only by the 3-sessions rule and by telangiectasia."}
+  ],
+  "extraction_hazards": [
+    "No clinical criteria are extractable; a criteria extractor must return 'delegated' rather than invent leaves.",
+    "Table of contents with dot leaders and a right-hand 'Related Policies' column interleaves with the body on page 1.",
+    "Definitions contain thresholds that look like criteria (>= 3 mm, 0.5 s) but are not required by any statement.",
+    "The 'See Benefit Considerations' note floats at the right margin; sclerotherapy bullets refer to other sections by name only.",
+    "Policy History describes a change ('Removed language indicating MOCA of Varicose Veins is unproven') that conflicts with the Coverage Rationale, which still lists MOCA as unproven.",
+    "CPT table has no coverage status column; status is only in surrounding prose.",
+    "Repeating header/footer ('Proprietary Information of UnitedHealthcare') on every page.",
+    "Over 9 pages of clinical evidence and references with study statistics that look like thresholds."
+  ],
+  "interesting_structures": [
+    "Pure delegation: a policy whose coverage rationale is a hyperlink to InterQual.",
+    "Benefit-language rules (cosmetic exclusions, session caps) live in the policy while clinical criteria live in a vendor product.",
+    "Count rule defined in code-specific, session-specific, rolling-window terms (3 sessions per leg per rolling 12 months).",
+    "Unproven list for newer technology (MOCA, VenoValve, foam ablation of perforators, recurrent perforator ablation).",
+    "Same policy 'may also be applied to Medicare Advantage plans in certain instances' (Instructions for Use)."
+  ],
+  "fit_to_tree": {"score": 5, "scale": "1 = all/any/not expresses it cleanly ... 5 = needs new constructs or human judgment", "why": "There is nothing to compile: the clinical criteria are in InterQual outside the document. What can be checked is a code gate (unproven/cosmetic codes) and a three-per-rolling-year sclerotherapy rule. A tree built from this file alone would be nearly empty; a checker would need the InterQual subset or must route to a human."}
+}

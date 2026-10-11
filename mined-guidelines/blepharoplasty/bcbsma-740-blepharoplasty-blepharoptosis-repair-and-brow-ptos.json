@@ -1,0 +1,19 @@
+{
+  "payer": "Blue Cross Blue Shield of Massachusetts",
+  "payer_key": "bcbsma",
+  "treatment": "blepharoplasty",
+  "title": "Blepharoplasty, Blepharoptosis Repair and Brow Ptosis Repair",
+  "policy_number": "740",
+  "effective": "",
+  "url": "https://www.bluecrossma.com/common/en_US/medical_policies/740%20Blepharoplasty%20Blepharoptosis%20repair%20and%20Brow%20ptosis%20repair%20prn.pdf",
+  "final_url": "https://www.bluecrossma.com/common/en_US/medical_policies/740%20Blepharoplasty%20Blepharoptosis%20repair%20and%20Brow%20ptosis%20repair%20prn.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "bcbsma-740-blepharoplasty-blepharoptosis-repair-and-brow-ptos.pdf",
+  "sha256": "88817f9782b0be21253a2ab01af55319bf8c687f9c07e213b13aa69f2b654496",
+  "pages": 5,
+  "bytes": 187459,
+  "retrieved": "2026-10-09",
+  "printed_date": "Policy 740; no effective date printed; Policy History latest 5/2020 (new policy 10/1/2015)"
+}

@@ -1,0 +1,36 @@
+/* Print, for every style and theme (loaded last, so it wins): the guideline on white paper in the light tokens, the
+   requirements' washes as light CSS backgrounds, nothing on screen-only layers. The highlighter canvas (#marks) is
+   fixed over the page and would print as opaque blocks over the text; the proof thread is a screen aid. */
+@media print {
+  #marks, #proofThread { display:none !important }
+
+  /* the light tokens, whatever theme is on (Soft and Dark included) */
+  html[data-style][data-theme][data-theme] {
+    --desk:#FFFFFF; --paper:#FFFFFF; --edge:#E4DED2; --edge-2:#D6CFC1;
+    --bg:#FFFFFF; --bg-rgb:255 255 255; --panel:#FFFFFF; --ink:#1D232B; --sec:#5D6570; --dim:#8A9099; --line:#E4DED2; --soft:#F4F1EA; --rail:#FFFFFF;
+    --act:#2A5B8C; --act-h:#21496F; --act-soft:#E3EDF7;
+    --ready:#2B6A4E; --needs:#9A6316; --no:#9A3F33; --wait:#5D6570;
+    --ready-bg:#E9F2EC; --needs-bg:#F8EEDC; --no-bg:#F7E7E2; --wait-bg:#F4F1EA; --sel:#FBEBC4; --sel-line:#C99A3A;
+    --pen-doc:212 230 248; --pen-doc-a:1; --pen-acc:184 210 240; --pen-acc-a:1;
+    --pen-miss:248 229 199; --pen-miss-a:1; --pen-bad:246 219 209; --pen-bad-a:1;
+    --pen-alt:232 236 242; --pen-alt-a:1; --pen-human:253 228 168; --pen-human-a:1;
+    --sheet-shadow:none; --slip-shadow:none;
+    color-scheme:light;
+  }
+  html[data-style], html[data-style] body, html[data-style] .app, html[data-style] .main { background:#FFFFFF !important; color:var(--ink) !important }
+
+  /* what is for working on screen */
+  .rail, .rq-nav, #side, #fbBar, .fb-bar, .view-bar, .style-switch, .prog button, #progSign, .calm-note:empty,
+  .doc-hint, .ask-pill, .fb-list, details.fold { display:none !important }
+  html[data-style] .case-grid { display:block !important }
+  html[data-style] .gl .doc, html[data-style] .gl-doc { box-shadow:none !important; border:0 !important; background:#FFFFFF !important; max-width:none !important }
+
+  /* the washes, drawn as light backgrounds on the requirement's own words */
+  html[data-style] mark.q { background:rgb(212 230 248) !important; color:inherit !important; -webkit-print-color-adjust:exact; print-color-adjust:exact }
+  html[data-style] mark.q.t-miss { background:rgb(248 229 199) !important }
+  html[data-style] mark.q.t-bad { background:rgb(246 219 209) !important }
+  html[data-style] mark.q.t-alt { background:rgb(236 239 244) !important }
+  html[data-style] mark.q.acc { background:rgb(184 210 240) !important }
+  html[data-style] mark.q.struck { background:none !important }
+  html[data-style] .flag, html[data-style] .sigblock { -webkit-print-color-adjust:exact; print-color-adjust:exact }
+}

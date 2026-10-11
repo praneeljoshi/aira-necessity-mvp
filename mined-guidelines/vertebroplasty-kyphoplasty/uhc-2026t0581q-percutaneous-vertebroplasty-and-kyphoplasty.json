@@ -1,0 +1,19 @@
+{
+  "payer": "UnitedHealthcare",
+  "payer_key": "uhc",
+  "treatment": "vertebroplasty-kyphoplasty",
+  "title": "Percutaneous Vertebroplasty and Kyphoplasty",
+  "policy_number": "2026T0581Q",
+  "effective": "2026-03-01",
+  "url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-medical-drug/percutaneous-vertebroplasty-kyphoplasty.pdf",
+  "final_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-medical-drug/percutaneous-vertebroplasty-kyphoplasty.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "uhc-2026t0581q-percutaneous-vertebroplasty-and-kyphoplasty.pdf",
+  "sha256": "98e4a6ed14cae0bc599e61dddacc9162cfbeeb3a28b863bfb52e95c5330cb787",
+  "pages": 21,
+  "bytes": 496058,
+  "retrieved": "2026-10-09",
+  "printed_date": "Effective March 1, 2026 (2026T0581Q)"
+}

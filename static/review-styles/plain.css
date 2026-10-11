@@ -1,0 +1,457 @@
+/* Plain (after the owner's note on Clinic: "the needs-review case looks best by far; make the font readable and
+   simple; there's no standard font in the bodies"). Clinic's desk, sheet and overlay ink, with two changes:
+   1. Ink only where a person is needed. Missing / contradicted keep Clinic's warm highlighter; a documented
+      requirement gets only a whisper of blue (fuller while it is the one open); once accepted the wash goes and a
+      check stays in the margin. A finished page reads clean; an unfinished one shows exactly what is left.
+   2. One typeface, one scale. Public Sans everywhere (the policy text included), sizes from five steps:
+      12 / 13.5 / 15 / 16.5 / 22, weights 400 / 600. */
+
+/* The tokens (desk, paper, ink, pens, the type scale, light and dark) and the Light / Dark switch live in
+   static/theme.css, shared with the / flow; review.html loads it just before this file. */
+
+
+/* ---------------------------------------------------------------- structure (as Marker) */
+html[data-style="plain"], html[data-style="plain"] body { background:var(--bg); color:var(--ink) }
+html[data-style="plain"] body { font:15px/1.55 "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif }
+html[data-style="plain"] #marks { position:fixed; inset:0; width:100vw; height:100vh; z-index:0; pointer-events:none }
+html[data-style="plain"] .app { position:relative; z-index:1; background:transparent }
+/* motion only in answer to an action, and only for colour: layout (padding, sizes, the highlighter canvas) never animates */
+html[data-style="plain"] *, html[data-style="plain"] *::before, html[data-style="plain"] *::after { transition-property:color, background-color, border-color, box-shadow, opacity, text-decoration-color !important; transition-duration:.12s !important; animation:none !important }
+@media (prefers-reduced-motion: reduce) { html[data-style="plain"] *, html[data-style="plain"] *::before, html[data-style="plain"] *::after { transition:none !important } }
+
+/* chrome: quiet */
+html[data-style="plain"] .rail { background:var(--rail); border-right:1px solid var(--line) }
+html[data-style="plain"] .row:hover { background:var(--soft) }
+html[data-style="plain"] .row[aria-current="true"] { background:var(--panel); border-left-color:var(--act); box-shadow:none }
+html[data-style="plain"] button { background:var(--panel); color:var(--ink); border:1px solid var(--line); border-radius:7px }
+html[data-style="plain"] button:hover { background:var(--soft); border-color:var(--dim) }
+html[data-style="plain"] button.primary { background:var(--act); color:var(--panel); border-color:var(--act) }
+html[data-style="plain"] button.primary:hover { background:var(--act-h); border-color:var(--act-h) }
+html[data-style="plain"] textarea, html[data-style="plain"] input[type=text], html[data-style="plain"] select { background:var(--panel); color:var(--ink); border-color:var(--line) }
+html[data-style="plain"] a { color:var(--act) }
+html[data-style="plain"] .dlg-card, html[data-style="plain"] .card, html[data-style="plain"] .fb-bar, html[data-style="plain"] .stg { background:var(--panel); box-shadow:none }
+html[data-style="plain"] .fb-bar { box-shadow:0 2px 10px rgba(0,0,0,.08) }
+
+/* the case: typography carries the hierarchy */
+html[data-style="plain"] .who { font-size:13.5px }
+html[data-style="plain"] .who b { font-size:15px; font-weight:600 }
+html[data-style="plain"] .verdict { font-size:22px; font-weight:600; letter-spacing:-.01em; margin:10px 0 4px; color:var(--ink) }
+html[data-style="plain"] .verdict::before { content:""; display:inline-block; width:8px; height:8px; border-radius:50%; margin:0 10px 3px 0; background:var(--dim) }
+html[data-style="plain"] .verdict.v-ready::before { background:var(--ready) } html[data-style="plain"] .verdict.v-needs::before { background:var(--needs) }
+html[data-style="plain"] .verdict.v-no::before { background:var(--no) }
+html[data-style="plain"] .why, html[data-style="plain"] .rule, html[data-style="plain"] .confirmed { font-size:13.5px; margin:2px 0 }
+html[data-style="plain"] .flag { background:none; padding:0; color:var(--needs); font-size:13.5px }
+html[data-style="plain"] .prog { border-color:var(--line) }
+html[data-style="plain"] #side { background:var(--panel); border-color:var(--line); border-radius:8px }
+html[data-style="plain"] .nv[aria-current] { background:var(--panel) }
+html[data-style="plain"] kbd { background:var(--panel) }
+html[data-style="plain"] .sp-act button kbd { background:transparent; border-color:currentColor; opacity:.7 }
+html[data-style="plain"] #side .none { background:none; padding:0; color:var(--needs); font-weight:500 }
+html[data-style="plain"] #side .none::before { content:""; display:inline-block; width:6px; height:6px; border-radius:50%; background:var(--needs); margin:0 7px 2px 0 }
+html[data-style="plain"] .evq .side, html[data-style="plain"] .legend .side-l { background:none; padding:0; font-weight:600; letter-spacing:.03em }
+html[data-style="plain"] .evq:hover { background:var(--soft); border-color:transparent }
+html[data-style="plain"] .evq.against q { color:var(--ink) }
+html[data-style="plain"] .evq.against .side { color:var(--no) }
+html[data-style="plain"] .draft { background:var(--panel); border-color:var(--line) }
+html[data-style="plain"] .fb-chip { background:transparent; border:0; border-left:2px solid var(--line); border-radius:0; color:var(--sec) }
+html[data-style="plain"] .fb-list .it { background:var(--panel); border-color:var(--line) }
+html[data-style="plain"] #side .ac-where { color:var(--sec) }
+html[data-style="plain"] #side .pk a { color:var(--ink) }
+
+/* the guideline: clean flowing text on the page, no frame */
+html[data-style="plain"] .gl .doc { background:transparent; border:0; border-radius:0; overflow:visible }
+html[data-style="plain"] .gl .doc-head { background:transparent; border:0; border-bottom:1px solid var(--line); padding:0 0 10px 42px; font-size:13px }
+html[data-style="plain"] .tv .sec + .sec { border-top:0 }
+html[data-style="plain"] .tv .sec-label { color:var(--sec); font-weight:600; letter-spacing:.05em; padding-left:42px }
+html[data-style="plain"] .tv .pg { padding-left:42px; color:var(--dim) } html[data-style="plain"] .tv .pg::after { border-color:var(--line) }
+html[data-style="plain"] .tv .ln { font-size:15.5px; line-height:1.7; padding:0 8px 0 4px; grid-template-columns:30px 1fr; border-left:2px solid transparent; background:transparent !important }
+html[data-style="plain"] .gl .ln.first { grid-template-columns:30px 1fr; margin-top:0 }
+/* a paragraph's lines flow as one text; the status dot / accepted check sits in the gutter on a block's first line */
+html[data-style="plain"] .gl .para { display:block; position:relative; padding:0 10px 0 calc(34px + var(--ind, 0) * .45em); margin:0 0 .45em; font-size:15.5px; line-height:1.72 }
+html[data-style="plain"] .gl .para > .ln { display:inline; position:static; padding:0; border:0; font-size:inherit; line-height:inherit }
+html[data-style="plain"] .gl .para > .ln .tx { white-space:normal }
+html[data-style="plain"] .gl .para > .ln .mk { position:absolute; left:10px; width:16px; padding:0; margin-top:.62em }
+html[data-style="plain"] .gl .para > .ln:not(.first) .mk { display:none }
+/* a page break sits in the left gutter at the line where the page starts; the sentence flows on uninterrupted */
+html[data-style="plain"] .gl .para > .pg { position:absolute; left:-2px; width:30px; padding:0; margin-top:.42em; display:block; font-size:10.5px; line-height:1.2; color:var(--dim); text-align:right; white-space:nowrap }
+html[data-style="plain"] .gl .para > .pg::after { display:none }
+html[data-style="plain"] .gl .para > .pg { font-size:0 }
+html[data-style="plain"] .gl .para > .pg::before { content:attr(data-p); font-size:10.5px }
+html[data-style="plain"] .gl .para > .ln.probed::after { display:none }
+/* asked about: a short hairline in the far margin, unlike the status dots */
+html[data-style="plain"] .gl .para:has(.ln.probed)::before { content:""; position:absolute; left:1px; top:.45em; width:2px; height:1.1em; border-radius:1px; background:var(--sel-line); opacity:.4 }
+html[data-style="plain"] .gl .para:has(.ln.sel) { box-shadow:inset 2px 0 0 var(--act) }
+html[data-style="plain"] .gl .para:has(.ln.fb-sel) { box-shadow:inset 2px 0 0 var(--sel-line) }
+html[data-style="plain"] .gl .para > .fb-chip { margin:4px 0 2px }
+html[data-style="plain"] .rq-nav .nv { border:0; background:none; border-radius:6px }
+html[data-style="plain"] .rq-nav .nv:hover { background:var(--soft) }
+html[data-style="plain"] .rq-nav .nv[aria-current] { background:var(--panel); box-shadow:inset 2px 0 0 var(--act) }
+html[data-style="plain"] .rq-nav .nv:focus-visible { outline:2px solid var(--act); outline-offset:1px }
+html[data-style="plain"] .tv .ln.heading .tx { font-size:17px; font-weight:600; margin:10px 0 4px }
+html[data-style="plain"] .tv .ln.other .tx, html[data-style="plain"] .tv .ln.gap .tx, html[data-style="plain"] .tv .ln.context .tx { color:var(--sec) }
+html[data-style="plain"] .tv .ln.req .tx { color:var(--ink) }
+html[data-style="plain"] .gl .ln .say { display:none }
+html[data-style="plain"] .gl .ln .mk { font-size:0; display:flex; justify-content:center }
+html[data-style="plain"] .gl .ln.first .mk::before { content:""; width:6px; height:6px; border-radius:50% }
+html[data-style="plain"] .gl .ln.first .mk.m-q::before { background:var(--needs) }
+html[data-style="plain"] .gl .ln.first .mk.m-n::before { background:var(--no) }
+html[data-style="plain"] .gl .ln.first .mk.m-acc { font-size:12px; margin-top:0; color:var(--act); font-weight:700 }
+html[data-style="plain"] .gl .ln.first .mk.m-acc::before { display:none }
+html[data-style="plain"] .gl .ln.sel { border-left-color:var(--act) }
+html[data-style="plain"] .gl .ln.fb-sel { outline:0; border-left-color:var(--sel-line) }
+html[data-style="plain"] .gl .ln.probe { border-left-color:var(--sel-line) }
+html[data-style="plain"] .gl .ln.probed::after { background:var(--dim); opacity:.6 }
+html[data-style="plain"] mark.q { background:transparent; border:0; color:inherit; border-radius:2px }
+html[data-style="plain"] .gl mark.q.struck { text-decoration-color:var(--dim) }
+html[data-style="plain"] .ask-pill { background:var(--panel); border-color:var(--line); box-shadow:none }
+html[data-style="plain"] .gl .rest-fold > summary { padding-left:42px }
+html[data-style="plain"] .gl .rest-hint { padding-left:42px }
+html[data-style="plain"] .tv .row-tbl { background:transparent }
+html[data-style="plain"] .gl .ev { background:transparent; border-left:2px solid var(--line) }
+/* the selection is the browser's own, in the warm pen */
+html[data-style="plain"] #glDoc ::selection { background:rgb(var(--pen-human)) }
+
+/* no WebGL, and print: the same washes as plain backgrounds */
+html[data-style="plain"] mark.q { background:rgb(var(--pen-doc)) }
+html[data-style="plain"] mark.q.t-miss { background:rgb(var(--pen-miss)) }
+html[data-style="plain"] mark.q.t-bad { background:rgb(var(--pen-bad)) }
+html[data-style="plain"] mark.q.t-alt { background:rgb(var(--pen-alt)) }
+html[data-style="plain"] mark.q.acc { background:rgb(var(--pen-acc)) }
+html[data-style="plain"] mark.q.struck { background:none }
+html[data-style="plain"] .gl .ln.probe .tx { background:rgb(var(--pen-human)) }
+@media print {
+  html[data-style="plain"] #marks { display:none }
+  html[data-style="plain"] mark.q { background:rgb(212 230 248) !important; -webkit-print-color-adjust:exact; print-color-adjust:exact }
+  html[data-style="plain"] mark.q.t-miss { background:rgb(246 228 200) !important }
+  html[data-style="plain"] mark.q.t-bad { background:rgb(244 218 208) !important }
+  html[data-style="plain"] mark.q.acc { background:rgb(184 210 240) !important }
+  html[data-style="plain"] #side, html[data-style="plain"] .rq-nav, html[data-style="plain"] .rail { display:none }
+}
+
+/* notes on a paragraph: one quiet link after it, opening them in the side panel */
+html[data-style="plain"] .gl .fb-notes { display:block; margin:-2px 0 8px calc(34px + var(--ind, 0) * .45em); font-size:12px; color:var(--sec); text-decoration:none }
+html[data-style="plain"] .gl .fb-notes::before { content:""; display:inline-block; width:5px; height:5px; border-radius:50%; background:var(--sel-line); opacity:.7; margin:0 6px 1px 0 }
+html[data-style="plain"] .gl .fb-notes:hover { color:var(--act) }
+html[data-style="plain"] .gl .ln.first .mk.m-inask { font-size:12px; margin-top:0; color:var(--needs); font-weight:700 }
+html[data-style="plain"] .gl .ln.first .mk.m-inask::before { display:none }
+
+/* ================================================================ Clinic's own look */
+html[data-style="plain"], html[data-style="plain"] body { background:var(--desk); color:var(--ink) }
+html[data-style="plain"] body { font:14.5px/1.55 var(--f-ui); font-feature-settings:"tnum" 0; letter-spacing:-.003em }
+/* the highlighter is ink on top of the page, not a backdrop under it */
+html[data-style="plain"] #marks { z-index:4; mix-blend-mode:multiply }
+ html[data-style="plain"][data-theme="dark"] #marks { mix-blend-mode:screen } 
+html[data-style="plain"] .app { z-index:auto }
+html[data-style="plain"] button, html[data-style="plain"] input, html[data-style="plain"] textarea, html[data-style="plain"] select { font-family:var(--f-ui) }
+
+/* rail: part of the desk, a quiet index */
+html[data-style="plain"] .rail { background:var(--desk); border-right:1px solid var(--edge); padding:22px 0 22px 18px }
+html[data-style="plain"] .rail h1 { font-size:13px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--sec); margin:2px 0 18px }
+html[data-style="plain"] .add { padding-right:18px }
+html[data-style="plain"] .add button { border-radius:8px; padding:9px 14px; font-weight:600 }
+html[data-style="plain"] .me { padding-right:18px }
+html[data-style="plain"] .me label, html[data-style="plain"] .group h2 { font-size:11px; font-weight:600; letter-spacing:.07em; text-transform:uppercase }
+html[data-style="plain"] .group h2 { margin:0 0 4px; padding-left:0 }
+html[data-style="plain"] .me input { background:var(--paper); border:1px solid var(--edge); border-radius:7px }
+html[data-style="plain"] .row { border-radius:8px 0 0 8px; border-left:0; padding:8px 18px 8px 10px; margin:1px 0 }
+html[data-style="plain"] .row b { font-weight:600; font-size:13.5px }
+html[data-style="plain"] .row span { font-size:12px; line-height:1.4; display:block; display:-webkit-box; -webkit-line-clamp:1; -webkit-box-orient:vertical; overflow:hidden }
+html[data-style="plain"] .row:hover { background:var(--soft) }
+html[data-style="plain"] .row[aria-current="true"] { background:var(--paper); box-shadow:inset 2px 0 0 var(--act), var(--sheet-shadow) }
+html[data-style="plain"] .glrow { padding-left:10px } html[data-style="plain"] .glrow b { font-weight:600; font-size:13px }
+html[data-style="plain"] .glrow span { font-size:12px }
+
+/* controls */
+html[data-style="plain"] button { background:var(--paper); color:var(--ink); border:1px solid var(--edge-2); border-radius:8px; font-weight:500; box-shadow:0 1px 0 rgba(70,56,30,.04) }
+html[data-style="plain"] button:hover { background:var(--paper); border-color:var(--sec) }
+html[data-style="plain"] button:active { transform:translateY(.5px) }
+html[data-style="plain"] button.primary { background:var(--act); border-color:var(--act); color:#fff; box-shadow:0 1px 0 rgba(20,40,70,.18), inset 0 1px 0 rgba(255,255,255,.12) }
+html[data-style="plain"] button.primary:hover { background:var(--act-h); border-color:var(--act-h) }
+html[data-style="plain"] button:focus-visible, html[data-style="plain"] a:focus-visible, html[data-style="plain"] .nv:focus-visible { outline:2px solid var(--act); outline-offset:2px }
+ html[data-style="plain"][data-theme="dark"] button.primary { color:#0F1A26 } 
+html[data-style="plain"] kbd { font-family:var(--f-ui); font-size:10.5px; background:var(--paper); border-color:var(--edge-2); color:var(--sec) }
+
+/* the case header: one clear sentence, then quiet facts */
+html[data-style="plain"] .main:has(.case-grid) { padding:22px 28px 120px }
+html[data-style="plain"] .who { font-size:13px; color:var(--sec); align-items:baseline }
+html[data-style="plain"] .who b { font-size:14.5px; font-weight:700; color:var(--ink); letter-spacing:-.005em }
+html[data-style="plain"] .verdict { font-size:25px; line-height:1.2; font-weight:700; letter-spacing:-.018em; margin:12px 0 6px; color:var(--ink) }
+html[data-style="plain"] .verdict::before { width:9px; height:9px; margin:0 11px 4px 1px }
+html[data-style="plain"] .why { font-size:14px; color:var(--sec); max-width:70ch }
+html[data-style="plain"] .rule, html[data-style="plain"] .confirmed { font-size:12.5px; color:var(--dim); margin:1px 0 }
+html[data-style="plain"] .confirmed b { color:var(--sec); font-weight:600 }
+/* the review reasons: two quiet lines, the rest on hover or focus */
+html[data-style="plain"] .flag { display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; max-width:96ch; margin:8px 0 0;
+  padding:0 0 0 14px; position:relative; color:var(--sec); font-size:12.5px; line-height:1.55; cursor:default }
+html[data-style="plain"] .flag::before { content:""; position:absolute; left:0; top:.55em; width:6px; height:6px; border-radius:50%; background:var(--needs) }
+html[data-style="plain"] .flag:hover, html[data-style="plain"] .flag:focus { -webkit-line-clamp:unset }
+html[data-style="plain"] .prog { border:0; margin:14px 0 0; padding:0; gap:12px }
+html[data-style="plain"] .prog .ticks { gap:3px }
+html[data-style="plain"] .prog .ticks i { width:22px; height:3px; border-radius:3px; background:var(--edge-2) }
+html[data-style="plain"] .prog .ticks i.ok { background:var(--act) } html[data-style="plain"] .prog .ticks i.ask, html[data-style="plain"] .prog .ticks i.inask { background:var(--needs); opacity:1 }
+html[data-style="plain"] .prog .n { font-size:13px; font-variant-numeric:tabular-nums } html[data-style="plain"] .prog .n b { font-weight:700 }
+html[data-style="plain"] #progSign { border-radius:8px; padding:7px 18px; font-weight:600 }
+
+/* three columns: index · the sheet · the slip */
+html[data-style="plain"] .case-grid { grid-template-columns:190px minmax(0, 1fr) 356px; gap:24px; margin-top:20px }
+html[data-style="plain"] .nv-h { font-size:11px; letter-spacing:.07em; text-transform:uppercase; color:var(--dim); margin:6px 0 8px 10px }
+html[data-style="plain"] .rq-nav .nv { font-size:12.5px; line-height:1.38; padding:6px 8px 6px 10px; border-radius:7px; color:var(--sec) }
+html[data-style="plain"] .rq-nav .nv:hover { background:var(--soft); color:var(--ink) }
+html[data-style="plain"] .rq-nav .nv[aria-current] { background:var(--paper); color:var(--ink); box-shadow:inset 2px 0 0 var(--act), var(--sheet-shadow) }
+html[data-style="plain"] .nv .ck { color:var(--act) }
+
+/* the sheet */
+html[data-style="plain"] .gl .doc { background:var(--paper); border:1px solid var(--edge); border-radius:3px; box-shadow:var(--sheet-shadow); padding:30px 0 40px; overflow:visible }
+html[data-style="plain"] .gl .doc-head { border-bottom:1px solid var(--edge); margin:0 44px 18px 52px; padding:0 0 14px; font-size:12px; color:var(--dim) }
+html[data-style="plain"] .gl .doc-head b { font-family:var(--f-doc); font-size:17px; font-weight:600; color:var(--ink); letter-spacing:-.005em }
+html[data-style="plain"] .tv .sec-label { font-family:var(--f-ui); font-size:10.5px; font-weight:700; letter-spacing:.12em; color:var(--dim); padding-left:52px; margin-top:6px }
+html[data-style="plain"] .gl .para { font-family:var(--f-doc); font-size:16.5px; line-height:1.72; padding:0 44px 0 calc(52px + var(--ind, 0) * .45em); margin:0 0 .55em; color:var(--ink); font-optical-sizing:auto; text-wrap:pretty; hanging-punctuation:first }
+html[data-style="plain"] .gl .para > .ln .mk { left:24px }
+html[data-style="plain"] .gl .para > .pg { left:4px }
+html[data-style="plain"] .gl .para > .pg::before { font-family:var(--f-ui) }
+html[data-style="plain"] .tv .ln.heading .tx { font-family:var(--f-doc); font-size:20px; font-weight:600; letter-spacing:-.01em; margin:14px 0 6px }
+html[data-style="plain"] .tv .ln.other .tx, html[data-style="plain"] .tv .ln.gap .tx, html[data-style="plain"] .tv .ln.context .tx { color:var(--sec) }
+html[data-style="plain"] .tv .ln.req .tx { color:var(--ink) }
+html[data-style="plain"] .gl .ln.first .mk::before { width:6px; height:6px }
+html[data-style="plain"] .gl .ln.first .mk.m-acc { color:var(--act); font-family:var(--f-ui) }
+html[data-style="plain"] .gl .rest-fold > summary, html[data-style="plain"] .gl .rest-hint { padding-left:52px; font-family:var(--f-ui); font-size:13px; color:var(--sec) }
+html[data-style="plain"] .gl .fb-notes { margin-left:calc(52px + var(--ind, 0) * .45em); font-family:var(--f-ui) }
+html[data-style="plain"] .gl .para:has(.ln.sel) { box-shadow:inset 2px 0 0 var(--act) }
+html[data-style="plain"] .ask-pill { font-family:var(--f-ui); background:var(--paper); border-color:var(--edge-2); box-shadow:var(--slip-shadow) }
+
+/* the slip: evidence beside the sheet */
+html[data-style="plain"] #side { background:var(--paper); border:1px solid var(--edge); border-radius:10px; box-shadow:var(--slip-shadow); padding:16px 18px 18px }
+html[data-style="plain"] .sp-head { font-size:11.5px; color:var(--dim); letter-spacing:.01em }
+html[data-style="plain"] .sp-words { font-family:var(--f-doc); font-size:16px; line-height:1.55; margin:4px 0 12px }
+html[data-style="plain"] .sp-ruling { font-size:14px; font-weight:700 }
+html[data-style="plain"] #side .evq { padding:8px 10px; margin:10px -10px 0; border-radius:8px }
+html[data-style="plain"] #side .evq:hover { background:var(--soft) }
+html[data-style="plain"] #side .evq q { font-family:var(--f-doc); font-size:15px; line-height:1.55 }
+html[data-style="plain"] #side .evq small { font-size:11.5px; color:var(--dim); margin-top:4px }
+html[data-style="plain"] .evq .side { font-size:10px; letter-spacing:.09em }
+html[data-style="plain"] .sp-act button { padding:8px 16px; font-weight:600 }
+html[data-style="plain"] .sp-acc { font-size:13px }
+html[data-style="plain"] .sp-nav { border-top-color:var(--edge) }
+html[data-style="plain"] #side h2 { font-size:15px; font-weight:700; letter-spacing:-.005em }
+html[data-style="plain"] .pk a:hover { background:var(--soft) }
+html[data-style="plain"] .pk-w { font-size:13px }
+html[data-style="plain"] .draft { font-family:var(--f-doc) }
+html[data-style="plain"] .style-switch { color:var(--dim) }
+
+/* the gate and the other states: cards on the desk */
+html[data-style="plain"] .card, html[data-style="plain"] .stopped, html[data-style="plain"] .cmp-view { background:var(--paper); border:1px solid var(--edge); border-radius:10px; box-shadow:var(--sheet-shadow) }
+html[data-style="plain"] .gcard.on, html[data-style="plain"] .pw.on { border-color:var(--act); box-shadow:inset 3px 0 0 var(--act), var(--slip-shadow) }
+html[data-style="plain"] .gcard h3, html[data-style="plain"] .card h3 { font-family:var(--f-doc); font-size:18px; font-weight:600; letter-spacing:-.005em }
+html[data-style="plain"] .gc-q q { font-family:var(--f-doc) }
+html[data-style="plain"] .stages, html[data-style="plain"] .stg { background:var(--paper); border-color:var(--edge) }
+html[data-style="plain"] .dlg { background:rgba(29,35,43,.28); backdrop-filter:blur(2px) }
+html[data-style="plain"] .dlg-card { background:var(--paper); border-color:var(--edge); box-shadow:0 24px 60px -12px rgba(29,35,43,.35) }
+
+@media (max-width:820px){
+  html[data-style="plain"] .gl .para { padding:0 18px 0 calc(34px + var(--ind, 0) * .45em); font-size:16px }
+  html[data-style="plain"] .gl .doc-head, html[data-style="plain"] .tv .sec-label { margin-left:34px; padding-left:0 }
+  html[data-style="plain"] .gl .para > .ln .mk { left:12px }
+  html[data-style="plain"] .gl .doc { padding:20px 0 28px }
+}
+@media print {
+  html[data-style="plain"] .gl .doc { box-shadow:none; border:0 }
+}
+
+/* proportions: the sheet leads; the index and the slip step back */
+@media (min-width:901px){ html[data-style="plain"] .app { --rw:244px; grid-template-columns:244px 1fr } }
+html[data-style="plain"] .case-grid { grid-template-columns:172px minmax(0, 1fr) 336px; gap:22px }
+@media (max-width:1180px){ html[data-style="plain"] .case-grid { grid-template-columns:minmax(0, 1fr) 320px } }
+@media (max-width:820px){ html[data-style="plain"] .case-grid { grid-template-columns:minmax(0, 1fr) } }
+html[data-style="plain"] .row, html[data-style="plain"] .row:hover { border:0; box-shadow:none }
+html[data-style="plain"] .row[aria-current="true"] { box-shadow:inset 2px 0 0 var(--act), var(--sheet-shadow) }
+html[data-style="plain"] .group > div > .row, html[data-style="plain"] #groups .row { background:transparent }
+html[data-style="plain"] #groups .row[aria-current="true"] { background:var(--paper) }
+html[data-style="plain"] .rq-nav .nv { border:0 !important; margin:0 0 2px }
+html[data-style="plain"] .rq-nav .nv .nv-w { display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden }
+html[data-style="plain"] .gl .doc-head span, html[data-style="plain"] .gl .doc-head small { color:var(--dim) }
+html[data-style="plain"] button.row, html[data-style="plain"] button.nv { background:transparent; border:0; box-shadow:none; border-radius:8px; transform:none }
+html[data-style="plain"] button.row:hover, html[data-style="plain"] button.nv:hover { background:var(--soft) }
+html[data-style="plain"] button.row[aria-current="true"], html[data-style="plain"] button.nv[aria-current] { background:var(--paper); box-shadow:inset 2px 0 0 var(--act), var(--sheet-shadow) }
+html[data-style="plain"] button.row { margin-right:14px; width:calc(100% - 14px) }
+@media (min-width:821px){ html[data-style="plain"] #side { top:16px } }
+@media (max-width:820px){
+  html[data-style="plain"] #side { border-radius:16px 16px 0 0; border-bottom:0; box-shadow:0 -10px 30px -8px rgba(70,56,30,.22); padding:10px 18px 18px }
+  html[data-style="plain"] #side::before { content:""; display:block; width:36px; height:4px; border-radius:4px; background:var(--edge-2); margin:0 auto 10px }
+  html[data-style="plain"] .gl .doc { border-radius:2px; margin:0 -4px }
+}
+/* phone, any screen but the landing (.app.slim): the rail folds to a slim bar (the queue is a desk task) */
+@media (max-width:820px){
+  html[data-style="plain"] .app.slim .rail { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:12px 16px; border-right:0; border-bottom:1px solid var(--edge) }
+  html[data-style="plain"] .app.slim .rail h1 { margin:0 }
+  html[data-style="plain"] .app.slim .rail .add { margin:0; padding:0 } html[data-style="plain"] .app.slim .rail .add button { width:auto; padding:6px 12px; font-size:13px }
+  html[data-style="plain"] .app.slim .rail .me, html[data-style="plain"] .app.slim .rail .group, html[data-style="plain"] .app.slim .rail #groups { display:none }
+}
+
+/* accepted: a settled, deeper ink and a fine rule under it, so "locked in" reads at a glance */
+
+/* the index: the current item is enough; no heavy focus box */
+html[data-style="plain"] button.nv:focus-visible { outline:0 }
+html[data-style="plain"] button.nv[aria-current]:focus-visible { box-shadow:inset 2px 0 0 var(--act), 0 0 0 1.5px color-mix(in srgb, var(--act) 35%, transparent), var(--sheet-shadow) }
+/* the key hint inside a primary button */
+html[data-style="plain"] button.primary kbd, html[data-style="plain"] .sp-act button.primary kbd { background:transparent; color:inherit; border-color:color-mix(in srgb, currentColor 45%, transparent); opacity:.85; margin-left:8px }
+/* evidence: the label sits above the quote; the quote gets the full width with a fine rule */
+html[data-style="plain"] #side .evq { display:block; padding:8px 10px 8px 14px; margin:12px -4px 0; border-left:2px solid var(--edge-2); border-radius:0 8px 8px 0 }
+html[data-style="plain"] #side .evq .side { display:block; background:none; padding:0; margin:0 0 4px; font-size:10px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--ready) }
+html[data-style="plain"] #side .evq.against { border-left-color:var(--no) } html[data-style="plain"] #side .evq.against .side { color:var(--no) }
+html[data-style="plain"] #side .evq:not(.against) { border-left-color:color-mix(in srgb, var(--ready) 55%, transparent) }
+html[data-style="plain"] .rq-nav button.nv:focus-visible { outline:0 }
+html[data-style="plain"] .rq-nav button.nv:not([aria-current]):focus-visible { box-shadow:0 0 0 1.5px color-mix(in srgb, var(--act) 40%, transparent) }
+
+/* ================================================================ Plain's changes over Clinic */
+
+html[data-style="plain"] body { font-size:var(--t-m); line-height:1.55 }
+/* the policy: same face as everything else, a calm reading size */
+html[data-style="plain"] .gl .para { font-family:var(--f-ui); font-size:var(--t-l); line-height:1.7; letter-spacing:-.003em; color:var(--ink) }
+html[data-style="plain"] .tv .ln.heading .tx { font-family:var(--f-ui); font-size:18px; font-weight:600; letter-spacing:-.01em }
+html[data-style="plain"] .gl .doc-head b, html[data-style="plain"] .gcard h3, html[data-style="plain"] .card h3 { font-family:var(--f-ui); font-size:var(--t-m); font-weight:600 }
+html[data-style="plain"] .sp-words { font-family:var(--f-ui); font-size:var(--t-m); line-height:1.55; font-weight:500 }
+html[data-style="plain"] #side .evq q, html[data-style="plain"] .gc-q q, html[data-style="plain"] .draft { font-family:var(--f-ui); font-size:var(--t-s); line-height:1.55 }
+/* the scale, applied */
+html[data-style="plain"] .verdict { font-size:var(--t-xl); font-weight:600 }
+html[data-style="plain"] .who, html[data-style="plain"] .why { font-size:var(--t-s) } html[data-style="plain"] .who b { font-size:var(--t-m); font-weight:600 }
+html[data-style="plain"] .rule, html[data-style="plain"] .confirmed, html[data-style="plain"] .flag, html[data-style="plain"] .prog .n,
+html[data-style="plain"] .rq-nav .nv, html[data-style="plain"] .row span, html[data-style="plain"] .sp-head, html[data-style="plain"] #side .evq small,
+html[data-style="plain"] .pk-s, html[data-style="plain"] .gl .doc-head { font-size:var(--t-xs) }
+html[data-style="plain"] .row b, html[data-style="plain"] #side, html[data-style="plain"] .pk-w, html[data-style="plain"] .sp-ruling, html[data-style="plain"] .sp-acc,
+html[data-style="plain"] .sp-act button, html[data-style="plain"] #side button { font-size:var(--t-s) }
+html[data-style="plain"] #side h2 { font-size:var(--t-m); font-weight:600 }
+html[data-style="plain"] .verdict, html[data-style="plain"] .row b, html[data-style="plain"] .who b, html[data-style="plain"] .sp-ruling, html[data-style="plain"] #progSign,
+html[data-style="plain"] .sp-act button, html[data-style="plain"] .add button { font-weight:600 }
+html[data-style="plain"] .rail h1, html[data-style="plain"] .me label, html[data-style="plain"] .group h2, html[data-style="plain"] .nv-h,
+html[data-style="plain"] .tv .sec-label, html[data-style="plain"] #side .evq .side { font-size:11px; font-weight:600; letter-spacing:.06em }
+/* attention: missing and contradicted words also carry a dot in the gutter and a darker ink; documented stays quiet */
+html[data-style="plain"] .gl mark.q.t-miss, html[data-style="plain"] .gl mark.q.t-bad { color:var(--ink) }
+html[data-style="plain"] mark.q.acc, html[data-style="plain"] mark.q.t-alt { background:none }
+
+/* review reasons are already short whole sentences with "N more": never clamp them mid-word */
+html[data-style="plain"] .flag.reasons { display:block; -webkit-line-clamp:unset; overflow:visible }
+/* the landing: the first thing anyone sees. A clean sheet to drop on, and the three steps in one quiet row */
+html[data-style="plain"] .landing { padding-top:10vh; max-width:720px }
+html[data-style="plain"] .drop.big { background:var(--paper); border:1px solid var(--edge); border-radius:12px; box-shadow:var(--sheet-shadow); padding:52px 28px 46px; transition:border-color .12s, box-shadow .12s, transform .12s }
+html[data-style="plain"] .drop.big:hover, html[data-style="plain"] .drop.big.over { border-color:var(--act); box-shadow:0 0 0 4px var(--act-soft), var(--sheet-shadow) }
+html[data-style="plain"] .drop.big.over { transform:scale(1.005) }
+html[data-style="plain"] .drop.big b { font-size:var(--t-l); font-weight:600; margin:14px 0 4px }
+html[data-style="plain"] .drop.big span { font-size:var(--t-s); color:var(--sec) }
+html[data-style="plain"] .drop-doc { display:block; width:34px; height:42px; margin:0 auto; border:1.5px solid var(--dim); border-radius:3px; position:relative; background:linear-gradient(var(--dim), var(--dim)) 7px 12px / 18px 1.5px no-repeat, linear-gradient(var(--dim), var(--dim)) 7px 18px / 14px 1.5px no-repeat, linear-gradient(rgb(var(--pen-miss)), rgb(var(--pen-miss))) 6px 23px / 20px 6px no-repeat, linear-gradient(var(--dim), var(--dim)) 7px 32px / 16px 1.5px no-repeat }
+html[data-style="plain"] .drop.big:hover .drop-doc, html[data-style="plain"] .drop.big.over .drop-doc { border-color:var(--act) }
+html[data-style="plain"] .how { list-style:none; counter-reset:how; display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:18px; padding:0; margin:26px 4px 0 }
+html[data-style="plain"] .how li { counter-increment:how; font-size:var(--t-s); line-height:1.45 }
+html[data-style="plain"] .how li::before { content:counter(how); display:inline-grid; place-items:center; width:20px; height:20px; border-radius:50%; border:1px solid var(--edge-2); color:var(--sec); font-size:11px; font-weight:600; margin-bottom:8px }
+html[data-style="plain"] .how b { display:block; font-weight:600; color:var(--ink) } html[data-style="plain"] .how span { display:block; color:var(--sec); margin-top:2px }
+@media (max-width:640px){ html[data-style="plain"] .how { grid-template-columns:1fr; gap:12px } }
+/* the check running: the stages on a sheet, the current one breathing very slightly is NOT used; it just reads blue */
+html[data-style="plain"] .runlines { background:var(--paper); border:1px solid var(--edge); border-radius:12px; box-shadow:var(--sheet-shadow); padding:14px 22px; max-width:760px; font-size:var(--t-m) }
+html[data-style="plain"] .runlines .rl { padding:7px 0; border-bottom:1px solid var(--edge) } html[data-style="plain"] .runlines .rl:last-child { border-bottom:0 }
+html[data-style="plain"] .runlines .rl.running { font-weight:600 }
+/* the signature stamp, a touch more like a form stamp */
+html[data-style="plain"] .sigblock { border-color:color-mix(in srgb, var(--ready) 45%, transparent); color:var(--sec); background:color-mix(in srgb, var(--ready-bg) 60%, transparent) }
+html[data-style="plain"] .sigblock .sig-l { color:var(--ready) }
+html[data-style="plain"] .sigblock { display:flex; width:fit-content; max-width:100%; flex-wrap:wrap; margin:12px 0 4px; padding:5px 12px; border-radius:4px; font-size:var(--t-xs) }
+/* the requirement open in the panel: a fine blue rule under its words, so "which one am I on" never needs a search */
+html[data-style="plain"] .gl mark.q.sel { box-shadow:inset 0 -2px 0 var(--act); border-radius:0 }
+
+/* ================================================================ the policy on the page (v1.1-ui)
+   No sheet: the guideline's text sits straight on the desk with generous margins and a comfortable measure, so the
+   page reads like a printed policy, not a box in a box. Nothing that rests casts a shadow; what a person acts on (the
+   side panel, the gate's cards) keeps one hairline edge on the paper tone. Floating things (the ask pill, the dialog,
+   the phone's bottom sheet) keep their lift. */
+/* (nothing that rests casts a shadow: the --sheet-shadow / --slip-shadow reset is in static/theme.css) */
+html[data-style="plain"] .gl .doc { background:transparent; border:0; border-radius:0; box-shadow:none; padding:4px 0 48px }
+/* the measure: ~68ch of the 16.5px policy text (Public Sans' "0" is about 9.4px) plus the 52px gutter and 44px margin */
+html[data-style="plain"] .gl .doc { max-width:740px }
+html[data-style="plain"] #side { border-color:var(--edge); box-shadow:none }
+html[data-style="plain"] .ask-pill { box-shadow:0 4px 16px rgba(29,35,43,.10) }
+@media (max-width:820px){
+  html[data-style="plain"] .gl .doc { margin:0; padding:0 0 28px }
+  html[data-style="plain"] #side { box-shadow:0 -10px 30px -8px rgba(70,56,30,.22) }
+  html[data-style="plain"][data-theme="dark"] #side { box-shadow:0 -10px 30px -8px rgba(0,0,0,.6) }
+}
+/* the rail's fold toggle sits at the top right; the light / dark switch steps left of it */
+@media (min-width:901px){ html[data-style="plain"] .theme-btn, html[data-style="clinic"] .theme-btn { right:50px } }
+/* phone, case open: the light / dark switch sits in the folded bar beside "Check a chart", not on top of it */
+@media (max-width:820px){
+  html[data-style="plain"] .app.slim .rail h1, html[data-style="clinic"] .app.slim .rail h1 { flex:1 }
+  html[data-style="plain"] .app.slim .rail .theme-btn, html[data-style="clinic"] .app.slim .rail .theme-btn { position:static; margin-left:auto }
+  html[data-style="plain"] .app.slim .rail .add, html[data-style="clinic"] .app.slim .rail .add { order:1 }
+}
+
+/* Soft, the default theme, is in static/theme.css with the other tokens. */
+
+/* the proof thread (static/review-thread.js): a pencil bracket in the sheet's margin and a fine thread to the quote */
+#proofThread { display:none }
+html[data-style="plain"] #proofThread, html[data-style="clinic"] #proofThread { display:block; position:fixed; inset:0; width:100vw; height:100vh; z-index:6; pointer-events:none; overflow:visible; opacity:0; transition:opacity .14s ease-out }
+html[data-style="plain"] #proofThread.show, html[data-style="clinic"] #proofThread.show { opacity:1 }
+#proofThread .pt-bracket, #proofThread .pt-thread { fill:none; stroke:var(--act); stroke-width:1.25; stroke-linecap:round; stroke-linejoin:round }
+#proofThread .pt-bracket { opacity:.55 } #proofThread .pt-thread { opacity:.42 }
+#proofThread .pt-dot { fill:var(--act); opacity:.6 } #proofThread .pt-end { opacity:.75 }
+#proofThread.unproven .pt-bracket, #proofThread.unproven .pt-thread { stroke:var(--needs) }
+#proofThread.unproven .pt-thread { stroke-dasharray:2 5; opacity:.6 }
+#proofThread.unproven .pt-dot { fill:var(--needs) } #proofThread.unproven .pt-end { fill:none; stroke:var(--needs); stroke-width:1.25 }
+@media print { #proofThread { display:none !important } }
+
+/* the tree view sits on the page like the policy does: the same left edge as the guideline's text */
+@media (min-width:821px){ html[data-style="plain"] #glDoc .tree-doc { max-width:740px; padding:4px 44px 48px 52px } }
+
+/* ================================================================ minimalism: say each thing once
+   The page used to list the requirements three times, the progress three times, sign-off twice and the guideline's
+   name three times. Each now lives in one place: the requirements in the index, the progress and Sign off in the
+   header, the guideline's name in the header's facts line. The slip at rest is only what the packet adds. */
+/* the slip at rest: no second list, no second count, no second (disabled) Sign off */
+html[data-style="plain"] #side .pk-panel .pk-list, html[data-style="plain"] #side .pk-panel > .pk-sub { display:none }
+html[data-style="plain"] #side #signBtn[disabled], html[data-style="plain"] #side #signName:not(:placeholder-shown) { display:none }
+html[data-style="plain"] #side .none-removed { display:none }
+/* the sheet: no repeated title, no section label that repeats the heading under it */
+html[data-style="plain"] .gl .doc-head > b, html[data-style="plain"] .gl .doc-head > .doc-kicker { display:none }
+html[data-style="plain"] .gl .doc-head { border-bottom:0; padding-bottom:0; margin-bottom:6px }
+html[data-style="plain"] .gl .doc-head:not(:has(.doc-hint, .sigblock)) { display:none }
+html[data-style="plain"] .gl div.sec:has(> .para .ln.heading) > .sec-label { display:none }
+/* key hints appear when you reach for them (hover or focus in the index), never as standing furniture */
+html[data-style="plain"] .view-key { display:none }
+/* the rail during a case: the queue only; the guideline list is for the landing */
+html[data-style="plain"] .app:has(.case-grid) #glGroup { display:none }
+/* the foot of the page: nothing when there is nothing to say */
+html[data-style="plain"] .fb-list:not(:has(.it)) { display:none }
+html[data-style="plain"] .style-switch { opacity:.45 } html[data-style="plain"] .style-switch:hover { opacity:1 }
+/* the slip at rest has nothing to hold up: no card, just a quiet note in the margin until a requirement opens or the
+   case is ready to sign */
+@media (min-width:821px){
+  html[data-style="plain"] #side:has(> .pk-panel:not(.ready)) { background:transparent; border-color:transparent; box-shadow:none }
+  html[data-style="plain"] #side .pk-panel:not(.ready) h2 { font-size:var(--t-s); color:var(--sec); font-weight:600 }
+  html[data-style="plain"] #side .pk-panel:not(.ready) .sp-head { display:none }
+}
+html[data-style="plain"] .runlines .rl-bar i, html[data-style="clinic"] .runlines .rl-bar i, html[data-style="marker"] .runlines .rl-bar i { transition-property:width !important; transition-duration:1s !important; transition-timing-function:linear !important }
+
+/* ================================================================ the policy, given room (tweak: wider and more spacious)
+   The middle column takes width from the margins around it (the index, the slip, the page's own side padding, the
+   gutters) and the text reads up to ~84ch; a taller line, more air between paragraphs and list items, and a wash
+   that sits a little proud of the words, so each requirement reads as its own unit. Tokens: --read-lh, --read-gap,
+   --mark-pad-x / -y in static/theme.css. */
+@media (min-width:1181px){
+  html[data-style="plain"] .main:has(.case-grid) { padding-left:20px; padding-right:20px }
+  html[data-style="plain"] .case-grid { grid-template-columns:176px minmax(0, 1fr) 312px; gap:20px }
+}
+html[data-style="plain"] .gl .doc { max-width:none }
+html[data-style="plain"] .gl .para { line-height:var(--read-lh); margin:0 0 var(--read-gap); padding-right:12px; max-width:calc(84ch + 64px + var(--ind, 0) * .45em); box-sizing:border-box }
+html[data-style="plain"] .gl .para > .ln .mk { margin-top:.74em }
+html[data-style="plain"] .gl .para > .pg { margin-top:.56em }
+html[data-style="plain"] .tv .ln.heading .tx { margin:18px 0 10px }
+html[data-style="plain"] .gl mark.q:not(.struck) { padding:var(--mark-pad-y) 0; -webkit-box-decoration-break:clone; box-decoration-break:clone; border-radius:3px }
+@media (min-width:821px){ html[data-style="plain"] #glDoc .tree-doc { max-width:calc(84ch + 64px) } }
+@media (max-width:820px){ html[data-style="plain"] .gl .para { padding-right:6px; line-height:calc(var(--read-lh) - .04) } }
+
+/* ================================================================ the packet: a dark-blue box under "Requirements"
+   The left column is the requirements list as it was (no frame, no fill); the packet is a separate box under it in
+   the theme's dark blue that grows as requirements are accepted (the rows move from the list into it; review.css
+   draws the box, the tokens --packet-bg / --packet-ink / --packet-dim / --packet-cur are in static/theme.css). The
+   slip at rest no longer names a second packet: only its actions. */
+@media (min-width:1181px){
+  html[data-style="plain"] #side .pk-panel:not(.ready) > h2 { display:none }
+}
+/* a page that starts with a paragraph: its page label sits just above the paragraph, so the paragraph's own mark
+   (✓, dot) in the gutter never lands on "p. 2" */
+html[data-style="plain"] .gl .para > .pg:has(+ .ln.first) { margin-top:-15px }

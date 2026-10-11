@@ -1,0 +1,220 @@
+{
+ "file": "cigna-0045-blepharoplasty-reconstructive-eyelid-surgery-and-b.pdf",
+ "treatment": "blepharoplasty",
+ "payer": "cigna",
+ "doc_kind": "medical coverage policy (Cigna Coverage Policy)",
+ "lines_of_business": [
+  "Health benefit plans administered by Cigna Companies; 'Coverage for blepharoplasty varies across plans. Refer to the customer's benefit plan document'"
+ ],
+ "effective_or_revised": "Effective 6/15/2026; next review 4/15/2027 (library metadata 2026-04-15 is the earlier annual-review date); focused review 6/15/2026 revised statements 'for clarity'",
+ "sections_in_order": [
+  "Instructions for Use",
+  "Overview",
+  "Coverage Policy",
+  "Coding Information",
+  "General Background",
+  "Health Equity Considerations",
+  "References",
+  "Revision Details"
+ ],
+ "criteria_location": "Coverage Policy, pp.2-4 (five procedure paragraphs plus a combination paragraph). General Background pp.5-10 contains measurements and recommended practice (MRD 1, visual field, photographs) that mirror but sometimes differ from the criteria.",
+ "procedures_covered": [
+  "Upper eyelid reconstructive blepharoplasty 15822, 15823",
+  "Ptosis repair 67901-67908 (adult and child <= 7 pathways)",
+  "Brow lift 67900",
+  "Combination of procedures",
+  "Upper/lower eyelid retraction 67911",
+  "Lower eyelid reconstructive blepharoplasty 15820, 15821"
+ ],
+ "logic": {
+  "top_level": "pathways; upper blepharoplasty = ANY of five indications where the first has its own ALL; ptosis = ALL (adult) or functional photo (child); brow lift = ALL with nested BOTH; combination = per-procedure criteria AND three additional",
+  "max_nesting_depth": 4,
+  "k_of_n": [
+   {
+    "k": 1,
+    "n": 5,
+    "quote": "An UPPER eyelid reconstructive blepharoplasty ... is considered medically necessary for ANY of the following indications when the associated criteria are met"
+   },
+   {
+    "k": 1,
+    "n": 3,
+    "quote": "A lower eyelid reconstructive blepharoplasty ... is considered medically necessary for ANY of the following indications when there is a functional visual impairment as documented by preoperative frontal photographs"
+   }
+  ],
+  "exclusions_or_contraindications": "Cosmetic exclusion sentences: 'Upper and/or lower eyelid blepharoplasty in the absence of a functional impairment or is being performed for the sole purpose of improving appearance is considered cosmetic'. Background says active eye disease, dry eyes, thyroid disease 'are contraindications to eyelid surgery' but this is not in the Coverage Policy criteria.",
+  "initial_vs_repeat": "None.",
+  "and_or_ambiguity": [
+   {
+    "quote": "upper visual field loss of at least 20 degrees or 30% on visual field testing that is corrected by at least 20 degrees or 30% on visual field testing when the upper lid margin is elevated by taping",
+    "why_ambiguous": "'20 degrees or 30%' alternative units (absolute or relative) both for baseline loss and for correction; not stated whether the unit must match."
+   },
+   {
+    "quote": "light reflex in the cornea with the head upright and the individual looking straight ahead (i.e., not tilted) OR encroachment of the upper eyelid into the visual field which would prevent the corneal light reflex",
+    "why_ambiguous": "Inside a BOTH list: the first BOTH item is an OR of two photo findings; flattened bullets lose the nesting."
+   },
+   {
+    "quote": "ANY of the following indications when the associated criteria are met",
+    "why_ambiguous": "Only the first indication has an explicit ALL; others (prosthesis, blepharospasm) have no stated criteria beyond the label."
+   },
+   {
+    "quote": "Surgical correction of UPPER or LOWER eyelid retraction ... is considered medically necessary when there is functional impairment or failure of medical management of symptoms.",
+    "why_ambiguous": "'or' between impairment and failed management; no threshold for either."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "symptom",
+   "quote": "individual complains of interference with vision or visual field, difficulty reading due to upper eyelid drooping, looking through eyelashes or seeing upper eyelid skin",
+   "where": "blepharoplasty, ptosis, brow lift"
+  },
+  {
+   "kind": "visual field threshold",
+   "quote": "upper visual field loss of at least 20 degrees or 30% on visual field testing that is corrected by at least 20 degrees or 30% ... by taping",
+   "where": "blepharoplasty, ptosis, brow lift"
+  },
+  {
+   "kind": "photographs",
+   "quote": "preoperative frontal photographs demonstrate BOTH of the following: light reflex in the cornea ... findings consistent with visual field loss",
+   "where": "blepharoplasty, ptosis"
+  },
+  {
+   "kind": "measurement",
+   "quote": "the upper eyelid margin reflex distance 1 (MRD1) is ≤ 2.0 mm",
+   "where": "ptosis repair"
+  },
+  {
+   "kind": "age",
+   "quote": "infant or child less than or equal to seven years of age",
+   "where": "ptosis pathway"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "blepharochalasis, dermatochalasis or pseudoptosis; anophthalmic prosthesis; painful blepharospasm refractory to medical management (e.g., botulinum toxin); thyroid or nerve palsy; trauma/tumor/ablative surgery",
+   "where": "upper blepharoplasty ANY"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "painful blepharospasm that is refractory to medical management (e.g., botulinum toxin injections)",
+   "where": "upper blepharoplasty"
+  },
+  {
+   "kind": "brow-specific",
+   "quote": "visual field impairment cannot be corrected by upper lid blepharoplasty or blepharoptosis repair alone",
+   "where": "brow lift"
+  },
+  {
+   "kind": "anatomy",
+   "quote": "the eyebrow(s) positioned below the supraorbital rim",
+   "where": "brow lift photos"
+  },
+  {
+   "kind": "combination",
+   "quote": "photos and visual field testing demonstrate visual impairment that cannot be addressed by one procedure alone",
+   "where": "combination"
+  },
+  {
+   "kind": "lower lid",
+   "quote": "lower eyelid edema ... unresponsive to conservative medical management; corneal and/or conjunctival injury or disease due to entropion or epiblepharon; lid laxity with uncontrolled tearing and/or irritation",
+   "where": "lower blepharoplasty ANY"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "upper visual field loss",
+   "value": ">= 20 degrees or >= 30%",
+   "unit": "degrees / %",
+   "quote": "upper visual field loss of at least 20 degrees or 30%"
+  },
+  {
+   "quantity": "correction with taping",
+   "value": ">= 20 degrees or >= 30%",
+   "unit": "degrees / %",
+   "quote": "corrected by at least 20 degrees or 30% on visual field testing"
+  },
+  {
+   "quantity": "MRD1",
+   "value": "<= 2.0",
+   "unit": "mm",
+   "quote": "the upper eyelid margin reflex distance 1 (MRD1) is ≤ 2.0 mm"
+  },
+  {
+   "quantity": "age (ptosis child pathway)",
+   "value": "<= 7",
+   "unit": "years",
+   "quote": "infant or child less than or equal to seven years of age"
+  }
+ ],
+ "time_windows": [],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Yes, more tightly than others: CPT codes are placed in tables per procedure under the heading 'Considered Medically Necessary when criteria in the applicable policy statements listed above are met' and 15820-15823 carry a dagger note that they are cosmetic without functional impairment. Criteria paragraphs cite the CPT code in parentheses.",
+  "non_covered_code_lists": "None as a list; dagger notes."
+ },
+ "external_dependencies": [
+  {
+   "what": "Delegated vendor guidelines in certain markets",
+   "quote": "In certain markets, delegated vendor guidelines may be used to support medical necessity and other coverage determinations."
+  },
+  {
+   "what": "Benefit plan document controls",
+   "quote": "a customer's benefit plan document always supersedes the information in the Coverage Policies"
+  },
+  {
+   "what": "Related botulinum toxin policies",
+   "quote": "Botulinum Toxins - Botox ... Tissue-Engineered Skin Substitutes"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Functional vs cosmetic",
+   "definition_quote": "Cosmetic surgery is an attempt to improve the appearance of structures or tissues that are functionally and histologically normal."
+  },
+  {
+   "term": "MRD1",
+   "definition_quote": "Upper eyelid MRD1 is the distance from the upper eyelid to the corneal light reflex which approximates the center of the pupil and the visual axis."
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "individual complains of interference with vision or visual field",
+   "problem": "Patient report."
+  },
+  {
+   "quote": "findings consistent with visual field loss documented on visual field testing",
+   "problem": "Photo-to-field concordance is a judgment."
+  },
+  {
+   "quote": "a severe physical deformity or disfigurement which is causing functional visual impairment",
+   "problem": "'severe' undefined."
+  },
+  {
+   "quote": "unresponsive to conservative medical management",
+   "problem": "No duration or treatment named."
+  },
+  {
+   "quote": "functional impairment or failure of medical management of symptoms",
+   "problem": "No threshold."
+  }
+ ],
+ "extraction_hazards": [
+  "Bullet glyphs and wrapped photograph sub-items ('light reflex ...' lines) lose nesting; the lower-eyelid list is printed with no spacing ('•lower eyelid edema').",
+  "Policy statements are interleaved with dagger-marked notes under the code tables.",
+  "General Background includes recommended values (visual field 'minimum of at least 20 degrees or 30%') that read like criteria.",
+  "Page header 'Medical Coverage Policy: 0045' on each page.",
+  "Instructions for Use boilerplate (about a page) before the criteria."
+ ],
+ "interesting_structures": [
+  "Child pathway (<= 7 years) with a photo-only functional criterion.",
+  "Brow lift requires proof the field cannot be fixed by lid surgery alone (sequencing logic).",
+  "Combination rule: criteria for each procedure plus three additional criteria.",
+  "Retraction surgery criterion has no numeric threshold at all.",
+  "Dual-unit visual field threshold (20 degrees or 30%).",
+  "Revision details show 6/15/2026 'focused review' rewrote the upper blepharoplasty, ptosis, brow lift and combination statements 'for clarity'."
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "why": "Deep nesting (ANY over ALL over BOTH over OR), dual-unit thresholds, and pathways by age and by procedure; photo-concordance criteria are judgment calls."
+ }
+}

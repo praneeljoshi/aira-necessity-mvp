@@ -1,0 +1,110 @@
+{
+ "file": "bcbsm-hypoglossal-nerve-stimulation-for-osa.pdf",
+ "treatment": "sleep-apnea-surgery",
+ "payer": "Blue Cross Blue Shield of Michigan / Blue Care Network (Medicare Advantage)",
+ "doc_kind": "Medicare Advantage policy (title in PDF: 'Obstructive Sleep Apnea and Snoring - Surgical Treatment - Medicare Advantage'; file is named hypoglossal-...)",
+ "lines_of_business": [
+  "Medicare Plus Blue (Medicare Advantage)",
+  "BCN Advantage"
+ ],
+ "effective_or_revised": "UM Committee approval 5/20/2026; Effective 6/20/2026 (6 pages)",
+ "sections_in_order": [
+  "Description",
+  "Related Medical Coverage Policies",
+  "Policy Guidelines",
+  "Coverage Guidance",
+  "CMS Guidance table (NCD/LCD/LCA by MAC)",
+  "Code table",
+  "MAC Jurisdictions",
+  "Important Reminder",
+  "Policy History"
+ ],
+ "criteria_location": "There are NO clinical criteria in this document. It is a pointer: CMS NCD 160.7 and the MAC LCDs/LCAs (e.g. WPS L34526/A56905 surgical OSA; L38528 HGNS; First Coast L38398; etc.) are applied first and BCBSM internal criteria only 'when CMS guidance is silent'. The only clinical statement is in the Description: 'Certain surgical procedures have been established as safe and effective for the treatment of clinically significant obstructive sleep apnea (OSA) when conservative therapies or CPAP have failed.'",
+ "procedures_covered": [
+  "Surgical treatment of OSA and snoring (UPPP, mandibular/maxillary osteotomy, genioplasty, hyoid, tongue base, HGNS, cryolysis) - by code list only",
+  "DISE (42975)"
+ ],
+ "logic": {
+  "top_level": "other: delegation. Hierarchy: CMS statutes/NCD/LCD/LCA first, internal criteria only if silent",
+  "max_nesting_depth": 1,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "none stated; 'For any code associated with a product or service determined to be noncovered by policy ... medical record review, including prior authorization, will not be required.'",
+  "initial_vs_repeat": "none",
+  "and_or_ambiguity": [
+   {
+    "quote": "when conservative therapies or CPAP have failed",
+    "why_ambiguous": "Only clinical condition stated; 'conservative therapies or CPAP' is not defined and sits in the Description, not a criteria list."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "other (delegation to CMS LCDs)",
+   "quote": "CMS Medicare statutes, regulations, manuals, National Coverage Determinations (NCDs), Local Coverage Determinations (LCDs), Local Coverage Articles (LCAs) ... provide the clinical guidelines for coverage determinations",
+   "where": "Policy Guidelines p.1"
+  },
+  {
+   "kind": "jurisdiction rule",
+   "quote": "Apart from durable medical equipment (DME), Medicare Administrative Contractor (MAC) jurisdiction for the purpose of clinical determination is based upon place of service",
+   "where": "Coverage Guidance p.2"
+  },
+  {
+   "kind": "conservative therapy (vague)",
+   "quote": "when conservative therapies or CPAP have failed",
+   "where": "Description"
+  }
+ ],
+ "thresholds": [],
+ "time_windows": [],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Code table of ~30 CPT/HCPCS (21120-21199, 21685, 42140, 42145, 42975, 64582-64584, 0978T-0980T, 41512, 41530, 42299, S2080); no criteria to tie them to.",
+  "non_covered_code_lists": "S2080 flagged ** 'Not valid for Medicare purposes'"
+ },
+ "external_dependencies": [
+  {
+   "what": "CMS NCD 160.7 Electrical Nerve Stimulators",
+   "quote": "160.7- Electrical Nerve Stimulators"
+  },
+  {
+   "what": "MAC-specific LCDs for HGNS and surgical OSA",
+   "quote": "WPS L34526, A56905 - Surgical Treatment of Obstructive Sleep Apnea (OSA) ... First Coast L38398, A56953 - Hypoglossal Nerve Stimulation"
+  },
+  {
+   "what": "Another BCBSM internal policy",
+   "quote": "Obstructive Sleep Apnea and Snoring - Surgical Treatment To access this policy, please visit the BCBSM Medical Policy Router Search page"
+  },
+  {
+   "what": "Coverage hierarchy policy",
+   "quote": "BCBSM Medicare Advantage Coverage Determination Hierarchy policy"
+  }
+ ],
+ "definitions_that_change_meaning": [],
+ "vague_terms": [
+  {
+   "quote": "Certain surgical procedures have been established as safe and effective",
+   "problem": "which? no list tied to criteria"
+  },
+  {
+   "quote": "internal coverage criteria should only be applied when CMS guidance is silent, incomplete, or insufficient for a code",
+   "problem": "'silent, incomplete, or insufficient' is a judgment"
+  }
+ ],
+ "extraction_hazards": [
+  "Not a criteria document: a naive extractor will fabricate a tree from the Description sentence or the code table",
+  "Multi-column CMS guidance table flattened with MAC names, LCD numbers and article numbers interleaved",
+  "File name says hypoglossal nerve stimulation but the document is the general surgical OSA/snoring MA policy",
+  "Code table split across pages"
+ ],
+ "interesting_structures": [
+  "Pure delegation/hierarchy policy (CMS first, internal criteria as fallback)",
+  "Jurisdiction depends on place of service for non-DME and on member residence for DME",
+  "Pre-service review waived for codes already non-covered"
+ ],
+ "fit_to_tree": {
+  "score": 5,
+  "scale": "1 = all/any/not expresses it cleanly ... 5 = needs new constructs or human judgment",
+  "why": "There is nothing to build a tree from; real criteria live in external LCDs (one per MAC) and an unseen BCBSM internal policy. A checker would have to fetch the right LCD by jurisdiction first."
+ }
+}

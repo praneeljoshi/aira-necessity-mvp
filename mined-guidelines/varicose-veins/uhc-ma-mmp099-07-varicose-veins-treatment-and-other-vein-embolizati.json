@@ -1,0 +1,19 @@
+{
+  "payer": "UnitedHealthcare Medicare Advantage",
+  "payer_key": "uhc-ma",
+  "treatment": "varicose-veins",
+  "title": "Varicose Veins Treatment and Other Vein Embolization Procedures",
+  "policy_number": "MMP099.07",
+  "effective": "09/01/2024",
+  "url": "https://uhcprovider.com/content/dam/provider/docs/public/policies/medadv-mp/varicose-veins-treatment-other-vein-embolization-procedures.pdf",
+  "final_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/medadv-mp/varicose-veins-treatment-other-vein-embolization-procedures.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "uhc-ma-mmp099-07-varicose-veins-treatment-and-other-vein-embolizati.pdf",
+  "sha256": "46f6995fb3530757a658de649c9d5e4e9f1481cb093bee47be68bfabeeb0cfbd",
+  "pages": 4,
+  "bytes": 319980,
+  "retrieved": "2026-10-09",
+  "printed_date": "Text says Policy MMP099.11, last committee approval June 11, 2025, effective September 1, 2026. Library metadata calls it MMP099.07 effective 09/01/2024; the PDF text differs, so treat the number as unreliable."
+}

@@ -1,0 +1,318 @@
+{
+ "file": "bcbsm-diagnosis-of-sleep-disorders.pdf",
+ "treatment": "sleep-testing",
+ "payer": "bcbsm",
+ "doc_kind": "medical policy (joint BCBSM/BCN)",
+ "lines_of_business": [
+  "BCBSM and BCN; may be used by Medicare Advantage plans when CMS rules not fully developed (42 CFR 422.101(b)(6))"
+ ],
+ "effective_or_revised": "Current Policy Effective Date: 11/1/26",
+ "sections_in_order": [
+  "Description",
+  "Medical Policy Statement",
+  "Inclusionary and Exclusionary Guidelines",
+  "CPT/HCPCS Level II Codes",
+  "Background",
+  "Rationale",
+  "Government Regulations",
+  "References"
+ ],
+ "criteria_location": "Inclusionary and Exclusionary Guidelines pp.2-8 (about 7 pages): initial HSAT, repeat HSAT, HSAT contraindications (footnote a), initial attended, other-disorder attended, pediatric, repeat attended, APAP contraindications (footnote d), exclusions, MSLT/MWT. 40-page document; Rationale and references are the rest.",
+ "procedures_covered": [
+  "Initial HSAT",
+  "Repeat/follow-up HSAT",
+  "Initial attended PSG (adult OSA, adult other disorders, pediatric)",
+  "Split-night PSG",
+  "PAP titration / re-titration",
+  "Repeat attended PSG (adult, pediatric)",
+  "MSLT and MWT (narcolepsy, idiopathic hypersomnia, occupational safety)",
+  "Not covered: pulse oximetry alone, type IV devices (<=3 parameters)"
+ ],
+ "logic": {
+  "top_level": "pathways with inclusions and exclusions per test; HSAT 'Both 1 and 2 must be met' where 1 is any-of/2-of groups and 2 is a NOT of a long contraindication list",
+  "max_nesting_depth": 4,
+  "k_of_n": [
+   {
+    "k": 2,
+    "n": 5,
+    "quote": "A combination of at least 2 of the following: Excessive daytime sleepiness ...; Habitual snoring ...; Treatment-resistant hypertension ...; Obesity ...; Craniofacial or upper airway soft tissue abnormalities"
+   },
+   {
+    "k": 1,
+    "n": 4,
+    "quote": "1a. Observed apneas OR 1b combination of at least 2 OR 1c history of stroke ... in patients who meet ONE of the criteria listed under b OR 1d. Any of the following conditions"
+   }
+  ],
+  "exclusions_or_contraindications": "Footnote-style lists: 'Exclusions/Contraindications To HSAT' (about 17 items, some with sub-conditions and numeric tests) and 'Contraindications to the Use of APAP'. Referenced by letter (a, d) from other sections. 'EXCLUSIONS FOR SLEEP STUDIES' section: 'When the above criteria are met' (sic) plus oximetry and type IV devices.",
+  "initial_vs_repeat": "Explicit separate sections for initial and repeat, HSAT and attended, adult and pediatric, MSLT and repeat MSLT.",
+  "and_or_ambiguity": [
+   {
+    "quote": "c. History of stroke (more than 30 days previously), transient ischemic attack, coronary artery disease, or sustained supraventricular tachycardic or bradycardic arrhythmias in patients who meet ONE of the criteria listed under \"b\" (above). OR",
+    "why_ambiguous": "c requires one 'b' criterion, i.e., 1 of 5, whereas b normally requires 2 of 5: a patient with CAD plus one b item qualifies."
+   },
+   {
+    "quote": "EXCLUSIONS FOR SLEEP STUDIES • When the above criteria are met",
+    "why_ambiguous": "Reads as an exclusion when criteria are met - almost certainly means 'sleep studies are excluded unless/when the above criteria are not met'; a parser would invert it."
+   },
+   {
+    "quote": "Previous 1 or 2-night home sleep apnea study did not diagnose OSA in a patient with ongoing clinical suspicion of OSA.",
+    "why_ambiguous": "Listed as a HSAT contraindication, which makes a negative HSAT a bar to repeat HSAT, but the logical link to the PSG path is in a different section."
+   },
+   {
+    "quote": "• Periodic limb movement disorder (PLMD) when one of the following are present: pregnancy, renal failure, ...",
+    "why_ambiguous": "Nested condition inside a contraindication bullet."
+   },
+   {
+    "quote": "c. History of stroke ... OR d. Any of the following conditions which may suggest OSA when the etiology is unclear",
+    "why_ambiguous": "OR chain with trailing OR; sub-bullets of b lack markers."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "age",
+   "quote": "Individuals 18 years of age or older with:",
+   "where": "Initial HSAT 1"
+  },
+  {
+   "kind": "symptom",
+   "quote": "Observed apneas during sleep; OR",
+   "where": "Initial HSAT 1a"
+  },
+  {
+   "kind": "symptom",
+   "quote": "Excessive daytime sleepiness evidenced by an Epworth sleepiness >10, inappropriate daytime napping",
+   "where": "1b"
+  },
+  {
+   "kind": "symptom",
+   "quote": "Habitual snoring, defined as occurring every night or most nights per week",
+   "where": "1b"
+  },
+  {
+   "kind": "BMI/comorbidity",
+   "quote": "Obesity, defined as a body mass index (BMI) > 30 kg/m2 or neck circumference defined as >17 inches in men or >16 inches in women",
+   "where": "1b"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "Treatment-resistant hypertension (persistent hypertension in an individual taking three or more antihypertensive medications)",
+   "where": "1b"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "Moderate or severe chronic pulmonary disease - FEV1/FVC less than or equal to 0.7 and FEV1 less than 80% of predicted",
+   "where": "HSAT contraindications"
+  },
+  {
+   "kind": "lab value",
+   "quote": "Body mass index (BMI) greater than 33 kg/m2 and serum bicarbonate level, within the past 1-2 months, is above 28 mmol/L",
+   "where": "HSAT contraindications"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "The initial unattended (unsupervised) study, performed in the past 3 years, was negative, inadequate ... equivocal or non-diagnostic and clinical suspicion for OSA remains",
+   "where": "Initial attended 1"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "Unsuccessful APAP titration will need to be supported by the downloaded CPAP data.",
+   "where": "Repeat attended 2"
+  },
+  {
+   "kind": "duration",
+   "quote": "Excessive daytime sleepiness has been present for at least 8 weeks",
+   "where": "MSLT/MWT"
+  },
+  {
+   "kind": "other",
+   "quote": "PAP adherence as defined by CMS criteria (use of PAP for at least 4 hours per night on 70% of nights during a consecutive 30-day period)",
+   "where": "Repeat attended 2"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "Prior to implantation of a hypoglossal nerve stimulator (HNS) in a patient who has not had a diagnostic study (home or lab) within the preceding 18 months",
+   "where": "Repeat HSAT"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "ESS",
+   "value": "> 10",
+   "unit": "score",
+   "quote": "Epworth sleepiness >10"
+  },
+  {
+   "quantity": "BMI (symptom)",
+   "value": "> 30",
+   "unit": "kg/m2",
+   "quote": "body mass index (BMI) > 30 kg/m2"
+  },
+  {
+   "quantity": "neck circumference",
+   "value": "> 17 men / > 16 women",
+   "unit": "inches",
+   "quote": ">17 inches in men or >16 inches in women"
+  },
+  {
+   "quantity": "FEV1/FVC and FEV1",
+   "value": "<= 0.7 and < 80% predicted",
+   "unit": "",
+   "quote": "FEV1/FVC less than or equal to 0.7 and FEV1 less than 80% of predicted"
+  },
+  {
+   "quantity": "BMI + bicarbonate",
+   "value": "BMI > 33 and HCO3 > 28",
+   "unit": "kg/m2, mmol/L",
+   "quote": "serum bicarbonate level, within the past 1-2 months, is above 28 mmol/L"
+  },
+  {
+   "quantity": "PaCO2 (hypoventilation)",
+   "value": "> 55 for >= 10 min, or rise > 10 to > 50 for >= 10 min",
+   "unit": "mm Hg",
+   "quote": "value exceeding 55 mmHg for at least 10 minutes"
+  },
+  {
+   "quantity": "SpO2",
+   "value": "<= 88 for >= 5 consecutive min",
+   "unit": "%",
+   "quote": "oxygen saturation ≤ 88% for ≥ 5 consecutive minutes of nocturnal recording time"
+  },
+  {
+   "quantity": "weight loss",
+   "value": "10",
+   "unit": "% body weight",
+   "quote": "significant weight loss (defined as 10% of body weight)"
+  },
+  {
+   "quantity": "central sleep apnea",
+   "value": ">= 50% central events or > 5 central/h",
+   "unit": "",
+   "quote": "at least 50% central events or more than 5 central events per hour"
+  },
+  {
+   "quantity": "PAP adherence",
+   "value": ">=4 h on 70% nights, 30 days",
+   "unit": "",
+   "quote": "at least 4 hours per night on 70% of nights during a consecutive 30-day period"
+  },
+  {
+   "quantity": "pediatric AHI mild",
+   "value": ">=1 to <5",
+   "unit": "events/h",
+   "quote": "In children: AHI ≥1 to <5"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "prior unattended study",
+   "length": "within past 3 years",
+   "quote": "performed in the past 3 years"
+  },
+  {
+   "what": "stroke",
+   "length": "> 30 days ago (HSAT ok); within 30 days (HSAT contraindicated); within 90 days (CSA suspicion)",
+   "quote": "History of stroke within the preceding 30 days"
+  },
+  {
+   "what": "diagnostic study before HNS",
+   "length": "within 18 months",
+   "quote": "within the preceding 18 months"
+  },
+  {
+   "what": "EDS duration for MSLT/MWT",
+   "length": "at least 8 weeks",
+   "quote": "present for at least 8 weeks"
+  },
+  {
+   "what": "after adenotonsillectomy",
+   "length": "> 8 weeks",
+   "quote": "undergone adenotonsillectomy ... more than eight (8) weeks previously"
+  },
+  {
+   "what": "serum bicarbonate recency",
+   "length": "1-2 months",
+   "quote": "within the past 1-2 months"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "No: codes are in a single list; G0400 flagged 'may be covered for Medicare'; 94762, E0445 investigational.",
+  "non_covered_code_lists": "Other codes: 94762, E0445, G0400*."
+ },
+ "external_dependencies": [
+  {
+   "what": "CMS PAP adherence rule",
+   "quote": "as defined by CMS criteria (use of PAP for at least 4 hours per night on 70% of nights during a consecutive 30-day period)"
+  },
+  {
+   "what": "BCBSM OSA non-surgical treatment policy",
+   "quote": "meeting criteria of PAP therapy (see OSA-Non-surgical Treatment medical policy)"
+  },
+  {
+   "what": "Medicare Advantage use of the policy",
+   "quote": "this medical policy may be used by BCBSM or BCN Medicare Advantage plans 42 CFR § 422.101 (b)(6)"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Obesity hypoventilation syndrome",
+   "definition_quote": "body mass index (BMI) greater than 30 kg/m2 and hypoventilation which cannot be solely attributed to other conditions"
+  },
+  {
+   "term": "Treatment-resistant hypertension",
+   "definition_quote": "persistent hypertension in an individual taking three or more antihypertensive medications"
+  },
+  {
+   "term": "Central sleep apnea (for APAP)",
+   "definition_quote": "at least 50% central events or more than 5 central events per hour"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "inappropriate daytime napping",
+   "problem": "Examples given but no frequency."
+  },
+  {
+   "quote": "sleepiness that interferes with daily activities and is not explained by other conditions",
+   "problem": "Judgement."
+  },
+  {
+   "quote": "Chronic opioid use when discontinuation is not an option",
+   "problem": "Chart seldom documents why discontinuation is 'not an option'."
+  },
+  {
+   "quote": "Diagnosis suspected or established for ONE of the following conditions",
+   "problem": "'suspected' contraindications make HSAT depend on clinician opinion."
+  },
+  {
+   "quote": "Moderate or severe chronic pulmonary disease",
+   "problem": "Defined by FEV1 numbers; chart may only say 'COPD'."
+  },
+  {
+   "quote": "Cognitive or physical impairment that results in inability to apply the home sleep apnea testing equipment when another individual is not available to assist",
+   "problem": "Needs social facts."
+  }
+ ],
+ "extraction_hazards": [
+  "Footnote letters (a, b, c, d) attach lists to criteria; the footnote text appears in a later page, and the superscript is a plain letter glued to words ('HSATa', 'APAPd').",
+  "Bullet glyphs missing; nested sub-bullets lost.",
+  "Page numbers (single digits) appear mid-list.",
+  "Section 'EXCLUSIONS FOR SLEEP STUDIES' is split across a page break with its heading above the page number.",
+  "Typo in heading 'MUTLIPLE SLEEP LATENCY TESTING'.",
+  "40 pages: Rationale/Background/Government Regulations are long evidence reviews to skip."
+ ],
+ "interesting_structures": [
+  "Three-tier structure: inclusion list, contraindication footnote, exclusions section.",
+  "Contraindication list contains compound tests (BMI>33 AND bicarbonate>28) and OHS definition with three alternative lab tests.",
+  "HSAT contraindication list includes 'Previous ... HSAT did not diagnose OSA' which routes to PSG - routing logic is expressed as a contraindication.",
+  "Pediatric repeat testing is a flat any-of list with 7 items.",
+  "MSLT/MWT criteria are fully in policy (contrast UHC delegating to InterQual)."
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "scale": "1 clean ... 5 judgment",
+  "why": "Numerically explicit and mostly all/any/not, but deeply nested, footnoted, and cross-referenced contraindication lists, a 2-of-5 inside a 1-of-4, and an exclusion clause that reads inverted."
+ }
+}

@@ -1,0 +1,155 @@
+{
+ "lines_of_business": [
+  "All lines of business unless noted in PROGRAM EXCEPTIONS (disclaimer: 'THIS MEDICAL COVERAGE GUIDELINE APPLIES TO ALL LINES OF BUSINESS UNLESS OTHERWISE NOTED IN THE PROGRAM EXCEPTIONS SECTION')",
+  "FEP: 'Follow FEP guidelines.'",
+  "SAO: 'Follow SAO guidelines.'",
+  "Medicare Advantage products: No NCD/LCD found"
+ ],
+ "effective_or_revised": "Original Effective Date 09/15/08; Reviewed 07/23/26; Revised 08/15/26",
+ "sections_in_order": [
+  "Header block (MCG number, Original Effective Date, Reviewed, Revised)",
+  "Subject",
+  "Disclaimer (all caps)",
+  "Navigation bar (Position Statement / Billing/Coding / Reimbursement / Program Exceptions / Definitions / Related Guidelines / Other / References / Updates)",
+  "DESCRIPTION",
+  "POSITION STATEMENT",
+  "BILLING/CODING INFORMATION",
+  "REIMBURSEMENT INFORMATION",
+  "PROGRAM EXCEPTIONS",
+  "DEFINITIONS",
+  "RELATED GUIDELINES",
+  "OTHER",
+  "REFERENCES",
+  "COMMITTEE APPROVAL",
+  "GUIDELINE UPDATE INFORMATION"
+ ],
+ "criteria_location": "POSITION STATEMENT (about 28 lines, p.2): two bullet lists. The first list has NO lead-in sentence in the PDF (rendered page checked: the list follows 'Note: For Stereotactic Body Radiotherapy, refer to ...' directly). The second list is introduced by 'Stereotactic radiosurgery (SRS) to treat a previously irradiated field meets the definition of medical necessity for the following indications:'.",
+ "procedures_covered": [
+  "Intracranial SRS (Gamma Knife, LINAC, robotic LINAC, charged particle) for 12 listed indications",
+  "SRS to a previously irradiated field for 9 listed indications",
+  "Fractionated SRS HCPCS G0339/G0340"
+ ],
+ "logic": {
+  "top_level": "any",
+  "max_nesting_depth": 1,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "Inline qualifiers only (e.g. brain metastases 'in members having good performance status and no active systemic disease').",
+  "initial_vs_repeat": "Re-irradiation is a separate list: 'SRS to treat a previously irradiated field meets the definition of medical necessity for the following indications'.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Brain metastases (solitary or multiple) in members having good performance status and no active systemic disease (extracranial disease that is stable or in remission)",
+    "why_ambiguous": "Two conditions folded into one bullet; 'no active systemic disease' is clarified by a parenthetical that allows stable disease."
+   },
+   {
+    "quote": "Mesial temporal lobe epilepsy refractory to medical management when standard alternative surgery is not an option",
+    "why_ambiguous": "Two conditions (refractory, and alternative surgery not an option) joined by 'when'."
+   },
+   {
+    "quote": "Pediatric members (below age 18), intracranial malignancy",
+    "why_ambiguous": "A demographic and a diagnosis separated only by a comma."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "diagnosis",
+   "quote": "Acoustic neuromas / Arteriovenous malformations of the brain / Craniopharyngiomas / Glomus jugulare tumors / Pituitary adenomas / Uveal melanoma",
+   "where": "Position Statement list 1"
+  },
+  {
+   "kind": "functional impairment",
+   "quote": "members having good performance status and no active systemic disease",
+   "where": "Position Statement brain metastases"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "Trigeminal neuralgia refractory to medical management",
+   "where": "Position Statement"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "Mesial temporal lobe epilepsy refractory to medical management when standard alternative surgery is not an option",
+   "where": "Position Statement"
+  },
+  {
+   "kind": "age",
+   "quote": "Pediatric members (below age 18), intracranial malignancy",
+   "where": "Position Statement"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "Non-resectable, residual, or recurrent meningiomas",
+   "where": "Position Statement"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "physician history and physical, physician progress notes, plan of treatment and reason for stereotactic radiosurgery",
+   "where": "LOINC documentation table"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "age",
+   "value": "< 18",
+   "unit": "years",
+   "quote": "Pediatric members (below age 18)"
+  }
+ ],
+ "time_windows": [],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "CPT 61796-61800, 77301, 77338, 77371, 77372, 77432 and HCPCS G0339/G0340 listed under 'Codes may not be all inclusive.' No ICD-10 table in the current text, although the update history repeatedly says ICD-10 codes were added or updated (11/15/10, 05/01/16, 02/15/18, 03/15/21).",
+  "non_covered_code_lists": "None."
+ },
+ "external_dependencies": [
+  {
+   "what": "Sibling policy for body SRS",
+   "quote": "For Stereotactic Body Radiotherapy, refer to Stereotactic Body Radiotherapy, 02-77371-02."
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Refractory",
+   "definition_quote": "resistant to treatment or cure"
+  },
+  {
+   "term": "Residual disease",
+   "definition_quote": "cancer cells that remain after attempts to remove the cancer have been made"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "good performance status",
+   "problem": "No scale or cutoff; update history 03/15/21 says the Karnofsky Performance Scale was deleted."
+  },
+  {
+   "quote": "refractory to medical management",
+   "problem": "No drug/duration."
+  },
+  {
+   "quote": "when standard alternative surgery is not an option",
+   "problem": "Judgment."
+  }
+ ],
+ "extraction_hazards": [
+  "SOURCE DEFECT: the first criteria list has no lead-in sentence, so it is a list of bare diagnoses with no 'meets the definition of medical necessity for ...' verb; a parser cannot know the list is coverage (not exclusion) without the title/context.",
+  "The Position Statement begins with a 'Note:' that sets scope before the list, so the first line after the heading is not criteria.",
+  "Description's 'Summary and Analysis of Evidence' includes author-year citations in parentheses.",
+  "OTHER lists brand names (CyberKnife, NeuroMate) that are illustrative only.",
+  "Update history mentions a 'decision tree' (05/15/14) and ICD-10 updates that no longer appear in the document; the history is the only place a reader learns the Karnofsky Performance Scale was deleted (03/15/21), leaving 'good performance status' undefined."
+ ],
+ "interesting_structures": [
+  "Pure indication lists: coverage by diagnosis membership, almost no clinical conditions.",
+  "Two lists (first-course and re-irradiation) with overlapping entries.",
+  "Defect-as-hazard: the 'any of these indications' semantics is implicit."
+ ],
+ "fit_to_tree": {
+  "score": 2,
+  "why": "An 'any' over about 12 diagnosis leaves, a few with one extra condition; easy to model once the missing lead-in is handled by convention, but qualifiers like performance status lack numeric definitions."
+ },
+ "file": "bcbsfl-02-77371-01-stereotactic-radiosurgery-intracranial.pdf",
+ "treatment": "stereotactic-radiosurgery-intracranial",
+ "payer": "bcbsfl",
+ "doc_kind": "medical policy (Florida Blue Medical Coverage Guideline)"
+}

@@ -1,0 +1,19 @@
+{
+  "payer": "Blue Shield of California",
+  "payer_key": "blueshield-ca",
+  "treatment": "cardiac-monitoring",
+  "title": "Ambulatory Event Monitors and Cardiac Outpatient Telemetry",
+  "policy_number": "2.02.08",
+  "effective": "07/01/2023",
+  "url": "https://blueshieldca.com/content/dam/bsca/en/provider/docs/medical-policies/Ambulatory-Event-Monitors-Cardiac-Outpatient-Telemetry.pdf",
+  "final_url": "https://www.blueshieldca.com/content/dam/bsca/en/provider/docs/medical-policies/Ambulatory-Event-Monitors-Cardiac-Outpatient-Telemetry.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "bsca-2-02-08-ambulatory-event-monitors-and-cardiac-outpatient-t.pdf",
+  "sha256": "9e9a26cc0440c8982eb5c9721a717d564646b1f8fbfc09ce29ef0d73cd63fc76",
+  "pages": 70,
+  "bytes": 940305,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original 04/05/2007; Effective Aug 1, 2026 as printed (library metadata says 07/01/2023)"
+}

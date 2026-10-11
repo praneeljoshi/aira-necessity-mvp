@@ -1,0 +1,217 @@
+{
+ "file": "excellus-abdominoplasty-and-panniculectomy.pdf",
+ "treatment": "panniculectomy",
+ "payer": "excellus",
+ "doc_kind": "medical policy (Excellus BCBS 7.01.53)",
+ "lines_of_business": [
+  "Excellus BlueCross BlueShield; subscriber contract language considered first"
+ ],
+ "effective_or_revised": "Current Effective Date May 21, 2026; Next Review May 2027",
+ "sections_in_order": [
+  "Policy Statement(s) (Abdominoplasty; Panniculectomy; Lipedema Reduction Surgery)",
+  "Related Policies",
+  "Policy Guideline(s)",
+  "Description",
+  "Supportive Literature",
+  "Professional Guideline(s)",
+  "Regulatory Status",
+  "Code(s)",
+  "References"
+ ],
+ "criteria_location": "Policy Statement(s) II-III (pp.1-2) for panniculectomy; Policy Guideline(s) I-V (p.3) add documentation rules (photos 'absolute requirement'); lipedema criteria IV-V in the same document.",
+ "procedures_covered": [
+  "Abdominoplasty (cosmetic)",
+  "Belt lipectomy (cosmetic)",
+  "Panniculectomy 15830",
+  "Lipectomy/liposuction for lipedema",
+  "Suction lipectomy 15877"
+ ],
+ "logic": {
+  "top_level": "all",
+  "max_nesting_depth": 5,
+  "k_of_n": [
+   {
+    "k": 1,
+    "n": 3,
+    "quote": "Post-operative weight loss is documented by one (1) of the following: BMI ≤30; %EWL ≥40%; at least a 100-pound weight loss"
+   }
+  ],
+  "exclusions_or_contraindications": "Policy Statement III: not medically necessary for improving appearance, poorly fitting clothes/hygiene, superficial inflammation controlled with topicals, neck/back pain, adjunct to other surgery.",
+  "initial_vs_repeat": "None",
+  "and_or_ambiguity": [
+   {
+    "quote": "Refractory to at least three (3) months of prescribed standard medical management with documented adherence to both of the following: a. Hygiene practices and applicable wound care; and b. Systemic antibiotics, antifungal agents, or corticosteroids",
+    "why_ambiguous": "'both' with 'and' but b is a list of three alternatives; topical-only treatment is not enough (see III.C)."
+   },
+   {
+    "quote": "D. If the member has had significant weight loss, medical records must document either of the following: 1. For weight loss as a result of bariatric surgery, all of the following ... 2. For weight loss not related to bariatric surgery, both of the following",
+    "why_ambiguous": "Conditional (if significant weight loss) with undefined trigger; nesting five deep with roman sub-lists."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "measurement threshold",
+   "quote": "The panniculus is Grade 2 or higher (covering the genitals and upper thigh crease), documented by photographs",
+   "where": "II.A"
+  },
+  {
+   "kind": "symptom",
+   "quote": "A clinically significant skin integrity-related functional impairment resulting from a documented recurrent or persistent medical condition ... (e.g., intertrigo, dermatitis, cellulitis, panniculitis, ulceration, or necrosis)",
+   "where": "II.B"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "Refractory to at least three (3) months of prescribed standard medical management with documented adherence",
+   "where": "II.B.2"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "Documented by color photographs; Preoperative photographs are an absolute requirement",
+   "where": "II.B.1; Guideline I"
+  },
+  {
+   "kind": "other",
+   "quote": "There is a documented expectation that surgery will improve or resolve the significant skin integrity-related functional impairment",
+   "where": "II.C"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "A minimum of 18 months has elapsed from the date of the bariatric surgery; Stable weight ... at least six (6) months prior to the consultation",
+   "where": "II.D.1"
+  },
+  {
+   "kind": "BMI/comorbidity",
+   "quote": "BMI is less than or equal to 30 kg/m2; and stable weight ... six (6) months (non-bariatric weight loss)",
+   "where": "II.D.2"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "Pannus grade",
+   "value": "≥2",
+   "unit": "ASPS grade",
+   "quote": "Grade 2 or higher"
+  },
+  {
+   "quantity": "Medical management",
+   "value": "≥3",
+   "unit": "months",
+   "quote": "at least three (3) months"
+  },
+  {
+   "quantity": "Post-bariatric",
+   "value": "≥18",
+   "unit": "months",
+   "quote": "A minimum of 18 months has elapsed"
+  },
+  {
+   "quantity": "Stable weight",
+   "value": "≥6",
+   "unit": "months",
+   "quote": "at least six (6) months prior to the consultation"
+  },
+  {
+   "quantity": "BMI post-weight loss",
+   "value": "≤30",
+   "unit": "kg/m2",
+   "quote": "less than or equal to 30"
+  },
+  {
+   "quantity": "%EWL",
+   "value": "≥40",
+   "unit": "%",
+   "quote": "greater than or equal to 40%"
+  },
+  {
+   "quantity": "Weight loss",
+   "value": "≥100",
+   "unit": "lb",
+   "quote": "At least a 100-pound weight loss"
+  },
+  {
+   "quantity": "Lipedema conservative care",
+   "value": "6",
+   "unit": "months",
+   "quote": "at least six (6) consecutive months"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "Medical management",
+   "length": "3 months",
+   "quote": "at least three (3) months of prescribed standard medical management"
+  },
+  {
+   "what": "Post-bariatric",
+   "length": "18 months",
+   "quote": "minimum of 18 months"
+  },
+  {
+   "what": "Stable weight before consultation",
+   "length": "6 months",
+   "quote": "prior to the consultation for panniculectomy"
+  },
+  {
+   "what": "Lipedema conservative management",
+   "length": "6 months",
+   "quote": "six (6) consecutive months"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "CPT listed with (NMN)/(E/I) tags; ICD-10 'Multiple Codes'",
+  "non_covered_code_lists": "15847 (NMN), 15877 (NMN when billed for abdominoplasty or belt lipectomy)"
+ },
+ "external_dependencies": [
+  {
+   "what": "Corporate Medical Policy 7.01.11 Cosmetic and Reconstructive Procedures",
+   "quote": "7.01.11 Cosmetic and Reconstructive Procedures"
+  },
+  {
+   "what": "Subscriber contract language",
+   "quote": "Federal and state law(s), regulatory mandates and the member's subscriber contract language are considered first"
+  },
+  {
+   "what": "ASPS 2017/2019 criteria",
+   "quote": "American Society of Plastic Surgeons (2017) grading system"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "significant weight loss",
+   "definition_quote": "Not defined as a term; operationalized via II.D.1.c and II.D.2.a"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "clinically significant skin integrity-related functional impairment",
+   "problem": "Unusual phrase; 'functional impairment' is the skin condition itself, not mobility"
+  },
+  {
+   "quote": "significant weight loss",
+   "problem": "Trigger for II.D not defined"
+  },
+  {
+   "quote": "standard medical management",
+   "problem": "Defined only by the two sub-items"
+  }
+ ],
+ "extraction_hazards": [
+  "Policy mixes unrelated lipedema criteria in same document",
+  "Roman numeral and letter nesting 5 deep with page headers breaking lists (header 'Page: 2 of 11')",
+  "Criteria in Policy Guidelines (photos 'absolute requirement') are outside Policy Statements"
+ ],
+ "interesting_structures": [
+  "Weight-loss branch splits bariatric vs non-bariatric with different required proof",
+  "Weight stability measured 'prior to the consultation' (anchored to a date)",
+  "Documentation may come from any treating provider (Guideline II)",
+  "Topical-only control is a named exclusion"
+ ],
+ "fit_to_tree": {
+  "score": 2,
+  "scale": "1-5",
+  "why": "Deeply nested but cleanly all/any; the undefined 'significant weight loss' trigger and photo requirement need judgment."
+ }
+}

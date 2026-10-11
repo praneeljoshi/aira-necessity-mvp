@@ -1,0 +1,165 @@
+{
+  "id": "florida-blue-02-33000-24",
+  "payer": "Florida Blue",
+  "payer_aliases": ["Florida Blue", "BCBS FL", "BCBSFL", "Blue Cross Blue Shield of Florida", "Blue Cross and Blue Shield of Florida", "BCBS of Florida"],
+  "title": "Heart and Lung Transplant",
+  "guideline_number": "02-33000-24",
+  "effective_date": "2026-07-15",
+  "reviewed_date": "2026-06-25",
+  "source_file": "bcbsfl-02-33000-24-heart-and-lung-transplant.pdf",
+  "plan_types": ["All lines of business"],
+  "excluded_plans": ["Federal Employee Program (FEP)", "State Account Organization (SAO)", "Medicare Advantage"],
+  "scope": {
+    "cpt": {"33930": "covered", "33933": "covered", "33935": "covered"},
+    "icd10": []
+  },
+  "criteria": [
+    {"id": "end_stage_cardiac_and_pulmonary_disease", "text": "end-stage cardiac and pulmonary disease", "question": "Does the chart document end-stage disease of both the heart and the lungs?"},
+    {"id": "irreversible_primary_pulmonary_hypertension", "text": "Irreversible primary pulmonary hypertension", "question": "Is primary (idiopathic) pulmonary hypertension documented and described as irreversible?"},
+    {"id": "heart_failure", "text": "heart failure", "question": "Is heart failure documented?"},
+    {"id": "nonspecific_severe_pulmonary_fibrosis", "text": "Non-specific severe pulmonary fibrosis", "question": "Is severe non-specific pulmonary fibrosis documented?"},
+    {"id": "severe_heart_failure", "text": "severe heart failure", "question": "Is heart failure documented and described as severe?"},
+    {"id": "eisenmenger_complex", "text": "Eisenmenger complex", "question": "Is Eisenmenger complex (syndrome) documented?"},
+    {"id": "irreversible_pulmonary_hypertension", "text": "irreversible pulmonary hypertension", "question": "Is the pulmonary hypertension documented as irreversible?"},
+    {"id": "cystic_fibrosis", "text": "Cystic fibrosis", "question": "Is cystic fibrosis documented?"},
+    {"id": "chronic_obstructive_pulmonary_disease", "text": "Chronic obstructive pulmonary disease", "question": "Is chronic obstructive pulmonary disease (COPD) documented?"},
+    {"id": "emphysema", "text": "Emphysema", "question": "Is emphysema documented?"},
+    {"id": "pulmonary_fibrosis", "text": "Pulmonary fibrosis", "question": "Is pulmonary fibrosis documented?"},
+    {"id": "uncontrollable_pulmonary_hypertension", "text": "uncontrollable pulmonary hypertension", "question": "Is the pulmonary hypertension documented as uncontrollable (refractory to treatment)?"},
+    {"id": "failed_primary_heart_lung_transplant", "text": "failed primary heart/lung transplant", "question": "Has the patient had a prior heart/lung transplant that has failed?"},
+    {"id": "contra_known_current_malignancy", "text": "Known current malignancy, including metastatic cancer", "question": "Does the chart document a known current malignancy, including metastatic cancer?"},
+    {"id": "contra_recent_malignancy_high_risk", "text": "Recent malignancy with high risk of recurrence", "question": "Does the chart document a recent malignancy with a high risk of recurrence?"},
+    {"id": "contra_untreated_systemic_infection", "text": "Untreated systemic infection making immunosuppression unsafe, including chronic infection", "question": "Does the chart document an untreated systemic or chronic infection that makes immunosuppression unsafe?"},
+    {"id": "contra_other_irreversible_end_stage_disease", "text": "Other irreversible end-stage disease not attributed to heart or lung disease", "question": "Does the chart document another irreversible end-stage disease that is not attributed to the heart or lung disease?"},
+    {"id": "contra_cancer_history_moderate_risk", "text": "History of cancer with a moderate risk of recurrence", "question": "Does the chart document a history of cancer with a moderate risk of recurrence?"},
+    {"id": "contra_systemic_disease_immunosuppression", "text": "Systemic disease that could be exacerbated by immunosuppression", "question": "Does the chart document a systemic disease that could be exacerbated by immunosuppression?"},
+    {"id": "contra_psychosocial_or_chemical_dependency", "text": "Psychosocial conditions or chemical dependency affecting ability to adhere to therapy", "question": "Does the chart document a psychosocial condition or chemical dependency that affects the patient's ability to adhere to therapy?"}
+  ],
+  "scenarios": [
+    {
+      "id": "heart_lung_transplant",
+      "name": "Heart/lung transplantation",
+      "applies_to_cpt": ["33930", "33933", "33935"],
+      "requires": {"type": "all", "label": "Heart/lung transplantation meets the definition of medical necessity", "children": [
+        {"type": "leaf", "criterion": "end_stage_cardiac_and_pulmonary_disease"},
+        {"type": "any", "label": "One of the following conditions", "children": [
+          {"type": "all", "label": "Irreversible primary pulmonary hypertension with heart failure", "children": [
+            {"type": "leaf", "criterion": "irreversible_primary_pulmonary_hypertension"},
+            {"type": "leaf", "criterion": "heart_failure"}
+          ]},
+          {"type": "all", "label": "Non-specific severe pulmonary fibrosis, with severe heart failure", "children": [
+            {"type": "leaf", "criterion": "nonspecific_severe_pulmonary_fibrosis"},
+            {"type": "leaf", "criterion": "severe_heart_failure"}
+          ]},
+          {"type": "all", "label": "Eisenmenger complex with irreversible pulmonary hypertension and heart failure", "children": [
+            {"type": "leaf", "criterion": "eisenmenger_complex"},
+            {"type": "leaf", "criterion": "irreversible_pulmonary_hypertension"},
+            {"type": "leaf", "criterion": "heart_failure"}
+          ]},
+          {"type": "all", "label": "Cystic fibrosis with severe heart failure", "children": [
+            {"type": "leaf", "criterion": "cystic_fibrosis"},
+            {"type": "leaf", "criterion": "severe_heart_failure"}
+          ]},
+          {"type": "all", "label": "Chronic obstructive pulmonary disease with heart failure", "children": [
+            {"type": "leaf", "criterion": "chronic_obstructive_pulmonary_disease"},
+            {"type": "leaf", "criterion": "heart_failure"}
+          ]},
+          {"type": "all", "label": "Emphysema with severe heart failure", "children": [
+            {"type": "leaf", "criterion": "emphysema"},
+            {"type": "leaf", "criterion": "severe_heart_failure"}
+          ]},
+          {"type": "all", "label": "Pulmonary fibrosis with uncontrollable pulmonary hypertension or heart failure", "children": [
+            {"type": "leaf", "criterion": "pulmonary_fibrosis"},
+            {"type": "any", "label": "Uncontrollable pulmonary hypertension or heart failure", "children": [
+              {"type": "leaf", "criterion": "uncontrollable_pulmonary_hypertension"},
+              {"type": "leaf", "criterion": "heart_failure"}
+            ]}
+          ]}
+        ]},
+        {"type": "not", "label": "None of the potential contraindications", "child": {"type": "any", "label": "Potential contraindications to heart/lung transplant", "children": [
+          {"type": "leaf", "criterion": "contra_known_current_malignancy"},
+          {"type": "leaf", "criterion": "contra_recent_malignancy_high_risk"},
+          {"type": "leaf", "criterion": "contra_untreated_systemic_infection"},
+          {"type": "leaf", "criterion": "contra_other_irreversible_end_stage_disease"},
+          {"type": "leaf", "criterion": "contra_cancer_history_moderate_risk"},
+          {"type": "leaf", "criterion": "contra_systemic_disease_immunosuppression"},
+          {"type": "leaf", "criterion": "contra_psychosocial_or_chemical_dependency"}
+        ]}}
+      ]},
+      "notes": ["Heart/lung transplantation is considered experimental or investigational in all other situations."]
+    },
+    {
+      "id": "heart_lung_retransplant",
+      "name": "Heart/lung retransplantation after a failed primary heart/lung transplant",
+      "applies_to_cpt": ["33930", "33933", "33935"],
+      "requires": {"type": "all", "label": "Heart/lung retransplantation meets the definition of medical necessity", "children": [
+        {"type": "leaf", "criterion": "failed_primary_heart_lung_transplant"},
+        {"type": "all", "label": "Meets criteria for heart/lung transplantation", "children": [
+          {"type": "leaf", "criterion": "end_stage_cardiac_and_pulmonary_disease"},
+          {"type": "any", "label": "One of the following conditions", "children": [
+            {"type": "all", "label": "Irreversible primary pulmonary hypertension with heart failure", "children": [
+              {"type": "leaf", "criterion": "irreversible_primary_pulmonary_hypertension"},
+              {"type": "leaf", "criterion": "heart_failure"}
+            ]},
+            {"type": "all", "label": "Non-specific severe pulmonary fibrosis, with severe heart failure", "children": [
+              {"type": "leaf", "criterion": "nonspecific_severe_pulmonary_fibrosis"},
+              {"type": "leaf", "criterion": "severe_heart_failure"}
+            ]},
+            {"type": "all", "label": "Eisenmenger complex with irreversible pulmonary hypertension and heart failure", "children": [
+              {"type": "leaf", "criterion": "eisenmenger_complex"},
+              {"type": "leaf", "criterion": "irreversible_pulmonary_hypertension"},
+              {"type": "leaf", "criterion": "heart_failure"}
+            ]},
+            {"type": "all", "label": "Cystic fibrosis with severe heart failure", "children": [
+              {"type": "leaf", "criterion": "cystic_fibrosis"},
+              {"type": "leaf", "criterion": "severe_heart_failure"}
+            ]},
+            {"type": "all", "label": "Chronic obstructive pulmonary disease with heart failure", "children": [
+              {"type": "leaf", "criterion": "chronic_obstructive_pulmonary_disease"},
+              {"type": "leaf", "criterion": "heart_failure"}
+            ]},
+            {"type": "all", "label": "Emphysema with severe heart failure", "children": [
+              {"type": "leaf", "criterion": "emphysema"},
+              {"type": "leaf", "criterion": "severe_heart_failure"}
+            ]},
+            {"type": "all", "label": "Pulmonary fibrosis with uncontrollable pulmonary hypertension or heart failure", "children": [
+              {"type": "leaf", "criterion": "pulmonary_fibrosis"},
+              {"type": "any", "label": "Uncontrollable pulmonary hypertension or heart failure", "children": [
+                {"type": "leaf", "criterion": "uncontrollable_pulmonary_hypertension"},
+                {"type": "leaf", "criterion": "heart_failure"}
+              ]}
+            ]}
+          ]},
+          {"type": "not", "label": "None of the potential contraindications", "child": {"type": "any", "label": "Potential contraindications to heart/lung transplant", "children": [
+            {"type": "leaf", "criterion": "contra_known_current_malignancy"},
+            {"type": "leaf", "criterion": "contra_recent_malignancy_high_risk"},
+            {"type": "leaf", "criterion": "contra_untreated_systemic_infection"},
+            {"type": "leaf", "criterion": "contra_other_irreversible_end_stage_disease"},
+            {"type": "leaf", "criterion": "contra_cancer_history_moderate_risk"},
+            {"type": "leaf", "criterion": "contra_systemic_disease_immunosuppression"},
+            {"type": "leaf", "criterion": "contra_psychosocial_or_chemical_dependency"}
+          ]}}
+        ]}
+      ]}
+    }
+  ],
+  "exclusions": [
+    {"text": "Heart/lung transplantation is considered experimental or investigational in all other situations, as available clinical evidence does not support safety and effectiveness.", "cpt": []}
+  ],
+  "notes": [
+    "Built from the PDF only; the download holds one clean copy of the guideline (no redline), 8 pages, Reviewed 06/25/26, Revised 07/15/26, Original Effective Date 01/01/01. effective_date is the Revised date and reviewed_date the Reviewed date, following the hand-built example; the original effective date (01/01/01) is not recorded as effective_date.",
+    "Two pathways: primary heart/lung transplantation and retransplantation after a failed primary heart/lung transplant. Retransplantation 'meets the definition of medical necessity in individuals who meet criteria for heart/lung transplantation', so the retransplant pathway is the full primary tree plus one extra leaf, a failed primary heart/lung transplant.",
+    "Code-to-pathway mapping: the document ties no code to any section. All three codes (33930 donor cardiectomy-pneumonectomy, 33933 backbench preparation of the donor heart/lung allograft, 33935 heart-lung transplant with recipient cardiectomy-pneumonectomy) are components of one heart/lung transplant, and the document never says a code is non-covered or investigational, so all three are tagged covered and both pathways list all three explicitly. Primary and retransplant are distinguished by history, not by code.",
+    "Each indication bullet 'X with heart failure' is split into a diagnosis leaf and a heart-failure leaf joined by all (a chart can document the lung diagnosis without the heart failure). 'severe heart failure' (bullets 2, 4, 6) and 'heart failure' (bullets 1, 3, 5, 7) are kept as two criteria because severity is a distinct thing a chart documents. Bullet 7, 'Pulmonary fibrosis with uncontrollable pulmonary hypertension or heart failure', is all(pulmonary fibrosis, any(uncontrollable pulmonary hypertension, heart failure)). Bullet 3 'Eisenmenger complex with irreversible pulmonary hypertension and heart failure' is all of three leaves; 'irreversible pulmonary hypertension' there is kept separate from bullet 1's 'Irreversible primary pulmonary hypertension' because one is secondary to the congenital shunt and the other primary/idiopathic. A reviewer could instead keep each bullet as one leaf; the verdict is the same either way.",
+    "'Non-specific severe pulmonary fibrosis' (bullet 2) and 'Pulmonary fibrosis' (bullet 7) are separate leaves as written; a chart with severe pulmonary fibrosis and heart failure satisfies bullet 7 in any case.",
+    "The indication list is introduced with 'including, but not limited to, one of the following conditions'. A program cannot evaluate an open-ended list, so the tree requires one of the seven listed conditions in addition to end-stage cardiac and pulmonary disease; a reviewer could accept an unlisted end-stage cardiopulmonary condition under 'not limited to', but the next sentence makes all other situations experimental or investigational, so the listed conditions are treated as the coverable set.",
+    "'carefully selected individuals' is not modelled: it is not a requirement a chart could document separately from the listed criteria.",
+    "The contraindication list is headed 'Potential contraindications to heart/lung transplant (subject to the judgment of the transplant center) include'. Modelled as not(any(the seven bullets)) inside each pathway's all, so a documented contraindication fails the pathway; the 'potential' and 'subject to the judgment of the transplant center' wording means a reviewer could treat a documented contraindication as a review item rather than a hard fail. Not listed under exclusions because they are conditional on center judgment rather than categorical non-coverage statements.",
+    "The Certificate of Medical Necessity block (submit a completed CMN with the request) is an administrative submission step, not a clinical requirement, and is left out of the tree.",
+    "No ICD-10 codes are listed in the Billing/Coding section (the 2010 update history mentions related ICD-10 codes, but none are printed), so scope.icd10 is empty.",
+    "Program exceptions: FEP and SAO follow their own guidelines; for Medicare Advantage the document says NCD 260.9 Heart Transplants 'was reviewed on the last guideline reviewed date', which is read as Medicare Advantage following the NCD rather than this guideline, so it is listed under excluded_plans. The step-therapy exemption paragraph is boilerplate (this guideline has no step therapy requirement) and is left out.",
+    "The Description section (evidence summary: UpToDate, ISHLT guidelines, registry survival studies, HIV and pretransplant malignancy studies) is background and holds no requirements; nothing from it is in the tree. The 'Other' section quotes Florida statutes on non-discrimination in transplant coverage and is likewise left out.",
+    "Related guidelines (Lung and Lobar Lung Transplant 02-30000-10, Heart Transplant 02-33000-23, Total Artificial Hearts and VADs 02-33000-25) govern isolated lung or heart transplant and VADs, not the combined heart/lung procedure, and are not part of this tree."
+  ],
+  "status": "ok"
+}

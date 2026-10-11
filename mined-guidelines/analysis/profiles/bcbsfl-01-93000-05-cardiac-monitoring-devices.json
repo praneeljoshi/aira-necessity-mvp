@@ -1,0 +1,211 @@
+{
+ "file": "bcbsfl-01-93000-05-cardiac-monitoring-devices.pdf",
+ "treatment": "cardiac-monitoring",
+ "payer": "bcbsfl",
+ "doc_kind": "medical policy (Medical Coverage Guideline)",
+ "lines_of_business": [
+  "All lines of business unless noted in Program Exceptions",
+  "FEP: follow FEP guidelines",
+  "SAO: follow SAO guidelines",
+  "Medicare Advantage: defers to NCDs 20.15, 20.36, 20.27 and First Coast LCD L39492 / article A59270"
+ ],
+ "effective_or_revised": "Original 11/15/01; Reviewed 12/04/25; Revised 12/15/25",
+ "sections_in_order": [
+  "Description",
+  "Summary and Analysis of Evidence",
+  "Position Statement",
+  "Billing/Coding Information (CPT, HCPCS, ICD-10, LOINC)",
+  "Reimbursement Information",
+  "Program Exceptions",
+  "Definitions (None applicable)",
+  "Related Guidelines (None)",
+  "Other (None)",
+  "References",
+  "Updates"
+ ],
+ "criteria_location": "Position Statement, PDF pp.3-4 (one page of bullets). ICD-10 'support medical necessity' lists in Billing/Coding and a documentation line (history & physical, progress notes, labs) in Billing/Coding. Nothing in Definitions.",
+ "procedures_covered": [
+  "External patient/auto-activated ambulatory event monitors and continuous ambulatory monitors >48 h (93241-93248, 93268-93272)",
+  "Implantable ambulatory event monitor / loop recorder (33285, 33286, E0616)",
+  "Mobile cardiac outpatient telemetry MCOT (93228, 93229)",
+  "Omnicardiogram/Cardiointegram (S9025) - investigational",
+  "CardioMEMS pulmonary artery pressure sensor (33289, 93264, G0555) - investigational",
+  "Mobile apps / other AEM uses - investigational"
+ ],
+ "logic": {
+  "top_level": "pathways (one block per device type, each with its own any-of indications; MCOT block is all-of with a nested one-of)",
+  "max_nesting_depth": 3,
+  "k_of_n": [
+   {
+    "k": 1,
+    "n": 2,
+    "quote": "The member has ONE of the following: 1. A history of cryptogenic stroke; or 2. Recurrent, unexplained episodes of syncope or presyncope of suspected arrhythmic etiology."
+   }
+  ],
+  "exclusions_or_contraindications": "No NOT list. Exclusions are a closing 'does not meet' sentence per device (MCOT 'does not meet the definition of medical necessity for all other indications including... ongoing management after diagnosis, medication management, screening, or monitoring members with life-threatening arrhythmias') plus a catch-all experimental/investigational paragraph.",
+  "initial_vs_repeat": "No repeat-study or replacement rule at all (contrast Excellus/Curative 1-year repeat rule). Only 33286 removal listed.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Members with atrial fibrillation who have been treated with catheter ablation, and in whom discontinuation of systemic anticoagulation is being considered; OR",
+    "why_ambiguous": "Bullets 1-3 are joined only by a trailing 'OR' after the second bullet; reader must infer all three are alternatives. 'and' inside bullet 2 joins two conditions."
+   },
+   {
+    "quote": "In the small subset of members who experience recurrent symptoms so infrequently that a prior trial of other external ambulatory event monitors has been unsuccessful; OR In members who require long-term monitoring for atrial fibrillation or possible atrial fibrillation.",
+    "why_ambiguous": "Second ILR indication has no prerequisite at all (no external monitor trial, no stroke, no ablation); 'possible atrial fibrillation' is nearly unbounded."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "symptom",
+   "quote": "Members who experience infrequent symptoms (less frequently than every 48 hours) suggestive of cardiac arrhythmias (i.e., palpitations, dizziness, presyncope, or syncope)",
+   "where": "Position Statement, external AEM bullet 1"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "Members with atrial fibrillation who have been treated with catheter ablation, and in whom discontinuation of systemic anticoagulation is being considered",
+   "where": "Position Statement, external AEM bullet 2"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "Members with cryptogenic stroke who have a negative standard work-up for atrial fibrillation including a 24-hour Holter monitor",
+   "where": "Position Statement, external AEM bullet 3"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "a prior trial of other external ambulatory event monitors has been unsuccessful",
+   "where": "Position Statement, ILR bullet 1"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "The member has had a previous (within the last 60 days) non-diagnostic trial of external ambulatory event monitoring",
+   "where": "Position Statement, MCOT criterion 1"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "A history of cryptogenic stroke; or Recurrent, unexplained episodes of syncope or presyncope of suspected arrhythmic etiology",
+   "where": "Position Statement, MCOT criterion 2"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "ICD-10 Diagnosis Codes That Support Medical Necessity for codes 33285, 33286, 93241-93248, 93268, 93270, 93271, 93272, and E0616",
+   "where": "Billing/Coding"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "physician history and physical, conservative treatment plan, physician progress notes, and all laboratory studies",
+   "where": "Billing/Coding, LOINC paragraph"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "monitoring duration for external AEM class",
+   "value": "> 48",
+   "unit": "hours",
+   "quote": "record and store information for periods longer than 48 hours"
+  },
+  {
+   "quantity": "symptom frequency",
+   "value": "< 1 per 48",
+   "unit": "hours",
+   "quote": "less frequently than every 48 hours"
+  },
+  {
+   "quantity": "age of prior non-diagnostic external monitor trial",
+   "value": "<= 60",
+   "unit": "days",
+   "quote": "previous (within the last 60 days) non-diagnostic trial"
+  },
+  {
+   "quantity": "documentation lookback",
+   "value": "<= 6",
+   "unit": "months",
+   "quote": "observations made six months or fewer before starting date of service"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "prior non-diagnostic external monitoring before MCOT",
+   "length": "within last 60 days",
+   "quote": "previous (within the last 60 days) non-diagnostic trial of external ambulatory event monitoring"
+  },
+  {
+   "what": "Holter monitor in cryptogenic stroke workup",
+   "length": "24 hours",
+   "quote": "negative standard work-up for atrial fibrillation including a 24-hour Holter monitor"
+  },
+  {
+   "what": "record lookback (LOINC)",
+   "length": "6 months",
+   "quote": "observations made six months or fewer before starting date of service for the claim"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": true,
+  "codes_tied_to_criteria": "ICD-10 lists are tied to groups of CPT codes (one list for 33285/33286/93241-93248/93268-93272/E0616, a narrower list for MCOT 93228/93229) but not to individual criteria. 93243 description duplicates 93242 (apparent typo).",
+  "non_covered_code_lists": "33289, 93264, G0555, S9025 flagged '(Investigational)' inline in the code table"
+ },
+ "external_dependencies": [
+  {
+   "what": "Medicare Advantage: CMS NCDs 20.15, 20.36, 20.27; First Coast LCD L39492 and article A59270",
+   "quote": "Local Coverage Determination (LCD) Ambulatory Electrocardiograph (AECG) Monitoring L39492"
+  },
+  {
+   "what": "FEP and SAO plans use their own guidelines",
+   "quote": "Federal Employee Program (FEP): Follow FEP guidelines."
+  },
+  {
+   "what": "Florida step-therapy exemption statute",
+   "quote": "in compliance with Florida law 627.42393, members or providers may request a step therapy protocol exemption"
+  }
+ ],
+ "definitions_that_change_meaning": [],
+ "vague_terms": [
+  {
+   "quote": "cryptogenic stroke ... negative standard work-up",
+   "problem": "'standard work-up' not defined beyond 24-hour Holter; imaging/echo/vascular not enumerated"
+  },
+  {
+   "quote": "non-diagnostic trial of external ambulatory event monitoring",
+   "problem": "no definition of non-diagnostic (no events captured vs. captured but normal?)"
+  },
+  {
+   "quote": "suspected arrhythmic etiology",
+   "problem": "clinician judgment; no risk-stratification criteria"
+  },
+  {
+   "quote": "in whom discontinuation of systemic anticoagulation is being considered",
+   "problem": "intent of clinician; may not be in chart"
+  },
+  {
+   "quote": "small subset of members",
+   "problem": "not a criterion; descriptive wording embedded in a criterion"
+  },
+  {
+   "quote": "Definitions: None applicable",
+   "problem": "no definitions section despite terms like MCOT, AEM, cryptogenic"
+  }
+ ],
+ "extraction_hazards": [
+  "Navigation bar (Position Statement / Billing/Coding / ...) flattened into page 1 text",
+  "Bullets rendered as private-use glyphs; numbered '1. 2.' sub-list nested under bullet",
+  "Long CPT/ICD tables with descriptions wrapped across lines",
+  "93243 text identical to 93242 (source typo)",
+  "'Summary and Analysis of Evidence' is one dense paragraph that reads like criteria but is rationale",
+  "LOINC table with repeated 'six months' narrative cells",
+  "Page 1 all-caps disclaimer block"
+ ],
+ "interesting_structures": [
+  "Device-type pathways in one short page",
+  "MCOT requires prior failed external monitor within 60 days (a tiered/escalation ladder external -> ILR / MCOT)",
+  "Per-device ICD-10 support lists",
+  "Explicit step-therapy statute reference",
+  "MCOT limited to two indications; broad 'does not meet' for ongoing management, screening, life-threatening arrhythmias"
+ ],
+ "fit_to_tree": {
+  "score": 2,
+  "score_note": "",
+  "why": "Short, mostly any-of indications with a few all-of blocks; thresholds are few. Hazards are undefined words (non-diagnostic, standard work-up) and clinician-intent conditions, not structure."
+ }
+}

@@ -1,0 +1,107 @@
+{
+  "file": "carelon-implantable-cardioverter-defibrillators.pdf",
+  "treatment": "icd",
+  "payer": "carelon",
+  "doc_kind": "clinical guideline (vendor): Carelon Clinical Appropriateness Guidelines, Appropriate Use Criteria (used by health plans, here via Louisiana Medicaid)",
+  "lines_of_business": ["Health plans that delegate to Carelon; 'Approval and implementation dates for specific health plans may vary'", "Medicare Advantage: 'only applied where there are not fully established CMS criteria'"],
+  "effective_or_revised": "Status Revised; Effective Date 11/17/2024 (printed as '11/1710/20/2024' with a strikethrough overprint); Last Review Date 04/15/2024 (printed '04/15/2024 01/23/2024'); Doc ID CAR06-111024.32",
+  "sections_in_order": ["Cover (Key to Revisions)", "Table of Contents", "Description and Application of the Guidelines", "General Clinical Guideline (framework, simultaneous ordering, repeat diagnostic, repeat therapeutic)", "Implantable Cardioverter Defibrillators: Codes; General Information (scope, definitions); Clinical Indications (Transvenous, Subcutaneous)", "References", "History"],
+  "criteria_location": "Clinical Indications, pp. 8-10 of 12. A generic 'General Clinical Guideline' (pp. 4-5) states cross-cutting rules (net benefit, peer-to-peer, repeat therapeutic intervention). Definitions on p.7 are needed by the criteria.",
+  "procedures_covered": ["Transvenous ICD", "Subcutaneous ICD", "Device replacement", "Substernal ICD codes listed (0571T-0574T) but no substernal criteria", "Anesthesia code 00534"],
+  "logic": {
+    "top_level": "pathways (about 20 any-of scenarios under one global survival condition; S-ICD an ALL list)",
+    "max_nesting_depth": 4,
+    "k_of_n": [
+      {"k": 1, "n": 20, "quote": "Transvenous ICD placement is considered medically necessary in ANY of the following scenarios when survival with good functional status for more than one year is anticipated", "pointer": "Clinical Indications"},
+      {"k": 1, "n": 3, "quote": "Ischemic cardiomyopathy when ANY of the following apply", "pointer": "Transvenous"},
+      {"k": 2, "n": 3, "quote": "Lamin A/C cardiomyopathy with EITHER ... At least 2 of the following apply: LVEF < 45%; Non-sustained ventricular tachycardia; Male sex", "pointer": "Transvenous"},
+      {"k": 1, "n": 5, "quote": "At least ONE of the following applies: Inability to secure venous access; Immunocompromised individual; recurrent infections; Individual with endocarditis; younger age ... <= 21", "pointer": "Subcutaneous"},
+      {"k": 2, "n": 2, "quote": "following 90 days of GDMT, BOTH of the following are still present: LVEF <= 35%; NYHA functional class II or III", "pointer": "Nonischemic dilated cardiomyopathy"}
+    ],
+    "exclusions_or_contraindications": "No exclusion list. Negative conditions are written into criteria: S-ICD requires the person 'does not require pacing for bradycardia ...' and 'does not have incessant ventricular tachycardia'. The global condition 'survival with good functional status for more than one year' acts as a prognosis exclusion.",
+    "initial_vs_repeat": "Device replacement is one scenario: 'Generator end-of-life criteria are present' OR 'The generator pocket needs to be opened for another reason ... AND the device is within 3 years of reaching end-of-life criteria'. The General Clinical Guideline repeat-therapeutic-intervention paragraph also applies.",
+    "and_or_ambiguity": [
+      {"quote": "Nonischemic dilated cardiomyopathy in an individual <= 70 years of age, when, following 90 days of GDMT, BOTH of the following are still present", "why_ambiguous": "Compared with BCBSM's copy, which adds 'or otherwise supported by clinical scenario', Carelon makes 70 a hard limit (revision 07/2023 'added age limit')."},
+      {"quote": "Subcutaneous device is preferred due to younger age of patient Individual is <= 21 years of age", "why_ambiguous": "Two clauses run together in one bullet (the History says 04/15/2024 'replaced specific patient age with the broader term younger', but the stale '<= 21' text remains) so it is unclear whether 'younger' means <= 21 or is a judgment."},
+      {"quote": "Syncope which is otherwise unexplained in an individual with structural heart disease", "why_ambiguous": "'Structural heart disease' is defined in Definitions as LVEF < 50%, prior MI, valve disease, congenital; the criterion works only with that outside definition."},
+      {"quote": "Abnormal blood pressure response to exercise or spontaneous nonsustained ventricular tachycardia in an individual who has ANY of the following", "why_ambiguous": "A bullet nested under hypertrophic cardiomyopathy by position but written as a stand-alone scenario with no diagnosis named; reader must infer the HCM context."},
+      {"quote": "Syncope within the preceding 6 months suspected by clinical history to be arrhythmic", "why_ambiguous": "Appears alongside another bullet 'Unexplained syncope within the preceding 6 months' with different qualifiers; overlapping HCM items."}
+    ]
+  },
+  "requirement_kinds": [
+    {"kind": "other", "quote": "when survival with good functional status for more than one year is anticipated", "where": "Transvenous lead-in"},
+    {"kind": "diagnosis", "quote": "Established diagnosis of hypertrophic cardiomyopathy / arrhythmogenic right ventricular dysplasia / long QT / short QT / Brugada / cardiac sarcoidosis ... Phospholamban / FLNC / Lamin A/C cardiomyopathy", "where": "Transvenous"},
+    {"kind": "measurement threshold", "quote": "LVEF is <= 30% due to myocardial infarction >= 40 days previously in an individual with NYHA functional class I despite GDMT, who is at least 90 days post revascularization", "where": "Ischemic cardiomyopathy"},
+    {"kind": "age", "quote": "Nonischemic dilated cardiomyopathy in an individual <= 70 years of age", "where": "Transvenous"},
+    {"kind": "conservative therapy", "quote": "following 90 days of GDMT", "where": "NICM"},
+    {"kind": "imaging finding", "quote": "Late gadolinium enhancement (LGE) comprising 15% of LV mass in a patient aged 19 years or older", "where": "HCM"},
+    {"kind": "documentation/photos", "quote": "positive electrophysiology study performed >= 96 hours following myocardial infarction", "where": "Ischemic cardiomyopathy"},
+    {"kind": "prior procedure", "quote": "at least 90 days post revascularization (if revascularization has been performed)", "where": "Ischemic cardiomyopathy"},
+    {"kind": "other", "quote": "An outpatient who has met criteria for, and is awaiting, heart transplant or ventricular assist device and who is NYHA functional class IV", "where": "Transvenous"},
+    {"kind": "other", "quote": "The individual does not require pacing for bradycardia, overdrive pacing for termination of ventricular tachycardia, or cardiac resynchronization", "where": "Subcutaneous"},
+    {"kind": "documentation/photos", "quote": "Providers may be required to submit clinical documentation in support of a request for services. Such documentation must a) accurately reflect the clinical situation at the time of the requested service, and b) sufficiently document the ordering provider's clinical intent.", "where": "General Clinical Guideline"}
+  ],
+  "thresholds": [
+    {"quantity": "LVEF (ischemic NYHA I)", "value": "<= 30", "unit": "%", "quote": "LVEF is <= 30% due to myocardial infarction >= 40 days previously"},
+    {"quantity": "LVEF (ischemic NYHA II-III)", "value": "<= 35", "unit": "%", "quote": "LVEF is <= 35% due to myocardial infarction >= 40 days previously"},
+    {"quantity": "LVEF (NSVT + EP)", "value": "<= 40", "unit": "%", "quote": "LVEF is <= 40% due to prior myocardial infarction"},
+    {"quantity": "LVEF (NICM)", "value": "<= 35", "unit": "%", "quote": "Left ventricular ejection fraction (LVEF) <= 35%"},
+    {"quantity": "NICM age", "value": "<= 70", "unit": "years", "quote": "<= 70 years of age"},
+    {"quantity": "GDMT duration", "value": "90", "unit": "days", "quote": "following 90 days of GDMT"},
+    {"quantity": "time since MI", "value": ">= 40", "unit": "days", "quote": "myocardial infarction >= 40 days previously"},
+    {"quantity": "post-revascularization", "value": ">= 90", "unit": "days", "quote": "at least 90 days post revascularization"},
+    {"quantity": "EP study timing", "value": ">= 96", "unit": "hours after MI", "quote": "performed >= 96 hours following myocardial infarction"},
+    {"quantity": "LV wall thickness (HCM)", "value": ">= 30", "unit": "mm", "quote": "Maximum LV wall thickness >= 30 mm"},
+    {"quantity": "LVEF < 50% (HCM, structural disease)", "value": "< 50", "unit": "%", "quote": "Left ventricular ejection fraction < 50%"},
+    {"quantity": "S-ICD age", "value": "<= 21", "unit": "years", "quote": "Individual is <= 21 years of age"},
+    {"quantity": "sustained VT duration (definition)", "value": ">= 30", "unit": "seconds", "quote": "Ventricular tachycardia that persists for at least 30 seconds or requiring termination due to hemodynamic instability"},
+    {"quantity": "replacement window", "value": "within 3", "unit": "years of end-of-life", "quote": "the device is within 3 years of reaching end-of-life criteria"},
+    {"quantity": "expected survival", "value": "> 1", "unit": "year", "quote": "survival with good functional status for more than one year"}
+  ],
+  "time_windows": [
+    {"what": "GDMT trial", "length": "90 days", "quote": "following 90 days of GDMT"},
+    {"what": "since MI", "length": "40 days or more", "quote": "myocardial infarction >= 40 days previously"},
+    {"what": "since revascularization", "length": "at least 90 days", "quote": "at least 90 days post revascularization"},
+    {"what": "syncope in HCM", "length": "preceding 6 months", "quote": "Syncope within the preceding 6 months"},
+    {"what": "syncope with abnormal BP / NSVT", "length": "preceding 5 years", "quote": "Syncope within the preceding 5 years"},
+    {"what": "survival", "length": "more than one year", "quote": "survival with good functional status for more than one year is anticipated"}
+  ],
+  "codes": {"cpt_hcpcs_listed": true, "icd10_listed": false, "codes_tied_to_criteria": "A CPT/HCPCS list (33215-33273, 93640, 93641, 00534, C1721-C1899) and a 'Substernal Implantable Defibrillators' list (0571T-0574T). No mapping to criteria; the substernal codes have no clinical indication section. 'Authorization requirements will vary by health plan.'", "non_covered_code_lists": "none"},
+  "external_dependencies": [
+    {"what": "Health plan policy may replace the guideline", "quote": "If requested by a health plan, Carelon will review requests based on health plan medical policy/guidelines in lieu of the Carelon Guidelines."},
+    {"what": "Medicare Advantage: CMS criteria first", "quote": "in the case of reviews for Medicare Advantage Plans, the Guidelines are only applied where there are not fully established CMS criteria"},
+    {"what": "Peer-to-peer when elements not established", "quote": "the determination of appropriateness will most likely require a peer-to-peer conversation"},
+    {"what": "FDA approval", "quote": "medical devices used ... must be FDA approved or conditionally approved for the intended use"},
+    {"what": "Cardiac resynchronization devices out of scope", "quote": "Use of external defibrillators and cardiac resynchronization devices is not addressed in this document."}
+  ],
+  "definitions_that_change_meaning": [
+    {"term": "Guideline-directed medical therapy (GDMT)", "definition_quote": "Maximum tolerated doses of appropriately titrated medication (to include beta blockers, ACE inhibitors or ARBs, aldosterone antagonists and diuretics in patients with left ventricular dysfunction)."},
+    {"term": "Sustained ventricular tachycardia", "definition_quote": "Ventricular tachycardia that persists for at least 30 seconds or requiring termination due to hemodynamic instability."},
+    {"term": "Structural heart disease", "definition_quote": "Left ventricular dysfunction (LVEF < 50%), prior myocardial infarction, moderate or severe valvular heart disease or complex congenital heart disease."},
+    {"term": "NYHA class", "definition_quote": "Class II. Individuals with cardiac disease resulting in slight limitation of physical activity ... ordinary physical activity, (e.g., moderate physical exertion, such as carrying shopping bags up several flights of stairs) results in fatigue, palpitation, dyspnea, or anginal pain."}
+  ],
+  "vague_terms": [
+    {"quote": "survival with good functional status for more than one year is anticipated", "problem": "prognosis judgment with no tool"},
+    {"quote": "Subcutaneous device is preferred due to younger age of patient", "problem": "'preferred' and 'younger' undefined, with stray '<= 21' appended"},
+    {"quote": "LV apical aneurysm independent of size", "problem": "imaging finding without a stated modality"},
+    {"quote": "No completely reversible cause can be identified", "problem": "'completely reversible' is a judgment"},
+    {"quote": "the generator pocket needs to be opened for another reason", "problem": "depends on surgical plan, not chart facts"}
+  ],
+  "extraction_hazards": [
+    "Cover page and header carry tracked-change markup ('Blue underline = insertion, Red strikethrough = deletion'): dates print as '11/1710/20/2024' and '04/15/2024 01/23/2024', merging a deleted and an inserted date.",
+    "Revision markup in the criteria themselves may have been flattened: the S-ICD age bullet 'Subcutaneous device is preferred due to younger age of patient Individual is <= 21 years of age' appears to fuse a deleted and an inserted phrase from the redline (inference; the History says the age was replaced by 'younger' on 04/15/2024).",
+    "Bullet glyphs are private-use characters; sub-bullets use 'o'; nesting carries the logic.",
+    "The 'General Clinical Guideline' (pp. 4-5) is boilerplate shared by every Carelon guideline and contains words like 'repeat', 'peer-to-peer', 'net benefit' that look like criteria.",
+    "Code table includes an anesthesia code (00534) and HCPCS device codes (C1721 ...) that are claim codes, not procedures a chart orders.",
+    "Page footer 'Carelon Medical Benefits Management' repeated and page numbers within lists."
+  ],
+  "interesting_structures": [
+    "Vendor 'Appropriate Use Criteria' with explicit framework, peer-to-peer fallback, and repeat-intervention rules shared across all Carelon guidelines.",
+    "Text nearly identical to BCBSM's inclusion list but with <= and >= comparators and no softeners.",
+    "Genetic cardiomyopathies (phospholamban, FLNC, lamin A/C) with sex as a criterion item.",
+    "Replacement: second branch needs another reason to open the pocket plus proximity to end-of-life.",
+    "Substernal codes present but no substernal criteria (gap).",
+    "Revision history table lists expansions (LV aneurysm, LGE; genetic cardiomyopathies; replacement)."
+  ],
+  "fit_to_tree": {"score": 3, "scale": "1 = clean, 5 = needs new constructs or human judgment", "why": "A wide any-of with deterministic numeric leaves is easy; strain is the global one-year survival gate, many diagnoses defined by outside classifications, the tracked-changes damage in the S-ICD age bullet, and absence of a substernal criteria block despite listed codes."}
+}

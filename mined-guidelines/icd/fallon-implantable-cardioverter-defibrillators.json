@@ -1,0 +1,19 @@
+{
+  "payer": "Fallon Health",
+  "payer_key": "fallon",
+  "treatment": "icd",
+  "title": "Implantable Cardioverter Defibrillators",
+  "policy_number": "",
+  "effective": "09/01/2024",
+  "url": "https://fallonhealth.org/-/media/Files/ProviderPDFs/MedicalPolicies/ImplantableCardioDefib.ashx",
+  "final_url": "https://fallonhealth.org/-/media/Files/ProviderPDFs/MedicalPolicies/ImplantableCardioDefib.ashx",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "fallon-implantable-cardioverter-defibrillators.pdf",
+  "sha256": "ecbdac432faeeaea461a5611be0aaaa3a5aa5a76fd342d0777c41f2b73604389",
+  "pages": 10,
+  "bytes": 327619,
+  "retrieved": "2026-10-09",
+  "printed_date": "Header on each page: 'Effective 09/01/2026' (library metadata: 09/01/2024; text says InterQual use 'on or after September 1, 2024'); Medicare Coverage Database searched 07/20/2026"
+}

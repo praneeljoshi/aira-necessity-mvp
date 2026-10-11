@@ -1,0 +1,175 @@
+{
+ "lines_of_business": [
+  "All lines of business unless noted in PROGRAM EXCEPTIONS (disclaimer: \"THIS MEDICAL COVERAGE GUIDELINE APPLIES TO ALL LINES OF BUSINESS UNLESS OTHERWISE NOTED IN THE PROGRAM EXCEPTIONS SECTION\")",
+  "FEP: \"Follow FEP guidelines.\"",
+  "SAO: \"Follow SAO guidelines.\"",
+  "Medicare Advantage: NCD 140.9 and LCD L38914 (Cosmetic and Reconstructive Surgery) 'reviewed'",
+  "'Coverage may be governed by state or federal mandates.'"
+ ],
+ "effective_or_revised": "Original Effective Date 11/15/11; Reviewed 02/26/26; Revised 10/01/26 (7 pages)",
+ "sections_in_order": [
+  "header block (guideline number, Original Effective Date, Reviewed, Revised, Subject)",
+  "disclaimer paragraph",
+  "navigation bar (Position Statement / Billing/Coding / Reimbursement / Program Exceptions / Definitions / Related Guidelines / Other / References / Updates)",
+  "DESCRIPTION",
+  "POSITION STATEMENT",
+  "BILLING/CODING INFORMATION",
+  "REIMBURSEMENT INFORMATION",
+  "PROGRAM EXCEPTIONS",
+  "DEFINITIONS",
+  "RELATED GUIDELINES",
+  "OTHER",
+  "REFERENCES",
+  "COMMITTEE APPROVAL",
+  "GUIDELINE UPDATE INFORMATION"
+ ],
+ "criteria_location": "POSITION STATEMENT, pp.2-4. Six procedure groups, each its own lettered A-G list under 'ALL of the following are met', then an aesthetic exclusion list. The OTHER section (p.5) adds the content a referral letter may include.",
+ "procedures_covered": [
+  "Hysterectomy and ovariectomy (FtM / gender diverse)",
+  "Metoidioplasty or phalloplasty with/without scrotoplasty",
+  "Mastectomy and chest surgery (FtM)",
+  "Orchiectomy, penectomy (MtF)",
+  "Vaginoplasty, clitoroplasty, vulvoplasty (MtF)",
+  "Breast augmentation (implants/lipofilling) (MtF)",
+  "Aesthetic/cosmetic procedures: not covered (blepharoplasty, face lift, liposuction, rhinoplasty, voice modification surgery, etc.)"
+ ],
+ "logic": {
+  "top_level": "pathways: one procedure group per paragraph, each 'meets the definition of medical necessity when ALL of the following are met' (A-G)",
+  "max_nesting_depth": 2,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "Inline as criteria: 'D. No medical contraindications to surgery'; 'E. Any mental health concerns are well controlled'. Separate list of aesthetic procedures that 'do not meet the definition of medical necessity when performed as part of gender affirmation surgery (the list is not all-inclusive)'.",
+  "initial_vs_repeat": "No revision or repeat criteria. The pre-op requirement differs by group: 12 months of hormones for genital and gonadal surgery, but 'Hormone therapy is not a pre-requisite' for mastectomy/chest surgery; breast augmentation requires hormones for 12 months but only one referral letter.",
+  "and_or_ambiguity": [
+   {
+    "quote": "F. Documentation of 12 continuous months of hormone therapy (unless the member has a medical contraindication or is otherwise unable to take hormones); AND",
+    "why_ambiguous": "The AND is placed after F; G follows. 'otherwise unable' is an open exception clause."
+   },
+   {
+    "quote": "E. Any mental health concerns are well controlled; AND F. One referral letter from a licensed mental health professional. (Note: Hormone therapy is not a pre-requisite.)",
+    "why_ambiguous": "The 'AND' appears at different lines in different groups (after E here, after F elsewhere): lettered lists are an ALL, the AND tokens are redundant noise."
+   },
+   {
+    "quote": "The following procedures are considered aesthetic (cosmetic) and do not meet the definition of medical necessity when performed as part of gender affirmation surgery (the list is not all-inclusive)",
+    "why_ambiguous": "Open-ended list; surgeries not named are undecided."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "age",
+   "quote": "A. Member is 18 years or older",
+   "where": "each group, A"
+  },
+  {
+   "kind": "patient commitment",
+   "quote": "B. Member has the capacity to make a fully informed decision and to consent for treatment",
+   "where": "each group, B"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "C. Documentation shows persistent and well documented gender dysphoria",
+   "where": "each group, C"
+  },
+  {
+   "kind": "other",
+   "quote": "D. No medical contraindications to surgery",
+   "where": "each group, D"
+  },
+  {
+   "kind": "psych/nutrition evaluation",
+   "quote": "E. Any mental health concerns are well controlled",
+   "where": "each group, E"
+  },
+  {
+   "kind": "duration",
+   "quote": "Documentation of 12 continuous months of hormone therapy",
+   "where": "F (genital/gonadal groups and breast augmentation)"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "Letter of assessment from a health care professional who has competencies in the assessment of transgender and gender diverse people.",
+   "where": "G (genital surgery groups) vs 'One referral letter from a licensed mental health professional' (chest groups)"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "age",
+   "value": ">= 18",
+   "unit": "years",
+   "quote": "Member is 18 years or older"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "continuous hormone therapy",
+   "length": "12 months",
+   "quote": "Documentation of 12 continuous months of hormone therapy"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": true,
+  "codes_tied_to_criteria": "No. CPT 55970/55980 and 25 component procedure codes (mastectomy, orchiectomy, hysterectomy, vaginoplasty codes) 'may be billed separately'; ICD-10 F64.0-F64.9 and Z87.8901-Z87.893. Not mapped to procedure groups. The update log says 'Z89.8901 - Z87.893 added' while the table prints 'Z87.8901- Z87.893'.",
+  "non_covered_code_lists": "none"
+ },
+ "external_dependencies": [
+  {
+   "what": "Member contract and state/federal mandate",
+   "quote": "Coverage for gender affirmation surgery is subject to the member’s benefit terms, limitations and maximums. Refer to specific contract language regarding gender reassignment."
+  },
+  {
+   "what": "WPATH SOC-8 used as evidence basis; letter competence follows it",
+   "quote": "Standards of Care for the Health of Transgender and Gender Diverse People (SOC-8, 2022)"
+  },
+  {
+   "what": "Medicare Advantage NCD 140.9 / LCD L38914",
+   "quote": "National Coverage Determination (NCD) Gender Dysphoria and Gender Reassignment Surgery (140.9)"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "gender dysphoria (DSM-5-TR, in Description)",
+   "definition_quote": "marked incongruence between one’s experienced/expressed gender and their assigned gender, lasting at least 6 months, as manifested by at least two of the following"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "persistent and well documented gender dysphoria",
+   "problem": "'persistent' undefined (Description gives 6 months and DSM two-of-six, but the Position Statement does not reference it)."
+  },
+  {
+   "quote": "Any mental health concerns are well controlled",
+   "problem": "no measure or evidence type; 'well controlled' judged by reviewer."
+  },
+  {
+   "quote": "competencies in the assessment of transgender and gender diverse people",
+   "problem": "no credential definition."
+  },
+  {
+   "quote": "No medical contraindications to surgery",
+   "problem": "no list; judgment."
+  }
+ ],
+ "extraction_hazards": [
+  "Lettered criteria A-G are plain indented lines (no bullet glyph), identical across six paragraphs; a parser must carry the heading sentence ('Hysterectomy and ovariectomy ... meets the definition ...') to each block.",
+  "Headings of the six procedure groups are ordinary sentences in the same typeface as body text, so group boundaries must be found by the phrase 'meets the definition of medical necessity when ALL of the following are met'.",
+  "A stray single word 'Other' sits on its own line before the aesthetic exclusion list.",
+  "The Position Statement heading line is followed by the NOTE, which carries a benefits caveat.",
+  "Dates: the update log has a duplicated 03/15/24 entry and entries dated after the 'Reviewed' date (03/15/26, 10/01/26)."
+ ],
+ "interesting_structures": [
+  "Same seven-line criteria template instantiated per procedure with small deltas (hormones required or not; one letter vs assessment letter).",
+  "Differences are the whole logic: which procedures need 12 months of hormones, which need a 'referral letter' vs 'letter of assessment'.",
+  "The Description contains a diagnostic definition (DSM-5-TR) that the criteria 'persistent and well documented gender dysphoria' silently relies on.",
+  "OTHER section lists what a referral letter should contain (5 items), a documentation checklist outside the criteria."
+ ],
+ "fit_to_tree": {
+  "score": 2,
+  "scale": "1..5",
+  "why": "six clean all-of lists, one per procedure; leaves are documentation checks. Strain: 'well controlled', 'persistent', and the hormone exemption clause; the per-group variants invite a shared-leaves-with-overrides design."
+ },
+ "file": "bcbsfl-02-55900-01-gender-affirmation-surgery.pdf",
+ "treatment": "gender-affirmation-surgery",
+ "payer": "bcbsfl",
+ "doc_kind": "medical policy (Florida Blue 'Medical Coverage Guideline', MCG)"
+}

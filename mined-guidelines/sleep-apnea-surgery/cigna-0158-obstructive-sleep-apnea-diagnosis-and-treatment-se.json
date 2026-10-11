@@ -1,0 +1,19 @@
+{
+  "payer": "Cigna",
+  "payer_key": "cigna",
+  "treatment": "sleep-apnea-surgery",
+  "title": "Obstructive Sleep Apnea Diagnosis and Treatment Services",
+  "policy_number": "0158",
+  "effective": "",
+  "url": "https://static.cigna.com/assets/chcp/pdf/coveragePolicies/medical/mm_0158_coveragepositioncriteria_obstructive_sleep_apnea_diag_trtment_svc.pdf",
+  "final_url": "https://static.cigna.com/assets/chcp/pdf/coveragePolicies/medical/mm_0158_coveragepositioncriteria_obstructive_sleep_apnea_diag_trtment_svc.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "cigna-0158-obstructive-sleep-apnea-diagnosis-and-treatment-se.pdf",
+  "sha256": "5debd5e7e4f04ebde2607960168cc897507264c80b15e827907cbf58213b436a",
+  "pages": 32,
+  "bytes": 531147,
+  "retrieved": "2026-10-09",
+  "printed_date": "Effective 6/15/2026; next review 12/15/2026 (32 pages)"
+}

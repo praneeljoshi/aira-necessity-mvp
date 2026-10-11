@@ -1,0 +1,19 @@
+{
+  "payer": "UnitedHealthcare",
+  "payer_key": "uhc",
+  "treatment": "sleep-apnea-surgery",
+  "title": "Obstructive and Central Sleep Apnea Treatment",
+  "policy_number": "2026T0525UU",
+  "effective": "04/01/2026",
+  "url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-medical-drug/obstructive-sleep-apnea-treatment.pdf",
+  "final_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-medical-drug/obstructive-sleep-apnea-treatment.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "uhc-2026t0525uu-obstructive-and-central-sleep-apnea-treatment.pdf",
+  "sha256": "453dd185bb047a604a1f256a8a5ab990ea7d803878e33923a5d88c6b5456e845",
+  "pages": 31,
+  "bytes": 673456,
+  "retrieved": "2026-10-09",
+  "printed_date": "Effective October 1, 2026; policy number printed 2026T0525VV (file name says UU); 31 pages"
+}

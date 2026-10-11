@@ -1,0 +1,222 @@
+{
+ "payer": "excellus",
+ "doc_kind": "medical policy",
+ "lines_of_business": [
+  "Excellus BlueCross BlueShield (not otherwise specified in criteria)"
+ ],
+ "effective_or_revised": "Current Effective Date July 16, 2026; Next Review July 2027",
+ "sections_in_order": [
+  "Policy Statement(s)",
+  "Related Policies",
+  "Policy Guideline(s)",
+  "Description",
+  "Supportive Literature",
+  "Professional Guideline(s)",
+  "Regulatory Status",
+  "Code(s)",
+  "References",
+  "Policy History/Revision"
+ ],
+ "criteria_location": "Policy Statement II/III (pp.1-4) plus Policy Guidelines I-V (pp.4-10), including a condition table (Pressure / Patient Selection Criteria / Duration / Utilization review) and CMS provider requirements.",
+ "procedures_covered": [
+  "Systemic HBOT",
+  "Topical HBOT (investigational)"
+ ],
+ "logic": {
+  "top_level": "pathways (18 covered indications II.A-R, each with condition-specific table row; plus general documentation rules)",
+  "max_nesting_depth": 3,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "Investigational list III.A-RR 'for ALL other indications'; Wagner 5 / complete gangrene in documentation note.",
+  "initial_vs_repeat": "Policy Guideline III: 'Continued treatment with HBOT is not covered if measurable signs of healing have not been demonstrated within any 30-day period of treatment. Most patients should NOT require more than 40 treatments.' Utilization review column per condition.",
+  "and_or_ambiguity": [
+   {
+    "quote": "ALL the following: ... 3. No measurable signs of healing after 30 days of an adequate course of standard wound therapy; which may include ANY of the following",
+    "why_ambiguous": "'may include ANY' makes the standard-therapy components optional and unverifiable"
+   },
+   {
+    "quote": "Treatment is recommended either: combined with steroid therapy within 2 weeks of onset; or ... salvage within 1 month",
+    "why_ambiguous": "Appears in table 'Patient Selection Criteria', not in Policy Statement, so unclear if binding"
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "measurement threshold",
+   "quote": "A wound classified as Wagner grade 3 or higher",
+   "where": "II.C.2"
+  },
+  {
+   "kind": "duration",
+   "quote": "No measurable signs of healing after 30 days of an adequate course of standard wound therapy",
+   "where": "II.C.3"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "optimization of glucose control; debridement by any means; appropriate off-loading",
+   "where": "II.C.3.a-g"
+  },
+  {
+   "kind": "duration",
+   "quote": "Osteomyelitis, chronic, refractory (has persisted for at least six (6) weeks or has recurred after appropriate interventions",
+   "where": "II.N"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "Weekly wound measurements should be performed",
+   "where": "Policy Guideline II"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "advanced diabetic foot ulcers may require photos",
+   "where": "Policy Guideline I.F"
+  },
+  {
+   "kind": "provider/facility qualification",
+   "quote": "Physicians supervising HBOT should be certified in Undersea and Hyperbaric Medicine ... or must have completed a minimum 40-hour training",
+   "where": "Policy Guideline V.B"
+  },
+  {
+   "kind": "provider/facility qualification",
+   "quote": "Advanced Cardiac Life Support (ACLS) training and certification of supervising physicians",
+   "where": "V.C"
+  },
+  {
+   "kind": "site of service",
+   "quote": "physician (or qualified NPP) must be present in the office suite or at a location with a maximum of a five-minute response time",
+   "where": "V.E"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "The degree of hearing loss is typically defined as a loss of 30 decibels or more across 3 contiguous frequencies",
+   "where": "Table IV"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "tissue oxygen tension is below 30 mmHg",
+   "where": "Table IV, crush injury"
+  },
+  {
+   "kind": "other",
+   "quote": "Within six hours of patient removal from the carbon monoxide-contaminated environment",
+   "where": "Table IV"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "Wagner grade",
+   "value": ">= 3",
+   "unit": "grade",
+   "quote": "Wagner grade 3 or higher"
+  },
+  {
+   "quantity": "treatments suggested max",
+   "value": "40",
+   "unit": "treatments",
+   "quote": "Most patients should NOT require more than 40 treatments."
+  },
+  {
+   "quantity": "chronic osteomyelitis duration",
+   "value": ">= 6",
+   "unit": "weeks",
+   "quote": "persisted for at least six (6) weeks"
+  },
+  {
+   "quantity": "CRAO utilization review",
+   "value": "20",
+   "unit": "treatments",
+   "quote": "After 20 treatments"
+  },
+  {
+   "quantity": "tissue O2 tension (crush)",
+   "value": "< 30",
+   "unit": "mmHg",
+   "quote": "tissue oxygen tension is below 30 mmHg"
+  },
+  {
+   "quantity": "hearing loss",
+   "value": ">= 30 across 3 frequencies",
+   "unit": "dB",
+   "quote": "loss of 30 decibels or more across 3 contiguous frequencies"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "standard wound therapy",
+   "length": "30 days",
+   "quote": "after 30 days of an adequate course"
+  },
+  {
+   "what": "ISSHL with steroid",
+   "length": "2 weeks / salvage 1 month",
+   "quote": "within 2 weeks of onset"
+  },
+  {
+   "what": "CO poisoning",
+   "length": "6 hours",
+   "quote": "Within six hours of patient removal"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": true,
+  "codes_tied_to_criteria": "Codes listed with (E/I) / (NMN) flags only on HCPCS; ICD-10 list is a long code list not mapped to conditions.",
+  "non_covered_code_lists": "A4575 (E/I), E0446 (E/I); non-covered diagnosis list"
+ },
+ "external_dependencies": [
+  {
+   "what": "CMS provider criteria for HBOT supervision",
+   "quote": "It is recommended that the Centers for Medicare and Medicaid Services (CMS) criteria for coverage be utilized in determining appropriate practitioners to render HBOT."
+  },
+  {
+   "what": "Corporate Medical Policy",
+   "quote": "11.01.03 Experimental or Investigational Services"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Wagner grades",
+   "definition_quote": "Grade 3: lesion has penetrated deeper than Grade 2 and there is abscess, osteomyelitis, pyarthrosis, plantar space abscess, or infection of the tendon and tendon sheaths"
+  },
+  {
+   "term": "ATA",
+   "definition_quote": "1 ATA (atmospheres absolute) = pressure of 760 mmHg, 14.7 psi"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "should / recommended / typically / most patients",
+   "problem": "Policy Guidelines use soft modals; unclear what is binding"
+  },
+  {
+   "quote": "adequate course of standard wound therapy ... which may include ANY",
+   "problem": "optional components"
+  },
+  {
+   "quote": "Necrotizing soft tissue infections, based on location and/or organism type and/or particular host immunologic and vascular risk factors",
+   "problem": "and/or list with no thresholds"
+  },
+  {
+   "quote": "Arterial inefficiencies",
+   "problem": "typo for insufficiencies in both Policy Statement and table"
+  }
+ ],
+ "extraction_hazards": [
+  "5-column condition table splits mid-row across pages with repeated headers",
+  "Statement items letter-indexed A..RR (two-letter indices)",
+  "Policy Statement lists CRAO/ISSHL added 06/26/25 but history only",
+  "Literature 500+ lines of evidence",
+  "Wagner grade definitions differ from FL (grade 4/5 truncated)"
+ ],
+ "interesting_structures": [
+  "Per-condition table giving ATA, patient selection criteria, session counts, and utilization-review checkpoint",
+  "Provider supervision and ACLS rules borrowed from CMS",
+  "Weekly wound-volume documentation"
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "scale": "1 = all/any/not expresses it cleanly ... 5 = needs new constructs",
+  "why": "Core indications fit any-of, but condition-specific table rows add guideline-level selection criteria, session counts and review checkpoints, with 'should' language that is not clearly binding."
+ },
+ "file": "excellus-2-01-07-hyperbaric-oxygen-therapy.pdf",
+ "treatment": "hyperbaric-oxygen"
+}

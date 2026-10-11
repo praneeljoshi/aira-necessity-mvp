@@ -1,0 +1,243 @@
+{
+ "file": "blueshield-ca-diagnosis-of-obstructive-sleep-apnea-syndrome.pdf",
+ "treatment": "sleep-testing",
+ "payer": "blueshield-ca",
+ "doc_kind": "medical policy",
+ "lines_of_business": [
+  "Not stated beyond 'Blue Shield of California'; Benefit Application says contract language controls"
+ ],
+ "effective_or_revised": "Original Policy Date April 3, 2009; Effective Date July 1, 2026 (policy 2.01.18)",
+ "sections_in_order": [
+  "Policy Statement (I-IX)",
+  "Policy Guidelines (HSAT devices, contraindications, sleep lab test, definitions, risk factors, questionnaires, pediatric, bariatric, weight change, MSLT, specialist training, split-night, categorization)",
+  "Coding",
+  "Description",
+  "Summary of Evidence",
+  "Additional Information",
+  "Related Policies",
+  "Benefit Application",
+  "Regulatory Status",
+  "Rationale/References",
+  "Appendix A"
+ ],
+ "criteria_location": "Policy Statement I-IX on pp.1-2 (short roman-numeral statements); the real thresholds live in Policy Guidelines pp.2-7 (device sensor requirements, contraindications list, risk factors, clinically significant OSA). Statements refer to Policy Guidelines for terms.",
+ "procedures_covered": [
+  "Repeat HSAT (adult)",
+  "Initial and repeat supervised PSG",
+  "CPAP titration in lab (adult and pediatric)",
+  "APAP titration",
+  "Split-night study",
+  "MSLT (investigational for OSA dx)",
+  "HSAT in children (investigational)"
+ ],
+ "logic": {
+  "top_level": "pathways: numbered statements I-IX each with letter sub-lists; mostly any-of",
+  "max_nesting_depth": 3,
+  "k_of_n": [
+   {
+    "k": 2,
+    "n": 4,
+    "quote": "individuals with any two of the following symptoms are considered to have a moderate-to-high probability for moderate to severe OSA: Habitual snoring; Observed apneas; Excessive daytime sleepiness; A body mass index (BMI) greater than 35 kg/m2"
+   }
+  ],
+  "exclusions_or_contraindications": "HSAT contraindications 'include, but are not limited to significant, ongoing symptoms related to' 10 conditions in Policy Guidelines; neuromuscular list in separate sub-list; statements III, VIII: repeat/unmet HSAT 'investigational'.",
+  "initial_vs_repeat": "Statement I covers REPEAT HSAT (initial HSAT is required by guideline, no PA); IV initial PSG; VI repeat PSG; III repeat HSAT investigational when routine/sequential nights.",
+  "and_or_ambiguity": [
+   {
+    "quote": "may be considered medically necessary for an individual with a moderate or high pretest probability of OSA in any of the following situations",
+    "why_ambiguous": "'May be considered' is permissive; pretest probability defined only by 2-of-4 list in guidelines ('any two ... considered moderate-to-high')."
+   },
+   {
+    "quote": "Prior authorization is not required for HSATs. However, treatment based on HSAT results will not be approved unless the following criteria are met",
+    "why_ambiguous": "Criteria apply to downstream treatment approval, not to HSAT itself; a checker for the HSAT request would have almost nothing to evaluate."
+   },
+   {
+    "quote": "Contraindications to home sleep studies include, but are not limited to significant, ongoing symptoms related to",
+    "why_ambiguous": "Open list and 'significant, ongoing symptoms' vague."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "age",
+   "quote": "The individual is at least 18 years old",
+   "where": "Policy Guidelines (HSAT criteria 1)"
+  },
+  {
+   "kind": "other",
+   "quote": "Documentation that the device used meets either of the following criteria: A. All of the following sensors: Nasal pressure, Oximetry, ... RIP",
+   "where": "Policy Guidelines p.2"
+  },
+  {
+   "kind": "symptom",
+   "quote": "any two of the following ... Habitual snoring; Observed apneas; Excessive daytime sleepiness; A body mass index (BMI) greater than 35 kg/m2",
+   "where": "Risk factors p.5"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "An Apnea/Hypopnea Index (AHI), Respiratory Disturbance Index (RDI), or Respiratory Event Index (REI) of at least 15 events per hour",
+   "where": "Clinically significant OSA p.5"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "Presence of a known comorbidity (a contraindication to HSAT; see Policy Guidelines section) that might alter ventilation or decrease the accuracy of a home sleep apnea test",
+   "where": "Statement IV.E"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "A previous home study failed to establish the diagnosis of OSA in an individual with a high pretest probability of OSA",
+   "where": "IV.A"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "G. To titrate for Adaptive Support Ventilation (ASV) when CPAP or BiPAP have first been tried and failed",
+   "where": "IV.G / VI.D"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "An AHI or RDI of greater than or equal to 5 events per hour",
+   "where": "VI.F.1 pediatric CPAP"
+  },
+  {
+   "kind": "provider/facility qualification",
+   "quote": "test summary results reviewed by a provider who is trained in sleep medicine",
+   "where": "Specialist Training p.6"
+  },
+  {
+   "kind": "other",
+   "quote": "A technically adequate diagnostic test includes a minimum of 4 hours of technically adequate oximetry and flow data",
+   "where": "p.3"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "AHI/RDI/REI clinically significant",
+   "value": ">= 15, or >= 5 with EDS or hypertension",
+   "unit": "events/h",
+   "quote": "at least 5 events per hour in a patient with excessive daytime sleepiness"
+  },
+  {
+   "quantity": "ESS",
+   "value": "> 10",
+   "unit": "score",
+   "quote": "Epworth Sleepiness Scale >10"
+  },
+  {
+   "quantity": "BMI (risk)",
+   "value": "> 35",
+   "unit": "kg/m2",
+   "quote": "A body mass index (BMI) greater than 35 kg/m2"
+  },
+  {
+   "quantity": "neck size",
+   "value": "M 16.5 in; F 15 in",
+   "unit": "inches",
+   "quote": "males: 16.5 inches (43 cm); females: 15 inches (38 cm)"
+  },
+  {
+   "quantity": "hypertension",
+   "value": "SBP>=140 or DBP>=90 or on treatment",
+   "unit": "mm Hg",
+   "quote": "Systolic BP ≥140 or diastolic BP ≥90, or on current medical treatment"
+  },
+  {
+   "quantity": "OHS",
+   "value": "PaCO2 > 45 or bicarbonate >= 27, BMI >= 30",
+   "unit": "",
+   "quote": "awake arterial P CO2>45 mm Hg or serum bicarbonate ≥27"
+  },
+  {
+   "quantity": "split-night AHI",
+   "value": ">= 40 (20-40 by judgment)",
+   "unit": "events/h",
+   "quote": "An AHI of at least 40 events per hour is documented during a minimum of 2 hours"
+  },
+  {
+   "quantity": "pediatric CPAP",
+   "value": "AHI/RDI >= 5, or >= 1.5 with symptoms",
+   "unit": "events/h",
+   "quote": "greater than or equal to 1.5 events per hour in a patient with excessive daytime sleepiness"
+  },
+  {
+   "quantity": "adequate HSAT recording",
+   "value": ">= 4",
+   "unit": "hours",
+   "quote": "minimum of 4 hours of technically adequate oximetry and flow data"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "HSAT repeat 'short time period'",
+   "length": "unspecified",
+   "quote": "done routinely on sequential nights or within a short time period"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Policy Guidelines discuss codes 95800, 95801, 95806, G0400, 95810, 95811 inline with rules (e.g., 'Code 95801 should not be used'); Coding section says 'See the Codes table'.",
+  "non_covered_code_lists": "Not in extracted criteria."
+ },
+ "external_dependencies": [
+  {
+   "what": "Other Blue Shield policy for non-respiratory disorders",
+   "quote": "see Blue Shield of California Medical Policy: Polysomnography for Non-Respiratory Sleep Disorders"
+  },
+  {
+   "what": "AASM practice parameters used as split-night criteria",
+   "quote": "American Academy of Sleep Medicine practice parameters (2005) have indicated that a split-night study"
+  },
+  {
+   "what": "Related policies",
+   "quote": "Actigraphy; Home Cardiorespiratory Monitoring; Medical Management of Obstructive Sleep Apnea Syndrome"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Clinically Significant OSA in an adult",
+   "definition_quote": "AHI, RDI, or REI of at least 15 events per hour"
+  },
+  {
+   "term": "Hypertension",
+   "definition_quote": "Systolic BP ≥140 or diastolic BP ≥90, or on current medical treatment for hypertension."
+  },
+  {
+   "term": "Obesity-Hypoventilation Syndrome",
+   "definition_quote": "awake arterial P CO2>45 mm Hg or serum bicarbonate ≥27"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "There is no established threshold for significant change in weight.",
+   "problem": "Explicitly undefined where statement I.B depends on it."
+  },
+  {
+   "quote": "Objective clinical prediction rules are being developed; at present, risk assessment is based primarily on clinical judgment.",
+   "problem": "Pretest probability is judgement."
+  },
+  {
+   "quote": "moderate or high pretest probability of OSA",
+   "problem": "Gate on every PSG statement, defined only loosely."
+  },
+  {
+   "quote": "Failure of resolution of symptoms or recurrence of symptoms during treatment",
+   "problem": "No time or adherence defined."
+  }
+ ],
+ "extraction_hazards": [
+  "Roman-numeral statements split across pages with the 'Blue Shield' footer in between; letter sub-lists continue after the break.",
+  "Policy Guidelines contain definitions that are not referenced by name in the statements.",
+  "The statement text says 'Repeat' for HSAT while the guideline requires HSAT first - the initial HSAT rule lives only in Policy Guidelines.",
+  "Appendix A and Regulatory Status table (SleepImage) are noise."
+ ],
+ "interesting_structures": [
+  "Policy states HSAT is required first ('BSC requires an unattended ... HSAT as the initial study ... unless contraindicated') without prior-auth for HSAT.",
+  "Device specification rules (sensor sets, PAT) are part of coverage.",
+  "Coding corrections inside guidance (use G0400 for dual-belt devices)."
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "scale": "1 clean ... 5 judgment",
+  "why": "Statements are simple any-of lists, but key definitions are in guidance prose, HSAT-first rule is outside the numbered statements, and probabilistic/clinical-judgment terms."
+ }
+}

@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "spinal-cord-stimulation",
+  "title": "Spinal Cord and Dorsal Root Ganglion Stimulation",
+  "category": "Durable Medical Equipment",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JGJZ3UV2RVT020T8X",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-61000-05",
+  "original_effective": "09/15/02",
+  "reviewed": "02/26/26",
+  "revised": "03/15/26",
+  "file": "bcbsfl-02-61000-05-spinal-cord-and-dorsal-root-ganglion-stimulation.pdf",
+  "sha256": "b650375989e6edf00e298aad89db7bbcdef5741417eaa11a248c3b211001dcd1",
+  "pages": 10,
+  "bytes": 763868,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original 09/15/02; Reviewed 02/26/26; Revised 03/15/26"
+}

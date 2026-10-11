@@ -1,0 +1,277 @@
+{
+ "file": "cigna-0158-obstructive-sleep-apnea-diagnosis-and-treatment-se.pdf",
+ "treatment": "sleep-apnea-surgery",
+ "payer": "Cigna",
+ "doc_kind": "coverage policy (Medical Coverage Policy 0158 'Surgical Treatments for Obstructive Sleep Apnea')",
+ "lines_of_business": [
+  "Health benefit plans administered by Cigna Companies; 'In certain markets, delegated vendor guidelines may be used'"
+ ],
+ "effective_or_revised": "Effective 6/15/2026; next review 12/15/2026 (32 pages)",
+ "sections_in_order": [
+  "Instructions for Use",
+  "Overview",
+  "Coverage Policy",
+  "Coding Information",
+  "General Background",
+  "Health Equity Considerations",
+  "References",
+  "Revision Details"
+ ],
+ "criteria_location": "Coverage Policy pp.2-4; Coding p.4-6. General Background (pp.6-24) is evidence only.",
+ "procedures_covered": [
+  "DISE (adult, Down syndrome adolescent, child)",
+  "UPPP",
+  "Uvulectomy (stand-alone: not medically necessary)",
+  "Multi-level / stepwise surgery",
+  "Maxillomandibular advancement",
+  "HGNS (Inspire, Genio) adult and pediatric Down syndrome; remote replacement",
+  "Investigational: atrial pacing, CAPSO, snoreplasty, Pillar, RF, tongue-base suspension, TPAP",
+  "Snoring alone: not medically necessary"
+ ],
+ "logic": {
+  "top_level": "pathways: one 'when ALL of the following criteria are met' block per procedure; DISE uses EITHER",
+  "max_nesting_depth": 3,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "Explicit not-medically-necessary and experimental lists; no patient contraindication list for HGNS beyond the criteria (DISE concentric collapse, central+mixed apneas).",
+  "initial_vs_repeat": "Remote replacement for HGNS when malfunctioning and out of warranty; batteries not necessary. DISE also for 'persistent OSA after surgical intervention'. Multi-level surgery may be 'stepwise multiple procedures'.",
+  "and_or_ambiguity": [
+   {
+    "quote": "criteria for PAP met and documentation that demonstrates PAP treatment failure defined as an inability to eliminate OSA (AHI > 15); OR PAP intolerance defined as inability to use PAP > 4 hours of use per night, 5 nights per week; OR unwillingness to use PAP",
+    "why_ambiguous": "Three-way OR inside one bullet of an ALL list, after 'criteria for PAP met' (which lives in another policy). Repeated verbatim in six places. 'AHI > 15' here vs '>= 15' in the HGNS bullet."
+   },
+   {
+    "quote": "for OSA in an adult, consideration has also been given to use of mandibular repositioning appliance (MRA) or tongue-retaining appliance",
+    "why_ambiguous": "'consideration has been given' is satisfied by documentation of consideration, not a trial; MMA says 'considered and found to be ineffective or undesirable'."
+   },
+   {
+    "quote": "inability to use PAP > 4 hours of use per night, 5 nights per week",
+    "why_ambiguous": "No time window and no percentage; 'inability to use ... >4 hours' - is it every night?"
+   },
+   {
+    "quote": "age, AHI on polysomnography (PSG), and body mass index (BMI)",
+    "why_ambiguous": "A criterion that is a table; device-specific rows. Rows are alternatives by device, columns are ANDed."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "severity threshold",
+   "quote": "considered medically necessary for the treatment of moderate to severe OSA in an adult ... AHI on PSG >= 15 and <= 100 events per hour (Inspire); >= 15 and <= 65 (Genio)",
+   "where": "HGNS table"
+  },
+  {
+   "kind": "age",
+   "quote": "Inspire >= 18 years; Genio >= 22 years",
+   "where": "HGNS table"
+  },
+  {
+   "kind": "BMI",
+   "quote": "Inspire <= 40; Genio <= 32",
+   "where": "HGNS table"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "central + mixed apneas <= 25% of total AHI",
+   "where": "HGNS"
+  },
+  {
+   "kind": "diagnostic test",
+   "quote": "absence of a complete concentric collapse at the soft palate level on drug induced sleep endoscopy",
+   "where": "HGNS"
+  },
+  {
+   "kind": "PAP failure/intolerance/unwillingness",
+   "quote": "PAP treatment failure ... (AHI >= 15); OR PAP intolerance ... > 4 hours of use per night, 5 nights per week; OR unwillingness to use PAP (e.g., a patient returns the PAP system after attempting to use it)",
+   "where": "HGNS, UPPP, MLS, MMA, DISE"
+  },
+  {
+   "kind": "anatomy",
+   "quote": "demonstrated narrowing or collapse of the retropalatal region ... as a source of airway obstruction",
+   "where": "UPPP"
+  },
+  {
+   "kind": "anatomy",
+   "quote": "narrowing of multiple sites in the upper airway",
+   "where": "Multi-level surgery"
+  },
+  {
+   "kind": "anatomy/diagnosis",
+   "quote": "individual has craniofacial disproportion or deformities",
+   "where": "MMA"
+  },
+  {
+   "kind": "alternative therapy considered",
+   "quote": "an MRA or tongue-retaining appliance has been considered and found to be ineffective or undesirable",
+   "where": "MLS, MMA"
+  },
+  {
+   "kind": "severity",
+   "quote": "Maxillomandibular advancement is considered medically necessary for the treatment of severe OSA",
+   "where": "MMA"
+  },
+  {
+   "kind": "pediatric HGNS",
+   "quote": "13-18 years; AHI > 10 and < 50; BMI <= 95th percentile for age; contraindicated for, or not effectively treated by adenotonsillectomy; failed or cannot tolerate PAP; all other alternative/adjunct therapies have been considered",
+   "where": "Down syndrome"
+  },
+  {
+   "kind": "replacement",
+   "quote": "documentation confirming that the remote is malfunctioning and is no longer under warranty",
+   "where": "remote replacement"
+  },
+  {
+   "kind": "diagnostic prerequisite (DISE)",
+   "quote": "persistent OSA when criteria for positive airway pressure (PAP) met and documentation that demonstrates PAP treatment failure",
+   "where": "DISE"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "AHI Inspire",
+   "value": ">= 15 and <= 100",
+   "unit": "events/hr",
+   "quote": "≥ 15 and ≤100 events per hour"
+  },
+  {
+   "quantity": "AHI Genio",
+   "value": ">= 15 and <= 65",
+   "unit": "events/hr",
+   "quote": "≥ 15 and ≤65 events per hour"
+  },
+  {
+   "quantity": "BMI Inspire",
+   "value": "<= 40",
+   "unit": "kg/m2",
+   "quote": "≤ 40"
+  },
+  {
+   "quantity": "BMI Genio",
+   "value": "<= 32",
+   "unit": "kg/m2",
+   "quote": "≤ 32"
+  },
+  {
+   "quantity": "Age Genio",
+   "value": ">= 22",
+   "unit": "years",
+   "quote": "≥ 22 years"
+  },
+  {
+   "quantity": "central+mixed",
+   "value": "<= 25",
+   "unit": "% of AHI",
+   "quote": "central + mixed apneas ≤ 25% of total AHI"
+  },
+  {
+   "quantity": "PAP failure AHI",
+   "value": "> 15 (DISE/UPPP/MLS/MMA) vs >= 15 (HGNS)",
+   "unit": "events/hr",
+   "quote": "inability to eliminate OSA (AHI > 15)"
+  },
+  {
+   "quantity": "PAP use",
+   "value": "> 4 h/night, 5 nights/week",
+   "unit": "",
+   "quote": "> 4 hours of use per night, 5 nights per week"
+  },
+  {
+   "quantity": "pediatric AHI",
+   "value": "> 10 and < 50",
+   "unit": "events/hr",
+   "quote": "> 10 and < 50"
+  },
+  {
+   "quantity": "pediatric BMI",
+   "value": "<= 95th percentile",
+   "unit": "",
+   "quote": "≤ 95th percentile for age"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "PAP use",
+   "length": "per night / per week",
+   "quote": "> 4 hours of use per night, 5 nights per week"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Codes grouped by status heading ('Considered Medically Necessary when criteria ... are met', 'Not Medically Necessary ... stand-alone uvulectomy', 'Experimental') but not per procedure.",
+  "non_covered_code_lists": "42140 stand-alone uvulectomy; 41512, 41530, 42160, C9727, 42299 experimental."
+ },
+ "external_dependencies": [
+  {
+   "what": "PAP criteria and HSAT/PSG criteria in another policy",
+   "quote": "Criteria for the home sleep apnea testing (HSAT) and PSG testing pre- and post-upper airway hypoglossal nerve stimulator implantation are covered in the Sleep Disordered Breathing Diagnosis and Treatment Guidelines."
+  },
+  {
+   "what": "Delegated vendor guidelines",
+   "quote": "In certain markets, delegated vendor guidelines may be used to support medical necessity and other coverage determinations."
+  },
+  {
+   "what": "Benefit plan document",
+   "quote": "Refer to the customer's benefit plan document for coverage details."
+  },
+  {
+   "what": "Related resources",
+   "quote": "Orthognathic Surgery; Bariatric Surgery and Procedures; Diaphragmatic/Phrenic Nerve Stimulation"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "PAP treatment failure",
+   "definition_quote": "an inability to eliminate OSA (apnea-hypopnea index [AHI] > 15)"
+  },
+  {
+   "term": "PAP intolerance",
+   "definition_quote": "inability to use PAP > 4 hours of use per night, 5 nights per week"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "criteria for PAP met",
+   "problem": "defined in another policy"
+  },
+  {
+   "quote": "consideration has also been given to use of mandibular repositioning appliance",
+   "problem": "does not say tried or failed"
+  },
+  {
+   "quote": "all other alternative/adjunct therapies have been considered",
+   "problem": "undefined, unfalsifiable"
+  },
+  {
+   "quote": "craniofacial disproportion or deformities",
+   "problem": "no measurement"
+  },
+  {
+   "quote": "narrowing or collapse of the retropalatal region",
+   "problem": "method (DISE, exam, imaging) not stated"
+  },
+  {
+   "quote": "unwillingness to use PAP",
+   "problem": "subjective"
+  }
+ ],
+ "extraction_hazards": [
+  "Device table (age/AHI/BMI by device) flattened into columns that lose which row each number belongs to",
+  "The long PAP-failure sentence is repeated verbatim in six criteria blocks",
+  "Instructions-for-Use boilerplate before criteria; General Background ~20 pages with literature that mentions numbers that look like thresholds",
+  "Unicode >=, <= signs",
+  "Deviation: '(AHI > 15)' vs '(AHI ≥ 15)' in the same document",
+  "Document file name truncates and says 'diagnosis-and-treatment' but content is surgical treatments"
+ ],
+ "interesting_structures": [
+  "Device-specific eligibility table (Inspire vs Genio) with different age/AHI/BMI",
+  "Vendor delegation clause",
+  "Pediatric DISE and HGNS paths",
+  "Explicit not-medically-necessary treatment for stand-alone uvulectomy and snoring",
+  "Equivalence of three PAP-failure routes (failure/intolerance/unwillingness)"
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "scale": "1 = all/any/not expresses it cleanly ... 5 = needs new constructs or human judgment",
+  "why": "Clean all/any blocks, but device-specific table rows are an extra dimension (any-of devices, each with its own all-of), and criteria depend on a PAP policy not included."
+ }
+}

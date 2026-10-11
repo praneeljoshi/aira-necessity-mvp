@@ -1,0 +1,19 @@
+{
+  "payer": "UnitedHealthcare",
+  "payer_key": "uhc",
+  "treatment": "sleep-testing",
+  "title": "Sleep Studies",
+  "policy_number": "2026T0334SS",
+  "effective": "07/01/2026",
+  "url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/surest/sleep-studies.pdf",
+  "final_url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/surest/sleep-studies.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "uhc-2026t0334ss-sleep-studies.pdf",
+  "sha256": "b98bfab23b359e65608122c896c6ebc537e484cc1c0444c46096b25046146671",
+  "pages": 18,
+  "bytes": 539224,
+  "retrieved": "2026-10-09",
+  "printed_date": "Effective July 1, 2026 (Policy 2026T0334SS)"
+}

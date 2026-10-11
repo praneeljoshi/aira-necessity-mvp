@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "stereotactic-body-radiotherapy",
+  "title": "Stereotactic Body Radiotherapy",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JOUTOL265VYGPSEUH",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-77371-02",
+  "original_effective": "09/15/08",
+  "reviewed": "07/23/26",
+  "revised": "08/15/26",
+  "file": "bcbsfl-02-77371-02-stereotactic-body-radiotherapy.pdf",
+  "sha256": "f270a0ced591d3b72442ce2e01a479f8b3bf5ac153ac4b7d14e9bd8504867602",
+  "pages": 13,
+  "bytes": 240864,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original Effective Date 09/15/08; Reviewed 07/23/26; Revised 08/15/26; Next Review 07/22/27 (14 pages)"
+}

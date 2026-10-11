@@ -1,0 +1,110 @@
+{
+  "file": "evolent-interventional-pain-management-guidelines.pdf",
+  "treatment": "facet-joint-injections",
+  "payer": "evolent",
+  "doc_kind": "clinical guideline (vendor); compilation of 8 guidelines. Facet content: CG 1753 (injections and medial branch blocks) and CG 1754 (denervation / RF neurolysis).",
+  "lines_of_business": ["CG 1753 Applicable Lines of Business checked: CHIP, Commercial, Exchange/Marketplace, Medicaid, Medicare Advantage"],
+  "effective_or_revised": "Compilation 'Effective July 1, 2026 - July 1, 2027'. CG 1753: original October 2012, last revised December 2025, implementation July 2026. CG 1754 same dates.",
+  "sections_in_order": ["Preamble / Guideline Development Process", "Table of contents (8 guidelines)", "CG 1750 Epidural Spine Injections", "CG 1751 Epidural injections and single injection trials for intrathecal pumps", "CG 1753 Paravertebral Facet Joint Injections or Blocks: Statement (General Information, Special Note), Indications (Facet Joint Pain, Imaging Guidance, Repeat Injections: Initial Treatment Phase, Therapeutic Phase), Exclusions, Contraindications, Coding and Standards, Background (Definitions, Medical Necessity, Conservative Treatment*, Home Exercise Program**), Summary of Evidence, Analysis of Evidence, Policy History, Legal and Compliance, References", "CG 1754 Paravertebral Facet Joint Denervation (Radiofrequency Neurolysis)", "CG 1756 Sacroiliac Joint Injections", "CG 1752 Implantable Infusion Pump Insertion", "CG 1757 Spinal Cord Stimulation", "CG 1758 Sympathetic Nerve Blocks"],
+  "criteria_location": "CG 1753 is PDF pp.31-44 of 102 (CG 1754 starts p.45) (text lines 1106-1682). Criteria are in 'Indications' (pp.2-4 of the guideline) but the definition of conservative treatment and HEP is in Background (pp.7-8) after the criteria that cite it with asterisks. A 'Special Note' in the Statement holds new-episode and unilateral/bilateral rules. Evidence summaries (pp.8-12) are skippable.",
+  "procedures_covered": ["Facet joint intra-articular injection (64490-64495)", "Medial branch nerve block (same codes)", "Ultrasound-guided facet injection (0213T-0218T, listed under codes; text says ultrasound is an alternative only if CT or fluoroscopy are contraindicated)", "Denervation / RF neurolysis 64633-64636 (CG 1754, used as comparator)"],
+  "logic": {
+    "top_level": "all: pain-and-conservative-care block, then imaging, then phase rules for repeats",
+    "max_nesting_depth": 4,
+    "k_of_n": [],
+    "exclusions_or_contraindications": "Separate Exclusions list (sacral lateral branch blocks S1-S3, atlantoaxial C1-2, occipital nerve blocks, hardware injection) and Contraindications list of relative contraindications ('Although there are no absolute contraindications ...'). Pain source exclusions are inline: 'not sacroiliac joint pain, discogenic pain, disc herniation, or radiculitis'.",
+    "initial_vs_repeat": "Explicit phases. Initial treatment phase: up to 2 diagnostic injections, no sooner than 2 weeks apart (7 days if the prior was local-anesthetic-only block), at the same level with >=50% pain relief or functional improvement, or a second at a different level/technique if the first gave no relief. Therapeutic phase: repeat only after >=50% relief for a minimum of 2 months, continuing pain >=6, ongoing active conservative treatment. Max 4 facet injections per 12 months per region. 'Any injection performed at least two years from prior injections in the same region will be considered a new episode of care.'",
+    "and_or_ambiguity": [
+      {"quote": "Is causing functional disability or average pain level of ≥ 6 (scale of 0 to 10)", "why_ambiguous": "OR lets the numeric pain gate be bypassed by 'functional disability', which is undefined."},
+      {"quote": "Failure to respond to non-operative conservative treatment* targeting the requested spinal region for a minimum of six (6) weeks in the last six (6) months unless the medical reason this treatment cannot be done is clearly documented", "why_ambiguous": "Unless-clause plus three alternative definitions of failure plus an OR branch for patients with prior spinal injections ('details of engagement in ongoing ... treatment')."},
+      {"quote": "Is either: By history, mainly axial or non-radicular; Is radicular due to stenosis caused by synovial cyst (confirmed on imaging)", "why_ambiguous": "Sub-OR nested inside an all-of under a bullet labelled 'Pain that:'."},
+      {"quote": "At the same level, provided at least 50% pain relief or significant documented functional improvement is obtained OR a second diagnostic injection may be performed at a different spinal level or with a change in technique", "why_ambiguous": "Two alternatives with different preconditions (success vs. no relief); reads as a branching rule, not a conjunction."},
+      {"quote": "In the diagnostic phase, a maximum of 2 procedures may be performed. Repeat diagnostic injections after prior radiofrequency neurolysis are approvable if there is a question about the pain generator, different levels are to be targeted, or if there is surgery in the same spinal region.", "why_ambiguous": "A restated cap with an unrelated exception clause; the final sentence applies to 1754 history, not the injection."},
+      {"quote": "A maximum of 4 facet injections may be performed in a 12-month period per spinal region (except under unusual circumstances, such as a recurrent injury)", "why_ambiguous": "'unusual circumstances' undefined; unclear whether diagnostic and therapeutic count together."},
+      {"quote": "RFA cannot be performed on patients who have received an intra-articular joint injection instead of diagnostic medial branch blocks.", "why_ambiguous": "A downstream consequence in a Note about a different procedure, inside the injection guideline."}
+    ]
+  },
+  "requirement_kinds": [
+    {"kind": "measurement threshold", "quote": "functional disability or average pain level of ≥ 6 (scale of 0 to 10) related to the requested spinal region", "where": "CG 1753 Facet Joint Pain"},
+    {"kind": "duration", "quote": "Duration for at least 3 months", "where": "CG 1753 Facet Joint Pain"},
+    {"kind": "symptom", "quote": "By history, mainly axial or non-radicular", "where": "CG 1753 Facet Joint Pain"},
+    {"kind": "diagnosis", "quote": "Is of primary source that is not sacroiliac joint pain, discogenic pain, disc herniation, or radiculitis", "where": "CG 1753 Facet Joint Pain"},
+    {"kind": "imaging finding", "quote": "Imaging studies confirming the presence of a pars interarticularis fracture/defect are required.", "where": "If diagnosed chronic lumbar spondylolysis"},
+    {"kind": "conservative therapy", "quote": "Failure to respond to non-operative conservative treatment* targeting the requested spinal region for a minimum of six (6) weeks in the last six (6) months", "where": "CG 1753 Facet Joint Pain"},
+    {"kind": "conservative therapy", "quote": "Non-operative treatment should include a multimodality approach consisting of at least one (1) active and one (1) inactive component targeting the affected spinal region.", "where": "Background, Conservative Treatment"},
+    {"kind": "documentation/photos", "quote": "Documentation of an exercise prescription/plan provided by a physician, physical therapist, or chiropractor AND Follow-up documentation regarding completion of HEP after the required 6-week timeframe", "where": "Background, HEP"},
+    {"kind": "provider/facility qualification", "quote": "ALL procedures must be performed under imaging guidance.", "where": "Imaging Guidance"},
+    {"kind": "prior procedure", "quote": "Up to 2 diagnostic injections may be performed in the initial diagnostic phase, no sooner than 2 weeks apart", "where": "Initial Treatment Phase"},
+    {"kind": "prior procedure", "quote": "the individual has had at least 50% pain relief or significant documented functional improvement for a minimum of 2 months before each repeat therapeutic injection", "where": "Therapeutic Phase"},
+    {"kind": "other", "quote": "A maximum of 4 facet injections may be performed in a 12-month period per spinal region", "where": "Therapeutic Phase"},
+    {"kind": "other", "quote": "Unilateral injections performed at the same level on the right vs. left within 1 month of each other would be considered as one procedure", "where": "Special Note"},
+    {"kind": "documentation/photos", "quote": "Injections performed on different days of service require separate authorization", "where": "Repeat Injections"},
+    {"kind": "patient commitment", "quote": "shared decision-making between patient and physician must occur, and the patient must understand the procedure and its potential risks and results", "where": "Background, Definitions"}
+  ],
+  "thresholds": [
+    {"quantity": "average pain", "value": ">= 6", "unit": "0-10 scale", "quote": "average pain level of ≥ 6 (scale of 0 to 10)"},
+    {"quantity": "pain relief after diagnostic injection", "value": ">= 50", "unit": "percent", "quote": "at least 50% pain relief or significant documented functional improvement"},
+    {"quantity": "relief before repeat therapeutic injection", "value": ">= 50% for >= 2 months", "unit": "percent / months", "quote": "at least 50% pain relief ... for a minimum of 2 months"},
+    {"quantity": "MBB success for RFA", "value": ">= 70", "unit": "percent", "quote": "at least 70% pain relief or improved ability to function"},
+    {"quantity": "injections per region", "value": "<= 4 per 12 months", "unit": "injections", "quote": "A maximum of 4 facet injections may be performed in a 12-month period per spinal region"},
+    {"quantity": "RFA repeat (1754)", "value": ">= 50% for >= 4 months", "unit": "percent / months", "quote": "at least 50% pain relief or improved ability to function for at least 4 months"},
+    {"quantity": "RFA cap (1754)", "value": "<= 2 per 12 months per region", "unit": "procedures", "quote": "A maximum of 2 facet denervation procedures may be performed in a 12-month period per spinal region"}
+  ],
+  "time_windows": [
+    {"what": "pain duration", "length": "3 months", "quote": "Duration for at least 3 months"},
+    {"what": "conservative treatment", "length": "6 weeks within the last 6 months", "quote": "for a minimum of six (6) weeks in the last six (6) months"},
+    {"what": "spacing of diagnostic injections", "length": "2 weeks (7 days if prior was local anesthetic only)", "quote": "no sooner than 2 weeks apart ... at least 7 days between injections"},
+    {"what": "relief before repeat therapeutic injection", "length": "2 months", "quote": "for a minimum of 2 months before each repeat therapeutic injection"},
+    {"what": "new episode of care", "length": "2 years", "quote": "at least two years from prior injections in the same region"},
+    {"what": "right/left combining", "length": "1 month", "quote": "within 1 month of each other"},
+    {"what": "different regions", "length": "7 days", "quote": "injections should be administered at intervals of no sooner than 7 days"},
+    {"what": "annual cap", "length": "12 months", "quote": "in a 12-month period per spinal region"}
+  ],
+  "codes": {
+    "cpt_hcpcs_listed": true,
+    "icd10_listed": false,
+    "codes_tied_to_criteria": "Not tied. 64490-64495 and 0213T-0218T listed together (add-on codes marked with +). The text states ultrasound guidance is only an alternative 'if CT or fluoroscopy guided techniques are contraindicated', yet the ultrasound codes are in the table without a non-covered tag, unlike Carelon and BCBSFL.",
+    "non_covered_code_lists": "None."
+  },
+  "external_dependencies": [
+    {"what": "Consensus practice guidelines cited as source (ASIPP, MISS, SIS)", "quote": "Consensus Practice Guidelines on Interventions for Lumbar Facet Joint Pain (6)"},
+    {"what": "Washington state law language included in the policy history", "quote": "Included the full WA bill"},
+    {"what": "Legislative language moved to an external document", "quote": "Removed legislative language to external regulatory document"},
+    {"what": "Medicare (evidence sections added per Medicare requirements)", "quote": "Added Summary of Evidence and Analysis of Evidence per Medicare requirements."},
+    {"what": "Health plan applicability", "quote": "Applicable Lines of Business: CHIP, Commercial, Exchange/Marketplace, Medicaid, Medicare Advantage"}
+  ],
+  "definitions_that_change_meaning": [
+    {"term": "Conservative treatment", "definition_quote": "at least one (1) active and one (1) inactive component targeting the affected spinal region. Active: Physical Therapy, Physician-supervised HEP, Chiropractic Care. Inactive: Medications, Injections, Medical Devices"},
+    {"term": "Failure of conservative treatment", "definition_quote": "Lack of meaningful improvement after a full course of treatment; OR Progression or worsening of symptoms during treatment; OR Documentation of a medical reason the member is unable to participate"},
+    {"term": "Home exercise program", "definition_quote": "Documentation of an exercise prescription/plan provided by a physician, physical therapist, or chiropractor AND Follow-up documentation regarding completion of HEP after the required 6-week timeframe"},
+    {"term": "New episode of care", "definition_quote": "Any injection performed at least two years from prior injections in the same region will be considered a new episode of care"}
+  ],
+  "vague_terms": [
+    {"quote": "functional disability", "problem": "Undefined; bypasses the numeric pain gate."},
+    {"quote": "significant documented functional improvement", "problem": "No measurement."},
+    {"quote": "meaningful improvement", "problem": "Undefined."},
+    {"quote": "except under unusual circumstances, such as a recurrent injury", "problem": "Open exception to the 4 per year cap."},
+    {"quote": "Failure to respond ... unless the medical reason this treatment cannot be done is clearly documented", "problem": "Waiver depends on a chart note's content."},
+    {"quote": "Diagnostic injections within 1 month of the previous injection do not require documentation of ongoing active conservative therapy.", "problem": "Exception to a requirement placed under another bullet."}
+  ],
+  "extraction_hazards": [
+    "Eight guidelines in one 102-page PDF; epidural (1750, 1751), facet (1753), RF (1754) and others have near-duplicate headings and the same Special Note text. A section splitter must key on 'Evolent_CG_17xx'.",
+    "Footnote markers '*' and '**' on 'conservative treatment' and 'HEP' point to definitions in Background pages after the criteria.",
+    "Superscript-style citation numbers in parentheses after headings, e.g. 'Facet Joint Pain (1)', 'Repeat Injections (1,6)', look like criteria values.",
+    "Add-on codes have a leading '+' in the code column; the last CPT row on page 6 is truncated ('code for primary') because the description is cut at the page break.",
+    "Each guideline repeats its own table of contents, so headings appear twice.",
+    "Checkbox glyphs for lines of business (☒) and private-use bullets.",
+    "Initial-vs-therapeutic phase structure sits as nested bullets under one heading with a NOTE about RFA after it.",
+    "Over half the pages per guideline are evidence summaries and reference lists."
+  ],
+  "interesting_structures": [
+    "Phase model: initial diagnostic phase then therapeutic phase, each with its own relief and spacing thresholds.",
+    "New-episode reset: two years since last injection in the region returns the patient to initial requirements.",
+    "Same-level right/left injections within one month count as one procedure for the annual cap.",
+    "Separate authorization is needed for each day of service.",
+    "Conservative care defined as one active plus one inactive modality; HEP has a two-element documentation test.",
+    "Waivers of the conservative therapy requirement for patients with prior spinal injections in the same region.",
+    "Thresholds differ across the two sibling guidelines (diagnostic success 50% in CG 1753 vs 70% in CG 1754; RFA relief 4 months)."
+  ],
+  "fit_to_tree": {"score": 4, "scale": "1 = all/any/not expresses it cleanly ... 5 = needs new constructs or human judgment", "why": "Mostly all/any, but depends on injection history (phase, relief duration, counts within rolling and two-year windows), waivers inside criteria, citation numbers and footnote definitions, and a bundled PDF where the right guideline must be located first."}
+}

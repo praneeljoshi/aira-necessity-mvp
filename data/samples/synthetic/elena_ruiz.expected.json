@@ -1,0 +1,258 @@
+{
+  "chart": "elena_ruiz_chart.pdf",
+  "generator": "make_long_chart.py",
+  "page_count": 138,
+  "encounters": 40,
+  "patient": {
+    "name": "Elena Ruiz",
+    "dob": "1968-03-04",
+    "mrn": "GCV-012877"
+  },
+  "order": {
+    "payer": "Florida Blue",
+    "plan_type": "PPO",
+    "cpt": [
+      "36475"
+    ],
+    "icd10": [
+      "I83.812",
+      "I87.2"
+    ],
+    "laterality": "left",
+    "procedure_text": "Endovenous radiofrequency ablation, left great saphenous vein"
+  },
+  "guideline_id": "bcbsfl-02-33000-31",
+  "pathway": "great_small_saphenous",
+  "determination": "MET",
+  "criteria": {
+    "saphenous_reflux": {
+      "status": "MET",
+      "evidence": [
+        "duplex_gsv_reflux_final"
+      ],
+      "distractor": "duplex_subthreshold_month1",
+      "note": "Use the 2026-08-25 duplex (2.1 s), not the 2023-11-14 duplex (0.4 s, sub-threshold)."
+    },
+    "ceap_c2_or_greater": {
+      "status": "MET",
+      "value": "C3",
+      "evidence": [
+        "adl_impact_final"
+      ],
+      "note": "C3 (varicose veins with edema) stated at the final visit and from 2024-12-17 onward."
+    },
+    "varicosities_3mm": {
+      "status": "MET",
+      "value_mm": 5,
+      "use_measurement_dated": "2026-04-14",
+      "evidence": [
+        "varicosity_5mm_month30"
+      ],
+      "distractor": "varicosity_2mm_month2",
+      "note": "Recency: the 2026-04-14 value (5 mm) governs, not the 2023-12-05 value (2 mm)."
+    },
+    "persistent_symptoms": {
+      "status": "MET",
+      "evidence": [
+        "symptoms_persist_final"
+      ]
+    },
+    "symptoms_interfere_adl": {
+      "status": "MET",
+      "evidence": [
+        "adl_impact_final"
+      ]
+    },
+    "compression_3_months": {
+      "status": "MET",
+      "run_that_meets": 2,
+      "start": "2024-09-17",
+      "end": "2026-09-22",
+      "months": 24,
+      "evidence": [
+        "compression_restart_run2_month11",
+        "compression_continuous_final"
+      ],
+      "note": "MET only on the second run (restart 2024-09-17 → final visit 2026-09-22). The first run is interrupted and shorter than 3 months."
+    },
+    "venous_stasis_ulcer": {
+      "status": "NOT_MET"
+    },
+    "recurrent_thrombophlebitis": {
+      "status": "NOT_MET"
+    },
+    "variceal_hemorrhage": {
+      "status": "NOT_MET"
+    }
+  },
+  "compression_runs": [
+    {
+      "run": 1,
+      "start": "2024-02-13",
+      "end_approx": "2024-05-01",
+      "months_approx": 2.5,
+      "meets_3_months": false,
+      "start_fact": "compression_start_run1_month4",
+      "interruption_fact": "compression_interruption_month9",
+      "note": "Stopped 'for the summer' at the beginning of May 2024 (dermatology 2024-07-16; confirmed by vascular 2024-09-17)."
+    },
+    {
+      "run": 2,
+      "start": "2024-09-17",
+      "end": "2026-09-22",
+      "months": 24,
+      "meets_3_months": true,
+      "start_fact": "compression_restart_run2_month11",
+      "end_fact": "compression_continuous_final",
+      "continuation_visits": [
+        "2024-10-15",
+        "2024-12-17",
+        "2025-03-18",
+        "2025-07-15",
+        "2025-11-18",
+        "2026-04-14",
+        "2026-08-11",
+        "2026-09-22"
+      ]
+    }
+  ],
+  "varicosity_measurements": [
+    {
+      "date": "2023-12-05",
+      "value_mm": 2,
+      "fact": "varicosity_2mm_month2"
+    },
+    {
+      "date": "2026-04-14",
+      "value_mm": 5,
+      "fact": "varicosity_5mm_month30"
+    },
+    {
+      "date": "2026-08-25",
+      "value_mm": 5,
+      "source": "duplex tributaries, largest 5 mm"
+    },
+    {
+      "date": "2026-09-22",
+      "value_mm": 5,
+      "source": "final exam, unchanged"
+    }
+  ],
+  "dvt": {
+    "early_negative_fact": "no_dvt_history_early",
+    "event_fact": "dvt_urgent_care_month20",
+    "event_date": "2025-06-10",
+    "laterality": "right",
+    "treatment": "apixaban 2025-06-10 to 2025-09-16",
+    "relevant_to_pathway": false,
+    "note": "Irrelevant to great_small_saphenous (secondary_to_dvt only appears in perforator_veins) but must appear on the tape as separate dated facts."
+  },
+  "buried_facts": {
+    "no_dvt_history_early": {
+      "description": "Vascular new patient consult: explicit negative for DVT/PE/thrombophlebitis.",
+      "date": "2023-10-24",
+      "encounter_index": 2,
+      "source_heading": "Visit Date: October 24, 2023 | New Patient Consult",
+      "page": 9,
+      "anchor": "No personal history of deep vein thrombosis"
+    },
+    "varicosity_2mm_month2": {
+      "description": "Vascular follow-up exam: largest varicosity approximately 2 mm (below the 3 mm threshold).",
+      "date": "2023-12-05",
+      "encounter_index": 3,
+      "source_heading": "Visit Date: December 5, 2023 | Follow-Up (duplex review)",
+      "page": 13,
+      "anchor": "approximately 2 mm in diameter"
+    },
+    "duplex_subthreshold_month1": {
+      "description": "First duplex: SFJ reflux 0.4 s, below the 0.5 s threshold; GSV 3.9 mm. Distractor for saphenous_reflux.",
+      "date": "2023-11-14",
+      "encounter_index": null,
+      "source_heading": "Lower Extremity Venous Reflux Duplex Ultrasound — Left — November 14, 2023",
+      "page": 124,
+      "anchor": "Brief retrograde flow 0.4 seconds with Valsalva"
+    },
+    "compression_start_run1_month4": {
+      "description": "Visit 6 (month 4): compression 20–30 mmHg started, explicitly dated 02/13/2024.",
+      "date": "2024-02-13",
+      "encounter_index": 6,
+      "source_heading": "Visit Date: February 13, 2024 | Follow-Up (conservative management)",
+      "page": 21,
+      "anchor": "Start date of compression therapy: 02/13/2024"
+    },
+    "compression_interruption_month9": {
+      "description": "Dermatology note (month 9): patient 'stopped wearing stockings for the summer' at the beginning of May 2024.",
+      "date": "2024-07-16",
+      "encounter_index": 11,
+      "source_heading": "Visit Date: July 16, 2024 | New Patient — Full Skin Examination",
+      "page": 34,
+      "anchor": "stopped wearing stockings for the summer"
+    },
+    "compression_restart_run2_month11": {
+      "description": "Vascular note (month 11): compression restarted, explicitly dated 09/17/2024.",
+      "date": "2024-09-17",
+      "encounter_index": 13,
+      "source_heading": "Visit Date: September 17, 2024 | Follow-Up (conservative management)",
+      "page": 40,
+      "anchor": "Compression therapy restarted today, 09/17/2024"
+    },
+    "dvt_urgent_care_month20": {
+      "description": "Urgent care note (month 20): acute right posterior tibial (calf) DVT diagnosed and treated with apixaban.",
+      "date": "2025-06-10",
+      "encounter_index": 22,
+      "source_heading": "Visit Date: June 10, 2025 | Urgent Care Visit",
+      "page": 67,
+      "anchor": "acute deep vein thrombosis of the right posterior tibial vein"
+    },
+    "varicosity_5mm_month30": {
+      "description": "Vascular exam (month 30): largest varicosity now 5 mm — the value the 3 mm criterion must use (recency).",
+      "date": "2026-04-14",
+      "encounter_index": 34,
+      "source_heading": "Visit Date: April 14, 2026 | Follow-Up (pre-procedure planning)",
+      "page": 104,
+      "anchor": "measures 5 mm in diameter"
+    },
+    "duplex_gsv_reflux_final": {
+      "description": "Final-quarter duplex: SFJ reflux 2.1 s, GSV 7.2 mm at SFJ, no DVT.",
+      "date": "2026-08-25",
+      "encounter_index": null,
+      "source_heading": "Lower Extremity Venous Reflux Duplex Ultrasound — Left — August 25, 2026",
+      "page": 127,
+      "anchor": "Reflux 2.1 seconds with Valsalva"
+    },
+    "compression_continuous_final": {
+      "description": "Final vascular visit: compression continuous since 09/17/2024, 24 months, no improvement.",
+      "date": "2026-09-22",
+      "encounter_index": 40,
+      "source_heading": "Visit Date: September 22, 2026 | Follow-Up (duplex review; prior authorization)",
+      "page": 121,
+      "anchor": "without interruption since 09/17/2024 (24 months as of today)"
+    },
+    "symptoms_persist_final": {
+      "description": "Final vascular visit: daily aching, heaviness, evening swelling, itching, cramps; no improvement on compression.",
+      "date": "2026-09-22",
+      "encounter_index": 40,
+      "source_heading": "Visit Date: September 22, 2026 | Follow-Up (duplex review; prior authorization)",
+      "page": 121,
+      "anchor": "No improvement at any point during the 24 months"
+    },
+    "adl_impact_final": {
+      "description": "Final vascular visit: cannot stand through a teaching day, gave up walks and volunteer shift, daughter shops.",
+      "date": "2026-09-22",
+      "encounter_index": 40,
+      "source_heading": "Visit Date: September 22, 2026 | Follow-Up (duplex review; prior authorization)",
+      "page": 121,
+      "anchor": "cannot stand through a full teaching day"
+    }
+  },
+  "depth_expectations": {
+    "compression_start_cited_should_be": "2024-09-17",
+    "varicosity_value_used_should_be_mm": 5,
+    "duplex_cited_should_be": "2026-08-25",
+    "wrong_answers": {
+      "compression_start": "2024-02-13",
+      "varicosity_mm": 2,
+      "duplex": "2023-11-14"
+    }
+  }
+}

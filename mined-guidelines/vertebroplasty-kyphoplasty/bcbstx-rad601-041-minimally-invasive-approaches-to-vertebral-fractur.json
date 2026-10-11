@@ -1,0 +1,19 @@
+{
+  "payer": "BCBS Texas",
+  "payer_key": "bcbstx",
+  "treatment": "vertebroplasty-kyphoplasty",
+  "title": "Minimally Invasive Approaches to Vertebral Fractures and Osteolytic Spine Lesions",
+  "policy_number": "RAD601.041",
+  "effective": "2025-01-01",
+  "url": "https://medicalpolicy.bcbstx.com/content/dam/bcbs/medicalpolicy/pdf/radiology/RAD601.041_2025-01-01.pdf",
+  "final_url": "https://medicalpolicy.bcbstx.com/content/dam/bcbs/medicalpolicy/pdf/radiology/RAD601.041_2025-01-01.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "bcbstx-rad601-041-minimally-invasive-approaches-to-vertebral-fractur.pdf",
+  "sha256": "7a8712e98960dba6edcb7dca3df9e0cca0c116c2196ad6e06f74fca13e713101",
+  "pages": 66,
+  "bytes": 4654814,
+  "retrieved": "2026-10-09",
+  "printed_date": "Effective 01/01/2025; Policy End Date 12/31/2025"
+}

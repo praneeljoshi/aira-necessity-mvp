@@ -1,0 +1,19 @@
+{
+  "payer": "Medica",
+  "payer_key": "medica",
+  "treatment": "pap-devices",
+  "title": "Obstructive Sleep Apnea",
+  "policy_number": "MP9239",
+  "effective": "06/01/2024",
+  "url": "https://mo-central.medica.com/Document-Library/pdf/Medical-Policies/Obstructive-Sleep-Apnea-9239",
+  "final_url": "https://mo-central.medica.com/Document-Library/pdf/Medical-Policies/Obstructive-Sleep-Apnea-9239",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "medica-mp9239-obstructive-sleep-apnea.pdf",
+  "sha256": "3e5d1d3b6f0acdde07b13200be7096dac506c0c4aeea47c0734d6ef6e147c852",
+  "pages": 4,
+  "bytes": 203432,
+  "retrieved": "2026-10-09",
+  "printed_date": "Effective 06/01/2024; administrative update 05/15/2024"
+}

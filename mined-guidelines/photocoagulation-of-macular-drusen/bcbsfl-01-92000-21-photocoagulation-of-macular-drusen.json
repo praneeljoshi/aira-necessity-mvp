@@ -1,0 +1,19 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "photocoagulation-of-macular-drusen",
+  "title": "Photocoagulation of Macular Drusen",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76F8EJ7NU6H629598FT",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "01-92000-21",
+  "original_effective": "04/15/02",
+  "reviewed": "10/23/25",
+  "revised": "11/15/25",
+  "file": "bcbsfl-01-92000-21-photocoagulation-of-macular-drusen.pdf",
+  "sha256": "7924ccd95950c8a3400ea679486db3431c37b7d7dd51143a2875a8a344f232e1",
+  "pages": 6,
+  "bytes": 481578,
+  "retrieved": "2026-10-09"
+}

@@ -1,0 +1,19 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "trigger-point-injections",
+  "title": "Trigger Point Injections",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JQQQ4QS2PZFDX0GS9",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-20000-28",
+  "original_effective": "11/15/00",
+  "reviewed": "06/25/26",
+  "revised": "10/01/26",
+  "file": "bcbsfl-02-20000-28-trigger-point-injections.pdf",
+  "sha256": "d272db0c41614d8b618b9c534ad13dbfe4e1440075b7f4dc59f2f4327b573c1e",
+  "pages": 10,
+  "bytes": 204888,
+  "retrieved": "2026-10-09"
+}

@@ -1,0 +1,1441 @@
+{
+  "id": "florida-blue-09-e0000-21",
+  "payer": "Florida Blue",
+  "payer_aliases": [
+    "Florida Blue",
+    "BCBSF",
+    "BCBS FL",
+    "BCBSFL",
+    "Blue Cross Blue Shield of Florida",
+    "Blue Cross and Blue Shield of Florida",
+    "BCBS of Florida"
+  ],
+  "title": "Positive Airway Pressure Devices",
+  "guideline_number": "09-E0000-21",
+  "effective_date": "2025-09-15",
+  "reviewed_date": "2025-08-28",
+  "source_file": "bcbsfl-09-E0000-21-positive-airway-pressure-devices.pdf",
+  "scope": {
+    "cpt": {
+      "A4604": "covered",
+      "A7027": "covered",
+      "A7028": "covered",
+      "A7029": "covered",
+      "A7030": "covered",
+      "A7031": "covered",
+      "A7032": "covered",
+      "A7033": "covered",
+      "A7034": "covered",
+      "A7035": "covered",
+      "A7036": "covered",
+      "A7037": "covered",
+      "A7038": "covered",
+      "A7039": "covered",
+      "A7044": "covered",
+      "A7045": "covered",
+      "A7046": "covered",
+      "A7047": "investigational",
+      "A7049": "investigational",
+      "E0470": "covered",
+      "E0471": "covered",
+      "E0530": "investigational",
+      "E0561": "covered",
+      "E0562": "covered",
+      "E0601": "covered",
+      "S8186": "covered",
+      "E0600": "investigational",
+      "A7002": "investigational"
+    },
+    "icd10": [
+      "G47.30",
+      "G47.33",
+      "G47.39",
+      "R40.0"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "osa_dx_diagnostic_sleep_test",
+      "text": "a diagnosis of OSA is based on a diagnostic sleep test",
+      "question": "Is the diagnosis of obstructive sleep apnea based on a diagnostic sleep test (PSG or home sleep test)?"
+    },
+    {
+      "id": "sleep_test_report_confirms_osa_with_index",
+      "text": "The diagnostic sleep test report confirms a diagnosis of symptomatic or asymptomatic OSA and includes an AHI, REI and/or RDI",
+      "question": "Does the diagnostic sleep test report confirm OSA and state an AHI, REI and/or RDI value?"
+    },
+    {
+      "id": "index_5_to_under_15",
+      "text": "Apnea/Hypopnea Index (AHI), Respiratory Disturbance Index (RDI), or Respiratory Event Index (REI) of 5 or more but less than 15",
+      "question": "Is the AHI, RDI or REI 5 or more but less than 15 events per hour?",
+      "threshold": {
+        "kind": "number",
+        "op": "gte",
+        "value": 5,
+        "unit": "events per hour"
+      }
+    },
+    {
+      "id": "adult_symptomatic_osa",
+      "text": "adult members with symptomatic OSA (evidence suggestive of excessive daytime sleepiness, impaired cognitive ability, mood disorders, insomnia, hypertension, ischemic heart disease, or stroke)",
+      "question": "Is the member an adult with symptomatic OSA: excessive daytime sleepiness, impaired cognitive ability, mood disorder, insomnia, hypertension, ischemic heart disease, or stroke?"
+    },
+    {
+      "id": "index_15_or_more",
+      "text": "AHI, RDI, or REI of 15 or more in adult members with symptomatic or asymptomatic OSA",
+      "question": "Is the AHI, RDI or REI 15 or more events per hour (adult; symptoms not required)?",
+      "threshold": {
+        "kind": "number",
+        "op": "gte",
+        "value": 15,
+        "unit": "events per hour"
+      }
+    },
+    {
+      "id": "pediatric_index_1_or_more",
+      "text": "In pediatric members, an AHI or RDI greater than or equal to 1.0 is considered abnormal",
+      "question": "For a pediatric member, is the AHI or RDI 1.0 or more events per hour?",
+      "threshold": {
+        "kind": "number",
+        "op": "gte",
+        "value": 1.0,
+        "unit": "events per hour"
+      }
+    },
+    {
+      "id": "child_osa_dx_diagnostic_sleep_test",
+      "text": "OSA diagnosis established by diagnostic sleep test",
+      "question": "Is the child's OSA diagnosis established by a diagnostic sleep test?"
+    },
+    {
+      "id": "child_weight_30kg",
+      "text": "child weighs 30 kilograms (66 pounds) or more",
+      "question": "Does the child weigh 30 kg (66 lb) or more?",
+      "threshold": {
+        "kind": "number",
+        "op": "gte",
+        "value": 30,
+        "unit": "kg"
+      }
+    },
+    {
+      "id": "adenotonsillectomy_unsuccessful_or_contraindicated",
+      "text": "adenotonsillectomy has been unsuccessful or is contraindicated",
+      "question": "Has adenotonsillectomy been performed without success, or is it contraindicated?"
+    },
+    {
+      "id": "definitive_surgery_must_wait_development",
+      "text": "definitive surgery is indicated but must wait complete dental and facial development",
+      "question": "Is definitive surgery indicated but deferred until dental and facial development is complete?"
+    },
+    {
+      "id": "cpap_tried_ineffective_or_not_tolerated",
+      "text": "CPAP has been tried and proven ineffective or is not tolerated as documented by a qualified health professional",
+      "question": "Has CPAP been tried and documented by a qualified health professional as ineffective or not tolerated?"
+    },
+    {
+      "id": "cpap_failed_during_initial_home_trial",
+      "text": "CPAP or APAP device is tried and found ineffective during the initial 3-month home trial",
+      "question": "Was the CPAP/APAP device found ineffective during the initial 3-month home trial (so bi-level is substituted within that trial)?",
+      "threshold": {
+        "kind": "duration_months",
+        "op": "lte",
+        "value": 3,
+        "unit": "months"
+      }
+    },
+    {
+      "id": "cpap_used_more_than_3_months_switched",
+      "text": "a CPAP device has been used for more than 3 months and is switched to bi-level therapy or APAP",
+      "question": "Was the CPAP device used for more than 3 months before the switch to bi-level therapy or APAP?",
+      "threshold": {
+        "kind": "duration_months",
+        "op": "gt",
+        "value": 3,
+        "unit": "months"
+      }
+    },
+    {
+      "id": "new_face_to_face_clinical_evaluation",
+      "text": "a new initial face-to-face clinical evaluation is required",
+      "question": "Is there a new face-to-face clinical evaluation documenting the switch to bi-level therapy or APAP?"
+    },
+    {
+      "id": "failed_initial_3_month_trial",
+      "text": "fails (including member non-adherence) the initial 3-month PAP trial",
+      "question": "Did the member fail the initial 3-month PAP trial (including non-adherence)?"
+    },
+    {
+      "id": "face_to_face_reevaluation_for_failure",
+      "text": "face-to-face clinical re-evaluation by the treating physician to determine the etiology of the failure to respond to PAP therapy",
+      "question": "Is there a face-to-face clinical re-evaluation by the treating physician that determines why PAP therapy failed?"
+    },
+    {
+      "id": "restrictive_thoracic_disorder",
+      "text": "Restrictive thoracic disorders (i.e., progressive neuromuscular diseases or thoracic cage abnormalities)",
+      "question": "Does the member have a restrictive thoracic disorder (progressive neuromuscular disease or thoracic cage abnormality)?"
+    },
+    {
+      "id": "rtd_abg_paco2_45",
+      "text": "An arterial blood gas PaCO2, done while awake and breathing the member’s usual FIO2 is greater than or equal to 45 mm Hg",
+      "question": "Is an awake arterial blood gas PaCO2, on the member's usual FIO2, 45 mm Hg or more?",
+      "threshold": {
+        "kind": "number",
+        "op": "gte",
+        "value": 45,
+        "unit": "mm Hg"
+      }
+    },
+    {
+      "id": "rtd_sleep_oximetry_88_5min",
+      "text": "Sleep oximetry demonstrates oxygen saturation less than or equal to 88% for at least five continuous minutes, done while breathing the member’s usual FIO2",
+      "question": "Does sleep oximetry on the member's usual FIO2 show SpO2 of 88% or less for at least 5 continuous minutes?",
+      "threshold": {
+        "kind": "number",
+        "op": "lte",
+        "value": 88,
+        "unit": "% SpO2"
+      }
+    },
+    {
+      "id": "progressive_neuromuscular_disease",
+      "text": "For a progressive neuromuscular disease (only)",
+      "question": "Does the member have a progressive neuromuscular disease?"
+    },
+    {
+      "id": "mip_less_than_60",
+      "text": "maximal inspiratory pressure is less than 60 cm H20",
+      "question": "Is the maximal inspiratory pressure less than 60 cm H2O?",
+      "threshold": {
+        "kind": "number",
+        "op": "lt",
+        "value": 60,
+        "unit": "cm H2O"
+      }
+    },
+    {
+      "id": "fvc_less_than_50_predicted",
+      "text": "forced vital capacity (FVC) is less than 50% predicted",
+      "question": "Is the forced vital capacity less than 50% of predicted?",
+      "threshold": {
+        "kind": "number",
+        "op": "lt",
+        "value": 50,
+        "unit": "% predicted"
+      }
+    },
+    {
+      "id": "copd_not_significant_contributor",
+      "text": "There is documentation that chronic obstructive pulmonary disease does not contribute significantly to the member’s pulmonary limitation",
+      "question": "Is there documentation that COPD does not contribute significantly to the member's pulmonary limitation?"
+    },
+    {
+      "id": "severe_copd",
+      "text": "Severe chronic obstructive pulmonary disease (COPD)",
+      "question": "Does the member have severe COPD?"
+    },
+    {
+      "id": "copd_abg_paco2_52",
+      "text": "An arterial blood gas PaCO2, done while awake and breathing the member’s usual FIO2, is greater than or equal to 52 mm Hg",
+      "question": "Is an awake arterial blood gas PaCO2, on the member's usual FIO2, 52 mm Hg or more?",
+      "threshold": {
+        "kind": "number",
+        "op": "gte",
+        "value": 52,
+        "unit": "mm Hg"
+      }
+    },
+    {
+      "id": "copd_sleep_oximetry_88_on_2lpm",
+      "text": "Sleep oximetry demonstrates oxygen saturation less than or equal to 88% for at least five continuous minutes, done while breathing oxygen at 2 LPM or the member’s usual FIO2 (whichever is higher)",
+      "question": "Does sleep oximetry, on oxygen at 2 LPM or the member's usual FIO2 (whichever is higher), show SpO2 of 88% or less for at least 5 continuous minutes?",
+      "threshold": {
+        "kind": "number",
+        "op": "lte",
+        "value": 88,
+        "unit": "% SpO2"
+      }
+    },
+    {
+      "id": "osa_and_cpap_tried_failed_or_ruled_out",
+      "text": "Prior to initiating therapy, Obstructive Sleep Apnea (OSA) and treatment with a continuous positive airway pressure device (CPAP) has been tried and failed, not tolerated or considered and ruled out",
+      "question": "Before bi-level therapy, was OSA/CPAP treatment tried and failed, not tolerated, or considered and ruled out?"
+    },
+    {
+      "id": "copd_qualified_for_e0470",
+      "text": "For members with COPD who qualified for an E0470 device",
+      "question": "Did the member with COPD qualify for (meet the criteria for) an E0470 bi-level device?"
+    },
+    {
+      "id": "e0471_after_initial_e0470_use",
+      "text": "an E0471 started any time after a period of initial use of an E0470 device",
+      "question": "Is the E0471 being started after a period of initial use of an E0470 device?"
+    },
+    {
+      "id": "copd_e0471_paco2_greater_than_52",
+      "text": "An arterial blood gas PaCO2, done while awake and breathing the member’s prescribed FIO2, shows that the member’s PaCO2 greater than 52",
+      "question": "On E0470, does an awake arterial blood gas on the prescribed FIO2 show PaCO2 greater than 52 mm Hg?",
+      "threshold": {
+        "kind": "number",
+        "op": "gt",
+        "value": 52,
+        "unit": "mm Hg"
+      }
+    },
+    {
+      "id": "copd_e0471_paco2_increase_7",
+      "text": "pre ABG PaCO2 increase equal to or greater than 7 mm HG compared to the original result from criterion 1 (above)",
+      "question": "Has the PaCO2 risen by 7 mm Hg or more compared with the original qualifying arterial blood gas?",
+      "threshold": {
+        "kind": "number",
+        "op": "gte",
+        "value": 7,
+        "unit": "mm Hg"
+      }
+    },
+    {
+      "id": "copd_e0471_psg_sat_88_on_e0470",
+      "text": "A facility-based PSG demonstrates oxygen saturation less than or equal to 88% for greater than or equal to a cumulative 5 minutes of nocturnal recording time (minimum recording time of 2 hours) while using an E0470 device that is not caused by obstructive upper airway events – i.e., AHI less than 5",
+      "question": "Does a facility-based PSG (at least 2 hours recorded) while using the E0470 show SpO2 of 88% or less for a cumulative 5 minutes or more, not caused by obstructive events (AHI less than 5)?",
+      "threshold": {
+        "kind": "number",
+        "op": "lte",
+        "value": 88,
+        "unit": "% SpO2"
+      }
+    },
+    {
+      "id": "copd_bilevel_started_at_hospital_discharge",
+      "text": "started on bi-level positive pressure (E0470, E0471) at discharge from hospitalization",
+      "question": "Was bi-level positive pressure started at discharge from a hospitalization?"
+    },
+    {
+      "id": "facility_attended_psg_before_therapy",
+      "text": "Prior to initiating therapy, a complete facility-based, attended polysomnogram must be performed",
+      "question": "Was a complete facility-based, attended polysomnogram performed before bi-level therapy was started?"
+    },
+    {
+      "id": "csa_or_treatment_emergent_csa_dx",
+      "text": "The diagnosis of central sleep apnea (CSA) or treatment-emergent central sleep apnea",
+      "question": "Does the polysomnogram document a diagnosis of central sleep apnea or treatment-emergent central sleep apnea?"
+    },
+    {
+      "id": "cpap_ruled_out_as_effective",
+      "text": "The ruling out of CPAP as effective therapy if either CSA or OSA is a component of the initially observed sleep-associated hypoventilation",
+      "question": "Where CSA or OSA is a component of the observed sleep-associated hypoventilation, does the polysomnogram document that CPAP was ruled out as effective therapy?"
+    },
+    {
+      "id": "bilevel_improves_hypoventilation",
+      "text": "Significant improvement of the sleep-associated hypoventilation with the use of a bi-level therapy on the settings that will be prescribed for initial use at home, while breathing the member’s usual FIO2",
+      "question": "Does the polysomnogram show significant improvement of the sleep-associated hypoventilation on bi-level therapy at the settings to be prescribed for home use, on the member's usual FIO2?"
+    },
+    {
+      "id": "hypoventilation_syndrome",
+      "text": "Hypoventilation Syndrome",
+      "question": "Does the member have a hypoventilation syndrome?"
+    },
+    {
+      "id": "hypo_initial_abg_paco2_45",
+      "text": "An initial arterial blood gas PaCO2, done while awake and breathing the member’s prescribed FIO2, is greater than or equal to 45 mm Hg",
+      "question": "Is an initial awake arterial blood gas PaCO2, on the prescribed FIO2, 45 mm Hg or more?",
+      "threshold": {
+        "kind": "number",
+        "op": "gte",
+        "value": 45,
+        "unit": "mm Hg"
+      }
+    },
+    {
+      "id": "fev1_fvc_70_or_more",
+      "text": "Spirometry shows an FEV1/FVC greater than or equal to 70%",
+      "question": "Does spirometry show an FEV1/FVC ratio of 70% or more?",
+      "threshold": {
+        "kind": "number",
+        "op": "gte",
+        "value": 70,
+        "unit": "%"
+      }
+    },
+    {
+      "id": "hypo_sleep_abg_paco2_worsened_7",
+      "text": "An arterial blood gas PaCO2, done during sleep or immediately upon awakening, and breathing the member’s prescribed FIO2, shows the member’s PaCO2 worsened greater than or equal to 7 mm HG compared to the original result in criterion A (above)",
+      "question": "Does an arterial blood gas during sleep or immediately on awakening, on the prescribed FIO2, show PaCO2 worsened by 7 mm Hg or more compared with the initial awake value?",
+      "threshold": {
+        "kind": "number",
+        "op": "gte",
+        "value": 7,
+        "unit": "mm Hg"
+      }
+    },
+    {
+      "id": "hypo_psg_hst_on_cpap_sat_88",
+      "text": "A facility-based PSG or HST while on CPAP and prescribed FiO2 demonstrates oxygen saturation less than or equal to 88% for greater than or equal to 5 minutes of nocturnal recording time (minimum recording time of 2 hours) that is not caused by obstructive upper airway events – i.e., AHI less than 5",
+      "question": "Does a facility-based PSG or HST (at least 2 hours recorded) on CPAP and prescribed FiO2 show SpO2 of 88% or less for 5 minutes or more, not caused by obstructive events (AHI less than 5)?",
+      "threshold": {
+        "kind": "number",
+        "op": "lte",
+        "value": 88,
+        "unit": "% SpO2"
+      }
+    },
+    {
+      "id": "covered_e0470_used_and_ineffective",
+      "text": "A covered E0470 device is being used and found to be ineffective",
+      "question": "Is a covered E0470 device in use and documented as ineffective?"
+    },
+    {
+      "id": "hypo_e0471_awake_abg_paco2_worsens_7",
+      "text": "An arterial blood gas PaCO2, done while awake, and breathing the member’s prescribed FIO2, shows that the member’s PaCO2 worsens greater than or equal to 7 mm HG compared to the ABG result performed to qualify the member for the E0470 device (criterion A under E0470)",
+      "question": "Does an awake arterial blood gas on the prescribed FIO2 show PaCO2 worsened by 7 mm Hg or more compared with the blood gas that qualified the member for the E0470?",
+      "threshold": {
+        "kind": "number",
+        "op": "gte",
+        "value": 7,
+        "unit": "mm Hg"
+      }
+    },
+    {
+      "id": "hypo_e0471_psg_hst_on_e0470_sat_88",
+      "text": "A facility-based PSG or HST while using E0470 and prescribed FiO2 demonstrates oxygen saturation less than or equal 88% for greater than or equal to 5 minutes of nocturnal recording time (minimum recording time of 2 hours) that is not caused by obstructive upper airway events – i.e., AHI less than 5 while using an E0470 device",
+      "question": "Does a facility-based PSG or HST (at least 2 hours recorded) while using the E0470 on prescribed FiO2 show SpO2 of 88% or less for 5 minutes or more, not caused by obstructive events (AHI less than 5)?",
+      "threshold": {
+        "kind": "number",
+        "op": "lte",
+        "value": 88,
+        "unit": "% SpO2"
+      }
+    },
+    {
+      "id": "adherence_documented_day_31_to_91",
+      "text": "no sooner than the 31st day but no later than the 91st day after initiating therapy there must be documented objective evidence that the member is adhering to PAP therapy",
+      "question": "Is objective evidence of adherence to PAP therapy documented between day 31 and day 91 after starting therapy?"
+    },
+    {
+      "id": "pap_use_4_hours_per_night",
+      "text": "use of PAP greater than or equal to 4 hours per night",
+      "question": "Does the usage data show PAP use of 4 hours or more per night?",
+      "threshold": {
+        "kind": "number",
+        "op": "gte",
+        "value": 4,
+        "unit": "hours per night"
+      }
+    },
+    {
+      "id": "pap_use_70_percent_of_nights_30_days",
+      "text": "on 70% of nights during a consecutive thirty (30) day period anytime during the first three (3) months of initial usage",
+      "question": "Was PAP used on at least 70% of nights during a consecutive 30-day period within the first 3 months of use?",
+      "threshold": {
+        "kind": "number",
+        "op": "gte",
+        "value": 70,
+        "unit": "% of nights"
+      }
+    },
+    {
+      "id": "reevaluation_timing",
+      "text": "The re-evaluation must take place within the first 3 months of treatment; however, formal assessment of improvement cannot be documented before the 31st day",
+      "question": "Did the physician re-evaluation take place within the first 3 months of treatment and no earlier than day 31?"
+    },
+    {
+      "id": "subjective_symptom_improvement",
+      "text": "improvements in subjective symptoms of OSA",
+      "question": "Does the re-evaluation document improvement in the member's OSA symptoms?"
+    },
+    {
+      "id": "adherence_download_in_written_report",
+      "text": "Documentation of adherence to PAP therapy shall be accomplished through direct download from the device, Smart Card or other data card or visual inspection of usage data with documentation provided in a written report format to be reviewed by the treating physician and included in the member’s medical record",
+      "question": "Is adherence documented from a device download, data card or inspection of usage data, in a written report reviewed by the treating physician and filed in the medical record?"
+    },
+    {
+      "id": "practitioner_statement_after_61_days",
+      "text": "A signed and dated statement completed by the treating practitioner no sooner than 61 days after initiating use of the device",
+      "question": "Is there a signed and dated statement by the treating practitioner made 61 days or more after the device was started?",
+      "threshold": {
+        "kind": "number",
+        "op": "gte",
+        "value": 61,
+        "unit": "days"
+      }
+    },
+    {
+      "id": "compliant_use_4_hours_per_24h",
+      "text": "the member is compliantly using the device (an average of 4 hours per 24 hour period)",
+      "question": "Does the practitioner's statement declare compliant use averaging 4 hours or more per 24-hour period?",
+      "threshold": {
+        "kind": "number",
+        "op": "gte",
+        "value": 4,
+        "unit": "hours per 24 hour period"
+      }
+    },
+    {
+      "id": "member_benefiting_from_device",
+      "text": "the member is benefiting from its use",
+      "question": "Does the practitioner's statement declare that the member is benefiting from the device?"
+    },
+    {
+      "id": "replacement_prescription",
+      "text": "A replacement of a PAP device meets the definition of medical necessity with a prescription from a qualified health professional",
+      "question": "Is there a prescription for the replacement PAP device from a qualified health professional?"
+    },
+    {
+      "id": "device_nonfunctioning_out_of_warranty",
+      "text": "Nonfunctioning and out of warranty",
+      "question": "Is the existing device nonfunctioning and out of warranty?"
+    },
+    {
+      "id": "device_over_5_years_old",
+      "text": "Device is greater than five years old",
+      "question": "Is the existing device more than five years old?",
+      "threshold": {
+        "kind": "number",
+        "op": "gt",
+        "value": 5,
+        "unit": "years"
+      }
+    },
+    {
+      "id": "physician_attestation_of_sleep_apnea",
+      "text": "physician attestation supporting a diagnosis of OSA or essential sleep apnea will be accepted to support replacement device",
+      "question": "When no previous diagnostic sleep test is available, is there a physician attestation supporting a diagnosis of OSA or essential sleep apnea?"
+    },
+    {
+      "id": "pap_device_coverage_criteria_met",
+      "text": "the coverage criteria for the PAP device are met",
+      "question": "Does the chart show the member's PAP device itself meets this guideline's coverage criteria (initial or continued)?"
+    },
+    {
+      "id": "humidifier_ordered_by_treating_physician",
+      "text": "ordered by the treating physician",
+      "question": "Is the humidifier ordered by the treating physician?"
+    },
+    {
+      "id": "humidifier_for_covered_pap_device",
+      "text": "for use with a covered PAP device",
+      "question": "Is the humidifier for use with a PAP device that is covered under this guideline?"
+    },
+    {
+      "id": "replacement_previous_diagnostic_test",
+      "text": "a previous diagnostic test",
+      "question": "Is there a previous diagnostic test (sleep study, arterial blood gas, oximetry or spirometry) supporting the condition the PAP device treats?"
+    },
+    {
+      "id": "e0471_for_osa",
+      "text": "for the treatment of obstructive sleep apnea",
+      "question": "Is the E0471 being used for the treatment of obstructive sleep apnea?"
+    },
+    {
+      "id": "asv_symptomatic_chf_lvef_45",
+      "text": "symptomatic chronic congestive heart failure (CHF) with reduced ejection fraction (LVEF less than or equal to 45%)",
+      "question": "Does the member have symptomatic chronic congestive heart failure with reduced ejection fraction (LVEF 45% or less)?",
+      "threshold": {
+        "kind": "number",
+        "op": "lte",
+        "value": 45,
+        "unit": "%"
+      }
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "cpap_apap_adult_initial",
+      "name": "CPAP / APAP (E0601), adult, first three months (90 days) of therapy for OSA",
+      "applies_to_cpt": [
+        "E0601"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "CPAP and APAP devices meet the definition of medical necessity for the first (90 days) three months of therapy when",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "osa_dx_diagnostic_sleep_test"
+          },
+          {
+            "type": "leaf",
+            "criterion": "sleep_test_report_confirms_osa_with_index"
+          },
+          {
+            "type": "any",
+            "label": "AHI, REI and/or RDI as follows (one of)",
+            "children": [
+              {
+                "type": "all",
+                "label": "5 or more but less than 15 in adult members with symptomatic OSA",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "index_5_to_under_15"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "adult_symptomatic_osa"
+                  }
+                ]
+              },
+              {
+                "type": "leaf",
+                "criterion": "index_15_or_more"
+              }
+            ]
+          },
+          {
+            "type": "any",
+            "label": "CPAP used more than 3 months and switched to APAP requires a new initial face-to-face clinical evaluation",
+            "children": [
+              {
+                "type": "not",
+                "child": {
+                  "type": "leaf",
+                  "criterion": "cpap_used_more_than_3_months_switched"
+                }
+              },
+              {
+                "type": "leaf",
+                "criterion": "new_face_to_face_clinical_evaluation"
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "Pediatric members use the pediatric pathway; the NOTE that an AHI or RDI of 1.0 or more is abnormal in pediatric members is modeled there.",
+        "Second check (FABLE_KEY_CRITIQUE.md): CPAP-to-APAP switch after more than 3 months requires a new face-to-face evaluation."
+      ]
+    },
+    {
+      "id": "cpap_apap_pediatric_initial",
+      "name": "CPAP / APAP (E0601) with or without humidifier (E0561, E0562), child, initial 90 day period for OSA",
+      "applies_to_cpt": [
+        "E0601",
+        "E0561",
+        "E0562"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "ALL of the following criteria are met",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "child_osa_dx_diagnostic_sleep_test"
+          },
+          {
+            "type": "leaf",
+            "criterion": "pediatric_index_1_or_more"
+          },
+          {
+            "type": "leaf",
+            "criterion": "child_weight_30kg"
+          },
+          {
+            "type": "any",
+            "label": "adenotonsillectomy has been unsuccessful or is contraindicated, or definitive surgery must wait",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "adenotonsillectomy_unsuccessful_or_contraindicated"
+              },
+              {
+                "type": "leaf",
+                "criterion": "definitive_surgery_must_wait_development"
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "The pediatric AHI/RDI >= 1.0 NOTE sits under the adult index list; it is read here as what the diagnostic sleep test must show for a child."
+      ]
+    },
+    {
+      "id": "bilevel_no_backup_osa_initial",
+      "name": "Bi-level without backup rate (E0470), first three months of therapy for OSA after CPAP failure",
+      "applies_to_cpt": [
+        "E0470"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "Bi-level therapy without a backup rate feature (E0470) for the treatment of obstructive sleep apnea when",
+        "children": [
+          {
+            "type": "all",
+            "label": "Diagnosis of OSA based on a diagnostic sleep test",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "osa_dx_diagnostic_sleep_test"
+              },
+              {
+                "type": "leaf",
+                "criterion": "sleep_test_report_confirms_osa_with_index"
+              },
+              {
+                "type": "any",
+                "label": "AHI, RDI or REI as follows (one of)",
+                "children": [
+                  {
+                    "type": "all",
+                    "label": "5 or more but less than 15 with symptomatic OSA",
+                    "children": [
+                      {
+                        "type": "leaf",
+                        "criterion": "index_5_to_under_15"
+                      },
+                      {
+                        "type": "leaf",
+                        "criterion": "adult_symptomatic_osa"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "index_15_or_more"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "leaf",
+            "criterion": "cpap_tried_ineffective_or_not_tolerated"
+          },
+          {
+            "type": "any",
+            "label": "Switch from CPAP: during the initial trial, or after more than 3 months with a new evaluation",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "cpap_failed_during_initial_home_trial"
+              },
+              {
+                "type": "all",
+                "label": "CPAP used for more than 3 months and switched",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "cpap_used_more_than_3_months_switched"
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "new_face_to_face_clinical_evaluation"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "The OSA diagnostic block is nested because the switching paragraphs say substitution of bi-level is allowed 'if the above criteria are met' / 'the criteria above must be met'; a new sleep test is not required in either case."
+      ]
+    },
+    {
+      "id": "bilevel_restrictive_thoracic_initial",
+      "name": "Bi-level E0470 or E0471, first three months, restrictive thoracic disorders",
+      "applies_to_cpt": [
+        "E0470",
+        "E0471"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "An E0470 or E0471 device meets the definition of medical necessity when ALL of the following criteria are met",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "restrictive_thoracic_disorder"
+          },
+          {
+            "type": "any",
+            "label": "1. One of the following",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "rtd_abg_paco2_45"
+              },
+              {
+                "type": "leaf",
+                "criterion": "rtd_sleep_oximetry_88_5min"
+              },
+              {
+                "type": "all",
+                "label": "c. For a progressive neuromuscular disease (only)",
+                "children": [
+                  {
+                    "type": "leaf",
+                    "criterion": "progressive_neuromuscular_disease"
+                  },
+                  {
+                    "type": "any",
+                    "label": "maximal inspiratory pressure less than 60 cm H2O or FVC less than 50% predicted",
+                    "children": [
+                      {
+                        "type": "leaf",
+                        "criterion": "mip_less_than_60"
+                      },
+                      {
+                        "type": "leaf",
+                        "criterion": "fvc_less_than_50_predicted"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "leaf",
+            "criterion": "copd_not_significant_contributor"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bilevel_no_backup_severe_copd_initial",
+      "name": "Bi-level without backup rate (E0470), first three months, severe COPD",
+      "applies_to_cpt": [
+        "E0470"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "An E0470 device meets the definition of medical necessity when ALL of the following criteria are met",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "severe_copd"
+          },
+          {
+            "type": "leaf",
+            "criterion": "copd_abg_paco2_52"
+          },
+          {
+            "type": "leaf",
+            "criterion": "copd_sleep_oximetry_88_on_2lpm"
+          },
+          {
+            "type": "leaf",
+            "criterion": "osa_and_cpap_tried_failed_or_ruled_out"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bilevel_backup_severe_copd_after_e0470",
+      "name": "Bi-level with backup rate (E0471), severe COPD, started after initial use of an E0470 (criterion I)",
+      "applies_to_cpt": [
+        "E0471"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "I. For members with COPD who qualified for an E0470 device, an E0471 started after initial E0470 use, when both criteria A and B are met",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "severe_copd"
+          },
+          {
+            "type": "leaf",
+            "criterion": "copd_qualified_for_e0470"
+          },
+          {
+            "type": "leaf",
+            "criterion": "e0471_after_initial_e0470_use"
+          },
+          {
+            "type": "any",
+            "label": "A. PaCO2 greater than 52 or PaCO2 increase of 7 mm Hg or more",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "copd_e0471_paco2_greater_than_52"
+              },
+              {
+                "type": "leaf",
+                "criterion": "copd_e0471_paco2_increase_7"
+              }
+            ]
+          },
+          {
+            "type": "leaf",
+            "criterion": "copd_e0471_psg_sat_88_on_e0470"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bilevel_severe_copd_hospital_discharge",
+      "name": "Bi-level (E0470, E0471), severe COPD, started at hospital discharge, up to 3 months (criterion II)",
+      "applies_to_cpt": [
+        "E0470",
+        "E0471"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "II. Members with COPD started on bi-level positive pressure at discharge from hospitalization can continue for up to 3 months",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "severe_copd"
+          },
+          {
+            "type": "leaf",
+            "criterion": "copd_bilevel_started_at_hospital_discharge"
+          }
+        ]
+      },
+      "notes": [
+        "Coverage under this route is limited to 3 months 'to provide time to stabilize and/or complete re-evaluation'."
+      ]
+    },
+    {
+      "id": "bilevel_central_sleep_apnea_initial",
+      "name": "Bi-level E0470 or E0471, first three months, central sleep apnea or treatment-emergent central sleep apnea",
+      "applies_to_cpt": [
+        "E0470"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "Prior to initiating therapy, a complete facility-based, attended polysomnogram must be performed documenting ALL of the following",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "facility_attended_psg_before_therapy"
+          },
+          {
+            "type": "leaf",
+            "criterion": "csa_or_treatment_emergent_csa_dx"
+          },
+          {
+            "type": "leaf",
+            "criterion": "cpap_ruled_out_as_effective"
+          },
+          {
+            "type": "leaf",
+            "criterion": "bilevel_improves_hypoventilation"
+          }
+        ]
+      },
+      "notes": [
+        "Second check (FABLE_KEY_CRITIQUE.md): E0471 moved to bilevel_central_sleep_apnea_e0471 with the ASV heart-failure guard."
+      ]
+    },
+    {
+      "id": "bilevel_central_sleep_apnea_e0471",
+      "name": "Adaptive servo-ventilation E0471, first three months, central sleep apnea or treatment-emergent central sleep apnea",
+      "applies_to_cpt": [
+        "E0471"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "Prior to initiating therapy, a complete facility-based, attended polysomnogram must be performed documenting ALL of the following",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "facility_attended_psg_before_therapy"
+          },
+          {
+            "type": "leaf",
+            "criterion": "csa_or_treatment_emergent_csa_dx"
+          },
+          {
+            "type": "leaf",
+            "criterion": "cpap_ruled_out_as_effective"
+          },
+          {
+            "type": "leaf",
+            "criterion": "bilevel_improves_hypoventilation"
+          },
+          {
+            "type": "not",
+            "label": "ASV (E0471) should not be used in symptomatic chronic CHF with LVEF <= 45%",
+            "child": {
+              "type": "leaf",
+              "criterion": "asv_symptomatic_chf_lvef_45"
+            }
+          }
+        ]
+      },
+      "notes": [
+        "Second check (FABLE_KEY_CRITIQUE.md): split from the CSA pathway with the LVEF <= 45% guard from the CSA NOTE. A stricter reader would apply it to the other E0471 pathways too."
+      ]
+    },
+    {
+      "id": "bilevel_no_backup_hypoventilation",
+      "name": "Bi-level without backup rate (E0470), first three months, hypoventilation syndrome",
+      "applies_to_cpt": [
+        "E0470"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "An E0470 device meets the definition of medical necessity when A, B AND either criterion C or D are met",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "hypoventilation_syndrome"
+          },
+          {
+            "type": "leaf",
+            "criterion": "hypo_initial_abg_paco2_45"
+          },
+          {
+            "type": "leaf",
+            "criterion": "fev1_fvc_70_or_more"
+          },
+          {
+            "type": "any",
+            "label": "either criterion C or D",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "hypo_sleep_abg_paco2_worsened_7"
+              },
+              {
+                "type": "leaf",
+                "criterion": "hypo_psg_hst_on_cpap_sat_88"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "bilevel_backup_hypoventilation",
+      "name": "Bi-level with backup rate (E0471), hypoventilation syndrome, after a covered E0470 proves ineffective",
+      "applies_to_cpt": [
+        "E0471"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "An E0471 device meets the definition of medical necessity when A, B AND either criterion C or D are met",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "hypoventilation_syndrome"
+          },
+          {
+            "type": "leaf",
+            "criterion": "covered_e0470_used_and_ineffective"
+          },
+          {
+            "type": "leaf",
+            "criterion": "fev1_fvc_70_or_more"
+          },
+          {
+            "type": "any",
+            "label": "either criterion C or D",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "hypo_e0471_awake_abg_paco2_worsens_7"
+              },
+              {
+                "type": "leaf",
+                "criterion": "hypo_e0471_psg_hst_on_e0470_sat_88"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "continued_coverage_osa",
+      "name": "Continued coverage beyond the first three months: CPAP/APAP (E0601) and bi-level (E0470) for OSA",
+      "applies_to_cpt": [
+        "E0601",
+        "E0470"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "Continued coverage of a PAP device (E0601, E0470) beyond the first three months of therapy requires",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "adherence_documented_day_31_to_91"
+          },
+          {
+            "type": "all",
+            "label": "Objective evidence of adherence to PAP therapy is defined as",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "pap_use_4_hours_per_night"
+              },
+              {
+                "type": "leaf",
+                "criterion": "pap_use_70_percent_of_nights_30_days"
+              }
+            ]
+          },
+          {
+            "type": "leaf",
+            "criterion": "adherence_download_in_written_report"
+          },
+          {
+            "type": "all",
+            "label": "Re-evaluation (Documentation Required)",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "reevaluation_timing"
+              },
+              {
+                "type": "leaf",
+                "criterion": "subjective_symptom_improvement"
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "The re-evaluation and download sentences come from the Reimbursement Information 'Documentation Required' section; they state what the continued-coverage record must contain and are read as requirements of this pathway.",
+        "A supplier-generated form completed by the physician is not a substitute for the medical record documentation."
+      ]
+    },
+    {
+      "id": "continued_coverage_bilevel_non_osa",
+      "name": "Continued coverage beyond the first three months: bi-level (E0470 and E0471) for diagnoses other than OSA",
+      "applies_to_cpt": [
+        "E0470",
+        "E0471"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "Bi-level device (E0470 AND E0471) for diagnoses other than Obstructive Sleep Apnea requires the following documentation",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "practitioner_statement_after_61_days"
+          },
+          {
+            "type": "leaf",
+            "criterion": "compliant_use_4_hours_per_24h"
+          },
+          {
+            "type": "leaf",
+            "criterion": "member_benefiting_from_device"
+          }
+        ]
+      }
+    },
+    {
+      "id": "requalification_after_failed_trial",
+      "name": "Re-qualification for a PAP device after a failed initial 3-month trial (E0601, E0470)",
+      "applies_to_cpt": [
+        "E0601",
+        "E0470"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "A member who fails the initial 3-month PAP trial is eligible to re-qualify for a PAP device but must have",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "failed_initial_3_month_trial"
+          },
+          {
+            "type": "leaf",
+            "criterion": "face_to_face_reevaluation_for_failure"
+          },
+          {
+            "type": "all",
+            "label": "Diagnosis of OSA based on a diagnostic sleep test",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "osa_dx_diagnostic_sleep_test"
+              },
+              {
+                "type": "leaf",
+                "criterion": "sleep_test_report_confirms_osa_with_index"
+              },
+              {
+                "type": "any",
+                "label": "AHI, RDI or REI as follows (one of)",
+                "children": [
+                  {
+                    "type": "all",
+                    "label": "5 or more but less than 15 with symptomatic OSA",
+                    "children": [
+                      {
+                        "type": "leaf",
+                        "criterion": "index_5_to_under_15"
+                      },
+                      {
+                        "type": "leaf",
+                        "criterion": "adult_symptomatic_osa"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "leaf",
+                    "criterion": "index_15_or_more"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "'Re-qualify' is read as meeting the OSA diagnostic criteria again plus the face-to-face re-evaluation; for an E0470 the CPAP-failure criterion of the bi-level OSA pathway is not repeated here."
+      ]
+    },
+    {
+      "id": "replacement",
+      "name": "Replacement of a PAP device (E0601, E0470)",
+      "applies_to_cpt": [
+        "E0601",
+        "E0470"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "A replacement of a PAP device meets the definition of medical necessity with a prescription; confirmation must exist that the device is",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "replacement_prescription"
+          },
+          {
+            "type": "any",
+            "label": "Nonfunctioning and out of warranty or greater than five years old",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "device_nonfunctioning_out_of_warranty"
+              },
+              {
+                "type": "leaf",
+                "criterion": "device_over_5_years_old"
+              }
+            ]
+          },
+          {
+            "type": "any",
+            "label": "Previous diagnostic test, or (NOTE) physician attestation when none is available",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "replacement_previous_diagnostic_test"
+              },
+              {
+                "type": "leaf",
+                "criterion": "physician_attestation_of_sleep_apnea"
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "Documentation may come from the physician or rendering provider.",
+        "Duplicate equipment (e.g., travel PAP) and replacement to upgrade technology do not meet medical necessity (see exclusions).",
+        "Second check (FABLE_KEY_CRITIQUE.md): E0471 replacement split out with a not-for-OSA guard; diagnostic test generalised to 'a previous diagnostic test'."
+      ]
+    },
+    {
+      "id": "replacement_e0471",
+      "name": "Replacement of a PAP device (E0471)",
+      "applies_to_cpt": [
+        "E0471"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "A replacement of a PAP device meets the definition of medical necessity with a prescription; confirmation must exist that the device is",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "replacement_prescription"
+          },
+          {
+            "type": "any",
+            "label": "Nonfunctioning and out of warranty or greater than five years old",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "device_nonfunctioning_out_of_warranty"
+              },
+              {
+                "type": "leaf",
+                "criterion": "device_over_5_years_old"
+              }
+            ]
+          },
+          {
+            "type": "any",
+            "label": "Previous diagnostic test, or (NOTE) physician attestation when none is available",
+            "children": [
+              {
+                "type": "leaf",
+                "criterion": "replacement_previous_diagnostic_test"
+              },
+              {
+                "type": "leaf",
+                "criterion": "physician_attestation_of_sleep_apnea"
+              }
+            ]
+          },
+          {
+            "type": "not",
+            "label": "E0471 does not meet medical necessity for OSA",
+            "child": {
+              "type": "leaf",
+              "criterion": "e0471_for_osa"
+            }
+          }
+        ]
+      },
+      "notes": [
+        "Documentation may come from the physician or rendering provider.",
+        "Duplicate equipment (e.g., travel PAP) and replacement to upgrade technology do not meet medical necessity (see exclusions).",
+        "Second check (FABLE_KEY_CRITIQUE.md): split from replacement; 'Bi-level therapy with a backup rate feature (E0471) does not meet the definition of medical necessity for the treatment of obstructive sleep apnea.'"
+      ]
+    },
+    {
+      "id": "accessories",
+      "name": "Accessories used with a PAP device",
+      "applies_to_cpt": [
+        "A4604",
+        "A7027",
+        "A7028",
+        "A7029",
+        "A7030",
+        "A7031",
+        "A7032",
+        "A7033",
+        "A7034",
+        "A7035",
+        "A7036",
+        "A7037",
+        "A7038",
+        "A7039",
+        "A7044",
+        "A7045",
+        "A7046",
+        "S8186"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "Accessories used with a PAP device meet the definition of medical necessity when",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "pap_device_coverage_criteria_met"
+          }
+        ]
+      },
+      "notes": [
+        "Usual maximum quantities (per 12 months): A4604 4, A7027 4, A7028 24, A7029 24, A7030 4, A7031 12, A7032 24, A7033 24, A7034 4, A7035 2, A7036 2, A7037 4, A7038 24, A7039 2, A7046 2; larger quantities are subject to medical review of supporting documentation.",
+        "If the coverage criteria for the PAP device are not met, the accessories are denied."
+      ]
+    },
+    {
+      "id": "humidifier",
+      "name": "Non-heated (E0561) or heated (E0562) humidifier",
+      "applies_to_cpt": [
+        "E0561",
+        "E0562"
+      ],
+      "requires": {
+        "type": "all",
+        "label": "Either a non-heated (E0561) or heated (E0562) humidifier meets the definition of medical necessity when",
+        "children": [
+          {
+            "type": "leaf",
+            "criterion": "humidifier_ordered_by_treating_physician"
+          },
+          {
+            "type": "leaf",
+            "criterion": "humidifier_for_covered_pap_device"
+          }
+        ]
+      }
+    }
+  ],
+  "notes": [
+    "Built from the PDF text only (pdftotext -layout). The download is a single clean copy (19 pages, no redline); position statements were 'maintained' at the 09/15/25 revision.",
+    "Dates: effective_date is the 'Revised: 09/15/25' date of this version; the original effective date is 02/15/01; reviewed 08/28/25 (committee approval 08/28/25).",
+    "Plan types: the header says the guideline applies to all lines of business unless noted in Program Exceptions. FEP and SAO follow their own guidelines; Medicare Advantage follows NCD 240.4 and DMERC LCDs L33718 / L33800.",
+    "Code-to-pathway mapping. E0601: adult initial, pediatric initial, continued coverage for OSA, re-qualification, replacement. E0470: bi-level OSA initial, restrictive thoracic, severe COPD (E0470), COPD hospital discharge, central sleep apnea, hypoventilation (E0470), continued coverage for OSA, continued coverage non-OSA, re-qualification, replacement. E0471: restrictive thoracic, severe COPD after E0470 (criterion I), COPD hospital discharge (criterion II), central sleep apnea, hypoventilation (E0471), continued coverage non-OSA, replacement. E0561/E0562: humidifier pathway, plus the pediatric initial pathway because that sentence names them. A-codes and S8186: accessories pathway. A7047, A7049, E0530, E0600, A7002: investigational, no pathway.",
+    "Each section names its own HCPCS codes, so no code had to be mapped by inference. The replacement pathway's 'PAP device' is read as the three devices E0601, E0470, E0471; the re-qualification sentence's 'PAP device' as the two OSA devices E0601, E0470 (the initial 3-month PAP trial it refers to is the OSA trial).",
+    "E0600 and A7002 appear only in a billing NOTE ('may sometimes be reported' for oral pressure therapy, which is investigational); they are tagged investigational to match the document's own tagging of the OPT interface A7047 as Investigational. A reviewer could omit them because the codes describe a generic suction pump. E0465/E0466/E0467 (ventilators) are left to policy 09-E0000-55 and omitted.",
+    "E0471 is tagged covered in scope.cpt because four pathways grant it (restrictive thoracic, COPD, CSA, hypoventilation). The statements that E0471 does not meet medical necessity for OSA (position statement and billing NOTE with the OSA ICD-10 codes) are exclusions with an empty cpt list, since the code is not wholly that excluded thing; a check of E0471 for an OSA diagnosis would fail every pathway that names E0471 (none is an OSA pathway).",
+    "Device/population/phase split: one pathway per device code group and per section as printed. Restrictive thoracic and CSA grant 'E0470 or E0471' with one set of criteria, so each is one pathway with both codes rather than two identical pathways.",
+    "Adult initial: the sentence 'AHI... of 5 or more but less than 15 in adult members with symptomatic OSA (...)' holds two requirements (the index range and symptomatic adult OSA) and is split into two criteria under an 'all'; the 15-or-more alternative is one criterion. Threshold for the 5-to-15 criterion is gte 5 only (a value of 15 or more satisfies the other branch).",
+    "Pediatric initial: the NOTE 'In pediatric members, an AHI or RDI greater than or equal to 1.0 is considered abnormal' is placed in the pediatric pathway as the sleep-test threshold a child must show. A reviewer could treat it as definitional and leave it out. The third bullet 'adenotonsillectomy has been unsuccessful or is contraindicated, or when definitive surgery is indicated but must wait...' is an 'any' of two criteria (the first keeps 'unsuccessful or is contraindicated' together as one either/or about the same surgery).",
+    "Bi-level for OSA (E0470): the section itself states only 'CPAP has been tried and proven ineffective or is not tolerated'. The OSA diagnostic block (sleep test, report with index, AHI thresholds) is nested in because the switching paragraphs require 'the above criteria' / 'the criteria above' to be met when substituting bi-level. The switch timing is an 'any': found ineffective during the initial 3-month home trial (no new evaluation or sleep test) OR CPAP used more than 3 months and a new initial face-to-face clinical evaluation. A CPAP failure during an in-lab titration fits neither paragraph literally and would read as insufficient on that 'any'; a reviewer could instead model it as not(used more than 3 months) OR new evaluation.",
+    "'A new 3-month trial would begin for use of bi-level therapy or APAP' is informational (resets the initial phase) and is not a criterion. A switch from CPAP to APAP stays under E0601; its new-evaluation rule is a conditional in the adult initial pathway (second check).",
+    "NOTE after the switching paragraphs ('If the above criteria are not met, continued coverage of a PAP device and related accessories will be denied') and the matching sentences under the E0470/E0471 hypoventilation criteria, the continued-coverage section and the accessories paragraph are the contrapositive of their pathways; they are not listed as exclusions.",
+    "Re-qualification: 'A member who fails (including member non-adherence) the initial 3-month PAP trial is eligible to re-qualify ... but must have a face-to-face clinical re-evaluation' is its own pathway (failure + re-evaluation + the OSA diagnostic block, since 're-qualify' means meeting the qualifying criteria again). The PDF prints 'f ace-to-face' with a kerning gap; the criterion text uses 'face-to-face'.",
+    "Restrictive thoracic: 'One of the following' a/b/c is an 'any'; c holds a condition (progressive neuromuscular disease only) and two alternatives (MIP less than 60 cm H2O, FVC less than 50% predicted), modeled as all[condition, any[MIP, FVC]]. 'H20' is kept as printed in the criterion text. The disorder-group list ('clinical disorder groups characterized as one of the following') is modeled as a diagnosis leaf at the top of each disorder pathway (restrictive thoracic disorder, severe COPD, hypoventilation syndrome; for CSA the diagnosis is already criterion 1).",
+    "Severe COPD E0470: A, B and C are all required (the list reads 'A ...; B ...; AND C'). The E0471 sentence 'meets the definition of medical necessity for either criterion I or II' is split into two pathways: I (after initial E0470 use, A and B) for E0471 only, and II (started at hospital discharge, up to 3 months) for both E0470 and E0471 because the sentence names '(E0470, E0471)'. 'For members with COPD who qualified for an E0470 device' is a single leaf rather than a nested copy of the E0470 criteria. Criterion I.A 'PaCO2 greater than 52 or pre ABG PaCO2 increase equal to or greater than 7 mm HG' is an 'any' of two criteria.",
+    "Central sleep apnea: the facility-based attended polysomnogram is its own leaf and the three things it must document are leaves under one 'all'. Criterion 2 is conditional ('if either CSA or OSA is a component of the initially observed sleep-associated hypoventilation'); kept as one leaf with the condition in the question. The ASV / CHF NOTE (LVEF <= 45%) is an exclusion with no code because E0471 is also granted for CSA when LVEF is above 45%; the sentence allowing ASV at clinical discretion for LVEF > 45% or mild CHF-related CSA is not a criterion.",
+    "Hypoventilation: 'A, B AND either criterion C or D' = all[A, B, any[C, D]] for each of E0470 and E0471. 'Spirometry shows an FEV1/FVC greater than or equal to 70%' is printed identically in both and is one shared criterion; the ABG and PSG criteria differ in wording between the two sections and are separate criteria. The parenthetical referral to SEVERE COPD for FEV1/FVC below 70% is a cross-reference, not a requirement.",
+    "Continued coverage for OSA (E0601, E0470): adherence must be documented between day 31 and day 91; the adherence definition holds two numbers (4 hours per night; 70% of nights over a consecutive 30-day period in the first 3 months) and is two criteria under an 'all'. The 'Documentation Required' sentences (re-evaluation within the first 3 months and not before day 31; documentation of both improvements in subjective symptoms and objective adherence data; adherence from device download / data card / usage inspection in a written report) are included as leaves of this pathway. 'Objective data related to adherence to PAP therapy' is represented by the adherence and download leaves rather than a separate criterion. The initial-coverage criteria are not re-nested in the continued pathway: the phases are separate pathways.",
+    "Continued coverage for non-OSA bi-level (E0470 and E0471): a signed and dated practitioner statement no sooner than 61 days after initiation, declaring compliant use (average 4 hours per 24 hours) and benefit; three criteria. The device-download sentence and the OSA re-evaluation sentences are not applied here because they speak of OSA symptoms and PAP adherence data; the document asks only for the practitioner statement.",
+    "Replacement: prescription + (nonfunctioning and out of warranty OR greater than five years old). The NOTE that physician attestation of OSA or essential sleep apnea 'will be accepted' when a previous diagnostic test is not available is modeled as an 'any' of the diagnostic sleep test criterion and the attestation, per the brief's rule for waiving NOTEs.",
+    "Accessories: one leaf, 'the coverage criteria for the PAP device are met', answerable because a chart shows an authorized/covered device in use. The usual-maximum quantity table limits quantity, not coverage, and is recorded in the pathway notes. The humidifier sentence holds two requirements (ordered by the treating physician; for use with a covered PAP device) and is two criteria.",
+    "Left out as not requirements: the Description section (including 'Treatment of OSA is primarily based on all of the following' and 'Any score ... over 5 may mean'), the titration NOTE under restrictive thoracic and CSA ('Most titrations are started with Bi-level without a backup rate'), the ventilator cross-reference, the LOINC tables, the Reimbursement rules (rental for 3 months, purchase after compliance, most cost-effective equipment, maintenance in rental, stop billing on discontinuation), the general 'Documentation Required' list and 'An order for each item billed must be signed and dated by the treating physician' (documentation an order carries, not a chart requirement of a pathway), and the Definitions section (e.g. Excessive daytime sleepiness = Epworth >= 10, which informs the symptomatic-OSA question but is not itself a criterion).",
+    "Exclusions kept to statements of non-coverage/investigational status. The two E0471 life-support and OSA statements carry no code (E0471 is covered elsewhere); EPAP/OPT -> A7049, A7047, E0600, A7002; positional electrical devices -> E0530; duplicate/travel PAP, technology upgrade and PAP cleaning machines have no code in the table."
+  ],
+  "plan_types": [
+    "All lines of business unless otherwise noted in the Program Exceptions section"
+  ],
+  "excluded_plans": [
+    "Federal Employee Program (FEP): follow FEP guidelines",
+    "State Account Organization (SAO): follow SAO guidelines",
+    "Medicare Advantage products: NCD 240.4 Continuous Positive Airway Pressure (CPAP) Therapy for Obstructive Sleep Apnea (OSA); DMERC LCD L33718 Positive Airway Pressure (PAP) Devices for the Treatment of Obstructive Sleep Apnea; DMERC LCD L33800 Respiratory Assist Devices"
+  ],
+  "exclusions": [
+    {
+      "text": "Bi-level therapy with a backup rate feature (E0471) does not meet the definition of medical necessity for the treatment of obstructive sleep apnea.",
+      "cpt": []
+    },
+    {
+      "text": "Bi-level therapy with a backup rate feature (E0471) is considered experimental or investigational when used as a life-support ventilator.",
+      "cpt": []
+    },
+    {
+      "text": "Nasal expiratory positive airway pressure (EPAP) devices (e.g., Provent® Professional Sleep Apnea Therapy) and oral pressure therapy devices (e.g., ApniCure’s Win-x™ Sleep Therapy System) are considered experimental or investigational.",
+      "cpt": [
+        "A7049",
+        "A7047",
+        "E0600",
+        "A7002"
+      ]
+    },
+    {
+      "text": "Electrical devices for positional obstructive sleep apnea (e.g. Night Shift™ Sleep Positioner, NightBalance®) are considered experimental or investigational.",
+      "cpt": [
+        "E0530"
+      ]
+    },
+    {
+      "text": "Adaptive Servo-Ventilation, auto SV/BiPAP and auto SV advanced devices (E0471) should not be used in individuals with symptomatic chronic congestive heart failure (CHF) with reduced ejection fraction (LVEF less than or equal to 45%).",
+      "cpt": []
+    },
+    {
+      "text": "Duplicate equipment is considered a convenience (e.g., travel PAP) and does not meet the definition of medical necessity.",
+      "cpt": []
+    },
+    {
+      "text": "Replacement of a PAP device for the purposes of upgrading technology does not meet the definition of medical necessity.",
+      "cpt": []
+    },
+    {
+      "text": "PAP Cleaning Machines or devices are considered to be items of convenience and do not meet the definition of medical necessity.",
+      "cpt": []
+    },
+    {
+      "text": "Bi-level therapy devices with a backup rate feature (E0471) do not meet the definition of medical necessity when billed with any of the below listed ICD-10 diagnosis codes for obstructive sleep apnea.",
+      "cpt": []
+    },
+    {
+      "text": "Oral pressure therapy devices (e.g., Winx Sleep Therapy System) are considered experimental or investigational, but may sometimes be reported using E0600 (respiratory suction pump, home model, portable or stationary, electric) and A7002 (tubing, used with suction pump, each).",
+      "cpt": [
+        "E0600",
+        "A7002",
+        "A7047"
+      ]
+    }
+  ],
+  "status": "ok"
+}

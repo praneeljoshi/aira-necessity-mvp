@@ -1,0 +1,19 @@
+{
+  "payer": "Independent Health",
+  "payer_key": "independent-health",
+  "treatment": "tavr",
+  "title": "Transcatheter Aortic Valve Replacement (TAVR)",
+  "policy_number": "",
+  "effective": "",
+  "url": "https://www.independenthealth.com/content/dam/independenthealth/individuals-and-families/medicare/medicare-member-resources/documents/medical-policies-s-z/Transcatheter%20Aortic%20Valve%20Replacement%20(TAVR).pdf",
+  "final_url": "https://www.independenthealth.com/content/dam/independenthealth/individuals-and-families/medicare/medicare-member-resources/documents/medical-policies-s-z/Transcatheter%20Aortic%20Valve%20Replacement%20(TAVR).pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "independent-health-transcatheter-aortic-valve-replacement-tavr.pdf",
+  "sha256": "351fba0d25331b3e50e22e6d19c768e218c5c7933b7d995a28ca5c19347f1b69",
+  "pages": 6,
+  "bytes": 332500,
+  "retrieved": "2026-10-09",
+  "printed_date": "Policy M20121214042; effective 1/1/2013; latest revision 11/1/2025 (version control table)"
+}

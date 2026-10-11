@@ -1,0 +1,19 @@
+{
+  "payer": "Carelon Medical Benefits Management",
+  "payer_key": "carelon",
+  "treatment": "sacroiliac-joint-injections",
+  "title": "MSK Interventional Pain Management",
+  "policy_number": "",
+  "effective": "2024-04-14",
+  "url": "https://www.ldh.la.gov/assets/medicaid/MCPP/2.21.24/1243_HBL_MSK_Interventional_Pain_Management_redline_04_14_2024.pdf",
+  "final_url": "https://www.ldh.la.gov/assets/medicaid/MCPP/2.21.24/1243_HBL_MSK_Interventional_Pain_Management_redline_04_14_2024.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "carelon-msk-interventional-pain-management.pdf",
+  "sha256": "8464b978b7844440db38f78c3478cf1f3d3689265ecab69d1f9113771325dd63",
+  "pages": 34,
+  "bytes": 646086,
+  "retrieved": "2026-10-09",
+  "printed_date": "Cover: 'Effective Date: 04/14/2024 04/09/2023', 'Last Review Date: 07/18/2023 05/09/2022' (old and new dates both printed because of redline); Doc ID MSK01-04240423.1"
+}

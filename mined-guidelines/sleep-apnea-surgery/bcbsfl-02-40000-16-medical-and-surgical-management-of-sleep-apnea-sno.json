@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "sleep-apnea-surgery",
+  "title": "Medical and Surgical Management of Sleep Apnea, Snoring, and Other Conditions of the Soft Palate and Nasal Passages",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JQH76YX1LHJCZR18P",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-40000-16",
+  "original_effective": "07/15/01",
+  "reviewed": "08/27/26",
+  "revised": "09/15/26",
+  "file": "bcbsfl-02-40000-16-medical-and-surgical-management-of-sleep-apnea-sno.pdf",
+  "sha256": "cdc619503f15ac4a79e5541ba1862ffacdf42a239325f232ffd7dce798a8533a",
+  "pages": 13,
+  "bytes": 222252,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original 07/15/01; Reviewed 08/27/26; Revised 09/15/26"
+}

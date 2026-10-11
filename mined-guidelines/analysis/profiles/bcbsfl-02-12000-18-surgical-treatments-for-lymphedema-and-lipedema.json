@@ -1,0 +1,233 @@
+{
+ "doc_kind": "medical policy (Florida Blue Medical Coverage Guideline)",
+ "lines_of_business": [
+  "All lines of business unless noted in Program Exceptions (disclaimer p.1)",
+  "Federal Employee Program (FEP): follow FEP guidelines",
+  "State Account Organization (SAO): follow SAO guidelines",
+  "Medicare Advantage: reviewed NCD/LCD listed in Program Exceptions",
+  "Position Statement NOTE: coverage 'is subject to the member's benefit terms, limitations and maximums'"
+ ],
+ "effective_or_revised": "Original Effective Date 01/01/22; Reviewed 04/23/26; Revised 05/15/26 (16 pages)",
+ "sections_in_order": [
+  "Header block (policy number, Original Effective Date, Reviewed, Revised)",
+  "Subject",
+  "Disclaimer (all caps)",
+  "Navigation bar (Position Statement / Billing/Coding / ... hyperlinks)",
+  "DESCRIPTION",
+  "POSITION STATEMENT",
+  "BILLING/CODING INFORMATION",
+  "REIMBURSEMENT INFORMATION",
+  "PROGRAM EXCEPTIONS",
+  "DEFINITIONS",
+  "RELATED GUIDELINES",
+  "OTHER",
+  "REFERENCES",
+  "COMMITTEE APPROVAL",
+  "GUIDELINE UPDATE INFORMATION"
+ ],
+ "criteria_location": "Position Statement, ~350 lines laid out as a two-column table (procedure name in left column, criteria in right) covering lymph node transplant, lymphovenous bypass, excision/debulking/liposuction for lymphedema, liposuction/lipectomy for lipedema, and axillary reverse mapping (investigational). MRI guidance sits in Billing/Coding, not Position Statement.",
+ "procedures_covered": [
+  "Lymph node transplant / vascularized lymph node transfer",
+  "Lymphovenous bypass (CPT 1019T)",
+  "Excision/debulking and suction-assisted liposuction for lymphedema (15877-15879)",
+  "Tumescent or water-assisted liposuction / lipectomy for lipedema",
+  "Axillary reverse mapping (investigational)"
+ ],
+ "logic": {
+  "top_level": "pathways: four procedures, each with its own Roman-numeral criteria block (I diagnostic, II general eligibility, III no contraindications), reusing near-identical sub-blocks",
+  "max_nesting_depth": 4,
+  "k_of_n": [
+   {
+    "k": 1,
+    "n": 3,
+    "quote": "Signs and symptoms - must satisfy at least one: 1. ... significant physical functional impairment 2. ... chronic or recurrent skin condition 3. ... significant pain or weakness"
+   },
+   {
+    "k": 1,
+    "n": 3,
+    "quote": "Unilateral disease - must satisfy at least one: a. Volumetry differential ... b. Bioimpedance (L-Dex) ... c. Lymphoscintigraphy"
+   }
+  ],
+  "exclusions_or_contraindications": "Explicit NOT blocks: 'III. NONE of the following contraindications exist:' then transient lymphedema, lipedema without lymphatic dysfunction, and 'ANY of the following uncontrolled comorbidities' (DVT, CHF, pregnancy, dye anaphylaxis, active infection ...).",
+  "initial_vs_repeat": "Lipedema block requires staged expectations: 'strong likelihood that 2 or 3 procedures might be required'; no explicit repeat-procedure criteria.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Lymphedema therapy includes compression therapy (bandaging/garment/gauntlet) AND any of the following treatment modalities",
+    "why_ambiguous": "Compression required plus at least one of four modalities: an all(compression, any(4)) nested inside a definitional sentence of the leaf."
+   },
+   {
+    "quote": "C. Any of the following uncontrolled comorbidities: D. Venous disease ... E. Congestive heart failure",
+    "why_ambiguous": "In the lymphovenous bypass block the comorbidities are lettered D-L continuing the parent list, so they look like siblings of 'C' rather than children."
+   },
+   {
+    "quote": "must satisfy 'A', 'B', and 'C'",
+    "why_ambiguous": "Block II says A, B, C but the lymphovenous bypass block actually lists A-D; the stated letters do not match the items."
+   },
+   {
+    "quote": "D. Member has completed a course of conservative treatment ... E. Lymphedema therapy includes compression therapy",
+    "why_ambiguous": "In the reductive block, E is a definition of D, not a separate requirement."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "functional impairment",
+   "quote": "significant physical functional impairment (such as: difficulty ambulating or performing activities of daily living)",
+   "where": "I.A.1"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "Lymphoscintigraphy findings must show a minimum of a one-hour delayed transit time to first-level lymph nodes",
+   "where": "I.B"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "Volumetry differential ... >10% (if affected extremity dominant extremity) or >7% (affected extremity is non-dominant extremity)",
+   "where": "I.B.1.a"
+  },
+  {
+   "kind": "BMI/comorbidity",
+   "quote": "BMI ≤ 35kg/m2",
+   "where": "II.A"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "lymphedema therapy for a minimum of 20 hours/week for 6 months",
+   "where": "II.B"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "Photographs are submitted documenting the affected extremities requested for treatment",
+   "where": "Lipedema II"
+  },
+  {
+   "kind": "patient commitment",
+   "quote": "Submission of a plan of care agreement signed by the member",
+   "where": "Lipedema X"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "evaluated by a surgeon who performs lymphatic surgery who determined they are a not a candidate for VLNT or lymphovenous bypass",
+   "where": "Reductive II.C"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "MRI imaging findings consistent with moderate to severe fat hypertrophy",
+   "where": "Reductive II.B"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "limb volume differential, dominant limb",
+   "value": "> 10",
+   "unit": "%",
+   "quote": ">10% (if affected extremity dominant extremity)"
+  },
+  {
+   "quantity": "limb volume differential, non-dominant limb",
+   "value": "> 7",
+   "unit": "%",
+   "quote": ">7% (affected extremity is non-dominant extremity)"
+  },
+  {
+   "quantity": "bioimpedance L-Dex differential",
+   "value": ">= 10",
+   "unit": "units",
+   "quote": "Bioimpedance (L-Dex) differential of at least 10 units"
+  },
+  {
+   "quantity": "BMI",
+   "value": "<= 35",
+   "unit": "kg/m2",
+   "quote": "BMI ≤ 35kg/m2"
+  },
+  {
+   "quantity": "lymphoscintigraphy delayed transit",
+   "value": ">= 1",
+   "unit": "hour",
+   "quote": "minimum of a one-hour delayed transit time"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "lymphedema therapy before surgery",
+   "length": "20 hours/week for 6 months",
+   "quote": "a minimum of 20 hours/week for 6 months"
+  },
+  {
+   "what": "transient lymphedema exclusion",
+   "length": "6 months post last oncologic treatment",
+   "quote": "not persistent for at least six months post last oncologic treatment"
+  },
+  {
+   "what": "lipedema medical management",
+   "length": "3 consecutive months",
+   "quote": "Minimally responsive to at least 3 consecutive months of optimal medical management"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "CPT list is introduced as 'may be use for diagnostic imaging, physiologic interventions ... and reductive interventions'; not mapped to each procedure block.",
+  "non_covered_code_lists": "None; investigational scope is stated in prose only."
+ },
+ "external_dependencies": [
+  {
+   "what": "Member contract limits",
+   "quote": "Coverage for surgical treatments for lymphedema is subject to the member's benefit terms, limitations and maximums."
+  },
+  {
+   "what": "Treating lymphedema provider determines tolerance of post-surgical therapy",
+   "quote": "per treating lymphedema provider"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Erysipelas",
+   "definition_quote": "an infection of the upper layers of the skin (superficial)."
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "significant pain or weakness in the affected extremity",
+   "problem": "no scale."
+  },
+  {
+   "quote": "Minimally responsive",
+   "problem": "no response threshold."
+  },
+  {
+   "quote": "Morbidly obese members must first complete a formal weight loss program",
+   "problem": "'morbidly obese' not defined here and 'formal program' unspecified."
+  },
+  {
+   "quote": "clinically significant such as rest pain, claudication or ischemic ulcers",
+   "problem": "examples, not a test."
+  }
+ ],
+ "extraction_hazards": [
+  "Bullets are either the private-use character U+F0B7 or U+2022 depending on the document (the fusion guideline uses both), never '-' or '*'; nested bullets use other glyphs ('o') or only deeper indentation",
+  "Hyperlink navigation bar after the disclaimer is flattened into a 2-3 row text block that looks like headings",
+  "Form-feed (\\f) page breaks can fall mid-list or immediately before a section heading, so '^HEADING' regexes can miss; no running headers/footers or page numbers to strip",
+  "Position Statement is a two-column table: left column holds procedure names, right column the criteria, and the right-column indent shifts between blocks (30 vs 22 vs 36 spaces), so nesting must be inferred, not read from indent",
+  "Headings 'Lipidema' is misspelled in text; 'DESCRIPTION:' is indented by one space so a strict ^DESCRIPTION regex fails",
+  "List lettering restarts or continues incorrectly (comorbidity list lettered D-L under C)",
+  "Billing section contains a clinical-guidance narrative (MRI use) that reads like criteria",
+  "Header block lines have a leading space"
+ ],
+ "interesting_structures": [
+  "Same I/II/III skeleton repeated four times with small edits (copy-paste family; BMI 35, 20 h/week for 6 months)",
+  "Dominant vs non-dominant arm threshold (10% vs 7%)",
+  "Unilateral vs bilateral disease branch changes which measurements count",
+  "Photographs and signed plan-of-care agreement as criteria",
+  "MRI guidance in Billing/Coding is functionally a criterion for reductive surgery"
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "scale": "1 = all/any/not expresses it cleanly ... 5 = needs new constructs or human judgment",
+  "why": "Nested all/any/not fits well and is highly regular, but the table layout, wrong letter references and definitional sub-bullets make extraction error-prone, and several leaves need measurements most charts will not hold."
+ },
+ "payer": "bcbsfl",
+ "treatment": "surgical-treatments-for-lymphedema-and-l",
+ "file": "bcbsfl-02-12000-18-surgical-treatments-for-lymphedema-and-lipedema.pdf"
+}

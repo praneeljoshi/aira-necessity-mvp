@@ -1,0 +1,62 @@
+{
+  "file": "uhc-ma-mmp099-07-varicose-veins-treatment-and-other-vein-embolizati.pdf",
+  "treatment": "varicose-veins",
+  "payer": "uhc-ma",
+  "doc_kind": "Medicare Advantage policy",
+  "lines_of_business": ["UnitedHealthcare Medicare Advantage plans"],
+  "effective_or_revised": "Text says Policy MMP099.11, last committee approval June 11, 2025, effective September 1, 2026. Library metadata calls it MMP099.07 effective 09/01/2024; the PDF text differs, so treat the number as unreliable.",
+  "sections_in_order": ["Coverage Rationale (Stab Phlebectomy Less Than 10 Incisions; Endomechanical Ablation of Incompetent Extremity Veins)", "Applicable Codes", "CMS Related Documents (LCD/LCA/MAC table, MAC states table)", "Policy History/Revision Information", "Instructions for Use"],
+  "criteria_location": "There are no criteria in the document. Coverage Rationale points to (a) the MAC LCDs/LCAs in a table, (b) InterQual CP: Phlebectomy for stab phlebectomy where no LCD exists, (c) the UHC commercial policy for MOCA where no LCD exists. All 4 pages are pointers.",
+  "procedures_covered": ["Stab phlebectomy less than 10 incisions (CPT 37799 unlisted, via InterQual)", "Endomechanical ablation of incompetent extremity veins / MOCA / ClariVein (CPT 36473, 36474)"],
+  "logic": {
+    "top_level": "other: conditional delegation (if an LCD exists in the member's MAC jurisdiction apply it; else apply InterQual or the commercial policy)",
+    "max_nesting_depth": 1,
+    "k_of_n": [],
+    "exclusions_or_contraindications": "None stated.",
+    "initial_vs_repeat": "None.",
+    "and_or_ambiguity": [
+      {"quote": "LCDs/LCAs exist and compliance with these policies is required where applicable.", "why_ambiguous": "'where applicable' depends on member state and MAC; the table has several LCDs per procedure."},
+      {"quote": "For coverage guidelines for states/territories with no LCDs/LCAs, refer to the UnitedHealthcare Commercial Medical Policy", "why_ambiguous": "The table lists LCDs for most MACs (CGS appears only in the states table), so 'no LCDs' is a jurisdiction lookup; and the commercial policy itself calls MOCA unproven and delegates the rest to InterQual."}
+    ]
+  },
+  "requirement_kinds": [
+    {"kind": "other", "quote": "Medicare does not have an NCD for endomechanical ablation of incompetent extremity veins. LCDs/LCAs exist and compliance with these policies is required where applicable.", "where": "Coverage Rationale p.1"},
+    {"kind": "other", "quote": "First Coast Service Options, Inc. (First Coast) FL, PR, VI", "where": "MAC state table p.3 (jurisdiction decides which LCD applies)"},
+    {"kind": "other", "quote": "refer to the InterQual® CP: Procedures, Phlebectomy, Lower Extremity Superficial Tributary Varicose Vein.", "where": "Coverage Rationale p.1"}
+  ],
+  "thresholds": [],
+  "time_windows": [],
+  "codes": {
+    "cpt_hcpcs_listed": true,
+    "icd10_listed": false,
+    "codes_tied_to_criteria": "Three codes only (36473, 36474, 37799) each mapped to a pointer. 37799 is tied to the InterQual phlebectomy criteria.",
+    "non_covered_code_lists": "None. 'Listing of a code in this policy does not imply that the service described by the code is a covered or non-covered health service.'"
+  },
+  "external_dependencies": [
+    {"what": "First Coast LCD L38720 / LCA A58250 (Florida)", "quote": "L38720 Treatment of Chronic Venous Insufficiency of the Lower Extremities  A58250 Billing and Coding"},
+    {"what": "Other MAC LCDs: L34209, L34010 (Noridian), L34924 (Novitas), L39121 (Palmetto), L33575 (Wellpoint), L34536 (WPS)", "quote": "L34536 Treatment of Varicose Veins of the Lower Extremities"},
+    {"what": "InterQual CP: Phlebectomy, Lower Extremity Superficial Tributary Varicose Vein", "quote": "refer to the InterQual® CP: Procedures, Phlebectomy, Lower Extremity Superficial Tributary Varicose Vein."},
+    {"what": "UHC Commercial policy Surgical and Ablative Procedures for Venous Insufficiency and Varicose Veins", "quote": "refer to the UnitedHealthcare Commercial Medical Policy titled Surgical and Ablative Procedures for Venous Insufficiency and Varicose Veins."},
+    {"what": "Delegated utilization management", "quote": "For members in UnitedHealthcare Medicare Advantage plans where a delegate manages utilization management and prior authorization requirements, the delegate's requirements need to be followed."}
+  ],
+  "definitions_that_change_meaning": [
+    {"term": "Endomechanical ablation", "definition_quote": "also known as ClariVein®, mechanochemical ablation (MOCA), mechanico-chemical endovenous ablation (MCEA), and mechanically enhanced endovenous chemical ablation (MEECA)"}
+  ],
+  "vague_terms": [
+    {"quote": "compliance with these policies is required where applicable", "problem": "No criteria; applicability depends on jurisdiction."},
+    {"quote": "After checking the table below and searching the Medicare Coverage Database, if no NCD, LCD, or LCA is found, refer to the criteria as noted in the Coverage Rationale section above.", "problem": "Loops back to the same pointers; instructs the reader to search an external database."}
+  ],
+  "extraction_hazards": [
+    "A multi-column table of NCD / LCD / LCA / Contractor with merged cells: the contractor name appears only on the last row of each group, and LCD/LCA pairs are separated by line wraps (L34209 has two LCAs).",
+    "Footnote asterisks (*, **) on contractor names carry state-level exceptions (Virginia counties) in a note below the second table.",
+    "Table split across pages with a repeated header on page 3, and a second 'Stab Phlebectomy' table with one row (WPS only).",
+    "Policy number in the text (MMP099.11) differs from the library metadata (MMP099.07); effective date is in the future relative to committee approval.",
+    "Hyperlinks ('Click here to view the InterQual criteria') are not in the extracted text."
+  ],
+  "interesting_structures": [
+    "A routing document: decides which external document to read by member's state (MAC jurisdiction table), then by procedure.",
+    "Three-level fallback: NCD (none) -> LCD/LCA per MAC -> UHC commercial policy or InterQual.",
+    "Instructions for Use states the policy applies Medicare source materials first and 'Where there is a conflict between this document and Medicare source materials, the Medicare source materials apply.'"
+  ],
+  "fit_to_tree": {"score": 5, "scale": "1 = all/any/not expresses it cleanly ... 5 = needs new constructs or human judgment", "why": "No criteria exist in the file. A checker could only produce a routing decision (which LCD applies for this member's state). For a Florida member the real criteria are First Coast LCD L38720, a different document that is not in this library."}
+}

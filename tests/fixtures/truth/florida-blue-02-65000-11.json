@@ -1,0 +1,156 @@
+{
+  "id": "florida-blue-02-65000-11",
+  "payer": "Florida Blue",
+  "payer_aliases": ["Florida Blue", "BCBS FL", "BCBSFL", "Blue Cross Blue Shield of Florida", "Blue Cross and Blue Shield of Florida", "BCBS of Florida"],
+  "title": "Blepharoplasty/Brow Surgical Procedures",
+  "guideline_number": "02-65000-11",
+  "effective_date": "2000-04-27",
+  "reviewed_date": "2025-04-24",
+  "source_file": "bcbsfl-02-65000-11-blepharoplasty-brow-surgical-procedures.pdf",
+  "plan_types": ["All lines of business unless otherwise noted in the Program Exceptions section"],
+  "excluded_plans": ["Federal Employee Program (FEP)", "State Account Organization (SAO)", "Medicare Advantage products"],
+  "scope": {
+    "cpt": {
+      "15820": "covered", "15821": "covered", "15822": "covered", "15823": "covered",
+      "67900": "covered", "67901": "covered", "67902": "covered", "67903": "covered",
+      "67904": "covered", "67906": "covered", "67908": "covered"
+    },
+    "icd10": []
+  },
+  "criteria": [
+    {"id": "restore_function_altered_structure", "text": "the goal of the surgery is to restore function to a structure that has been altered by trauma, infection, inflammation, degeneration, neoplasia, or developmental errors", "question": "Is the stated goal of the surgery to restore function to an eyelid or brow structure that has been altered by trauma, infection, inflammation, degeneration, neoplasia, or a developmental error (e.g., congenital ptosis)?"},
+    {"id": "dermatitis_pretarsal_redundant_skin", "text": "Chronic symptomatic dermatitis of pretarsal skin caused by redundant upper eye lid skin", "question": "Does the chart document chronic symptomatic dermatitis of the pretarsal skin caused by redundant upper eyelid skin?"},
+    {"id": "dermatitis_unresponsive_conservative", "text": "unresponsive to conservative therapy such as education regarding hygiene, antibiotics, etc.", "question": "Has the dermatitis failed to respond to conservative therapy (hygiene education, antibiotics, or similar)?"},
+    {"id": "dermatitis_documented_onset_history", "text": "Chronic symptomatic dermatitis must be documented and include a description of its onset, history of prior treatment, extent, presence and description of discharge, color, etc.", "question": "Is the dermatitis documented with a description of its onset, history of prior treatment, extent, and presence/description of discharge and color?"},
+    {"id": "prosthesis_difficulties_anophthalmic", "text": "Prosthesis difficulties in an anophthalmic socket", "question": "Does the patient have prosthesis difficulties in an anophthalmic socket?"},
+    {"id": "prosthesis_described_history", "text": "must be described and include a history of the present treatment", "question": "Are the prosthesis difficulties described, including a history of the present treatment?"},
+    {"id": "thyroid_periorbital_sequelae", "text": "Periorbital sequelae of thyroid disease", "question": "Does the patient have periorbital sequelae of thyroid disease?"},
+    {"id": "thyroid_described_history", "text": "must be described and include a history of the present treatment", "question": "Are the periorbital sequelae of thyroid disease described, including a history of the present treatment?"},
+    {"id": "nerve_palsy", "text": "Nerve palsy", "question": "Does the patient have a nerve palsy affecting the upper eyelid?"},
+    {"id": "nerve_palsy_described_history", "text": "must be described and include a history of the present treatment", "question": "Is the nerve palsy described, including a history of the present treatment?"},
+    {"id": "injury_trauma_congenital_defect", "text": "Accidental injury, trauma, or congenital defect", "question": "Is the upper eyelid condition the result of accidental injury, trauma, or a congenital defect?"},
+    {"id": "vision_interference_redundant_skin", "text": "Interference with vision or visual field-related activities, such as difficulty reading or driving due to redundant skin overhanging the upper eyelid margin or resting on the eyelashes", "question": "Does the chart document interference with vision or visual field-related activities (such as difficulty reading or driving) due to redundant upper eyelid skin overhanging the lid margin or resting on the eyelashes?"},
+    {"id": "photos_redundant_skin", "text": "Photographs from the front and side(s) on the operative side(s) in straight gaze demonstrating redundant skin overhanging the upper eyelid margin or resting on the eyelashes", "question": "Are there front and side photographs of the operative side(s) in straight gaze demonstrating redundant skin overhanging the upper eyelid margin or resting on the eyelashes?"},
+    {"id": "bleph_vf_before_taping_20", "text": "Before taping, the superior visual field is 20 degrees or less", "question": "Does visual field testing before taping show a superior visual field of 20 degrees or less?", "threshold": {"kind": "number", "op": "lte", "value": 20, "unit": "degrees"}},
+    {"id": "bleph_vf_after_taping_30", "text": "After taping, the superior visual field is increased 30% or more", "question": "Does visual field testing after taping show the superior visual field increased by 30% or more?", "threshold": {"kind": "number", "op": "gte", "value": 30, "unit": "percent"}},
+    {"id": "vf_test_prevented_by_medical_condition", "text": "the medical documentation must support evidence of the medical condition which prevents the performance of the test", "question": "If visual field testing was not completed, does the chart document a medical condition (e.g., severe tremors, macular degeneration, physical deformity preventing sitting at the perimeter, glaucoma) that prevents performing the test?"},
+    {"id": "lower_lid_corneal_conjunctival_symptoms", "text": "corneal and/or conjunctival injury, irritation, tearing or pain", "question": "Does the chart document corneal and/or conjunctival injury, irritation, tearing or pain?"},
+    {"id": "lower_lid_ectropion_entropion_trichiasis", "text": "due to ectropion, entropion or trichiasis", "question": "Are the lower eyelid symptoms due to ectropion, entropion or trichiasis?"},
+    {"id": "ptosis_vision_complaints", "text": "Documented complaints of interference with vision or visual field-related activities such as difficulty reading or driving due to eyelid position", "question": "Does the chart document complaints of interference with vision or visual field-related activities (such as difficulty reading or driving) due to the eyelid position?"},
+    {"id": "ptosis_photos_abnormal_lid", "text": "Photographs taken at eye level in straight gaze demonstrate the abnormal lid position", "question": "Are there photographs taken at eye level in straight gaze that demonstrate the abnormal upper lid position?"},
+    {"id": "ptosis_vf_before_taping_20", "text": "Visual field testing performed prior to taping demonstrates the superior visual field is 20 degrees or less", "question": "Does visual field testing before taping show a superior visual field of 20 degrees or less?", "threshold": {"kind": "number", "op": "lte", "value": 20, "unit": "degrees"}},
+    {"id": "ptosis_vf_after_taping_30", "text": "Visual field testing performed after taping demonstrates there is superior visual field increase of 30% or more", "question": "Does visual field testing after taping show a superior visual field increase of 30% or more?", "threshold": {"kind": "number", "op": "gte", "value": 30, "unit": "percent"}},
+    {"id": "ptosis_mrd_2mm_or_less", "text": "The margin reflex distance (MRD) between the pupillary light reflex and the upper eyelid skin edge is ≤ to 2 mm", "question": "Is the margin reflex distance (MRD-1) from the pupillary light reflex to the upper eyelid edge 2 mm or less?", "threshold": {"kind": "number", "op": "lte", "value": 2, "unit": "mm"}},
+    {"id": "brow_ptosis_functional_impairment", "text": "Brow ptosis is causing a functional impairment of upper/outer visual fields", "question": "Is brow ptosis documented as causing a functional impairment of the upper/outer visual fields?"},
+    {"id": "brow_documented_complaints", "text": "documented complaints of interference with vision or visual field related activities, such as difficulty reading due to upper eyelid drooping, looking through the eyelashes or seeing the upper eyelid skin", "question": "Does the chart document complaints of interference with vision or visual field related activities (difficulty reading due to upper eyelid drooping, looking through the eyelashes, or seeing the upper eyelid skin)?"},
+    {"id": "brow_photos_below_supraorbital_rim", "text": "Photographs demonstrate that the eyebrow is below the supraorbital rim", "question": "Do photographs demonstrate that the eyebrow sits below the supraorbital rim?"}
+  ],
+  "scenarios": [
+    {
+      "id": "restore_function_general",
+      "name": "Blepharoplasty, blepharoptosis repair and brow surgical procedures to restore function to a structure altered by trauma, infection, inflammation, degeneration, neoplasia, or developmental errors",
+      "applies_to_cpt": ["15820", "15821", "15822", "15823", "67900", "67901", "67902", "67903", "67904", "67906", "67908"],
+      "requires": {"type": "leaf", "criterion": "restore_function_altered_structure"},
+      "notes": ["The opening position statement: covers unilateral and bilateral procedures. Applies to every code in the table."]
+    },
+    {
+      "id": "upper_eyelid_blepharoplasty",
+      "name": "Upper eyelid blepharoplasty (unilateral or bilateral) to correct obstruction of central vision",
+      "applies_to_cpt": ["15822", "15823"],
+      "requires": {"type": "any", "label": "ANY of the following", "children": [
+        {"type": "all", "label": "Chronic symptomatic dermatitis of pretarsal skin", "children": [
+          {"type": "leaf", "criterion": "dermatitis_pretarsal_redundant_skin"},
+          {"type": "leaf", "criterion": "dermatitis_unresponsive_conservative"},
+          {"type": "leaf", "criterion": "dermatitis_documented_onset_history"}
+        ]},
+        {"type": "all", "label": "Prosthesis difficulties in an anophthalmic socket", "children": [
+          {"type": "leaf", "criterion": "prosthesis_difficulties_anophthalmic"},
+          {"type": "leaf", "criterion": "prosthesis_described_history"}
+        ]},
+        {"type": "all", "label": "Periorbital sequelae of thyroid disease", "children": [
+          {"type": "leaf", "criterion": "thyroid_periorbital_sequelae"},
+          {"type": "leaf", "criterion": "thyroid_described_history"}
+        ]},
+        {"type": "all", "label": "Nerve palsy", "children": [
+          {"type": "leaf", "criterion": "nerve_palsy"},
+          {"type": "leaf", "criterion": "nerve_palsy_described_history"}
+        ]},
+        {"type": "leaf", "criterion": "injury_trauma_congenital_defect"},
+        {"type": "all", "label": "Interference with vision or visual field-related activities; documentation must include", "children": [
+          {"type": "leaf", "criterion": "vision_interference_redundant_skin"},
+          {"type": "leaf", "criterion": "photos_redundant_skin"},
+          {"type": "any", "label": "Visual field testing with and without taping, or a medical condition that prevents the test (NOTE)", "children": [
+            {"type": "all", "label": "Visual field testing performed with and without taping demonstrates", "children": [
+              {"type": "leaf", "criterion": "bleph_vf_before_taping_20"},
+              {"type": "leaf", "criterion": "bleph_vf_after_taping_30"}
+            ]},
+            {"type": "leaf", "criterion": "vf_test_prevented_by_medical_condition"}
+          ]}
+        ]}
+      ]}
+    },
+    {
+      "id": "lower_eyelid_blepharoplasty",
+      "name": "Lower eyelid blepharoplasty (unilateral or bilateral) for ectropion, entropion or trichiasis",
+      "applies_to_cpt": ["15820", "15821"],
+      "requires": {"type": "all", "label": "To treat corneal and/or conjunctival injury, irritation, tearing or pain due to ectropion, entropion or trichiasis", "children": [
+        {"type": "leaf", "criterion": "lower_lid_corneal_conjunctival_symptoms"},
+        {"type": "leaf", "criterion": "lower_lid_ectropion_entropion_trichiasis"}
+      ]}
+    },
+    {
+      "id": "blepharoptosis_repair",
+      "name": "Blepharoptosis repair to relieve obstruction of central vision",
+      "applies_to_cpt": ["67901", "67902", "67903", "67904", "67906", "67908"],
+      "requires": {"type": "all", "label": "ALL of the following", "children": [
+        {"type": "leaf", "criterion": "ptosis_vision_complaints"},
+        {"type": "leaf", "criterion": "ptosis_photos_abnormal_lid"},
+        {"type": "any", "label": "Visual field testing before and after taping, or a medical condition that prevents the test (NOTE)", "children": [
+          {"type": "all", "label": "Visual field testing prior to and after taping", "children": [
+            {"type": "leaf", "criterion": "ptosis_vf_before_taping_20"},
+            {"type": "leaf", "criterion": "ptosis_vf_after_taping_30"}
+          ]},
+          {"type": "leaf", "criterion": "vf_test_prevented_by_medical_condition"}
+        ]},
+        {"type": "leaf", "criterion": "ptosis_mrd_2mm_or_less"}
+      ]}
+    },
+    {
+      "id": "brow_lift",
+      "name": "Brow lift (repair of brow ptosis due to laxity of the forehead muscles)",
+      "applies_to_cpt": ["67900"],
+      "requires": {"type": "all", "label": "BOTH of the following", "children": [
+        {"type": "leaf", "criterion": "brow_ptosis_functional_impairment"},
+        {"type": "leaf", "criterion": "brow_documented_complaints"},
+        {"type": "leaf", "criterion": "brow_photos_below_supraorbital_rim"}
+      ]}
+    }
+  ],
+  "exclusions": [
+    {"text": "For cosmetic purposes or to correct deformities resulting from previous cosmetic surgery", "cpt": ["15820", "15821", "15822", "15823"]},
+    {"text": "Solely to improve appearance in the absence of signs and symptoms of functional abnormalities", "cpt": ["15820", "15821", "15822", "15823"]},
+    {"text": "For cosmetic purposes or to correct deformities resulting from previous cosmetic surgery", "cpt": ["67901", "67902", "67903", "67904", "67906", "67908"]},
+    {"text": "Solely to improve appearance in the absence of signs and symptoms of functional abnormalities", "cpt": ["67901", "67902", "67903", "67904", "67906", "67908"]},
+    {"text": "For cosmetic purposes or to correct deformities resulting from previous cosmetic surgery", "cpt": ["67900"]},
+    {"text": "Solely to improve appearance in the absence of signs and symptoms of functional abnormalities", "cpt": ["67900"]}
+  ],
+  "notes": [
+    "Built from the single clean copy in the PDF (no redline). Dates: Original Effective Date 04/27/00 (effective_date), Reviewed 04/24/25 (reviewed_date), Revised 05/15/25.",
+    "Code-to-pathway mapping: the code table is not tied to sections, so codes were mapped by their CPT descriptors. 15820/15821 (lower eyelid blepharoplasty) -> lower_eyelid_blepharoplasty; 15822/15823 (upper eyelid blepharoplasty) -> upper_eyelid_blepharoplasty; 67901-67908 (repair of blepharoptosis) -> blepharoptosis_repair; 67900 (repair of brow ptosis) -> brow_lift. The opening position statement names all three procedure families, so restore_function_general lists every code explicitly (rather than an empty list) so that it is checked alongside the specific pathway for each code.",
+    "Judgment call: the opening statement 'meet the definition of medical necessity when the goal of the surgery is to restore function to a structure that has been altered by trauma, infection, inflammation, degeneration, neoplasia, or developmental errors (e.g., congenital ptosis)' uses the document's coverage formula, so it is built as its own pathway (restore_function_general). A reviewer could instead read it as an introductory principle with the procedure-specific sections as the only operative criteria; if so, drop that pathway. It does add coverage the specific sections lack (e.g., lower-lid reconstruction after trauma or tumor, congenital ptosis).",
+    "The phrases 'to correct obstruction of central vision' (upper blepharoplasty) and 'to relieve obstruction of central vision' (blepharoptosis repair) are treated as the purpose of the section, not as separate criteria: the listed indications (dermatitis, anophthalmic socket prosthesis, thyroid sequelae, nerve palsy, trauma) do not each involve central-vision obstruction, and the vision/visual-field criteria carry the requirement where it applies.",
+    "Upper blepharoplasty dermatitis bullet split into three criteria: the condition, 'unresponsive to conservative therapy', and the documentation sentence (onset, prior treatment, extent, discharge, color). A chart can show the condition without the failed therapy or the documentation.",
+    "Prosthesis difficulties, thyroid sequelae and nerve palsy each carry 'which must be described and include a history of the present treatment'; built as condition AND a documentation criterion. The three documentation criteria have identical verbatim text (the PDF repeats it) and distinct ids/questions.",
+    "'Accidental injury, trauma, or congenital defect' has no documentation clause in the PDF and is a single leaf.",
+    "The *NOTE after the Brow Lift section ('If visual field testing is not completed as indicated above, the medical documentation must support evidence of the medical condition which prevents the performance of the test') waives visual field testing. It is applied as an any() around the visual field block in upper_eyelid_blepharoplasty and in blepharoptosis_repair (the two sections that require visual field testing). The brow lift section has no visual field test requirement, so the NOTE does not touch it. The examples (severe tremors, macular degeneration, physical deformities, glaucoma) are illustrative ('may include'), not an exhaustive list. The same waiver criterion is shared by both pathways. The NOTE waives only the visual field testing; photographs are still required.",
+    "Visual field thresholds: before taping superior visual field <= 20 degrees; after taping increase >= 30%. The upper blepharoplasty and blepharoptosis sections word these differently, so each section has its own verbatim criteria with the same thresholds.",
+    "MRD criterion: '≤ to 2 mm' kept verbatim (the PDF uses the ≤ glyph); threshold lte 2 mm. Definitions section says MRD-1 refers to the upper eyelid margin.",
+    "Lower eyelid blepharoplasty sentence split into the symptom ('corneal and/or conjunctival injury, irritation, tearing or pain') and the cause ('due to ectropion, entropion or trichiasis'); both are required.",
+    "Brow lift first bullet split into 'Brow ptosis is causing a functional impairment of upper/outer visual fields' and 'documented complaints of interference with vision or visual field related activities ...'; the document's 'BOTH' therefore becomes an all() of three leaves (impairment, complaints, photographs). The parenthetical '(i.e., repair of brow ptosis due to laxity of the forehead muscles)' is descriptive and not a criterion.",
+    "Exclusions: each of the three procedure sections has the same two 'does not meet the definition of medical necessity when performed' bullets. Built as six exclusions (two bullets x three sections), each tied to that section's codes; the bullet text is identical across sections. The verbatim text stays inside each bullet because the PDF's bullet glyph separates the sentence stem from the bullet.",
+    "Left out: the DESCRIPTION section (background); the LOINC sentence 'The following information may be required documentation to support medical necessity ...' and the LOINC table's 'six months or fewer before starting date of service' time frame (advisory 'may be required', not a coverage criterion); the Definitions section; the step therapy protocol exemption paragraph (process, not a criterion). No criterion in the document has a duration.",
+    "Program exceptions: FEP follows FEP guidelines, SAO follows SAO guidelines, Medicare Advantage products follow LCD L34028; all three listed as excluded_plans. The document applies to all other lines of business.",
+    "All eleven codes are covered subject to the pathways; the document tags no code non-covered or investigational. No ICD-10 codes are listed."
+  ],
+  "status": "ok"
+}

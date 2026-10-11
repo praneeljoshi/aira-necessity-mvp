@@ -1,0 +1,156 @@
+{
+ "file": "cigna-0152-reduction-mammoplasty-for-macromastia.pdf",
+ "treatment": "reduction-mammaplasty",
+ "payer": "cigna",
+ "doc_kind": "coverage policy",
+ "lines_of_business": [
+  "Health benefit plans administered by Cigna Companies; 'Coverage for breast reduction varies across plans'"
+ ],
+ "effective_or_revised": "Effective 11/15/2025; Next review 8/15/2026",
+ "sections_in_order": [
+  "Overview",
+  "Coverage Policy",
+  "Health Equity Considerations",
+  "General Background",
+  "Medicare Coverage Determinations",
+  "Appendix (Schnur Sliding Scale)",
+  "Coding Information",
+  "References",
+  "Revision Details"
+ ],
+ "criteria_location": "Coverage Policy, pp.2-3; Schnur table in Appendix A (p.7-8); coding on p.8.",
+ "procedures_covered": [
+  "Breast reduction 19318 for macromastia",
+  "Contralateral symmetry after mastectomy/lumpectomy",
+  "Staged reduction or mastopexy (19316) before nipple-sparing mastectomy",
+  "Liposuction 15877 (integral or unproven as sole)",
+  "Inverted nipple correction 19355 (cosmetic)"
+ ],
+ "logic": {
+  "top_level": "all",
+  "max_nesting_depth": 3,
+  "k_of_n": [
+   {
+    "k": 1,
+    "n": 2,
+    "quote": "macromastia is causing at least ONE of the following conditions/symptoms that has been unresponsive to medical management"
+   }
+  ],
+  "exclusions_or_contraindications": "Psychological symptomatology without physical findings, sole purpose of appearance, inverted nipple, dog-ear excision all cosmetic.",
+  "initial_vs_repeat": "None.",
+  "and_or_ambiguity": [
+   {
+    "quote": "average grams of tissue to be removed per breast are above the 22nd percentile on the Schnur Sliding Scale ... or regardless of BSA, more than 1 kg of breast tissue will be removed per breast",
+    "why_ambiguous": "Bulleted at same level as symptom bullet, indentation unclear whether photographs bullet is under the symptom bullet or parallel"
+   },
+   {
+    "quote": "photographs confirm the presence of: significant breast hypertrophy; shoulder grooving from bra straps and/or intertrigo (if stated to be present)",
+    "why_ambiguous": "'if stated to be present' makes sub-item conditional"
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "age",
+   "quote": "women at least 18 years of age, or with completed breast growth",
+   "where": "Coverage Policy"
+  },
+  {
+   "kind": "symptom",
+   "quote": "shoulder, upper back/ neck pain, and/or ulnar nerve palsy for which no other etiology has been found on appropriate evaluation",
+   "where": "Coverage Policy"
+  },
+  {
+   "kind": "symptom",
+   "quote": "intertrigo, dermatitis, eczema, or hidradenitis at the inframammary fold",
+   "where": "Coverage Policy"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "unresponsive to medical management",
+   "where": "Coverage Policy"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "preoperative photographs confirm the presence of significant breast hypertrophy",
+   "where": "Coverage Policy"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "above the 22nd percentile on the Schnur Sliding Scale ... or ... more than 1 kg of breast tissue will be removed per breast",
+   "where": "Coverage Policy"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "symmetrical appearance following a mastectomy or lumpectomy",
+   "where": "Coverage Policy"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "age",
+   "value": ">=18 or completed growth",
+   "unit": "years",
+   "quote": "at least 18 years of age, or with completed breast growth"
+  },
+  {
+   "quantity": "tissue per breast",
+   "value": "> Schnur 22nd percentile or > 1 kg regardless of BSA",
+   "unit": "g",
+   "quote": "more than 1 kg of breast tissue will be removed per breast"
+  }
+ ],
+ "time_windows": [],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "CPT list grouped by status: 19316,19318 medically necessary when criteria met; 15877,19350 integral; 15839,19355 cosmetic; 15877 unproven alone.",
+  "non_covered_code_lists": "15839, 19355 cosmetic; 15877 unproven sole"
+ },
+ "external_dependencies": [
+  {
+   "what": "Medicare LCDs (CGS L39506, NGS L35001, Noridian L35163/L37020, Palmetto L33428)",
+   "quote": "Medicare Coverage Determinations"
+  },
+  {
+   "what": "Delegated vendor guidelines in certain markets",
+   "quote": "delegated vendor guidelines may be used to support medical necessity"
+  },
+  {
+   "what": "Breast Reconstruction policy",
+   "quote": "Breast Reconstruction following Mastectomy or Lumpectomy"
+  }
+ ],
+ "definitions_that_change_meaning": [],
+ "vague_terms": [
+  {
+   "quote": "unresponsive to medical management",
+   "problem": "No duration or required therapies in criteria; background lists options"
+  },
+  {
+   "quote": "significant breast hypertrophy",
+   "problem": "Undefined; photos only"
+  },
+  {
+   "quote": "appropriate evaluation",
+   "problem": "Unspecified workup to exclude other etiology"
+  }
+ ],
+ "extraction_hazards": [
+  "Bullet glyph nesting lost in text",
+  "Two Schnur columns (5th and 22nd) in appendix across a page break",
+  "Page 3 health equity section between criteria and background",
+  "Code table split by status headings"
+ ],
+ "interesting_structures": [
+  "Alternative weight route: 1 kg regardless of BSA",
+  "No minimum duration of symptoms",
+  "Photographs required as a criterion",
+  "Separate staged-procedure indication"
+ ],
+ "fit_to_tree": {
+  "score": 2,
+  "scale": "1-5",
+  "why": "Short all-of list with one any; thresholds simple; photo interpretation and 'unresponsive' are the main strains."
+ }
+}

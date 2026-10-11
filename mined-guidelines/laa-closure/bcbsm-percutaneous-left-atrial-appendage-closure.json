@@ -1,0 +1,19 @@
+{
+  "payer": "Blue Cross Blue Shield of Michigan",
+  "payer_key": "bcbsm",
+  "treatment": "laa-closure",
+  "title": "Percutaneous Left Atrial Appendage Closure",
+  "policy_number": "",
+  "effective": "",
+  "url": "https://www.bcbsm.com/amslibs/content/dam/public/mpr/mprsearch/pdf/2212414.pdf",
+  "final_url": "https://www.bcbsm.com/amslibs/content/dam/public/mpr/mprsearch/pdf/2212414.pdf",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "bcbsm-percutaneous-left-atrial-appendage-closure.pdf",
+  "sha256": "a6cb021ca2bd722144515dd3fadd218913017a3aa39259cd7ab92b126c4f7512",
+  "pages": 33,
+  "bytes": 445597,
+  "retrieved": "2026-10-09",
+  "printed_date": "Current policy effective 11/1/26; prior 11/1/25; next review 3rd Qtr 2027"
+}

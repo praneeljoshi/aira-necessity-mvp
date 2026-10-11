@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="en" data-style="plain" data-flow="home">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prior auth</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<script>
+  /* soft (a dimmed light) unless the person chose light or dark (the switch in the rail); the same choice as /review
+     (localStorage review.theme) */
+  (function () { var t = 'soft'; try { var v = localStorage.getItem('review.theme'); if (v === 'light' || v === 'dark' || v === 'soft') t = v; } catch (e) {}
+    document.documentElement.setAttribute('data-theme', t); })();
+</script>
+<link rel="stylesheet" href="/static/theme.css">
+<link rel="stylesheet" href="/static/tree.css">
+<!--
+  API contract this page expects (Gate 4 implements it in app/main.py):
+    GET  /api/guidelines            -> [{id, payer, title, guideline_number, ...}]   the picker's source
+    GET  /api/orders                -> [{chart_id, patient_name, procedure_text, cpt[], payer, determination, needs_review, run_id, created_at, guideline_*}]
+    GET  /api/orders/{chart_id}     -> {order, key, verification, override, guideline, result, ask, packet[], surgeon}
+    POST /api/charts  (multipart: file + guideline_id | guideline file) -> starts the check, returns {chart_id, pending, status} at once
+    POST /api/orders/{chart_id}/recheck {payer?, cpt?, guideline_id?} -> starts a re-check, same pending shape
+    POST /api/orders/{chart_id}/retry -> runs a stopped check again
+    GET  /api/orders/{chart_id}/status -> {state, stages[{id, label, status, summary, cached, gate, error, logs}]}; the page polls it
+    GET  /patients/{chart_id}       -> this screen with that patient selected, summary view (the address bar follows the selection)
+    GET  /patients/{chart_id}/tree  -> the same screen, the main area in the guideline view (static/tree.js, GET /api/orders/{id}/tree)
+    The toggle at the top of the main area switches views and the path; the view stays when another patient is picked.
+    /#{chart_id} and /tree/{chart_id} are old links; both redirect to the paths above
+    POST /api/guidelines (multipart file) -> {id, payer, title, cached, replaced}
+  While a check runs, GET /api/orders/{chart_id} answers {pending: true, status} and the page shows the stage list; a stage
+  that stopped (needs a person, failed) is shown with what is needed and a re-check or retry, never a silent spinner.
+  Vocabulary rule: nothing outside the "How this was decided" fold says criterion, verdict, confidence, pathway or span.
+  Look: static/theme.css (shared with /review: Plain's tokens, the type scale, the Soft / Light / Dark switch remembered
+  as review.theme) and the styles below; the guideline view's look is in static/tree.css under html[data-flow="home"].
+  Guidelines are named by their own title and number (GET /api/guidelines: name, number, issuer), never the file name.
+-->
+<style>
+  /* The look follows the shared theme (static/theme.css: tokens, type scale, the Soft / Light / Dark switch), drawn as the
+     review flow's Plain style: a cream desk, sheets of paper, ink only where a person is needed. */
+  * { box-sizing:border-box }
+  html, body { margin:0; background:var(--desk); color:var(--ink) }
+  body { font:var(--t-m)/1.55 var(--f-ui); letter-spacing:-.003em; -webkit-font-smoothing:antialiased }
+  /* motion only in answer to an action, and only for colour */
+  *, *::before, *::after { transition-property:color, background-color, border-color, box-shadow, opacity; transition-duration:.12s; animation:none !important }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition:none !important } }
+  a { color:var(--act) }
+  a:focus-visible, button:focus-visible { outline:2px solid var(--act); outline-offset:2px }
+  button, input, select, textarea { font-family:var(--f-ui) }
+  button { font-size:var(--t-s); font-weight:500; color:var(--ink); background:var(--paper); border:1px solid var(--edge-2); border-radius:8px; padding:8px 16px; cursor:pointer; box-shadow:0 1px 0 rgba(70,56,30,.04) }
+  button:hover { border-color:var(--sec) } button:active { transform:translateY(.5px) }
+  button.primary, a.btnlink { background:var(--act); border:1px solid var(--act); color:#fff; font-weight:600; box-shadow:0 1px 0 rgba(20,40,70,.18), inset 0 1px 0 rgba(255,255,255,.12) }
+  button.primary:hover, a.btnlink:hover { background:var(--act-h); border-color:var(--act-h) }
+  html[data-theme="dark"] button.primary, html[data-theme="dark"] a.btnlink { color:#0F1A26 }
+  button:disabled { opacity:.5; cursor:default; transform:none }
+  input[type=text], select, textarea { font-size:var(--t-s); color:var(--ink); background:var(--paper); border:1px solid var(--edge-2); border-radius:8px; padding:7px 10px }
+  input[type=text]::placeholder { color:var(--dim) }
+  input[type=radio] { accent-color:var(--act) }
+  summary { cursor:pointer }
+
+  .app { display:grid; grid-template-columns:244px 1fr; min-height:100vh }
+  @media (min-width:901px) and (max-width:1400px){ .app { grid-template-columns:212px 1fr } }
+  @media (max-width:900px){ .app { grid-template-columns:1fr; align-content:start } .rail { border-right:0 !important; border-bottom:1px solid var(--edge) } }
+
+  /* rail: part of the desk, a quiet index (lanes, small-caps headings, flat rows, the current one on paper) */
+  .rail { position:relative; background:var(--desk); border-right:1px solid var(--edge); padding:22px 0 22px 18px }
+  .rail h1 { font-size:11px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--sec); margin:2px 0 18px }
+  .add { padding-right:18px; margin-bottom:22px } .add button { width:100%; padding:9px 14px } .add input { display:none } .add button + button { margin-top:8px; font-weight:500 }
+  .group { margin:0 0 20px } .group h2 { font-size:11px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; margin:0 0 4px; padding-right:18px }
+  .group h2 .n { font-weight:400; color:var(--sec); margin-left:4px; letter-spacing:0 }
+  .g-needs,.g-review { color:var(--needs) } .g-ready { color:var(--ready) } .g-no { color:var(--no) } .g-wait { color:var(--sec) }
+  .row { display:block; width:calc(100% - 14px); margin:1px 14px 1px 0; text-align:left; border:0; border-radius:8px; background:transparent; box-shadow:none; padding:8px 12px 8px 10px; line-height:1.35; font-weight:400 }
+  .row:hover { background:var(--soft) } .row:active { transform:none }
+  .row[aria-current="true"] { background:var(--paper); box-shadow:inset 2px 0 0 var(--act), var(--sheet-shadow) }
+  .row b { display:block; font-size:var(--t-s); font-weight:600 }
+  .row span { display:-webkit-box; -webkit-line-clamp:1; -webkit-box-orient:vertical; overflow:hidden; color:var(--sec); font-size:var(--t-xs); line-height:1.4 }
+  .empty { color:var(--sec); padding:6px 18px 6px 10px; font-size:var(--t-s) }
+  .glrow { padding:6px 18px 6px 10px; font-size:var(--t-xs) }
+  .glrow b { display:block; font-weight:600; font-size:13px; color:var(--ink); line-height:1.4 } .glrow span { display:block; color:var(--sec); line-height:1.4; margin-top:2px }
+  #addMsg { font-size:var(--t-xs) !important; color:var(--sec) }
+  /* phone, with a patient open: the rail folds to a slim bar (the queue is a desk task), as on /review */
+  @media (max-width:820px){
+    .app:has(.who) .rail { display:flex; align-items:center; gap:12px; padding:12px 16px }
+    .app:has(.who) .rail h1 { margin:0; flex:1 }
+    .app:has(.who) .rail .add { margin:0; padding:0; display:flex; gap:8px } .app:has(.who) .rail .add button { width:auto; padding:6px 12px; font-size:13px }
+    .app:has(.who) .rail #addGlBtn, .app:has(.who) .rail .group, .app:has(.who) .rail #groups, .app:has(.who) .rail #addMsg { display:none }
+    .app:has(.who) .theme-btn { position:static; order:-0; }
+  }
+
+  /* main */
+  .main { padding:22px 28px 120px; max-width:940px; min-width:0 }
+  @media (max-width:640px){ .main { padding:16px 16px 80px } }
+  .who { color:var(--sec); display:flex; justify-content:space-between; gap:4px 16px; flex-wrap:wrap; font-size:var(--t-s); align-items:baseline }
+  .who b { color:var(--ink); font-weight:600; font-size:var(--t-m) }
+  .verdict { font-size:var(--t-xl); line-height:1.25; font-weight:600; letter-spacing:-.01em; margin:12px 0 6px; color:var(--ink) }
+  .verdict::before { content:""; display:inline-block; width:8px; height:8px; border-radius:50%; margin:0 11px 3px 1px; background:var(--dim); vertical-align:middle }
+  .verdict.v-ready::before { background:var(--ready) } .verdict.v-needs::before { background:var(--needs) } .verdict.v-no::before { background:var(--no) }
+  .why { color:var(--sec); font-size:var(--t-s); max-width:70ch; margin:0 0 6px }
+  .rule { color:var(--sec); font-size:var(--t-xs); margin:2px 0 8px }
+  .found { color:var(--sec); font-size:var(--t-xs); margin:0 0 8px } .found a { margin-left:8px; color:var(--act) }
+  .fix { display:flex; gap:8px; align-items:center; flex-wrap:wrap; margin:0 0 12px } .fix input { min-width:220px }
+  .fix button { padding:7px 12px } .fix .hint { color:var(--sec); font-size:var(--t-xs) }
+  .flag { position:relative; max-width:96ch; margin:8px 0 0; padding:0 0 0 14px; color:var(--sec); font-size:var(--t-xs); line-height:1.55 }
+  .flag::before { content:""; position:absolute; left:0; top:.55em; width:6px; height:6px; border-radius:50%; background:var(--needs) }
+
+  /* what the chart shows: one sheet; a documented requirement stays quiet, a missing or contradicted one carries the warm pen */
+  .section { margin:26px 0 8px; font-size:11px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--sec) }
+  .evidence { background:var(--paper); border:1px solid var(--edge); border-radius:10px; box-shadow:var(--sheet-shadow); overflow:hidden }
+  .item { padding:14px 20px 14px 14px; border-bottom:1px solid var(--edge); display:grid; grid-template-columns:22px 1fr; gap:8px }
+  .item:last-child { border-bottom:0 }
+  .mark { font-size:0; display:flex; justify-content:center; padding-top:9px }
+  .mark::before { content:""; width:6px; height:6px; border-radius:50%; background:color-mix(in srgb, var(--ready) 50%, transparent) }
+  .mark.m-q::before { background:var(--needs) } .mark.m-n::before { background:var(--no) }
+  .item b { font-weight:500; display:block; font-size:var(--t-m) }
+  .item q { display:block; margin-top:4px; color:var(--sec); font-size:var(--t-s); line-height:1.55; quotes:"“" "”" }
+  .item small { display:block; color:var(--dim); font-size:var(--t-xs); margin-top:2px }
+  .item.missing b, .item.contradicted b { color:var(--ink) }
+  .item.missing b .w, .item.contradicted b .w { background:rgb(var(--pen-miss)); border-radius:2px; padding:1px 2px; -webkit-box-decoration-break:clone; box-decoration-break:clone }
+  .item.contradicted b .w { background:rgb(var(--pen-bad)) }
+  .item b .tag { color:var(--needs); font-weight:500 } .item.contradicted b .tag { color:var(--no) }
+
+  .next { margin-top:22px; display:flex; gap:12px; align-items:center; flex-wrap:wrap }
+  .next .hint { color:var(--sec); font-size:var(--t-s) }
+  a.btnlink { display:inline-block; padding:8px 16px; border-radius:8px; text-decoration:none; font-size:var(--t-s) }
+  .draft { margin-top:14px; background:var(--paper); border:1px solid var(--edge); border-radius:10px; box-shadow:var(--sheet-shadow); padding:16px 18px; white-space:pre-wrap; max-width:70ch; display:none; font-size:var(--t-s); line-height:1.6 }
+  .draft.show { display:block }
+  .fold { margin-top:26px; font-size:var(--t-xs); color:var(--sec) } .fold a { color:var(--sec) } .fold summary:hover { color:var(--ink) }
+  .fold ul { padding-left:18px } .fold p { margin:8px 0 4px }
+
+  /* the two views of a patient: a quiet segmented switch */
+  .viewbar { display:flex; justify-content:flex-end; margin:0 0 8px }
+  .views { display:inline-flex; gap:2px; padding:2px; background:var(--soft); border-radius:9px }
+  .views button { border:0; border-radius:7px; padding:5px 12px; font-size:var(--t-xs); font-weight:500; color:var(--sec); background:transparent; box-shadow:none }
+  .views button:hover { color:var(--ink) } .views button:active { transform:none }
+  .views button[aria-pressed="true"] { background:var(--paper); color:var(--ink); font-weight:600; box-shadow:var(--sheet-shadow) }
+  .busy { color:var(--sec) } .err { color:var(--no) }
+  .hidden { display:none }
+
+  /* the check, stage by stage: calm lines on a sheet; the one running reads blue, nothing pulses */
+  .stages { margin-top:14px; background:var(--paper); border:1px solid var(--edge); border-radius:10px; box-shadow:var(--sheet-shadow); overflow:hidden }
+  .stg { display:grid; grid-template-columns:26px 1fr; gap:6px; padding:9px 16px 9px 10px; border-bottom:1px solid var(--edge); font-size:var(--t-s) }
+  .stg:last-child { border-bottom:0 } .stg .sg { font-weight:600; text-align:center; color:var(--ready) } .stg b { font-weight:500 }
+  .stg small { color:var(--dim); margin-left:6px; font-size:var(--t-xs) } .stg .sum { color:var(--sec); font-size:var(--t-xs) } .stg .sum a { margin-left:6px; color:var(--sec) }
+  .stg.waiting, .stg.waiting .sg { color:var(--dim) } .stg.waiting b { font-weight:400 } .stg.skipped, .stg.skipped .sg { color:var(--dim) }
+  .stg.running .sg, .stg.running b { color:var(--act) } .stg.running b { font-weight:600 }
+  .stg.failed .sg, .stg.failed b { color:var(--no) }
+  .stg.needs_person .sg, .stg.needs_person b { color:var(--needs) }
+  .gate { margin-top:8px; padding:12px 14px; background:var(--desk); border:1px solid var(--edge); border-left:2px solid var(--needs); border-radius:0 8px 8px 0; color:var(--ink); font-size:var(--t-s) }
+  .stg.failed .gate { border-left-color:var(--no) }
+  .gate b { display:block; margin-bottom:4px; font-weight:600 } .gate .opt { padding:4px 2px } .gate .act { display:flex; gap:8px; align-items:center; flex-wrap:wrap; margin-top:10px }
+  .gate input[type=text] { min-width:220px } .gate .hint { color:var(--sec); font-size:var(--t-xs) }
+  .gate pre { white-space:pre-wrap; font:12px/1.45 ui-monospace, Menlo, monospace; color:var(--sec); margin:6px 0 0; max-height:160px; overflow:auto }
+  .gate a.primary { display:inline-block; background:var(--act) !important; color:#fff !important; border-radius:8px; padding:8px 16px !important; text-decoration:none; font-weight:600; font-size:var(--t-s) }
+  html[data-theme="dark"] .gate a.primary { color:#0F1A26 !important }
+  .stage-head { margin-top:16px; display:flex; justify-content:space-between; align-items:baseline; gap:12px; flex-wrap:wrap } .stage-head .hint { color:var(--sec); font-size:var(--t-s) }
+
+  /* the add-a-chart widget: 1 the chart, 2 the guideline it is checked against; both required */
+  .dlg { position:fixed; inset:0; background:rgba(29,35,43,.28); backdrop-filter:blur(2px); display:flex; align-items:center; justify-content:center; padding:16px; z-index:10 }
+  .dlg.hidden { display:none }
+  .dlg-card { background:var(--paper); border:1px solid var(--edge); border-radius:12px; padding:22px 24px; width:min(560px, 100%); max-height:92vh; overflow:auto; box-shadow:0 24px 60px -12px rgba(29,35,43,.35) }
+  .dlg-card h3 { margin:0 0 14px; font-size:var(--t-l); font-weight:600 }
+  .step { border:1px solid var(--edge); border-radius:10px; padding:12px 14px; margin-bottom:10px }
+  .step.done { border-color:var(--edge-2); box-shadow:inset 2px 0 0 var(--act) }
+  .step h4 { margin:0 0 8px; font-size:var(--t-s); font-weight:600 } .step h4 small { color:var(--sec); font-weight:400; margin-left:6px; font-size:var(--t-xs) }
+  .step .pick { display:flex; gap:10px; align-items:center; flex-wrap:wrap } .step .pick span { color:var(--sec); font-size:var(--t-s) }
+  .step input[type=file] { display:none }
+  .opt { display:flex; gap:10px; align-items:flex-start; padding:7px 6px; cursor:pointer; font-size:var(--t-s); border-radius:6px } .opt:hover { background:var(--soft) }
+  .opt input { margin-top:4px } .opt b { font-weight:500; display:block } .opt span { color:var(--sec); font-size:var(--t-xs) }
+  .opt .pick { margin-top:6px }
+  .dlg-actions { display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-top:14px } .dlg-actions .hint { color:var(--sec); font-size:var(--t-xs) }
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="rail">
+    <h1>Prior auth</h1>
+    <div class="add">
+      <button id="addBtn" class="primary">Add a case</button>
+      <button id="addGlBtn">Add a guideline</button>
+      <input id="addGlFile" type="file" accept="application/pdf">
+      <div id="addMsg" class="busy" style="font-size:13px;margin-top:6px"></div>
+    </div>
+    <button id="themeBtn" class="theme-btn" type="button" aria-label="Theme" title="Theme: Light, Soft or Dark"></button>
+    <div class="group" id="glGroup"><h2 class="g-wait">Guidelines on file</h2><div id="glList" class="empty">None yet.</div></div>
+    <div id="groups"></div>
+  </aside>
+
+  <main class="main" id="main">
+    <div class="empty" style="padding:0">Add a case to check it, or pick one on the left.</div>
+  </main>
+</div>
+
+<div class="dlg hidden" id="addDlg" role="dialog" aria-labelledby="addDlgTitle">
+  <div class="dlg-card">
+    <h3 id="addDlgTitle">Add a case</h3>
+    <div class="step" id="stepChart">
+      <h4>1. The case<small>PDF, required</small></h4>
+      <div class="pick"><button id="dlgChartBtn">Choose case</button><span id="dlgChartName">No file chosen.</span><input id="dlgChartFile" type="file" accept="application/pdf"></div>
+    </div>
+    <div class="step" id="stepGl">
+      <h4>2. Check it against<small>a guideline on file, or a new one, required</small></h4>
+      <div id="dlgGlList"></div>
+      <label class="opt"><input type="radio" name="dlgGl" value="__new__"><div><b>Add a new guideline</b><span>Upload the payer's policy PDF; it is read once and kept on file.</span>
+        <div class="pick"><button id="dlgGlBtn">Choose guideline</button><span id="dlgGlName">No file chosen.</span><input id="dlgGlFile" type="file" accept="application/pdf"></div></div></label>
+    </div>
+    <div class="dlg-actions"><button class="primary" id="dlgGo" disabled>Add case</button><button id="dlgCancel">Cancel</button><span class="hint" id="dlgMsg"></span></div>
+  </div>
+</div>
+
+<script src="/static/tree.js"></script>
+<script>
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const api = async (path, opts={}) => {
+  const r = await fetch('/api' + path, opts); const t = await r.text();
+  let j; try { j = JSON.parse(t) } catch { j = { detail: t } }
+  if (!r.ok) throw new Error(j.detail || r.statusText); return j;
+};
+
+// three queues. The system never says no: anything short of ready goes to a person.
+const QUEUE = {
+  PAUSED: { title:'Waiting for you',   g:'g-needs' },
+  RUNNING:{ title:'Checking now',      g:'g-wait'  },
+  FAILED: { title:'Stopped — needs a look', g:'g-no' },
+  READY:  { title:'Ready to submit',   g:'g-ready' },
+  SIGNOFF:{ title:'Ready for sign-off', g:'g-ready' },   // ready, but nobody has signed it off (the review page does)
+  REVIEW: { title:'Needs review',      g:'g-needs' },
+  WAIT:   { title:"Can't check yet",   g:'g-wait'  },
+};
+const WAITS = ['NOT_APPLICABLE', 'CANT_CHECK'];
+const queueOf = o => { const q = queueOf0(o); return q === 'READY' && o.signoff !== 'signed' ? 'SIGNOFF' : q; };
+const queueOf0 = o => o.queue ? ({ready:'READY', review:'REVIEW', cant_check:'WAIT', running:'RUNNING', failed:'FAILED', paused:'PAUSED'})[o.queue] : WAITS.includes(o.determination) ? 'WAIT' : (o.determination === 'MET' && !o.needs_review) ? 'READY' : 'REVIEW';
+const STATE = {
+  MET:          { v:'v-ready', verdict:'Ready to submit.',                                   next:'Copy packet' },
+  INSUFFICIENT: { v:'v-needs', verdict:n=>`Ask ${n} for something first.`,                   next:n=>`Message ${n}` },
+  NOT_MET:      { v:'v-needs', verdict:n=>`Review with ${n} before submitting.`,             next:n=>`Message ${n}` },
+  NOT_COVERED:  { v:'v-needs', verdict:n=>`Review with ${n}: the payer lists this as not covered.`, next:n=>`Message ${n}` },
+  NOT_APPLICABLE: { v:'v-wait', verdict:"This guideline doesn't apply.",                     next:'Pick a different guideline' },
+  CANT_CHECK:   { v:'v-wait', verdict:"Can't check this one against this guideline.",        next:'Pick a different guideline' },
+};
+const ORDER = ['PAUSED','RUNNING','FAILED','REVIEW','SIGNOFF','READY','WAIT'];
+let pollTimer = null;
+let orders = [], current = null, guidelines = [], view = 'summary';   // view: 'summary' | 'tree' 
+// a guideline's own name (app/titles.py, as /review): its title, "Florida Blue · Medical Coverage Guideline 02-33000-31"
+// as the small line, "Florida Blue 02-33000-31" where one short mention fits; never the file name it was uploaded as
+const glById = id => guidelines.find(g => g.id === id) || null;
+const glOf = g => (g && g.id && glById(g.id)) || g || null;
+const glTitle = g => { g = glOf(g); return (g && (g.name || (/\.pdf$/i.test(g.title || '') ? '' : g.title))) || 'the guideline'; };
+const glKicker = g => { g = glOf(g); return g ? [g.issuer || g.payer, g.number || g.guideline_number].filter(Boolean).join(' · ') : ''; };
+const glShort = g => { g = glOf(g); return g ? [g.issuer || g.payer, String(g.number || g.guideline_number || '').split(' ').pop()].filter(Boolean).join(' ') || glTitle(g) : ''; };
+async function loadGuidelines(){
+  guidelines = await api('/guidelines');
+  $('#glList').className = guidelines.length ? '' : 'empty';
+  $('#glList').innerHTML = guidelines.length
+    ? guidelines.map(g => `<div class="glrow"><b>${esc(glTitle(g))}</b><span>${esc(glKicker(g))}</span></div>`).join('')
+    : 'None yet. Add one to check cases against it.';
+  renderDlgGuidelines();
+}
+
+async function loadOrders(sel){
+  orders = await api('/orders');
+  const groups = {};
+  for (const o of orders) (groups[queueOf(o)] ||= []).push(o);
+  let html = '';
+  for (const k of ORDER) if (groups[k]) html += group(QUEUE[k].title, QUEUE[k].g, groups[k]);
+  $('#groups').innerHTML = html || '<div class="empty">No cases yet.</div>';
+  document.querySelectorAll('.row').forEach(b => b.onclick = () => show(b.dataset.id));
+  if (sel) show(sel); else if (current) show(current);
+}
+function group(title, cls, list){
+  return `<div class="group"><h2 class="${cls}">${esc(title)} <span class="n">${list.length}</span></h2>` + list.map(o => {
+    const st = o.status || {};
+    const sub = o.queue === 'paused' ? 'Confirm the indication of the guideline' : (o.queue === 'running' || o.queue === 'failed') && st.stage_label
+      ? (o.queue === 'failed' ? 'Stopped while ' : '') + st.stage_label.charAt(o.queue === 'failed' ? 0 : 0).toLowerCase() + st.stage_label.slice(1) + (o.queue === 'running' ? '…' : '')
+      : `${o.procedure_text||(o.cpt||[]).join(', ')||'—'} · ${o.payer||'payer unknown'}${o.guideline_id ? ' · vs ' + glShort({id: o.guideline_id, payer: o.guideline_payer, guideline_number: o.guideline_number}) : ''}`;
+    return `<button class="row" data-id="${esc(o.chart_id)}" aria-current="${o.chart_id===current}" title="${esc(sub)}"><b>${esc(o.patient_name||o.filename||'Unknown patient')}</b><span>${esc(sub)}</span></button>`;
+  }).join('') + '</div>';
+}
+
+// the patient's address: /patients/<chart_id>; selecting a row pushes it, back/forward and reload keep it
+const patientPath = id => '/patients/' + encodeURIComponent(id) + (view === 'tree' ? '/tree' : '');
+function idFromLocation(){
+  const m = location.pathname.match(/^\/patients\/([^/]+)(\/tree)?\/?$/);
+  if (m) { view = m[2] ? 'tree' : 'summary'; return decodeURIComponent(m[1]); }
+  if (location.hash.length > 1) {                       // an old /#<chart_id> link
+    const id = decodeURIComponent(location.hash.slice(1));
+    history.replaceState({id}, '', patientPath(id));
+    return id;
+  }
+  return null;
+}
+window.addEventListener('popstate', () => {
+  const id = idFromLocation();
+  if (id) show(id, false, true); else { current = null; view = 'summary'; clearTimeout(pollTimer); document.querySelectorAll('.row').forEach(b => b.setAttribute('aria-current', 'false')); $('#main').innerHTML = '<div class="empty" style="padding:0">Add a case to check it, or pick one on the left.</div>'; }
+});
+
+async function show(id, quiet, fromHistory){
+  current = id;
+  if (!fromHistory && location.pathname !== patientPath(id)) history.pushState({id}, '', patientPath(id));
+  document.querySelectorAll('.row').forEach(b => b.setAttribute('aria-current', b.dataset.id === id));
+  if (!quiet) $('#main').innerHTML = '<div class="busy">Loading…</div>';
+  clearTimeout(pollTimer);
+  let d;
+  try { d = await api('/orders/' + id + (view === 'tree' ? '/tree' : '')); }
+  catch(e){
+    const gone = /no case with this id/i.test(e.message);
+    $('#main').innerHTML = `<p class="verdict v-wait">${gone ? 'No case with this id.' : 'Could not load this case.'}</p>
+      <p class="why">${gone ? `Nothing on file is called “${esc(id)}”. It may have been forgotten, or the link is old. Pick a case on the left.` : esc(e.message)}</p>`;
+    return;
+  }
+  const running = d.status && d.status.state === 'running';
+  if (d.pending) renderStatus(d); else if (view === 'tree') { TreeView.render(d, viewBar(id)); wireViewBar(id); } else render(d);
+  // a check in progress: poll until it ends, then refresh the queue (the row moves to its queue)
+  if (running) pollTimer = setTimeout(async () => {
+    if (current !== id) return;
+    let still = false;
+    try { const st = await api('/orders/' + id + '/status'); still = st.state === 'running'; } catch {}
+    if (still) show(id, true); else loadOrders(id);       // ended: the row moves to its queue, the detail re-renders
+  }, 1200);
+}
+
+// the two views of a patient; the toggle changes the path too, so reload, back and forward restore the view
+function viewBar(id){
+  return `<div class="viewbar"><div class="views" role="group" aria-label="View">
+    <button data-view="summary" aria-pressed="${view === 'summary'}">Summary</button><button data-view="tree" aria-pressed="${view === 'tree'}">As the guideline</button></div></div>`;
+}
+function wireViewBar(id){
+  document.querySelectorAll('.views button').forEach(b => b.onclick = () => { if (view !== b.dataset.view) { view = b.dataset.view; show(id); } });
+}
+
+// the check, stage by stage: what the page shows while it runs, and beside a result afterwards
+const SG = { waiting:'○', running:'●', done:'✓', needs_person:'!', failed:'✗', skipped:'–' };
+function secs(a, b){ if (!a || !b) return ''; const s = (new Date(b) - new Date(a)) / 1000; return s < 1 ? '<1 s' : s < 60 ? Math.round(s) + ' s' : Math.round(s / 60) + ' min'; }
+function stagesHtml(st, chartId){
+  if (!st) return '';
+  return `<div class="stages">${st.stages.map(s => `<div class="stg ${esc(s.status)}"><span class="sg">${SG[s.status]||''}</span><div>
+      <b>${esc(s.label)}</b>${s.cached ? '<small>from an earlier read</small>' : ''}${s.status !== 'waiting' && s.started_at && s.ended_at ? `<small>${secs(s.started_at, s.ended_at)}</small>` : ''}
+      ${s.summary ? `<div class="sum">${esc(s.summary)}${(s.logs||[]).map(l => `<a href="${esc(l.url)}" target="_blank">log</a>`).join('')}</div>` : (s.logs||[]).length ? `<div class="sum">${s.logs.map(l => `<a href="${esc(l.url)}" target="_blank">log</a>`).join('')}</div>` : ''}
+      ${s.status === 'failed' ? `<div class="gate"><b>This stage stopped with an error.</b>${esc(s.error||'')}<div class="act"><button class="primary" data-retry="${esc(chartId)}">Run it again</button><span class="hint"></span></div>${s.traceback ? `<details><summary style="font-size:12.5px;color:var(--sec)">Details</summary><pre>${esc(s.traceback)}</pre></details>` : ''}</div>` : ''}
+      ${s.status === 'needs_person' && s.gate ? gateHtml(s.gate, chartId) : ''}
+    </div></div>`).join('')}</div>`;
+}
+function gateHtml(g, chartId){
+  const field = (g.action || {}).recheck && g.action.recheck.field;
+  let act = '';
+  if (field === 'target' && (g.options||[]).length) act = (g.options||[]).map((o, i) => `<label class="opt"><input type="radio" name="gate-${esc(field)}" value="${esc(o)}" ${i===0?'checked':''}><div><b style="display:inline;font-weight:500">${esc(o)}</b></div></label>`).join('')
+    + `<div class="act"><input type="text" data-gate-text placeholder="Or say what the procedure treats"><button class="primary" data-gate="${esc(field)}" data-chart="${esc(chartId)}">Re-check with this</button><span class="hint"></span></div>`;
+  else if (field === 'cpt') act = `<div class="act"><input type="text" data-gate-text value="${esc((g.options||[]).join(', '))}" placeholder="Codes, comma-separated"><button class="primary" data-gate="cpt" data-chart="${esc(chartId)}">Confirm and re-check</button><span class="hint"></span></div>`;
+  else if (g.kind === 'confirm_pathways') act = `<div class="act"><a class="primary" style="display:inline-block;background:var(--act);color:#fff;border-radius:8px;padding:9px 16px;text-decoration:none" href="/review/${encodeURIComponent(chartId)}">Open the review page to confirm</a></div>`;
+  else if (field === 'guideline_id') act = `<div class="act"><select data-gate-text>${guidelines.map(x => `<option value="${esc(x.id)}">${esc(glTitle(x))} — ${esc(glShort(x))}</option>`).join('')}</select><button class="primary" data-gate="guideline_id" data-chart="${esc(chartId)}">Re-check against this guideline</button><span class="hint"></span></div>`;
+  const opts = field === 'target' ? '' : (g.options||[]).map(o => `<div class="opt" style="cursor:default">· ${esc(o)}</div>`).join('');
+  return `<div class="gate"><b>${esc(g.title)}</b>${esc(g.needs)}${opts}${act}</div>`;
+}
+function wireStages(){
+  document.querySelectorAll('[data-retry]').forEach(b => b.onclick = async () => { b.disabled = true; b.nextElementSibling.textContent = 'Starting…';
+    try { await api('/orders/' + b.dataset.retry + '/retry', {method:'POST'}); await loadOrders(b.dataset.retry); } catch(e){ b.nextElementSibling.textContent = e.message; b.disabled = false; } });
+  document.querySelectorAll('[data-gate]').forEach(b => b.onclick = () => {
+    const box = b.closest('.gate'), f = b.dataset.gate, txt = box.querySelector('[data-gate-text]'), pick = box.querySelector('input[type=radio]:checked');
+    const v = (txt && txt.value || '').trim() || (pick ? pick.value : '');
+    if (!v) return;
+    const body = f === 'cpt' ? { cpt: v.split(',').map(x => x.trim()).filter(Boolean) } : { [f]: v };
+    recheck(b.dataset.chart, body, null, b, b.nextElementSibling);
+  });
+}
+function renderStatus(d){
+  const st = d.status || {}, o = d.order || {};
+  const head = { running:['v-wait', 'Checking this case…'], failed:['v-no', 'This check stopped.'], needs_person:['v-needs', 'A person needs to step in.'], paused:['v-needs', 'Waiting for you to confirm the section.'], done:['v-wait', 'Finishing…'] }[st.state] || ['v-wait', 'Checking…'];
+  const cur = (st.stages||[]).find(s => s.status === 'running');
+  $('#main').innerHTML = viewBar(d.chart_id) + `
+    <div class="who"><div><b>${esc(o.patient_name||d.filename||'New case')}</b> &nbsp; ${esc(o.procedure_text||'')}${(o.cpt||[]).length?` (${esc(o.cpt.join(', '))})`:''}</div><div>${esc(o.payer||'')}</div></div>
+    <p class="verdict ${head[0]}">${esc(head[1])}</p>
+    <p class="why">${st.state === 'running' ? (cur ? esc(cur.label) + '… The stages below fill in as the check goes; this page refreshes by itself.' : 'Starting…') : st.state === 'failed' ? 'Nothing was decided. The stage that stopped is marked below, with the error; run it again or pick a different guideline.' : 'The check stopped where a person has to act; what is needed is marked below.'}</p>
+    ${ruleLine({guideline_id: (d.guideline||{}).id, guideline_title: (d.guideline||{}).title, guideline_payer: (d.guideline||{}).payer}, d.chart_id)}
+    ${stagesHtml(st, d.chart_id)}
+    <details class="fold"><summary>How this was decided</summary><p><a href="/api/orders/${esc(d.chart_id)}/status" target="_blank">The status record</a>${st.run_id ? ` · <a href="/api/runs/${esc(st.run_id)}" target="_blank">Every model exchange</a>` : ''}</p></details>`;
+  wireStages(); wireViewBar(d.chart_id);
+}
+
+function render(d){
+  const r = d.result, o = d.order || {}, s = STATE[r.determination] || STATE.NOT_APPLICABLE;
+  const name = d.surgeon ? `Dr. ${d.surgeon.replace(/^Dr\.?\s*/i,'').split(',')[0].trim().split(' ').pop()}` : 'the surgeon';
+  let verdict = typeof s.verdict === 'function' ? s.verdict(name) : s.verdict;
+  let vcls = s.v;
+  if (r.determination === 'MET' && r.needs_review) { verdict = 'Looks ready; worth a second look first.'; vcls = 'v-needs'; }
+  // never "Ready to submit" without a person's sign-off; that happens on the review page
+  const unsigned = r.determination === 'MET' && !r.needs_review && d.signoff !== 'signed';
+  if (unsigned) verdict = 'Ready for sign-off.';
+  const nextLabel = typeof s.next === 'function' ? s.next(name) : s.next;
+
+  // evidence: what the chart contradicts first, then what is missing, then what's documented
+  let ev = '';
+  for (const p of (d.packet || [])) {
+    const st = p.status || (p.missing ? 'missing' : 'met');
+    const quotes = (p.quotes || []).map(q => `<q>${esc(q.quote)}</q>${q.source?`<small>${esc(q.source)}</small>`:''}`).join('');
+    const mark = st === 'contradicted' ? '<span class="mark m-n">✗</span>' : st === 'missing' ? '<span class="mark m-q">–</span>' : '<span class="mark m-y">✓</span>';
+    const tag = st === 'contradicted' ? ' — the case says otherwise' : st === 'missing' ? ' — not documented' : '';
+    ev += `<div class="item ${st === 'met' ? '' : st}">${mark}
+      <div><b><span class="w">${esc(p.label)}</span>${tag ? `<span class="tag">${esc(tag)}</span>` : ''}</b>${quotes}${st !== 'met' && p.note?`<small style="display:block;margin-top:4px">${esc(p.note)}</small>`:''}</div></div>`;
+  }
+  if (!ev && ['NOT_COVERED','CANT_CHECK'].includes(r.determination)) ev = `<div class="item"><span class="mark m-n">✗</span><div><b>${esc(r.reason)}</b></div></div>`;
+  if (!ev && r.determination === 'NOT_APPLICABLE') {
+    const k = d.key || o, g = d.guideline || {};
+    ev = `<div class="item"><span class="mark m-q">–</span><div><b>Guideline: ${esc(glTitle(g))}${glShort(g) ? ' — ' + esc(glShort(g)) : ''}</b></div></div>
+          <div class="item"><span class="mark m-q">–</span><div><b>Case: ${esc([k.payer, k.plan_type].filter(Boolean).join(' '))}${k.procedure_text ? ' · ' + esc(k.procedure_text) : ''}${(k.cpt||[]).length ? ' (' + esc(k.cpt.join(', ')) + ')' : ''}</b></div></div>`;
+  }
+
+  const flag = (r.review_reasons||[]).length ? `<p class="flag">Worth a second look before submitting: ${esc(r.review_reasons.join(' '))}</p>` : '';
+  const draft = d.ask || '';
+  const draftTitle = r.determination === 'MET' ? 'Packet' : `Message to ${esc(name)}`;
+  const copyText = r.determination === 'MET' ? packetText(d) : draft;
+
+  $('#main').innerHTML = viewBar(d.chart_id) + `
+    <div class="who"><div><b>${esc(o.patient_name||'Unknown patient')}</b> &nbsp; ${esc(o.procedure_text||'')}${(o.cpt||[]).length?` (${esc(o.cpt.join(', '))})`:''}</div><div>${esc(o.payer||'')}${o.plan_type?' · '+esc(o.plan_type):''}</div></div>
+    <div class="verdict-block ${vcls}-b">
+      <p class="verdict ${vcls}">${esc(verdict)}</p>
+      ${foundLine(d)}
+      <div class="fix ${keyDoubt(d) ? '' : 'hidden'}" id="fix"><input id="fixTarget" placeholder="What it treats, e.g. left great saphenous vein" value="${esc((d.order||{}).target||'')}"><input id="fixCpt" placeholder="Codes, comma-separated" value="${esc((((d.key||{}).cpt||[]).length ? d.key.cpt : ((d.order||{}).cpt||[])).join(', '))}"><button id="recheckBtn">Re-check</button><span class="hint" id="fixMsg"></span></div>
+      ${ruleLine(r, d.chart_id)}
+      <p class="why">${esc(whyLine(r, d))}</p>
+
+      ${flag}
+    </div>
+    <div class="section">What the case shows</div>
+    <div class="evidence">${ev}</div>
+    <div class="next">
+      ${WAITS.includes(r.determination)
+        ? `<select id="glSelect">${guidelines.map(g => `<option value="${esc(g.id)}" ${g.id === (d.guideline||{}).id ? 'selected' : ''}>${esc(glTitle(g))} — ${esc(glShort(g))}</option>`).join('')}</select><button class="primary" id="useBtn">Re-check against this guideline</button><span class="hint" id="useMsg"></span>`
+        : unsigned ? `<a class="primary btnlink" href="/review/${esc(encodeURIComponent(d.chart_id))}">Sign it off on the review page</a><span class="hint">Nothing is ready to submit until a person signs it off.</span>`
+        : `<button class="primary" id="nextBtn">${esc(nextLabel)}</button><span class="hint" id="nextMsg"></span>`}
+    </div>
+    <div class="draft" id="draft"><b style="display:block;margin-bottom:6px">${draftTitle}</b>${esc(copyText)}</div>
+    ${stageFold(d)}
+    <details class="fold"><summary>How this was decided</summary>${decidedHtml(d)}</details>`;
+  wireStages(); wireViewBar(d.chart_id);
+
+  const nr = $('#notRight');
+  if (nr) nr.onclick = e => { e.preventDefault(); $('#fix').classList.toggle('hidden'); };
+  const rb = $('#recheckBtn');
+  if (rb) rb.onclick = () => recheck(d.chart_id, { target: $('#fixTarget').value.trim() || null, cpt: $('#fixCpt').value.split(',').map(s => s.trim()).filter(Boolean) }, '#fixMsg', rb);
+  const ub = $('#useBtn');
+  if (ub) ub.onclick = () => recheck(d.chart_id, { guideline_id: $('#glSelect').value }, '#useMsg', ub);
+  const nb = $('#nextBtn');
+  if (nb) nb.onclick = async () => {
+    $('#draft').classList.add('show');
+    try { await navigator.clipboard.writeText(copyText); $('#nextMsg').textContent = 'Copied.'; }
+    catch { $('#nextMsg').textContent = 'Shown below; select and copy.'; }
+  };
+}
+
+// the check stage by stage, beside its result: open when it is still running or stopped at a gate
+function stageFold(d){
+  const st = d.status; if (!st) return '';
+  const open = st.state !== 'done';
+  const line = st.state === 'running' ? 'A re-check is running…' : st.state === 'failed' ? 'The last run stopped with an error.' : st.state === 'needs_person' ? 'A person needs to step in.' : `Checked in ${secs(st.started_at, st.ended_at) || 'under a second'}.`;
+  return `<details class="fold" ${open ? 'open' : ''}><summary>How this check ran — ${esc(line)}</summary>${stagesHtml(st, d.chart_id)}</details>`;
+}
+// the guideline applies but the key deserves a look: a code mapped from the procedure name, or a doubtful pair.
+// The server already lists it among the review reasons; here it only opens the editable key.
+function keyDoubt(d){
+  if (Object.keys((d.decided||{}).candidates||{}).length) return true;
+  const v = d.verification; if (!v || !d.result || WAITS.includes(d.result.determination)) return false;
+  const stated = ((d.key||{}).cpt||[]);
+  return (v.cpt||[]).some(c => !stated.includes(c)) || v.confidence < 0.7;
+}
+function foundLine(d){
+  const k = d.key || d.order || {};
+  if (!k.payer && !k.procedure_text && !(k.cpt||[]).length) return '';
+  const plan = [k.payer, k.plan_type].filter(Boolean).join(' ');
+  const proc = `${k.procedure_text || ''}${(k.cpt||[]).length ? ` (${k.cpt.join(', ')})` : ''}`.trim();
+  return `<p class="found">Found: ${esc([plan, proc].filter(Boolean).join(' · '))}<a href="#" id="notRight">Not right?</a></p>`;
+}
+async function recheck(id, body, msgSel, btn, msgEl){
+  const msg = msgEl || $(msgSel); msg.textContent = 'Starting the re-check…'; btn.disabled = true;
+  try { await api('/orders/' + id + '/recheck', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(body)}); await loadOrders(id); }
+  catch(err){ msg.textContent = err.message; btn.disabled = false; }
+}
+function decidedHtml(d){
+  const x = d.decided || {}, tag = {covered:'covered', non_covered:'not covered', investigational:'investigational', not_addressed:'decided elsewhere'};
+  const codes = (x.codes||[]).map(c => `<li>${esc(c.code)}: ${esc(tag[c.tag]||c.tag)} — “${esc(c.description)}”</li>`).join('');
+  const secs = (x.sections||[]).map(s => `<li>${esc(s.code)} → “${esc(s.name)}”${s.because ? `, chosen because the order says “${esc(s.because)}”` : ''}</li>`).join('');
+  const cands = Object.entries(x.candidates||{}).map(([c, ns]) => `<li>${esc(c)}: could be ${ns.map(n => '“'+esc(n)+'”').join(' or ')}</li>`).join('');
+  const aside = (x.set_aside||[]).map(s => `<li>“${esc(s.text)}” — ${esc(s.why)}</li>`).join('');
+  return `${codes ? `<p>Codes</p><ul>${codes}</ul>` : ''}${secs ? `<p>Guideline section</p><ul>${secs}</ul>` : ''}${cands ? `<p>Section not decided</p><ul>${cands}</ul>` : ''}${aside ? `<p>Sentences set aside</p><ul>${aside}</ul>` : ''}<p><a href="/api/runs/${esc(x.run_id||'')}" target="_blank">Every model exchange</a></p>`;
+}
+function ruleLine(r, chartId){
+  if (!r.guideline_title) return '';
+  const best = null;
+  const g = {id: r.guideline_id, payer: r.guideline_payer, guideline_number: r.guideline_number, title: r.guideline_title};
+  const gl = `${esc(glTitle(g))}${glShort(g) ? ' · ' + esc(glShort(g)) : ''}`;
+  return `<p class="rule">Checked against ${gl}${best ? `, <b>${esc(best.name)}</b>` : ''}</p>`;
+}
+function whyLine(r, d){
+  switch (r.determination) {
+    case 'MET': return `The case documents everything ${d.result.guideline_title ? 'the payer asks for under “' + glTitle({id: d.result.guideline_id, title: d.result.guideline_title}) + '”' : 'the payer asks for'}. Attach the packet with the request.`;
+    case 'INSUFFICIENT': if (!(r.misses||[]).length) return (r.reason || '') + ' Say what the procedure treats and re-check.';
+      return `${(r.misses||[]).length === 1 ? 'One thing' : (r.misses||[]).length + ' things'} the payer requires ${(r.misses||[]).length === 1 ? "isn't" : "aren't"} in the case yet. Everything else is documented.`;
+    case 'NOT_MET': return 'Something in the case conflicts with what the payer requires. A person should decide how to proceed; nothing is denied automatically.';
+    case 'NOT_COVERED': return (r.reason || '') + ' A person should confirm the code and the intent before anything is told to the patient.';
+    case 'NOT_APPLICABLE': return ((d.verification && d.verification.reason) || r.reason || '') + ' Pick a different guideline below.';
+    case 'CANT_CHECK': return (r.reason || '') + ' Pick a different guideline below, or check this one by hand.';
+    default: return r.reason || '';
+  }
+}
+function packetText(d){
+  const o = d.order || {};
+  const head = `Prior authorization — ${o.patient_name||''}, ${o.procedure_text||''} (${(o.cpt||[]).join(', ')}), ${o.payer||''}\nSupporting documentation:\n`;
+  return head + (d.packet||[]).filter(p => !p.missing && p.status !== 'contradicted').map((p,i) => `${i+1}. ${p.label}\n` + (p.quotes||[]).map(q => `   "${q.quote}"\n   — ${q.source||''}`).join('\n')).join('\n');
+}
+
+// add a chart: the widget. Step 1 the chart PDF; step 2 a guideline on file or a new guideline PDF. Both required.
+const dlg = { chart: null, glFile: null, busy: false };
+const dlgChoice = () => { const r = document.querySelector('input[name=dlgGl]:checked'); return r ? r.value : null; };
+function renderDlgGuidelines(){
+  const keep = dlgChoice();
+  $('#dlgGlList').innerHTML = guidelines.map((g, i) =>
+    `<label class="opt"><input type="radio" name="dlgGl" value="${esc(g.id)}" ${(keep ? g.id === keep : i === 0) ? 'checked' : ''}><div><b>${esc(glTitle(g))}</b><span>${esc(glKicker(g))}</span></div></label>`).join('');
+  if (keep === '__new__' || !guidelines.length) { const n = document.querySelector('input[name=dlgGl][value=__new__]'); if (n && !guidelines.length) n.checked = true; else if (n && keep === '__new__') n.checked = true; }
+  document.querySelectorAll('input[name=dlgGl]').forEach(r => r.onchange = dlgUpdate);
+  dlgUpdate();
+}
+function dlgUpdate(){
+  const choice = dlgChoice();
+  const glOk = choice === '__new__' ? !!dlg.glFile : !!choice;
+  $('#stepChart').classList.toggle('done', !!dlg.chart);
+  $('#stepGl').classList.toggle('done', glOk);
+  $('#dlgGo').disabled = dlg.busy || !(dlg.chart && glOk);
+}
+function openDlg(){
+  dlg.chart = null; dlg.glFile = null; dlg.busy = false;
+  $('#dlgChartName').textContent = 'No file chosen.'; $('#dlgGlName').textContent = 'No file chosen.'; $('#dlgMsg').textContent = '';
+  $('#dlgChartFile').value = ''; $('#dlgGlFile').value = '';
+  renderDlgGuidelines();
+  $('#addDlg').classList.remove('hidden');
+  $('#dlgChartBtn').focus();
+}
+function closeDlg(){ if (!dlg.busy) $('#addDlg').classList.add('hidden'); }
+$('#addBtn').onclick = openDlg;
+$('#dlgCancel').onclick = closeDlg;
+$('#addDlg').onclick = e => { if (e.target === $('#addDlg')) closeDlg(); };
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && !$('#addDlg').classList.contains('hidden')) closeDlg(); });
+$('#dlgChartBtn').onclick = () => $('#dlgChartFile').click();
+$('#dlgChartFile').onchange = e => { dlg.chart = e.target.files[0] || null; $('#dlgChartName').textContent = dlg.chart ? dlg.chart.name : 'No file chosen.'; dlgUpdate(); };
+$('#dlgGlBtn').onclick = () => { const n = document.querySelector('input[name=dlgGl][value=__new__]'); if (n) n.checked = true; $('#dlgGlFile').click(); };
+$('#dlgGlFile').onchange = e => { dlg.glFile = e.target.files[0] || null; $('#dlgGlName').textContent = dlg.glFile ? dlg.glFile.name : 'No file chosen.'; dlgUpdate(); };
+$('#dlgGo').onclick = async () => {
+  const choice = dlgChoice(); if (!dlg.chart || !choice) return;
+  const fd = new FormData(); fd.append('file', dlg.chart);
+  if (choice === '__new__') { if (!dlg.glFile) return; fd.append('guideline', dlg.glFile);
+    $('#dlgMsg').textContent = `Reading ${dlg.glFile.name} and ${dlg.chart.name}…`; }
+  else { fd.append('guideline_id', choice);
+    $('#dlgMsg').textContent = `Reading ${dlg.chart.name}…`; }
+  dlg.busy = true; dlgUpdate(); $('#dlgCancel').disabled = true;
+  try { const d = await api('/charts', {method:'POST', body:fd});
+    dlg.busy = false; $('#dlgCancel').disabled = false; closeDlg();
+    await loadGuidelines(); await loadOrders(d.chart_id); }
+  catch(err){ dlg.busy = false; $('#dlgCancel').disabled = false; dlgUpdate(); $('#dlgMsg').innerHTML = `<span class="err">${esc(err.message)}</span>`; }
+};
+// add a guideline from the rail: no chart has to fail first. Charts already waiting get re-checked by the server.
+$('#addGlBtn').onclick = () => $('#addGlFile').click();
+$('#addGlFile').onchange = async e => {
+  const f = e.target.files[0]; if (!f) return;
+  $('#addGlBtn').disabled = true; $('#addMsg').textContent = `Reading ${f.name}… (about a minute)`;
+  try { const fd = new FormData(); fd.append('file', f); const g = await api('/guidelines', {method:'POST', body:fd});
+    const rep = (g.replaced || []).length;
+    await loadGuidelines();
+    $('#addMsg').textContent = g.cached ? `Already on file: ${glTitle(g)}.` : `Added ${glTitle(g)}.${rep ? ' Replaced the earlier copy.' : ''}`; }
+  catch(err){ $('#addMsg').innerHTML = `<span class="err">${esc(err.message)}</span>`; }
+  finally { $('#addGlBtn').disabled = false; e.target.value = ''; }
+};
+loadGuidelines().then(() => loadOrders(idFromLocation() || undefined)).catch(() => preview());
+
+// the theme: Soft (a dimmed light, the default), Light or Dark; the button steps through them, as on /review, and the
+// choice is the same one (localStorage review.theme; the head script applies it before drawing)
+(function(){
+  const b = document.getElementById('themeBtn'); if (!b) return;
+  const ORDER = ['soft', 'light', 'dark'], NAME = { soft: 'Soft', light: 'Light', dark: 'Dark' };
+  const cur = () => ORDER.includes(document.documentElement.dataset.theme) ? document.documentElement.dataset.theme : 'soft';
+  const show = () => { const t = cur(), n = ORDER[(ORDER.indexOf(t) + 1) % ORDER.length];
+    b.textContent = NAME[t]; b.setAttribute('aria-label', `Theme: ${NAME[t]}. Switch to ${NAME[n]}`); b.title = `Theme: ${NAME[t]} · click for ${NAME[n]}`; };
+  b.onclick = () => { const t = ORDER[(ORDER.indexOf(cur()) + 1) % ORDER.length];
+    document.documentElement.dataset.theme = t; try { localStorage.setItem('review.theme', t); } catch {} show(); };
+  show();
+})();
+
+// opened as a file, no server: show a sample so the layout can be judged
+function preview(){
+  const sample = {
+    park: { order:{patient_name:'Linda Park', procedure_text:'Laser ablation, left great saphenous vein', cpt:['36478'], payer:'Florida Blue', plan_type:'PPO'}, surgeon:'Dr. Elena Vasquez, MD, FACS',
+      result:{determination:'INSUFFICIENT', guideline_payer:'Florida Blue', guideline_number:'02-33000-31', guideline_title:'Treatments for Varicose Veins/Venous Insufficiency', best_scenario:'gs', scenarios:[{id:'gs', name:'Great or Small Saphenous Veins'}], misses:[{}], needs_review:false, run_id:'preview'},
+      ask:'Dr. Vasquez — for Linda Park’s prior auth (left GSV laser ablation, Florida Blue), could you add an addendum with:\n\n1. The date she began compression stockings and the strength (20–30 mmHg), and that her symptoms have not improved after at least 3 months.\n\nThe 9/9 note says her PCP recommended compression “earlier this year” and the 9/30 note says she is “still wearing the stockings,” but neither gives a start date. Florida Blue’s guideline asks for at least 3 months. Could you add a note that shows when she started?',
+      packet:[
+        {label:'Compression therapy tried for at least 3 months without improvement', status:'missing', text:'her PCP recommended compression stockings earlier this year', heading:'New Patient Consult', date:'2025-09-09'},
+        {label:'Reflux in the great saphenous vein', status:'met', text:'Incompetent. SFJ reflux 1.6 seconds.', heading:'Venous duplex, left', date:'2025-09-23'},
+        {label:'Disease severity (CEAP class)', status:'met', text:'CEAP C3', heading:'New Patient Consult', date:'2025-09-09'},
+        {label:'Vein size at least 3 mm', status:'met', text:'varicosities medial calf, largest approx. 4 mm', heading:'New Patient Consult', date:'2025-09-09'},
+        {label:'Persistent symptoms', status:'met', text:'aching and heaviness most days, ankle swelling by evening', heading:'Follow-Up', date:'2025-09-30'},
+        {label:'Symptoms interfere with daily life', status:'met', text:'hard to finish her usual errands and she has stopped her weekly bowling league', heading:'Follow-Up', date:'2025-09-30'}]},
+    delgado: { order:{patient_name:'Maria Delgado', procedure_text:'Radiofrequency ablation, left great saphenous vein', cpt:['36475'], payer:'Florida Blue', plan_type:'PPO'}, surgeon:'Dr. Elena Vasquez, MD, FACS',
+      result:{determination:'MET', guideline_payer:'Florida Blue', guideline_number:'02-33000-31', guideline_title:'Treatments for Varicose Veins/Venous Insufficiency', best_scenario:'gs', scenarios:[{id:'gs', name:'Great or Small Saphenous Veins'}], misses:[], needs_review:false, run_id:'preview'}, ask:'Nothing to ask. The notes from March 18, March 25 and July 22 document what the payer needs.',
+      packet:[
+        {label:'Reflux in the great saphenous vein', status:'met', text:'Reflux at saphenofemoral junction 2.4 seconds with Valsalva', heading:'Venous duplex, left', date:'2025-03-25'},
+        {label:'Disease severity (CEAP class)', status:'met', text:'CEAP clinical class C4a (pigmentation/eczema)', heading:'New Patient Consult', date:'2025-03-18'},
+        {label:'Vein size at least 3 mm', status:'met', text:'varicosities medial left thigh and calf, 5–6 mm', heading:'Follow-Up', date:'2025-07-22'},
+        {label:'Compression therapy tried for at least 3 months without improvement', status:'met', text:'Begin conservative management: graduated compression stockings 20–30 mmHg daily', heading:'New Patient Consult', date:'2025-03-18'},
+        {label:'Compression therapy tried for at least 3 months without improvement', status:'met', text:'consistent daily use of 20–30 mmHg compression stockings since the March visit', heading:'Follow-Up', date:'2025-07-22'}]},
+    okafor: { order:{patient_name:'James Okafor', procedure_text:'Sclerotherapy of spider veins', cpt:['36468'], payer:'Florida Blue'}, surgeon:'Dr. Elena Vasquez', result:{determination:'NOT_COVERED', guideline_payer:'Florida Blue', guideline_number:'02-33000-31', guideline_title:'Treatments for Varicose Veins/Venous Insufficiency', reason:'CPT 36468 is listed as non-covered under Treatments for Varicose Veins/Venous Insufficiency.', needs_review:false, run_id:'preview'}, ask:'Dr. Vasquez — Florida Blue’s guideline lists 36468 (spider vein sclerotherapy) as not covered (cosmetic). Could you review this order with me? Was a different procedure intended, or should we talk with Mr. Okafor about other options?', packet:[] },
+    mitchell: { order:{patient_name:'Robert Mitchell', procedure_text:'Permanent cardiac pacemaker', cpt:['33207'], payer:'UnitedHealthcare', plan_type:'Medicare Advantage'}, result:{determination:'NOT_APPLICABLE', reason:"No guideline on file for payer 'UnitedHealthcare' (CPT 33207).", needs_review:false, run_id:'preview'}, ask:'', packet:[] },
+  };
+  orders = Object.entries(sample).map(([id, d]) => ({chart_id:id, patient_name:d.order.patient_name, procedure_text:d.order.procedure_text, cpt:d.order.cpt, payer:d.order.payer, determination:d.result.determination, needs_review:false}));
+  window.__preview = sample;
+  const groups = {};
+  for (const o of orders) (groups[queueOf(o)] ||= []).push(o);
+  $('#groups').innerHTML = ORDER.filter(k => groups[k]).map(k => group(QUEUE[k].title, QUEUE[k].g, groups[k])).join('');
+  document.querySelectorAll('.row').forEach(b => b.onclick = () => { current = b.dataset.id; document.querySelectorAll('.row').forEach(x => x.setAttribute('aria-current', x.dataset.id === current)); render(sample[current]); });
+  current = 'park'; document.querySelector('[data-id=park]').setAttribute('aria-current','true'); render(sample.park);
+}
+</script>
+</body>
+</html>

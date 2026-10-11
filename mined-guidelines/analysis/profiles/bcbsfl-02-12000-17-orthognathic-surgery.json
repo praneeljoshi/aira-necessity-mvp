@@ -1,0 +1,196 @@
+{
+ "lines_of_business": [
+  "All lines of business unless noted in PROGRAM EXCEPTIONS (disclaimer: 'THIS MEDICAL COVERAGE GUIDELINE APPLIES TO ALL LINES OF BUSINESS UNLESS OTHERWISE NOTED IN THE PROGRAM EXCEPTIONS SECTION')",
+  "FEP: 'Follow FEP guidelines.'",
+  "SAO: 'Follow SAO guidelines.'",
+  "Medicare Advantage products: 'No National Coverage Determination (NCD) and/or Local Coverage Determination (LCD) were found'",
+  "Florida statutes 627.66911 (cleft lip/palate under 18), 627.419(7) (jaw parity) quoted in POSITION STATEMENT note and in OTHER"
+ ],
+ "effective_or_revised": "Original Effective Date 08/15/13; Reviewed 05/28/26; Revised 06/15/26",
+ "sections_in_order": [
+  "Header block (MCG number, Original Effective Date, Reviewed, Revised)",
+  "Subject",
+  "Disclaimer (all caps)",
+  "Navigation bar (Position Statement / Billing/Coding / Reimbursement / Program Exceptions / Definitions / Related Guidelines / Other / References / Updates)",
+  "DESCRIPTION",
+  "POSITION STATEMENT",
+  "BILLING/CODING INFORMATION",
+  "REIMBURSEMENT INFORMATION",
+  "PROGRAM EXCEPTIONS",
+  "DEFINITIONS",
+  "RELATED GUIDELINES",
+  "OTHER",
+  "REFERENCES",
+  "COMMITTEE APPROVAL",
+  "GUIDELINE UPDATE INFORMATION"
+ ],
+ "criteria_location": "POSITION STATEMENT (about 80 lines, pp.3-5): a numbered 3-part test (1 skeletal deformity, 2 functional impairment, 3 documentation). DESCRIPTION (lines 25-116) quotes an AAOMS paper whose lettered A-D list (mm / 'two or more standard deviations') looks like criteria but differs from the Position Statement numbers. Statute text in OTHER.",
+ "procedures_covered": [
+  "Orthognathic surgery of maxilla/mandible (CPT 21141-21147 Le Fort I, 21150-21160 Le Fort II/III, 21193-21199, 21206 etc.)",
+  "Genioplasty 21120-21123 (non-covered when cosmetic)",
+  "Orthodontic treatment for cleft palate (covered); other orthodontics and endosteal implants (dental benefit)"
+ ],
+ "logic": {
+  "top_level": "all",
+  "max_nesting_depth": 4,
+  "k_of_n": [
+   {
+    "k": 1,
+    "n": 5,
+    "quote": "One or more of the following physical functional impairments exists:"
+   }
+  ],
+  "exclusions_or_contraindications": "Inline negatives: 'Orthognathic surgery when performed for cosmetic purposes does not meet the definition of medical necessity.' Genioplasty for appearance 'cosmetic and non-covered'. Dental items 'subject to coverage available through dental benefits'.",
+  "initial_vs_repeat": "Not addressed.",
+  "and_or_ambiguity": [
+   {
+    "quote": "meets the definition of medical necessity when the (1.) skeletal deformity, (2.) functional impairment and (3.) documentation requirements below are met.",
+    "why_ambiguous": "The 'and' is a list join of three numbered sections, i.e. ALL, but nothing says so with the capitalised AND the policy uses elsewhere."
+   },
+   {
+    "quote": "Obstructive sleep apnea, when ALL of the following are met: Criteria for a positive airway pressure (PAP) device are met and the member is unable to tolerate PAP or has failed a trial of PAP",
+    "why_ambiguous": "Lower-case 'and' inside a bullet that is itself one of two ALL items: nested boolean in prose. Also delegates PAP criteria to another policy (09-E0000-21)."
+   },
+   {
+    "quote": "Skeletal deformities, either A or B: A. One or more of the following skeletal deformities exists: ... B. There is a skeletal abnormality due to injury / trauma",
+    "why_ambiguous": "Alternatives are signalled by 'either A or B' in the lead-in, while within A the OR is repeated at the end of each bullet."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "imaging finding",
+   "quote": "Panorex and cephalometric radiographs; AND Cephalometric tracings and analysis",
+   "where": "Position Statement 3"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "horizontal overjet of +5 millimeters (mm) or more",
+   "where": "Position Statement 1.A"
+  },
+  {
+   "kind": "functional impairment",
+   "quote": "Masticatory (chewing) dysfunction due to skeletal deformity",
+   "where": "Position Statement 2"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "Myofascial pain ... persisted for at least 6 months and has not responded to conservative therapy such as physical therapy or splinting",
+   "where": "Position Statement 2"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "Photographs that demonstrate the skeletal deformity.",
+   "where": "Position Statement 3"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "The member must have a confirmed diagnosis of cleft palate, with or without cleft lip, with a demonstrated malocclusion.",
+   "where": "Position Statement (orthodontics)"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "unable to tolerate PAP or has failed a trial of PAP",
+   "where": "Position Statement 2 (OSA)"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "horizontal overjet",
+   "value": ">= +5 (or zero/negative)",
+   "unit": "mm",
+   "quote": "horizontal overjet of +5 millimeters (mm) or more, OR horizontal overjet of zero to a negative value (established norm = 2mm)"
+  },
+  {
+   "quantity": "AP molar discrepancy",
+   "value": ">= 4",
+   "unit": "mm",
+   "quote": "antero-posterior molar relationship discrepancy of 4mm or more (established norm = 0 to 1mm)"
+  },
+  {
+   "quantity": "posterior open bite",
+   "value": "> 2",
+   "unit": "mm",
+   "quote": "Unilateral or bilateral posterior open bite greater than 2mm"
+  },
+  {
+   "quantity": "palatal cusp to mandibular fossa discrepancy",
+   "value": ">= 4 bilateral / >= 3 unilateral",
+   "unit": "mm",
+   "quote": "Total bilateral maxillary palatal cusp to mandibular fossa discrepancy of 4mm or greater, or a unilateral discrepancy of 3mm or greater"
+  },
+  {
+   "quantity": "asymmetry",
+   "value": "> 3",
+   "unit": "mm",
+   "quote": "asymmetry greater than 3mm with concomitant occlusal asymmetry"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "myofascial pain duration",
+   "length": "6 months",
+   "quote": "persisted for at least 6 months"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "CPT list only; no diagnosis codes. Four genioplasty codes carry '(non-covered)' inline.",
+  "non_covered_code_lists": "21120, 21121, 21122, 21123 '(non-covered)' (6 inline non-covered tags in the file)"
+ },
+ "external_dependencies": [
+  {
+   "what": "PAP device criteria",
+   "quote": "(refer to 09-E0000-21, Positive Airway Pressure Devices)"
+  },
+  {
+   "what": "Florida statutes on cleft lip/palate and jaw parity",
+   "quote": "See Florida Statutes, Section 627.66911 below (OTHER section)."
+  },
+  {
+   "what": "Dental benefits carve-out",
+   "quote": "The following are considered dental services that are subject to coverage available through dental benefits"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Supraeruption",
+   "definition_quote": "the occurrence of a tooth continuing to grow out of the gum if the opposing tooth in the opposite jaw is missing"
+  },
+  {
+   "term": "Malocclusion",
+   "definition_quote": "imperfect contact of opposing teeth in the upper and lower jaws"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "Medical records from treating physician documenting evaluation, diagnosis and previous management of the functional impairment(s)",
+   "problem": "No required content or duration of prior management."
+  },
+  {
+   "quote": "when performed for cosmetic purposes",
+   "problem": "Cosmetic intent is not operationalised."
+  }
+ ],
+ "extraction_hazards": [
+  "Mixed numbering styles in one list: '1.' / 'A.' / bullets / en-dashes ('−') for the 4th level; indentation is the only nesting signal in pdftotext.",
+  "Position Statement starts with a '*NOTE' that has its own '1.' list (statute text) that looks like criteria item 1 and collides with the real '1. Skeletal deformities'.",
+  "Description repeats the AAOMS A-D lettered list with different numbers than the Position Statement.",
+  "CPT table descriptions wrap onto 2-3 lines; the code is at column 0 only on the first line.",
+  "Cross-reference typo in the Position Statement ('Obstructive sleep apnea... 09-E0000-21') is fine, but RELATED GUIDELINES lists TMJ as '02/20000-12' with a slash instead of hyphen."
+ ],
+ "interesting_structures": [
+  "Real three-part test with numeric dental/skeletal thresholds and a documentation checklist (radiographs, tracings, photos): the closest BCBSFL gets to InterQual-style criteria.",
+  "Statute-driven carve-outs (cleft lip/palate under 18; jaw parity) written into both the Position Statement and OTHER.",
+  "Dental vs medical boundary lists (torus surgery, endosteal implants, non-cleft orthodontics go to dental benefit)."
+ ],
+ "fit_to_tree": {
+  "score": 3,
+  "why": "Maps cleanly to all/any, but three problems: nesting is 4 deep and indicated only by indentation; the OSA branch calls another policy; and cosmetic purpose / 'documenting evaluation' require judgment."
+ },
+ "file": "bcbsfl-02-12000-17-orthognathic-surgery.pdf",
+ "treatment": "orthognathic-surgery",
+ "payer": "bcbsfl",
+ "doc_kind": "medical policy (Florida Blue Medical Coverage Guideline)"
+}

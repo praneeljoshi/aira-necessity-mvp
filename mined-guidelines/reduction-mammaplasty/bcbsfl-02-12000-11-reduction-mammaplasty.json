@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "reduction-mammaplasty",
+  "title": "Reduction Mammaplasty",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76F53GIU922Z384713L",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-12000-11",
+  "original_effective": "04/17/00",
+  "reviewed": "08/28/25",
+  "revised": "09/15/25",
+  "file": "bcbsfl-02-12000-11-reduction-mammaplasty.pdf",
+  "sha256": "17af50c3761ec7f2f0e8590b28d31015bbf6b2469b1596429eb164e9d4f24d1e",
+  "pages": 8,
+  "bytes": 650962,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original 04/17/00; Reviewed 08/28/25; Revised 09/15/25"
+}

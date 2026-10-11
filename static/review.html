@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prior auth</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<script>
+  /* the look, before anything is drawn: ?style=<name>, else the one remembered, else Marker (static/review-styles/) */
+  (function () { var ok = { marker: 1, classic: 1, clinic: 1, plain: 1 }, s = null;
+    try { s = new URLSearchParams(location.search).get('style'); if (s && ok[s]) localStorage.setItem('review.style', s); } catch (e) {}
+    if (!s || !ok[s]) { try { s = localStorage.getItem('review.style'); } catch (e) { s = null; } }
+    document.documentElement.setAttribute('data-style', s && ok[s] ? s : 'plain');
+    /* soft (a dimmed light) unless the person chose light or dark (the switch in the rail) */
+    var t = 'soft'; try { var v = localStorage.getItem('review.theme'); if (v === 'light' || v === 'dark' || v === 'soft') t = v; } catch (e) {}
+    document.documentElement.setAttribute('data-theme', t);
+    /* the rail folded to a slim strip, if the person left it that way (the toggle at its top, or "[") */
+    try { if (localStorage.getItem('review.rail') === 'min') document.documentElement.classList.add('rail-min'); } catch (e) {}
+    /* nobody named in this browser yet: the sign-in screen comes first (a name only; review.name) */
+    var n = ''; try { n = localStorage.getItem('review.name') || ''; } catch (e) {}
+    if (!n.trim()) document.documentElement.classList.add('signin'); })();
+</script>
+<link rel="stylesheet" href="/static/tree.css">
+<link rel="stylesheet" href="/static/review-styles/classic.css">
+<link rel="stylesheet" href="/static/review.css">
+<link rel="stylesheet" href="/static/review-styles/marker.css">
+<link rel="stylesheet" href="/static/review-styles/clinic.css">
+<link rel="stylesheet" href="/static/theme.css">
+<link rel="stylesheet" href="/static/review-styles/plain.css">
+<link rel="stylesheet" href="/static/review-print.css">
+<!--
+  The coordinator's review page (static/review.js). One HTML, no framework, no build step.
+    GET  /api/guidelines                       the rail's "Guidelines on file"
+    GET  /api/orders                           the rail's charts, grouped by queue (paused / running / failed / ready / review / cant_check)
+    POST /api/review/charts                    multipart file + guideline_id | guideline -> {chart_id, pending, status}; the check pauses at the section
+    GET  /api/review/{chart_id}                one document for every state: running | paused | failed | done (404 unknown)
+    POST /api/review/{chart_id}/pathways       {"picks": [{code, pathway}], "by"?} -> the check goes on
+    POST /api/review/{chart_id}/retry          runs a stopped check again
+    GET/POST /api/review/{chart_id}/feedback   feedback on guideline lines or on an evidence quote; DELETE .../feedback/{id}
+    POST /api/review/{chart_id}/accepts        accept one requirement (DELETE .../accepts/{id} undoes); .../ask, .../additions
+  Styles: static/review-styles/<name>.css (Plain's tokens, the Soft / Light / Dark themes and their switch in static/theme.css, shared with /), picked by ?style= or the switcher at the foot of a case (localStorage).
+  Address: /review = add a chart; /review/<chart_id> = that chart (pushState; back/forward and reload keep it).
+  The case page is the guideline: the confirmed section as printed, each requirement's words marked with its status,
+  the chart's evidence quoted under the requirement it belongs to. There is no chart column.
+  Vocabulary rule: nothing outside the "How this was decided" fold says criterion, verdict, confidence, pathway or span.
+-->
+</head>
+<body>
+<div class="app">
+  <aside class="rail">
+    <button id="railBtn" class="rail-btn" type="button" aria-expanded="true" aria-label="Collapse the sidebar" title="Collapse the sidebar  [">
+      <svg viewBox="0 0 20 20" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><path class="rail-chev" d="M12 5l-5 5 5 5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <h1>Prior auth</h1>
+    <div class="add">
+      <button id="addBtn" class="primary" title="Add a case"><svg class="add-ic" viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M10 4.5v11M4.5 10h11"/></svg><span class="add-t">Add a case</span></button>
+      <div id="addMsg" class="busy" style="font-size:13px;margin-top:6px"></div>
+    </div>
+    <button id="themeBtn" class="theme-btn" type="button" aria-label="Theme" title="Theme: Light, Soft or Dark"></button>
+    <div class="me signed" id="signedAs">Signed in as <b id="meShown"></b></div>
+    <div class="group" id="glGroup"><h2 class="g-wait"><button type="button" class="gl-toggle" id="glToggle" aria-expanded="false" aria-controls="glList">Guidelines on file <span class="gl-n" id="glCount"></span></button></h2><div id="glList" class="empty" hidden>None yet.</div></div>
+    <div id="groups"></div>
+  </aside>
+
+  <main class="main" id="main">
+    <div class="empty" style="padding:0"></div>
+  </main>
+</div>
+
+<section class="signin-page" id="signin" aria-labelledby="signinTitle">
+  <form class="signin-card" id="signinForm" novalidate>
+    <h1 id="signinTitle">Prior auth</h1>
+    <label for="signinName">Your name</label>
+    <input id="signinName" type="text" maxlength="60" autocomplete="name" autocapitalize="words" spellcheck="false">
+    <button class="primary" type="submit" id="signinGo">Continue <kbd class="mod-enter">⌘↵</kbd></button>
+    <p class="signin-note" id="signinNote">Shown on what you confirm, accept and sign off.</p>
+  </form>
+</section>
+
+<div class="dlg hidden" id="addDlg" role="dialog" aria-labelledby="addDlgTitle">
+  <div class="dlg-card">
+    <h3 id="addDlgTitle">Add a case</h3>
+    <label class="drop big" id="dropZone" tabindex="0"><input id="dropFiles" type="file" accept="application/pdf" multiple>
+      <i class="drop-doc" aria-hidden="true"></i><b>Drop the case here</b><span>Add the payer's policy too if it is not on file, or click to choose the PDFs.</span><span class="drop-got" id="dropGot"></span></label>
+    <label class="dlg-gl" id="dlgGlRow">Check against: <select id="dlgGl"></select></label>
+    <div class="dlg-actions"><button class="primary" id="dlgGo" disabled>Add case <kbd class="mod-enter">⌘↵</kbd></button><button id="dlgCancel">Cancel</button><span class="hint" id="dlgMsg"></span></div>
+  </div>
+</div>
+
+<div id="fbBar" class="fb-bar hidden" role="region" aria-label="Feedback"></div>
+
+<script src="/static/review-marks.js"></script>
+<script src="/static/review.js"></script>
+<script src="/static/review-thread.js"></script>
+</body>
+</html>

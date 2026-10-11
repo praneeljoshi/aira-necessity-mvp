@@ -1,0 +1,212 @@
+{
+ "file": "bcbsfl-02-40000-10-bariatric-surgery.pdf",
+ "treatment": "bariatric-surgery",
+ "payer": "bcbsfl",
+ "doc_kind": "medical coverage guideline (Florida Blue MCG)",
+ "lines_of_business": [
+  "All lines of business unless noted in Program Exceptions: 'APPLIES TO ALL LINES OF BUSINESS UNLESS OTHERWISE NOTED'",
+  "FEP: follow FEP guidelines",
+  "SAO: follow SAO guidelines",
+  "Medicare Advantage: NCD 100.1 and LCD L33411 reviewed"
+ ],
+ "effective_or_revised": "Original 10/15/99; Reviewed 01/22/26; Revised 02/15/26",
+ "sections_in_order": [
+  "Description (with Review and Analysis of Evidence)",
+  "Position Statement",
+  "Billing/Coding Information (CPT, HCPCS, LOINC documentation table)",
+  "Reimbursement Information",
+  "Program Exceptions",
+  "Definitions",
+  "Related Guidelines",
+  "Other",
+  "References",
+  "Updates"
+ ],
+ "criteria_location": "Position Statement only (pp.2-4 approx): procedure list, 'Selection criteria' for Adults and Adolescents, an experimental/investigational list, then 'Revision bariatric surgery'. LOINC table in Billing/Coding adds documentation expectations (TSH, psychosocial assessment, BMI).",
+ "procedures_covered": [
+  "Open/lap Roux-en-Y gastric bypass (up to 150cm)",
+  "Laparoscopic adjustable gastric banding",
+  "BPD with or without duodenal switch",
+  "Sleeve gastrectomy",
+  "Vertical banded gastroplasty",
+  "Revision bariatric surgery",
+  "~20 listed experimental/investigational procedures (OAGB, SADI-S, ESG, balloons, TORe, two-stage, etc.)"
+ ],
+ "logic": {
+  "top_level": "pathways (Adults, Adolescents; each an AND list whose first item is an OR of two BMI paths)",
+  "max_nesting_depth": 3,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "Separate list of procedures 'considered experimental or investigational'; no patient-level contraindications except 'Does not have a medically treatable cause for obesity'. Revision stretching due to overeating is declared not medically necessary.",
+  "initial_vs_repeat": "Separate 'Revision bariatric surgery' section: complication list meets criteria; dilation revision needs ALL of 3 items; stretching 'due to overeating, is not considered a surgical complication'.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Class III obesity (BMI ≥ 40 kg/m2), OR Class II obesity (BMI 35.0 to 39.9 kg/m2), with at least one comorbidity ... AND Does not have a medically treatable cause ... AND Has made multiple attempts ... AND Has received psychological or psychiatric evaluation",
+    "why_ambiguous": "Flat bullets alternating OR and AND with no grouping; reader must infer that (BMI-A OR BMI-B) AND the three others. A parser reading left-to-right could bind the AND items to the Class II branch only."
+   },
+   {
+    "quote": "Revision bariatric surgery ... (e.g., obstruction, stricture, ... weight loss of 20% or more below ideal body weight) meets the definition of medical necessity.",
+    "why_ambiguous": "The e.g. list is open-ended; unclear whether any other complication qualifies."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "BMI/comorbidity",
+   "quote": "Class III obesity (BMI ≥ 40 kg/m2), OR Class II obesity (BMI 35.0 to 39.9 kg/m2), with at least one comorbidity refractory to medical management",
+   "where": "Position Statement, Adults"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "Does not have a medically treatable cause for obesity (e.g., thyroid or other endocrine disorder)",
+   "where": "Adults/Adolescents"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "Has made multiple attempts at non-surgical weight loss (e.g., diet, exercise, medications)",
+   "where": "Adults/Adolescents"
+  },
+  {
+   "kind": "psych/nutrition evaluation",
+   "quote": "Has received psychological or psychiatric evaluation with counseling as needed, prior to surgical intervention",
+   "where": "Adults"
+  },
+  {
+   "kind": "age",
+   "quote": "Adolescents (< age 18 years)",
+   "where": "Position Statement"
+  },
+  {
+   "kind": "other",
+   "quote": "Has attained a minimum of Tanner stage 4 or 5 pubertal development and final or near-final adult height",
+   "where": "Adolescents"
+  },
+  {
+   "kind": "psych/nutrition evaluation",
+   "quote": "Psychological evaluation confirms the stability and competence of the family unit",
+   "where": "Adolescents"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "physician history and physical (including co-morbidities and history of attempt(s) of non-surgical weight-loss program(s), ... laboratory studies (including most recent TSH level), psychosocial assessment, height, weight and BMI",
+   "where": "Billing/Coding, LOINC paragraph"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "Revision of a primary bariatric procedure that has failed due to dilation ... ALL of: documented by upper GI or endoscopy; initial procedure induced weight loss; compliant with nutrition and exercise program",
+   "where": "Revision section"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "BMI class III",
+   "value": "≥40",
+   "unit": "kg/m2",
+   "quote": "Class III obesity (BMI ≥ 40 kg/m2)"
+  },
+  {
+   "quantity": "BMI class II",
+   "value": "35.0-39.9",
+   "unit": "kg/m2",
+   "quote": "Class II obesity (BMI 35.0 to 39.9 kg/m2)"
+  },
+  {
+   "quantity": "BMI for T2DM surgery",
+   "value": "<35 is investigational",
+   "unit": "kg/m2",
+   "quote": "treatment of type 2 diabetes in individuals with a BMI < 35 kg/m2"
+  },
+  {
+   "quantity": "Tanner stage",
+   "value": "4 or 5",
+   "unit": "stage",
+   "quote": "minimum of Tanner stage 4 or 5"
+  },
+  {
+   "quantity": "Revision for weight loss below ideal",
+   "value": "20% or more below IBW",
+   "unit": "%",
+   "quote": "weight loss of 20% or more below ideal body weight"
+  },
+  {
+   "quantity": "Roux limb",
+   "value": "up to 150",
+   "unit": "cm",
+   "quote": "Roux-en-Y gastric bypass (RYGB) (up to 150cm)"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "LOINC documentation lookback",
+   "length": "6 months before date of service",
+   "quote": "observations made six months or fewer before starting date of service"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Listed in a flat table, not mapped to criteria; investigational ones flagged only by '(investigational)' tags on 0813T, 43290, 43291, 43889, C9785. Some covered-list procedures (VBG 43842, BPD) have codes but list is by code not by procedure name.",
+  "non_covered_code_lists": "Only inline '(investigational)' tags; no separate list"
+ },
+ "external_dependencies": [
+  {
+   "what": "Medicare Advantage: NCD 100.1 and LCD L33411",
+   "quote": "NCDs were reviewed ... Bariatric Surgery for Treatment of Co-Morbid Conditions Related to Morbid Obesity (100.1)"
+  },
+  {
+   "what": "Member contract can exclude",
+   "quote": "Bariatric surgery may be excluded by contract."
+  },
+  {
+   "what": "Florida step-therapy exemption statute",
+   "quote": "in compliance with Florida law 627.42393"
+  },
+  {
+   "what": "Related guideline Reconstructive/Cosmetic 02-12000-01",
+   "quote": "Reconstructive Surgery/Cosmetic Surgery, 02-12000-01"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Tanner staging",
+   "definition_quote": "also known as the sexual maturity rating; breaks down the visible changes during puberty"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "multiple attempts at non-surgical weight loss",
+   "problem": "'multiple' undefined; no duration, supervision, or documentation standard"
+  },
+  {
+   "quote": "comorbidity refractory to medical management",
+   "problem": "'refractory' undefined; no duration or drug trial"
+  },
+  {
+   "quote": "psychological or psychiatric evaluation with counseling as needed",
+   "problem": "no clearance requirement; 'as needed' undefined"
+  },
+  {
+   "quote": "final or near-final adult height",
+   "problem": "no growth-plate measure given"
+  },
+  {
+   "quote": "at least one comorbidity ... (e.g., ... GERD, osteoarthritis, pseudotumor comorbidities)",
+   "problem": "open list; 'pseudotumor comorbidities' odd phrase; no severity thresholds (no AHI, HbA1c, BP values)"
+  }
+ ],
+ "extraction_hazards": [
+  "Bullets are glyph characters in pdftotext output; OR/AND are at line ends and easy to lose",
+  "Adolescent bullet list is split across a page break (psych/Tanner items start on next page)",
+  "Procedure lists are bullets without codes; codes live in separate billing table",
+  "Navigation-bar text (Position Statement / Billing/Coding ...) repeated at top"
+ ],
+ "interesting_structures": [
+  "Experimental list is long (~20 items) and includes procedures other payers cover (SADI-S, ESG, OAGB)",
+  "Revision section contains an explicit not-medically-necessary carve-out (overeating)",
+  "Weight/BMI documentation required by LOINC table, not by criteria text"
+ ],
+ "fit_to_tree": {
+  "score": 2,
+  "scale": "1-5",
+  "why": "Mostly clean all/any with one flat-bullet OR/AND grouping problem; vague leaves ('multiple attempts', 'refractory') need judgment."
+ }
+}

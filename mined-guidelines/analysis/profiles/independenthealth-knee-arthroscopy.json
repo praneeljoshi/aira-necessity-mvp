@@ -1,0 +1,137 @@
+{
+ "file": "independenthealth-knee-arthroscopy.pdf",
+ "treatment": "knee-arthroscopy",
+ "payer": "independent-health",
+ "doc_kind": "Medicaid policy",
+ "lines_of_business": [
+  "State Products: MediSource; MediSource Connect; Child Health Plus; Essential Plan",
+  "Medicare, Commercial, Self-funded boxes unchecked"
+ ],
+ "effective_or_revised": "Effective 6/1/2013; version control last row 4/1/2026 Reviewed",
+ "sections_in_order": [
+  "Header/applicability block",
+  "Purpose and Applicability",
+  "Policy",
+  "Background",
+  "Pre-Authorization Required?",
+  "Definitions",
+  "References",
+  "Version Control"
+ ],
+ "criteria_location": "Policy, p.2: a not-covered list (3 items) and a short covered-indicator list (4 items). Outerbridge definition p.2-3. About one page of actual criteria.",
+ "procedures_covered": [
+  "Arthroscopic lavage",
+  "Arthroscopic debridement for knee OA"
+ ],
+ "logic": {
+  "top_level": "other (exclusion list plus exception list; no all-of criteria for approval)",
+  "max_nesting_depth": 2,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "The policy is mostly an exclusion list: lavage alone; debridement for OA with knee pain only; lavage with or without debridement in severe OA (Outerbridge III-IV).",
+  "initial_vs_repeat": "None.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Unless there are specific indicators in addition to pain, Independent Health will not cover arthroscopic debridement and lavage of the knee in the context of OA alone. Specific indicators ... Loose bodies; Unstable flaps of articular cartilage; Disruption of the meniscus; Impinging osteophytes.",
+    "why_ambiguous": "Any one indicator suffices? But the third excluded item (severe OA, grade III-IV) is stated without an exception; unclear whether an indicator overrides severe OA."
+   },
+   {
+    "quote": "Arthroscopic lavage with or without debridement in members presenting with severe osteoarthritis",
+    "why_ambiguous": "Overlaps with the indicators list: a meniscal disruption in grade III OA is both excluded and a covered indicator."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "exclusion",
+   "quote": "Arthroscopic lavage used alone",
+   "where": "Policy"
+  },
+  {
+   "kind": "exclusion",
+   "quote": "Arthroscopic debridement for osteoarthritis in members presenting with knee pain only",
+   "where": "Policy"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "severe osteoarthritis as defined in the Outerbridge classification scale, grades III and IV",
+   "where": "Policy; Definitions"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "Loose bodies; Unstable flaps of articular cartilage; Disruption of the meniscus; Impinging osteophytes",
+   "where": "Policy: covered indicators"
+  },
+  {
+   "kind": "documentation/photos",
+   "quote": "Pre-authorization is not required at the present time. Criteria above will be utilized upon retro-review.",
+   "where": "Pre-Authorization"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "Outerbridge severe OA",
+   "value": "III-IV",
+   "unit": "grade",
+   "quote": "Grades III and IV are characteristic of severe osteoarthritis"
+  },
+  {
+   "quantity": "Outerbridge II/III area",
+   "value": "<1 cm / >1 cm",
+   "unit": "cm",
+   "quote": "Grade II is defined as fragmentation or fissuring in an area <1 cm"
+  }
+ ],
+ "time_windows": [],
+ "codes": {
+  "cpt_hcpcs_listed": false,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "No codes at all.",
+  "non_covered_code_lists": "None"
+ },
+ "external_dependencies": [
+  {
+   "what": "New York State Medicaid criteria and Medicaid Update bulletins (2012)",
+   "quote": "Per New York State criteria, knee arthroscopy using debridement and lavage as a treatment for osteoarthritis is not covered."
+  },
+  {
+   "what": "Member contract and eligibility",
+   "quote": "payment for covered services is subject to eligibility criteria, contract exclusions and the limitations noted in the member's contract"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "Outerbridge grades III/IV = severe OA",
+   "definition_quote": "NOTE: Grades III and IV are characteristic of severe osteoarthritis"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "specific indicators in addition to pain",
+   "problem": "Undefined; list is of findings, not of required documentation."
+  },
+  {
+   "quote": "Disruption of the meniscus",
+   "problem": "No tear type, no imaging requirement, no conservative therapy."
+  },
+  {
+   "quote": "Pre-authorization is not required",
+   "problem": "There is no prior-auth gate; criteria apply only at retrospective review."
+  }
+ ],
+ "extraction_hazards": [
+  "Checkbox glyphs (\u2610 \u2612) carry the line-of-business meaning",
+  "Page footer 'Pag e |1' broken text",
+  "Outerbridge definition list split across a page break",
+  "Version-control table spans a page"
+ ],
+ "interesting_structures": [
+  "Retro-review only, no prior authorization",
+  "Not-covered-first structure; approval is by exception indicators",
+  "Grade definitions differ from other payers (grade II <1 cm vs <1.5 cm)",
+  "Policy dated 2013 but reviewed 2026"
+ ],
+ "fit_to_tree": {
+  "score": 2,
+  "why": "Tiny, but it is a NOT tree with an exception list, and the severe-OA exclusion versus indicator override is not resolved in the text."
+ }
+}

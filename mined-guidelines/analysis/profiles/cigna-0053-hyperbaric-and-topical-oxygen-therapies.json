@@ -1,0 +1,156 @@
+{
+ "payer": "cigna",
+ "doc_kind": "coverage policy",
+ "lines_of_business": [
+  "Health benefit plans administered by Cigna Companies; some markets use delegated vendor guidelines"
+ ],
+ "effective_or_revised": "Effective 5/15/2026; next review 5/15/2027",
+ "sections_in_order": [
+  "Overview",
+  "Coverage Policy",
+  "Coding Information",
+  "General Background",
+  "Health Equity Considerations",
+  "References",
+  "Revision Details"
+ ],
+ "criteria_location": "Coverage Policy, pp.2-4 only. Pages 4-27 are evidence review; 28-38 references.",
+ "procedures_covered": [
+  "Systemic HBOT 99183, G0277",
+  "Topical oxygen therapy A4575 (covered for DFU)"
+ ],
+ "logic": {
+  "top_level": "pathways (three lists: first-line, adjunctive, not medically necessary; TOT separate)",
+  "max_nesting_depth": 1,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "Explicit NMN list of ~45 conditions ('ANY of the following conditions'). Not a default-deny as FL is, though TOT 'not medically necessary for any other indication'.",
+  "initial_vs_repeat": "None stated. No session counts.",
+  "and_or_ambiguity": [
+   {
+    "quote": "considered medically necessary first-line treatment for ALL of the following conditions",
+    "why_ambiguous": "Capitalized ALL means each listed condition qualifies, not that a patient needs all; literal parsing as 'all' is wrong."
+   },
+   {
+    "quote": "considered not medically necessary for ANY of the following conditions",
+    "why_ambiguous": "ANY here is a NOT over each condition."
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "diagnosis",
+   "quote": "acute carbon monoxide poisoning; air or gas embolism; decompression sickness; exceptional blood loss when transfusion is not an option",
+   "where": "Coverage Policy p.2"
+  },
+  {
+   "kind": "other",
+   "quote": "medically necessary adjunctive treatment",
+   "where": "Coverage Policy p.2 (first-line vs adjunctive label)"
+  },
+  {
+   "kind": "measurement threshold",
+   "quote": "Wagner grade III or higher diabetic wounds/ulcers of the lower extremities that have failed standard wound therapy",
+   "where": "p.3"
+  },
+  {
+   "kind": "duration",
+   "quote": "idiopathic sudden sensorineural hearing loss (ISSHL) within four weeks of symptom onset",
+   "where": "p.2"
+  },
+  {
+   "kind": "symptom",
+   "quote": "thermal burns, acute, requiring inpatient hospitalization",
+   "where": "p.3"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "acute cyanide poisoning, after administration of antidote",
+   "where": "p.2"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "Topical oxygen therapy (TOT) ... diabetic foot ulcer that has failed to heal with optimal standard of care",
+   "where": "p.4"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "Wagner grade",
+   "value": ">= III",
+   "unit": "grade",
+   "quote": "Wagner grade III or higher"
+  },
+  {
+   "quantity": "ISSHL onset window",
+   "value": "<= 4",
+   "unit": "weeks",
+   "quote": "within four weeks of symptom onset"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "ISSHL from symptom onset",
+   "length": "four weeks",
+   "quote": "within four weeks of symptom onset"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "CPT/HCPCS 'Considered Medically Necessary when criteria in the applicable policy statements listed above are met'; TOT A4575 tied to the DFU criterion.",
+  "non_covered_code_lists": "none"
+ },
+ "external_dependencies": [
+  {
+   "what": "delegated vendor guidelines in certain markets",
+   "quote": "In certain markets, delegated vendor guidelines may be used to support medical necessity"
+  }
+ ],
+ "definitions_that_change_meaning": [
+  {
+   "term": "compromised skin grafts and flaps",
+   "definition_quote": "preexisting grafts or flaps that are showing signs of failure or necrosis"
+  }
+ ],
+ "vague_terms": [
+  {
+   "quote": "failed standard wound therapy",
+   "problem": "no duration, no definition of standard therapy"
+  },
+  {
+   "quote": "optimal standard of care",
+   "problem": "undefined"
+  },
+  {
+   "quote": "osteomyelitis unresponsive to conventional medical and surgical interventions",
+   "problem": "no duration"
+  },
+  {
+   "quote": "exceptional blood loss when transfusion is not an option",
+   "problem": "no threshold; 'not an option' unexplained"
+  },
+  {
+   "quote": "first-line vs adjunctive",
+   "problem": "labels with no different criteria attached"
+  }
+ ],
+ "extraction_hazards": [
+  "Criteria are 3 pages inside a 39-page document dominated by evidence review",
+  "Bullets split across a page break (p.2/p.3)",
+  "Two lists use ALL/ANY in caps with meaning opposite to the logical reading",
+  "Revision Details table records changes (TOT moved to covered 9/15/2025, avascular necrosis 5/15/2025)"
+ ],
+ "interesting_structures": [
+  "Covers topical oxygen for DFU, unlike FL",
+  "Avascular necrosis and CRAO covered",
+  "Two-tier label first-line vs adjunctive without extra criteria",
+  "Only payer with an NMN list for pressure ulcers, venous stasis ulcers, COVID-19"
+ ],
+ "fit_to_tree": {
+  "score": 2,
+  "scale": "1 = all/any/not expresses it cleanly ... 5 = needs new constructs",
+  "why": "Pure any-of list; one leaf pair (Wagner III+, failed standard therapy) for diabetic wounds. Difficulty is the capitalized ALL/ANY and undefined 'failed'."
+ },
+ "file": "cigna-0053-hyperbaric-and-topical-oxygen-therapies.pdf",
+ "treatment": "hyperbaric-oxygen"
+}

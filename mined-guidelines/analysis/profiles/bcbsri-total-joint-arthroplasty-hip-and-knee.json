@@ -1,0 +1,273 @@
+{
+ "file": "bcbsri-total-joint-arthroplasty-hip-and-knee.pdf",
+ "treatment": "hip-arthroplasty",
+ "payer": "bcbsri",
+ "doc_kind": "medical policy",
+ "lines_of_business": [
+  "Commercial Products only; Medicare Advantage see Related Policies"
+ ],
+ "effective_or_revised": "Effective 03|01|2025; Policy last reviewed 08|05|2026",
+ "sections_in_order": [
+  "Overview",
+  "Medical Criteria (TKA, Revision TKA, THA, Revision THA)",
+  "Prior Authorization",
+  "Policy Statement",
+  "Coverage",
+  "Background",
+  "Coding",
+  "Related Policies",
+  "Published",
+  "References"
+ ],
+ "criteria_location": "Medical Criteria pp.1-7; THA pp.4-6 and Replacement/Revision Hip pp.6-7. Knee criteria share the document.",
+ "procedures_covered": [
+  "Total hip arthroplasty (27130, 27132)",
+  "Revision hip (27134, 27137, 27138)",
+  "Total knee arthroplasty (27447) and revision knee (27486, 27487)"
+ ],
+ "logic": {
+  "top_level": "pathways (six THA indications), each an ALL list; revision: ALL(age, any of 6) with sub-pathways",
+  "max_nesting_depth": 5,
+  "k_of_n": [
+   {
+    "k": 2,
+    "n": 4,
+    "quote": "Must have at least 2 of the following: Pain increased with initiation of activity / weight bearing / interferes with ADLs / pain with ROM"
+   },
+   {
+    "k": 2,
+    "n": 5,
+    "quote": "has at least 2 of the following 5 findings: Subchondral cysts, sclerosis, osteophytes, subluxation, joint space narrowing"
+   },
+   {
+    "k": 2,
+    "n": 4,
+    "quote": "Must have 2 of the following: Temperature > 100.4 F; Synovial WBC; ESR > 30; CRP"
+   }
+  ],
+  "exclusions_or_contraindications": "Expressed as positive requirements in every pathway: no active infection, BMI < 40, tobacco 4 weeks off, HgbA1C < 8.1% or not diabetic.",
+  "initial_vs_repeat": "Revision is a separate section (removal and replacement); no repeat limits.",
+  "and_or_ambiguity": [
+   {
+    "quote": "Must have at least ONE of the following (Needs to meet 1 or 2): 1. Imaging shows bone-on-bone contact OR 2. There is no bone-on-bone contact, but has at least 2 of the following 5 findings ... AND must meet ALL the following",
+    "why_ambiguous": "The AND (conservative therapy) is attached to branch 2 only by indentation; branch 1 (bone-on-bone) may need no conservative therapy at all."
+   },
+   {
+    "quote": "AND ALL of the following for the above indications (1, 2, 3, 4)",
+    "why_ambiguous": "Shared modifier for revision reasons 1-4 only, positioned under item 4, so scope is by label not layout."
+   },
+   {
+    "quote": "Joint infection onset within 4 weeks of total joint replacement or new joint symptoms and findings ≤ 3 weeks",
+    "why_ambiguous": "implicit OR inside one sentence"
+   },
+   {
+    "quote": "Intertrochanteric or subtrochanteric fracture and repair has failed or not feasible",
+    "why_ambiguous": "fracture and failure conjunction vs two cases"
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "age",
+   "quote": "Individual is 18 years old or older",
+   "where": "every pathway"
+  },
+  {
+   "kind": "symptom",
+   "quote": "Must have at least 2 of the following: Pain increased with initiation of activity; ... weight bearing; ... interferes with ADLs; Pain with ROM",
+   "where": "THA OA p.4"
+  },
+  {
+   "kind": "symptom",
+   "quote": "Must have BOTH of the following: Limited range of motion (ROM); Antalgic gait",
+   "where": "p.4"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "Imaging shows bone-on-bone contact OR ... at least 2 of the following 5 findings",
+   "where": "p.4"
+  },
+  {
+   "kind": "conservative therapy",
+   "quote": "tried ALL of the following within the last year: NSAIDs or acetaminophen >3 weeks; PT or home exercise >12 weeks; Activity modification >12 weeks",
+   "where": "p.4"
+  },
+  {
+   "kind": "BMI/comorbidity",
+   "quote": "Obesity: BMI <40",
+   "where": "p.4"
+  },
+  {
+   "kind": "BMI/comorbidity",
+   "quote": "Tobacco use: 4 weeks off of tobacco use prior to scheduled surgery",
+   "where": "p.4"
+  },
+  {
+   "kind": "lab value",
+   "quote": "Diabetes control: HgbA1C < 8.1% OR not diabetic",
+   "where": "p.4"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "There is no active infection",
+   "where": "p.4"
+  },
+  {
+   "kind": "imaging finding",
+   "quote": "There is stage III or IV collapse of femoral head",
+   "where": "AVN p.5"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "Acute hip fracture by imaging: comminuted or impacted acetabular; displaced femoral head or neck; intertrochanteric...",
+   "where": "p.6"
+  },
+  {
+   "kind": "lab value",
+   "quote": "ESR > 30 mm/hr; Temperature > 100.4 F",
+   "where": "revision infection p.6-7"
+  },
+  {
+   "kind": "other",
+   "quote": "Prior authorization is recommended for Commercial Products and is obtained via the online tool",
+   "where": "p.7"
+  }
+ ],
+ "thresholds": [
+  {
+   "quantity": "BMI",
+   "value": "< 40",
+   "unit": "kg/m2",
+   "quote": "Obesity: BMI <40"
+  },
+  {
+   "quantity": "HbA1c",
+   "value": "< 8.1",
+   "unit": "%",
+   "quote": "HgbA1C < 8.1% OR not diabetic"
+  },
+  {
+   "quantity": "tobacco abstinence",
+   "value": ">= 4",
+   "unit": "weeks before surgery",
+   "quote": "4 weeks off of tobacco use prior to scheduled surgery"
+  },
+  {
+   "quantity": "PT/HEP",
+   "value": "> 12",
+   "unit": "weeks",
+   "quote": "PT or home exercise >12 weeks"
+  },
+  {
+   "quantity": "NSAIDs",
+   "value": "> 3",
+   "unit": "weeks",
+   "quote": "NSAIDs or acetaminophen >3 weeks"
+  },
+  {
+   "quantity": "age",
+   "value": ">= 18",
+   "unit": "years",
+   "quote": "Individual is 18 years old or older"
+  },
+  {
+   "quantity": "ESR",
+   "value": "> 30",
+   "unit": "mm/hr",
+   "quote": "ESR > 30 mm/hr"
+  },
+  {
+   "quantity": "temperature",
+   "value": "> 100.4",
+   "unit": "F",
+   "quote": "Temperature > 100.4 F (38.0 C)"
+  },
+  {
+   "quantity": "thigh pain",
+   "value": "> 6",
+   "unit": "months",
+   "quote": "Thigh pain > 6 months"
+  },
+  {
+   "quantity": "IV anti-infectives",
+   "value": "> 4",
+   "unit": "weeks",
+   "quote": "IV anti-infectives >4 weeks"
+  }
+ ],
+ "time_windows": [
+  {
+   "what": "conservative therapy look-back",
+   "length": "within last year",
+   "quote": "within the last year"
+  },
+  {
+   "what": "PT/HEP",
+   "length": ">12 weeks",
+   "quote": "PT or home exercise >12 weeks"
+  },
+  {
+   "what": "tobacco",
+   "length": "4 weeks",
+   "quote": "4 weeks off of tobacco use"
+  },
+  {
+   "what": "infection onset",
+   "length": "4 weeks of joint replacement; symptoms <= 3 weeks",
+   "quote": "Joint infection onset within 4 weeks of total joint replacement or new joint symptoms and findings ≤ 3 weeks"
+  }
+ ],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Listed in a hip/knee block ('medically necessary ... when the medical criteria has been met'); one list for all pathways.",
+  "non_covered_code_lists": "none"
+ },
+ "external_dependencies": [
+  {
+   "what": "Medicare Advantage via NCD/LCDs",
+   "quote": "Medicare Advantage Plans National and Local Coverage Determinations"
+  },
+  {
+   "what": "Prior authorization policy",
+   "quote": "Prior Authorization of Services, Treatments or Procedures"
+  },
+  {
+   "what": "InterQual and MCG cited",
+   "quote": "InterQual® 2026 Procedures Adult Criteria, Total Joint Replacement, Knee and Hip"
+  }
+ ],
+ "definitions_that_change_meaning": [],
+ "vague_terms": [
+  {
+   "quote": "Synovial WBC or neutrophil percentage > normal",
+   "problem": "'normal' not defined"
+  },
+  {
+   "quote": "C-reactive protein > normal",
+   "problem": "lab-specific reference range"
+  },
+  {
+   "quote": "Prior authorization is recommended",
+   "problem": "recommended, not required"
+  }
+ ],
+ "extraction_hazards": [
+  "Knee and hip criteria interleaved in one document; labels (a,b,c...) and numbering with duplicates (two 'c.' items in THA #3; a-b-d lettering in revision infection)",
+  "Bullets turn into odd glyphs (▪, o, •) with nesting indicated only by indent",
+  "Page footer in middle of lists",
+  "OCR-like duplication: '1. Subchondral cysts' numbering inside bullets",
+  "'And The individual must have tried' stray words",
+  "Revision hip infection branch has two near-identical copies"
+ ],
+ "interesting_structures": [
+  "Fully explicit coded structure ('meeting all of the following (a,b,c,d,e,f,g,h)')",
+  "Same comorbidity block (age, infection, BMI, tobacco, HbA1c) repeated in every pathway",
+  "Alternative paths inside a pathway: imaging bone-on-bone vs two findings plus conservative therapy",
+  "Revision infection decision tree with lab thresholds"
+ ],
+ "fit_to_tree": {
+  "score": 2,
+  "why": "Highly explicit all/any/k-of-n with numeric leaves; only scoping of ANDs by indentation and a few typos strain it."
+ }
+}

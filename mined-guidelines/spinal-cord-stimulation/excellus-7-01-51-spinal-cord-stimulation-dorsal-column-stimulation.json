@@ -1,0 +1,19 @@
+{
+  "payer": "Excellus BCBS",
+  "payer_key": "excellus",
+  "treatment": "spinal-cord-stimulation",
+  "title": "Spinal Cord Stimulation / Dorsal Column Stimulation",
+  "policy_number": "7.01.51",
+  "effective": "",
+  "url": "https://provider.excellusbcbs.com/documents/d/global/exc-prv-spinal-cord-stimulation-dorsal-column-stimulation",
+  "final_url": "https://provider.excellusbcbs.com/documents/d/global/exc-prv-spinal-cord-stimulation-dorsal-column-stimulation",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "excellus-7-01-51-spinal-cord-stimulation-dorsal-column-stimulation.pdf",
+  "sha256": "2bdd35344bd6c63179e5b46e9af9f5802a1724cdff608d7ceb1593c93e9f6e26",
+  "pages": 14,
+  "bytes": 247477,
+  "retrieved": "2026-10-09",
+  "printed_date": "Current effective 09/15/23; original 11/15/01"
+}

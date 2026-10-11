@@ -1,0 +1,20 @@
+{
+  "payer": "Florida Blue (BCBSFL)",
+  "payer_key": "bcbsfl",
+  "treatment": "cervical-spine-surgery",
+  "title": "Cervical Spine Surgery",
+  "category": "Surgery",
+  "url": "https://mcgs.bcbsfl.com/MCG?activity=openSearchedDocMcg&imgId=76JI7IGFQ56WFJ20L7T",
+  "source_format": "pdf",
+  "anchor": true,
+  "policy_number": "02-20000-45",
+  "original_effective": "07/01/15",
+  "reviewed": "03/26/26",
+  "revised": "04/15/26",
+  "file": "bcbsfl-02-20000-45-cervical-spine-surgery.pdf",
+  "sha256": "31f38e33c152d7151d653f16b1dce06fa485b06eb0fd9baba8fb08bf78d6d188",
+  "pages": 10,
+  "bytes": 180512,
+  "retrieved": "2026-10-09",
+  "printed_date": "Original 07/01/15; Reviewed 03/26/26; Revised 04/15/26 (10 pages)"
+}

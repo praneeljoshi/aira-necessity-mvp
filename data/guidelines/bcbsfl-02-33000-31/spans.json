@@ -1,0 +1,3313 @@
+{
+  "id": "bcbsfl-02-33000-31",
+  "sha256": "9c5e1989cf9cfdf45ae9826e896a342a520506ca6a59f7daaa89c04c8fd1ca0f",
+  "filename": "fl_varicose_veins_guideline.pdf",
+  "spans": [
+    {
+      "id": "g0001",
+      "text": "02-33000-31",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0002",
+      "text": "Original Effective Date: 02/15/02",
+      "page": 1,
+      "blank_before": true
+    },
+    {
+      "id": "g0003",
+      "text": "Reviewed: 07/24/25",
+      "page": 1,
+      "blank_before": true
+    },
+    {
+      "id": "g0004",
+      "text": "Revised: 01/01/26",
+      "page": 1,
+      "blank_before": true
+    },
+    {
+      "id": "g0005",
+      "text": "Subject: Treatments for Varicose Veins/Venous",
+      "page": 1,
+      "blank_before": true
+    },
+    {
+      "id": "g0006",
+      "text": "Insufficiency",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0007",
+      "text": "THIS MEDICAL COVERAGE GUIDELINE IS NOT AN AUTHORIZATION, CERTIFICATION, EXPLANATION OF BENEFITS, OR A",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0008",
+      "text": "GUARANTEE OF PAYMENT, NOR DOES IT SUBSTITUTE FOR OR CONSTITUTE MEDICAL ADVICE. ALL MEDICAL DECISIONS ARE",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0009",
+      "text": "SOLELY THE RESPONSIBILITY OF THE PATIENT AND PHYSICIAN. BENEFITS ARE DETERMINED BY THE GROUP CONTRACT,",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0010",
+      "text": "MEMBER BENEFIT BOOKLET, AND/OR INDIVIDUAL SUBSCRIBER CERTIFICATE IN EFFECT AT THE TIME SERVICES WERE",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0011",
+      "text": "RENDERED. THIS MEDICAL COVERAGE GUIDELINE APPLIES TO ALL LINES OF BUSINESS UNLESS OTHERWISE NOTED IN THE",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0012",
+      "text": "PROGRAM EXCEPTIONS SECTION.",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0013",
+      "text": "     Position                                             Program",
+      "page": 1,
+      "blank_before": true
+    },
+    {
+      "id": "g0014",
+      "text": "                    Billing/Coding   Reimbursement                          Definitions    Related Guidelines",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0015",
+      "text": "    Statement                                            Exceptions",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0016",
+      "text": "      Other          References          Updates",
+      "page": 1,
+      "blank_before": true
+    },
+    {
+      "id": "g0017",
+      "text": "DESCRIPTION:",
+      "page": 1,
+      "blank_before": true
+    },
+    {
+      "id": "g0018",
+      "text": "A variety of treatment modalities are available to treat varicose veins/venous insufficiency, including",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0019",
+      "text": "surgery, thermal ablation, mechanochemical ablation (MOCA), cyanoacrylate adhesive (CAC), and",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0020",
+      "text": "sclerotherapy. The application of each modality is influenced by the severity of the symptoms, type of",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0021",
+      "text": "vein, source of venous reflux, and the use of other (prior or concurrent) treatment.",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0022",
+      "text": "Treatment of venous reflux/venous insufficiency seeks to reduce abnormal pressure transmission from",
+      "page": 1,
+      "blank_before": true
+    },
+    {
+      "id": "g0023",
+      "text": "the deep to the superficial veins. Conservative medical treatment consists of elevation of the",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0024",
+      "text": "extremities, graded compression, and wound care when indicated. Conventional surgical treatment",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0025",
+      "text": "consists of identifying and correcting the site of reflux by ligation of the incompetent junction followed",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0026",
+      "text": "by stripping of the vein to redirect venous flow through veins with intact valves. While most venous",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0027",
+      "text": "reflux is secondary to incompetent valves at the saphenofemoral or saphenopopliteal junctions, reflux",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0028",
+      "text": "may also occur at incompetent valves in the perforator veins or the deep venous system. The",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0029",
+      "text": "competence of any single valve is not static and may be pressure-dependent. For example, accessory",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0030",
+      "text": "saphenous veins may have independent saphenofemoral or saphenopopliteal junctions that become",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0031",
+      "text": "incompetent when the great or small saphenous veins are eliminated, and blood flow is diverted",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0032",
+      "text": "through the accessory veins.",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0033",
+      "text": "POSITION STATEMENT:",
+      "page": 1,
+      "blank_before": true
+    },
+    {
+      "id": "g0034",
+      "text": "Great or Small Saphenous Veins",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0035",
+      "text": "Treatment of the great or small saphenous veins by surgery (ligation and stripping), endovenous",
+      "page": 1,
+      "blank_before": true
+    },
+    {
+      "id": "g0036",
+      "text": "radiofrequency, laser ablation, microfoam sclerotherapy, or cyanoacrylate adhesive meets the",
+      "page": 1,
+      "blank_before": false
+    },
+    {
+      "id": "g0037",
+      "text": "definition of medical necessity for symptomatic varicose veins/venous insufficiency when the following",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0038",
+      "text": "criteria have been met:",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0039",
+      "text": "   \u2022   There is demonstrated saphenous reflux and CEAP (Clinical-Etiology-Anatomy-Pathophysiology)",
+      "page": 2,
+      "blank_before": true
+    },
+    {
+      "id": "g0040",
+      "text": "       class C2* or greater; AND",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0041",
+      "text": "   \u2022   The varicosities are at least 3 millimeters in size AND",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0042",
+      "text": "   \u2022   There is documentation of one or more of the following indications:",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0043",
+      "text": "       1. Ulceration secondary to venous stasis; OR",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0044",
+      "text": "       2. Recurrent superficial thrombophlebitis; OR",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0045",
+      "text": "       3. Hemorrhage or recurrent bleeding episodes from a ruptured superficial varicosity; OR",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0046",
+      "text": "       4. Persistent pain, swelling, itching, burning, or other symptoms are associated with saphenous",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0047",
+      "text": "          reflux, AND the symptoms significantly interfere with activities of daily living, AND",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0048",
+      "text": "          conservative management including compression therapy for at least 3 months has not",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0049",
+      "text": "          improved the symptoms.",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0050",
+      "text": "Treatment of great or small saphenous veins by surgery, endovenous radiofrequency, laser ablation,",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0051",
+      "text": "microfoam sclerotherapy, or cyanoacrylate adhesive that do not meet the criteria described above is",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0052",
+      "text": "considered cosmetic and does not meet the definition of medical necessity.",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0053",
+      "text": "Accessory Saphenous Veins",
+      "page": 2,
+      "blank_before": true
+    },
+    {
+      "id": "g0054",
+      "text": "Treatment of accessory saphenous veins by surgery (ligation and stripping), endovenous radiofrequency,",
+      "page": 2,
+      "blank_before": true
+    },
+    {
+      "id": "g0055",
+      "text": "laser ablation, microfoam sclerotherapy, or cyanoacrylate adhesive meets the definition of medical",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0056",
+      "text": "necessity for symptomatic varicose veins/venous insufficiency when the following criteria have been",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0057",
+      "text": "met:",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0058",
+      "text": "   \u2022   Incompetence of the accessory saphenous vein is isolated, or the great or small saphenous veins",
+      "page": 2,
+      "blank_before": true
+    },
+    {
+      "id": "g0059",
+      "text": "       had been previously eliminated (at least 3 months); AND",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0060",
+      "text": "   \u2022   There is demonstrated accessory saphenous reflux; AND",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0061",
+      "text": "   \u2022   The varicosities are at least 3 millimeters in size AND",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0062",
+      "text": "   \u2022   There is documentation of one or more of the following indications:",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0063",
+      "text": "       1. Ulceration secondary to venous stasis; OR",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0064",
+      "text": "       2. Recurrent superficial thrombophlebitis; OR",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0065",
+      "text": "       3. Hemorrhage or recurrent bleeding episodes from a ruptured superficial varicosity; OR",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0066",
+      "text": "       4. Persistent pain, swelling, itching, burning, or other symptoms are associated with saphenous",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0067",
+      "text": "          reflux, AND the symptoms significantly interfere with activities of daily living, AND",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0068",
+      "text": "          conservative management including compression therapy for at least 3 months has not",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0069",
+      "text": "          improved the symptoms.",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0070",
+      "text": "Concurrent treatment of the accessory saphenous veins along with the great or small saphenous veins",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0071",
+      "text": "meets the definition of medical necessity when criteria is met for each vein and there is documentation",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0072",
+      "text": "of anatomy showing that the accessory saphenous vein discharged directly into the common femoral",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0073",
+      "text": "vein.",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0074",
+      "text": "Treatment of accessory saphenous veins by surgery, endovenous radiofrequency, laser ablation,",
+      "page": 2,
+      "blank_before": true
+    },
+    {
+      "id": "g0075",
+      "text": "microfoam sclerotherapy, or cyanoacrylate adhesive that do not meet the criteria described above is",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0076",
+      "text": "considered cosmetic and does not meet the definition of medical necessity.",
+      "page": 2,
+      "blank_before": false
+    },
+    {
+      "id": "g0077",
+      "text": "Symptomatic Varicose Tributaries",
+      "page": 3,
+      "blank_before": false
+    },
+    {
+      "id": "g0078",
+      "text": "The following treatments meet the definition of medical necessity as a component of the treatment of",
+      "page": 3,
+      "blank_before": true
+    },
+    {
+      "id": "g0079",
+      "text": "symptomatic varicose tributaries when performed either at the same time or following prior treatment",
+      "page": 3,
+      "blank_before": false
+    },
+    {
+      "id": "g0080",
+      "text": "(surgical, radiofrequency, or laser) of the saphenous veins (none of these techniques has been shown to",
+      "page": 3,
+      "blank_before": false
+    },
+    {
+      "id": "g0081",
+      "text": "be superior to another):",
+      "page": 3,
+      "blank_before": false
+    },
+    {
+      "id": "g0082",
+      "text": "    \u2022   Stab avulsion",
+      "page": 3,
+      "blank_before": false
+    },
+    {
+      "id": "g0083",
+      "text": "    \u2022   Hook phlebectomy",
+      "page": 3,
+      "blank_before": false
+    },
+    {
+      "id": "g0084",
+      "text": "    \u2022   Sclerotherapy",
+      "page": 3,
+      "blank_before": false
+    },
+    {
+      "id": "g0085",
+      "text": "    \u2022   Transilluminated powered phlebectomy.",
+      "page": 3,
+      "blank_before": false
+    },
+    {
+      "id": "g0086",
+      "text": "Treatment of symptomatic varicose tributaries, when performed either at the same time or following",
+      "page": 3,
+      "blank_before": false
+    },
+    {
+      "id": "g0087",
+      "text": "prior treatment of saphenous veins using any other techniques than those noted above, is considered",
+      "page": 3,
+      "blank_before": false
+    },
+    {
+      "id": "g0088",
+      "text": "experimental or investigational. The evidence is insufficient to determine the effects of the technology",
+      "page": 3,
+      "blank_before": false
+    },
+    {
+      "id": "g0089",
+      "text": "on health outcomes.",
+      "page": 3,
+      "blank_before": false
+    },
+    {
+      "id": "g0090",
+      "text": "Ultrasound guidance for sclerotherapy of the varicose tributaries does not meet the definition of",
+      "page": 3,
+      "blank_before": true
+    },
+    {
+      "id": "g0091",
+      "text": "medical necessity. There is insufficient scientific evidence in peer-reviewed medical literature that",
+      "page": 3,
+      "blank_before": false
+    },
+    {
+      "id": "g0092",
+      "text": "ultrasound guidance has been proven to increase the effectiveness or safety of sclerotherapy for these",
+      "page": 3,
+      "blank_before": false
+    },
+    {
+      "id": "g0093",
+      "text": "veins.",
+      "page": 3,
+      "blank_before": false
+    },
+    {
+      "id": "g0094",
+      "text": "Perforator Veins",
+      "page": 3,
+      "blank_before": true
+    },
+    {
+      "id": "g0095",
+      "text": "Surgical ligation (including subfascial endoscopic perforator surgery) or endovenous radiofrequency or",
+      "page": 3,
+      "blank_before": true
+    },
+    {
+      "id": "g0096",
+      "text": "laser ablation of incompetent perforator veins meets the definition of medical necessity as a treatment",
+      "page": 3,
+      "blank_before": false
+    },
+    {
+      "id": "g0097",
+      "text": "of leg ulcers associated with chronic venous insufficiency when ALL of the following conditions have",
+      "page": 3,
+      "blank_before": false
+    },
+    {
+      "id": "g0098",
+      "text": "been met:",
+      "page": 3,
+      "blank_before": false
+    },
+    {
+      "id": "g0099",
+      "text": "    \u2022   There is demonstrated perforator reflux; AND",
+      "page": 3,
+      "blank_before": false
+    },
+    {
+      "id": "g0100",
+      "text": "    \u2022   The varicosities are at least 3 millimeters in size AND",
+      "page": 3,
+      "blank_before": false
+    },
+    {
+      "id": "g0101",
+      "text": "    \u2022   The superficial saphenous veins (great, small, or accessory saphenous and symptomatic",
+      "page": 3,
+      "blank_before": false
+    },
+    {
+      "id": "g0102",
+      "text": "        varicose tributaries) have been previously eliminated; AND",
+      "page": 3,
+      "blank_before": false
+    },
+    {
+      "id": "g0103",
+      "text": "    \u2022   Ulcers have not resolved following combined superficial vein treatment and compression therapy",
+      "page": 3,
+      "blank_before": false
+    },
+    {
+      "id": "g0104",
+      "text": "        for at least 3 months; AND",
+      "page": 3,
+      "blank_before": false
+    },
+    {
+      "id": "g0105",
+      "text": "    \u2022   The venous insufficiency is not secondary to deep venous thromboembolism.",
+      "page": 3,
+      "blank_before": false
+    },
+    {
+      "id": "g0106",
+      "text": "Ligation or ablation of incompetent perforator veins performed concurrently with superficial venous",
+      "page": 3,
+      "blank_before": false
+    },
+    {
+      "id": "g0107",
+      "text": "surgery does not meet the definition of medical necessity.",
+      "page": 3,
+      "blank_before": false
+    },
+    {
+      "id": "g0108",
+      "text": "Telangiectasia",
+      "page": 3,
+      "blank_before": true
+    },
+    {
+      "id": "g0109",
+      "text": "Treatment of telangiectasia such as spider veins, angiomata, and hemangiomata is considered cosmetic",
+      "page": 3,
+      "blank_before": true
+    },
+    {
+      "id": "g0110",
+      "text": "and does not meet the definition of medical necessity.",
+      "page": 3,
+      "blank_before": false
+    },
+    {
+      "id": "g0111",
+      "text": "Other",
+      "page": 3,
+      "blank_before": true
+    },
+    {
+      "id": "g0112",
+      "text": "Techniques for conditions not specifically listed above are considered experimental or investigational,",
+      "page": 3,
+      "blank_before": true
+    },
+    {
+      "id": "g0113",
+      "text": "including, but not limited to:",
+      "page": 3,
+      "blank_before": false
+    },
+    {
+      "id": "g0114",
+      "text": "    \u2022    Sclerotherapy techniques, other than microfoam sclerotherapy, of great, small, or accessory",
+      "page": 4,
+      "blank_before": false
+    },
+    {
+      "id": "g0115",
+      "text": "         saphenous veins",
+      "page": 4,
+      "blank_before": false
+    },
+    {
+      "id": "g0116",
+      "text": "    \u2022    Sclerotherapy of perforator veins",
+      "page": 4,
+      "blank_before": false
+    },
+    {
+      "id": "g0117",
+      "text": "    \u2022    Sclerotherapy of isolated tributary veins without prior or concurrent treatment of saphenous veins",
+      "page": 4,
+      "blank_before": false
+    },
+    {
+      "id": "g0118",
+      "text": "    \u2022    Stab avulsion, hook phlebectomy, or transilluminated powered phlebectomy of perforator, great or",
+      "page": 4,
+      "blank_before": false
+    },
+    {
+      "id": "g0119",
+      "text": "         small saphenous, or accessory saphenous veins",
+      "page": 4,
+      "blank_before": false
+    },
+    {
+      "id": "g0120",
+      "text": "    \u2022    Endovenous radiofrequency or laser ablation of tributary veins",
+      "page": 4,
+      "blank_before": false
+    },
+    {
+      "id": "g0121",
+      "text": "    \u2022    Endovenous cryoablation of any vein",
+      "page": 4,
+      "blank_before": false
+    },
+    {
+      "id": "g0122",
+      "text": "    \u2022    Mechanochemical ablation (MOCA) of any vein (e.g. ClariVein\u2122 Catheter)",
+      "page": 4,
+      "blank_before": false
+    },
+    {
+      "id": "g0123",
+      "text": "    \u2022    Conservative ambulatory hemodynamic correction of venous insufficiency (CHIVA).",
+      "page": 4,
+      "blank_before": false
+    },
+    {
+      "id": "g0124",
+      "text": "The evidence is insufficient to permit conclusions on efficacy and net health outcomes.",
+      "page": 4,
+      "blank_before": false
+    },
+    {
+      "id": "g0125",
+      "text": "* CEAP Clinical Classification System",
+      "page": 4,
+      "blank_before": true
+    },
+    {
+      "id": "g0126",
+      "text": "  C0: No visible or palpable signs of venous disease",
+      "page": 4,
+      "blank_before": false
+    },
+    {
+      "id": "g0127",
+      "text": "  C1: Telangiectasies or reticular veins",
+      "page": 4,
+      "blank_before": false
+    },
+    {
+      "id": "g0128",
+      "text": "  C2: Varicose veins",
+      "page": 4,
+      "blank_before": false
+    },
+    {
+      "id": "g0129",
+      "text": "  C2r: Recurrent varicose veins",
+      "page": 4,
+      "blank_before": false
+    },
+    {
+      "id": "g0130",
+      "text": "  C3: Edema",
+      "page": 4,
+      "blank_before": false
+    },
+    {
+      "id": "g0131",
+      "text": "  C4: Changes in skin and subcutaneous tissue secondary to CVD",
+      "page": 4,
+      "blank_before": false
+    },
+    {
+      "id": "g0132",
+      "text": "  C4a: Pigmentation and eczema",
+      "page": 4,
+      "blank_before": false
+    },
+    {
+      "id": "g0133",
+      "text": "  C4b: Lipodermatosclerosis and atrophie blanche",
+      "page": 4,
+      "blank_before": false
+    },
+    {
+      "id": "g0134",
+      "text": "  C4c: Corona phlebectatica",
+      "page": 4,
+      "blank_before": false
+    },
+    {
+      "id": "g0135",
+      "text": "  C5: Healed venous ulcer",
+      "page": 4,
+      "blank_before": false
+    },
+    {
+      "id": "g0136",
+      "text": "  C6: Active venous ulcer",
+      "page": 4,
+      "blank_before": false
+    },
+    {
+      "id": "g0137",
+      "text": "  C6r: Recurrent active venous ulcer",
+      "page": 4,
+      "blank_before": false
+    },
+    {
+      "id": "g0138",
+      "text": "   S:     Symptomatic",
+      "page": 4,
+      "blank_before": false
+    },
+    {
+      "id": "g0139",
+      "text": "   A:     Asymptomatic",
+      "page": 4,
+      "blank_before": false
+    },
+    {
+      "id": "g0140",
+      "text": "(Lurie, et al. The 2020 update of the CEAP classification system and reporting standards)",
+      "page": 4,
+      "blank_before": false
+    },
+    {
+      "id": "g0141",
+      "text": "BILLING/CODING INFORMATION:",
+      "page": 4,
+      "blank_before": true
+    },
+    {
+      "id": "g0142",
+      "text": "CPT Coding:",
+      "page": 4,
+      "blank_before": true
+    },
+    {
+      "id": "g0143",
+      "text": " 36465       Injection of non-compounded foam sclerosant with ultrasound compression maneuvers to",
+      "page": 4,
+      "blank_before": false
+    },
+    {
+      "id": "g0144",
+      "text": "             guide dispersion of the injectate, inclusive of all imaging guidance and monitoring; single",
+      "page": 4,
+      "blank_before": false
+    },
+    {
+      "id": "g0145",
+      "text": "             incompetent extremity truncal vein (eg, great saphenous vein, accessory saphenous vein)",
+      "page": 4,
+      "blank_before": false
+    },
+    {
+      "id": "g0146",
+      "text": " 36466       Injection of non-compounded foam sclerosant with ultrasound compression maneuvers to",
+      "page": 4,
+      "blank_before": false
+    },
+    {
+      "id": "g0147",
+      "text": "             guide dispersion of the injectate, inclusive of all imaging guidance and monitoring;",
+      "page": 4,
+      "blank_before": false
+    },
+    {
+      "id": "g0148",
+      "text": "             multiple incompetent truncal veins (eg, great saphenous vein, accessory saphenous vein),",
+      "page": 4,
+      "blank_before": false
+    },
+    {
+      "id": "g0149",
+      "text": "             same leg",
+      "page": 4,
+      "blank_before": false
+    },
+    {
+      "id": "g0150",
+      "text": " 36468       Injection(s) of sclerosant for spider veins (telangiectasia), limb or trunk (Non-covered)",
+      "page": 4,
+      "blank_before": false
+    },
+    {
+      "id": "g0151",
+      "text": " 36470       Injection of sclerosant; single incompetent vein (other than telangiectasia)",
+      "page": 4,
+      "blank_before": false
+    },
+    {
+      "id": "g0152",
+      "text": " 36471       Injection of sclerosant; multiple incompetent veins (other than telangiectasia), same leg",
+      "page": 4,
+      "blank_before": false
+    },
+    {
+      "id": "g0153",
+      "text": "36473   Endovenous ablation therapy of incompetent vein, extremity, inclusive of all imaging",
+      "page": 5,
+      "blank_before": false
+    },
+    {
+      "id": "g0154",
+      "text": "        guidance and monitoring, percutaneous, mechanochemical; first vein treated",
+      "page": 5,
+      "blank_before": false
+    },
+    {
+      "id": "g0155",
+      "text": "        (Investigational)",
+      "page": 5,
+      "blank_before": false
+    },
+    {
+      "id": "g0156",
+      "text": "36474   Endovenous ablation therapy of incompetent vein, extremity, inclusive of all imaging",
+      "page": 5,
+      "blank_before": false
+    },
+    {
+      "id": "g0157",
+      "text": "        guidance and monitoring, percutaneous, mechanochemical; subsequent vein(s) treated in",
+      "page": 5,
+      "blank_before": false
+    },
+    {
+      "id": "g0158",
+      "text": "        a single extremity, each through separate access sites (List separately in addition to code",
+      "page": 5,
+      "blank_before": false
+    },
+    {
+      "id": "g0159",
+      "text": "        for primary procedure) (Investigational)",
+      "page": 5,
+      "blank_before": false
+    },
+    {
+      "id": "g0160",
+      "text": "36475   Endovenous ablation therapy of incompetent vein, extremity, inclusive of all imaging",
+      "page": 5,
+      "blank_before": false
+    },
+    {
+      "id": "g0161",
+      "text": "        guidance and monitoring, percutaneous, radiofrequency; first vein treated",
+      "page": 5,
+      "blank_before": false
+    },
+    {
+      "id": "g0162",
+      "text": "36476   Endovenous ablation therapy of incompetent vein, extremity, inclusive of all imaging",
+      "page": 5,
+      "blank_before": false
+    },
+    {
+      "id": "g0163",
+      "text": "        guidance and monitoring, percutaneous, radiofrequency; second and subsequent veins",
+      "page": 5,
+      "blank_before": false
+    },
+    {
+      "id": "g0164",
+      "text": "        treated in a single extremity, each through separate access sites (List separately in addition",
+      "page": 5,
+      "blank_before": false
+    },
+    {
+      "id": "g0165",
+      "text": "        to code for primary procedure)",
+      "page": 5,
+      "blank_before": false
+    },
+    {
+      "id": "g0166",
+      "text": "36478   Endovenous ablation therapy of incompetent vein, extremity, inclusive of all imaging",
+      "page": 5,
+      "blank_before": false
+    },
+    {
+      "id": "g0167",
+      "text": "        guidance and monitoring, percutaneous, laser; first vein treated",
+      "page": 5,
+      "blank_before": false
+    },
+    {
+      "id": "g0168",
+      "text": "36479   Endovenous ablation therapy of incompetent vein, extremity, inclusive of all imaging",
+      "page": 5,
+      "blank_before": false
+    },
+    {
+      "id": "g0169",
+      "text": "        guidance and monitoring, percutaneous, laser; second and subsequent veins treated in a",
+      "page": 5,
+      "blank_before": false
+    },
+    {
+      "id": "g0170",
+      "text": "        single extremity, each through separate access sites (List separately in addition to code for",
+      "page": 5,
+      "blank_before": false
+    },
+    {
+      "id": "g0171",
+      "text": "        primary procedure)",
+      "page": 5,
+      "blank_before": false
+    },
+    {
+      "id": "g0172",
+      "text": "36482   Endovenous ablation therapy of incompetent vein, extremity, by transcatheter delivery of",
+      "page": 5,
+      "blank_before": false
+    },
+    {
+      "id": "g0173",
+      "text": "        a chemical adhesive (eg, cyanoacrylate) remote from the access site, inclusive of all",
+      "page": 5,
+      "blank_before": false
+    },
+    {
+      "id": "g0174",
+      "text": "        imaging guidance and monitoring, percutaneous; first vein treated",
+      "page": 5,
+      "blank_before": false
+    },
+    {
+      "id": "g0175",
+      "text": "36483   Endovenous ablation therapy of incompetent vein, extremity, by transcatheter delivery of",
+      "page": 5,
+      "blank_before": false
+    },
+    {
+      "id": "g0176",
+      "text": "        a chemical adhesive (eg, cyanoacrylate) remote from the access site, inclusive of all",
+      "page": 5,
+      "blank_before": false
+    },
+    {
+      "id": "g0177",
+      "text": "        imaging guidance and monitoring, percutaneous; subsequent vein(s) treated in a single",
+      "page": 5,
+      "blank_before": false
+    },
+    {
+      "id": "g0178",
+      "text": "        extremity, each through separate access sites (List separately in addition to code for",
+      "page": 5,
+      "blank_before": false
+    },
+    {
+      "id": "g0179",
+      "text": "        primary procedure)",
+      "page": 5,
+      "blank_before": false
+    },
+    {
+      "id": "g0180",
+      "text": "37700   Ligation and division of long saphenous vein at saphenofemoral junction, or distal",
+      "page": 5,
+      "blank_before": false
+    },
+    {
+      "id": "g0181",
+      "text": "        interruptions",
+      "page": 5,
+      "blank_before": false
+    },
+    {
+      "id": "g0182",
+      "text": "37718   Ligation, division, and stripping, short saphenous vein",
+      "page": 5,
+      "blank_before": false
+    },
+    {
+      "id": "g0183",
+      "text": "37722   Ligation, division, and stripping, long (greater) saphenous veins from saphenofemoral",
+      "page": 5,
+      "blank_before": false
+    },
+    {
+      "id": "g0184",
+      "text": "        junction to knee or below",
+      "page": 5,
+      "blank_before": false
+    },
+    {
+      "id": "g0185",
+      "text": "37735   Ligation and division and complete stripping of long or short saphenous veins with radical",
+      "page": 5,
+      "blank_before": false
+    },
+    {
+      "id": "g0186",
+      "text": "        excision of ulcer and skin graft and/or interruption of communicating veins of lower leg,",
+      "page": 5,
+      "blank_before": false
+    },
+    {
+      "id": "g0187",
+      "text": "        with excision of deep fascia",
+      "page": 5,
+      "blank_before": false
+    },
+    {
+      "id": "g0188",
+      "text": "37760   Ligation of perforator veins, subfascial, radical (Linton type), including skin graft, when",
+      "page": 5,
+      "blank_before": false
+    },
+    {
+      "id": "g0189",
+      "text": "        performed, open, 1 leg",
+      "page": 5,
+      "blank_before": false
+    },
+    {
+      "id": "g0190",
+      "text": "37761   Ligation of perforator vein(s), subfascial, open, including ultrasound guidance, when",
+      "page": 5,
+      "blank_before": false
+    },
+    {
+      "id": "g0191",
+      "text": "        performed, 1 leg",
+      "page": 5,
+      "blank_before": false
+    },
+    {
+      "id": "g0192",
+      "text": "37765   Stab phlebectomy of varicose veins, 1 extremity; 10 \u2013 20 stab incisions",
+      "page": 5,
+      "blank_before": false
+    },
+    {
+      "id": "g0193",
+      "text": "37766   Stab phlebectomy of varicose veins, one extremity; more than 20 incisions",
+      "page": 5,
+      "blank_before": false
+    },
+    {
+      "id": "g0194",
+      "text": "37780   Ligation and division of short saphenous vein at saphenopopliteal junction (separate",
+      "page": 5,
+      "blank_before": false
+    },
+    {
+      "id": "g0195",
+      "text": "        procedure)",
+      "page": 5,
+      "blank_before": false
+    },
+    {
+      "id": "g0196",
+      "text": "37785   Ligation, division, and/or excision of varicose vein cluster(s), 1 leg",
+      "page": 5,
+      "blank_before": false
+    },
+    {
+      "id": "g0197",
+      "text": " 0524T       Endovenous catheter directed chemical ablation with balloon isolation of incompetent",
+      "page": 6,
+      "blank_before": false
+    },
+    {
+      "id": "g0198",
+      "text": "             extremity vein, open or percutaneous, including all vascular access, catheter manipulation,",
+      "page": 6,
+      "blank_before": false
+    },
+    {
+      "id": "g0199",
+      "text": "             diagnostic imaging, imaging guidance and monitoring (Investigational)",
+      "page": 6,
+      "blank_before": false
+    },
+    {
+      "id": "g0200",
+      "text": "Mechanochemical ablation may be billed with codes 37241 or 37244.",
+      "page": 6,
+      "blank_before": true
+    },
+    {
+      "id": "g0201",
+      "text": "HCPCS Coding:",
+      "page": 6,
+      "blank_before": true
+    },
+    {
+      "id": "g0202",
+      "text": " S2202                Echosclerotherapy",
+      "page": 6,
+      "blank_before": false
+    },
+    {
+      "id": "g0203",
+      "text": "ICD-10 Diagnosis Codes That Support Medical Necessity:",
+      "page": 6,
+      "blank_before": true
+    },
+    {
+      "id": "g0204",
+      "text": " I83.001 \u2013 I83.899    Varicose veins of lower extremities",
+      "page": 6,
+      "blank_before": false
+    },
+    {
+      "id": "g0205",
+      "text": " I87.2                Venous, insufficiency (chronic) (peripheral)",
+      "page": 6,
+      "blank_before": false
+    },
+    {
+      "id": "g0206",
+      "text": "LOINC Codes:",
+      "page": 6,
+      "blank_before": true
+    },
+    {
+      "id": "g0207",
+      "text": "The following information may be required documentation to support medical necessity: Physician",
+      "page": 6,
+      "blank_before": false
+    },
+    {
+      "id": "g0208",
+      "text": "history and physical, attending physician treatment plan, progress notes, and treatment notes",
+      "page": 6,
+      "blank_before": false
+    },
+    {
+      "id": "g0209",
+      "text": "including documentation of symptoms, failure of at least 3 consecutive months of medical management,",
+      "page": 6,
+      "blank_before": false
+    },
+    {
+      "id": "g0210",
+      "text": "and radiology reports (if applicable).",
+      "page": 6,
+      "blank_before": false
+    },
+    {
+      "id": "g0211",
+      "text": "         Documentation Table            LOINC         LOINC          LOINC Time Frame Modifier Codes",
+      "page": 6,
+      "blank_before": true
+    },
+    {
+      "id": "g0212",
+      "text": "                                        Codes      Time Frame                   Narrative",
+      "page": 6,
+      "blank_before": false
+    },
+    {
+      "id": "g0213",
+      "text": "                                                  Modifier Code",
+      "page": 6,
+      "blank_before": false
+    },
+    {
+      "id": "g0214",
+      "text": " Physician history and physical        28626-0,      18805-2         Include all data of the selected type",
+      "page": 6,
+      "blank_before": false
+    },
+    {
+      "id": "g0215",
+      "text": "                                                                     that represents observations made",
+      "page": 6,
+      "blank_before": false
+    },
+    {
+      "id": "g0216",
+      "text": "                                                                     six months or fewer before starting",
+      "page": 6,
+      "blank_before": false
+    },
+    {
+      "id": "g0217",
+      "text": "                                                                     date of service for the claim",
+      "page": 6,
+      "blank_before": false
+    },
+    {
+      "id": "g0218",
+      "text": " Attending physician visit notes       18733-6       18805-2         Include all data of the selected type",
+      "page": 6,
+      "blank_before": false
+    },
+    {
+      "id": "g0219",
+      "text": "                                                                     that represents observations made",
+      "page": 6,
+      "blank_before": false
+    },
+    {
+      "id": "g0220",
+      "text": "                                                                     six months or fewer before starting",
+      "page": 6,
+      "blank_before": false
+    },
+    {
+      "id": "g0221",
+      "text": "                                                                     date of service for the claim.",
+      "page": 6,
+      "blank_before": false
+    },
+    {
+      "id": "g0222",
+      "text": " Attending physician progress note     18741-9       18805-2         Include all data of the selected type",
+      "page": 6,
+      "blank_before": false
+    },
+    {
+      "id": "g0223",
+      "text": "                                                                     that represents observations made",
+      "page": 6,
+      "blank_before": false
+    },
+    {
+      "id": "g0224",
+      "text": "                                                                     six months or fewer before starting",
+      "page": 6,
+      "blank_before": false
+    },
+    {
+      "id": "g0225",
+      "text": "                                                                     date of service for the claim.",
+      "page": 6,
+      "blank_before": false
+    },
+    {
+      "id": "g0226",
+      "text": " Treatment plan                        18776-5       18805-2         Include all data of the selected type",
+      "page": 6,
+      "blank_before": false
+    },
+    {
+      "id": "g0227",
+      "text": "                                                                     that represents observations made",
+      "page": 6,
+      "blank_before": false
+    },
+    {
+      "id": "g0228",
+      "text": "                                                                     six months or fewer before starting",
+      "page": 6,
+      "blank_before": false
+    },
+    {
+      "id": "g0229",
+      "text": "                                                                     date of service for the claim",
+      "page": 6,
+      "blank_before": false
+    },
+    {
+      "id": "g0230",
+      "text": " Radiology                             18726-0       18805-2         Include all data of the selected type",
+      "page": 6,
+      "blank_before": false
+    },
+    {
+      "id": "g0231",
+      "text": "                                                                     that represents observations made",
+      "page": 6,
+      "blank_before": false
+    },
+    {
+      "id": "g0232",
+      "text": "                                                                     six months or fewer before starting",
+      "page": 6,
+      "blank_before": false
+    },
+    {
+      "id": "g0233",
+      "text": "                                                                     date of service for the claim.",
+      "page": 6,
+      "blank_before": false
+    },
+    {
+      "id": "g0234",
+      "text": "REIMBURSEMENT INFORMATION:",
+      "page": 7,
+      "blank_before": false
+    },
+    {
+      "id": "g0235",
+      "text": "Sclerotherapy should be reported under codes 36470 for single vein or 36471 for multiple veins on the",
+      "page": 7,
+      "blank_before": false
+    },
+    {
+      "id": "g0236",
+      "text": "same leg. Code 36471 should be reported only once per leg.",
+      "page": 7,
+      "blank_before": false
+    },
+    {
+      "id": "g0237",
+      "text": "Procedure codes 36475 and 36476 include the imaging guidance. Separate payment will not be made for",
+      "page": 7,
+      "blank_before": true
+    },
+    {
+      "id": "g0238",
+      "text": "imaging guidance reported with procedure codes 36475 or 36476. Code 36476 should be reported only",
+      "page": 7,
+      "blank_before": false
+    },
+    {
+      "id": "g0239",
+      "text": "once per leg.",
+      "page": 7,
+      "blank_before": false
+    },
+    {
+      "id": "g0240",
+      "text": "Procedure codes 36478 and 36479 include imaging guidance. Separate payment will not be made for",
+      "page": 7,
+      "blank_before": true
+    },
+    {
+      "id": "g0241",
+      "text": "imaging guidance billed with procedure codes 36478 or 36479. Code 36479 should be reported only",
+      "page": 7,
+      "blank_before": false
+    },
+    {
+      "id": "g0242",
+      "text": "once per leg.",
+      "page": 7,
+      "blank_before": false
+    },
+    {
+      "id": "g0243",
+      "text": "Procedure codes 37765 and 37766 should be reported only once per leg and should not be reported",
+      "page": 7,
+      "blank_before": true
+    },
+    {
+      "id": "g0244",
+      "text": "together.",
+      "page": 7,
+      "blank_before": false
+    },
+    {
+      "id": "g0245",
+      "text": "Reimburse according to operative report.",
+      "page": 7,
+      "blank_before": true
+    },
+    {
+      "id": "g0246",
+      "text": "PROGRAM EXCEPTIONS:",
+      "page": 7,
+      "blank_before": true
+    },
+    {
+      "id": "g0247",
+      "text": "Federal Employee Program (FEP): Follow FEP guidelines.",
+      "page": 7,
+      "blank_before": false
+    },
+    {
+      "id": "g0248",
+      "text": "State Account Organization (SAO): Follow SAO guidelines.",
+      "page": 7,
+      "blank_before": true
+    },
+    {
+      "id": "g0249",
+      "text": "Medicare Advantage Products: The following were reviewed on the last guideline reviewed date: Local",
+      "page": 7,
+      "blank_before": true
+    },
+    {
+      "id": "g0250",
+      "text": "Coverage Determination (LCD) Treatment of Chronic Venous Insufficiency of the Lower Extremities",
+      "page": 7,
+      "blank_before": false
+    },
+    {
+      "id": "g0251",
+      "text": "(L38720) and Local Coverage Article: Billing and Coding: Treatment of Chronic Venous Insufficiency of",
+      "page": 7,
+      "blank_before": false
+    },
+    {
+      "id": "g0252",
+      "text": "the Lower Extremities (A58250) located at fcso.com.",
+      "page": 7,
+      "blank_before": false
+    },
+    {
+      "id": "g0253",
+      "text": "If this Medical Coverage Guideline contains a step therapy requirement, in compliance with Florida law",
+      "page": 7,
+      "blank_before": true
+    },
+    {
+      "id": "g0254",
+      "text": "627.42393, members or providers may request a step therapy protocol exemption to this requirement if",
+      "page": 7,
+      "blank_before": false
+    },
+    {
+      "id": "g0255",
+      "text": "based on medical necessity. The process for requesting a protocol exemption can be found at Coverage",
+      "page": 7,
+      "blank_before": false
+    },
+    {
+      "id": "g0256",
+      "text": "Protocol Exemption Request",
+      "page": 7,
+      "blank_before": false
+    },
+    {
+      "id": "g0257",
+      "text": "DEFINITIONS:",
+      "page": 7,
+      "blank_before": true
+    },
+    {
+      "id": "g0258",
+      "text": "Accessory saphenous vein: A vein running in the thigh parallel to the great and small saphenous veins.",
+      "page": 7,
+      "blank_before": false
+    },
+    {
+      "id": "g0259",
+      "text": "Angiomata: An abnormal growth due to the dilatation or new formation of blood vessels.",
+      "page": 7,
+      "blank_before": true
+    },
+    {
+      "id": "g0260",
+      "text": "Cyanoacrylate adhesive: clear, free-flowing liquid that polymerizes in the vessel via an anionic",
+      "page": 7,
+      "blank_before": true
+    },
+    {
+      "id": "g0261",
+      "text": "mechanism (ie, polymerizes into a solid material upon contact with body fluids or tissue).",
+      "page": 7,
+      "blank_before": false
+    },
+    {
+      "id": "g0262",
+      "text": "Great saphenous vein: the longest vein in the body, extending from the dorsum of the foot to just",
+      "page": 7,
+      "blank_before": true
+    },
+    {
+      "id": "g0263",
+      "text": "below the inguinal ligament, where it opens into the femoral vein. Also known as the long or large",
+      "page": 7,
+      "blank_before": false
+    },
+    {
+      "id": "g0264",
+      "text": "saphenous vein.",
+      "page": 7,
+      "blank_before": false
+    },
+    {
+      "id": "g0265",
+      "text": "Hemangiomata: A benign tumor of blood vessels.",
+      "page": 7,
+      "blank_before": true
+    },
+    {
+      "id": "g0266",
+      "text": "Small saphenous vein: the vein that continues the marginal vein from behind the malleolus and passes",
+      "page": 8,
+      "blank_before": false
+    },
+    {
+      "id": "g0267",
+      "text": "up the back of the leg to the knee joint, where it opens into the popliteal vein. Also known as the short",
+      "page": 8,
+      "blank_before": false
+    },
+    {
+      "id": "g0268",
+      "text": "or lesser saphenous vein.",
+      "page": 8,
+      "blank_before": false
+    },
+    {
+      "id": "g0269",
+      "text": "Perforator veins: small veins that connect the superficial veins to the deep veins, allowing blood to drain",
+      "page": 8,
+      "blank_before": true
+    },
+    {
+      "id": "g0270",
+      "text": "from the skin into the deep veins and then pumped toward the heart.",
+      "page": 8,
+      "blank_before": false
+    },
+    {
+      "id": "g0271",
+      "text": "Superficial veins: veins that run in the subcutaneous tissue in the lower limbs; the great saphenous vein",
+      "page": 8,
+      "blank_before": true
+    },
+    {
+      "id": "g0272",
+      "text": "and the small saphenous vein are the two major superficial veins.Telangiectasia: a type of varicose veins",
+      "page": 8,
+      "blank_before": false
+    },
+    {
+      "id": "g0273",
+      "text": "also known as spider veins; small bluish-purple veins, usually found in clusters on the leg.",
+      "page": 8,
+      "blank_before": false
+    },
+    {
+      "id": "g0274",
+      "text": "Tributaries: veins that empty into larger veins.",
+      "page": 8,
+      "blank_before": true
+    },
+    {
+      "id": "g0275",
+      "text": "RELATED GUIDELINES:",
+      "page": 8,
+      "blank_before": true
+    },
+    {
+      "id": "g0276",
+      "text": "Durable Medical Equipment (DME), 09-E0000-01",
+      "page": 8,
+      "blank_before": false
+    },
+    {
+      "id": "g0277",
+      "text": "Reconstructive Surgery/Cosmetic Surgery, 02-12000-01",
+      "page": 8,
+      "blank_before": false
+    },
+    {
+      "id": "g0278",
+      "text": "OTHER:",
+      "page": 8,
+      "blank_before": true
+    },
+    {
+      "id": "g0279",
+      "text": "None Applicable",
+      "page": 8,
+      "blank_before": false
+    },
+    {
+      "id": "g0280",
+      "text": "REFERENCES:",
+      "page": 8,
+      "blank_before": true
+    },
+    {
+      "id": "g0281",
+      "text": "1. Almeida JI, Javier JJ, et al. Thirty-sixth-month follow-up of first-in-human use of cyanoacrylate",
+      "page": 8,
+      "blank_before": false
+    },
+    {
+      "id": "g0282",
+      "text": "   adhesive for treatment of saphenous vein incompetence. J Vasc Surg Venous Lymphat Disord. 2017",
+      "page": 8,
+      "blank_before": false
+    },
+    {
+      "id": "g0283",
+      "text": "   Sep;5(5):658-666.",
+      "page": 8,
+      "blank_before": false
+    },
+    {
+      "id": "g0284",
+      "text": "2. Almeida JI, Murray SP, Romero ME. Saphenous Vein Histopathology 5.5 Years After Cyanoacrylate",
+      "page": 8,
+      "blank_before": false
+    },
+    {
+      "id": "g0285",
+      "text": "   Closure. J Vasc Surg Venous Lymphat Disord. 2020 Mar;8(2):280-284. PMID:31281102. American",
+      "page": 8,
+      "blank_before": false
+    },
+    {
+      "id": "g0286",
+      "text": "   Vein and Lymphatic Society. Position Statement Healthcare Policy Committee- Cyanoacrylate",
+      "page": 8,
+      "blank_before": false
+    },
+    {
+      "id": "g0287",
+      "text": "   Venous Closure, revised February 28, 2019; available at phlebotogy.org.",
+      "page": 8,
+      "blank_before": false
+    },
+    {
+      "id": "g0288",
+      "text": "3. Alozai T, Lam YL, et al. A comparison of patient-reported outcome measures following technical",
+      "page": 8,
+      "blank_before": false
+    },
+    {
+      "id": "g0289",
+      "text": "   success and technical failure in the treatment of great saphenous vein incompetence using ClariVein:",
+      "page": 8,
+      "blank_before": false
+    },
+    {
+      "id": "g0290",
+      "text": "   A subanalysis of a multicenter randomized controlled trial comparing 2% and 3% polidocanol.",
+      "page": 8,
+      "blank_before": false
+    },
+    {
+      "id": "g0291",
+      "text": "   Phlebology. 2023 Sep;38(8):532-539. ONUDL 37436708.",
+      "page": 8,
+      "blank_before": false
+    },
+    {
+      "id": "g0292",
+      "text": "4. American College of Phlebology. Superficial Venous Disease. 2015; accessed at myavls.org May",
+      "page": 8,
+      "blank_before": false
+    },
+    {
+      "id": "g0293",
+      "text": "   2021.",
+      "page": 8,
+      "blank_before": false
+    },
+    {
+      "id": "g0294",
+      "text": "5. American Venous Forum, Revision of the CEAP Classification: Summary; accessed at veinforum.org.",
+      "page": 8,
+      "blank_before": false
+    },
+    {
+      "id": "g0295",
+      "text": "6. Bahi M, Guazzo L, Taumoepeau L. Real-world short-term VenaSeal ablation outcomes for",
+      "page": 8,
+      "blank_before": false
+    },
+    {
+      "id": "g0296",
+      "text": "   symptomatic saphenous incompetence. Vascular. 2023 Jun;31(3):521-525. Doi:",
+      "page": 8,
+      "blank_before": false
+    },
+    {
+      "id": "g0297",
+      "text": "   10.1177/17085381221077511. PMID: 35209758.",
+      "page": 8,
+      "blank_before": false
+    },
+    {
+      "id": "g0298",
+      "text": "7. Belramman A, Bootun R, et al. Pain Outcomes Following Mechanochemical Ablation vs",
+      "page": 8,
+      "blank_before": false
+    },
+    {
+      "id": "g0299",
+      "text": "   Cyanoacrylate Adhesive for the Treatment of Primary Truncal Saphenous Vein Incompetence: The",
+      "page": 8,
+      "blank_before": false
+    },
+    {
+      "id": "g0300",
+      "text": "   MOCCA Randomized Clinical Trial. JAMA Surg. 2022 May 1;157(5):395-404. PMID: 35385061.",
+      "page": 8,
+      "blank_before": false
+    },
+    {
+      "id": "g0301",
+      "text": "8. Blebea J, Fukaya E, et al. Mechanochemical chemically assisted ablation of varicose veins for",
+      "page": 8,
+      "blank_before": false
+    },
+    {
+      "id": "g0302",
+      "text": "   venous insufficiency: American vein and lymphatic society position statement. Phlebology. . 2025",
+      "page": 8,
+      "blank_before": false
+    },
+    {
+      "id": "g0303",
+      "text": "   Mar;40(2):104-109. doi: 10.1177/02683555241276554. PMID: 39167828.",
+      "page": 8,
+      "blank_before": false
+    },
+    {
+      "id": "g0304",
+      "text": "9. Blue Cross Blue Shield Association Evidence Positioning System\u00ae, 7.01.124 Treatment of Varicose",
+      "page": 8,
+      "blank_before": false
+    },
+    {
+      "id": "g0305",
+      "text": "   Veins/Venous Insufficiency, 06/25.",
+      "page": 8,
+      "blank_before": false
+    },
+    {
+      "id": "g0306",
+      "text": "10. Bootun R, Lane TRA, et al. Intra-procedural pain score in a randomized controlled trial comparing",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0307",
+      "text": "    mechanochemical ablation to radiofrequency ablation: The Multicentre Venefit\u2122 versus ClariVein\u00ae",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0308",
+      "text": "    for varicose veins trial. Phlebology.2016 Feb;31(1):61-5.doi: 10.1177/0268355514551085. PMID:",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0309",
+      "text": "    25193822.",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0310",
+      "text": "11. Chan YC, Law Y, et al. Predictors of recanalization for incompetent great saphenous veins treated",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0311",
+      "text": "    with cyanoacrylate glue. J Vasc Interv Radiol. 2017;28(5);665-671. oi: 10.1016/j.jvir.2017.01.011.",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0312",
+      "text": "    Epub 2017 Mar 8. PMID: 28284885.",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0313",
+      "text": "12. De Maeseneer MG, Kakkos SK, et al. Editor\u2019s Choice \u2013 European Society for Vascular Surgery (ESVS)",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0314",
+      "text": "    2022 Clinical Practice Guidelines on the Management of Chronic Venous Disease of the Lower Limbs.",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0315",
+      "text": "    Eur J Vasc Endovasc Surg. 2022 Feb;63(2):184-267.",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0316",
+      "text": "13. Dillavou ED, Kiguchi M. Comparison of methods for endovenous ablation for chronic venous disease.",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0317",
+      "text": "    In UpToDate, Mills JL, Eidt JF, Collins KA (Eds.), UpToDate, Waltham, MA; accessed July 2023 at",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0318",
+      "text": "    uptodate.com.",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0319",
+      "text": "14. Dimech AP, Cassar K. Efficacy of Cyanoacrylate Glue Ablation of PrimaryTruncal Varicose Veins",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0320",
+      "text": "    Compared to Existing Endovenous Techniques: A Systematic Review of the Literature. Surg J (N Y).",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0321",
+      "text": "    2020 Jun 19;6(2):e77-e86. PMID:32577526.",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0322",
+      "text": "15. Eroglu, E, Yasim, A. A Randomised Clinical Trial Comparing N-Butyl Cyanoacrylate, Radiofrequency",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0323",
+      "text": "    Ablation and Endovenous Laser Ablation for the Treatment of Superficial Venous Incompetence: Two",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0324",
+      "text": "    Year Follow up Results. Eur J Vasc Endovasc Surg. 2018 Oct;56(4):553-560.doi:",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0325",
+      "text": "    10.1016/j.ejvs.2018.05.028. PMID 30042039.",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0326",
+      "text": "16. Eroglu E, Yasim A, et al. Mid-term results in the treatment of varicose veins with N-butyl",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0327",
+      "text": "    cyanoacrylate. Phlebology. Dec 2017;32(10):665-669. PMID 28669248.",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0328",
+      "text": "17. Farah MH, Nayfeh T, et al. A systematic review supporting the Society for Vascular Surgery, the",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0329",
+      "text": "    American Venous Forum, and the American Vein and Lymphatic Society guidelines on the",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0330",
+      "text": "    management of varicose veins. J Vasc Surg Venous Lymphat Disord. 2021 Aug 24;S2213-",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0331",
+      "text": "    333X(21)00421-2. PMID: 34450355.",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0332",
+      "text": "18. First Coast Service Options Inc. (FCSO). Local Coverage Article: Billing and Coding: Treatment of",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0333",
+      "text": "    Chronic Venous Insufficiency of the Lower Extremities (A58250); accessed at fcso.com.",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0334",
+      "text": "19. First Coast Service Options Inc. (FCSO). Local Coverage Determination (LCD) Treatment of Chronic",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0335",
+      "text": "    Venous Insufficiency of the Lower Extremities (L38720), accessed at fcso.com.",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0336",
+      "text": "20. Garcia-Carpintero E, Carmona M, et al. Systematic review and meta-analysis of endovenous",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0337",
+      "text": "    cyanoacrylate adhesive ablation for incompetent saphenous veins. J Vasc Surg Venous Lymphat",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0338",
+      "text": "    Discord. 2020 Mar;8(2):287-296. PMID:31917181.",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0339",
+      "text": "21. Gibson K, Ferris B. Cyanoacrylate closure of incompetent great, small and accessory saphenous",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0340",
+      "text": "    veins without the use of post-procedure compression: Initial outcomes of a post-market evaluation of",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0341",
+      "text": "    the VenaSeal System (the WAVES Study). Vascular. Apr 2017;25(2):149-156.",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0342",
+      "text": "22. Gibson K, Minjarez R, et al. Frequency and severity of hypersensitivity reactions in patients after",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0343",
+      "text": "    VenaSeal\u2122 cyanoacrylate treatment of superficial venous insufficiency. Phlebology. 2020",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0344",
+      "text": "    Jun;35(5):337-344. PMID:31554473.",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0345",
+      "text": "23. Gibson K, Minjarez R, et al. Need for Adjunctive Procedures Following Cyanoacrylate Closure of",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0346",
+      "text": "    Incompetent Great, Small and Accessory Saphenous Veins Without the Use of Postprocedure",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0347",
+      "text": "    Compression: Three-month Data From a Postmarket Evaluation of the VenaSeal System (The",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0348",
+      "text": "    WAVES Study). Phlebology. 2019 May;34(4):231-237.doi: 10.1177/0268355518801641. PMID:",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0349",
+      "text": "    30227791.",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0350",
+      "text": "24. Gibson K, Morrison N, Kolluri R, et al. Twenty-four month results from a randomized trial of",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0351",
+      "text": "    cyanoacrylate closure versus radiofrequency ablation for the treatment of incompetent great",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0352",
+      "text": "    saphenous veins. J Vasc Surg Venous Lymphat Disord 2018; 6: 606\u2013613.Epub 2018 Jun 15. PMID:",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0353",
+      "text": "    29914814.",
+      "page": 9,
+      "blank_before": false
+    },
+    {
+      "id": "g0354",
+      "text": "25. Gloviczki P, Comerota AJ, et al, The care of patients with varicose veins and associated chronic",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0355",
+      "text": "    venous diseases: Clinical practice guidelines of the Society for Vascular Surgery and the American",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0356",
+      "text": "    Venous Forum, J Vasc Surg. 2011 May;53(5 Suppl):2S-48S; accessed at vascularweb.org 12/08/14.",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0357",
+      "text": "26. Gloviczki P, Lawrence PF, et al. The 2022 Society for Vascular Surgery, American Venous Forum,",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0358",
+      "text": "    and American Vein and Lymphatic Society clinical practice guidelines for the management of varicose",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0359",
+      "text": "    veins of the lower extremities. J Vasc Surg Venous Lymphat Disord. 2022.",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0360",
+      "text": "    doi:https://doi.org/10.1016/j.jvsv.2022.09.004. PMID: 36326210.",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0361",
+      "text": "27. Holewijn S, van Eekeren RJP, et al. Two-year results of a multicenter randomized controlled trial",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0362",
+      "text": "    comparing Mechanochemical endovenous Ablation to RADiOfrequeNcy Ablation in the treatment of",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0363",
+      "text": "    primary great saphenous vein incompetence (MARADONA trial). J Vasc Surg Venous Lymphat",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0364",
+      "text": "    Disord. 2019 May;7(3):364-374. doi: 10.1016/j.jvsv.2018.12.014. PMID:31000063.",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0365",
+      "text": "28. Joh JH, Lee T, et al. A multicenter randomized controlled trial of cyanoacrylate closure and surgical",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0366",
+      "text": "    stripping for incompetent great saphenous veins. J Vasc Surg Venous Lymphat Disord. 2022",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0367",
+      "text": "    Mar;10(2):353-359.doi: 10.1016/j.jvsv.2021.08.012. PMID: 34438091.",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0368",
+      "text": "29. Kalra M, Gloviczki P. Surgical treatment of venous ulcers: role of subfascial endoscopic perforator",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0369",
+      "text": "    vein ligation. Surg Clin North Am. 2003 Jun; 83(3): 671-705.",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0370",
+      "text": "30. Kiguchi MM, Reynolds KB, et al. The need for perforator treatment after VenaSeal and ClosureFast",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0371",
+      "text": "    endovenous saphenous vein closure in CEAP 6 patients. J Vasc Surg Venous Lymphat Disord. 2021",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0372",
+      "text": "    Nov;9(6):1510-1516. PMID: 34111593.",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0373",
+      "text": "31. Kim HS, Paxton BE. Endovenous laser ablation of the great saphenous vein with a 980-nm diode",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0374",
+      "text": "    laser in continuous mode: early treatment failures and successful repeat treatments. J Vasc Interv",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0375",
+      "text": "    Radiol. 2006 Sep; 17(9): 1449-55.",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0376",
+      "text": "32. Kolluri R, Chung J, et al. Network Meta-Analysis to Compare VenaSeal With Other Superficial",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0377",
+      "text": "    Venous Therapies for Chronic Venous Insufficiency. J Vasc Surg Venous Lymphat Disord. 2020",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0378",
+      "text": "    May;8(3):472-481.e3. doi: 10.1016/j.jvsv.2019.12.061. Epub 2020 Feb 14.",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0379",
+      "text": "33. Kursat Bozkurt A, Lawaetz M, et al. European College of Phlebology guideline for truncal ablation.",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0380",
+      "text": "    Phlebology. 2020 Mar;35(2):73-83. doi: 10.1177/0268355519857362. Epub 2019 Jun 27. PMID:",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0381",
+      "text": "    3128336.",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0382",
+      "text": "34. Lam, YL, Lawson, JA, et al. Eight-year follow-up of a randomized clinical trial comparing ultrasound-",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0383",
+      "text": "    guided foam sclerotherapy with surgical stripping of the great saphenous vein. Br J Surg. 2018",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0384",
+      "text": "    May;105(6):692-698.doi: 10.1002/bjs.10762. PMID 29652081.",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0385",
+      "text": "35. Lam YL, Toonder IM, Wittens CHA. Clarivein\u00ae mechano-chemical ablation an interim analysis of a",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0386",
+      "text": "    randomized controlled trial dose-finding study. Phlebology. 2016 Apr;31(3):170-6.doi:",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0387",
+      "text": "    10.1177/0268355515599692. Epub 2015 Aug 6. PMID: 26249150.",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0388",
+      "text": "36. Lane T, Bootun R, et al. A multi-centre randomised controlled trial comparing radiofrequency and",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0389",
+      "text": "    mechanical occlusion chemically assisted ablation of varicose veins \u2013 Final results of the Venefit",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0390",
+      "text": "    versus Clarivein for varicose veins trial. Phlebology. 2017 Mar;32(2):89-98. doi:",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0391",
+      "text": "    10.1177/0268355516651026. Epub 2016 Jul 9. PMID: 27221810.",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0392",
+      "text": "37. Langridge BJ, Onida S, et al. Cyanoacrylate glue embolisation for varicose veins- A novel",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0393",
+      "text": "    complication. Phlebology. 2020 Aug;35(7):520-523.",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0394",
+      "text": "38. Lawrence PF, Hager ES, et al. Treatment of superficial and perforator reflux and deep venous",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0395",
+      "text": "    stenosis improves healing of chronic venous leg ulcers. J Vasc Surg Venous Lymphat Disord. 2020",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0396",
+      "text": "    Jul;8(4):601-609. PMID: 32089497.",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0397",
+      "text": "39. Lurie F, Passman M, et al. The 2020 update of the CEAP classification system and reporting",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0398",
+      "text": "    standards. J Vasc Surg Venous Lymphat Disord. 2020 May;8(3):342-352. PMID: 32113854.",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0399",
+      "text": "40. McGuinness B, Elias F, et al. comparison of duplex ultrasound findings after cyanoacrylate",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0400",
+      "text": "    embolization versus endovenous laserablation of the great saphenous vein. Vasc Surg Venous",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0401",
+      "text": "    Lymphat Disord. 2019 Nov;7(6):824-831. PMID:31495764.",
+      "page": 10,
+      "blank_before": false
+    },
+    {
+      "id": "g0402",
+      "text": "41. Masuda E, Ozsvath K, et al. The 2020 appropriate use criteria for chronic lower extremity venous",
+      "page": 11,
+      "blank_before": false
+    },
+    {
+      "id": "g0403",
+      "text": "    disease of the American Venous Forum, the Society for Vascular Surgery, the American Vein and",
+      "page": 11,
+      "blank_before": false
+    },
+    {
+      "id": "g0404",
+      "text": "    Lymphatic Society, and the Society of Interventional Radiology. J Vasc Surg Venous Lymphat Disord.",
+      "page": 11,
+      "blank_before": false
+    },
+    {
+      "id": "g0405",
+      "text": "    2020 Jul;8(4):505-525.e4. PMID: 32139328.",
+      "page": 11,
+      "blank_before": false
+    },
+    {
+      "id": "g0406",
+      "text": "42. Medtronic Vascular Inc. Dossier: VenaSeal\u2122 Closure System, July 2023.",
+      "page": 11,
+      "blank_before": false
+    },
+    {
+      "id": "g0407",
+      "text": "43. Ming Lim AJ, Mohamed A, et al. Five Year Follow Up of a Randomised Clinical Trial of Endovenous",
+      "page": 11,
+      "blank_before": false
+    },
+    {
+      "id": "g0408",
+      "text": "    Laser Ablation versus Mechanochemical Ablation for Superficial Venous Incompetence (LAMAtrial).",
+      "page": 11,
+      "blank_before": false
+    },
+    {
+      "id": "g0409",
+      "text": "    Eur J Vasc Endovasc Surg. 2025 Apr 25:S1078-5884(25)00347-8. doi: 10.1016/j.ejvs.2025.04.038.",
+      "page": 11,
+      "blank_before": false
+    },
+    {
+      "id": "g0410",
+      "text": "    PMID: 40288564.",
+      "page": 11,
+      "blank_before": false
+    },
+    {
+      "id": "g0411",
+      "text": "44. Mohamed AH, Leung C, et al. A Randomized Controlled Trial of Endovenous Laser Ablation Versus",
+      "page": 11,
+      "blank_before": false
+    },
+    {
+      "id": "g0412",
+      "text": "    Mechanochemical Ablation With ClariVein in the Management of Superficial Venous Incompetence",
+      "page": 11,
+      "blank_before": false
+    },
+    {
+      "id": "g0413",
+      "text": "    (LAMA Trial). Ann Surg. 2021 Jun 1;273(6):e188-e195. PMID:31977509.",
+      "page": 11,
+      "blank_before": false
+    },
+    {
+      "id": "g0414",
+      "text": "45. Morrison N, Gibson K, et al. Five-year Extension Study of Patients From a Randomized Clinical Trial",
+      "page": 11,
+      "blank_before": false
+    },
+    {
+      "id": "g0415",
+      "text": "    (VeClose) Comparing Cyanoacrylate Closure Versus Radiofrequency Ablation for the Treatment of",
+      "page": 11,
+      "blank_before": false
+    },
+    {
+      "id": "g0416",
+      "text": "    Incompetent Great Saphenous Veins. J Vasc Surg Venous Lymphat Disord. 2020 Nov;8(6):978-989.",
+      "page": 11,
+      "blank_before": false
+    },
+    {
+      "id": "g0417",
+      "text": "46. Morrison N, Gibson K, et al. VeClose trial 12-month outcomes of cyanoacrylate closure versus",
+      "page": 11,
+      "blank_before": false
+    },
+    {
+      "id": "g0418",
+      "text": "    radiofrequency ablation for incompetent great saphenous veins. J Vasc Surg Venous Lymphat Disord",
+      "page": 11,
+      "blank_before": false
+    },
+    {
+      "id": "g0419",
+      "text": "    2017; 5: 321\u2013330. doi: 10.1016/j.jvsv.2016.12.005. Epub 2017 Mar 6. PMID: 28411697.",
+      "page": 11,
+      "blank_before": false
+    },
+    {
+      "id": "g0420",
+      "text": "47. Morrison N, Kolluri R, et al. Comparison of cyanoacrylate closure and radiofrequency ablation for the",
+      "page": 11,
+      "blank_before": false
+    },
+    {
+      "id": "g0421",
+      "text": "    treatment of incompetent great saphenous veins: 36-Month outcomes of the VeClose randomized",
+      "page": 11,
+      "blank_before": false
+    },
+    {
+      "id": "g0422",
+      "text": "    controlled trial. Phlebology. 2019 Jul;34(6):380-390.",
+      "page": 11,
+      "blank_before": false
+    },
+    {
+      "id": "g0423",
+      "text": "48. National Institute for Health and Care Excellence (NICE). Cyanoacrylate Glue Occlusion for Varicose",
+      "page": 11,
+      "blank_before": false
+    },
+    {
+      "id": "g0424",
+      "text": "    Veins Interventional Procedures Guidance, Published: 4 March 2020; accessed at nice.org.",
+      "page": 11,
+      "blank_before": false
+    },
+    {
+      "id": "g0425",
+      "text": "49. National Institute for Health and Clinical Excellence (NICE). Endovenous laser treatment of the long",
+      "page": 11,
+      "blank_before": false
+    },
+    {
+      "id": "g0426",
+      "text": "    saphenous vein; Interventional Procedure Guidance 2004:2 accessed at nice.org 05/21/12.",
+      "page": 11,
+      "blank_before": false
+    },
+    {
+      "id": "g0427",
+      "text": "50. National Institute for Health and Clinical Excellence (NICE). Endovenous Mechanochemical Ablation",
+      "page": 11,
+      "blank_before": false
+    },
+    {
+      "id": "g0428",
+      "text": "    for Varicose Veins, NICE interventional procedure guidance 435, 2016. Accessed at nice.org.",
+      "page": 11,
+      "blank_before": false
+    },
+    {
+      "id": "g0429",
+      "text": "51. National Institute for Health and Clinical Excellence (NICE). Radiofrequency ablation of varicose",
+      "page": 11,
+      "blank_before": false
+    },
+    {
+      "id": "g0430",
+      "text": "    veins, Interventional Procedure Guidance, 2003 accessed at nice.org.",
+      "page": 11,
+      "blank_before": false
+    },
+    {
+      "id": "g0431",
+      "text": "52. National Institute for Health and Clinical Excellence (NICE). Subfascial endoscopic perforator vein",
+      "page": 11,
+      "blank_before": false
+    },
+    {
+      "id": "g0432",
+      "text": "    surgery; Interventional Procedure Guidance, 2004:2 accessed at nice.org.",
+      "page": 11,
+      "blank_before": false
+    },
+    {
+      "id": "g0433",
+      "text": "53. National Institute for Health and Clinical Excellence (NICE). Transilluminated powered phlebectomy",
+      "page": 11,
+      "blank_before": false
+    },
+    {
+      "id": "g0434",
+      "text": "    for varicose veins; Interventional Procedure Guidance 2004:2; accessed at nice.org.",
+      "page": 11,
+      "blank_before": false
+    },
+    {
+      "id": "g0435",
+      "text": "54. National Institute for Health and Clinic Excellence (NICE). Ultrasound-guided foam sclerotherapy for",
+      "page": 11,
+      "blank_before": false
+    },
+    {
+      "id": "g0436",
+      "text": "    varicose veins; Interventional Procedure Guidance, 2009, accessed at nice.org.",
+      "page": 11,
+      "blank_before": false
+    },
+    {
+      "id": "g0437",
+      "text": "55. National Institute for Health and Care Excellence (NICE). NICE Clinical Guideline 168: Varicose veins",
+      "page": 11,
+      "blank_before": false
+    },
+    {
+      "id": "g0438",
+      "text": "    in the legs. 2013; accessed at nice.org.",
+      "page": 11,
+      "blank_before": false
+    },
+    {
+      "id": "g0439",
+      "text": "56. Nyamekye IK. European Society for Vascular Surgery (ESVS) 2022 clinical practice guidelines on the",
+      "page": 11,
+      "blank_before": false
+    },
+    {
+      "id": "g0440",
+      "text": "    management of chronic venous disease of the lower limbs. J Med Vasc. 2022 Apr;47(2):53-55.",
+      "page": 11,
+      "blank_before": false
+    },
+    {
+      "id": "g0441",
+      "text": "57. O\u2019Banion LA, Reynolds KB, et al. A comparison of cyanoacrylate glue and radiofrequency ablation",
+      "page": 11,
+      "blank_before": false
+    },
+    {
+      "id": "g0442",
+      "text": "    techniques in the treatment of superficial venous reflux in CEAP 6 patients. J Vasc Surg Venous",
+      "page": 11,
+      "blank_before": false
+    },
+    {
+      "id": "g0443",
+      "text": "    Lymphat Disord. 2021 Sep;9(5):1215-1221. PMID: 33453440.",
+      "page": 11,
+      "blank_before": false
+    },
+    {
+      "id": "g0444",
+      "text": "58. O\u2019Meara S, Cullum NA, Nelson EA. Compression for venous leg ulcers. Cochrane Database of",
+      "page": 11,
+      "blank_before": false
+    },
+    {
+      "id": "g0445",
+      "text": "    Systematic Reviews 2009, Issue 1. Art. No.: CD000265. DOI:10.1002/14651858.CD000265.pub2.",
+      "page": 11,
+      "blank_before": false
+    },
+    {
+      "id": "g0446",
+      "text": "59. Oud S, Alozai T, et al. Long-term outcomes of mechanochemical ablation using the Clarivein device",
+      "page": 12,
+      "blank_before": false
+    },
+    {
+      "id": "g0447",
+      "text": "    for the treatment of great saphenous vein incompetence. J Vasc Surg Venous Lymphat Disord. 2024",
+      "page": 12,
+      "blank_before": false
+    },
+    {
+      "id": "g0448",
+      "text": "    Sep 11;13(1):101967. doi: 10.1016/j.jvsv.2024.101967.",
+      "page": 12,
+      "blank_before": false
+    },
+    {
+      "id": "g0449",
+      "text": "60. Passman MA. Approach to treating symptomatic superficial venous insufficiency. In UpToDate, Eidt",
+      "page": 12,
+      "blank_before": false
+    },
+    {
+      "id": "g0450",
+      "text": "    JF, Mills JL, Collins KA (Eds.), UpToDate, Waltham, MA; accessed at uptodate.com.",
+      "page": 12,
+      "blank_before": false
+    },
+    {
+      "id": "g0451",
+      "text": "61. Scovell S. Liquid, foam, and glue sclerotherapy techniques for the treatment of lower extremity veins.",
+      "page": 12,
+      "blank_before": false
+    },
+    {
+      "id": "g0452",
+      "text": "    In UpToDate, Eidt JF, Mills JL, Dover JS, Collins KA (Eds.), UpToDate, Waltham, MA; accessed at",
+      "page": 12,
+      "blank_before": false
+    },
+    {
+      "id": "g0453",
+      "text": "    uptodate.com.",
+      "page": 12,
+      "blank_before": false
+    },
+    {
+      "id": "g0454",
+      "text": "62. Scovell S. Nonthermal, nontumescent ablation techniques for the treatment of lower extremity",
+      "page": 12,
+      "blank_before": false
+    },
+    {
+      "id": "g0455",
+      "text": "    superficial venous insufficiency. In UpToDate, Eidt JF, Mills JL, Collins KA (Eds.), UpToDate,",
+      "page": 12,
+      "blank_before": false
+    },
+    {
+      "id": "g0456",
+      "text": "    Waltham, MA; accessed July 2023 at uptodate.com.",
+      "page": 12,
+      "blank_before": false
+    },
+    {
+      "id": "g0457",
+      "text": "63. Tang TY, Qi Yap CJ, et al. Early results (3 months) of an Asian prospectivemulticenter VenaSeal real-",
+      "page": 12,
+      "blank_before": false
+    },
+    {
+      "id": "g0458",
+      "text": "    world postmarketevaluation to investigate the efficacy and safety ofcyanoacrylate endovenous",
+      "page": 12,
+      "blank_before": false
+    },
+    {
+      "id": "g0459",
+      "text": "    ablation for varicose veins. J Vasc Surg Venous Lymphat Disord. 2020 May 7;S2213-33X(20)30238-",
+      "page": 12,
+      "blank_before": false
+    },
+    {
+      "id": "g0460",
+      "text": "    9. PMID:32387378.",
+      "page": 12,
+      "blank_before": false
+    },
+    {
+      "id": "g0461",
+      "text": "64. Tenbrook JA Jr, Iafrati MD, O\u2019donnell TF Jr, Wolf MP, Hoffman SN, Pauker SG, Lau J, Wong JB.",
+      "page": 12,
+      "blank_before": false
+    },
+    {
+      "id": "g0462",
+      "text": "    Systematic review of outcomes after surgical management of venous disease incorporating",
+      "page": 12,
+      "blank_before": false
+    },
+    {
+      "id": "g0463",
+      "text": "    subfascial endoscopic perforator surgery. J Vasc Surg. 2004 Mar; 39(3): 583-9.",
+      "page": 12,
+      "blank_before": false
+    },
+    {
+      "id": "g0464",
+      "text": "65. U.S. Food and Drug Administration (FDA); accessed at fda.gov.",
+      "page": 12,
+      "blank_before": false
+    },
+    {
+      "id": "g0465",
+      "text": "66. V\u00e4h\u00e4aho, S, Mahmoud, O, et al. Randomized clinical trial of mechanochemical and endovenous",
+      "page": 12,
+      "blank_before": false
+    },
+    {
+      "id": "g0466",
+      "text": "    thermal ablation of great saphenous varicose veins. Br J Surg. 2019 Apr;106(5):548-554. Doi:",
+      "page": 12,
+      "blank_before": false
+    },
+    {
+      "id": "g0467",
+      "text": "    10.1002/bjs.11158. PMID 30908611.",
+      "page": 12,
+      "blank_before": false
+    },
+    {
+      "id": "g0468",
+      "text": "67. van der Velden SK, Biemans AA, De Maeseneer MG, et al. Five-year results of a randomized clinical",
+      "page": 12,
+      "blank_before": false
+    },
+    {
+      "id": "g0469",
+      "text": "    trial of conventional surgery, endovenous laser ablation and ultrasound-guided foam sclerotherapy in",
+      "page": 12,
+      "blank_before": false
+    },
+    {
+      "id": "g0470",
+      "text": "    patients with great saphenous varicose veins. Br J Surg. Jul 1 2015.",
+      "page": 12,
+      "blank_before": false
+    },
+    {
+      "id": "g0471",
+      "text": "68. Vasquez M, Gasparis AP, Varithena 017 Investigator G. A multicenter, randomized, placebo-",
+      "page": 12,
+      "blank_before": false
+    },
+    {
+      "id": "g0472",
+      "text": "    controlled trial of endovenous thermal ablation with or without polidocanol endovenous microfoam",
+      "page": 12,
+      "blank_before": false
+    },
+    {
+      "id": "g0473",
+      "text": "    treatment in patients with great saphenous vein incompetence and visible varicosities. Phlebology.",
+      "page": 12,
+      "blank_before": false
+    },
+    {
+      "id": "g0474",
+      "text": "    May 2017;32(4):272-281.",
+      "page": 12,
+      "blank_before": false
+    },
+    {
+      "id": "g0475",
+      "text": "69. Weaver I, Weaver P. Audit of the efficacy and complications ofcyanoacrylate glue embolisation to",
+      "page": 12,
+      "blank_before": false
+    },
+    {
+      "id": "g0476",
+      "text": "    treat varicoseveins in primary care. JPrim Health Care. 2019 Sep;11(3):249-258. PMID:32171378.",
+      "page": 12,
+      "blank_before": false
+    },
+    {
+      "id": "g0477",
+      "text": "70. Whing J, Nandhra S, et al. Interventions for great saphenous vein incompetence. Cochrane Database",
+      "page": 12,
+      "blank_before": false
+    },
+    {
+      "id": "g0478",
+      "text": "    of Systematic Reviews 2021, Issue 8. Art. No.: CD005624. DOI: 10.1002/14651858.CD005624.pub4;",
+      "page": 12,
+      "blank_before": false
+    },
+    {
+      "id": "g0479",
+      "text": "    accessed at cochranelibrary.com.",
+      "page": 12,
+      "blank_before": false
+    },
+    {
+      "id": "g0480",
+      "text": "71. Yang GK, Parapini M, et al. Comparison of cyanoacrylate embolization and radiofrequency ablation",
+      "page": 12,
+      "blank_before": false
+    },
+    {
+      "id": "g0481",
+      "text": "    for the treatment of varicose veins. Phlebology. 2019 May;34(4):278-283. PMID:30114987.",
+      "page": 12,
+      "blank_before": false
+    },
+    {
+      "id": "g0482",
+      "text": "72. Zierau UT. VenaSeal\u00ae-Closure: Results Over 6 Years Treatment. A follow-Up Study Conducted on",
+      "page": 12,
+      "blank_before": false
+    },
+    {
+      "id": "g0483",
+      "text": "    1950 Truncal SaphenousVeins in 1061 Cases. J Vasc Endovasc Therapy. 2018 Vol.3 No.3:14.",
+      "page": 12,
+      "blank_before": false
+    },
+    {
+      "id": "g0484",
+      "text": "COMMITTEE APPROVAL:",
+      "page": 12,
+      "blank_before": true
+    },
+    {
+      "id": "g0485",
+      "text": "This Medical Coverage Guideline (MCG) was approved by the BCBSF Medical Policy and Coverage",
+      "page": 12,
+      "blank_before": false
+    },
+    {
+      "id": "g0486",
+      "text": "Committee on 07/24/25.",
+      "page": 12,
+      "blank_before": false
+    },
+    {
+      "id": "g0487",
+      "text": "GUIDELINE UPDATE INFORMATION:",
+      "page": 12,
+      "blank_before": true
+    },
+    {
+      "id": "g0488",
+      "text": " 02/15/02     04-77260-16 Endoluminal Radiofrequency Ablation for Varicose Veins approved.",
+      "page": 12,
+      "blank_before": false
+    },
+    {
+      "id": "g0489",
+      "text": "07/15/02   Revised to remove limitation for sclerotherapy; Renamed to include other treatments for",
+      "page": 13,
+      "blank_before": false
+    },
+    {
+      "id": "g0490",
+      "text": "           varicose veins; Renumbered from 04-77260-16 to 02-33000-13.",
+      "page": 13,
+      "blank_before": false
+    },
+    {
+      "id": "g0491",
+      "text": "01/01/03   HCPCS coding update.",
+      "page": 13,
+      "blank_before": false
+    },
+    {
+      "id": "g0492",
+      "text": "06/15/03   Reviewed; no change in coverage.",
+      "page": 13,
+      "blank_before": false
+    },
+    {
+      "id": "g0493",
+      "text": "12/15/03   Sodium tetradecyl sulfate removed from MCG.",
+      "page": 13,
+      "blank_before": false
+    },
+    {
+      "id": "g0494",
+      "text": "04/15/04   Review and revision of guideline consisting of updated references, added coverage",
+      "page": 13,
+      "blank_before": false
+    },
+    {
+      "id": "g0495",
+      "text": "           statement for laser ablation, and added information about SEPS and Transilluminated",
+      "page": 13,
+      "blank_before": false
+    },
+    {
+      "id": "g0496",
+      "text": "           Powered Phlebectomy (investigational). These additions led to the archiving of guideline:",
+      "page": 13,
+      "blank_before": false
+    },
+    {
+      "id": "g0497",
+      "text": "           Subfascial Endoscopic Perforator Surgery (SEPS).",
+      "page": 13,
+      "blank_before": false
+    },
+    {
+      "id": "g0498",
+      "text": "01/01/05   Annual HCPCS update; consisting of the deletion of S2130 and S2131 and addition of",
+      "page": 13,
+      "blank_before": false
+    },
+    {
+      "id": "g0499",
+      "text": "           36475, 36476, 36478 and 36479.",
+      "page": 13,
+      "blank_before": false
+    },
+    {
+      "id": "g0500",
+      "text": "04/15/05   Review and revision of guideline; consisting of updated references, added coverage",
+      "page": 13,
+      "blank_before": false
+    },
+    {
+      "id": "g0501",
+      "text": "           statement for Transilluminated powered phlebectomy.",
+      "page": 13,
+      "blank_before": false
+    },
+    {
+      "id": "g0502",
+      "text": "04/15/06   Review and revision of guideline consisting of updated references.",
+      "page": 13,
+      "blank_before": false
+    },
+    {
+      "id": "g0503",
+      "text": "11/15/06   Revision of guideline.",
+      "page": 13,
+      "blank_before": false
+    },
+    {
+      "id": "g0504",
+      "text": "03/15/07   Review and revision of guideline consisting of updated references.",
+      "page": 13,
+      "blank_before": false
+    },
+    {
+      "id": "g0505",
+      "text": "06/15/07   Reformatted guideline.",
+      "page": 13,
+      "blank_before": false
+    },
+    {
+      "id": "g0506",
+      "text": "05/15/09   Biennial review: position statements and criteria revised; description section,",
+      "page": 13,
+      "blank_before": false
+    },
+    {
+      "id": "g0507",
+      "text": "           reimbursement information, Medicare Advantage section and references updated.",
+      "page": 13,
+      "blank_before": false
+    },
+    {
+      "id": "g0508",
+      "text": "01/01/10   Annual HCPCS coding review: added code 37761 & revised code descriptors for 37760 &",
+      "page": 13,
+      "blank_before": false
+    },
+    {
+      "id": "g0509",
+      "text": "           37765 located in the Program Exceptions section under the Medicare Advantage",
+      "page": 13,
+      "blank_before": false
+    },
+    {
+      "id": "g0510",
+      "text": "           Products.",
+      "page": 13,
+      "blank_before": false
+    },
+    {
+      "id": "g0511",
+      "text": "02/15/10   Revision: additional position statements added regarding sclerotherapy; reimbursement",
+      "page": 13,
+      "blank_before": false
+    },
+    {
+      "id": "g0512",
+      "text": "           and definition sections updated.",
+      "page": 13,
+      "blank_before": false
+    },
+    {
+      "id": "g0513",
+      "text": "10/15/10   Revision; related ICD-10 codes added.",
+      "page": 13,
+      "blank_before": false
+    },
+    {
+      "id": "g0514",
+      "text": "02/15/11   Revision; formatting changes.",
+      "page": 13,
+      "blank_before": false
+    },
+    {
+      "id": "g0515",
+      "text": "08/15/11   Revision; formatting changes.",
+      "page": 13,
+      "blank_before": false
+    },
+    {
+      "id": "g0516",
+      "text": "10/01/11   Revision; formatting changes.",
+      "page": 13,
+      "blank_before": false
+    },
+    {
+      "id": "g0517",
+      "text": "07/12/12   Annual review; position statements, billing/coding, Medicare program exception, and",
+      "page": 13,
+      "blank_before": false
+    },
+    {
+      "id": "g0518",
+      "text": "           references updated; formatting changes.",
+      "page": 13,
+      "blank_before": false
+    },
+    {
+      "id": "g0519",
+      "text": "10/15/12   Revision; Accessory saphenous veins position statement and definitions updated;",
+      "page": 13,
+      "blank_before": false
+    },
+    {
+      "id": "g0520",
+      "text": "           formatting changes.",
+      "page": 13,
+      "blank_before": false
+    },
+    {
+      "id": "g0521",
+      "text": "07/15/13   Annual review; position statement section and references updated; formatting changes.",
+      "page": 13,
+      "blank_before": false
+    },
+    {
+      "id": "g0522",
+      "text": "05/15/14   Annual review; position statements maintained and references updated.",
+      "page": 13,
+      "blank_before": false
+    },
+    {
+      "id": "g0523",
+      "text": "01/01/15   Annual HCPCS/CPT update. Removed code 36469.",
+      "page": 13,
+      "blank_before": false
+    },
+    {
+      "id": "g0524",
+      "text": "02/15/15   Annual review; position statements and references updated; formatting changes.",
+      "page": 13,
+      "blank_before": false
+    },
+    {
+      "id": "g0525",
+      "text": "10/01/15   Revision; ICD10 coding section updated.",
+      "page": 13,
+      "blank_before": false
+    },
+    {
+      "id": "g0526",
+      "text": "11/01/15   Revision: ICD-9 Codes deleted.",
+      "page": 13,
+      "blank_before": false
+    },
+    {
+      "id": "g0527",
+      "text": "02/15/16   Revision; description, position statement section and references updated; formatting",
+      "page": 13,
+      "blank_before": false
+    },
+    {
+      "id": "g0528",
+      "text": "           changes.",
+      "page": 13,
+      "blank_before": false
+    },
+    {
+      "id": "g0529",
+      "text": "03/23/16   Revision; reimbursement section updated.",
+      "page": 13,
+      "blank_before": false
+    },
+    {
+      "id": "g0530",
+      "text": "05/15/16   Revision to Position Statement.",
+      "page": 13,
+      "blank_before": false
+    },
+    {
+      "id": "g0531",
+      "text": "08/01/16   Revision: Reimbursement Section.",
+      "page": 13,
+      "blank_before": false
+    },
+    {
+      "id": "g0532",
+      "text": "10/01/16   Revision; formatting changes.",
+      "page": 14,
+      "blank_before": false
+    },
+    {
+      "id": "g0533",
+      "text": "01/01/17   Annual CPT/HCPCS update. Added 36473, 36474; revised 36476, 36479.",
+      "page": 14,
+      "blank_before": false
+    },
+    {
+      "id": "g0534",
+      "text": "07/15/17   Revision; position statement section updated to include CHIVA method; references",
+      "page": 14,
+      "blank_before": false
+    },
+    {
+      "id": "g0535",
+      "text": "           updated.",
+      "page": 14,
+      "blank_before": false
+    },
+    {
+      "id": "g0536",
+      "text": "01/01/18   Annual CPT/HCPCS update. Added codes 36465, 36466, 36482, 36483; revised codes",
+      "page": 14,
+      "blank_before": false
+    },
+    {
+      "id": "g0537",
+      "text": "           36468, 36470, 36471.",
+      "page": 14,
+      "blank_before": false
+    },
+    {
+      "id": "g0538",
+      "text": "09/15/18   Review; description, position statement, reimbursement information, and references",
+      "page": 14,
+      "blank_before": false
+    },
+    {
+      "id": "g0539",
+      "text": "           updated.",
+      "page": 14,
+      "blank_before": false
+    },
+    {
+      "id": "g0540",
+      "text": "01/01/19   Annual CPT/HCPCS coding update. Added code 0524T.",
+      "page": 14,
+      "blank_before": false
+    },
+    {
+      "id": "g0541",
+      "text": "07/15/19   Revision; position statement and references updated.",
+      "page": 14,
+      "blank_before": false
+    },
+    {
+      "id": "g0542",
+      "text": "01/15/20   Review; investigational position for cyanoacrylate adhesive maintained.",
+      "page": 14,
+      "blank_before": false
+    },
+    {
+      "id": "g0543",
+      "text": "07/15/20   Review; position statements maintained and references updated.",
+      "page": 14,
+      "blank_before": false
+    },
+    {
+      "id": "g0544",
+      "text": "12/15/20   Review; position statements maintained and references updated.",
+      "page": 14,
+      "blank_before": false
+    },
+    {
+      "id": "g0545",
+      "text": "01/01/21   Annual CPT/HCPCS update. Code 76970 deleted.",
+      "page": 14,
+      "blank_before": false
+    },
+    {
+      "id": "g0546",
+      "text": "07/15/21   Review; Position statements maintained and references updated.",
+      "page": 14,
+      "blank_before": false
+    },
+    {
+      "id": "g0547",
+      "text": "09/15/22   Review: Position statements maintained; references updated.",
+      "page": 14,
+      "blank_before": false
+    },
+    {
+      "id": "g0548",
+      "text": "05/25/23   Update to Program Exceptions section.",
+      "page": 14,
+      "blank_before": false
+    },
+    {
+      "id": "g0549",
+      "text": "09/15/23   Review: Position statements, coding, and references updated.",
+      "page": 14,
+      "blank_before": false
+    },
+    {
+      "id": "g0550",
+      "text": "08/15/25   Review: Position statements maintained; references updated.",
+      "page": 14,
+      "blank_before": false
+    },
+    {
+      "id": "g0551",
+      "text": "01/01/26   Annual CPT/HCPCS Coding Update. Code 37500 deleted.",
+      "page": 14,
+      "blank_before": false
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "payer": "Excellus BCBS",
+  "payer_key": "excellus",
+  "treatment": "cardiac-monitoring",
+  "title": "Cardiac Event Monitors",
+  "policy_number": "",
+  "effective": "",
+  "url": "https://provider.excellusbcbs.com/documents/d/global/exc-prv-cardiac-event-monitors",
+  "final_url": "https://provider.excellusbcbs.com/documents/d/global/exc-prv-cardiac-event-monitors",
+  "source_format": "pdf",
+  "anchor": false,
+  "note": "",
+  "file": "excellus-cardiac-event-monitors.pdf",
+  "sha256": "a63dd7f8a334e15a4519cb230ac7ca2ab70a73a1dcc45b53ebbdbee4cb0d2f29",
+  "pages": 16,
+  "bytes": 153487,
+  "retrieved": "2026-10-09",
+  "printed_date": "Current effective July 16, 2026; next review July 2027; committee dates back to 10/08/99; 07/17/25 off-cycle update added cryptogenic stroke criteria"
+}

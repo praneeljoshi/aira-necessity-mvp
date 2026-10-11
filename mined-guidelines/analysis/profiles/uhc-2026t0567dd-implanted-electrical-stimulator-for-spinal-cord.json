@@ -1,0 +1,111 @@
+{
+ "file": "uhc-2026t0567dd-implanted-electrical-stimulator-for-spinal-cord.pdf",
+ "treatment": "spinal-cord-stimulation",
+ "payer": "uhc",
+ "doc_kind": "medical policy (commercial; criteria delegated to InterQual)",
+ "lines_of_business": [
+  "UnitedHealthcare Commercial",
+  "UnitedHealthcare Individual Exchange",
+  "Community Plan has a separate policy"
+ ],
+ "effective_or_revised": "Effective January 1, 2026",
+ "sections_in_order": [
+  "Application",
+  "Coverage Rationale",
+  "Medical Records Documentation Used for Reviews",
+  "Applicable Codes",
+  "Clinical Evidence",
+  "U.S. Food and Drug Administration",
+  "References",
+  "Policy History/Revision Information",
+  "Instructions for Use"
+ ],
+ "criteria_location": "There are no clinical criteria in the PDF. Coverage Rationale (pp.1-2) lists conditions and says 'For medical necessity clinical coverage criteria, refer to the InterQual CP: Procedures, Spinal Cord Stimulator (SCS) Insertion.'",
+ "procedures_covered": [
+  "Implanted SCS",
+  "DRG stimulation",
+  "Replacement battery/generator"
+ ],
+ "logic": {
+  "top_level": "other (indication list with criteria delegated to external InterQual subset)",
+  "max_nesting_depth": 1,
+  "k_of_n": [],
+  "exclusions_or_contraindications": "Unproven list: chronic intractable back pain without prior spine surgery, refractory angina; DRG unproven for all conditions other than CRPS I/II.",
+  "initial_vs_repeat": "Replacement battery/generator appropriate when 'malfunctioning, cannot be repaired, and is no longer under warranty'.",
+  "and_or_ambiguity": [
+   {
+    "quote": "proven and medically necessary for treating the following conditions in certain circumstances when performed according to U.S. FDA labeled indications",
+    "why_ambiguous": "'certain circumstances' are entirely in InterQual; the PDF cannot be evaluated alone"
+   }
+  ]
+ },
+ "requirement_kinds": [
+  {
+   "kind": "diagnosis",
+   "quote": "Complex regional pain syndrome (CRPS); Painful diabetic neuropathy; Failed back surgery syndrome",
+   "where": "Coverage Rationale"
+  },
+  {
+   "kind": "diagnosis",
+   "quote": "DRG stimulation is proven and medically necessary for treating ... Complex regional pain syndrome (CRPS I, CPRS II)",
+   "where": "Coverage Rationale"
+  },
+  {
+   "kind": "other",
+   "quote": "when performed according to U.S. Food and Drug Administration (FDA) labeled indications, contraindications, warnings, and precautions",
+   "where": "Coverage Rationale"
+  },
+  {
+   "kind": "prior procedure",
+   "quote": "existing battery/generator is malfunctioning, cannot be repaired, and is no longer under warranty",
+   "where": "Note, p.2"
+  }
+ ],
+ "thresholds": [],
+ "time_windows": [],
+ "codes": {
+  "cpt_hcpcs_listed": true,
+  "icd10_listed": false,
+  "codes_tied_to_criteria": "Listed for reference only; 'does not imply that the service ... is covered'",
+  "non_covered_code_lists": "None"
+ },
+ "external_dependencies": [
+  {
+   "what": "InterQual CP: Procedures, Spinal Cord Stimulator (SCS) Insertion holds the actual criteria",
+   "quote": "refer to the InterQual CP: Procedures, Spinal Cord Stimulator (SCS) Insertion"
+  },
+  {
+   "what": "Medical Records Documentation guideline",
+   "quote": "refer to the guidelines titled Medical Records Documentation Used for Reviews"
+  },
+  {
+   "what": "Related policy on electrical stimulation",
+   "quote": "Electrical Stimulation for the Treatment of Pain and Muscle Rehabilitation"
+  }
+ ],
+ "definitions_that_change_meaning": [],
+ "vague_terms": [
+  {
+   "quote": "in certain circumstances",
+   "problem": "criteria not in document"
+  },
+  {
+   "quote": "FDA labeled indications",
+   "problem": "requires device labeling lookup"
+  }
+ ],
+ "extraction_hazards": [
+  "Hyperlinked 'Click here to view the InterQual criteria' text has no content",
+  "8 of 13 pages are clinical evidence studies",
+  "Typos ('CPRS II', 'The A review')",
+  "Bullets rendered as private glyphs"
+ ],
+ "interesting_structures": [
+  "Public policy is only a condition whitelist; the criteria are proprietary and inaccessible",
+  "Different delegated criteria for DRG vs SCS cite the same InterQual subset"
+ ],
+ "fit_to_tree": {
+  "score": 5,
+  "why": "No criteria text to build a tree from; the tree would be a diagnosis whitelist. The real logic is in InterQual."
+ }
+}
