@@ -1,6 +1,6 @@
 # Design note
 
-What It Does
+## What It Does
 
 This tool reads both patient records and guidlines, and gives coordinators a checklist of criteria that could drive denials.
 
@@ -11,7 +11,7 @@ If they choose - as they often should, especially on new codes or guidelines - t
 
 Rather than spending hours fishing for references, they arrive on click, and are compiled as issues or packets ready to send out. 
 
-What owns what:
+## What owns what:
 
 Models generate structure and logic as data from messy artifacts
     - contstructs logical pathways (as truth trees) from guidlines
@@ -26,7 +26,7 @@ Code is the execution layer between them:
     - operations like expression evaluation (bit math)
     - slicing documents, pruning trees needed
 
-Tradeoffs:
+## Tradeoffs:
 
 false positives for false negatives : better to review non-issue than miss an issue
     - prioritized carefulness. always ref checked.  
@@ -47,7 +47,8 @@ automation for validation
     - high false positive risk -> shouldnt ship something uncertian without the user being resourced to correct it
     - suggestions become fixtures ($$$)
 
-What breaks: 
+## What breaks: 
+
     - policy reduction on complex logic - shared subtrees, crossing, referential language (bcbsf is generally clear, and short)
         - experiment with agents using declaritive languages - json, python - to build reusable blocks that are easy to invoke
             * v1.2-form, v1.2-script
@@ -61,7 +62,7 @@ What breaks:
     - scaling to handle volume 
         - pre processed guidelines, async endpoints, job queues
 
-Next
+## Next
 
 - deplpoy, see what users think. engagement = product and data validation
 - mine bcbf (for client) and other payer guidelines. pre process common pathways.
