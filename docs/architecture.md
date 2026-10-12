@@ -30,7 +30,7 @@ flowchart TB
     end
 
     subgraph EVID["evidence/"]
-        J["Judge: cite chart lines per requirement<br/><i>model · gpt-6-luna</i>"]
+        J["Judge: cite chart lines per requirement<br/><i>model · gpt-6-sol</i>"]
         V["Verify quotes, dates, measurements<br/><i>code</i>"]
     end
 
