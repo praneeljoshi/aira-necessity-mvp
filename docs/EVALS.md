@@ -47,7 +47,8 @@ isolated sandbox. Disputes are settled against the policy text, not the key.
 
 Messy wording, shuffled note order, other chart formats and prompt injection did not move it.
 
-_The stress run used gpt-5.5 as the judge. The shipped judge is gpt-6-sol: on the 5 sample charts it found every
-planted fact, including all 3 traps in the 138-page chart. The 142-chart run has not yet been repeated on sol._
+_The stress run used gpt-5.5 as the judge. We have since upgraded to gpt-6-sol, a newer model that outperforms
+gpt-5.5 on general benchmarks; on our 5 sample charts it found every planted fact, including all 3 traps in the
+138-page chart. The 142-chart run has not yet been repeated on sol._
 
 _Reviewers are Claude, and this is a small sample._
