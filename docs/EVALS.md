@@ -35,21 +35,16 @@ isolated sandbox. Disputes are settled against the policy text, not the key.
 - **Keep the prompt open.** Added structure (JSON forms, tools, scripts, loops) missed as much at 2–4× the cost.
 - **Complete first, then quiet.** Zero missing criteria; admin folding cut the noise enough to ship.
 
-## 3. Judge model
+## 3. Judge (gpt-6-sol)
 
-The 5 sample charts against their documented outcomes, 2 runs each (`experiments/scripts/record_eval.py`). Structure
-is gpt-6-sol in both rows.
+The 5 sample charts against their documented outcomes, 2 runs each (`experiments/scripts/record_eval.py`).
 
-| Judge | Correct outcome | Ruiz (138 pages): 3 planted traps |
-| --- | --- | --- |
-| gpt-6-sol | 4 / 5 (Mitchell: stage C picked no section at the time) | all 3 found |
-| gpt-6-luna | 5 / 5 | size right; duplex: grader failed (strict date match, as on sol); compression start **missed** |
-
-- **Luna stops at the first supporting line.** On Ruiz it called "3 months of compression" met from two lines of the
-  last visit, in both runs, and never cited the 2024 start note or the earlier interruption that sol traced. The note
-  was in the evidence it was shown.
-- **Code caught it.** Verify flagged "needs a dated start note" and sent the case to review; nothing was approved.
-- **Decision: the judge is pinned to gpt-6-sol** (`app/core/llm.py`). `MODEL_JUDGE` still overrides.
-- The 142-chart synthetic stress set was run on gpt-5.5 (1 / 142 false "ready"), not yet on sol or luna.
+- **Outcomes:** Delgado, Park, Okafor and Ruiz correct in both runs. Mitchell did not reach the judge: stage C picked
+  no section at the time (since fixed).
+- **Ruiz (138 pages), 3 planted traps:** all 3 found — the 2024 compression restart (not the earlier stopped start),
+  the 5 mm varicosity (not the 2 mm distractor), the 2026 duplex (not the sub-threshold 2023 one).
+- **Every miss traced to the tree**, not the judge: the checklist asked for things the chart does not hold (CPT
+  descriptor words, FEP/SAO), since folded or pruned.
+- One wrong "met" in 6 judge calls (“better with elevation” read as elevation therapy).
 
 _Reviewers are Claude, and this is a small sample._
