@@ -31,17 +31,16 @@ blind reviewers confirm each finding against the policy text.
 
 ## 2. Judging (step I)
 
-142 single-procedure synthetic charts with known outcomes:
+gpt-6-sol on 120 single-procedure synthetic charts with known outcomes:
 
+| | Result |
+| --- | --- |
+| False "ready to submit" | **0 / 120** |
+| Correct outcome | 115 / 120 (96%) |
+| Correct requirement verdicts | 1,015 / 1,052 (96%) |
 
-|                              | Result              |
-| ---------------------------- | ------------------- |
-| False "ready to submit"      | **1 / 142**         |
-| Correct outcome              | 137 / 142 (96%)     |
-| Correct requirement verdicts | 1,225 / 1,268 (97%) |
+Messy wording, shuffled notes, long charts, other formats and prompt injection did not move it. On the 5 sample charts
+it found every planted fact, including all 3 traps in the 138-page chart.
 
-
-Messy wording, shuffled notes, other chart formats and prompt injection did not move it.
-
-*Run on gpt-5.5. The shipped judge is gpt-6-sol, stronger on general benchmarks; on our 5 sample charts it found every
-planted fact. The 142-chart rerun on sol is in progress.*
+*Multi-procedure orders (22 more charts) scored 9 / 22 under the old pipeline, which picked the best pathway across
+codes; v1.2 has the coordinator confirm the indication per code. Not yet re-run on v1.2.*
