@@ -126,14 +126,14 @@ class _D(BaseModel):
 
 
 class _V(BaseModel):
-    criterion: str
-    status: str
-    confidence: float = Field(ge=0, le=1)
-    rationale: str = ""
+    criterion: str                     # evidence first, then the decision: the schema order is the generation order
     for_: list[str] = Field(default_factory=list, alias="for")
     against: list[str] = Field(default_factory=list)
     measurements: list[Measurement] = Field(default_factory=list)
     dates: list[_D] = Field(default_factory=list)
+    rationale: str = ""
+    status: str
+    confidence: float = Field(ge=0, le=1)
 
 
 class IOut(BaseModel):
