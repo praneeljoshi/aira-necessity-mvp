@@ -35,4 +35,21 @@ isolated sandbox. Disputes are settled against the policy text, not the key.
 - **Keep the prompt open.** Added structure (JSON forms, tools, scripts, loops) missed as much at 2–4× the cost.
 - **Complete first, then quiet.** Zero missing criteria; admin folding cut the noise enough to ship.
 
+## 3. Judge model
+
+The 5 sample charts against their documented outcomes, 2 runs each (`experiments/scripts/record_eval.py`). Structure
+is gpt-6-sol in both rows.
+
+| Judge | Correct outcome | Ruiz (138 pages): 3 planted traps |
+| --- | --- | --- |
+| gpt-6-sol | 4 / 5 (Mitchell: stage C picked no section at the time) | all 3 found |
+| gpt-6-luna | 5 / 5 | size right; duplex: grader failed (strict date match, as on sol); compression start **missed** |
+
+- **Luna stops at the first supporting line.** On Ruiz it called "3 months of compression" met from two lines of the
+  last visit, in both runs, and never cited the 2024 start note or the earlier interruption that sol traced. The note
+  was in the evidence it was shown.
+- **Code caught it.** Verify flagged "needs a dated start note" and sent the case to review; nothing was approved.
+- **Decision: the judge is pinned to gpt-6-sol** (`app/core/llm.py`). `MODEL_JUDGE` still overrides.
+- The 142-chart synthetic stress set was run on gpt-5.5 (1 / 142 false "ready"), not yet on sol or luna.
+
 _Reviewers are Claude, and this is a small sample._

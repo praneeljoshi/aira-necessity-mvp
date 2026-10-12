@@ -3,7 +3,7 @@
 Every call: JSON mode, pinned model, validated against a pydantic schema, one retry with the
 validation error fed back, and the full exchange written to data/runs/<run_id>/.
 
-Models: `pick_models()` returns the ship pins, gpt-6-sol for structure (B, C, H, A2) and gpt-6-luna for the
+Models: `pick_models()` returns the ship pins, gpt-6-sol for structure (B, C, H, A2) and gpt-6-sol for the
 judge (I, ask), without asking the API. `MODEL_STRUCTURE` and `MODEL_JUDGE` in the environment override them.
 `choose_flagship` (strongest GA flagship in a model list) is kept for scripts.
 
@@ -76,7 +76,7 @@ def choose_flagship(ids: list[str]) -> str:
 
 
 STRUCTURE_MODEL = "gpt-6-sol"     # the ship pin for B, C, H and A2
-JUDGE_MODEL = "gpt-6-luna"        # the ship pin for I and ask
+JUDGE_MODEL = "gpt-6-sol"         # the ship pin for I and ask (luna cited thinner evidence on long charts; docs/EVALS.md)
 
 
 def pick_models(ids: Optional[list[str]] = None) -> tuple[str, str]:
