@@ -39,22 +39,6 @@ are Claude, so this is consistency, not clinical validation. n = 25 bounds the m
 | Conditions shown (mean) | 19.7 | 32.1 | 29.2 | 26.4 |
 | $ per test | ~0.08 | ~0.31 | 0.23 | 0.25 |
 
-- **v1.1 read only the section its stage C cut out** → lost the section on 10 of 25 tests and missed limits printed
-  elsewhere; an early audit found 12 real false approvals in 69 tests, 11 from dropped scope words ("in adults",
-  "FDA-approved"). A minimal-prompt swarm reading the whole policy had 2 in 156. → **v1.2: confirm the indication,
-  read the whole policy, one pass + an add-only review; code checks only quotes.**
-- **Adding structure didn't help** (JSON form, tools, script language, forced re-read, repeat-until-stable): no fewer
-  misses, 2–4× cost, more misread logic; form dropped "18 and older" on 3 holdout tests. → **ship the plain prompt.**
-- **"Not an FEP/SAO member" sat on every path, so no case could reach ready** → prune plan-only conditions using the
-  member's plan.
-- **No reducer reached zero false approvals with certainty** → product stance: the pipeline lays out conditions and
-  evidence; the coordinator judges. Missing conditions became the primary metric.
-- **Loose was complete but noisy** (billing, definitions, paperwork) → shipped prompt sends noise to notes, keeps
-  coded diagnoses, attestations, limits and threshold definitions; folds procedure wording, paperwork and headings
-  under "Not asked of the chart" (36 of 696 conditions, no key condition hidden). Result: 0 missing, fewer shown.
-- **The first scorer missed a third of planted gaps** → replaced with the exact solver; every number re-scored.
-- **Judge** (Phase 1 stress, hand-built trees, gpt-5.5): 1 false "ready" in 142 charts, 97% of verdicts right. Not
-  yet re-run on the shipped pipeline or real charts.
-
-Open: indication choice, run-to-run checklist variance, real clinician charts. Detail and per-set numbers:
-guideline-reduce `experiments/tree_diff/`.
+- **Don't slice the policy into sections.** v1.1 read only the section it cut out and lost it on 10 of 25 tests, missing limits printed elsewhere.
+- **Keep the prompt open-ended.** Adding structure (JSON forms, tools, scripts, loops) missed as much, cost 2–4× more and tripped over the logic.
+- **Complete first, then quiet.** Keep rules got missing conditions to zero; folding procedure wording, paperwork and headings out of view cut the noise enough to ship.
