@@ -4,8 +4,7 @@ The coordinator accepts every criterion, so the error that matters most is a **m
 
 ## 1. Guideline reduction (step H)
 
-Turns the whole policy plus one confirmed indication into a criteria tree: one pass, one retry if code validation fails,
-one add-only audit. Code: `eval/`.
+Turns the whole policy plus one confirmed indication into a criteria tree. Code: `eval/`.
 
 **Method.**
 
@@ -32,7 +31,7 @@ blind reviewers confirm each finding against the policy text.
 
 ## 2. Judging (step I)
 
-142 synthetic charts with known outcomes:
+142 single-procedure synthetic charts with known outcomes:
 
 
 |                              | Result              |
