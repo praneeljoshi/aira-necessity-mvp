@@ -39,12 +39,9 @@ isolated sandbox. Disputes are settled against the policy text, not the key.
 
 The 5 sample charts against their documented outcomes, 2 runs each (`experiments/scripts/record_eval.py`).
 
-- **Outcomes:** Delgado, Park, Okafor and Ruiz correct in both runs. Mitchell did not reach the judge: stage C picked
-  no section at the time (since fixed).
-- **Ruiz (138 pages), 3 planted traps:** all 3 found — the 2024 compression restart (not the earlier stopped start),
-  the 5 mm varicosity (not the 2 mm distractor), the 2026 duplex (not the sub-threshold 2023 one).
-- **Every miss traced to the tree**, not the judge: the checklist asked for things the chart does not hold (CPT
-  descriptor words, FEP/SAO), since folded or pruned.
-- One wrong "met" in 6 judge calls (“better with elevation” read as elevation therapy).
+- **The judge found every planted fact**, including all 3 traps in the 138-page chart (the right compression start,
+  varicosity size and duplex, not the distractors). One wrong "met" in 6 judge calls.
+- **Every miss traced to the checklist**, not the judge: it asked for things the chart does not hold (CPT descriptor
+  words, FEP/SAO), which flipped Delgado and Ruiz to "not in the chart". Both are now folded or pruned.
 
 _Reviewers are Claude, and this is a small sample._
