@@ -1,11 +1,11 @@
 """Compare a generated requirement tree with the answer key's, exactly. One model call per pair (leaf alignment).
 
-    .venv/bin/python experiments/eval/tree_diff.py --results data/reduce_loose/<model>/results-heading-loose-next.jsonl
+    .venv/bin/python eval/tree_diff.py --results data/reduce_loose/<model>/results-heading-loose-next.jsonl
                                                    [--results F ...] [--store <v1.1 score store> ...]
                                                    [--only slug,...] [--view full|coordinator] [--out DIR]
                                                    [--export-prompts DIR | --import-answers DIR] [--align-only]
 
-Pairs come from experiments/eval/pairs.py (the reduce runner's results rows, or v1.1 score stores) against the answer
+Pairs come from eval/pairs.py (the reduce runner's results rows, or v1.1 score stores) against the answer
 keys in tests/fixtures. --view coordinator scores the tree the coordinator sees: the case's admin leaves pruned by the
 app's own guards (app.checklist.admin.split), alignment derived from the full view's by dropping the pruned leaves.
 
@@ -52,12 +52,12 @@ from typing import Literal
 
 from pydantic import BaseModel
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-from experiments.eval import pairs as P  # noqa: E402
+from eval import pairs as P  # noqa: E402
 
 PROMPT = Path(__file__).resolve().parent / "align_trees.md"
-OUT = ROOT / "experiments" / "eval" / "data"          # gitignored (experiments/**/data/)
+OUT = ROOT / "eval" / "data"          # gitignored
 MET, NOT_MET, INSUFFICIENT = "MET", "NOT_MET", "INSUFFICIENT"
 
 

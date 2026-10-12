@@ -1,10 +1,10 @@
-"""Pure tests for experiments/eval: tree_diff's logic after alignment, the results-row reader, the coordinator view,
+"""Pure tests for eval: tree_diff's logic after alignment, the results-row reader, the coordinator view,
 and the deletion test. No model calls, no data/: synthetic trees, the repo's answer keys, tmp_path."""
 import json
 
-from experiments.eval import fa_mutation_check as fm
-from experiments.eval import pairs as P
-from experiments.eval import tree_diff as td
+from eval import fa_mutation_check as fm
+from eval import pairs as P
+from eval import tree_diff as td
 
 L = lambda i: ("leaf", i)
 

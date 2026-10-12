@@ -1,4 +1,4 @@
-# experiments/eval
+# eval
 
 These tools score step H's requirement tree against a hand-built answer key. They check the logic exactly. They do not compare wording.
 
@@ -16,8 +16,8 @@ These tools score step H's requirement tree against a hand-built answer key. The
 
 ```
 STEP_H=loose-next OPENAI_API_KEY=... .venv/bin/python experiments/scripts/reduce_code.py \
-    --orders experiments/eval/test_sets/fixture_orders.jsonl \
-    --headings experiments/eval/test_sets/fixture_headings.jsonl --tag fixtures
+    --orders eval/test_sets/fixture_orders.jsonl \
+    --headings eval/test_sets/fixture_headings.jsonl --tag fixtures
 # -> data/reduce_loose/<model>/results-heading-loose-next-fixtures.jsonl  (holdout: holdout_*.jsonl, --tag holdout)
 ```
 
@@ -25,20 +25,20 @@ STEP_H=loose-next OPENAI_API_KEY=... .venv/bin/python experiments/scripts/reduce
 
 ```
 R=data/reduce_loose/<model>/results-heading-loose-next-fixtures.jsonl
-.venv/bin/python experiments/eval/tree_diff.py --results $R --export-prompts /tmp/align
+.venv/bin/python eval/tree_diff.py --results $R --export-prompts /tmp/align
 #   answer each /tmp/align/<arm>/<name>.md as <name>.json beside it ({"links": [...]}, one link per G leaf)
-.venv/bin/python experiments/eval/tree_diff.py --results $R --import-answers /tmp/align
+.venv/bin/python eval/tree_diff.py --results $R --import-answers /tmp/align
 ```
 
 When the alignments are cached, scoring makes no calls:
 
 ```
-.venv/bin/python experiments/eval/tree_diff.py --results $R                      # full tree
-.venv/bin/python experiments/eval/tree_diff.py --results $R --view coordinator   # admin leaves pruned as the app does
-.venv/bin/python experiments/eval/fa_mutation_check.py --results $R             # deletion test on the same pairs
+.venv/bin/python eval/tree_diff.py --results $R                      # full tree
+.venv/bin/python eval/tree_diff.py --results $R --view coordinator   # admin leaves pruned as the app does
+.venv/bin/python eval/fa_mutation_check.py --results $R             # deletion test on the same pairs
 ```
 
-Output goes to `experiments/eval/data/`, which git ignores. Pass `--out` to put it somewhere else:
+Output goes to `eval/data/`, which git ignores. Pass `--out` to put it somewhere else:
 
 - `report.md`: a summary for each arm, then each test's false approvals, missed good charts and threshold differences.
 - `results.json`: every scored row.
@@ -47,4 +47,4 @@ Output goes to `experiments/eval/data/`, which git ignores. Pass `--out` to put 
 
 In the coordinator view, a pair with no alignment of its own reuses the full view's alignment, minus the pruned leaves.
 
-Tests: `.venv/bin/python -m pytest -q experiments/tests/test_tree_diff.py`. They are pure: synthetic trees, the repo's answer keys and `tmp_path`.
+Tests: `.venv/bin/python -m pytest -q eval/tests/test_tree_diff.py`. They are pure: synthetic trees, the repo's answer keys and `tmp_path`.

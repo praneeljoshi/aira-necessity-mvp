@@ -26,3 +26,6 @@ data/guidelines/*/guideline.json
 data/guidelines/generated/
 demo-store/
 *.zip
+
+# eval scorer output
+eval/data/

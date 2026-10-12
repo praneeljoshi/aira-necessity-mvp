@@ -22,7 +22,7 @@ from typing import Any, Literal, Optional, Union
 
 from pydantic import BaseModel, Field
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(__file__).resolve().parents[1]
 TRUTH = ROOT / "tests" / "fixtures" / "truth"
 REPO_KEYS = {"bcbsfl-02-33000-31": ROOT / "tests" / "fixtures" / "bcbsfl-02-33000-31.json",
              "cms-ncd-20-8-3": ROOT / "tests" / "fixtures" / "centers-for-medicare-medicaid-services-ncd-20-8-3.json"}

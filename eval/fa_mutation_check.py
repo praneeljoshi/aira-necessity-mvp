@@ -1,7 +1,7 @@
 """Deletion test for the exact false-approval check: make the generated tree stop checking a key requirement and see
 whether the check reports a false approval wherever one exists.
 
-    .venv/bin/python experiments/eval/fa_mutation_check.py --results <results-*.jsonl> [--results F ...]
+    .venv/bin/python eval/fa_mutation_check.py --results <results-*.jsonl> [--results F ...]
                                                            [--store DIR ...] [--view full|coordinator] [--out DIR]
 
 Pairs and their cached alignments exactly as tree_diff.py reads them (<out>/<arm>/align/, stamps checked); pairs with
@@ -27,9 +27,9 @@ import json
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-from experiments.eval import tree_diff as td  # noqa: E402
+from eval import tree_diff as td  # noqa: E402
 
 
 def mutate(g_tree: tuple, drop: set[str]) -> tuple:
