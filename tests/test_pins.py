@@ -1,4 +1,4 @@
-"""Ship pins: structure gpt-6-sol, judge gpt-6-luna, STEP_H loose, without asking the API; the C/H cache keys carry
+"""Ship pins: structure gpt-6-sol, judge gpt-6-sol, STEP_H loose, without asking the API; the C/H cache keys carry
 the structure model and a prompt version, and A2's sections cache the model, so a tree or labels built by another
 model or prompt are never served; a case judged under an older key still shows from its pinned copy. Offline."""
 from __future__ import annotations
@@ -31,11 +31,11 @@ def no_api(monkeypatch):
 def test_pins_without_the_api(monkeypatch, no_api):
     for k in ("MODEL_STRUCTURE", "MODEL_JUDGE", "STEP_H"):
         monkeypatch.delenv(k, raising=False)
-    assert llm.pick_models() == ("gpt-6-sol", "gpt-6-luna")
-    assert llm.pick_models(["gpt-5.5", "gpt-5.5-2026-01-01"]) == ("gpt-6-sol", "gpt-6-luna")   # a list is ignored
+    assert llm.pick_models() == ("gpt-6-sol", "gpt-6-sol")
+    assert llm.pick_models(["gpt-5.5", "gpt-5.5-2026-01-01"]) == ("gpt-6-sol", "gpt-6-sol")   # a list is ignored
     assert keys.step_h() == "loose-next"
     monkeypatch.setenv("MODEL_STRUCTURE", "gpt-x")
-    assert llm.pick_models() == ("gpt-x", "gpt-6-luna")
+    assert llm.pick_models() == ("gpt-x", "gpt-6-sol")
     monkeypatch.setenv("MODEL_JUDGE", "gpt-y")
     assert llm.pick_models() == ("gpt-x", "gpt-y")
     assert llm.choose_flagship(["gpt-5.5", "gpt-5.5-2026-01-01"]) == "gpt-5.5"        # kept for scripts
