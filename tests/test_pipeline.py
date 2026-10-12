@@ -166,11 +166,13 @@ def test_not_covered_code_stops_before_criteria(setup):
 def test_code_not_written_in_chart_is_dropped(setup):
     r, _ = setup(order={"cpt": ("36468",)})
     assert r.determination == "CANT_CHECK"
+    assert "doesn't match" not in r.reason          # no code is not a mismatch
 
 
 def test_code_not_in_table(setup):
     r, _ = setup(override={"cpt": ["33207"]})
     assert r.determination == "CANT_CHECK"
+    assert "doesn't match this case" in r.reason and "The patient's payer:" in r.reason and "33207" in r.reason
 
 
 def test_no_target_asks_which_section(setup):

@@ -23,6 +23,14 @@ def _payer(n: Narrowed) -> str:
     return n.guideline.payer.name or "the payer"
 
 
+def mismatch(order: Order, payer: str) -> str:
+    """The guideline does not cover this order: said first, with what the patient needs a guideline for."""
+    p = order.procedure
+    proc = ", ".join(x for x in (p.as_written, ("CPT " + ", ".join(p.cpt)) if p.cpt else None) if x) or "not stated"
+    return (f"This guideline ({payer}) doesn't match this case. The patient's payer: {order.payer or 'not stated'}; "
+            f"procedure: {proc}; indication: {p.diagnosis or p.target or 'not stated'}.")
+
+
 def _quotes(v: Optional[Verdict], rt: dict[str, Span], duration: bool) -> list[Quote]:
     """One quote per citation: the cited lines joined (a range reads as one sentence). A quote's date is the verified
     date the judge gave for that span (judge.quote_date)."""
@@ -91,8 +99,11 @@ def decide(order: Order, n: Narrowed, sel: Selection, cs: Optional[CriteriaSet],
 
     # E and F
     if not sel.applies:
-        return _stop(order, n, gid, "CANT_CHECK", sel.reason,
-                     f"Can't check this order against {payer}'s guideline. It says: “{T.short(sel.reason, 300)}”", pre, run_id)
+        if n.pathways:          # the case names no code: not a mismatch
+            return _stop(order, n, gid, "CANT_CHECK", sel.reason,
+                         f"Can't check this order against {payer}'s guideline. It says: “{T.short(sel.reason, 300)}”", pre, run_id)
+        why = f"{mismatch(order, payer)} The guideline says: “{T.short(sel.reason, 300)}”"
+        return _stop(order, n, gid, "CANT_CHECK", why, f"Can't check this order. {why}", pre, run_id)
     stopped = [g for g in sel.code_gate if g.outcome != "judge"]
     if stopped:
         nc = [g for g in stopped if g.outcome == "not_covered"]
@@ -100,7 +111,8 @@ def decide(order: Order, n: Narrowed, sel: Selection, cs: Optional[CriteriaSet],
             by = {c.code: c for c in n.codes}
             listed = "; ".join(f"{g.code} as {g.tag.replace('_', '-')} (“{T.short(by[g.code].description, 160)}”)" for g in nc)
             return _stop(order, n, gid, "NOT_COVERED", sel.reason, T.not_covered(who, patient, proc, payer, listed), pre, run_id)
-        return _stop(order, n, gid, "CANT_CHECK", sel.reason, f"Can't check this order: {sel.reason}.", pre, run_id)
+        why = f"{mismatch(order, payer)} {sel.reason}."
+        return _stop(order, n, gid, "CANT_CHECK", why, f"Can't check this order. {why}", pre, run_id)
 
     # G with nothing picked: ask which section
     if not sel.pathways:
