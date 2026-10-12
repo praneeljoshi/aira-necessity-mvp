@@ -123,3 +123,23 @@ reads the whole policy, and checks only quotes and citations.
   the key), so they are folded and restorable instead of removed.
 - **Exact scorer:** a deletion test showed the first scorer missed about a third of planted gaps, so it was replaced
   with a SAT check and every number was re-scored.
+
+## Raw numbers by test set
+
+Counts with denominators (tests with a checklist). Conditions and extras are means per test; shipped shows the full
+checklist / what the coordinator sees after folding. $ at gpt-6-sol prices (~ = converted from gpt-5.5 list prices).
+
+| Set | Version | Checklists | Missing conditions | Skippable tests | Conditions | Extras | Never-ready | $/test |
+|---|---|---|---|---|---|---|---|---|
+| Fixtures (15) | v1.1 | 14 / 15 | 2 / 14 | 3 / 14 | 20.8 | 2.5 | 1 / 14 | ~0.10 |
+| | form | 15 / 15 | 0 / 15 | 1 / 15 | 42.9 | 23.7 | 5 / 15 | ~0.37 |
+| | loose | 15 / 15 | 0 / 15 | 3 / 15 | 40.3 | 18.3 | 4 / 15 | 0.26 |
+| | shipped | 15 / 15 | 0 / 15 | 3 / 15 | 39.5 / 37.4 | 18.2 / 16.1 | 2 / 15 | 0.28 |
+| Holdout (10) | v1.1 | 1 / 10 | 0 / 1 | 0 / 1 | 5.0 | 2.0 | 0 / 1 | ~0.05 |
+| | form | 10 / 10 | 3 / 10 | 3 / 10 | 15.9 | 13.1 | 9 / 10 | ~0.23 |
+| | loose | 10 / 10 | 1 / 10 | 0 / 10 | 12.6 | 10.3 | 9 / 10 | 0.18 |
+| | shipped | 10 / 10 | 0 / 10 | 0 / 10 | 10.3 / 9.9 | 7.9 / 7.5 | 8 / 10 | 0.19 |
+
+Skippable tests for loose and shipped on fixtures are all through the step-therapy exemption route. Holdout never-ready
+is high for every version because most holdout indications require "meets InterQual / NCD", which no chart can show.
+Sources: guideline-reduce `experiments/tree_diff/{v11-baseline, v12-fixtures-strict, v12-holdout, loose-next-admin}/summary.json`.
