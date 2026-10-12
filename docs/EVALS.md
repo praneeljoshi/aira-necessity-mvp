@@ -98,3 +98,11 @@ Metrics: policy-confirmed **missing conditions** (primary — the coordinator is
 
 Product stance that follows from this: the pipeline sources indications, conditions and evidence; **the coordinator
 accepts every item**. There are no automatic "met" checks.
+
+## Why v1.1 did poorly
+
+v1.1's step H read only the section its stage C cut out for the indication. When the cut missed the indication (10 of
+25 tests) there was no checklist; even with the right section, limits printed elsewhere (reimbursement exclusions,
+definitions with thresholds, "criteria above", age and FDA scope) were invisible, and a line-accounting check pushed
+the model toward citing lines rather than reasoning about the logic. v1.2 confirms the indication by its quoted heading,
+reads the whole policy, and checks only quotes and citations.
