@@ -387,8 +387,11 @@ def _judge_and_decide(st: Recorder, chart_id: str, gid: str, override: Optional[
         ev, counts = evidence_for(chart_id, rspans, run_id, doing(st, s))
         doing(st, s)(f"{counts['evidence']} lines of record, {counts['summary']} of summaries, {counts['order']} of the request")
         s.cached = counts["cached"]
+        miss = counts["unlabelled"]        # lines A2 left in no section even after its retry: the judge never reads them
         s.summary = (f"{counts['evidence']} of {len(rspans)} lines are the record; "
-                     f"{counts['summary']} are the clinic's summaries, {counts['order']} the request")
+                     f"{counts['summary']} are the clinic's summaries, {counts['order']} the request"
+                     + (f"; {miss} line{'s' if miss != 1 else ''} in no section {'were' if miss != 1 else 'was'} not read"
+                        if miss else ""))
         st.doc["sections"] = counts
     with st.stage("read", step="judge_chart") as s:
         doing(st, s)(f"Checking {len(asked)} requirement{'s' if len(asked) != 1 else ''} against {len(ev)} lines of the record")

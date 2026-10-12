@@ -2,7 +2,8 @@
 
     in:  r-spans
     out: Section[] {title, label evidence | summary | order | admin, spans: Range[]}
-    code: ranges are single ids of the chart and run forwards; one retry with the problems
+    code: ranges are single ids of the chart and run forwards, and every line is in a section; one retry with the
+          problems, kept if it leaves fewer range problems plus lines in no section
     use: the judge sees and may cite only `evidence` lines. A line no section labels as evidence is not shown: a missed
          line costs a question (not ready), a summary shown as evidence could pass a chart the record does not support.
 """
@@ -40,8 +41,10 @@ class SOut(BaseModel):
     sections: list[Section] = Field(default_factory=list)
 
 
-def check(out: SOut, spans: list[Span]) -> list[str]:
-    pos = {s.id: i for i, s in enumerate(spans)}
+GAPS = 25                                               # runs of lines in no section named one by one
+
+
+def _ranges(out: SOut, pos: dict[str, int]) -> list[str]:
     problems = []
     for s in out.sections:
         for r in s.spans:
@@ -53,6 +56,45 @@ def check(out: SOut, spans: list[Span]) -> list[str]:
     return problems
 
 
+def uncovered(out: SOut, spans: list[Span]) -> list[int]:
+    """Positions of the lines in no section. A range with an unknown id or running backwards covers none (in_range)."""
+    pos = {s.id: i for i, s in enumerate(spans)}
+    hit = [False] * len(spans)
+    for s in out.sections:
+        for r in s.spans:
+            if r.first in pos and r.last in pos and pos[r.first] <= pos[r.last]:
+                hit[pos[r.first]: pos[r.last] + 1] = [True] * (pos[r.last] - pos[r.first] + 1)
+    return [i for i, h in enumerate(hit) if not h]
+
+
+def _gaps(miss: list[int], spans: list[Span]) -> list[str]:
+    """One problem per run of consecutive lines in no section; past GAPS runs, one line for the rest."""
+    runs: list[list[int]] = []
+    for i in miss:
+        if runs and runs[-1][1] == i - 1:
+            runs[-1][1] = i
+        else:
+            runs.append([i, i])
+    problems = [f"line {spans[a].id} is in no section: add the section it belongs to with its label" if a == b else
+                f"lines {spans[a].id}-{spans[b].id} are in no section: add the section(s) they belong to with their label"
+                for a, b in runs[:GAPS]]
+    if len(runs) > GAPS:
+        rest = sum(b - a + 1 for a, b in runs[GAPS:])
+        problems.append(f"... and {len(runs) - GAPS} more runs of lines in no section ({rest} lines): add their sections too")
+    return problems
+
+
+def check(out: SOut, spans: list[Span]) -> list[str]:
+    pos = {s.id: i for i, s in enumerate(spans)}
+    return _ranges(out, pos) + _gaps(uncovered(out, spans), spans)
+
+
+def cost(out: SOut, spans: list[Span]) -> int:
+    """Range problems plus lines in no section: which of two answers is better. Counting check()'s problems would
+    not do: it names a run, not its lines, and caps the runs."""
+    return len(_ranges(out, {s.id: i for i, s in enumerate(spans)})) + len(uncovered(out, spans))
+
+
 def split(spans: list[Span], run_id: str) -> SOut:
     base = hints.for_chart(llm.prompt("chart_sections", chart_spans=render_chart(spans)), hints.clinic_hint(spans)[1])
     model = llm.pick_models()[0]
@@ -61,7 +103,7 @@ def split(spans: list[Span], run_id: str) -> SOut:
     if problems:
         logger.warning("sections: %d problem(s), retrying once: %s", len(problems), " | ".join(problems)[:300])
         out2 = llm.call(run_id, "chart_sections", retry_prompt(base, out, problems), SOut, model=model, reasoning_effort=EFFORT)
-        if len(check(out2, spans)) <= len(problems):
+        if cost(out2, spans) <= cost(out, spans):
             out = out2
     return out
 

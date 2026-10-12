@@ -294,3 +294,28 @@ def test_ask_needs_a_finished_case(world, monkeypatch):
     cid = r.json()["chart_id"]
     assert world.client.post(f"/api/review/{cid}/ask", json={"span_ids": ["g0040"]}).status_code == 409
     assert world.client.post("/api/review/nope/ask", json={"span_ids": ["g0040"]}).status_code == 404
+
+
+def test_a_model_error_comes_back_as_a_502_with_its_message(world, monkeypatch):
+    """The ask's model call failing (a refused key, a model that answers in the wrong shape twice) is a 502 whose
+    detail is the error's first line, "Type: message", which the page shows; never a bare 500."""
+    import httpx2
+    import openai
+    cid = world.case()
+    ids = lines(world.g, "Treatment of the great or small saphenous veins by surgery (ligation", "criteria have been met:", P(world.g))
+    req = httpx2.Request("POST", "https://api.openai.com/v1/chat/completions")
+    body = {"message": "Incorrect API key provided: sk-abc***xyz.", "type": "invalid_request_error", "code": "invalid_api_key"}
+    for err, want in [
+        (openai.AuthenticationError(f"Error code: 401 - {{'error': {body}}}", response=httpx2.Response(401, request=req), body=body),
+         "AuthenticationError: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-abc***xyz.'"),
+        (RuntimeError("ask_guideline: model output failed validation twice: 1 validation error for AskOut\nruling\n  Field required"),
+         "RuntimeError: ask_guideline: model output failed validation twice: 1 validation error for AskOut"),
+        (openai.APIConnectionError(request=req), "APIConnectionError: Connection error."),
+    ]:
+        def boom(*a, err=err, **k):
+            raise err
+        monkeypatch.setattr(llm, "call", boom)
+        r = world.client.post(f"/api/review/{cid}/ask", json={"span_ids": ids, "by": "Dana"})
+        assert r.status_code == 502, r.text
+        d = r.json()["detail"]
+        assert d.startswith(want) and "\n" not in d and len(d) <= 400

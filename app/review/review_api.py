@@ -39,6 +39,7 @@ from urllib.parse import quote
 from pathlib import Path
 from typing import Optional
 
+import openai
 from fastapi import APIRouter, Depends, File, Form, HTTPException, Request, UploadFile
 from fastapi.responses import FileResponse, HTMLResponse, RedirectResponse
 from pydantic import BaseModel, Field
@@ -52,6 +53,12 @@ from app.understand import onecode
 ROOT = Path(__file__).resolve().parents[2]
 CHART_ID = re.compile(r"^[A-Za-z0-9_-]{1,64}$")     # what a chart id can be (uuid hex, cut to 10 on upload)
 NAME_MAX = 60                                        # characters of a person's name kept on a record
+
+
+def _error_line(e: BaseException, limit: int = 400) -> str:
+    """An error as the page shows it: "Type: first line of the message", cut to `limit` characters."""
+    line = f"{type(e).__name__}: {e}".splitlines()[0].strip()
+    return line if len(line) <= limit else line[: limit - 1] + "…"
 
 
 def _valid_id(request: Request) -> None:
@@ -504,6 +511,9 @@ def ask_lines(chart_id: str, body: AskIn):
         return ask.ask(chart_id, body.span_ids, (body.by or "").strip() or None)
     except ValueError as e:
         raise HTTPException(400, str(e))
+    except (openai.APIError, RuntimeError) as e:     # the model call failed (no key, refused, quota, down, bad answer twice)
+        logger.exception("ask on chart %s failed", chart_id)
+        raise HTTPException(502, _error_line(e))
 
 
 @router.post("/api/review/{chart_id}/additions", status_code=201)

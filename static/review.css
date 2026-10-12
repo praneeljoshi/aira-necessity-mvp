@@ -406,7 +406,19 @@ html:not([data-style="classic"]) .gl .para > .ln .ask-pill { position:fixed; bot
 .runlines .rl-m { color:var(--ready); font-weight:700 } .runlines .rl.waiting { color:var(--dim) } .runlines .rl.running { color:var(--act) }
 .runlines .rl.failed, .runlines .rl.failed .rl-m { color:var(--no) } .runlines small { color:var(--sec) }
 .failed-page .act { display:flex; gap:10px; align-items:center; margin:12px 0 4px }
-.failed-page .trace { white-space:pre-wrap; font:12px/1.45 ui-monospace, Menlo, monospace; color:var(--sec); max-height:240px; overflow:auto }
+.failed-page .trace, .gate pre.trace { white-space:pre-wrap; overflow-wrap:anywhere; font:12px/1.45 ui-monospace, Menlo, monospace; color:var(--sec); max-height:240px; overflow:auto }
+/* the ⓘ beside "Something went wrong …": a small muted circle; hover or focus shows the stage and the error's first
+   line in a tip drawn under the sentence's box (.err-host, so it never runs off the page), as the rail's folded counts */
+.err-host { position:relative }
+html[data-style] button.err-i { display:inline-grid; place-items:center; width:18px; height:18px; padding:0; margin:0 2px; vertical-align:-3px; border-radius:50%;
+  font-family:inherit; font-size:14px; line-height:1; font-weight:400; color:var(--sec); background:none; border:0; box-shadow:none; transform:none; cursor:help }
+html[data-style] button.err-i:hover, html[data-style] button.err-i:focus-visible { color:var(--ink); background:var(--soft); border:0 }
+html[data-style] button.err-i:focus-visible { outline:2px solid var(--act); outline-offset:1px }
+.err-i::after { content:attr(data-tip); position:absolute; left:0; top:calc(100% + 6px); z-index:30; box-sizing:border-box; width:max-content; max-width:min(64ch, 100%);
+  padding:7px 10px; border-radius:6px; white-space:pre-line; overflow-wrap:anywhere; text-align:left; font:12px/1.45 ui-monospace, Menlo, monospace; color:var(--ink);
+  background:var(--paper, var(--panel, #fff)); border:1px solid var(--edge, var(--line)); box-shadow:0 4px 14px rgba(29,35,43,.10); opacity:0; pointer-events:none; transition:opacity .12s }
+.err-i:hover::after, .err-i:focus::after { opacity:1 }
+@media (prefers-reduced-motion: reduce){ .err-i::after { transition:none } }
 .runlines .rl.failed span:last-child::after { content:" · stopped here" }
 .group h2 .n { font-weight:400; color:var(--sec); margin-left:4px }
 #side .gap-strikes { margin:8px 0 10px; padding:8px 10px; border-left:3px solid var(--needs); background:var(--needs-bg); font-size:13.5px }

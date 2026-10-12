@@ -315,7 +315,7 @@ function stagesHtml(st){
   return `<div class="stages">${st.stages.map(s => `<div class="stg ${esc(s.status)}"><span class="sg">${SG[s.status]||''}</span><div>
       <b>${esc(s.label)}</b>${s.cached ? '<small>from an earlier read</small>' : ''}${s.status !== 'waiting' && s.started_at && s.ended_at ? `<small>${secs(s.started_at, s.ended_at)}</small>` : ''}
       ${s.summary ? `<div class="sum">${esc(s.summary)}${(s.logs||[]).map(l => `<a href="${esc(l.url)}" target="_blank">log</a>`).join('')}</div>` : (s.logs||[]).length ? `<div class="sum">${s.logs.map(l => `<a href="${esc(l.url)}" target="_blank">log</a>`).join('')}</div>` : ''}
-      ${s.status === 'failed' ? `<div class="gate"><b>${esc(wentWrong(s.id))}</b><div class="act"><button class="primary" id="retryBtn">Run it again</button><span class="hint" id="retryMsg"></span></div><details><summary style="font-size:12.5px;color:var(--sec)">Details</summary><pre>${esc(errClass(s.error) || 'Error')}</pre></details></div>` : ''}
+      ${s.status === 'failed' ? `<div class="gate err-host"><b>${esc(wentWrong(s.id, s.error))} ${errInfoHtml(s.label, s.error)}</b><div class="act"><button class="primary" id="retryBtn">Run it again</button><span class="hint" id="retryMsg"></span></div><details><summary style="font-size:12.5px;color:var(--sec)">Details</summary><pre class="trace">${esc(errFold(s.label, s.error))}</pre></details></div>` : ''}
       ${s.status === 'needs_person' && s.gate && !s.gate.answered ? `<div class="gate"><b>${esc(s.gate.title||'')}</b>${esc(s.gate.needs||'')}${(s.gate.options||[]).map(o => `<div class="opt" style="cursor:default">· ${esc(o)}</div>`).join('')}</div>` : ''}
     </div></div>`).join('')}</div>`;
 }
@@ -412,23 +412,63 @@ function renderRunning(d){
     <p class="why">${cur ? esc(cur.label) + '… ' : 'Starting… '}The stages below fill in as the check goes; this page refreshes by itself. It will stop to let you confirm the indication of the guideline.</p>
     ${stagesHtml(st)}${foldHtml(d)}</div>`;
 }
-// a stage that raised, in plain words; the error itself stays folded under Details / What went wrong
+// a stage that raised, in plain words: what it was doing and, when the stored error is one we know, why and whether
+// running it again can help (no key, a key or model OpenAI refuses, quota, rate limit, network, OpenAI down, too
+// long, a malformed answer twice, a restart). The error itself (app/core/status.py stores "Type: message") is never
+// hidden: its first line sits under the ⓘ beside the sentence (hover or focus) and in full in "What went wrong".
+// The traceback stays in the status record ("The status record" under "How this was decided").
 const DOING = { chart:'reading the case', order:'finding the order', guideline:'reading the guideline', section:'choosing the indication',
-                checklist:'building the checklist', read:'reading the case', verify:'checking the quotes and dates', decide:'deciding' };
-// what went wrong, for the fold: the error's class only ("RuntimeError"), never a message, a path or a traceback
-const errClass = t => { const m = String(t || '').match(/^\s*([A-Za-z_][\w.]*?)(?=:|\s*$)/); return m ? m[1].split('.').pop() : (t ? 'Error' : ''); };
-const wentWrong = sid => `Something went wrong ${DOING[sid] || 'checking this case'}. Run it again.`;
+                checklist:'building the checklist', record:'reading the record', read:'reading the case', verify:'checking the quotes and dates', decide:'deciding' };
+const errLine = t => String(t || '').split('\n')[0].trim();
+const errType = t => { const m = errLine(t).match(/^([A-Za-z_][\w.]*?)(?=:|$)/); return m ? m[1].split('.').pop() : ''; };
+const NO_RETRY = "running it again won't help.";
+// the cause, after "Something went wrong <doing>: ", from the error's own words (openai's "Error code: 404 - {...}")
+function errCause(t){
+  const e = errLine(t), ty = errType(t), has = re => re.test(e);
+  if (!e) return '';
+  const model = (e.match(/\bmodel\s+[`'"]([^`'"\s]+)[`'"]/i) || [])[1];
+  if (has(/OPENAI_API_KEY is not set/)) return `no OpenAI key is set. Set OPENAI_API_KEY and restart the server; ${NO_RETRY}`;
+  if (ty === 'AuthenticationError' || has(/^\w+: Error code: 401\b|'invalid_api_key'/))
+    return `OpenAI rejected the key. Set a working OPENAI_API_KEY and restart the server; ${NO_RETRY}`;
+  if (has(/'model_not_found'|does not exist or you do not have access|does not have access to model/) || ty === 'NotFoundError')
+    return `this OpenAI key can't use the model${model ? ' ' + model : ''}. Set MODEL_STRUCTURE / MODEL_JUDGE to models it can use, and restart; ${NO_RETRY}`;
+  if (ty === 'PermissionDeniedError' || has(/^\w+: Error code: 403\b/))
+    return `OpenAI refused this key's request. Check what the key's project may use, and restart; ${NO_RETRY}`;
+  if (has(/'insufficient_quota'|exceeded your current quota/))
+    return `the OpenAI account is out of quota. Add credit or use another key, and restart; ${NO_RETRY}`;
+  if (ty === 'RateLimitError' || has(/^\w+: Error code: 429\b/)) return 'OpenAI is rate-limiting this key. Wait a minute and run it again.';
+  if (ty === 'APITimeoutError') return "OpenAI didn't answer in time. Run it again.";
+  if (ty === 'APIConnectionError') return "couldn't reach OpenAI (the network, or OpenAI). Check the connection and run it again.";
+  if (ty === 'InternalServerError' || has(/^\w+: Error code: 5\d\d\b/)) return 'OpenAI had a problem on its side. Run it again.';
+  if (has(/'context_length_exceeded'|maximum context length|exceeds the context window/))
+    return `the document is too long for the model; ${NO_RETRY} A shorter document, or MODEL_STRUCTURE / MODEL_JUDGE set to a model with a larger context (and a restart), is needed.`;
+  if (has(/failed validation twice/)) return "the model's answer came back in the wrong shape twice. Running it again usually works.";
+  if (ty === 'Interrupted') return 'the server restarted while it ran. Run it again.';
+  return '';
+}
+const wentWrong = (sid, err) => { const d = DOING[sid] || 'checking this case', c = errCause(err);
+  return c ? `Something went wrong ${d}: ${c}` : `Something went wrong ${d}. Run it again.`; };
+// the ⓘ beside that sentence: the stage and the error's first line, on hover or keyboard focus (a styled tip, as the
+// rail's folded counts); the tip is drawn under the sentence's box (.err-host), so it never runs off the page
+const ERR_TIP = 400;
+function errInfoHtml(stage, err){
+  const line = errLine(err) || 'Error', cut = line.length > ERR_TIP ? line.slice(0, ERR_TIP - 1) + '…' : line;
+  const tip = `${stage ? stage + ' stopped with:\n' : ''}${cut}`;
+  return `<button type="button" class="err-i" data-tip="${esc(tip)}" aria-label="${esc('What went wrong: ' + tip.replace('\n', ' '))}">ⓘ</button>`;
+}
+// the fold's words: the stage and the error's whole first line (no traceback)
+const errFold = (stage, err) => `${stage ? stage + ' stopped with:\n' : ''}${errLine(err) || 'Error'}`;
 // failed: the stage that stopped, with the error, and "Run it again"
 function renderFailed(d){
   const st = d.status || {};
   if (document.documentElement.dataset.style !== 'classic') {     // calm lines, the stage that stopped, Retry
-    const f = (st.stages || []).find(s => s.status === 'failed') || {};
+    const f = (st.stages || []).find(s => s.status === 'failed') || {}, err = f.error || st.error;
     $('#main').innerHTML = `<div class="narrow run-page failed-page">${whoHtml(d)}
       <p class="verdict v-no">This check stopped.</p>
-      <p class="why">${esc(wentWrong(f.id))} Nothing was decided.</p>
+      <p class="why err-host">${esc(wentWrong(f.id, err))} ${errInfoHtml(f.label, err)} Nothing was decided.</p>
       <div class="act"><button class="primary" id="retryBtn">Run it again</button><span class="hint" id="retryMsg"></span></div>
       ${runLinesHtml(st)}
-      <details class="fold"><summary>What went wrong</summary><pre class="trace">${esc(errClass(f.error || st.error) || 'Error')}</pre></details>
+      <details class="fold"><summary>What went wrong</summary><pre class="trace">${esc(errFold(f.label, err))}</pre></details>
       ${foldHtml(d)}</div>`;
     const b = $('#retryBtn');
     b.onclick = async () => { b.disabled = true; $('#retryMsg').textContent = 'Starting…';

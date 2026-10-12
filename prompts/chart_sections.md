@@ -11,6 +11,8 @@ The chart is given as its lines, each numbered: `[r0041] text`. Blank lines and 
 
 When a section mixes kinds, split it at the line where the kind changes. When unsure whether something is the clinic's summary or the record, call it `summary`.
 
+Every line belongs to exactly one section; cover the whole chart, first line to last, including page headers and footers (label them `admin`).
+
 ## A worked example: this clinic's chart format
 
 Robert Mitchell's chart from Metropolitan Cardiology Associates is laid out like this. Charts from this clinic follow the same format; other charts will differ, and you label by what a section is, not by its exact heading.

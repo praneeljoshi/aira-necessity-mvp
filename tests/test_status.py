@@ -236,3 +236,15 @@ def test_each_stage_says_what_it_is_doing_then_clears_it(setup, fl_spans, delgad
     assert all(not x.get("doing") for x in st["stages"])
     words = " ".join(seen.values()).lower()
     assert not any(w in words for w in ("criterion", "criteria", "verdict", "span"))
+
+
+def test_record_summary_names_lines_in_no_section(setup, delgado_spans):
+    from tests.fake import sections_answer
+    _, st, _ = setup()
+    assert "in no section" not in by_id(st)["record"]["summary"]
+    a = sections_answer(delgado_spans)
+    a["sections"][0]["spans"][0]["first"] = delgado_spans[2].id      # both answers leave the first two lines out
+    _, st, stub = setup(chart_id="gap", sections=a)
+    assert stub.calls.count("chart_sections") == 2                   # A2's retry was asked to fill them
+    assert by_id(st)["record"]["summary"].endswith("; 2 lines in no section were not read")
+    assert st["sections"]["unlabelled"] == 2
