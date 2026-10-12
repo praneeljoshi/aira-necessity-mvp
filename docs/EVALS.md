@@ -35,13 +35,19 @@ isolated sandbox. Disputes are settled against the policy text, not the key.
 - **Keep the prompt open.** Added structure (JSON forms, tools, scripts, loops) missed as much at 2–4× the cost.
 - **Complete first, then quiet.** Zero missing criteria; admin folding cut the noise enough to ship.
 
-## 3. Judge (gpt-6-sol)
+## 3. Judge
 
-The 5 sample charts against their documented outcomes, 2 runs each (`experiments/scripts/record_eval.py`).
+142 synthetic charts with known outcomes (stress run, `docs/judgement-findings.md`):
 
-- **The judge found every planted fact**, including all 3 traps in the 138-page chart (the right compression start,
-  varicosity size and duplex, not the distractors). One wrong "met" in 6 judge calls.
-- **Every miss traced to the checklist**, not the judge: it asked for things the chart does not hold (CPT descriptor
-  words, FEP/SAO), which flipped Delgado and Ruiz to "not in the chart". Both are now folded or pruned.
+| | Result |
+| --- | --- |
+| False "ready to submit" | **1 / 142** |
+| Correct outcome | 137 / 142 (96%) |
+| Correct requirement verdicts | 1,225 / 1,268 (97%) |
+
+Messy wording, shuffled note order, other chart formats and prompt injection did not move it.
+
+_The stress run used gpt-5.5 as the judge. The shipped judge is gpt-6-sol: on the 5 sample charts it found every
+planted fact, including all 3 traps in the 138-page chart. The 142-chart run has not yet been repeated on sol._
 
 _Reviewers are Claude, and this is a small sample._
