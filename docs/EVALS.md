@@ -28,7 +28,7 @@ facts, conflicts, messy wording and other formats (`stress/`). These test chart 
 3. Two blind reviewers check each finding against the policy text, without seeing the key or which version made it.
 4. A deletion test plants dropped requirements; the solver must catch 100%.
 
-**Reliability.** The scorer caught every planted gap, and independent reviewers agreed over 94% of the time.
+**Reliability.** The deletion test caught 100% of planted gaps. Aligners and reviewers agreed about 95–98% of the time.
 
 ## 2. Results and the decisions they drove
 
