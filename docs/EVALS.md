@@ -106,3 +106,20 @@ v1.1's step H read only the section its stage C cut out for the indication. When
 definitions with thresholds, "criteria above", age and FDA scope) were invisible, and a line-accounting check pushed
 the model toward citing lines rather than reasoning about the logic. v1.2 confirms the indication by its quoted heading,
 reads the whole policy, and checks only quotes and citations.
+
+## What led to each version
+
+- **loose (v1.2):** v1.1 lost sections and missed limits printed elsewhere, so the confirmed indication is given and
+  step H reads the whole policy in one pass, with an add-only review step. Earlier v1.1 audits traced most misses to
+  scope words in the grant sentence ("in adults", "FDA-approved"), which the prompt now names.
+- **form:** built to make the logic checkable by code (a JSON tree plus a check loop). It came out no safer and dropped
+  "18 and older" on three holdout tests, so it was not shipped.
+- **Plan rule:** checklists asked "not an FEP/SAO member" on every path, so no case could reach ready; plan-only
+  conditions are now pruned using the member's plan.
+- **loose-next (shipped):** loose was complete but noisy. Billing lines, evidence summaries, payer judgments and
+  post-procedure documents go to notes; keep rules (coded diagnoses, attestations, limits, definitions with thresholds,
+  open routes) were added after an early version lost two of them.
+- **Admin folding:** procedure wording, paperwork and headings are risky to delete (the gold labels showed a few match
+  the key), so they are folded and restorable instead of removed.
+- **Exact scorer:** a deletion test showed the first scorer missed about a third of planted gaps, so it was replaced
+  with a SAT check and every number was re-scored.
