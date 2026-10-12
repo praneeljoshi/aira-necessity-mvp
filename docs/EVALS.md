@@ -44,3 +44,5 @@ facts, conflicts, messy wording and other formats (`stress/`). These test chart 
 - **Don't slice the policy into sections.** v1.1 read only the section it cut out, lost it on 10 of 25 tests, and missed limits printed elsewhere.
 - **Keep the prompt open-ended.** Adding structure (JSON forms, tools, scripts, loops) missed as much, cost 2–4× more, and tripped over the logic.
 - **Complete first, then quiet.** Keep rules got missing conditions to zero; folding procedure wording, paperwork and headings out of view cut the noise enough to ship.
+
+_Caveat: aligners and reviewers are Claude, not clinicians, and 25 tests is a small sample._
