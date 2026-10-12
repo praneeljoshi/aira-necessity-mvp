@@ -32,20 +32,38 @@ Metrics: policy-confirmed **missing conditions** (primary — the coordinator is
 
 ## Results (gpt-6-sol, 25 tests)
 
-| | v1.1 | v1.2 loose | loose-next (early) | **shipped: loose-next + admin** |
-|---|---|---|---|---|
-| Missing conditions, policy-confirmed | 2 (+10 tests where stage C lost the section) | 1 | 1 | **0** |
-| Conditions shown per test (mean) | — | 29.2 | 24.0 | 26.4 |
-| Tests that can never reach "ready" | — | 13 | 9 | 10 |
-| $ per test | 0.22 | 0.23 | 0.20 | 0.25 |
+> **Test set:** 15 fixture tests (FL veins ×4, CMS pacemaker, and 10 harder Florida Blue pathways in sleep, PAP, knee,
+> spine and lymphedema — prompts were developed against these) plus 10 holdout tests (Fallon ICD ×7, UHC venous ×3 —
+> never tuned on). The holdout keys are small (1–4 conditions, mostly "meets InterQual / NCD"), so they catch fewer
+> kinds of error. Numbers below are all 25 together; same tests, inputs, scorer and blind review for every version.
 
-- **v1.1's stage C** lost the confirmed section on 10 of 25 tests (9 of 10 holdout) before step H ran. v1.2 gives step H
-  the whole policy and the confirmed indication.
-- **Admin folding** (procedure wording, paperwork, headings) folded 36 of 696 conditions (5%) behind "Not asked of the
-  chart". It created no skippable requirement and hid no key condition.
-- **Targeted noise** (billing, definitions, documentation lists, payer judgments, post-op documents) fell 62% from loose.
-- **Arms we dropped:** form (3 holdout tests dropped "18 and older"), script/tools (2–4× cost, more incoherent trees),
-  an external fix-point loop (3× cost, more scope creep, one skippable requirement).
+| Metric (all 25 tests) | v1.1 | form | loose | **shipped (loose-next + admin)** |
+|---|---|---|---|---|
+| Tests with a checklist | 15 (stage C lost the section on 10) | 25 | 25 | 25 |
+| **Missing conditions**, policy-confirmed | **2** | **3** | **1** | **0** |
+| Tests where a chart can skip a requirement | 3 | 4 | 3 (all via the exemption) | 3 (all via the exemption) |
+| Conditions per checklist (mean) | 19.7 | 32.1 | 29.2 | 27.8 |
+| Conditions shown after admin folding | 19.7 | 32.1 | 29.2 | **26.4** |
+| Extra conditions not in the key (shown) | 2.5 | 19.5 | 15.1 | **12.7** |
+| Tests that can never reach "ready" | 1 of 15 | 14 | 13 | **10** |
+| $ per test (gpt-6-sol prices) | ~0.08 | ~0.31 | 0.23 | 0.25 |
+
+- **Missing conditions** is the primary metric: a requirement the policy states that the checklist never asks about.
+  *Skippable* counts the same kind of gap from the chart's side — a chart the checklist would let through that the
+  policy denies (form's 3 holdout cases are the missing "18 and older" counted both ways).
+- **Step-therapy exemption.** Florida Blue policies print an exemption process; loose and shipped keep it as a route the
+  coordinator verifies (its question cannot be answered from a chart, so it always goes to review). Blind reviewers
+  judged that it does not waive conservative care on those tests, which gives the 3; if it does, those are 0.
+- **v1.1's stage C** lost the confirmed section on 10 of 25 tests (9 of 10 holdout) before step H ran; v1.1 also reads
+  only that section, which is why it adds few extras and misses conditions printed elsewhere.
+- **Admin folding** (shipped) folded 36 of 696 conditions (5%) — procedure wording 20, paperwork 9, heading or
+  definition 7 — behind "Not asked of the chart". It hid no key condition and created no skippable requirement.
+- **Extra conditions by kind** (mean per test, loose → shipped as shown): billing 3.1 → 2.1, definition 1.7 → 1.1,
+  documentation list 1.0 → 0.2, payer judgment 0.6 → 0.2, post-op document 0.8 → 0.6, scope restatement 1.8 → 2.5,
+  clinical requirement the key lacks 3.2 → 2.5, clinical exclusion the key lacks 2.8 → 3.4.
+- Costs marked ~ are converted from gpt-5.5 list prices recorded at run time.
+- **Arms we dropped** (scored with an earlier, non-blind method, so not in the table): script and tools (2–4× cost,
+  more incoherent trees), an external fix-point loop (3× cost, more scope creep, one skippable requirement).
 - The **step-therapy exemption** printed in Florida Blue policies is kept as a route the coordinator verifies; reviewers
   disagree on whether it waives conservative care, so it never auto-satisfies anything.
 
