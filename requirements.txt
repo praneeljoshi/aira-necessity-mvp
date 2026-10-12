@@ -7,3 +7,4 @@ pypdf>=4.0
 pytest>=8
 httpx>=0.27
 reportlab>=4.0
+python-sat>=1.8.dev0

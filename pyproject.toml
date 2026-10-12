@@ -12,6 +12,9 @@ dependencies = [
   "pypdf>=4.0",
 ]
 
+[project.optional-dependencies]
+eval = ["python-sat>=1.8.dev0"]   # experiments/eval: the exact tree scorer (SAT)
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 
